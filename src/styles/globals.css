@@ -204,6 +204,11 @@ html {
   display: flex;
   align-items: flex-start;
   gap: 12px;
+  margin-bottom: 1.5rem !important;
+}
+
+.articles .col-12.pl-0 {
+  margin-bottom: 1.5rem !important;
 }
 
 .cardpic {
@@ -355,6 +360,7 @@ html {
 .articles {
   width: 100%;
   background: #000000;
+  margin-top: 20px !important;
 }
 
 .articles .container {

@@ -1,105 +1,219 @@
-import { Metadata } from 'next';
-import { generateMetadata } from '@/config/metadata';
+'use client';
+
+import { useEffect, useState } from 'react';
 import { generateBreadcrumbSchema } from '@/config/seo';
 import Navbar from '@/components/layout/Navbar/Navbar';
 import Footer from '@/components/layout/Footer/Footer';
 import GoToTop from '@/components/layout/GoToTop/GoToTop';
-import Image from 'next/image';
+import TravelArticleList from '@/components/features/TravelArticleList/TravelArticleList';
 import Link from 'next/link';
-
-export const metadata: Metadata = generateMetadata({
-  title: '澳門旅遊攻略 - 景點、美食、住宿全指南 | 龍匯天下',
-  description: '探索澳門旅遊完整攻略，包含必訪景點、美食推薦、住宿選擇、交通指南等實用資訊。精選澳門自由行必看文章，從簽證辦理到行程規劃一次搞定，讓您的澳門之旅更加精彩。',
-  path: '/ArticleCategory/Travel',
-});
 
 interface TravelArticle {
   id: number;
   title: string;
   description: string;
   image: string;
-  date: string;
-  category: string;
+  imageMobile: string;
   link: string;
-  views?: number;
+  views: number;
+  tags?: string[];
+  collapseId: string;
 }
 
 const travelArticles: TravelArticle[] = [
   {
     id: 1,
     title: '澳門2025最新懶人包：簽證、景點、美食、住宿全攻略',
-    description: '完整收錄澳門旅遊必備資訊，從簽證辦理到景點推薦，一次搞定所有行程規劃。',
-    image: '/article-latest-1.jpg',
-    date: '2025/11/21',
-    category: '旅遊攻略',
-    link: '/article/guide-2025',
-    views: 5234,
+    description: 'As a special administrative region that blends Chinese and Western cultures, Macau will continue to launch new attractions and upgrade services in 2025. Key updates of greatest interest to Taiwanese travelers include: New Visa System: Taiwanese travelers holding passports valid for more than six months can stay visa-free for up to 30 days. Entry will now utilize "electronic clearance + facial recognition," resulting in faster clearance.',
+    image: '/articles/251121-h.jpg',
+    imageMobile: '/articles/251121-m.jpg',
+    link: '/Article/macau-all',
+    views: 1021,
+    tags: ['澳門通龍匯天下', '龍匯包車', '龍匯天下訂房'],
+    collapseId: 'collapse-macau-all',
   },
   {
     id: 2,
     title: '澳門一日遊｜24 小時暢遊世界遺產與娛樂之都',
-    description: '精心規劃的澳門一日遊路線，帶您走訪世界遺產景點與現代娛樂設施，體驗澳門的多元魅力。',
-    image: '/article-latest-3.jpg',
-    date: '2025/10/28',
-    category: '行程規劃',
-    link: '/article/day-tour',
-    views: 3124,
+    description: 'If you only have one day in Macau, how can you make the most of your visit? That\'s the charm of a one-day trip to Macau. This small city blends Chinese and Western cultures, boasting both ancient historical buildings and world-class entertainment resorts. With a well-planned itinerary, even with just 24 hours, you can experience the best of both worlds.',
+    image: '/articles/251022-h.jpg',
+    imageMobile: '/articles/251022-m.jpg',
+    link: '/Article/macao-onedaypass',
+    views: 1109,
+    tags: ['澳門一日遊', '澳門包車', '澳門龍匯天下'],
+    collapseId: 'collapse-macao-onedaypass',
   },
   {
     id: 3,
-    title: '【澳門景點】自由行必收的12個玩樂秘笈！',
-    description: '精選12個澳門必訪景點，包含歷史古蹟、現代地標與隱藏版打卡地點，讓您的自由行更加豐富。',
-    image: '/article-10.jpg',
-    date: '2025/09/15',
-    category: '景點推薦',
-    link: '/article/attractions',
-    views: 4567,
+    title: '澳門親子自由行：全家出遊必做行程',
+    description: 'Looking for a relaxing and surprising trip with your kids? In recent years, Macau has become a popular choice for family travel. Unlike simple sightseeing and shopping, Macau offers more than just World Heritage sites and culinary culture; it boasts numerous attractions and activities suitable for families, ranging from educational to fun-filled experiences.',
+    image: '/articles/251125-h.jpg',
+    imageMobile: '/articles/251125-m.jpg',
+    link: '/Article/macao-parent-child',
+    views: 1189,
+    tags: ['澳門親子自由行', '澳門旅遊', '龍匯天下訂房', '澳門包車'],
+    collapseId: 'collapse-macao-parent-child',
   },
   {
     id: 4,
-    title: '【澳門旅遊安全嗎？】2025重點解析',
-    description: '詳細分析澳門旅遊安全狀況，包含治安資訊、女性獨遊建議與緊急聯絡方式，讓您安心出遊。',
-    image: '/article-7.jpg',
-    date: '2025/08/20',
-    category: '旅遊安全',
-    link: '/article/safety',
-    views: 2890,
+    title: '澳門旅遊團｜深度探索東西文化交融的魅力之城',
+    description: 'Macau, known as the "Las Vegas of the East," boasts a unique charm born from the fusion of Chinese and Portuguese cultures. For those seeking an easy itinerary, minimal travel time, and a deep immersion in Macau\'s cuisine and culture, choosing a Macau tour group is undoubtedly the smartest option. Through a Macau tour group, you can enjoy expert guided tours...',
+    image: '/articles/251121-h.jpg',
+    imageMobile: '/articles/251121-m.jpg',
+    link: '/Article/macao-travelgroup1',
+    views: 1127,
+    tags: ['澳門訂房', '澳門推薦', '澳門旅遊'],
+    collapseId: 'collapse-macao-travelgroup1',
   },
   {
     id: 5,
-    title: '澳門必吃美食｜從街邊小吃到米其林餐廳',
-    description: '探索澳門美食文化，從傳統葡式料理到現代創意料理，帶您品嚐最道地的澳門味道。',
-    image: '/article-food.jpg',
-    date: '2025/07/10',
-    category: '美食推薦',
-    link: '/article/food-guide',
-    views: 4123,
+    title: '澳門團體旅遊首選攻略｜吃喝玩樂一次滿足！',
+    description: 'Macau, a small city blending Chinese and Portuguese cultures, is not only famous for its glamorous casinos and historical buildings, but also a top choice for many companies, schools, or family and friends trips. If you are planning an unforgettable group tour to Macau, this article will guide you through the itinerary, must-see attractions, food recommendations, and important notes.',
+    image: '/articles/251022-h.jpg',
+    imageMobile: '/articles/251022-m.jpg',
+    link: '/Article/grouptravel',
+    views: 1149,
+    tags: ['澳門旅遊', '澳門包車', '澳門訂房', '澳門團體旅遊'],
+    collapseId: 'collapse-grouptravel',
   },
   {
     id: 6,
-    title: '澳門交通全攻略｜機場、公車、計程車一次搞懂',
-    description: '完整介紹澳門交通方式，包含機場接送、公車路線、計程車費用與免費接駁車資訊。',
-    image: '/article-transport.jpg',
-    date: '2025/06/25',
-    category: '交通指南',
-    link: '/article/transport-guide',
-    views: 3456,
+    title: '【大三巴牌坊】2025澳門自由行必訪深度攻略：歷史、周邊景點與美食全解析',
+    description: 'The Ruins of St. Paul\'s in Macau is the city\'s iconic landmark and the core area of a UNESCO World Heritage Site. Whether it\'s a first-time visitor or a returning explorer, the Ruins of St. Paul\'s in Macau will welcome visitors with even better facilities and richer experiences in 2025.',
+    image: '/articles/【澳門景點】自由行必收的12個玩樂秘笈！-h.jpg',
+    imageMobile: '/articles/【澳門景點】自由行必收的12個玩樂秘笈！-h.jpg',
+    link: '/Article/macao%20dasanbaa',
+    views: 1630,
+    tags: ['澳門大三巴', '大三巴澳門龍匯', '龍匯大三巴澳門', '澳門龍匯天下大三巴'],
+    collapseId: 'collapse-macao-dasanbaa',
+  },
+  {
+    id: 7,
+    title: '【澳門百老匯】平民美食元宇宙｜全球首創「街市娛樂綜合體」',
+    description: 'Are you curious about what Broadway Macau is like? Since its opening in 2015, it has added many interesting new features by 2025! Let\'s rediscover Broadway Macau together!',
+    image: '/articles/251121-h.jpg',
+    imageMobile: '/articles/251121-m.jpg',
+    link: '/Article/macao%20hundred%20old',
+    views: 1173,
+    tags: ['澳門百老匯', '龍匯澳們百老匯', '龍匯百老匯', '百老匯龍匯天下'],
+    collapseId: 'collapse-macao-hundred-old',
+  },
+  {
+    id: 8,
+    title: '【澳門景點】2025最強攻略！必訪10大秘境、路線、美食全收錄',
+    description: 'Macau is more than just casinos and egg tarts! This World Heritage city hides Portuguese romance, fishing village charm, and secret photo spots. This carefully selected list of the TOP 10 attractions in Macau, from classic landmarks to hidden gems known only to locals, teaches you how to experience the best of Macau in the shortest amount of time, and even provides a pre-planned itinerary. Save this article to your phone for future reference.',
+    image: '/articles/【澳門景點】自由行必收的12個玩樂秘笈！-h.jpg',
+    imageMobile: '/articles/【澳門景點】自由行必收的12個玩樂秘笈！-h.jpg',
+    link: '/Article/macao%20view',
+    views: 1816,
+    tags: ['澳門龍匯', '龍匯天下澳門旅遊', '澳門包車', '澳門包車景點'],
+    collapseId: 'collapse-macao-view',
+  },
+  {
+    id: 9,
+    title: '【澳門自由行】怎麼玩才好玩？最佳路線報你知！',
+    description: 'Macau is more than just casinos! This charming city, a blend of Chinese and Western cultures, boasts history, character, delicious food, and art. For those with limited time but a desire to deeply experience Macau, a well-planned itinerary is paramount. Follow this Macau travel guide for a smooth and efficient journey.',
+    image: '/articles/251125-h.jpg',
+    imageMobile: '/articles/251125-m.jpg',
+    link: '/Article/macao%20free%20go',
+    views: 1304,
+    tags: ['澳門自由行龍匯', '龍匯天下旅遊', '澳門自由行龍匯天下', '龍匯天下自由行'],
+    collapseId: 'collapse-macao-free-go',
+  },
+  // Page 2 articles
+  {
+    id: 10,
+    title: '【澳門旅遊】性價比最高的玩法，它來了！',
+    description: '說到澳門旅遊，想必你心中肯定有很多問號，想去澳門但不知道去哪裡玩，澳門旅遊去哪裡cp值最高，最值回票價的美景在澳門的哪裡，你的疑問小編都聽到啦，於是特別替大家精挑細選並濃縮成懶人包，事不宜遲，快跟著小',
+    image: '/articles/【澳門景點】自由行必收的12個玩樂秘笈！-h.jpg',
+    imageMobile: '/articles/【澳門景點】自由行必收的12個玩樂秘笈！-h.jpg',
+    link: '/Article/macao%20travel',
+    views: 1269,
+    tags: ['澳門旅遊找龍匯', '龍匯天下澳門', '龍匯旅遊澳門', '澳門旅遊龍匯天下'],
+    collapseId: 'collapse-macao-travel',
+  },
+  {
+    id: 11,
+    title: '【澳門景點】自由行必收的12個玩樂秘笈！',
+    description: '澳門融合了葡式風情與中華文化，更坐擁8項世界遺產與頂級度假村，是亞洲旅客短程出遊的熱門選擇。本文精選12個「連在地人都推薦」的必訪景點，從歷史古蹟到網美打卡點一次整理，搭配本文獨家的實用攻略，教你用最',
+    image: '/articles/【澳門景點】自由行必收的12個玩樂秘笈！-h.jpg',
+    imageMobile: '/articles/【澳門景點】自由行必收的12個玩樂秘笈！-h.jpg',
+    link: '/Article/travel1',
+    views: 1515,
+    tags: ['澳門旅遊', '澳門安全', '澳門景點', '澳門推薦', '龍匯天下'],
+    collapseId: 'collapse-travel1',
   },
 ];
 
 const categories = [
-  { name: '全部', count: 24 },
-  { name: '旅遊攻略', count: 8 },
-  { name: '景點推薦', count: 6 },
-  { name: '美食推薦', count: 5 },
-  { name: '住宿指南', count: 3 },
-  { name: '交通指南', count: 2 },
+  { name: '旅遊', href: '/ArticleCategory/Travel', count: 11, active: true },
+  { name: '桑拿', href: '/ArticleCategory/Sauna', count: 11 },
+  { name: '包車', href: '/ArticleCategory/RentCar', count: 12 },
+  { name: '訂房', href: '/ArticleCategory/Booking', count: 5 },
+  { name: '其他娛樂', href: '/ArticleCategory/Entertainment', count: 10 },
+  { name: '常見問答', href: '/ArticleCategory/Question', count: 3 },
+  { name: '專人客服', href: '/CustomerService', count: 0 },
+];
+
+const popularTags = [
+  { name: '澳門包車', href: '/Tag/澳門包車' },
+  { name: '澳門旅遊', href: '/Tag/澳門旅遊' },
+  { name: '龍匯天下', href: '/Tag/龍匯天下' },
+  { name: '澳門訂房', href: '/Tag/澳門訂房' },
+  { name: '龍匯包車', href: '/Tag/龍匯包車' },
+  { name: '澳門龍匯天下', href: '/Tag/澳門龍匯天下' },
+  { name: '澳門包車景點', href: '/Tag/澳門包車景點' },
+  { name: '龍匯天下訂房', href: '/Tag/龍匯天下訂房' },
+  { name: '澳門推薦', href: '/Tag/澳門推薦' },
+  { name: '澳門旅遊找龍匯', href: '/Tag/澳門旅遊找龍匯' },
 ];
 
 export default function TravelPage() {
+  // Initialize page from URL using lazy initializer (client-side only)
+  const [currentPage, setCurrentPage] = useState(() => {
+    if (typeof window !== 'undefined') {
+      const urlParams = new URLSearchParams(window.location.search);
+      return parseInt(urlParams.get('PageNo') || '1', 10);
+    }
+    return 1;
+  });
+  
+  const itemsPerPage = 9;
+  const totalPages = Math.ceil(travelArticles.length / itemsPerPage);
+  
+  // Get articles for current page
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const currentArticles = travelArticles.slice(startIndex, endIndex);
+
+  // Set page title/meta tags and listen for navigation changes
+  useEffect(() => {
+    // Set page title
+    document.title = '澳門旅遊攻略 - 景點、美食、住宿全指南 | 龍匯天下';
+    
+    // Update meta description
+    let metaDescription = document.querySelector('meta[name="description"]');
+    if (!metaDescription) {
+      metaDescription = document.createElement('meta');
+      metaDescription.setAttribute('name', 'description');
+      document.head.appendChild(metaDescription);
+    }
+    metaDescription.setAttribute('content', '探索澳門旅遊完整攻略，包含必訪景點、美食推薦、住宿選擇、交通指南等實用資訊。精選澳門自由行必看文章，從簽證辦理到行程規劃一次搞定，讓您的澳門之旅更加精彩。');
+    
+    // Listen for navigation changes (back/forward buttons)
+    const handlePopState = () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const pageNo = parseInt(urlParams.get('PageNo') || '1', 10);
+      setCurrentPage(pageNo);
+    };
+    
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
+
   const breadcrumbSchema = generateBreadcrumbSchema([
     { name: '首頁', url: 'https://www.long-huei.com' },
-    { name: '旅遊攻略', url: 'https://www.long-huei.com/ArticleCategory/Travel' },
+    { name: '旅遊', url: 'https://www.long-huei.com/ArticleCategory/Travel' },
   ]);
 
   const structuredData = {
@@ -120,8 +234,6 @@ export default function TravelPage() {
           headline: article.title,
           description: article.description,
           url: `https://www.long-huei.com${article.link}`,
-          datePublished: article.date,
-          category: article.category,
         },
       })),
     },
@@ -140,144 +252,122 @@ export default function TravelPage() {
       <div className="relative w-full min-h-screen bg-black">
         <Navbar />
         
-        <main className="w-full pt-[99px]">
-          {/* Hero Section */}
-          <section className="relative w-full h-[400px] bg-gradient-to-b from-[#2C261C] to-black">
-            <div className="absolute inset-0 bg-[url('/travel-hero.jpg')] bg-cover bg-center opacity-20"></div>
-            <div className="relative z-10 container mx-auto px-7 h-full flex flex-col justify-center items-center text-center">
-              <h1 className="text-5xl md:text-6xl font-black text-[#F5CA69] mb-4 tracking-wider">
-                澳門旅遊攻略
-              </h1>
-              <p className="text-xl text-white/90 max-w-2xl">
-                探索澳門，享受極致服務。完整收錄景點、美食、住宿、交通等實用資訊
-              </p>
-            </div>
-          </section>
+        <main className="inner-page w-full pt-[99px]">
+          {/* Breadcrumbs */}
+          <div className="container mx-auto px-4">
+            <nav className="nav-breadcrumb py-4" aria-label="breadcrumb">
+              <ol className="breadcrumb flex items-center gap-2 text-white text-sm">
+                <li className="breadcrumb-item">
+                  <Link href="/" className="flex items-center gap-1 hover:text-[#FFCD83]">
+                    <i className="bi bi-house-door-fill"></i>
+                    首頁
+                  </Link>
+                </li>
+                <li className="breadcrumb-item active" aria-current="page">
+                  <span className="text-white/70">旅遊</span>
+                </li>
+              </ol>
+            </nav>
+          </div>
 
-          {/* Content Section */}
-          <section className="w-full max-w-[1200px] mx-auto px-7 py-16">
-            <div className="flex flex-col lg:flex-row gap-8">
-              {/* Main Content */}
-              <div className="flex-1">
-                {/* Category Filter */}
-                <div className="flex flex-wrap gap-3 mb-8 pb-6 border-b border-white/10">
-                  {categories.map((category) => (
-                    <button
-                      key={category.name}
-                      className="px-4 py-2 bg-[#2C261C] text-white rounded-full text-sm hover:bg-[#A46912] transition-colors"
-                    >
-                      {category.name} ({category.count})
-                    </button>
-                  ))}
+          {/* Articles Section */}
+          <section className="articles w-full bg-black py-8" style={{ marginTop: '20px' }}>
+            <div className="container mx-auto px-4">
+              <h1 className="text-white text-3xl mb-8">旅遊</h1>
+              
+              <div className="row flex flex-col lg:flex-row gap-6">
+                {/* Main Content - Articles List */}
+                <div className="col-xl-9 col-lg-8 col-md-8 col-sm-12 col-xs-12 w-full lg:w-9/12">
+                  <TravelArticleList articles={currentArticles} />
+
+                  {/* Pagination */}
+                  <nav className="pagination mt-8" aria-label="Page navigation example">
+                    <div className="pagination-container">
+                      <ul className="pagination flex justify-center items-center gap-2">
+                        {currentPage > 1 && (
+                          <li className="page-item">
+                            <Link 
+                              href={`/ArticleCategory/Travel?PageNo=${currentPage - 1}&SortBy=DisplaySeq&SortDirection=ASC`} 
+                              rel="prev"
+                              className="page-link px-4 py-2 bg-[#2C261C] text-white rounded hover:bg-[#CD861A]"
+                            >
+                              &lt;
+                            </Link>
+                          </li>
+                        )}
+                        {Array.from({ length: totalPages }, (_, i) => i + 1).map((pageNum) => (
+                          <li key={pageNum} className="page-item">
+                            {pageNum === currentPage ? (
+                              <span className="page-link px-4 py-2 bg-[#CD861A] text-white rounded">{pageNum}</span>
+                            ) : (
+                              <Link 
+                                href={`/ArticleCategory/Travel?PageNo=${pageNum}&SortBy=DisplaySeq&SortDirection=ASC`}
+                                className="page-link px-4 py-2 bg-[#2C261C] text-white rounded hover:bg-[#CD861A]"
+                              >
+                                {pageNum}
+                              </Link>
+                            )}
+                          </li>
+                        ))}
+                        {currentPage < totalPages && (
+                          <li className="page-item">
+                            <Link 
+                              href={`/ArticleCategory/Travel?PageNo=${currentPage + 1}&SortBy=DisplaySeq&SortDirection=ASC`} 
+                              rel="next"
+                              className="page-link px-4 py-2 bg-[#2C261C] text-white rounded hover:bg-[#CD861A]"
+                            >
+                              &gt;
+                            </Link>
+                          </li>
+                        )}
+                      </ul>
+                    </div>
+                  </nav>
                 </div>
 
-                {/* Articles Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {travelArticles.map((article) => (
-                    <Link
-                      key={article.id}
-                      href={article.link}
-                      className="group bg-[#2C261C] rounded-[40px] overflow-hidden hover:scale-[1.02] transition-transform"
-                    >
-                      <div className="relative w-full h-[200px]">
-                        <Image
-                          src={article.image}
-                          alt={article.title}
-                          fill
-                          className="object-cover group-hover:scale-110 transition-transform"
-                          sizes="(max-width: 768px) 100vw, 50vw"
-                        />
-                        <div className="absolute top-4 left-4 px-3 py-1 bg-[#A46912] rounded-full text-xs text-white">
-                          {article.category}
-                        </div>
-                      </div>
-                      <div className="p-6">
-                        <h3 className="text-lg font-bold text-[#F5CA69] mb-2 line-clamp-2 group-hover:text-[#FFCD83] transition-colors">
-                          {article.title}
-                        </h3>
-                        <p className="text-sm text-white/70 mb-4 line-clamp-2">
-                          {article.description}
-                        </p>
-                        <div className="flex items-center justify-between text-xs text-white/50">
-                          <span>{article.date}</span>
-                          {article.views && (
-                            <span>觀看人數：{article.views.toLocaleString()}</span>
-                          )}
-                        </div>
-                      </div>
-                    </Link>
-                  ))}
-                </div>
+                {/* Sidebar */}
+                <div className="col-xl-3 col-lg-4 col-md-4 col-sm-12 col-xs-12 w-full lg:w-3/12">
+                  {/* Categories Box */}
+                  <div className="cate-box bg-[#2C261C] rounded-lg p-6 mb-6">
+                    <h4 className="text-white text-lg mb-4 flex items-center gap-2">
+                      <i className="bi bi-bookmarks-fill text-[#FFCD83]"></i>
+                      所有文章分類
+                    </h4>
+                    <ul className="list-none p-0 m-0">
+                      {categories.map((category) => (
+                        <li key={category.name}>
+                          <Link
+                            href={category.href}
+                            className={`block py-2 text-white hover:text-[#FFCD83] transition-colors ${category.active ? 'text-[#FFCD83] font-bold' : ''}`}
+                          >
+                            {category.name} ({category.count})
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
 
-                {/* Pagination */}
-                <div className="flex justify-center items-center gap-2 mt-12">
-                  <button className="px-4 py-2 bg-[#2C261C] text-white rounded-lg hover:bg-[#A46912] transition-colors">
-                    上一頁
-                  </button>
-                  <button className="px-4 py-2 bg-[#A46912] text-white rounded-lg">
-                    1
-                  </button>
-                  <button className="px-4 py-2 bg-[#2C261C] text-white rounded-lg hover:bg-[#A46912] transition-colors">
-                    2
-                  </button>
-                  <button className="px-4 py-2 bg-[#2C261C] text-white rounded-lg hover:bg-[#A46912] transition-colors">
-                    3
-                  </button>
-                  <button className="px-4 py-2 bg-[#2C261C] text-white rounded-lg hover:bg-[#A46912] transition-colors">
-                    下一頁
-                  </button>
+                  {/* Popular Tags Box */}
+                  <div className="hot-tags-box bg-[#2C261C] rounded-lg p-6">
+                    <h4 className="text-white text-lg mb-4 flex items-center gap-2">
+                      <i className="bi bi-tags-fill text-[#FFCD83]"></i>
+                      熱門 TAGs
+                    </h4>
+                    <ul className="list-none p-0 m-0 flex flex-wrap gap-2">
+                      {popularTags.map((tag) => (
+                        <li key={tag.name}>
+                          <Link
+                            href={tag.href}
+                            className="inline-block px-3 py-1 bg-black/50 text-white text-sm rounded hover:bg-[#CD861A] transition-colors"
+                          >
+                            {tag.name}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               </div>
-
-              {/* Sidebar */}
-              <aside className="w-full lg:w-80 space-y-6">
-                {/* Popular Articles */}
-                <div className="bg-[#2C261C] rounded-[40px] p-6">
-                  <h2 className="text-xl font-bold text-[#F5CA69] mb-4">熱門文章</h2>
-                  <div className="space-y-4">
-                    {travelArticles.slice(0, 5).map((article) => (
-                      <Link
-                        key={article.id}
-                        href={article.link}
-                        className="flex gap-3 group"
-                      >
-                        <div className="relative w-20 h-20 flex-shrink-0 rounded-lg overflow-hidden">
-                          <Image
-                            src={article.image}
-                            alt={article.title}
-                            fill
-                            className="object-cover group-hover:scale-110 transition-transform"
-                            sizes="80px"
-                          />
-                        </div>
-                        <div className="flex-1 min-w-0">
-                          <h4 className="text-sm font-bold text-[#FFCD83] line-clamp-2 group-hover:text-[#F5CA69] transition-colors">
-                            {article.title}
-                          </h4>
-                          <p className="text-xs text-white/50 mt-1">{article.date}</p>
-                        </div>
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Categories */}
-                <div className="bg-[#2C261C] rounded-[40px] p-6">
-                  <h2 className="text-xl font-bold text-[#F5CA69] mb-4">文章分類</h2>
-                  <div className="space-y-2">
-                    {categories.map((category) => (
-                      <Link
-                        key={category.name}
-                        href={`/ArticleCategory/${category.name}`}
-                        className="flex items-center justify-between p-3 rounded-lg hover:bg-[#A46912]/20 transition-colors"
-                      >
-                        <span className="text-white">{category.name}</span>
-                        <span className="text-white/50 text-sm">{category.count}</span>
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              </aside>
             </div>
           </section>
         </main>
@@ -288,4 +378,3 @@ export default function TravelPage() {
     </>
   );
 }
-
