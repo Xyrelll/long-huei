@@ -199,22 +199,76 @@ html {
 }
 
 /* About Section Styles */
+.about-top {
+  width: 100%;
+  background: #000000;
+  padding: 60px 0;
+}
+
+.about-top .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.about-top h2 {
+  margin-bottom: 40px;
+}
+
+.about-top .content {
+  font-size: 14px;
+  line-height: 1.8;
+  color: white;
+}
+
+.page-title {
+  margin-bottom: 40px;
+}
+
 .about-title {
-  color: #FFCD83;
-  font-size: 18px;
+  color: #f5ca69;
+  font-size: 20px;
   font-weight: bold;
   margin-bottom: 8px;
 }
 
 .about-content {
   color: white;
-  font-size: 14px;
-  line-height: 1.6;
+  font-size: 16px;
+  line-height: 1.8;
 }
 
 .about-icon {
-  font-size: 24px;
-  color: #FFCD83;
+  font-size: 50px;
+  color: #cd861a;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  padding-top: 4px;
+  margin-right: 10px;
+}
+
+.about-card {
+  margin-bottom: 24px;
+  padding: 0;
+}
+
+.about-card:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .about-card {
+    margin-bottom: 32px;
+  }
+  
+  .about-top .grid.grid-cols-1.md\:grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr) !important;
+    display: grid !important;
+  }
 }
 
 /* Carousel Controls */

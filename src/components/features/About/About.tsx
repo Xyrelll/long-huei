@@ -53,8 +53,9 @@ const whyChooseUs = [
 export default function About() {
   return (
     <section className="about-top js-about-top w-full bg-black py-12">
-      <h2 className="text-center text-white text-2xl mb-8">關於龍匯天下｜探索澳門，享受極致服務</h2>
-      <div className="container mx-auto px-4">
+      <h2 className="text-center text-white text-4xl mb-8">關於龍匯天下｜探索澳門，享受極致服務</h2>
+      
+      <div className="container mx-auto px-4 max-w-4xl">
         <div className="row mb-4">
           <div className="col-12">
             <p className="content text-white mb-4">
@@ -70,16 +71,17 @@ export default function About() {
         </div>
       </div>
 
-      <h2 className="page-title text-center text-[#FFCD83] text-2xl mb-8">為什麼選擇我們？</h2>
-      <div className="container mx-auto px-4">
+      <h2 className="page-title text-center text-[#f5ca69] text-3xl mb-8">為什麼選擇我們？</h2>
+      
+      <div className="container mx-auto px-4 max-w-5xl">
         <div className="row mb-4">
           {whyChooseUs.map((item, index) => (
-            <div key={index} className="flex flex-col md:flex-row mb-4">
-              <div className="col-md-4 col-12 mb-2 mb-md-0 md:w-1/3">
-                <h3 className="about-title text-[#FFCD83] text-lg font-bold">{item.title}</h3>
+            <div key={index} className="flex flex-col md:flex-row mb-3">
+              <div className="col-md-4 col-12 mb-2 mb-md-0 md:w-2/5">
+                <h3 className="about-title text-[#FFCD83] text-xl font-bold text-center md:text-left">{item.title}</h3>
               </div>
-              <div className="col-md-8 col-12 mb-3 md:w-2/3">
-                <p className="text-white">{item.description}</p>
+              <div className="col-md-8 col-12 mb-3 md:w-3/5">
+                <p className="text-white text-md leading-relaxed">{item.description}</p>
               </div>
             </div>
           ))}
@@ -87,18 +89,22 @@ export default function About() {
       </div>
 
       <div className="container mx-auto px-4">
-        <div className="row mt-1 mt-md-3 grid grid-cols-1 md:grid-cols-2 gap-6">
-          {features.map((feature, index) => (
-            <div key={index} className="col-md-6 col-12 mb-4">
-              <div className="about-card flex items-center gap-3 mb-2">
-                <i className={`${feature.icon} about-icon text-2xl text-[#FFCD83]`} aria-hidden="true"></i>
-                <h3 className="about-title text-[#FFCD83] text-lg font-bold">{feature.title}</h3>
+        <div className="row mt-1 mt-md-3 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full" style={{ display: 'grid' }}>
+            {features.map((feature, index) => (
+              <div key={index} className="mb-4">
+                <div className="about-card flex items-start gap-4">
+                  <i className={`${feature.icon} about-icon text-2xl text-[#FFCD83] flex-shrink-0`} aria-hidden="true"></i>
+                  <div className="flex-1">
+                    <h3 className="about-title text-[#FFCD83] text-lg font-bold mb-2">{feature.title}</h3>
+                    <div className="about-content text-white text-sm leading-relaxed">
+                      {feature.description}
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="about-content text-white">
-                {feature.description}
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
