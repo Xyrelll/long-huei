@@ -234,8 +234,8 @@ export default function Navbar() {
               >
                 <TravelIcon icon="handshake" />
                 <span>龍匯服務介紹</span>
-                <span className="ml-auto text-[10px]">▼</span>
               </button>
+              <span className={`dropdown-arrow-desktop ${isdropdown === "flex" ? "active" : ""}`}>▼</span>
               <ul
                 className="dropdown-menu"
                 style={{ display: isdropdown === "flex" ? "flex" : "none" }}

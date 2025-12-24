@@ -219,10 +219,20 @@
     align-items: center;
     gap: 16px;
   }
+  
+  .navbar-nav-desktop {
+    overflow: visible;
+  }
 }
 
 .nav-item {
   position: relative;
+}
+
+@media (min-width: 1024px) {
+  .nav-item {
+    overflow: visible;
+  }
 }
 
 .nav-link {
@@ -275,6 +285,35 @@
   .dropdown-toggle {
     width: auto;
     flex-direction: row;
+    padding-right: 0;
+  }
+}
+
+.dropdown-arrow-desktop {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .dropdown-arrow-desktop {
+    display: inline-block;
+    position: absolute;
+    right: -12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 10px;
+    color: #FFFFFF;
+    transition: color 0.2s;
+    pointer-events: none;
+    padding-left: 4px;
+  }
+  
+  .dropdown-arrow-desktop.active {
+    color: #ce8211;
+  }
+  
+  .nav-item.group {
+    position: relative;
+    padding-right: 12px;
   }
 }
 
@@ -302,19 +341,25 @@
   left: 0;
   top: 100%;
   margin-top: 8px;
-  flex-direction: row;
-  background: transparent;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 8px;
   min-width: 200px;
   padding: 8px 0;
   list-style: none;
   display: none;
-  z-index: 1000;
+  z-index: 1001;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .nav-item:hover .dropdown-menu,
 .nav-item.group:hover .dropdown-menu {
-  display: block;
+  display: flex;
+}
+
+.dropdown-menu[style*="flex"] {
+  display: flex !important;
 }
 
 .dropdown-item {
@@ -322,12 +367,14 @@
   padding: 8px 16px;
   color: #FFFFFF;
   text-decoration: none;
-  transition: background-color 0.2s;
+  transition: background-color 0.2s, color 0.2s;
+  background-color: transparent;
 }
 
 .dropdown-item:hover,
 .dropdown-item:active {
   color: #ce8211;
+  background-color: #FFFFFF;
 }
 .nav-link:hover {
   color: #ce8211;
@@ -460,10 +507,12 @@
   color: #FFFFFF;
   text-decoration: none;
   font-size: 14px;
+  transition: background-color 0.2s, color 0.2s;
 }
 
 .mobile-dropdown-item:hover,
 .mobile-dropdown-item:active {
   color: #ce8211;
+  background-color: #FFFFFF;
 }
 
