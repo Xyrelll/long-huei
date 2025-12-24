@@ -34,12 +34,12 @@ export default function BookingArticleList({ articles }: BookingArticleListProps
   };
 
   return (
-    <div className="row">
+    <div className="row bg-green-500">
       {articles.map((article) => (
         <div key={article.id} className="col-12 pl-0">
           <div className="row article-card-row flex  pb-4">
             {/* Thumbnail - Left side on mobile, larger on desktop */}
-            <div className="col-4 col-md-4 px-0 cardpic md:w-2/5">
+            <div className="col-4 col-md-4 px-0 cardpic md:w-2/7">
               <Link href={article.link}>
                 <picture>
                   <source srcSet={article.image} media="(min-width: 768px)" />
@@ -56,7 +56,7 @@ export default function BookingArticleList({ articles }: BookingArticleListProps
             </div>
             
             {/* Article Details - Right side */}
-            <div className="col-8 col-md-8 pl-2 md:w-3/5">
+            <div className="col-8 col-md-8 pl-2 md:w-5/7">
               <Link href={article.link}>
                 <h3 className="card-title text-[#FFCD83] text-sm md:text-2xl md:text-3xl font-bold mb-2 md:mb-3 hover:text-[#CD861A] transition-colors">
                   {article.title}

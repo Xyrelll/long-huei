@@ -183,17 +183,17 @@ export default function BookingPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      <div className="relative w-full min-h-screen bg-black">
+      <div className="relative w-full min-h-screen bg-black flex justify-center items-center">
         <Navbar />
         
-        <main className="inner-page w-full ">
+        <main className="inner-page w-[90%] mx-auto ">
         <div className="w-full h-30"></div>
           {/* Breadcrumbs */}
          
 
           {/* Articles Section */}
           <section className="articles w-full bg-black py-8" style={{ marginTop: '20px' }}>
-          <div className="container mx-auto  h-15">
+          <div className="container mx-auto  h-15 ">
             <nav className="nav-breadcrumb py-4" aria-label="breadcrumb">
               <ol className="breadcrumb flex items-center gap-2 text-white text-sm">
                 <li className="breadcrumb-item">
@@ -216,9 +216,9 @@ export default function BookingPage() {
             <div className="container mx-auto px-4">
               <h1 className="text-white text-3xl mb-8 h-15">訂房</h1>
               
-              <div className="row flex flex-col lg:flex-row gap-6">
+              <div className="row flex flex-col lg:flex-row gap-6 bg-red-500">
                 {/* Main Content - Articles List */}
-                <div className="col-xl-9 col-lg-8 col-md-8 col-sm-12 col-xs-12 w-full lg:w-9/12">
+                <div className="col-xl-9 col-lg-8 col-md-8 col-sm-12 col-xs-12 w-full lg:w-7/10 bg-blue-500">
                   <BookingArticleList articles={currentArticles} />
 
                   {/* Pagination */}
@@ -255,10 +255,13 @@ export default function BookingPage() {
                       </ul>
                     </div>
                   </nav>
+
+
+
                 </div>
 
                 {/* Sidebar */}
-                <div className="col-xl-3 col-lg-4 col-md-4 col-sm-12 col-xs-12 w-full lg:w-3/12">
+                <div className="col-xl-3 col-lg-4 col-md-4 col-sm-12 col-xs-12 w-full lg:w-3/10">
                   {/* Categories Box */}
                   <div 
                     className="cate-box rounded-[40px] mb-[30px]"
@@ -321,9 +324,10 @@ export default function BookingPage() {
               </div>
             </div>
           </section>
+          <Footer />
         </main>
 
-        <Footer />
+       
         <GoToTop />
         <BottomNav />
       </div>
