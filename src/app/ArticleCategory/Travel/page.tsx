@@ -238,7 +238,7 @@ export default function TravelPage() {
       <div className="relative w-full min-h-screen bg-black">
         <Navbar />
         
-        <main className="inner-page w-full pt-[99px]">
+        <main className="inner-page w-full pt-[99px] mt-1000">
           {/* Breadcrumbs */}
           <div className="container mx-auto px-4">
             <nav className="nav-breadcrumb py-4" aria-label="breadcrumb">

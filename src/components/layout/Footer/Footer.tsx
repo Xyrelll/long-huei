@@ -14,7 +14,7 @@ const footerLinks = [
 
 export default function Footer() {
   return (
-    <footer id="footer" className="w-full bg-black py-8">
+    <footer id="footer" className="w-full bg-black py-8 mb-100">
       <p className="copyright text-center text-white mb-4">Copyright 2025 All Rights Reserved.</p>
       <ul className="flex flex-wrap justify-center items-center gap-2 list-none p-0 m-0 px-4">
         {footerLinks.map((link, index) => (

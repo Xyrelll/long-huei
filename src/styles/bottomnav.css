@@ -95,26 +95,16 @@
   font-weight: 600;
 }
 
-/* Footer fixed at bottom on mobile - above bottom nav */
+/* Footer normal flow - not fixed */
 @media (max-width: 1023px) {
   #footer {
-    position: fixed !important;
-    bottom: 70px !important;
-    left: 0 !important;
-    right: 0 !important;
-    width: 100% !important;
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    margin: 0 !important;
-    padding: 16px 0 !important;
-    background: #000000 !important;
-    z-index: 99 !important;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
-  }
-  
-  main {
-    padding-bottom: 160px;
+    position: relative;
+    width: 100%;
+    display: block;
+    margin: 0;
+    padding: 16px 0;
+    background: #000000;
+    margin-bottom: 100px;
   }
 }
 
