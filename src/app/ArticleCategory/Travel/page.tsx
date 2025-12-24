@@ -1,6 +1,7 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
+import { useSearchParams } from 'next/navigation';
 import { generateBreadcrumbSchema } from '@/config/seo';
 import Navbar from '@/components/layout/Navbar/Navbar';
 import Footer from '@/components/layout/Footer/Footer';
@@ -169,14 +170,9 @@ const popularTags = [
 ];
 
 export default function TravelPage() {
-  // Initialize page from URL using lazy initializer (client-side only)
-  const [currentPage, setCurrentPage] = useState(() => {
-    if (typeof window !== 'undefined') {
-      const urlParams = new URLSearchParams(window.location.search);
-      return parseInt(urlParams.get('PageNo') || '1', 10);
-    }
-    return 1;
-  });
+  const searchParams = useSearchParams();
+  const pageParam = searchParams.get('PageNo');
+  const currentPage = parseInt(pageParam || '1', 10);
   
   const itemsPerPage = 9;
   const totalPages = Math.ceil(travelArticles.length / itemsPerPage);
@@ -186,7 +182,7 @@ export default function TravelPage() {
   const endIndex = startIndex + itemsPerPage;
   const currentArticles = travelArticles.slice(startIndex, endIndex);
 
-  // Set page title/meta tags and listen for navigation changes
+  // Set page title/meta tags
   useEffect(() => {
     // Set page title
     document.title = '澳門旅遊攻略 - 景點、美食、住宿全指南 | 龍匯天下';
@@ -199,16 +195,6 @@ export default function TravelPage() {
       document.head.appendChild(metaDescription);
     }
     metaDescription.setAttribute('content', '探索澳門旅遊完整攻略，包含必訪景點、美食推薦、住宿選擇、交通指南等實用資訊。精選澳門自由行必看文章，從簽證辦理到行程規劃一次搞定，讓您的澳門之旅更加精彩。');
-    
-    // Listen for navigation changes (back/forward buttons)
-    const handlePopState = () => {
-      const urlParams = new URLSearchParams(window.location.search);
-      const pageNo = parseInt(urlParams.get('PageNo') || '1', 10);
-      setCurrentPage(pageNo);
-    };
-    
-    window.addEventListener('popstate', handlePopState);
-    return () => window.removeEventListener('popstate', handlePopState);
   }, []);
 
   const breadcrumbSchema = generateBreadcrumbSchema([
