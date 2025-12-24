@@ -1,0 +1,101 @@
+/* Bottom Navigation Styles - Mobile Only */
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: linear-gradient(180deg, #A46912 0%, #8B5A2B 30%, #5C3A1F 70%, #2C1810 100%);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 40;
+  display: none;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 1023px) {
+  .bottom-nav {
+    display: block;
+  }
+}
+
+@media (min-width: 1024px) {
+  .bottom-nav {
+    display: none !important;
+  }
+}
+
+.bottom-nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  padding: 8px 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.bottom-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #FFFFFF;
+  flex: 1;
+  padding: 8px 4px;
+  transition: all 0.3s ease;
+  min-width: 0;
+  position: relative;
+}
+
+.bottom-nav-item:active {
+  opacity: 0.7;
+}
+
+.bottom-nav-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4px;
+  width: 24px;
+  height: 24px;
+}
+
+.bottom-nav-icon svg {
+  width: 24px;
+  height: 24px;
+  color: #FFFFFF;
+  transition: all 0.3s ease;
+}
+
+.bottom-nav-item.active .bottom-nav-icon svg {
+  color: #FFCD83;
+  transform: scale(1.1);
+}
+
+.bottom-nav-label {
+  font-size: 12px;
+  line-height: 1.2;
+  text-align: center;
+  color: #FFFFFF;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.bottom-nav-item.active .bottom-nav-label {
+  color: #FFCD83;
+  font-weight: 600;
+}
+
+/* Add padding to main content when bottom nav is visible to prevent content from being hidden */
+@media (max-width: 1023px) {
+  main {
+    padding-bottom: 80px;
+  }
+  
+  #footer {
+    margin-bottom: 80px !important;
+  }
+}
+

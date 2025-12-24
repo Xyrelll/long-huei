@@ -7,6 +7,7 @@ import LatestArticles from '@/components/features/LatestArticles/LatestArticles'
 import FAQ from '@/components/features/FAQ/FAQ';
 import Footer from '@/components/layout/Footer/Footer';
 import GoToTop from '@/components/layout/GoToTop/GoToTop';
+import BottomNav from '@/components/layout/BottomNav/BottomNav';
 import { Metadata } from 'next';
 import { generateMetadata } from '@/config/metadata';
 import { generateBreadcrumbSchema } from '@/config/seo';
@@ -82,6 +83,7 @@ export default function Home() {
         </main>
         <Footer />
         <GoToTop />
+        <BottomNav />
       </div>
     </>
   );

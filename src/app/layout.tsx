@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "@/styles/globals.css";
 import "@/styles/navbar.css";
+import "@/styles/bottomnav.css";
 import { generateMetadata as genMeta } from "@/config/metadata";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
