@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { generateBreadcrumbSchema } from '@/config/seo';
 import Navbar from '@/components/layout/Navbar/Navbar';
@@ -79,7 +79,7 @@ const popularTags = [
   '龍匯澳門通',
 ];
 
-export default function QuestionPage() {
+function QuestionContent() {
   const searchParams = useSearchParams();
   const pageParam = searchParams.get('PageNo');
   const currentPage = parseInt(pageParam || '1', 10);
@@ -92,6 +92,116 @@ export default function QuestionPage() {
   const endIndex = startIndex + itemsPerPage;
   const currentArticles = questionArticles.slice(startIndex, endIndex);
 
+  return (
+    <>
+      {/* Articles Section */}
+      <section className="articles w-full bg-black py-8" style={{ marginTop: '20px' }}>
+        <div className="container mx-auto px-4">
+          <h1 className="text-white text-3xl mb-8">常見問答</h1>
+          
+          <div className="row flex flex-col lg:flex-row gap-6">
+            {/* Main Content - Articles List */}
+            <div className="col-xl-9 col-lg-8 col-md-8 col-sm-12 col-xs-12 w-full lg:w-9/12">
+              <TravelArticleList articles={currentArticles as unknown as Parameters<typeof TravelArticleList>[0]['articles']} />
+
+              {/* Pagination */}
+              <nav className="pagination mt-8" aria-label="Page navigation example">
+                <div className="pagination-container">
+                  <ul className="pagination flex justify-center items-center gap-2">
+                    {currentPage > 1 && (
+                      <li className="page-item">
+                        <Link 
+                          href={`/ArticleCategory/Question?PageNo=${currentPage - 1}&SortBy=DisplaySeq&SortDirection=ASC`} 
+                          rel="prev"
+                          className="page-link px-4 py-2 bg-[#2C261C] text-white rounded hover:bg-[#CD861A]"
+                        >
+                          &lt;
+                        </Link>
+                      </li>
+                    )}
+                    {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                      <li key={page} className={`page-item ${page === currentPage ? 'active' : ''}`}>
+                        {page === currentPage ? (
+                          <span className="page-link px-4 py-2 bg-[#CD861A] text-white rounded">
+                            {page}
+                          </span>
+                        ) : (
+                          <Link
+                            href={`/ArticleCategory/Question?PageNo=${page}&SortBy=DisplaySeq&SortDirection=ASC`}
+                            className="page-link px-4 py-2 bg-[#2C261C] text-white rounded hover:bg-[#CD861A]"
+                          >
+                            {page}
+                          </Link>
+                        )}
+                      </li>
+                    ))}
+                    {currentPage < totalPages && (
+                      <li className="page-item">
+                        <Link 
+                          href={`/ArticleCategory/Question?PageNo=${currentPage + 1}&SortBy=DisplaySeq&SortDirection=ASC`} 
+                          rel="next"
+                          className="page-link px-4 py-2 bg-[#2C261C] text-white rounded hover:bg-[#CD861A]"
+                        >
+                          &gt;
+                        </Link>
+                      </li>
+                    )}
+                  </ul>
+                </div>
+              </nav>
+            </div>
+
+            {/* Sidebar */}
+            <div className="col-xl-3 col-lg-4 col-md-4 col-sm-12 col-xs-12 w-full lg:w-3/12">
+              {/* Categories Box */}
+              <div className="cate-box mb-6">
+                <h4 className="text-white mb-4">
+                  <i className="bi bi-bookmarks-fill"></i> 所有文章分類
+                </h4>
+                <ul className="list-unstyled">
+                  {categories.map((category) => (
+                    <li key={category.name}>
+                      <Link
+                        href={category.link}
+                        className={`text-white hover:text-[#FFCD83] ${category.active ? 'active font-bold' : ''}`}
+                      >
+                        {category.name}
+                        {category.name === '旅遊' && '(11)'}
+                        {category.name === '桑拿' && '(11)'}
+                        {category.name === '包車' && '(12)'}
+                        {category.name === '訂房' && '(5)'}
+                        {category.name === '其他娛樂' && '(10)'}
+                        {category.name === '常見問答' && '(3)'}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Popular Tags Box */}
+              <div className="hot-tags-box">
+                <h4 className="text-white mb-4">
+                  <i className="bi bi-tags-fill"></i> 熱門TAG
+                </h4>
+                <ul className="tags flex flex-wrap gap-2">
+                  {popularTags.map((tag, idx) => (
+                    <li key={idx}>
+                      <Link href={`/Tag/${tag}`} className="text-xs text-gray-400 hover:text-[#FFCD83]">
+                        {tag}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
+
+export default function QuestionPage() {
   // Set page title/meta tags
   useEffect(() => {
     // Set page title
@@ -147,109 +257,9 @@ export default function QuestionPage() {
           </nav>
         </div>
 
-        {/* Articles Section */}
-        <section className="articles w-full bg-black py-8" style={{ marginTop: '20px' }}>
-          <div className="container mx-auto px-4">
-            <h1 className="text-white text-3xl mb-8">常見問答</h1>
-            
-            <div className="row flex flex-col lg:flex-row gap-6">
-              {/* Main Content - Articles List */}
-              <div className="col-xl-9 col-lg-8 col-md-8 col-sm-12 col-xs-12 w-full lg:w-9/12">
-                <TravelArticleList articles={currentArticles as unknown as Parameters<typeof TravelArticleList>[0]['articles']} />
-
-                {/* Pagination */}
-                <nav className="pagination mt-8" aria-label="Page navigation example">
-                  <div className="pagination-container">
-                    <ul className="pagination flex justify-center items-center gap-2">
-                      {currentPage > 1 && (
-                        <li className="page-item">
-                          <Link 
-                            href={`/ArticleCategory/Question?PageNo=${currentPage - 1}&SortBy=DisplaySeq&SortDirection=ASC`} 
-                            rel="prev"
-                            className="page-link px-4 py-2 bg-[#2C261C] text-white rounded hover:bg-[#CD861A]"
-                          >
-                            &lt;
-                          </Link>
-                        </li>
-                      )}
-                      {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-                        <li key={page} className={`page-item ${page === currentPage ? 'active' : ''}`}>
-                          {page === currentPage ? (
-                            <span className="page-link px-4 py-2 bg-[#CD861A] text-white rounded">
-                              {page}
-                            </span>
-                          ) : (
-                            <Link
-                              href={`/ArticleCategory/Question?PageNo=${page}&SortBy=DisplaySeq&SortDirection=ASC`}
-                              className="page-link px-4 py-2 bg-[#2C261C] text-white rounded hover:bg-[#CD861A]"
-                            >
-                              {page}
-                            </Link>
-                          )}
-                        </li>
-                      ))}
-                      {currentPage < totalPages && (
-                        <li className="page-item">
-                          <Link 
-                            href={`/ArticleCategory/Question?PageNo=${currentPage + 1}&SortBy=DisplaySeq&SortDirection=ASC`} 
-                            rel="next"
-                            className="page-link px-4 py-2 bg-[#2C261C] text-white rounded hover:bg-[#CD861A]"
-                          >
-                            &gt;
-                          </Link>
-                        </li>
-                      )}
-                    </ul>
-                  </div>
-                </nav>
-              </div>
-
-              {/* Sidebar */}
-              <div className="col-xl-3 col-lg-4 col-md-4 col-sm-12 col-xs-12 w-full lg:w-3/12">
-                {/* Categories Box */}
-                <div className="cate-box mb-6">
-                  <h4 className="text-white mb-4">
-                    <i className="bi bi-bookmarks-fill"></i> 所有文章分類
-                  </h4>
-                  <ul className="list-unstyled">
-                    {categories.map((category) => (
-                      <li key={category.name}>
-                        <Link
-                          href={category.link}
-                          className={`text-white hover:text-[#FFCD83] ${category.active ? 'active font-bold' : ''}`}
-                        >
-                          {category.name}
-                          {category.name === '旅遊' && '(11)'}
-                          {category.name === '桑拿' && '(11)'}
-                          {category.name === '包車' && '(12)'}
-                          {category.name === '訂房' && '(5)'}
-                          {category.name === '其他娛樂' && '(10)'}
-                          {category.name === '常見問答' && '(3)'}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* Popular Tags Box */}
-                <div className="hot-tags-box">
-                  <h4 className="text-white mb-4">
-                    <i className="bi bi-tags-fill"></i> 熱門TAG
-                  </h4>
-                  <ul className="tags flex flex-wrap gap-2">
-                    {popularTags.map((tag, idx) => (
-                      <li key={idx}>
-                        <Link href={`/Tag/${tag}`} className="text-xs text-gray-400 hover:text-[#FFCD83]">
-                          {tag}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <Suspense fallback={<div className="text-white p-8">Loading...</div>}>
+          <QuestionContent />
+        </Suspense>
       </main>
 
       <Footer />
