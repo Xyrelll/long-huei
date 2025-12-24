@@ -73,7 +73,7 @@ export default function Home() {
       <h1 className="d-none">龍匯天下</h1>
       <div className="relative w-full min-h-screen bg-black">
         <Navbar />
-        <main className="w-full">
+        <main className="w-full mt-1000">
           <Marquee />
           <Hero />
           <SelectedArticles />

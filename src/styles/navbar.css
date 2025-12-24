@@ -21,13 +21,14 @@
 @media (max-width: 1023px) {
   .navbar {
     max-height: 100vh;
-    overflow-y: auto;
+    overflow: visible !important;
     min-height: 79px;
     height: auto;
   }
   
   .navbar.expanded {
     height: auto;
+    overflow: visible !important;
   }
 }
 
@@ -38,6 +39,13 @@
   padding: 0 20px;
   box-sizing: border-box;
   height: 100%;
+  position: relative;
+}
+
+@media (max-width: 1023px) {
+  .container-fluid {
+    overflow: visible !important;
+  }
 }
 
 @media (max-width: 1023px) {
@@ -66,6 +74,9 @@
   flex-shrink: 0;
   padding: 12px 0;
   box-sizing: border-box;
+  position: relative;
+  z-index: 70;
+  pointer-events: auto;
 }
 
 @media (min-width: 1024px) {
@@ -90,6 +101,9 @@
   padding: 8px;
   min-width: 50px;
   height: 35px;
+  position: relative;
+  z-index: 71;
+  pointer-events: auto;
 }
 
 .navbar-search-icon svg {
@@ -117,6 +131,9 @@
   text-decoration: none;
   flex: 1;
   height: 100%;
+  position: relative;
+  z-index: 71;
+  pointer-events: auto;
 }
 
 .navbar-brand img {
@@ -172,6 +189,9 @@
   justify-content: center;
   min-width: 40px;
   height: 40px;
+  position: relative;
+  z-index: 70;
+  pointer-events: auto;
 }
 
 .navbar-toggler.nav-icon {
@@ -336,30 +356,68 @@
   color: #ce8211;
 }
 
-.dropdown-menu {
+/* Desktop Dropdown Menu Wrapper - Outside navbar */
+.dropdown-menu-wrapper-desktop {
+  position: fixed;
+  z-index: 1;
+  display: none;
+  pointer-events: none;
+  top: 25;
+  left: 0;
+  width: 100vw;
+  max-width: 100vw;
+  height: 135;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.8);;
+}
+
+@media (min-width: 1024px) {
+  .dropdown-menu-wrapper-desktop {
+    display: block;
+  }
+}
+
+@media (max-width: 1023px) {
+  .dropdown-menu-wrapper-desktop {
+    display: none !important;
+    pointer-events: none !important;
+    z-index: -1 !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+  }
+}
+
+/* Desktop Dropdown Menu - Outside nested structure */
+.dropdown-menu-desktop {
   position: absolute;
   left: 0;
-  top: 100%;
-  margin-top: 8px;
-  flex-direction: column;
-  background: rgba(0, 0, 0, 0.95);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
-  min-width: 200px;
+  top: 0;
+  flex-direction: row;
+  background: transparent;
   padding: 8px 0;
   list-style: none;
   display: none;
-  z-index: 1001;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  pointer-events: auto;
+  box-sizing: border-box;
 }
 
-.nav-item:hover .dropdown-menu,
-.nav-item.group:hover .dropdown-menu {
-  display: flex;
-}
-
-.dropdown-menu[style*="flex"] {
+.dropdown-menu-desktop[style*="flex"] {
   display: flex !important;
+}
+
+.dropdown-menu-desktop[style*="none"] {
+  display: none !important;
+}
+
+/* Legacy dropdown-menu - keep for compatibility but hide on desktop */
+.dropdown-menu {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .dropdown-menu {
+    display: none !important;
+  }
 }
 
 .dropdown-item {
@@ -385,16 +443,25 @@
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-out, opacity 0.2s ease-out;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.95);
   width: 100%;
   opacity: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 60;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
 }
 
 .navbar-collapse-mobile.show {
   max-height: 1000px;
   overflow-y: auto;
+  overflow-x: visible;
   transition: max-height 0.5s ease-in, opacity 0.3s ease-in;
   opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
 }
 
 @media (min-width: 1024px) {
@@ -408,11 +475,14 @@
   padding: 0;
   margin: 0;
   width: 100%;
+  overflow: visible;
 }
 
 .mobile-nav-item {
   width: 100%;
   border-bottom: 0;
+  overflow: visible;
+  position: relative;
 }
 
 .mobile-nav-link {
@@ -428,6 +498,9 @@
   border: none;
   cursor: pointer;
   font-size: 16px;
+  position: relative;
+  z-index: 61;
+  pointer-events: auto;
 }
 
 .mobile-nav-link svg {
@@ -495,6 +568,12 @@
 .mobile-dropdown-menu.open {
   max-height: 200px;
   transition: max-height 0.6s ease-in-out;
+}
+
+@media (min-width: 1024px) {
+  .mobile-dropdown-menu {
+    display: none !important;
+  }
 }
 
 .mobile-dropdown-menu li {

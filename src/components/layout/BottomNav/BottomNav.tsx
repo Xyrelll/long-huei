@@ -33,7 +33,7 @@ export default function BottomNav() {
 
   return (
     <nav className="bottom-nav">
-      <div className="bottom-nav-container">
+      <div className="bottom-nav-container  ">
         {bottomNavItems.map((item) => {
           const isActive = pathname === item.href || pathname?.startsWith(item.href);
           return (

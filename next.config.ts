@@ -36,6 +36,12 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  // Suppress workspace root warning
+  experimental: {
+    turbo: {
+      root: process.cwd(),
+    },
+  },
 };
 
 export default nextConfig;
