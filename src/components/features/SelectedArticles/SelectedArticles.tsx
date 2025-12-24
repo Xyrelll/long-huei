@@ -18,9 +18,9 @@ interface Article {
 const featuredArticle: Article = {
   id: 1,
   title: '澳門桑拿－老司機超詳細攻略',
-  image: '/Images/Articles/2307/澳門桑拿－老司機超詳細攻略-h.jpg',
-  imageMobile: '/Images/Articles/2307/澳門桑拿－老司機超詳細攻略-m.jpg',
-  views: 5179,
+  image: '/articles/澳門桑拿－老司機超詳細攻略-h.jpg',
+  imageMobile: '/articles/澳門桑拿－老司機超詳細攻略-h.jpg',
+  views: 5183,
   link: '/Article/sauna1',
   tags: ['澳門桑拿', '桑拿', '龍匯天下', '澳門旅遊'],
   description: '澳門桑拿最新現況總覽：疫情後全線回歸，甚至更勝以往！如果你近期有計畫前往澳門放鬆一下，那你可能會好奇：澳門的桑拿現在恢復得怎麼樣了？答案是——不僅回來了，而且是全面升級回歸！',
@@ -30,8 +30,8 @@ const articles: Article[] = [
   { 
     id: 2, 
     title: '澳門包車推薦｜自由暢遊澳門的最佳選擇！', 
-    image: '/Images/Articles/2339/99-h.png',
-    imageMobile: '/Images/Articles/2339/99-m.png',
+    image: '/articles/99-h.png',
+    imageMobile: '/articles/99-h.png',
     views: 1478, 
     link: '/Article/macao-rent-car',
     tags: ['澳門包車', '包車', '龍匯包車'],
@@ -39,19 +39,19 @@ const articles: Article[] = [
   },
   { 
     id: 3, 
-    title: ' 澳門劇本殺，推理遊戲還是慾望遊戲?', 
-    image: '/Images/Articles/2314/文案-h.png',
-    imageMobile: '/Images/Articles/2314/文案-m.png',
-    views: 2095, 
+    title: '澳門劇本殺，推理遊戲還是慾望遊戲?', 
+    image: '/articles/文案-h.png',
+    imageMobile: '/articles/文案-h.png',
+    views: 2097, 
     link: '/Article/sauna4',
     tags: ['澳門桑拿', '澳門劇本殺', '澳門', '龍匯天下', '桑拿'],
     description: '想在澳門玩點不一樣的劇本殺？別以為這只是燒腦推理，澳門劇本殺已進化成結合角色、情境與慾望的現場劇演。走進這場「遊戲」，你將成為慾望推理的主角，每個場景、每句台詞、每次互動，都是一場情緒與快感的試探。',
   },
   { 
     id: 4, 
-    title: '【澳門訂房】最頂攻略它來了！ (上)', 
-    image: '/Images/Articles/2303/【澳門訂房】最頂攻略它來了！-h.jpg',
-    imageMobile: '/Images/Articles/2303/【澳門訂房】最頂攻略它來了！-m.jpg',
+    title: '【澳門訂房】最頂攻略它來了！(上)', 
+    image: '/articles/【澳門訂房】最頂攻略它來了！-h.jpg',
+    imageMobile: '/articles/【澳門訂房】最頂攻略它來了！-h.jpg',
     views: 1733, 
     link: '/Article/wei%20i',
     description: '迫不及待要來分享【澳門訂房】懶人包啦！來到澳門的遊客怎麼能不找一間高級澳門住宿呢~每回去澳門旅行都開始找澳門住宿清單，先把小編這些口袋名單優質飯店收藏起來吧！',
@@ -59,8 +59,8 @@ const articles: Article[] = [
   { 
     id: 5, 
     title: '【澳門水舞間】超絕視覺震撼！給你不得不去的理由！', 
-    image: '/Images/Articles/2325/【澳門水舞間】超絕視覺震撼！給你不得不去的理由！-h.jpg',
-    imageMobile: '/Images/Articles/2325/【澳門水舞間】超絕視覺震撼！給你不得不去的理由！-m.jpg',
+    image: '/articles/【澳門水舞間】超絕視覺震撼！給你不得不去的理由！-h.jpg',
+    imageMobile: '/articles/【澳門水舞間】超絕視覺震撼！給你不得不去的理由！-h.jpg',
     views: 1454, 
     link: '/Article/macao%20water',
     tags: ['澳門水舞間', '龍匯澳門水舞間', '水舞間龍匯天下', '龍匯水舞間'],
@@ -68,10 +68,10 @@ const articles: Article[] = [
   },
   { 
     id: 6, 
-    title: '🌟 澳門熱門桑拿推薦 TOP 8 (上）', 
-    image: '/Images/Articles/2308/250519_龍匯天下_部落格圖_上-h.jpg',
-    imageMobile: '/Images/Articles/2308/250519_龍匯天下_部落格圖_上-m.jpg',
-    views: 4064, 
+    title: '★澳門熱門桑拿推薦 TOP 8 (上)', 
+    image: '/articles/250519_龍匯天下_部落格圖_上-h.jpg',
+    imageMobile: '/articles/250519_龍匯天下_部落格圖_上-h.jpg',
+    views: 4067, 
     link: '/Article/sauna2',
     tags: ['澳門', '澳門桑拿', '澳門劇本殺', '桑拿'],
     description: '不論你是老司機，還是初次探訪澳門桑拿的新手，選對一家店真的很關鍵！以下是四間評價極高、網友熱推的澳門桑拿，每間都有不同亮點與玩法，從24小時營業的尊貴水療，到主打劇本殺玩法，總有一間適合你。',
@@ -79,43 +79,43 @@ const articles: Article[] = [
   { 
     id: 7, 
     title: '【澳門賭場】攻略來了！不賭錢也能嗨玩三天三夜的隱藏玩法大公開！', 
-    image: '/Images/Articles/2313/【澳門賭場】攻略來了！不賭錢也能嗨玩三天三夜的隱藏玩法大公開！-h.jpg',
-    imageMobile: '/Images/Articles/2313/【澳門賭場】攻略來了！不賭錢也能嗨玩三天三夜的隱藏玩法大公開！-m.jpg',
-    views: 2100, 
+    image: '/articles/【澳門賭場】攻略來了！不賭錢也能嗨玩三天三夜的隱藏玩法大公開！-h.jpg',
+    imageMobile: '/articles/【澳門賭場】攻略來了！不賭錢也能嗨玩三天三夜的隱藏玩法大公開！-h.jpg',
+    views: 2102, 
     link: '/Article/macao%20casino',
   },
   { 
     id: 8, 
     title: '【澳門旅遊安全嗎？】2025重點解析', 
-    image: '/Images/Articles/2300/250513_龍匯天下_部落格圖-h.jpg',
-    imageMobile: '/Images/Articles/2300/250513_龍匯天下_部落格圖-m.jpg',
-    views: 2490, 
+    image: '/articles/250513_龍匯天下_部落格圖-h.jpg',
+    imageMobile: '/articles/250513_龍匯天下_部落格圖-h.jpg',
+    views: 2493, 
     link: '/Article/safe1',
     tags: ['澳門旅遊', '澳門旅遊安全', '澳門安全', '龍匯天下澳門'],
   },
   { 
     id: 9, 
-    title: '🌟 澳門熱門桑拿推薦 TOP 8 (下）', 
-    image: '/Images/Articles/2309/250519_龍匯天下_部落格圖_下-h.jpg',
-    imageMobile: '/Images/Articles/2309/250519_龍匯天下_部落格圖_下-m.jpg',
-    views: 2331, 
+    title: '★澳門熱門桑拿推薦 TOP 8 (下)', 
+    image: '/articles/250519_龍匯天下_部落格圖_下-h.jpg',
+    imageMobile: '/articles/250519_龍匯天下_部落格圖_下-h.jpg',
+    views: 2334, 
     link: '/Article/sauna3',
     tags: ['澳門桑拿', '桑拿推薦', '龍匯天下桑拿', '澳門劇本殺'],
   },
   { 
     id: 10, 
     title: '澳門按摩推薦｜舒壓放鬆一篇看懂', 
-    image: '/Images/Articles/2329/pg-h.png',
-    imageMobile: '/Images/Articles/2329/pg-m.png',
-    views: 1883, 
+    image: '/articles/pg-h.png',
+    imageMobile: '/articles/pg-h.png',
+    views: 1885, 
     link: '/Article/macao%20massage%201',
   },
   { 
     id: 11, 
     title: '【澳門景點】自由行必收的12個玩樂秘笈！', 
-    image: '/Images/Articles/2301/【澳門景點】自由行必收的12個玩樂秘笈！-h.jpg',
-    imageMobile: '/Images/Articles/2301/【澳門景點】自由行必收的12個玩樂秘笈！-m.jpg',
-    views: 1514, 
+    image: '/articles/【澳門景點】自由行必收的12個玩樂秘笈！-h.jpg',
+    imageMobile: '/articles/【澳門景點】自由行必收的12個玩樂秘笈！-h.jpg',
+    views: 1515, 
     link: '/Article/travel1',
     tags: ['澳門旅遊', '澳門景點', '澳門', '澳門安全嗎', '龍匯天下', '澳門桑拿'],
   },
@@ -172,11 +172,11 @@ export default function SelectedArticles() {
       `}</style>
 
       <h2 className="text-center text-white text-2xl mb-8">精選文章</h2>
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 max-w-6xl">
         {/* Desktop Layout */}
         <div className="hidden lg:block">
-          <div className="row featured flex">
-            <div className="col-4" style={{ paddingRight: '30px' }}>
+          <div className="row featured flex gap-6">
+            <div className="w-1/3 flex-shrink-0">
               <Link href={featuredArticle.link} className="block" target="_blank">
                 <Image
                   src={featuredArticle.image}
@@ -184,7 +184,7 @@ export default function SelectedArticles() {
                   alt={featuredArticle.title}
                   width={358}
                   height={200}
-                  className="mw-100 rounded-lg mb-2"
+                  className="w-full rounded-lg mb-2"
                 />
               </Link>
               <Link href={featuredArticle.link} className="block" target="_blank">
@@ -194,12 +194,12 @@ export default function SelectedArticles() {
                 <span>觀看人數：{featuredArticle.views}</span>
               </div>
             </div>
-            <div className="col-8">
+            <div className="w-2/3 flex-shrink-0">
               <div className="row featured-sm grid grid-cols-2 gap-4">
                 {articles.map((article) => (
-                  <div key={article.id} className="col-6 mb-3">
-                    <div className="row flex">
-                      <div className="col-6 pe-0">
+                  <div key={article.id} className="mb-3">
+                    <div className="row flex gap-3">
+                      <div className="flex-shrink-0">
                         <Link href={article.link} className="block" target="_blank">
                           <Image
                             src={article.image}
@@ -207,11 +207,11 @@ export default function SelectedArticles() {
                             alt={article.title}
                             width={188}
                             height={105}
-                            className="mw-100 rounded-lg"
+                            className="w-full rounded-lg"
                           />
                         </Link>
                       </div>
-                      <div className="col-6 pl-2">
+                      <div className="flex-1 min-w-0">
                         <div>
                           <Link href={article.link} className="block" target="_blank">
                             <h3>{article.title}</h3>

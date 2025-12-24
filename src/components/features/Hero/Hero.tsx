@@ -1,6 +1,5 @@
 'use client';
 
-import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 // @ts-ignore
@@ -19,24 +18,24 @@ interface HeroSlide {
 const heroSlides: HeroSlide[] = [
   { 
     id: 1, 
-    image: '/Images/WebBanners/250512_龍匯天下_包車_banner_1550px.jpg', 
-    imageMobile: '/Images/WebBanners/250512_龍匯天下_包車_banner_1550px-m.jpg',
+    image: '/homepage/250512_龍匯天下_包車_banner_1550px.jpg', 
+    imageMobile: '/homepage/250512_龍匯天下_包車_banner_1550px.jpg',
     link: '/Article/rentcal',
     alt: '澳門訂車、澳門包車、澳門旅遊',
     title: '澳門包車'
   },
   { 
     id: 2, 
-    image: '/Images/WebBanners/250512_龍匯天下_桑拿_banner_1550px.jpg', 
-    imageMobile: '/Images/WebBanners/250512_龍匯天下_桑拿_banner_1550px-m.jpg',
+    image: '/homepage/250512_龍匯天下_桑拿_banner_1550px.jpg', 
+    imageMobile: '/homepage/250512_龍匯天下_桑拿_banner_1550px.jpg',
     link: '/Article/sauna1',
     alt: '澳門桑拿、桑拿、龍匯天下桑拿、龍匯天下澳門桑拿',
     title: '澳門桑拿'
   },
   { 
     id: 3, 
-    image: '/Images/WebBanners/250512_龍匯天下_訂房_banner_1550px.jpg', 
-    imageMobile: '/Images/WebBanners/250512_龍匯天下_訂房_banner_1550px-m.jpg',
+    image: '/homepage/250512_龍匯天下_訂房_banner_1550px.jpg', 
+    imageMobile: '/homepage/250512_龍匯天下_訂房_banner_1550px.jpg',
     link: '/Article/wei%20i',
     alt: '龍匯天下訂房、澳門訂房、澳門旅遊',
     title: '澳門訂房'
@@ -44,34 +43,26 @@ const heroSlides: HeroSlide[] = [
 ];
 
 export default function Hero() {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 576);
-    };
-    
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
-
   return (
-    <section className="w-full mt-[99px]">
+    <section className="w-full mt-[99px] hero-section" style={{ marginBottom: '2.5rem' }}>
       <div id="splide" className="splide">
         <Splide
           options={{
             type: 'loop',
             autoplay: 'playing',
             focus: 'center',
-            padding: !isMobile ? { right: '7%', left: '7%' } : undefined,
-            pagination: isMobile ? false : true,
+            padding: { right: '5%', left: '5%' },
+            pagination: true,
+            arrows: false,
+            perPage: 1,
+            gap: '1rem',
+            trimSpace: false,
           }}
           aria-label="Banner Carousel"
         >
           {heroSlides.map((slide) => (
             <SplideSlide key={slide.id}>
-              <div>
+              <div className="splide-slide-wrapper">
                 <Link href={slide.link}>
                   <picture>
                     <source srcSet={slide.image} media="(min-width: 576px)" />
@@ -81,7 +72,7 @@ export default function Hero() {
                       title={slide.title}
                       width={1550}
                       height={400}
-                      className="w-100"
+                      className="w-100 splide-image"
                       priority={slide.id === 2}
                     />
                   </picture>
