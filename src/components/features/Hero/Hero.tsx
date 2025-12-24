@@ -43,19 +43,24 @@ const heroSlides: HeroSlide[] = [
 
 export default function Hero() {
   return (
-    <section className="w-full mt-[10px] md:mt-[99px] hero-section" style={{ marginBottom: '2.5rem' }}>
-      <div id="splide" className="splide">
+    <section className="w-full max-w-full overflow-x-hidden mt-[10px] md:mt-[99px] hero-section" style={{ marginBottom: '2.5rem' }}>
+      <div id="splide" className="splide w-full max-w-full">
         <Splide
           options={{
             type: 'loop',
             autoplay: 'playing',
             focus: 'center',
-            padding: { right: '5%', left: '5%' },
+            padding: { right: '0%', left: '0%' },
             pagination: true,
             arrows: false,
             perPage: 1,
             gap: '1rem',
             trimSpace: false,
+            breakpoints: {
+              640: {
+                padding: { right: '5%', left: '5%' },
+              },
+            },
           }}
           aria-label="Banner Carousel"
         >
@@ -71,7 +76,7 @@ export default function Hero() {
                       title={slide.title}
                       width={1550}
                       height={400}
-                      className="w-100 splide-image"
+                      className="w-full splide-image"
                       priority={slide.id === 2}
                     />
                   </picture>

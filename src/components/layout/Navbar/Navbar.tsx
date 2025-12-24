@@ -88,14 +88,13 @@ export default function Navbar() {
               src="/Images/logo-m.png"
               alt="Dragon Gathering World"
               title="Dragon Gathering World"
-              width={50}
-              height={50}
-              className="object-cover"
+              width={27}
+              height={25}
+              className="object-contain"
               priority
               style={{
-                width: "auto",
+                width: "34.55px",
                 height: 'auto',
-                objectFit: "cover",
               }}
             />
           </Link>
