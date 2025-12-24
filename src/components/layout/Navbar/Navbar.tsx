@@ -6,6 +6,150 @@ import Image from 'next/image';
 import TravelIcon from '../../../../public/Images/nacicon';
 import '../../../styles/navbar.css';
 
+// Navigation items configuration
+interface NavItem {
+  id: string;
+  label: string;
+  href: string;
+  icon: 'travel' | 'bed' | 'sauna' | 'question' | 'headset' | 'search';
+  isActive?: boolean;
+}
+
+const navItems: NavItem[] = [
+  { id: 'travel', label: '旅遊', href: '/ArticleCategory/Travel', icon: 'travel', isActive: true },
+  { id: 'booking', label: '訂房', href: '/ArticleCategory/Booking', icon: 'bed' },
+  { id: 'sauna', label: '桑拿', href: '/ArticleCategory/Sauna', icon: 'sauna' },
+  { id: 'question', label: '常見問答', href: '/ArticleCategory/Question', icon: 'question' },
+  { id: 'customer-service', label: '專人客服', href: '/CustomerService', icon: 'headset' },
+  { id: 'search', label: '搜尋', href: '/Search', icon: 'search' },
+];
+
+// Dropdown menu items
+interface DropdownItem {
+  id: string;
+  label: string;
+  href: string;
+}
+
+const dropdownItems: DropdownItem[] = [
+  { id: 'rentcar', label: '包車', href: '/ArticleCategory/RentCar' },
+  { id: 'entertainment', label: '其他娛樂', href: '/ArticleCategory/Entertainment' },
+];
+
+// Mobile Nav Item Component
+interface MobileNavItemProps {
+  item: NavItem;
+  onClick: () => void;
+}
+
+function MobileNavItem({ item, onClick }: MobileNavItemProps) {
+  return (
+    <li itemProp="name" className="mobile-nav-item">
+      <Link
+        itemProp="url"
+        href={item.href}
+        className="mobile-nav-link"
+        onClick={onClick}
+      >
+        <TravelIcon icon={item.icon} />
+        <span>{item.label}</span>
+      </Link>
+    </li>
+  );
+}
+
+// Desktop Nav Item Component
+interface DesktopNavItemProps {
+  item: NavItem;
+}
+
+function DesktopNavItem({ item }: DesktopNavItemProps) {
+  return (
+    <li itemProp="name" className="nav-item">
+      <Link
+        itemProp="url"
+        href={item.href}
+        className={`nav-link ${item.isActive ? 'active' : ''}`}
+        aria-current={item.isActive ? 'page' : undefined}
+      >
+        <TravelIcon icon={item.icon} />
+        <span>{item.label}</span>
+      </Link>
+    </li>
+  );
+}
+
+// Mobile Dropdown Component
+interface MobileDropdownProps {
+  isOpen: boolean;
+  onToggle: () => void;
+  onItemClick: () => void;
+  items: DropdownItem[];
+}
+
+function MobileDropdown({ isOpen, onToggle, onItemClick, items }: MobileDropdownProps) {
+  return (
+    <li className="mobile-nav-item">
+      <button
+        className={`mobile-nav-link mobile-dropdown-toggle ${isOpen ? "active" : ""}`}
+        type="button"
+        onClick={(e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          onToggle();
+        }}
+        aria-expanded={isOpen}
+        aria-controls="mobile-dropdown-menu"
+      >
+        <TravelIcon icon="handshake" />
+        <span>龍匯服務介紹</span>
+        <span className="dropdown-arrow">▼</span>
+      </button>
+      <ul
+        id="mobile-dropdown-menu"
+        className={`mobile-dropdown-menu ${isOpen ? "open" : ""}`}
+      >
+        {items.map((item) => (
+          <li key={item.id} itemProp="name">
+            <Link
+              itemProp="url"
+              href={item.href}
+              className="mobile-dropdown-item"
+              onClick={onItemClick}
+            >
+              {item.label}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </li>
+  );
+}
+
+// Desktop Dropdown Component
+interface DesktopDropdownProps {
+  isOpen: boolean;
+  onToggle: () => void;
+  buttonRef: React.RefObject<HTMLLIElement | null>;
+  items: DropdownItem[];
+}
+
+function DesktopDropdown({ isOpen, onToggle, buttonRef, items }: DesktopDropdownProps) {
+  return (
+    <li ref={buttonRef} className="nav-item relative group" id="dropdown-nav-item">
+      <button
+        className={`nav-link dropdown-toggle ${isOpen ? "active" : ""}`}
+        type="button"
+        onClick={onToggle}
+      >
+        <TravelIcon icon="handshake" />
+        <span>龍匯服務介紹</span>
+        <span className={`dropdown-arrow-desktop ${isOpen ? "active" : ""}`}>▼</span>
+      </button>
+    </li>
+  );
+}
+
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isdropdown, setdropdown] = useState(false);
@@ -135,128 +279,53 @@ export default function Navbar() {
             itemType="http://www.schema.org/SiteNavigationElement"
             className="mobile-menu-nav"
           >
-            <li itemProp="name" className="mobile-nav-item">
-              <Link
-                itemProp="url"
-                href="/ArticleCategory/Travel"
-                className="mobile-nav-link"
-                onClick={toggleMenu}
-              >
-                <TravelIcon icon="travel" />
-                <span>旅遊</span>
-              </Link>
-            </li>
-
-            <li itemProp="name" className="mobile-nav-item">
-              <Link
-                itemProp="url"
-                href="/ArticleCategory/Booking"
-                className="mobile-nav-link"
-                onClick={toggleMenu}
-              >
-                <TravelIcon icon="bed" />
-                <span>訂房</span>
-              </Link>
-            </li>
-
-            <li itemProp="name" className="mobile-nav-item">
-              <Link
-                itemProp="url"
-                href="/ArticleCategory/Sauna"
-                className="mobile-nav-link"
-                onClick={toggleMenu}
-              >
-                <TravelIcon icon="sauna" />
-                <span>桑拿</span>
-              </Link>
-            </li>
-
-            {/* Dropdown Menu */}
-            <li className="mobile-nav-item">
-              <button
-                className={`mobile-nav-link mobile-dropdown-toggle ${isdropdown ? "active" : ""}`}
-                type="button"
-                onClick={(e) => {
-                  e.preventDefault();
-                  e.stopPropagation();
-                  // Use ref to get current state without closure issues
-                  const currentState = isDropdownRef.current;
-                  const newState = !currentState;
-                  console.log('Mobile dropdown toggle - current:', currentState, 'new:', newState);
-                  isDropdownRef.current = newState;
-                  setdropdown(newState);
-                }}
-                aria-expanded={isdropdown}
-                aria-controls="mobile-dropdown-menu"
-              >
-                <TravelIcon icon="handshake" />
-                <span>龍匯服務介紹</span>
-                <span className="dropdown-arrow">▼</span>
-              </button>
-              <ul
-                id="mobile-dropdown-menu"
-                className={`mobile-dropdown-menu ${isdropdown ? "open" : ""}`}
-              >
-                <li itemProp="name">
-                  <Link
-                    itemProp="url"
-                    href="/ArticleCategory/RentCar"
-                    className="mobile-dropdown-item"
-                    onClick={toggleMenu}
-                  >
-                    包車
-                  </Link>
-                </li>
-                <li itemProp="name">
-                  <Link
-                    itemProp="url"
-                    href="/ArticleCategory/Entertainment"
-                    className="mobile-dropdown-item"
-                    onClick={toggleMenu}
-                  >
-                    其他娛樂
-                  </Link>
-                </li>
-              </ul>
-            </li>
-
-            <li itemProp="name" className="mobile-nav-item">
-              <Link
-                itemProp="url"
-                href="/ArticleCategory/Question"
-                className="mobile-nav-link"
-                onClick={toggleMenu}
-              >
-                <TravelIcon icon="question" />
-                <span>常見問答</span>
-              </Link>
-            </li>
-
-            <li className="mobile-nav-item">
-              <Link
-                href="/CustomerService"
-                className="mobile-nav-link"
-                onClick={toggleMenu}
-              >
-                <TravelIcon icon="headset" />
-                <span>專人客服</span>
-              </Link>
-            </li>
+            {/* Items before sauna (travel, booking) */}
+            {navItems
+              .filter(item => ['travel', 'booking'].includes(item.id))
+              .map((item) => (
+                <MobileNavItem key={item.id} item={item} onClick={toggleMenu} />
+              ))}
+            
+            {/* Sauna item */}
+            {navItems
+              .filter(item => item.id === 'sauna')
+              .map((item) => (
+                <MobileNavItem key={item.id} item={item} onClick={toggleMenu} />
+              ))}
+            
+            {/* Dropdown Menu - positioned between sauna and question */}
+            <MobileDropdown
+              isOpen={isdropdown}
+              onToggle={() => {
+                const currentState = isDropdownRef.current;
+                const newState = !currentState;
+                isDropdownRef.current = newState;
+                setdropdown(newState);
+              }}
+              onItemClick={toggleMenu}
+              items={dropdownItems}
+            />
+            
+            {/* Items after dropdown (question, customer-service) */}
+            {navItems
+              .filter(item => ['question', 'customer-service'].includes(item.id))
+              .map((item) => (
+                <MobileNavItem key={item.id} item={item} onClick={toggleMenu} />
+              ))}
           </ul>
-         
         </div>
 
         {/* Desktop Navigation */}
-        <div className="navbar-nav-desktop hidden lg:flex">
+        <div className="navbar-nav-desktop hidden lg:flex  ">
           {/* Desktop Logo */}
-          <Link href="/" className="navbar-brand-desktop">
+          <Link href="/" className="navbar-brand-desktop ">
             <Image
               src="/Images/logo-m.png"
               alt="Dragon Gathering World"
               title="Dragon Gathering World"
               width={60}
               height={60}
-              className="object-cover"
+              className="object-cover "
               priority
               style={{
                 width: "auto",
@@ -270,113 +339,50 @@ export default function Navbar() {
             itemType="http://www.schema.org/SiteNavigationElement"
             className="navbar-nav"
           >
-            <li itemProp="name" className="nav-item">
-              <Link
-                itemProp="url"
-                href="/ArticleCategory/Travel"
-                className="nav-link active"
-                aria-current="page"
-              >
-                <TravelIcon icon="travel" />
-                <span>旅遊</span>
-              </Link>
-            </li>
-
-            <li itemProp="name" className="nav-item">
-              <Link
-                itemProp="url"
-                href="/ArticleCategory/Booking"
-                className="nav-link"
-              >
-                <TravelIcon icon="bed" />
-                <span>訂房</span>
-              </Link>
-            </li>
-
-            <li itemProp="name" className="nav-item">
-              <Link
-                itemProp="url"
-                href="/ArticleCategory/Sauna"
-                className="nav-link"
-              >
-                <TravelIcon icon="sauna" />
-                <span>桑拿</span>
-              </Link>
-            </li>
-
+            {/* Regular navigation items before dropdown */}
+            {navItems
+              .filter(item => !['question', 'customer-service', 'search'].includes(item.id))
+              .map((item) => (
+                <DesktopNavItem key={item.id} item={item} />
+              ))}
+            
             {/* Dropdown Menu */}
-            <li ref={dropdownButtonRef} className="nav-item relative group" id="dropdown-nav-item">
-              <button
-                className={`nav-link dropdown-toggle ${isdropdown ? "active" : ""}`}
-                type="button"
-                onClick={toggleDropdown}
-              >
-                <TravelIcon icon="handshake" />
-                <span>龍匯服務介紹</span>
-              </button>
-              <span className={`dropdown-arrow-desktop ${isdropdown ? "active" : ""}`}>▼</span>
-            </li>
+            <DesktopDropdown
+              isOpen={isdropdown}
+              onToggle={toggleDropdown}
+              buttonRef={dropdownButtonRef}
+              items={dropdownItems}
+            />
 
-            <li itemProp="name" className="nav-item">
-              <Link
-                itemProp="url"
-                href="/ArticleCategory/Question"
-                className="nav-link"
-              >
-                <TravelIcon icon="question" />
-                <span>常見問答</span>
-              </Link>
-            </li>
-
-            <li className="nav-item">
-              <Link
-                href="/CustomerService"
-                className="nav-link"
-              >
-                <TravelIcon icon="headset" />
-                <span>專人客服</span>
-              </Link>
-            </li>
-
-            <li className="nav-item">
-              <Link
-                href="/Search"
-                className="nav-link"
-              >
-                <TravelIcon icon="search" />
-                <span>搜尋</span>
-              </Link>
-            </li>
+            {/* Navigation items after dropdown */}
+            {navItems
+              .filter(item => ['question', 'customer-service', 'search'].includes(item.id))
+              .map((item) => (
+                <DesktopNavItem key={item.id} item={item} />
+              ))}
           </ul>
         </div>
       </div>
     </nav>
     {/* Desktop Dropdown Menu - Outside navbar, not nested */}
-      <div ref={dropdownMenuRef} className="dropdown-menu-wrapper-desktop hidden lg:block"
+      <div ref={dropdownMenuRef} className="dropdown-menu-wrapper-desktop hidden lg:block "
          style={{ display: isdropdown ? "flex" : "none" }}
     >
       <ul
         className="dropdown-menu-desktop"
         style={{ display: isdropdown ? "flex" : "none" }}
       >
-        <li itemProp="name">
-          <Link
-            itemProp="url"
-            href="/ArticleCategory/RentCar"
-            className="dropdown-item"
-          >
-            包車
-          </Link>
-        </li>
-        <li itemProp="name">
-          <Link
-            itemProp="url"
-            href="/ArticleCategory/Entertainment"
-            className="dropdown-item"
-          >
-            其他娛樂
-          </Link>
-        </li>
+        {dropdownItems.map((item) => (
+          <li key={item.id} itemProp="name">
+            <Link
+              itemProp="url"
+              href={item.href}
+              className="dropdown-item"
+            >
+              {item.label}
+            </Link>
+          </li>
+        ))}
       </ul>
     </div>
   </>
