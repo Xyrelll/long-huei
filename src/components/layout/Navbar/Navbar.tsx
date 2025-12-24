@@ -8,16 +8,26 @@ import '../../../styles/navbar.css';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isdropdown, setdropdown] = useState("none");
+  const [isdropdown, setdropdown] = useState(false);
   const dropdownButtonRef = useRef<HTMLLIElement>(null);
   const dropdownMenuRef = useRef<HTMLDivElement>(null);
+  const isDropdownRef = useRef(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
     if (isMenuOpen) {
-      setdropdown("none"); // Close dropdown when menu closes
+      setdropdown(false); // Close dropdown when menu closes
     }
   };
+
+  const toggleDropdown = () => {
+    setdropdown(prev => !prev);
+  };
+
+  // Update ref when state changes
+  useEffect(() => {
+    isDropdownRef.current = isdropdown;
+  }, [isdropdown]);
 
   useEffect(() => {
     const updateDropdownPosition = () => {
@@ -31,7 +41,7 @@ export default function Navbar() {
       }
     };
 
-    if (isdropdown === "flex") {
+    if (isdropdown) {
       // Small delay to ensure DOM is updated
       setTimeout(() => {
         updateDropdownPosition();
@@ -42,19 +52,28 @@ export default function Navbar() {
     window.addEventListener('resize', updateDropdownPosition);
     window.addEventListener('scroll', updateDropdownPosition);
 
-    // Close dropdown when clicking outside
+    // Close dropdown when clicking outside (desktop only)
     const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as Node;
+      // Only handle desktop dropdown, not mobile
       if (
         dropdownButtonRef.current &&
         dropdownMenuRef.current &&
-        !dropdownButtonRef.current.contains(event.target as Node) &&
-        !dropdownMenuRef.current.contains(event.target as Node)
+        !dropdownButtonRef.current.contains(target) &&
+        !dropdownMenuRef.current.contains(target)
       ) {
-        setdropdown("none");
+        // Check if click is on mobile dropdown button - if so, don't close
+        const mobileDropdownButton = document.querySelector('.mobile-dropdown-toggle');
+        if (mobileDropdownButton && mobileDropdownButton.contains(target)) {
+          return; // Don't close if clicking mobile dropdown button
+        }
+        isDropdownRef.current = false;
+        setdropdown(false);
       }
     };
 
-    if (isdropdown === "flex") {
+    // Only add listener for desktop dropdown
+    if (isdropdown && dropdownButtonRef.current) {
       document.addEventListener('mousedown', handleClickOutside);
     }
 
@@ -155,16 +174,28 @@ export default function Navbar() {
             {/* Dropdown Menu */}
             <li className="mobile-nav-item">
               <button
-                className={`mobile-nav-link mobile-dropdown-toggle ${isdropdown === "flex" ? "active" : ""}`}
+                className={`mobile-nav-link mobile-dropdown-toggle ${isdropdown ? "active" : ""}`}
                 type="button"
-                onClick={() => { setdropdown(isdropdown === "flex" ? "none" : "flex"); }}
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  // Use ref to get current state without closure issues
+                  const currentState = isDropdownRef.current;
+                  const newState = !currentState;
+                  console.log('Mobile dropdown toggle - current:', currentState, 'new:', newState);
+                  isDropdownRef.current = newState;
+                  setdropdown(newState);
+                }}
+                aria-expanded={isdropdown}
+                aria-controls="mobile-dropdown-menu"
               >
                 <TravelIcon icon="handshake" />
                 <span>龍匯服務介紹</span>
                 <span className="dropdown-arrow">▼</span>
               </button>
               <ul
-                className={`mobile-dropdown-menu ${isdropdown === "flex" ? "open" : ""}`}
+                id="mobile-dropdown-menu"
+                className={`mobile-dropdown-menu ${isdropdown ? "open" : ""}`}
               >
                 <li itemProp="name">
                   <Link
@@ -276,14 +307,14 @@ export default function Navbar() {
             {/* Dropdown Menu */}
             <li ref={dropdownButtonRef} className="nav-item relative group" id="dropdown-nav-item">
               <button
-                className={`nav-link dropdown-toggle ${isdropdown === "flex" ? "active" : ""}`}
+                className={`nav-link dropdown-toggle ${isdropdown ? "active" : ""}`}
                 type="button"
-                onClick={() => { setdropdown(isdropdown === "flex" ? "none" : "flex"); }}
+                onClick={toggleDropdown}
               >
                 <TravelIcon icon="handshake" />
                 <span>龍匯服務介紹</span>
               </button>
-              <span className={`dropdown-arrow-desktop ${isdropdown === "flex" ? "active" : ""}`}>▼</span>
+              <span className={`dropdown-arrow-desktop ${isdropdown ? "active" : ""}`}>▼</span>
             </li>
 
             <li itemProp="name" className="nav-item">
@@ -322,11 +353,11 @@ export default function Navbar() {
     </nav>
     {/* Desktop Dropdown Menu - Outside navbar, not nested */}
       <div ref={dropdownMenuRef} className="dropdown-menu-wrapper-desktop hidden lg:block"
-         style={{ display: isdropdown === "flex" ? "flex" : "none" }}
+         style={{ display: isdropdown ? "flex" : "none" }}
     >
       <ul
         className="dropdown-menu-desktop"
-        style={{ display: isdropdown === "flex" ? "flex" : "none" }}
+        style={{ display: isdropdown ? "flex" : "none" }}
       >
         <li itemProp="name">
           <Link
