@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Home -->
+  <url>
+    <loc>https://yourdomain.com/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Main Pages -->
+  <url>
+    <loc>https://yourdomain.com/booking</loc>
+  </url>
+
+  <url>
+    <loc>https://yourdomain.com/travel</loc>
+  </url>
+
+  <url>
+    <loc>https://yourdomain.com/car-service</loc>
+  </url>
+
+  <url>
+    <loc>https://yourdomain.com/wellness</loc>
+  </url>
+
+  <url>
+    <loc>https://yourdomain.com/entertainment</loc>
+  </url>
+
+  <url>
+    <loc>https://yourdomain.com/faq</loc>
+  </url>
+
+  <url>
+    <loc>https://yourdomain.com/contact</loc>
+  </url>
+
+  <url>
+    <loc>https://yourdomain.com/search</loc>
+  </url>
+
+  <!-- Travel Articles -->
+  <url>
+    <loc>https://yourdomain.com/travel/macau-1-day</loc>
+  </url>
+
+  <url>
+    <loc>https://yourdomain.com/travel/macau-guide-2025</loc>
+  </url>
+
+  <url>
+    <loc>https://yourdomain.com/travel/macau-family</loc>
+  </url>
+
+  <!-- Car Services -->
+  <url>
+    <loc>https://yourdomain.com/car-service/airport-transfer</loc>
+  </url>
+
+  <url>
+    <loc>https://yourdomain.com/car-service/private-tour</loc>
+  </url>
+
+  <!-- Wellness -->
+  <url>
+    <loc>https://yourdomain.com/wellness/sauna</loc>
+  </url>
+
+  <url>
+    <loc>https://yourdomain.com/wellness/massage</loc>
+  </url>
+
+  <url>
+    <loc>https://yourdomain.com/wellness/spa</loc>
+  </url>
+
+  <!-- Entertainment -->
+  <url>
+    <loc>https://yourdomain.com/entertainment/murder-mystery</loc>
+  </url>
+
+</urlset>

@@ -1,15 +1,20 @@
 import FAQ from '@/components/features/FAQ/FAQ';
 import { Metadata } from 'next';
 import { generateMetadata } from '@/config/metadata';
-import { generateFAQSchema } from '@/config/seo';
+import { generateFAQSchema, generateBreadcrumbSchema } from '@/config/seo';
 
 export const metadata: Metadata = generateMetadata({
-  title: '常見問答',
-  description: '關於澳門旅遊、訂房、包車、桑拿等服務的常見問題與解答',
+  title: '常見問答 | 澳門旅遊、訂房、包車、桑拿服務FAQ',
+  description: '關於澳門旅遊、訂房、包車、桑拿等服務的常見問題與解答。包含旅遊安全、景點推薦、美食指南、交通資訊等實用問題，幫助您規劃完美的澳門之旅。',
   path: '/faq',
 });
 
 export default function FAQPage() {
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: '首頁', url: 'https://www.long-huei.com' },
+    { name: '常見問答', url: 'https://www.long-huei.com/faq' },
+  ]);
+
   const faqData = [
     {
       question: '澳門旅遊安全嗎？',
@@ -53,6 +58,10 @@ export default function FAQPage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}

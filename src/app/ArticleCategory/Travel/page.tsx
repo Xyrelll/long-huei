@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import { generateMetadata } from '@/config/metadata';
+import { generateBreadcrumbSchema } from '@/config/seo';
 import Navbar from '@/components/layout/Navbar/Navbar';
 import Footer from '@/components/layout/Footer/Footer';
 import GoToTop from '@/components/layout/GoToTop/GoToTop';
@@ -7,8 +8,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export const metadata: Metadata = generateMetadata({
-  title: '澳門旅遊攻略 - 景點、美食、住宿全指南',
-  description: '探索澳門旅遊完整攻略，包含必訪景點、美食推薦、住宿選擇、交通指南等實用資訊，讓您的澳門之旅更加精彩。',
+  title: '澳門旅遊攻略 - 景點、美食、住宿全指南 | 龍匯天下',
+  description: '探索澳門旅遊完整攻略，包含必訪景點、美食推薦、住宿選擇、交通指南等實用資訊。精選澳門自由行必看文章，從簽證辦理到行程規劃一次搞定，讓您的澳門之旅更加精彩。',
   path: '/ArticleCategory/Travel',
 });
 
@@ -96,14 +97,21 @@ const categories = [
 ];
 
 export default function TravelPage() {
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: '首頁', url: 'https://www.long-huei.com' },
+    { name: '旅遊攻略', url: 'https://www.long-huei.com/ArticleCategory/Travel' },
+  ]);
+
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     name: "澳門旅遊攻略",
     description: "探索澳門旅遊完整攻略，包含必訪景點、美食推薦、住宿選擇、交通指南等實用資訊",
     url: "https://www.long-huei.com/ArticleCategory/Travel",
+    inLanguage: "zh-TW",
     mainEntity: {
       "@type": "ItemList",
+      numberOfItems: travelArticles.length,
       itemListElement: travelArticles.map((article, index) => ({
         "@type": "ListItem",
         position: index + 1,
@@ -112,6 +120,8 @@ export default function TravelPage() {
           headline: article.title,
           description: article.description,
           url: `https://www.long-huei.com${article.link}`,
+          datePublished: article.date,
+          category: article.category,
         },
       })),
     },
@@ -119,6 +129,10 @@ export default function TravelPage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
