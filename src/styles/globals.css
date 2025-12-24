@@ -61,9 +61,16 @@ html {
   width: 100%;
 }
 
-/* Hero section margin bottom */
+/* Hero section margin */
 .hero-section {
+  margin-top: 99px !important;
   margin-bottom: 2.5rem !important;
+}
+
+@media (max-width: 767px) {
+  .hero-section {
+    margin-top: 10px !important;
+  }
 }
 
 .splide__slide {
