@@ -6,24 +6,24 @@ interface Feature {
 
 const features: Feature[] = [
   {
-    icon: '🎯',
+    icon: 'fas fa-gamepad',
     title: '多元方案任你選',
     description: '不論是奢華住宿、專車導覽、桑拿，還是行程客製化安排，我們提供多種彈性組合，滿足各類旅客的不同需求，輕鬆打造專屬旅遊體驗。',
   },
   {
-    icon: '💳',
-    title: '多元便捷付款',
-    description: '支援現金、銀行轉帳、等多種付款方式，流程簡單、交易安全，輕鬆完成預約無負擔。',
+    icon: 'fas fa-phone-square',
+    title: '24小時專人客服',
+    description: '我們的專業客服團隊全年無休、隨時在線，從抵達到離開，全程為您提供即時協助與貼心支援，讓您在當地無後顧之憂。',
   },
   {
-    icon: '🔒',
+    icon: 'fas fa-user-shield',
     title: '絕對保密制度',
     description: '尊重隱私是我們的首要原則，採用匿名預約制與專車低調接送，客戶資料全程加密處理，讓您安心享受每一刻。',
   },
   {
-    icon: '🕐',
-    title: '24小時專人客服',
-    description: '我們的專業客服團隊全年無休、隨時在線，從抵達到離開，全程為您提供即時協助與貼心支援，讓您在當地無後顧之憂。',
+    icon: 'fas fa-dollar-sign',
+    title: '多元便捷付款',
+    description: '支援現金、銀行轉帳、等多種付款方式，流程簡單、交易安全，輕鬆完成預約無負擔。',
   },
 ];
 
@@ -52,65 +52,55 @@ const whyChooseUs = [
 
 export default function About() {
   return (
-    <section className="w-full max-w-[1200px] mx-auto px-[117.5px] py-[78.7px]">
-      <h2 className="text-center text-[15.5px] leading-[31px] tracking-[7.68px] text-white mb-[78.7px]">
-        關於龍匯天下｜探索澳門，享受極致服務
-      </h2>
-
-      <div className="space-y-6 mb-[297.8px]">
-        <p className="text-[9.9px] leading-[29px] tracking-[0.459px] text-white max-w-[836px]">
-          歡迎來到【龍匯天下】──您的旅遊專家。我們結合當地文化與高端定制服務，為旅客打造獨一無二的極致體驗。我們結合當地文化與高端定制服務，為旅客打造獨一無二的極致體驗。
-        </p>
-        <p className="text-[9.9px] leading-[29px] tracking-[0.459px] text-white max-w-[632px]">
-          不論是豪華酒店訂房、專業包車導覽，還是令人心跳加速的「桑拿」體驗，我們都以高標準為您安排，確保每一位貴賓安心、放鬆、盡興。
-        </p>
-        <p className="text-[9.9px] leading-[29px] tracking-[0.459px] text-white max-w-[497px]">
-          我們的服務宗旨是：尊榮、保密、專業。從您抵達當地的那一刻起，我們就是您最值得信賴的貼身旅遊顧問。
-        </p>
-      </div>
-
-      {/* Features Grid */}
-      <div className="grid grid-cols-2 gap-6 mb-[270px]">
-        {features.map((feature, index) => (
-          <div key={index} className="flex gap-3">
-            <div className="w-[50px] h-[50px] flex items-center justify-center flex-shrink-0">
-              <span className="text-3xl">{feature.icon}</span>
-            </div>
-            <div>
-              <h3 className="text-[12.7px] leading-[24px] tracking-[0.574px] text-[#F5CA69] mb-2">
-                {feature.title}
-              </h3>
-              <p className="text-[9.9px] leading-[24px] tracking-[0.459px] text-white">
-                {feature.description}
-              </p>
-            </div>
+    <section className="about-top js-about-top w-full bg-black py-12">
+      <h2 className="text-center text-white text-2xl mb-8">關於龍匯天下｜探索澳門，享受極致服務</h2>
+      <div className="container mx-auto px-4">
+        <div className="row mb-4">
+          <div className="col-12">
+            <p className="content text-white mb-4">
+              歡迎來到【龍匯天下】──您的旅遊專家。我們結合當地文化與高端定制服務，為旅客打造獨一無二的極致體驗。我們結合當地文化與高端定制服務，為旅客打造獨一無二的極致體驗。
+            </p>
+            <p className="content text-white mb-4">
+              不論是豪華酒店訂房、專業包車導覽，還是令人心跳加速的「桑拿」體驗，我們都以高標準為您安排，確保每一位貴賓安心、放鬆、盡興。
+            </p>
+            <p className="content text-white mb-4">
+              我們的服務宗旨是：尊榮、保密、專業。從您抵達當地的那一刻起，我們就是您最值得信賴的貼身旅遊顧問。
+            </p>
           </div>
-        ))}
+        </div>
       </div>
 
-      {/* Why Choose Us */}
-      <div>
-        <h2 className="text-center text-[14.9px] leading-[31px] tracking-[7.68px] text-[#F5CA69] mb-[200px]">
-          為什麼選擇我們？
-        </h2>
-        <div className="grid grid-cols-2 gap-8">
-          <div className="space-y-8">
-            {whyChooseUs.map((item, index) => (
-              <div key={index} className="flex gap-4">
-                <div className="w-[140px] flex-shrink-0">
-                  <h3 className="text-[12.7px] leading-[24px] tracking-[0.574px] text-[#F5CA69]">
-                    {item.title}
-                  </h3>
-                </div>
-                <p className="text-[9.9px] leading-[24px] tracking-[0.459px] text-white flex-1">
-                  {item.description}
-                </p>
+      <h2 className="page-title text-center text-[#FFCD83] text-2xl mb-8">為什麼選擇我們？</h2>
+      <div className="container mx-auto px-4">
+        <div className="row mb-4">
+          {whyChooseUs.map((item, index) => (
+            <div key={index} className="flex flex-col md:flex-row mb-4">
+              <div className="col-md-4 col-12 mb-2 mb-md-0 md:w-1/3">
+                <h3 className="about-title text-[#FFCD83] text-lg font-bold">{item.title}</h3>
               </div>
-            ))}
-          </div>
+              <div className="col-md-8 col-12 mb-3 md:w-2/3">
+                <p className="text-white">{item.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="container mx-auto px-4">
+        <div className="row mt-1 mt-md-3 grid grid-cols-1 md:grid-cols-2 gap-6">
+          {features.map((feature, index) => (
+            <div key={index} className="col-md-6 col-12 mb-4">
+              <div className="about-card flex items-center gap-3 mb-2">
+                <i className={`${feature.icon} about-icon text-2xl text-[#FFCD83]`} aria-hidden="true"></i>
+                <h3 className="about-title text-[#FFCD83] text-lg font-bold">{feature.title}</h3>
+              </div>
+              <div className="about-content text-white">
+                {feature.description}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
   );
 }
-

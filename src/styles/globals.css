@@ -39,3 +39,316 @@ html {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+/* Marquee Styles */
+.marquee {
+  width: 100%;
+  background: #000000;
+  padding: 8px 0;
+  overflow: hidden;
+}
+
+.marquee-text {
+  color: white;
+  white-space: nowrap;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+/* Splide Carousel Styles */
+.splide {
+  width: 100%;
+}
+
+.splide__slide {
+  width: 100%;
+}
+
+.splide__slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Featured Articles Styles */
+.featured img {
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.featured .featured-sm img {
+  margin-bottom: 0px;
+}
+
+.featured h3 {
+  line-height: 1.3em;
+  font-size: 1.4rem;
+  color: #ffcd83;
+  margin-bottom: 0px;
+  padding: 5px;
+}
+
+.featured .featured-sm h3 {
+  line-height: 1.4em;
+  font-size: 1rem;
+  padding: 0 0 5px 0;
+}
+
+.featured a {
+  text-decoration: none;
+}
+
+.featured .views {
+  color: white;
+  padding: 5px;
+}
+
+.featured .featured-sm .views {
+  padding: 0px;
+}
+
+/* Article Card Styles */
+.article-card-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.cardpic {
+  flex-shrink: 0;
+}
+
+.card-title {
+  font-size: 14px;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+.text-read {
+  font-size: 12px;
+  color: white;
+}
+
+.tags {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tags li {
+  margin: 0;
+}
+
+.tags a {
+  color: #999;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.tags a:hover {
+  color: #ffcd83;
+}
+
+/* Question Answer Styles */
+.question-answer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.question-answer-card {
+  background: #2C261C;
+  border-radius: 24px;
+  padding: 32px;
+  width: 100%;
+}
+
+.question-answer-card h3 {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.question-answer-card p {
+  color: white;
+  margin-bottom: 12px;
+}
+
+.question-answer-card ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 12px 0;
+}
+
+.question-answer-card ul li {
+  margin-bottom: 8px;
+}
+
+.question-answer-card hr {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 16px 0;
+}
+
+.question-answer-card strong {
+  color: #ffcd83;
+}
+
+/* About Section Styles */
+.about-title {
+  color: #FFCD83;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.about-content {
+  color: white;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.about-icon {
+  font-size: 24px;
+  color: #FFCD83;
+}
+
+/* Carousel Controls */
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: white;
+  border: none;
+}
+
+.carousel-control-prev {
+  left: 0;
+}
+
+.carousel-control-next {
+  right: 0;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  font-size: 24px;
+  color: white;
+}
+
+/* Four Article Box */
+.four-article-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.article-img {
+  position: relative;
+  width: 100%;
+  height: 160px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.article-card-title {
+  color: #FFCD83;
+  font-size: 14px;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+.date {
+  color: white;
+  font-size: 12px;
+}
+
+/* Utility Classes */
+.d-none {
+  display: none !important;
+}
+
+.d-block {
+  display: block !important;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+@media (min-width: 576px) {
+  .d-sm-block {
+    display: block !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .d-md-block {
+    display: block !important;
+  }
+  
+  .d-md-none {
+    display: none !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .d-lg-block {
+    display: block !important;
+  }
+  
+  .d-lg-none {
+    display: none !important;
+  }
+}
+
+.mw-100 {
+  max-width: 100%;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.btn-a-top {
+  background: #CD861A;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.3s;
+}
+
+.btn-a-top:hover {
+  background: #A46912;
+}
+
+/* Splide Pagination */
+.splide__pagination {
+  bottom: 20px;
+}
+
+.splide__pagination__page {
+  background: rgba(255, 255, 255, 0.3);
+  opacity: 0.7;
+}
+
+.splide__pagination__page.is-active {
+  background: #CD861A;
+  opacity: 1;
+}
