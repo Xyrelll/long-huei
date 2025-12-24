@@ -321,6 +321,17 @@ html {
   margin-bottom: 0;
 }
 
+/* Latest Articles Section */
+.articles {
+  width: 100%;
+  background: #000000;
+}
+
+.articles .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 @media (min-width: 768px) {
   .about-card {
     margin-bottom: 32px;

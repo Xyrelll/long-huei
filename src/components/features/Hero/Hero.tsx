@@ -2,7 +2,6 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-// @ts-ignore
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/splide/dist/css/splide.min.css';
 
