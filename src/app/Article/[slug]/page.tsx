@@ -252,18 +252,18 @@ function ArticleContent() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <div className="relative w-full min-h-screen bg-black flex justify-center items-start">
+      <div className="relative w-full min-h-screen bg-black flex justify-center items-center ">
         <Navbar />
 
-        <main className="inner-page w-[90%] mx-auto">
-          <div className="w-full "></div>
+        <main className="inner-page md:w-[60%] mx-auto items-center justify-center ">
+        
 
           {/* Breadcrumb */}
           <nav
             style={{
               marginTop: isMobile ? '10px' : '30px',
             }}
-            className="nav-breadcrumb py-4"
+            className="nav-breadcrumb py-4 "
             aria-label="breadcrumb"
           >
             <ol className="breadcrumb flex items-center gap-1 md:gap-2 text-white text-xs md:text-sm flex-wrap">
@@ -309,7 +309,7 @@ function ArticleContent() {
             style={{
               paddingTop: "30px",
             }}
-            className="flex flex-col w-full items-start justify-start"
+            className="flex flex-col w-full items-start justify-start  "
           >
             {/* Article Title */}
             <h1
@@ -347,7 +347,7 @@ function ArticleContent() {
             style={{
               paddingTop: "10px",
             }}
-            className="flex flex-col lg:flex-row gap-6 py-8"
+            className="flex flex-col lg:flex-row gap-6 py-8 " 
           >
             {/* Main Content */}
             <div className="flex-1 lg:max-w-3xl ">
