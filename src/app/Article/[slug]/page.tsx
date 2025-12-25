@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, Suspense, useState } from "react";
+import { useEffect, Suspense, useState, useMemo } from "react";
 import { useParams } from "next/navigation";
 import { generateBreadcrumbSchema } from "@/config/seo";
 import Navbar from "@/components/layout/Navbar/Navbar";
@@ -66,6 +66,7 @@ function ArticleContent() {
   }, []);
   const slug = params?.slug as string;
   const [article, setArticle] = useState<Article | null>(null);
+  const [allArticles, setAllArticles] = useState<Article[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -131,6 +132,7 @@ function ArticleContent() {
         });
 
         setArticle(foundArticle || null);
+        setAllArticles(allArticles);
       } catch (error) {
         console.error("Error fetching article:", error);
         setArticle(null);
@@ -143,6 +145,31 @@ function ArticleContent() {
       fetchArticle();
     }
   }, [slug]);
+
+  // Compute recommended articles from the same category
+  const recommendedArticles = useMemo(() => {
+    if (!article || !allArticles.length) return [];
+    
+    // Filter articles from the same category, excluding the current article
+    const sameCategoryArticles = allArticles
+      .filter((a) => 
+        a.category === article.category && 
+        a.id !== article.id &&
+        a.link !== article.link
+      )
+      .slice(0, 9) // Limit to 9 articles
+      .map((a) => ({
+        id: a.id,
+        title: a.title,
+        description: a.description,
+        image: a.image,
+        link: a.link,
+        tags: a.tags,
+        // date is optional, so we don't include it if not available
+      }));
+    
+    return sameCategoryArticles;
+  }, [article, allArticles]);
 
   useEffect(() => {
     if (article) {
@@ -376,46 +403,7 @@ function ArticleContent() {
                   }}
                   className="flex flex-col items-center justify-center"
                 >
-                  {/* Mobile Social Media - Above Image */}
-                  <div className="lg:hidden w-full mb-6">
-                    <div
-                      className="share"
-                      style={{
-                        backgroundColor: '#FFFFFF',
-                        borderRadius: '20px',
-                        padding: '10px 20px 5px',
-                        display: 'flex',
-                        flexDirection: 'row',
-                        alignItems: 'center',
-                        gap: '16px',
-                        height: '50px',
-                        fontSize: '16px',
-                        fontFamily: 'system-ui, -apple-system, "Segoe UI", sans-serif',
-                      }}
-                    >
-                      <div style={{ color: '#ABABAB', fontSize: '16px' }}>
-                        加入
-                        <br />
-                        好友
-                      </div>
-                      <div className="flex gap-4 ml-auto">
-                        <a
-                          href="https://lin.ee/rQgNQ6D"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="w-8 h-8 rounded-lg bg-green-500 flex items-center justify-center hover:opacity-80 transition-opacity"
-                        >
-                          <i className="bi bi-line text-white text-base"></i>
-                        </a>
-                        <a
-                          href="#"
-                          className="w-8 h-8 rounded-lg bg-gradient-to-br from-purple-600 via-pink-500 to-orange-500 flex items-center justify-center hover:opacity-80 transition-opacity"
-                        >
-                          <i className="bi bi-instagram text-white text-base"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
+                
 
                   {/* Featured Image */}
                   <div
@@ -501,160 +489,9 @@ function ArticleContent() {
           </div>
 
           {/* Recommended Articles Section */}
-          {article && (
+          {article && recommendedArticles.length > 0 && (
             <RecommendedArticles
-              articles={[
-                {
-                  id: 1,
-                  title:
-                    "【澳門景點】2025最強攻略!必訪10大秘境、路線、美食全收錄",
-                  description:
-                    "澳門不只賭場與蛋塔!這座世界遺產小城藏著葡式浪漫、漁村風情與隱藏版打卡點。本篇精選12個「連在地人都推薦」的必訪景點，從歷史古蹟到網美打卡點一次整理，搭配本文獨家的實用攻略，教你用最",
-                  image:
-                    "/travel/【澳門景點】2025最強攻略！必訪10大秘境、路線、美食全收錄-c.jpg",
-                  link: "/Article/macao%20view",
-                  tags: [
-                    "澳門龍匯",
-                    "龍匯天下澳門旅遊",
-                    "澳門包車",
-                    "澳門包車景點",
-                  ],
-                  date: "2025/06/02",
-                },
-                {
-                  id: 2,
-                  title:
-                    "【大三巴牌坊】2025澳門自由行必訪深度攻略：歷史、周邊景點與美食全解析",
-                  description:
-                    "澳門大三巴牌坊是這座城市的靈魂地標,更是聯合國世界文化遺產的核心區域。無論是初訪旅客還是重返探索者,澳門大三巴牌坊將在2025年以更好的設施和更豐富的體驗迎接訪客。",
-                  image:
-                    "/travel/【大三巴牌坊】2025澳門自由行必訪深度攻略：歷史、周邊景點與美食全解析-c.jpg",
-                  link: "/Article/macao%20dasanbaa",
-                  tags: [
-                    "澳門大三巴",
-                    "大三巴澳門龍匯",
-                    "龍匯大三巴澳門",
-                    "澳門龍匯天下大三巴",
-                  ],
-                  date: "2025/07/04",
-                },
-                {
-                  id: 3,
-                  title: "【澳門景點】自由行必收的12個玩樂秘笈！",
-                  description:
-                    "澳門融合了葡式風情與中華文化,更坐擁8項世界遺產與頂級度假村,是亞洲旅客短程出遊的熱門選擇。本文精選12個「連在地人都推薦」的必訪景點，從歷史古蹟到網美打卡點一次整理",
-                  image: "/travel/【澳門景點】自由行必收的12個玩樂秘笈！-c.jpg",
-                  link: "/Article/travel1",
-                  tags: [
-                    "澳門旅遊",
-                    "澳門安全",
-                    "澳門景點",
-                    "澳門推薦",
-                    "龍匯天下",
-                  ],
-                  date: "2025/05/17",
-                },
-                {
-                  id: 4,
-                  title:
-                    "【澳門景點】2025最強攻略!必訪10大秘境、路線、美食全收錄",
-                  description:
-                    "澳門不只賭場與蛋塔!這座世界遺產小城藏著葡式浪漫、漁村風情與隱藏版打卡點。本篇精選12個「連在地人都推薦」的必訪景點，從歷史古蹟到網美打卡點一次整理，搭配本文獨家的實用攻略，教你用最",
-                  image:
-                    "/travel/【澳門景點】2025最強攻略！必訪10大秘境、路線、美食全收錄-c.jpg",
-                  link: "/Article/macao%20view",
-                  tags: [
-                    "澳門龍匯",
-                    "龍匯天下澳門旅遊",
-                    "澳門包車",
-                    "澳門包車景點",
-                  ],
-                  date: "2025/06/02",
-                },
-                {
-                  id: 5,
-                  title:
-                    "【大三巴牌坊】2025澳門自由行必訪深度攻略：歷史、周邊景點與美食全解析",
-                  description:
-                    "澳門大三巴牌坊是這座城市的靈魂地標,更是聯合國世界文化遺產的核心區域。無論是初訪旅客還是重返探索者,澳門大三巴牌坊將在2025年以更好的設施和更豐富的體驗迎接訪客。",
-                  image:
-                    "/travel/【大三巴牌坊】2025澳門自由行必訪深度攻略：歷史、周邊景點與美食全解析-c.jpg",
-                  link: "/Article/macao%20dasanbaa",
-                  tags: [
-                    "澳門大三巴",
-                    "大三巴澳門龍匯",
-                    "龍匯大三巴澳門",
-                    "澳門龍匯天下大三巴",
-                  ],
-                  date: "2025/07/04",
-                },
-                {
-                  id: 6,
-                  title: "【澳門景點】自由行必收的12個玩樂秘笈！",
-                  description:
-                    "澳門融合了葡式風情與中華文化,更坐擁8項世界遺產與頂級度假村,是亞洲旅客短程出遊的熱門選擇。本文精選12個「連在地人都推薦」的必訪景點，從歷史古蹟到網美打卡點一次整理",
-                  image: "/travel/【澳門景點】自由行必收的12個玩樂秘笈！-c.jpg",
-                  link: "/Article/travel1",
-                  tags: [
-                    "澳門旅遊",
-                    "澳門安全",
-                    "澳門景點",
-                    "澳門推薦",
-                    "龍匯天下",
-                  ],
-                  date: "2025/05/17",
-                },
-                {
-                  id: 7,
-                  title:
-                    "【澳門景點】2025最強攻略!必訪10大秘境、路線、美食全收錄",
-                  description:
-                    "澳門不只賭場與蛋塔!這座世界遺產小城藏著葡式浪漫、漁村風情與隱藏版打卡點。本篇精選12個「連在地人都推薦」的必訪景點，從歷史古蹟到網美打卡點一次整理，搭配本文獨家的實用攻略，教你用最",
-                  image:
-                    "/travel/【澳門景點】2025最強攻略！必訪10大秘境、路線、美食全收錄-c.jpg",
-                  link: "/Article/macao%20view",
-                  tags: [
-                    "澳門龍匯",
-                    "龍匯天下澳門旅遊",
-                    "澳門包車",
-                    "澳門包車景點",
-                  ],
-                  date: "2025/06/02",
-                },
-                {
-                  id: 8,
-                  title:
-                    "【大三巴牌坊】2025澳門自由行必訪深度攻略：歷史、周邊景點與美食全解析",
-                  description:
-                    "澳門大三巴牌坊是這座城市的靈魂地標,更是聯合國世界文化遺產的核心區域。無論是初訪旅客還是重返探索者,澳門大三巴牌坊將在2025年以更好的設施和更豐富的體驗迎接訪客。",
-                  image:
-                    "/travel/【大三巴牌坊】2025澳門自由行必訪深度攻略：歷史、周邊景點與美食全解析-c.jpg",
-                  link: "/Article/macao%20dasanbaa",
-                  tags: [
-                    "澳門大三巴",
-                    "大三巴澳門龍匯",
-                    "龍匯大三巴澳門",
-                    "澳門龍匯天下大三巴",
-                  ],
-                  date: "2025/07/04",
-                },
-                {
-                  id: 9,
-                  title: "【澳門景點】自由行必收的12個玩樂秘笈！",
-                  description:
-                    "澳門融合了葡式風情與中華文化,更坐擁8項世界遺產與頂級度假村,是亞洲旅客短程出遊的熱門選擇。本文精選12個「連在地人都推薦」的必訪景點，從歷史古蹟到網美打卡點一次整理",
-                  image: "/travel/【澳門景點】自由行必收的12個玩樂秘笈！-c.jpg",
-                  link: "/Article/travel1",
-                  tags: [
-                    "澳門旅遊",
-                    "澳門安全",
-                    "澳門景點",
-                    "澳門推薦",
-                    "龍匯天下",
-                  ],
-                  date: "2025/05/17",
-                },
-              ]}
+              articles={recommendedArticles}
             />
           )}
 

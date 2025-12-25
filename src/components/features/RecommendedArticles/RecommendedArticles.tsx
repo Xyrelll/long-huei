@@ -11,7 +11,7 @@ interface RecommendedArticle {
   image: string;
   link: string;
   tags?: string[];
-  date: string;
+  date?: string;
 }
 
 interface RecommendedArticlesProps {
@@ -306,11 +306,13 @@ export default function RecommendedArticles({ articles }: RecommendedArticlesPro
                           </div>
 
                           {/* Date - Fixed on bottom right */}
-                          <p 
-                            className="absolute bottom-6 right-4 text-white/70 text-xs"
-                          >
-                            {article.date}
-                          </p>
+                          {article.date && (
+                            <p 
+                              className="absolute bottom-6 right-4 text-white/70 text-xs"
+                            >
+                              {article.date}
+                            </p>
+                          )}
                         </Link>
                       );
                     })}
