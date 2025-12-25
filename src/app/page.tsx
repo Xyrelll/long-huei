@@ -71,7 +71,7 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationData) }}
       />
       <h1 className="d-none">龍匯天下</h1>
-      <div className="relative w-full min-h-screen bg-black">
+      <div className="relative w-full min-h-screen bg-black ">
         <Navbar />
         <main>
           <Marquee />

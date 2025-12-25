@@ -187,7 +187,7 @@ function SearchContent() {
       }}
       >
         {/* Search Bar */}
-        <form onSubmit={handleSearch} className="w-full max-w-2xl">
+        <form onSubmit={handleSearch} className="w-full mx-auto max-w-2xl">
           <div className="relative">
             <div className="absolute inset-y-0 left-6 flex items-center pl-4 pointer-events-none">
               <i className="bi bi-search text-gray-400 text-xl"></i>
@@ -211,7 +211,7 @@ function SearchContent() {
            }}
            />
           </div>
-          {showError && (
+          {!showError && hasSearched && (
             <p 
             style={{ 
               marginLeft: '50px',
@@ -286,57 +286,51 @@ function SearchContent() {
           </div>
         </div>
 
-        {/* Search Results */}
-        {hasSearched && !loading && (
+        {/* Search Results - Show when there are results */}
+        {hasSearched && !loading && searchResults.length > 0 && (
           <div className="w-full mt-12" style={{ paddingTop: '40px' }}>
             <div className="text-center mb-8">
               <h2 className="text-white text-2xl font-bold mb-2">
                 搜尋結果
               </h2>
               <p className="text-white/70 text-lg">
-                {searchResults.length > 0 
-                  ? `找到 ${searchResults.length} 筆相關文章`
-                  : '沒有找到相關文章'
-                }
+                找到 {searchResults.length} 筆相關文章
               </p>
             </div>
 
-            {searchResults.length > 0 && (
-              <div className="container flex flex-col items-center justify-center mx-auto px-4">
-                <TagCategoryLayout
-                  pageTitle=""
-                  breadcrumbName="搜尋結果"
-                  baseUrl={`/Search?Keyword=${encodeURIComponent(searchKeyword)}`}
-                  articles={searchResults}
-                  currentArticles={currentArticles}
-                  currentPage={validPage}
-                  totalPages={totalPages}
-                  itemsPerPage={itemsPerPage}
-                  ArticleListComponent={BookingArticleList}
-                />
-              </div>
-            )}
-
-            {searchResults.length === 0 && (
-              <div className="text-center py-12">
-                <p className="text-white/70 text-lg mb-4">
-                  請嘗試使用不同的關鍵字搜尋
-                </p>
-                <div className="flex flex-wrap justify-center gap-2">
-                  {hotKeywords.slice(0, 6).map((keyword) => (
-                    <button
-                      key={keyword}
-                      onClick={() => handleKeywordClick(keyword)}
-                      className="px-4 py-2 bg-[#CD861A] text-white text-sm font-medium rounded-full hover:bg-[#FFCD83] hover:text-black transition-colors"
-                    >
-                      {keyword}
-                    </button>
-                  ))}
-                </div>
-              </div>
-            )}
+            <div className="container flex flex-col items-center justify-center mx-auto px-4">
+              <TagCategoryLayout
+                pageTitle=""
+                breadcrumbName="搜尋結果"
+                baseUrl={`/Search?Keyword=${encodeURIComponent(searchKeyword)}`}
+                articles={searchResults}
+                currentArticles={currentArticles}
+                currentPage={validPage}
+                totalPages={totalPages}
+                itemsPerPage={itemsPerPage}
+                ArticleListComponent={BookingArticleList}
+              />
+            </div>
           </div>
         )}
+
+        {/* No Results Message */}
+        {hasSearched && !loading && searchResults.length === 0 && (
+          <div className="w-full mt-12" style={{ paddingTop: '40px' }}>
+            <div className="text-center mb-8">
+              <h2 className="text-white text-2xl font-bold mb-2">
+                搜尋結果
+              </h2>
+              <p className="text-white/70 text-lg">
+                沒有找到相關文章
+              </p>
+              <p className="text-white/50 text-base mt-4">
+                請嘗試使用其他關鍵字搜尋
+              </p>
+            </div>
+          </div>
+        )}
+
       </div>
     </>
   );
@@ -361,7 +355,8 @@ export default function SearchPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <div className="relative w-full min-h-screen bg-black flex justify-center items-start">
+      <div className="relative w-full min-h-screen bg-black flex justify-center items-center">
+      <div className="relative w-full md:w-[70%]  min-h-screen bg-black flex justify-center items-start ">
         <Navbar />
 
         <main className="inner-page w-[90%] mx-auto">
@@ -377,6 +372,8 @@ export default function SearchPage() {
         <GoToTop />
         <BottomNav />
       </div>
+      </div>
+
     </>
   );
 }
