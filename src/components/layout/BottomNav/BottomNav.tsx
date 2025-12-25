@@ -5,16 +5,16 @@ import { usePathname } from 'next/navigation';
 import TravelIcon from '../../../../public/Images/nacicon';
 import '../../../styles/bottomnav.css';
 
-const bottomNavItems = [
-  {
-    label: '旅遊',
-    href: '/ArticleCategory/Travel',
-    icon: 'travel' as const,
-  },
+const bottomNavItems = [ 
   {
     label: '訂房',
     href: '/ArticleCategory/Booking',
     icon: 'bed' as const,
+  },
+  {
+    label: '旅遊',
+    href: '/ArticleCategory/Travel',
+    icon: 'travel' as const,
   },
   {
     label: '包車',

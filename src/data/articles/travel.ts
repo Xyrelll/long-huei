@@ -33,13 +33,14 @@ export const travelArticles: TravelArticle[] = [
   {
     id: 2,
     title: '澳門一日遊｜24 小時暢遊世界遺產與娛樂之都',
-    description: 'If you only have one day in Macau, how can you make the most of your visit? That\'s the charm of a one-day trip to Macau. This small city blends Chinese and Western cultures, boasting both ancient historical buildings and world-class entertainment resorts. With a well-planned itinerary, even with just 24 hours, you can experience the best of both worlds.',
+    description: '如果你只有一天時間在澳門停留，該怎麼玩才能值回票價？這就是 澳門一日遊 的魅力所在。這座小城融合了中西文化，既有古老的歷史建築，又有國際級的娛樂度假村，只要行程安排得宜，即使僅有 24 小時，也能從清晨到深夜都充實難忘。',
     image: '/travel/251022-c.jpg',
     imageMobile: '/travel/251022-m.jpg',
     link: '/Article/macao-onedaypass',
     views: 1109,
     tags: ['澳門一日遊', '澳門包車', '澳門龍匯天下'],
     collapseId: 'collapse-macao-onedaypass',
+    contentBlocks: travelArticleContentBlocks[2],
   },
   {
     id: 3,
