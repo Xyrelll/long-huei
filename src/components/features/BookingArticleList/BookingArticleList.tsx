@@ -63,7 +63,7 @@ export default function BookingArticleList({ articles }: BookingArticleListProps
               {/* Article Details - Right side */}
               <div className="flex-1 flex flex-col w-full md:w-[72%] gap-2 " >
                 <Link href={article.link}>
-                  <h3 className="text-[#FFCD83] text-md md:text-2xl lg:text-2xl font-bold mb-2 md:mb-3 transition-colors duration-300 leading-tight">
+                  <h3 className="text-[#FFCD83] text-md md:text-[20px] font-bold mb-2 md:mb-3 transition-colors duration-300 leading-tight">
                     {article.title}
                   </h3>
                 </Link>
@@ -92,16 +92,24 @@ export default function BookingArticleList({ articles }: BookingArticleListProps
                 
                 {/* Tags - Desktop only */}
                 {article.tags && article.tags.length > 0 && (
-                  <div className="hidden md:flex flex-wrap gap-1 mt-4  h-7 rounded-x">
+                  <div
+                  
+                   className="hidden md:flex flex-wrap gap-1 mt-4 ">
                     {article.tags.map((tag, idx) => (
                       <Link
                         key={idx}
                         href={`/Tag/${tag}`}
-                        className="px-4 py-2 bg-[#ce8211] text-black text-xs font-medium
+                        style={{
+                          paddingTop: '5px',
+                          paddingBottom: '5px',
+                          paddingLeft: '10px',
+                          paddingRight: '10px',
+                        }}
+                        className="px-4 py-2 bg-[#ce8211] text-white text-xs font-medium
                         flex justify-center items-center px-3
                         rounded-full hover:bg-white hover:text-[#CD861A] transition-colors duration-300"
                       >
-                      <span className="text-xs w-full px-2 "> &nbsp; &nbsp;{tag}  &nbsp; &nbsp;</span>
+                      <span className="text-xs w-full px-2 ">{tag} </span>
                       </Link>
                     ))}
                   </div>
