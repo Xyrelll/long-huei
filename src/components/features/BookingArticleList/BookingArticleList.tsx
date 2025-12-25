@@ -47,11 +47,13 @@ export default function BookingArticleList({ articles }: BookingArticleListProps
 
   return (
     <div className="flex flex-col gap-6" style={{ width: isMobile ? '100%' : 'auto' }}>
-      {articles.map((article) => {
+      {articles.map((article, index) => {
         const isExpanded = expandedCards.has(article.id);
+        // Use link as key since it's unique, fallback to index if link is missing
+        const uniqueKey = article.link || `article-${index}`;
         
         return (
-          <article key={article.id} className="flex flex-col pb-6 last:border-b-0" style={{ width: isMobile ? '100%' : 'auto' }}>
+          <article key={uniqueKey} className="flex flex-col pb-6 last:border-b-0" style={{ width: isMobile ? '100%' : 'auto' }}>
             {/* Top row: Image and Title */}
             <div className="flex flex-row gap-3 md:gap-4" style={{ width: '100%' }}>
               {/* Thumbnail - Left side */}
