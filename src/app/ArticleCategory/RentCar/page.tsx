@@ -83,8 +83,8 @@ export const rentCarArticles: RentCarArticle[] = [
     id: 6,
     title: '澳門包車接送｜玩轉澳門最省心的交通秘訣',
     description: '你是不是常常遇到這種情況？飛機剛落地，還要拖著行李排隊等的士；準備去景點，卻因為不熟悉路線而浪費一大堆時間。想在短短幾天裡把澳門好玩、好吃、好拍的地方一次收集？答案其實很簡單——選擇 澳門包車接送。',
-    image: '/articles/251013jpg-h.jpg',
-    imageMobile: '/articles/251013jpg-m.jpg',
+    image: '/rentcar/rentcar-c.jpg',
+    imageMobile: '/rentcar/rentcar-c.jpg',
     link: '/Article/macao-baocar',
     views: 1137,
     tags: ['澳門包車', '包車接送', '澳門機場接送', '澳門接送'],
@@ -94,8 +94,8 @@ export const rentCarArticles: RentCarArticle[] = [
     id: 7,
     title: '澳門包車一日遊｜輕鬆暢遊澳門的最佳選擇',
     description: '來到澳門旅遊，許多人會安排世界遺產、威尼斯人、官也街、美食之旅等經典景點，但若想在有限的時間內輕鬆走遍大大小小的必玩之地，澳門包車一日遊 就成為最便利的選擇。透過 澳門包車一日遊，你可以自由規劃行程、',
-    image: '/articles/251013jpg-h.jpg',
-    imageMobile: '/articles/251013jpg-m.jpg',
+    image: '/rentcar/baocar-c.jpg',
+    imageMobile: '/rentcar/baocar-c.jpg',
     link: '/Article/macao-onedaytrvl',
     views: 1117,
     tags: ['澳門包車', '澳門旅遊'],
@@ -105,8 +105,8 @@ export const rentCarArticles: RentCarArticle[] = [
     id: 8,
     title: '澳門機場接送：舒適便捷的專屬交通服務',
     description: '到澳門旅遊或洽公，交通安排往往是旅程中最重要的一環。選擇可靠的 「澳門機場接送」 服務，不僅能讓你從落地開始就享受舒適旅程，更能節省時間、避免舟車勞頓。無論是個人旅遊、家庭出行或商務行程，澳門機場接送',
-    image: '/articles/251013jpg-h.jpg',
-    imageMobile: '/articles/251013jpg-m.jpg',
+    image: '/rentcar/plane-c.jpg',
+    imageMobile: '/rentcar/plane-c.jpg',
     link: '/Article/airportrencar',
     views: 1180,
     tags: ['澳門機場接送', '澳門機場', '澳門找龍匯包車', '龍匯包車'],
@@ -116,12 +116,45 @@ export const rentCarArticles: RentCarArticle[] = [
     id: 9,
     title: '澳門包車旅遊｜舒適自由的深度玩法',
     description: '如果你想用最自在的方式探索澳門，享受量身訂製的行程規劃，那麼 澳門包車旅遊 絕對是最佳選擇。相比傳統團體旅遊，澳門包車旅遊 提供更高的自由度與舒適度，不管是家庭出行、商務行程，還是好友聚會，都能依照需',
-    image: '/articles/251013jpg-h.jpg',
-    imageMobile: '/articles/251013jpg-m.jpg',
+    image: '/rentcar/9_8澳門包車旅遊｜舒適自由的深度玩法-c.jpg',
+    imageMobile: '/rentcar/9_8澳門包車旅遊｜舒適自由的深度玩法-c.jpg',
     link: '/Article/rentcar1',
     views: 1139,
     tags: ['澳門包車', '澳門旅遊', '龍匯澳門', '包車推薦'],
     collapseId: 'collapse-rentcar1',
+  },
+  {
+    id: 10,
+    title: '澳門包車推薦｜自由暢遊澳門的最佳選擇！',
+    description: '想在澳門輕鬆暢遊，無須擔心交通問題？無論是商務出差、家庭旅遊、婚禮接送還是私人觀光，【澳門包車推薦】的最佳選擇就在這裡！我們提供高品質、彈性十足的包車服務，為您量身打造最舒適、便捷的出行體驗。',
+    image: '/articles/99-h.png',
+    imageMobile: '/articles/99-m.png',
+    link: '/Article/macao-rent-car',
+    views: 1480,
+    tags: ['澳門包車', '包車', '龍匯包車'],
+    collapseId: 'collapse-macao-rent-car',
+  },
+  {
+    id: 11,
+    title: '澳門包車｜豪華專車接送，尊享舒適旅程',
+    description: '想在澳門自由暢遊、舒適無憂？選擇【澳門包車】服務，讓您的旅程升級，無論是商務接待、婚禮包車、家庭出遊，還是私人觀光，我們都能為您量身打造專屬路線和尊榮體驗。',
+    image: '/rentcar/【澳門包車】三種頂級車種聰明挑，輕鬆解鎖高品質旅程_(1)-c.jpg',
+    imageMobile: '/articles/【澳門包車】三種頂級車種聰明挑，輕鬆解鎖高品質旅程_(1)-c.jpg',
+    link: '/Article/rentcal',
+    views: 1813,
+    tags: ['澳門包車', '澳門找龍匯包車', '龍匯天下旅遊', '澳門旅遊', '澳門景點'],
+    collapseId: 'collapse-rentcal',
+  },
+  {
+    id: 12,
+    title: '【澳門包車】三種頂級車種聰明挑，輕鬆解鎖高品質旅程',
+    description: '和家人朋友出遊澳門卻不知道要包什麼車嗎?那你來對地方了，小編給您統整了三種頂級車款的受眾，只要根據你的需求選擇就行了，怎麼樣?是不是很方便呀~廢話不多說，進正片！',
+    image: '/rentcar/包車-c.png',
+    imageMobile: '/rentcart/包車-c.png',
+    link: '/Article/wei123',
+    views: 1548,
+    tags: ['龍匯天下包車', '包車澳門龍匯', '龍匯包車', '澳門找龍匯包車'],
+    collapseId: 'collapse-wei123',
   },
 ];
 
@@ -150,7 +183,7 @@ const popularTags = [
 
 function RentCarContent() {
   const searchParams = useSearchParams();
-  const itemsPerPage = 3;
+  const itemsPerPage = 9;
   const totalPages = Math.ceil(rentCarArticles.length / itemsPerPage);
 
   // Get current page from URL params
@@ -171,7 +204,7 @@ function RentCarContent() {
       currentArticles={currentArticles}
       currentPage={currentPage}
       totalPages={totalPages}
-      itemsPerPage={3}
+      itemsPerPage={9}
       ArticleListComponent={BookingArticleList}
       categories={categories}
       popularTags={popularTags}
