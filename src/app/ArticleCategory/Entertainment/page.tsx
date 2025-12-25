@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, Suspense } from 'react';
+import { Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { generateBreadcrumbSchema } from '@/config/seo';
 import Navbar from '@/components/layout/Navbar/Navbar';
@@ -9,6 +9,7 @@ import GoToTop from '@/components/layout/GoToTop/GoToTop';
 import BottomNav from '@/components/layout/BottomNav/BottomNav';
 import BookingArticleList from '@/components/features/BookingArticleList/BookingArticleList';
 import ArticleCategoryLayout from '@/components/layout/ArticleCategoryLayout/ArticleCategoryLayout';
+import PageMetadata from '@/components/SEO/PageMetadata';
 // import Link from 'next/link';
 
 interface EntertainmentArticle {
@@ -191,22 +192,10 @@ function EntertainmentContent() {
 }
 
 export default function EntertainmentPage() {
-  // Set page title/meta tags
-  useEffect(() => {
-    document.title = '澳門其他娛樂攻略 - 水舞間、百老匯、美高梅全指南 | 龍匯天下';
-
-    let metaDescription = document.querySelector('meta[name="description"]');
-    if (!metaDescription) {
-      metaDescription = document.createElement('meta');
-      metaDescription.setAttribute('name', 'description');
-      document.head.appendChild(metaDescription);
-    }
-    metaDescription.setAttribute('content', '探索澳門其他娛樂完整攻略，包含水舞間、百老匯、美高梅、永利等娛樂場所介紹。精選澳門娛樂必看文章，從表演節目到娛樂設施一次搞定，讓您的澳門之旅更加精彩。');
-  }, []);
 
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: '首頁', url: 'https://www.long-huei.com' },
-    { name: '其他娛樂', url: 'https://www.long-huei.com/ArticleCategory/Entertainment' },
+    { name: '首頁', url: 'https://longhuei.netlify.app' },
+    { name: '其他娛樂', url: 'https://longhuei.netlify.app/ArticleCategory/Entertainment' },
   ]);
 
   const structuredData = {
@@ -214,7 +203,7 @@ export default function EntertainmentPage() {
     "@type": "CollectionPage",
     name: "澳門其他娛樂攻略",
     description: "探索澳門其他娛樂完整攻略，包含水舞間、百老匯、美高梅、永利等娛樂場所介紹",
-    url: "https://www.long-huei.com/ArticleCategory/Entertainment",
+    url: "https://longhuei.netlify.app/ArticleCategory/Entertainment",
     inLanguage: "zh-TW",
     mainEntity: {
       "@type": "ItemList",
@@ -226,7 +215,7 @@ export default function EntertainmentPage() {
           "@type": "Article",
           headline: article.title,
           description: article.description,
-          url: `https://www.long-huei.com${article.link}`,
+          url: `https://longhuei.netlify.app${article.link}`,
         },
       })),
     },
@@ -234,6 +223,12 @@ export default function EntertainmentPage() {
 
   return (
     <>
+      <PageMetadata
+        title="澳門其他娛樂攻略 - 水舞間、百老匯、美高梅全指南 | 龍匯天下"
+        description="探索澳門其他娛樂完整攻略，包含水舞間、百老匯、美高梅、永利等娛樂場所介紹。精選澳門娛樂必看文章，從表演節目到娛樂設施一次搞定，讓您的澳門之旅更加精彩。"
+        url="https://longhuei.netlify.app/ArticleCategory/Entertainment"
+        image="https://longhuei.netlify.app/Images/Logo.png"
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}

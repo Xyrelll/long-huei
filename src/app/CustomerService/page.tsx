@@ -1,58 +1,18 @@
 'use client';
 
-import { useEffect } from 'react';
 import { generateBreadcrumbSchema } from '@/config/seo';
 import Navbar from '@/components/layout/Navbar/Navbar';
 import Footer from '@/components/layout/Footer/Footer';
 import GoToTop from '@/components/layout/GoToTop/GoToTop';
 import BottomNav from '@/components/layout/BottomNav/BottomNav';
+import PageMetadata from '@/components/SEO/PageMetadata';
 import Link from 'next/link';
 import Image from 'next/image';
 
 export default function CustomerServicePage() {
-  // Set page title/meta tags
-  useEffect(() => {
-    // Set page title
-    document.title = '專人客服 - 龍匯天下';
-    
-    // Update meta description
-    let metaDescription = document.querySelector('meta[name="description"]');
-    if (!metaDescription) {
-      metaDescription = document.createElement('meta');
-      metaDescription.setAttribute('name', 'description');
-      document.head.appendChild(metaDescription);
-    }
-    metaDescription.setAttribute('content', '龍匯天下專人客服-澳門旅遊-訂房-包車-桑拿-專人客服');
-    
-    // Update Open Graph tags
-    let ogTitle = document.querySelector('meta[property="og:title"]');
-    if (!ogTitle) {
-      ogTitle = document.createElement('meta');
-      ogTitle.setAttribute('property', 'og:title');
-      document.head.appendChild(ogTitle);
-    }
-    ogTitle.setAttribute('content', '專人客服 - 龍匯天下');
-    
-    let ogDescription = document.querySelector('meta[property="og:description"]');
-    if (!ogDescription) {
-      ogDescription = document.createElement('meta');
-      ogDescription.setAttribute('property', 'og:description');
-      document.head.appendChild(ogDescription);
-    }
-    ogDescription.setAttribute('content', '龍匯天下專人客服-澳門旅遊-訂房-包車-桑拿-專人客服');
-    
-    let ogUrl = document.querySelector('meta[property="og:url"]');
-    if (!ogUrl) {
-      ogUrl = document.createElement('meta');
-      ogUrl.setAttribute('property', 'og:url');
-      document.head.appendChild(ogUrl);
-    }
-    ogUrl.setAttribute('content', 'https://www.long-huei.com/CustomerService');
-  }, []);
-
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: '首頁', url: 'https://www.long-huei.com' },
-    { name: '專人客服', url: 'https://www.long-huei.com/CustomerService' },
+    { name: '首頁', url: 'https://longhuei.netlify.app' },
+    { name: '專人客服', url: 'https://longhuei.netlify.app/CustomerService' },
   ]);
 
   const structuredData = {
@@ -60,7 +20,7 @@ export default function CustomerServicePage() {
     "@type": "ContactPage",
     name: "專人客服 - 龍匯天下",
     description: "龍匯天下專人客服-澳門旅遊-訂房-包車-桑拿-專人客服",
-    url: "https://www.long-huei.com/CustomerService",
+    url: "https://longhuei.netlify.app/CustomerService",
     inLanguage: "zh-TW",
     mainEntity: {
       "@type": "Organization",
@@ -75,6 +35,12 @@ export default function CustomerServicePage() {
 
   return (
     <>
+      <PageMetadata
+        title="專人客服 - 龍匯天下"
+        description="龍匯天下專人客服-澳門旅遊-訂房-包車-桑拿-專人客服。加入LINE或WeChat好友享優惠，提供24小時專業客服服務。"
+        url="https://longhuei.netlify.app/CustomerService"
+        image="https://longhuei.netlify.app/Images/Logo.png"
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
@@ -220,4 +186,3 @@ export default function CustomerServicePage() {
     </>
   );
 }
-

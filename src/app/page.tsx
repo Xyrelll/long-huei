@@ -20,7 +20,7 @@ export const metadata: Metadata = generateMetadata({
 
 export default function Home() {
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: '首頁', url: 'https://www.long-huei.com' },
+    { name: '首頁', url: 'https://longhuei.netlify.app' },
   ]);
 
   const structuredData = {
@@ -28,14 +28,14 @@ export default function Home() {
     "@type": "WebSite",
     name: "龍匯天下",
     alternateName: "Long Huei",
-    url: "https://www.long-huei.com",
+    url: "https://longhuei.netlify.app",
     description: "澳門龍匯天下、澳門旅遊、桑拿、訂房包車、最好的澳門旅遊幫手",
     inLanguage: "zh-TW",
     potentialAction: {
       "@type": "SearchAction",
       target: {
         "@type": "EntryPoint",
-        urlTemplate: "https://www.long-huei.com/Search?Keyword={search_term_string}",
+        urlTemplate: "https://longhuei.netlify.app/Search?Keyword={search_term_string}",
       },
       "query-input": "required name=search_term_string",
     },
@@ -46,8 +46,8 @@ export default function Home() {
     "@type": "Organization",
     name: "龍匯天下",
     alternateName: "Long Huei",
-    url: "https://www.long-huei.com",
-    logo: "https://www.long-huei.com/Images/Logo.png",
+    url: "https://longhuei.netlify.app",
+    logo: "https://longhuei.netlify.app/Images/Logo.png",
     description: "澳門龍匯天下、澳門旅遊、桑拿、訂房包車、最好的澳門旅遊幫手",
     contactPoint: {
       "@type": "ContactPoint",

@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, Suspense } from 'react';
+import { Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { generateBreadcrumbSchema } from '@/config/seo';
 import Navbar from '@/components/layout/Navbar/Navbar';
@@ -9,6 +9,7 @@ import GoToTop from '@/components/layout/GoToTop/GoToTop';
 import BottomNav from '@/components/layout/BottomNav/BottomNav';
 import BookingArticleList from '@/components/features/BookingArticleList/BookingArticleList';
 import ArticleCategoryLayout from '@/components/layout/ArticleCategoryLayout/ArticleCategoryLayout';
+import PageMetadata from '@/components/SEO/PageMetadata';
 // import Link from 'next/link';
 
 interface BookingArticle {
@@ -136,22 +137,10 @@ function BookingContent() {
 }
 
 export default function BookingPage() {
-  // Set page title/meta tags
-  useEffect(() => {
-    document.title = '澳門訂房攻略 - 酒店推薦、住宿選擇全指南 | 龍匯天下';
-
-    let metaDescription = document.querySelector('meta[name="description"]');
-    if (!metaDescription) {
-      metaDescription = document.createElement('meta');
-      metaDescription.setAttribute('name', 'description');
-      document.head.appendChild(metaDescription);
-    }
-    metaDescription.setAttribute('content', '探索澳門訂房完整攻略，包含頂級酒店推薦、住宿區域指南、訂房省錢技巧等實用資訊。精選澳門訂房必看文章，從酒店選擇到優惠資訊一次搞定，讓您的澳門住宿體驗更加完美。');
-  }, []);
 
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: '首頁', url: 'https://www.long-huei.com' },
-    { name: '訂房', url: 'https://www.long-huei.com/ArticleCategory/Booking' },
+    { name: '首頁', url: 'https://longhuei.netlify.app' },
+    { name: '訂房', url: 'https://longhuei.netlify.app/ArticleCategory/Booking' },
   ]);
 
   const structuredData = {
@@ -159,7 +148,7 @@ export default function BookingPage() {
     "@type": "CollectionPage",
     name: "澳門訂房攻略",
     description: "探索澳門訂房完整攻略，包含頂級酒店推薦、住宿區域指南、訂房省錢技巧等實用資訊",
-    url: "https://www.long-huei.com/ArticleCategory/Booking",
+    url: "https://longhuei.netlify.app/ArticleCategory/Booking",
     inLanguage: "zh-TW",
     mainEntity: {
       "@type": "ItemList",
@@ -171,7 +160,7 @@ export default function BookingPage() {
           "@type": "Article",
           headline: article.title,
           description: article.description,
-          url: `https://www.long-huei.com${article.link}`,
+          url: `https://longhuei.netlify.app${article.link}`,
         },
       })),
     },
@@ -179,6 +168,12 @@ export default function BookingPage() {
 
   return (
     <>
+      <PageMetadata
+        title="澳門訂房攻略 - 酒店推薦、住宿選擇全指南 | 龍匯天下"
+        description="探索澳門訂房完整攻略，包含頂級酒店推薦、住宿區域指南、訂房省錢技巧等實用資訊。精選澳門訂房必看文章，從酒店選擇到優惠資訊一次搞定，讓您的澳門住宿體驗更加完美。"
+        url="https://longhuei.netlify.app/ArticleCategory/Booking"
+        image="https://longhuei.netlify.app/Images/Logo.png"
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}

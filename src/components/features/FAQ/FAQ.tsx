@@ -63,7 +63,7 @@ const faqData = [
         A： 澳門通搭公車＋免費酒店接駁最方便！</p>
       </>
     ),
-    link: 'https://www.long-huei.com/Article/travel1',
+    link: 'https://longhuei.netlify.app/Article/travel1',
   },
 ];
 

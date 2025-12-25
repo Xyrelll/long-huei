@@ -7,6 +7,7 @@ import Navbar from '@/components/layout/Navbar/Navbar';
 import Footer from '@/components/layout/Footer/Footer';
 import GoToTop from '@/components/layout/GoToTop/GoToTop';
 import BottomNav from '@/components/layout/BottomNav/BottomNav';
+import PageMetadata from '@/components/SEO/PageMetadata';
 import Link from 'next/link';
 
 const hotKeywords = ['桑拿', '訂房', '優惠', '包車', '澳門', '澳門旅遊'];
@@ -30,10 +31,14 @@ function SearchContent() {
   const [searchKeyword, setSearchKeyword] = useState('');
   const [showError, setShowError] = useState(false);
 
+  // Initialize from URL on mount and when URL changes
   useEffect(() => {
-    const keyword = searchParams.get('Keyword');
+    const keyword = searchParams.get('Keyword') || '';
     if (keyword) {
-      setSearchKeyword(keyword);
+      // Use requestAnimationFrame to defer state update
+      requestAnimationFrame(() => {
+        setSearchKeyword(keyword);
+      });
     }
   }, [searchParams]);
 
@@ -182,25 +187,20 @@ function SearchContent() {
 }
 
 export default function SearchPage() {
-  useEffect(() => {
-    document.title = '搜尋 - 龍匯天下';
-    
-    let metaDescription = document.querySelector('meta[name="description"]');
-    if (!metaDescription) {
-      metaDescription = document.createElement('meta');
-      metaDescription.setAttribute('name', 'description');
-      document.head.appendChild(metaDescription);
-    }
-    metaDescription.setAttribute('content', '搜尋澳門旅遊、桑拿、訂房、包車等相關文章');
-  }, []);
 
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: '首頁', url: 'https://www.long-huei.com' },
-    { name: '搜尋', url: 'https://www.long-huei.com/Search' },
+    { name: '首頁', url: 'https://longhuei.netlify.app' },
+    { name: '搜尋', url: 'https://longhuei.netlify.app/Search' },
   ]);
 
   return (
     <>
+      <PageMetadata
+        title="搜尋 - 龍匯天下"
+        description="搜尋澳門旅遊、桑拿、訂房、包車等相關文章。快速找到您需要的澳門旅遊資訊、酒店推薦、包車服務、桑拿體驗等內容。"
+        url="https://longhuei.netlify.app/Search"
+        image="https://longhuei.netlify.app/Images/Logo.png"
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}

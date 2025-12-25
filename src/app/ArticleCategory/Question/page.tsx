@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, Suspense } from 'react';
+import { Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { generateBreadcrumbSchema } from '@/config/seo';
 import Navbar from '@/components/layout/Navbar/Navbar';
@@ -9,6 +9,7 @@ import GoToTop from '@/components/layout/GoToTop/GoToTop';
 import BottomNav from '@/components/layout/BottomNav/BottomNav';
 import BookingArticleList from '@/components/features/BookingArticleList/BookingArticleList';
 import ArticleCategoryLayout from '@/components/layout/ArticleCategoryLayout/ArticleCategoryLayout';
+import PageMetadata from '@/components/SEO/PageMetadata';
 // import Link from 'next/link';
 
 interface QuestionArticle {
@@ -114,22 +115,10 @@ function QuestionContent() {
 }
 
 export default function QuestionPage() {
-  // Set page title/meta tags
-  useEffect(() => {
-    document.title = '澳門常見問答 - 換錢、澳門通、旅遊安全全指南 | 龍匯天下';
-
-    let metaDescription = document.querySelector('meta[name="description"]');
-    if (!metaDescription) {
-      metaDescription = document.createElement('meta');
-      metaDescription.setAttribute('name', 'description');
-      document.head.appendChild(metaDescription);
-    }
-    metaDescription.setAttribute('content', '探索澳門常見問答完整攻略，包含換錢、澳門通、旅遊安全等實用資訊。精選澳門常見問題必看文章，從實用技巧到安全指南一次搞定，讓您的澳門之旅更加順利。');
-  }, []);
 
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: '首頁', url: 'https://www.long-huei.com' },
-    { name: '常見問答', url: 'https://www.long-huei.com/ArticleCategory/Question' },
+    { name: '首頁', url: 'https://longhuei.netlify.app' },
+    { name: '常見問答', url: 'https://longhuei.netlify.app/ArticleCategory/Question' },
   ]);
 
   const structuredData = {
@@ -137,7 +126,7 @@ export default function QuestionPage() {
     "@type": "CollectionPage",
     name: "澳門常見問答",
     description: "探索澳門常見問答完整攻略，包含換錢、澳門通、旅遊安全等實用資訊",
-    url: "https://www.long-huei.com/ArticleCategory/Question",
+    url: "https://longhuei.netlify.app/ArticleCategory/Question",
     inLanguage: "zh-TW",
     mainEntity: {
       "@type": "ItemList",
@@ -149,7 +138,7 @@ export default function QuestionPage() {
           "@type": "Article",
           headline: article.title,
           description: article.description,
-          url: `https://www.long-huei.com${article.link}`,
+          url: `https://longhuei.netlify.app${article.link}`,
         },
       })),
     },
@@ -157,6 +146,12 @@ export default function QuestionPage() {
 
   return (
     <>
+      <PageMetadata
+        title="澳門常見問答 - 換錢、澳門通、旅遊安全全指南 | 龍匯天下"
+        description="探索澳門常見問答完整攻略，包含換錢、澳門通、旅遊安全等實用資訊。精選澳門常見問題必看文章，從實用技巧到安全指南一次搞定，讓您的澳門之旅更加順利。"
+        url="https://longhuei.netlify.app/ArticleCategory/Question"
+        image="https://longhuei.netlify.app/Images/Logo.png"
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}

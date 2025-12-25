@@ -11,8 +11,8 @@ export const metadata: Metadata = generateMetadata({
 
 export default function FAQPage() {
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: '首頁', url: 'https://www.long-huei.com' },
-    { name: '常見問答', url: 'https://www.long-huei.com/faq' },
+    { name: '首頁', url: 'https://longhuei.netlify.app' },
+    { name: '常見問答', url: 'https://longhuei.netlify.app/faq' },
   ]);
 
   const faqData = [

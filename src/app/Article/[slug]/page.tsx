@@ -156,9 +156,9 @@ function ArticleContent() {
   }
 
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: '首頁', url: 'https://www.long-huei.com' },
-    { name: article.category || '文章', url: `https://www.long-huei.com/ArticleCategory/${article.category === '訂房' ? 'Booking' : article.category === '旅遊' ? 'Travel' : article.category === '包車' ? 'RentCar' : article.category === '桑拿' ? 'Sauna' : article.category === '其他娛樂' ? 'Entertainment' : 'Question'}` },
-    { name: article.title, url: `https://www.long-huei.com${article.link}` },
+    { name: '首頁', url: 'https://longhuei.netlify.app' },
+    { name: article.category || '文章', url: `https://longhuei.netlify.app/ArticleCategory/${article.category === '訂房' ? 'Booking' : article.category === '旅遊' ? 'Travel' : article.category === '包車' ? 'RentCar' : article.category === '桑拿' ? 'Sauna' : article.category === '其他娛樂' ? 'Entertainment' : 'Question'}` },
+    { name: article.title, url: `https://longhuei.netlify.app${article.link}` },
   ]);
 
   const getCategoryUrl = (category: string) => {
