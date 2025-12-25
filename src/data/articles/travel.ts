@@ -129,24 +129,26 @@ export const travelArticles: TravelArticle[] = [
   {
     id: 10,
     title: '【澳門旅遊】性價比最高的玩法，它來了！',
-    description: '說到澳門旅遊，想必你心中肯定有很多問號，想去澳門但不知道去哪裡玩，澳門旅遊去哪裡cp值最高，最值回票價的美景在澳門的哪裡，你的疑問小編都聽到啦，於是特別替大家精挑細選並濃縮成懶人包，事不宜遲，快跟著小',
+    description: '說到澳門旅遊，想必你心中肯定有很多問號，想去澳門但不知道去哪裡玩，澳門旅遊去哪裡cp值最高，最值回票價的美景在澳門的哪裡，你的疑問小編都聽到啦，於是特別替大家精挑細選並濃縮成懶人包，事不宜遲，快跟著小編一起來了解吧！',
     image: '/travel/【澳門旅遊】性價比最高的玩法，它來了-c.jpg',
     imageMobile: '/travel/【澳門旅遊】性價比最高的玩法，它來了-m.jpg',
     link: '/Article/macao%20travel',
     views: 1269,
     tags: ['澳門旅遊找龍匯', '龍匯天下澳門', '龍匯旅遊澳門', '澳門旅遊龍匯天下'],
     collapseId: 'collapse-macao-travel',
+    contentBlocks: travelArticleContentBlocks[10],
   },
   {
     id: 11,
     title: '【澳門景點】自由行必收的12個玩樂秘笈！',
-    description: '澳門融合了葡式風情與中華文化，更坐擁8項世界遺產與頂級度假村，是亞洲旅客短程出遊的熱門選擇。本文精選12個「連在地人都推薦」的必訪景點，從歷史古蹟到網美打卡點一次整理，搭配本文獨家的實用攻略，教你用最',
+    description: '澳門景點融合了葡式風情與中華文化，更坐擁8項世界遺產與頂級度假村，是亞洲旅客短程出遊的熱門選擇。本文精選12個「連在地人都推薦」的必訪景點，從歷史古蹟到網美打卡點一次整理，搭配本文獨家的實用攻略，教你用最省時省力的方式玩遍澳門精華！',
     image: '/travel/【澳門景點】自由行必收的12個玩樂秘笈！-c.jpg',
     imageMobile: '/travel/【澳門景點】自由行必收的12個玩樂秘笈！-m.jpg',
     link: '/Article/travel1',
     views: 1515,
     tags: ['澳門旅遊', '澳門安全', '澳門景點', '澳門推薦', '龍匯天下'],
     collapseId: 'collapse-travel1',
+    contentBlocks: travelArticleContentBlocks[11],
   },
 ];
 
