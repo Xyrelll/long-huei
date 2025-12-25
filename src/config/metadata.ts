@@ -17,7 +17,20 @@ export function generateMetadata({
   const pageTitle = title ? `${title} | ${siteConfig.name}` : siteConfig.name;
   const pageDescription = description || siteConfig.description;
   const pageUrl = `${siteConfig.url}${path}`;
-  const pageImage = image || `${siteConfig.url}${siteConfig.ogImage}`;
+  
+  // Convert relative image paths to absolute URLs
+  let pageImage: string;
+  if (image) {
+    if (image.startsWith('/')) {
+      pageImage = `${siteConfig.url}${image}`;
+    } else if (!image.startsWith('http')) {
+      pageImage = `${siteConfig.url}/${image}`;
+    } else {
+      pageImage = image;
+    }
+  } else {
+    pageImage = `${siteConfig.url}${siteConfig.ogImage}`;
+  }
 
   return {
     metadataBase: new URL(siteConfig.url),
