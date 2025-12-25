@@ -87,27 +87,27 @@ function ArticleContent() {
 
         // Combine all articles
         const allArticles: Article[] = [
-          ...(bookingArticles || []).map((a: any) => ({
+          ...(bookingArticles || []).map((a: Article) => ({
             ...a,
             category: "訂房",
           })),
-          ...(travelArticles || []).map((a: any) => ({
+          ...(travelArticles || []).map((a: Article) => ({
             ...a,
             category: "旅遊",
           })),
-          ...(rentCarArticles || []).map((a: any) => ({
+          ...(rentCarArticles || []).map((a: Article) => ({
             ...a,
             category: "包車",
           })),
-          ...(saunaArticles || []).map((a: any) => ({
+          ...(saunaArticles || []).map((a: Article) => ({
             ...a,
             category: "桑拿",
           })),
-          ...(entertainmentArticles || []).map((a: any) => ({
+          ...(entertainmentArticles || []).map((a: Article) => ({
             ...a,
             category: "其他娛樂",
           })),
-          ...(questionArticles || []).map((a: any) => ({
+          ...(questionArticles || []).map((a: Article) => ({
             ...a,
             category: "常見問答",
           })),
@@ -331,7 +331,7 @@ function ArticleContent() {
                      paddingBottom: "10px",
                      borderRadius: "50px",
                    }}
-                   className="hidden lg:block lg:w-20 flex"
+                   className="hidden lg:flex lg:w-20"
                  >
                    <div
                      style={{
@@ -380,6 +380,47 @@ function ArticleContent() {
                   }}
                   className="flex flex-col items-center justify-center"
                 >
+                  {/* Mobile Social Media - Above Image */}
+                  <div className="lg:hidden w-full mb-6">
+                    <div
+                      className="share"
+                      style={{
+                        backgroundColor: '#FFFFFF',
+                        borderRadius: '20px',
+                        padding: '10px 20px 5px',
+                        display: 'flex',
+                        flexDirection: 'row',
+                        alignItems: 'center',
+                        gap: '16px',
+                        height: '50px',
+                        fontSize: '16px',
+                        fontFamily: 'system-ui, -apple-system, "Segoe UI", sans-serif',
+                      }}
+                    >
+                      <div style={{ color: '#ABABAB', fontSize: '16px' }}>
+                        加入
+                        <br />
+                        好友
+                      </div>
+                      <div className="flex gap-4 ml-auto">
+                        <a
+                          href="https://lin.ee/rQgNQ6D"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-8 h-8 rounded-lg bg-green-500 flex items-center justify-center hover:opacity-80 transition-opacity"
+                        >
+                          <i className="bi bi-line text-white text-base"></i>
+                        </a>
+                        <a
+                          href="#"
+                          className="w-8 h-8 rounded-lg bg-gradient-to-br from-purple-600 via-pink-500 to-orange-500 flex items-center justify-center hover:opacity-80 transition-opacity"
+                        >
+                          <i className="bi bi-instagram text-white text-base"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
                   {/* Featured Image */}
                   <div
                   style={{
@@ -402,6 +443,25 @@ function ArticleContent() {
                     <div className="text-white text-lg leading-relaxed whitespace-pre-line">
                       {article.content || article.description}
                     </div>
+                  </div>
+
+                  {/* LINE Add Friend Button - Below Content (Mobile & Desktop) */}
+                  <div className="mt-8 mb-8">
+                    <a 
+                      href="https://lin.ee/rQgNQ6D"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block"
+                    >
+                      <Image
+                        src="/zh-Hant.png"
+                        alt="加入好友"
+                        width={144}
+                        height={36}
+                        style={{ border: 0 }}
+                        className="w-auto h-auto"
+                      />
+                    </a>
                   </div>
 
                   {/* Article Meta */}
