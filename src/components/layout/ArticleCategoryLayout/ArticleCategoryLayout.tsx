@@ -53,11 +53,16 @@ function ArticleCategoryLayoutContent({
   return (
     <>
       {/* Articles Section */}
-      <section className="articles w-full bg-black py-8">
-        <div className="container mx-auto h-15">
+      <section
+      
+       className="articles w-full bg-black py-8">
+        <div
+        
+         className="container mx-auto h-15">
           <nav className="nav-breadcrumb py-4" aria-label="breadcrumb">
             <ol className="breadcrumb flex items-center gap-2 text-white text-sm">
-              <li className="breadcrumb-item">
+              <li
+               className="breadcrumb-item">
                 <Link href="/" className="flex items-center gap-1 hover:text-[#FFCD83]">
                   <i className="bi bi-house-door-fill"></i>
                   首頁
@@ -71,10 +76,14 @@ function ArticleCategoryLayoutContent({
           </nav>
         </div>
 
-        <div className="container mx-auto px-4">
+        <div
+        style={{ marginTop: '80px',}}
+         className="container mx-auto px-4">
           <h1 className="text-white text-3xl mb-8 h-15">{pageTitle}</h1>
 
-          <div className="row flex flex-col lg:flex-row gap-6">
+          <div
+            style={{ marginTop: '20px',}}
+           className="row flex flex-col lg:flex-row gap-6">
             {/* Main Content - Articles List */}
             <div className="col-xl-9 col-lg-8 col-md-8 col-sm-12 col-xs-12 w-full lg:w-7/10">
               <ArticleListComponent articles={currentArticles} />

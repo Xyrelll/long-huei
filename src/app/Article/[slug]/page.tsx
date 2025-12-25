@@ -140,7 +140,7 @@ function ArticleContent() {
       <div className="relative w-full min-h-screen bg-black flex justify-center items-start">
         <Navbar />
         <main className="inner-page w-[90%] mx-auto">
-          <div className="w-full h-18 md:h-30"></div>
+          <div className="w-full "></div>
           <div className="flex flex-col items-center justify-center py-20">
             <h1 className="text-white text-3xl mb-4">文章未找到</h1>
             <Link href="/" className="text-[#FFCD83] hover:underline">
@@ -183,7 +183,7 @@ function ArticleContent() {
         <Navbar />
 
         <main className="inner-page w-[90%] mx-auto">
-          <div className="w-full h-18 md:h-30"></div>
+          <div className="w-full "></div>
 
           {/* Breadcrumb */}
           <nav className="nav-breadcrumb py-4" aria-label="breadcrumb">

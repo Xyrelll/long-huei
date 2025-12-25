@@ -162,7 +162,7 @@ function TagContent() {
       <Navbar />
       <div className="relative w-full min-h-screen bg-black flex justify-center items-center">
         <main className="inner-page w-[90%] mx-auto">
-          <div className="w-full h-18 md:h-30"></div>
+          <div className="w-full "></div>
 
           {/* Articles Section */}
           <section className="articles w-full bg-black py-8">

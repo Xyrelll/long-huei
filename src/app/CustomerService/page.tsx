@@ -53,6 +53,7 @@ export default function CustomerServicePage() {
         <Navbar />
         
         <main className="inner-page w-[90%] mx-auto">
+          <div className="w-full "></div>
           <section className="article-wrap">
             <div className="container mx-auto">
               {/* Breadcrumbs */}

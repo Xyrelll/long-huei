@@ -119,7 +119,7 @@ export default function EntertainmentPage() {
         <Navbar />
 
         <main className="inner-page w-[90%] mx-auto">
-          <div className="w-full h-18 md:h-30"></div>
+          <div className="w-full "></div>
 
           {/* Articles Section */}
           <Suspense fallback={<div className="text-white p-8">Loading...</div>}>
