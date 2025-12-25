@@ -15,11 +15,18 @@ export default function Pagination({
   queryParams = {},
   className = '',
 }: PaginationProps) {
-  // Build query string from queryParams
+  // Extract existing query params from baseUrl
+  const baseUrlParts = baseUrl.split('?');
+  const basePath = baseUrlParts[0];
+  const existingParams = baseUrlParts[1] ? new URLSearchParams(baseUrlParts[1]) : new URLSearchParams();
+  
+  // Build query string from queryParams, preserving existing params
   const buildQueryString = (pageNo: number) => {
-    const params = new URLSearchParams({
-      PageNo: pageNo.toString(),
-      ...queryParams,
+    const params = new URLSearchParams(existingParams);
+    params.set('PageNo', pageNo.toString());
+    // Add or update any additional queryParams
+    Object.entries(queryParams).forEach(([key, value]) => {
+      params.set(key, value);
     });
     return params.toString();
   };
@@ -47,7 +54,7 @@ export default function Pagination({
               }}
             >
               <Link
-                href={`${baseUrl}?${buildQueryString(currentPage - 1)}`}
+                href={`${basePath}?${buildQueryString(currentPage - 1)}`}
                 rel="prev"
                 className="page-link px-6 py-2 text-white block"
               >
@@ -76,7 +83,7 @@ export default function Pagination({
                   <span className="page-link px-6 py-2 text-white block">{pageNum}</span>
                 ) : (
                   <Link
-                    href={`${baseUrl}?${buildQueryString(pageNum)}`}
+                    href={`${basePath}?${buildQueryString(pageNum)}`}
                     className="page-link px-6 py-2 text-white block"
                   >
                     {pageNum}
@@ -95,7 +102,7 @@ export default function Pagination({
               }}
             >
               <Link
-                href={`${baseUrl}?${buildQueryString(currentPage + 1)}`}
+                href={`${basePath}?${buildQueryString(currentPage + 1)}`}
                 rel="next"
                 className="page-link px-6 py-2 text-white block"
               >

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import './BookingArticleList.css';
@@ -23,6 +23,17 @@ interface BookingArticleListProps {
 
 export default function BookingArticleList({ articles }: BookingArticleListProps) {
   const [expandedCards, setExpandedCards] = useState<Set<number>>(new Set());
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Detect mobile screen size
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   const toggleCard = (id: number) => {
     const newExpanded = new Set(expandedCards);
@@ -35,16 +46,16 @@ export default function BookingArticleList({ articles }: BookingArticleListProps
   };
 
   return (
-    <div className="flex flex-col gap-6">
+    <div className="flex flex-col gap-6" style={{ width: isMobile ? '100%' : 'auto' }}>
       {articles.map((article) => {
         const isExpanded = expandedCards.has(article.id);
         
         return (
-          <article key={article.id} className="flex flex-col pb-6 last:border-b-0">
+          <article key={article.id} className="flex flex-col pb-6 last:border-b-0" style={{ width: isMobile ? '100%' : 'auto' }}>
             {/* Top row: Image and Title */}
-            <div className="flex flex-row gap-3 md:gap-4">
+            <div className="flex flex-row gap-3 md:gap-4" style={{ width: '100%' }}>
               {/* Thumbnail - Left side */}
-              <div className="flex-shrink-0 w-25 md:w-[40%] ">
+              <div className="flex-shrink-0" style={{ width: isMobile ? '30%' : '40%' }}>
                 <Link href={article.link} className="block">
                   <picture>
                     <source srcSet={article.image} media="(min-width: 768px)" />
@@ -61,7 +72,7 @@ export default function BookingArticleList({ articles }: BookingArticleListProps
               </div>
               
               {/* Article Details - Right side */}
-              <div className="flex-1 flex flex-col w-full md:w-[72%] gap-2 " >
+              <div className="flex-1 flex flex-col gap-2" style={{ width: isMobile ? '70%' : '60%' }}>
                 <Link href={article.link}>
                   <h3 className="text-[#FFCD83] text-md md:text-[20px] font-bold mb-2 md:mb-3 transition-colors duration-300 leading-tight">
                     {article.title}

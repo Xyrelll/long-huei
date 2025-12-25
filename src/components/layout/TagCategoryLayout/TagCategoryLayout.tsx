@@ -1,6 +1,6 @@
 'use client';
 
-import { Suspense } from 'react';
+import { Suspense, useState, useEffect } from 'react';
 import Pagination from '@/components/ui/Pagination/Pagination';
 
 interface TagCategoryLayoutProps {
@@ -27,10 +27,22 @@ function TagCategoryLayoutContent({
   totalPages,
   ArticleListComponent,
 }: TagCategoryLayoutProps) {
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Detect mobile screen size
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   return (
     <>
       {/* Main Content - Articles List - Full Width (No Sidebar) */}
-      <div className="w-2/4">
+      <div style={{ width: isMobile ? '100%' : '50%' }}>
         <ArticleListComponent articles={currentArticles} />
 
         {/* Pagination */}

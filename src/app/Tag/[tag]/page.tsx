@@ -51,12 +51,38 @@ function TagContent() {
   const params = useParams();
   const searchParams = useSearchParams();
   const tagName = params?.tag as string;
-  const [filteredArticles, setFilteredArticles] = useState<Article[]>([]);
+  const [allFilteredArticles, setAllFilteredArticles] = useState<Article[]>([]);
   const [loading, setLoading] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
+  
+  // Get selected category from URL params, or null if none selected
+  // Decode the category to handle URL encoding properly and trim whitespace
+  const categoryParam = searchParams.get('category');
+  const selectedCategory = categoryParam ? decodeURIComponent(categoryParam).trim() : null;
+  
+  // Detect mobile screen size
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
-  const currentPage = parseInt(searchParams.get('page') || '1', 10);
   const itemsPerPage = 3;
+  
+  // Filter articles by selected category (if any)
+  const filteredArticles = selectedCategory
+    ? allFilteredArticles.filter((article) => article.category === selectedCategory)
+    : allFilteredArticles;
+  
   const totalPages = Math.ceil(filteredArticles.length / itemsPerPage);
+  
+  // Get current page from URL, default to 1, and ensure it's within valid range
+  const rawPage = parseInt(searchParams.get('PageNo') || '1', 10);
+  const currentPage = Math.max(1, Math.min(rawPage, totalPages || 1));
+  
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
   const currentArticles = filteredArticles.slice(startIndex, endIndex);
@@ -98,7 +124,7 @@ function TagContent() {
           return article.tags && article.tags.some((tag) => tag === decodedTag);
         });
 
-        setFilteredArticles(filtered);
+        setAllFilteredArticles(filtered);
         setLoading(false);
       } catch (error) {
         console.error('Error fetching articles:', error);
@@ -129,35 +155,40 @@ function TagContent() {
 
   const decodedTag = decodeURIComponent(tagName);
 
-  // Calculate category counts for filtered articles
-  const categoryCounts = filteredArticles.reduce((acc, article) => {
+  // Calculate category counts for ALL filtered articles (not just displayed ones)
+  const categoryCounts = allFilteredArticles.reduce((acc, article) => {
     const cat = article.category || '其他';
     acc[cat] = (acc[cat] || 0) + 1;
     return acc;
   }, {} as Record<string, number>);
 
   // Create category filter buttons (only show categories that have articles)
-  // Link to tag pages instead of category pages
   const categoryFilters = categories
     .filter(cat => categoryCounts[cat.name] > 0)
     .map(cat => ({
       name: cat.name,
       count: categoryCounts[cat.name] || 0,
-      href: `/Tag/${encodeURIComponent(decodedTag)}?category=${encodeURIComponent(cat.name)}`,
-      tagHref: `/Tag/${encodeURIComponent(cat.name)}`,
+      href: (selectedCategory !== null && selectedCategory.trim() === cat.name.trim())
+        ? `/Tag/${encodeURIComponent(decodedTag)}` 
+        : `/Tag/${encodeURIComponent(decodedTag)}?category=${encodeURIComponent(cat.name)}`,
     }));
 
   return (
     <>
       <Navbar />
-      <div className="relative w-full min-h-screen bg-black flex justify-center items-center">
+      <div className="relative w-full min-h-screen bg-black flex flex-col">
         <main className="inner-page w-[90%] mx-auto">
-          <div className="w-full "></div>
-
-          {/* Articles Section */}
-          <section className="articles w-full bg-black py-8">
-            <div className="container mx-auto h-15 ">
-              <nav className="nav-breadcrumb py-4" aria-label="breadcrumb">
+          {/* Breadcrumb - Fixed at top */}
+          <div className="w-full bg-black" style={{ position: 'sticky', top: 0, zIndex: 10, height: '60px', flexShrink: 0 }}>
+            <div className="container mx-auto h-full">
+              <nav className="nav-breadcrumb h-full" aria-label="breadcrumb"
+               style={{ 
+                 display: 'flex', 
+                 alignItems: 'center', 
+                 paddingTop: isMobile ? '100px' : '140px',
+                 paddingLeft: isMobile ? '0px' : '50px', 
+                 paddingBottom: '16px' 
+               }}>
                 <ol className="breadcrumb flex items-center gap-2 text-white text-sm">
                   <li className="breadcrumb-item">
                     <Link href="/" className="flex items-center gap-1 hover:text-[#FFCD83]">
@@ -176,6 +207,10 @@ function TagContent() {
                 </ol>
               </nav>
             </div>
+          </div>
+
+          {/* Articles Section */}
+          <section className="articles w-full bg-black py-8">
 
             <div className="container mx-auto px-4  flex flex-col items-center justify-center ">
               {/* Page Title with Search Result Count */}
@@ -190,7 +225,9 @@ function TagContent() {
                 <h1 className="text-white text-[45px] font-medium ">{decodedTag}</h1>
                 <p
                 style={ {fontSize: '20px', }     }
-                 className="text-white/70 text-[30px]">(共有{filteredArticles.length}筆搜尋結果)</p>
+                 className="text-white/70 text-[30px]">
+                  (共有{filteredArticles.length}筆搜尋結果{selectedCategory ? ` - ${selectedCategory}` : ''})
+                </p>
               </div>
 
               {/* Category Filter Buttons */}
@@ -199,15 +236,15 @@ function TagContent() {
                  style={{
                   marginTop: '50px',
                  }}
-                  className="flex flex-wrap gap-3 mb-8">
+                  className="flex flex-wrap gap-3 mb-8 w-full text-center justify-center items-center">
                   {categoryFilters.map((cat) => {
-                    // Check if this category tag is currently selected (same as current tag)
-                    const isSelected = cat.name === decodedTag;
+                    // Check if this category is currently selected (strict comparison with trimmed values)
+                    const isSelected = selectedCategory !== null && selectedCategory.trim() === cat.name.trim();
                     
                     return (
                       <Link
                         key={cat.name}
-                        href={cat.tagHref}
+                        href={cat.href}
                         style={{
                           display: 'flex',
                           alignItems: 'center',
@@ -303,7 +340,10 @@ function TagContent() {
               <TagCategoryLayout
                 pageTitle=""
                 breadcrumbName={decodedTag}
-                baseUrl={`/Tag/${tagName}`}
+                baseUrl={selectedCategory 
+                  ? `/Tag/${tagName}?category=${encodeURIComponent(selectedCategory)}`
+                  : `/Tag/${tagName}`
+                }
                 articles={filteredArticles}
                 currentArticles={currentArticles}
                 currentPage={currentPage}
