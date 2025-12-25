@@ -1,66 +1,13 @@
 import { Metadata } from 'next';
 import { generateMetadata as genMeta } from '@/config/metadata';
-
-// Import all article arrays
-import { bookingArticles } from '@/app/ArticleCategory/Booking/page';
-import { travelArticles } from '@/app/ArticleCategory/Travel/page';
-import { rentCarArticles } from '@/app/ArticleCategory/RentCar/page';
-import { saunaArticles } from '@/app/ArticleCategory/Sauna/page';
-import { entertainmentArticles } from '@/app/ArticleCategory/Entertainment/page';
-import { questionArticles } from '@/app/ArticleCategory/Question/page';
-
-interface Article {
-  id: number;
-  title: string;
-  description: string;
-  image: string;
-  imageMobile: string;
-  link: string;
-  views: number;
-  tags?: string[];
-  collapseId: string;
-  category?: string;
-}
-
-// Type for article inputs (all article types have the same structure)
-type ArticleInput = Omit<Article, 'category'>;
-
-// Helper function to get all articles
-function getAllArticles(): Article[] {
-  return [
-    ...(bookingArticles || []).map((a: ArticleInput): Article => ({ ...a, category: '訂房' })),
-    ...(travelArticles || []).map((a: ArticleInput): Article => ({ ...a, category: '旅遊' })),
-    ...(rentCarArticles || []).map((a: ArticleInput): Article => ({ ...a, category: '包車' })),
-    ...(saunaArticles || []).map((a: ArticleInput): Article => ({ ...a, category: '桑拿' })),
-    ...(entertainmentArticles || []).map((a: ArticleInput): Article => ({ ...a, category: '其他娛樂' })),
-    ...(questionArticles || []).map((a: ArticleInput): Article => ({ ...a, category: '常見問答' })),
-  ];
-}
-
-// Helper function to find article by slug
-function findArticleBySlug(slug: string): Article | null {
-  const allArticles = getAllArticles();
-  const decodedSlug = decodeURIComponent(slug);
-  
-  return allArticles.find(
-    a => {
-      const articleLink = a.link.replace('/Article/', '');
-      return articleLink === slug || 
-             articleLink === decodedSlug ||
-             articleLink.includes(slug) ||
-             articleLink.includes(decodedSlug) ||
-             a.link === `/Article/${slug}` ||
-             a.link === `/Article/${decodedSlug}`;
-    }
-  ) || null;
-}
+import { findArticleBySlug } from '@/data/articles';
 
 export async function generateMetadata({
   params,
 }: {
   params: { slug: string };
 }): Promise<Metadata> {
-  const article = findArticleBySlug(params.slug);
+  const article = await findArticleBySlug(params.slug);
   
   if (!article) {
     // Fallback metadata if article not found
