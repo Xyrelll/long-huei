@@ -73,7 +73,11 @@ function SearchContent() {
       </nav>
 
       {/* Search Section */}
-      <div className="flex flex-col items-center justify-center py-12">
+      <div className="flex flex-col items-center justify-center py-12"
+      style={{ 
+        paddingTop: '40px',
+      }}
+      >
         {/* Search Bar */}
         <form onSubmit={handleSearch} className="w-full max-w-2xl">
           <div className="relative">
@@ -205,7 +209,7 @@ export default function SearchPage() {
         <Navbar />
 
         <main className="inner-page w-[90%] mx-auto">
-          <div className="w-full h-18 md:h-35 "></div>
+          <div className="w-full h-23 md:h-35 "></div>
 
           <Suspense fallback={<div className="text-white p-8">Loading...</div>}>
             <SearchContent />
