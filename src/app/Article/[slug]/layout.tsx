@@ -7,19 +7,28 @@ export async function generateMetadata({
 }: {
   params: { slug: string };
 }): Promise<Metadata> {
+  // Handle Next.js 15+ where params might be a Promise
+  const resolvedParams = params instanceof Promise ? await params : params;
+  const slug = resolvedParams?.slug || '';
+
+  if (!slug) {
+    return genMeta({
+      title: '文章 - 龍匯天下',
+      description: '探索澳門旅遊、訂房、包車、桑拿等相關文章',
+      path: '/Article',
+      image: 'https://longhuei.netlify.app/Images/Logo.png',
+    });
+  }
+
   try {
-    const article = await findArticleBySlug(params.slug);
+    const article = await findArticleBySlug(slug);
     
     if (!article) {
-      // Debug logging in development
-      if (process.env.NODE_ENV === 'development') {
-        console.warn(`Article not found for slug: ${params.slug}`);
-      }
       // Fallback metadata if article not found
       return genMeta({
         title: '文章 - 龍匯天下',
         description: '探索澳門旅遊、訂房、包車、桑拿等相關文章',
-        path: `/Article/${params.slug}`,
+        path: `/Article/${slug}`,
         image: 'https://longhuei.netlify.app/Images/Logo.png',
       });
     }
@@ -31,10 +40,6 @@ export async function generateMetadata({
       articleImage = `https://longhuei.netlify.app${articleImage}`;
     } else if (!articleImage.startsWith('http')) {
       articleImage = `https://longhuei.netlify.app/${articleImage}`;
-    }
-
-    if (process.env.NODE_ENV === 'development') {
-      console.log(`Generated metadata for article: ${article.title}, image: ${articleImage}`);
     }
 
     return genMeta({
@@ -49,7 +54,7 @@ export async function generateMetadata({
     return genMeta({
       title: '文章 - 龍匯天下',
       description: '探索澳門旅遊、訂房、包車、桑拿等相關文章',
-      path: `/Article/${params.slug}`,
+      path: `/Article/${slug}`,
       image: 'https://longhuei.netlify.app/Images/Logo.png',
     });
   }
