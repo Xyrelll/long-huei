@@ -8,8 +8,19 @@ import BottomNav from '@/components/layout/BottomNav/BottomNav';
 import PageMetadata from '@/components/SEO/PageMetadata';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useState, useEffect } from 'react';
 
 export default function CustomerServicePage() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
   const breadcrumbSchema = generateBreadcrumbSchema([
     { name: '首頁', url: 'https://longhuei.netlify.app' },
     { name: '專人客服', url: 'https://longhuei.netlify.app/CustomerService' },
@@ -49,15 +60,18 @@ export default function CustomerServicePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      <div className="relative w-full min-h-screen bg-black flex justify-center items-center">
+      <div className="relative w-full flex justify-center items-center">
+      <div className="relative w-full md:w-[80%] min-h-screen bg-black flex justify-center items-center">
         <Navbar />
         
         <main className="inner-page w-[90%] mx-auto">
           <div className="w-full "></div>
-          <section className="article-wrap">
-            <div className="container mx-auto">
+          <section className="article-wrap ">
+            <div className="container mx-auto ">
               {/* Breadcrumbs */}
-              <nav className="nav-breadcrumb py-4" style={{ paddingTop: '100px' }} aria-label="breadcrumb">
+              <nav className="nav-breadcrumb py-4"
+               style={{ paddingTop: isMobile ? '100px' : '100px', paddingLeft: isMobile ? '0px' : '100px' }}
+                aria-label="breadcrumb">
                 <ol className="breadcrumb flex items-center gap-2 text-white text-sm">
                   <li className="breadcrumb-item">
                     <Link href="/" className="flex items-center gap-1 hover:text-[#FFCD83]">
@@ -84,7 +98,7 @@ export default function CustomerServicePage() {
                     專人客服
                   </h1>
                   
-                  <div className="row page flex flex-col md:flex-row gap-6" style={{ color: '#fff' }}>
+                  <div className="row page flex flex-col md:flex-row gap-30" style={{ color: '#fff' }}>
                     {/* LINE Section */}
                     <div className="col-md-6 mb-5 md:mb-0">
                       <div className="row">
@@ -95,7 +109,7 @@ export default function CustomerServicePage() {
                                 <h2 className="page-title h2" style={{
                                   fontWeight: '900',
                                   color: '#f5ca69',
-                                  fontSize: '2rem',
+                                  fontSize: '1.8rem',
                                   paddingBottom: '15px',
                                   textAlign: 'left',
                                   padding: '0',
@@ -104,7 +118,9 @@ export default function CustomerServicePage() {
                                   加入LINE好友
                                 </h2>
                               </div>
-                              <div className="col-auto flex items-center">
+                              <div 
+                              style={{ marginTop: '-15px' }}
+                              className="col-auto flex items-center">
                                 <a 
                                   href="https://lin.ee/rQgNQ6D"
                                   target="_blank"
@@ -113,8 +129,8 @@ export default function CustomerServicePage() {
                                   <Image
                                     src="/CustomerService/zh-Hant.png"
                                     alt="加入好友"
-                                    width={144}
-                                    height={36}
+                                    width={100}
+                                    height={32}
                                     style={{ border: 0 }}
                                   />
                                 </a>
@@ -183,6 +199,7 @@ export default function CustomerServicePage() {
 
         <GoToTop />
         <BottomNav />
+      </div>
       </div>
     </>
   );
