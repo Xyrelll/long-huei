@@ -11,6 +11,10 @@ export async function generateMetadata({
     const article = await findArticleBySlug(params.slug);
     
     if (!article) {
+      // Debug logging in development
+      if (process.env.NODE_ENV === 'development') {
+        console.warn(`Article not found for slug: ${params.slug}`);
+      }
       // Fallback metadata if article not found
       return genMeta({
         title: '文章 - 龍匯天下',
@@ -27,6 +31,10 @@ export async function generateMetadata({
       articleImage = `https://longhuei.netlify.app${articleImage}`;
     } else if (!articleImage.startsWith('http')) {
       articleImage = `https://longhuei.netlify.app/${articleImage}`;
+    }
+
+    if (process.env.NODE_ENV === 'development') {
+      console.log(`Generated metadata for article: ${article.title}, image: ${articleImage}`);
     }
 
     return genMeta({

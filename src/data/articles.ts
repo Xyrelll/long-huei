@@ -24,15 +24,47 @@ async function getArticlesFromModule(
 ): Promise<Article[]> {
   try {
     const moduleData = await modulePromise;
-    // Try to get articles from named export first, then from default export
+    
+    // Debug: log what we got
+    if (process.env.NODE_ENV === 'development') {
+      console.log(`Loading ${articlesKey}, module keys:`, Object.keys(moduleData));
+    }
+    
+    // Try to get articles from named export first
     let articles = moduleData[articlesKey] as ArticleInput[] | undefined;
+    
+    // If not found, try from default export
     if (!articles && moduleData.default) {
       const defaultExport = moduleData.default as Record<string, unknown>;
       articles = defaultExport[articlesKey] as ArticleInput[] | undefined;
     }
     
-    if (Array.isArray(articles)) {
+    // If still not found, try accessing the module directly (for client components)
+    if (!articles) {
+      // Try all possible keys
+      const possibleKeys = Object.keys(moduleData).filter(key => 
+        key.toLowerCase().includes('article') || 
+        key.toLowerCase().includes(articlesKey.toLowerCase().replace('articles', ''))
+      );
+      
+      for (const key of possibleKeys) {
+        const value = moduleData[key];
+        if (Array.isArray(value) && value.length > 0) {
+          articles = value as ArticleInput[];
+          break;
+        }
+      }
+    }
+    
+    if (Array.isArray(articles) && articles.length > 0) {
+      if (process.env.NODE_ENV === 'development') {
+        console.log(`Successfully loaded ${articles.length} articles from ${articlesKey}`);
+      }
       return articles;
+    }
+    
+    if (process.env.NODE_ENV === 'development') {
+      console.warn(`No articles found for ${articlesKey}`);
     }
     return [];
   } catch (error) {
@@ -73,6 +105,15 @@ export async function getAllArticles(): Promise<Article[]> {
 export async function findArticleBySlug(slug: string): Promise<Article | null> {
   try {
     const allArticles = await getAllArticles();
+    
+    if (process.env.NODE_ENV === 'development') {
+      console.log(`Looking for article with slug: ${slug}`);
+      console.log(`Total articles loaded: ${allArticles.length}`);
+      if (allArticles.length > 0) {
+        console.log(`Sample article links:`, allArticles.slice(0, 3).map(a => a.link));
+      }
+    }
+    
     const decodedSlug = decodeURIComponent(slug);
     const normalizedSlug = slug.toLowerCase().trim();
     const normalizedDecodedSlug = decodedSlug.toLowerCase().trim();
@@ -80,37 +121,52 @@ export async function findArticleBySlug(slug: string): Promise<Article | null> {
     // Try multiple matching strategies
     const found = allArticles.find(
       a => {
-        // Extract slug from article link
-        const articleLink = a.link.replace('/Article/', '').toLowerCase().trim();
-        const articleLinkDecoded = decodeURIComponent(articleLink).toLowerCase().trim();
+        // Extract slug from article link (remove /Article/ prefix)
+        const articleLinkSlug = a.link.replace(/^\/Article\//, '').toLowerCase().trim();
+        const articleLinkSlugDecoded = decodeURIComponent(articleLinkSlug).toLowerCase().trim();
         
-        // Exact matches
-        if (articleLink === normalizedSlug || 
-            articleLink === normalizedDecodedSlug ||
-            articleLinkDecoded === normalizedSlug ||
-            articleLinkDecoded === normalizedDecodedSlug) {
+        // Strategy 1: Direct slug match (most common case)
+        if (articleLinkSlug === normalizedSlug || 
+            articleLinkSlug === normalizedDecodedSlug ||
+            articleLinkSlugDecoded === normalizedSlug ||
+            articleLinkSlugDecoded === normalizedDecodedSlug) {
+          if (process.env.NODE_ENV === 'development') {
+            console.log(`Found article by slug match: ${a.title}`);
+          }
           return true;
         }
         
-        // Partial matches (handle URL encoding)
-        if (articleLink.includes(normalizedSlug) || 
-            articleLink.includes(normalizedDecodedSlug) ||
-            normalizedSlug.includes(articleLink) ||
-            normalizedDecodedSlug.includes(articleLink)) {
+        // Strategy 2: Full link match
+        const normalizedLink = a.link.toLowerCase().trim();
+        if (normalizedLink === `/article/${normalizedSlug}` ||
+            normalizedLink === `/article/${normalizedDecodedSlug}` ||
+            a.link === `/Article/${slug}` ||
+            a.link === `/Article/${decodedSlug}`) {
+          if (process.env.NODE_ENV === 'development') {
+            console.log(`Found article by link match: ${a.title}`);
+          }
           return true;
         }
         
-        // Full link matches
-        if (a.link === `/Article/${slug}` || 
-            a.link === `/Article/${decodedSlug}` ||
-            a.link.toLowerCase() === `/article/${normalizedSlug}` ||
-            a.link.toLowerCase() === `/article/${normalizedDecodedSlug}`) {
+        // Strategy 3: Partial match (for URL-encoded slugs)
+        if (articleLinkSlug.includes(normalizedSlug) || 
+            normalizedSlug.includes(articleLinkSlug) ||
+            articleLinkSlug.includes(normalizedDecodedSlug) ||
+            normalizedDecodedSlug.includes(articleLinkSlug)) {
+          if (process.env.NODE_ENV === 'development') {
+            console.log(`Found article by partial match: ${a.title}`);
+          }
           return true;
         }
         
         return false;
       }
     );
+    
+    if (!found && process.env.NODE_ENV === 'development') {
+      console.warn(`Article not found for slug: ${slug}`);
+      console.log(`Available slugs:`, allArticles.slice(0, 5).map(a => a.link.replace('/Article/', '')));
+    }
     
     return found || null;
   } catch (error) {
