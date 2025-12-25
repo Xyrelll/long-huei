@@ -88,6 +88,12 @@ interface MobileDropdownProps {
 }
 
 function MobileDropdown({ isOpen, onToggle, onItemClick, items }: MobileDropdownProps) {
+  const handleItemClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    // Close menu when item is clicked
+    onItemClick();
+    // Navigation will happen automatically via Link href
+  };
+
   return (
     <li className="mobile-nav-item">
       <button
@@ -109,18 +115,26 @@ function MobileDropdown({ isOpen, onToggle, onItemClick, items }: MobileDropdown
         id="mobile-dropdown-menu"
         className={`mobile-dropdown-menu ${isOpen ? "open" : ""}`}
       >
-        {items.map((item) => (
-          <li key={item.id} itemProp="name">
-            <Link
-              itemProp="url"
-              href={item.href}
-              className="mobile-dropdown-item"
-              onClick={onItemClick}
-            >
-              {item.label}
-            </Link>
-          </li>
-        ))}
+        <li itemProp="name">
+          <Link
+            itemProp="url"
+            href="/ArticleCategory/RentCar"
+            className="mobile-dropdown-item"
+            onClick={handleItemClick}
+          >
+            包車
+          </Link>
+        </li>
+        <li itemProp="name">
+          <Link
+            itemProp="url"
+            href="/ArticleCategory/Entertainment"
+            className="mobile-dropdown-item"
+            onClick={handleItemClick}
+          >
+            其他娛樂
+          </Link>
+        </li>
       </ul>
     </li>
   );
@@ -160,7 +174,7 @@ export default function Navbar() {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
     if (isMenuOpen) {
-      setdropdown(false); // Close dropdown when menu closes
+      setdropdown(true); // Close dropdown when menu closes
     }
   };
 
