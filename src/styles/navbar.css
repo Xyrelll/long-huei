@@ -370,7 +370,7 @@
 /* Desktop Dropdown Menu Wrapper - Outside navbar */
 .dropdown-menu-wrapper-desktop {
   position: fixed;
-  z-index: 1;
+  z-index: 100;
   display: none;
   pointer-events: none;
   top: 4;
@@ -380,7 +380,7 @@
   max-width: 100vw;
   height: 150;
   box-sizing: border-box;
-  background-color: rgba(0, 0, 0, 0.8);;
+  background-color: rgba(0, 0, 0, .1);;
 }
 
 @media (min-width: 1024px) {
@@ -412,6 +412,14 @@
   display: none;
   pointer-events: auto;
   box-sizing: border-box;
+  z-index: 101;
+  align-items: stretch;
+}
+
+.dropdown-menu-desktop li {
+  display: flex;
+  align-items: stretch;
+  pointer-events: auto;
 }
 
 .dropdown-menu-desktop[style*="flex"] {
@@ -440,6 +448,13 @@
   text-decoration: none;
   transition: background-color 0.2s, color 0.2s;
   background-color: transparent;
+  pointer-events: auto;
+  cursor: pointer;
+  position: relative;
+  z-index: 102;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
 }
 
 .dropdown-item:hover {

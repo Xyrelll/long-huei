@@ -15,6 +15,9 @@ const footerLinks = [
 export default function Footer() {
   return (
     <footer id="footer" className="w-full bg-black py-8 mb-100 flex flex-col mt-8">
+      {/* Copyright - Desktop: Top position */}
+      <p className="copyright text-center text-white text-xs hidden md:block mb-4">Copyright 2025 All Rights Reserved.</p>
+      
       {/* Desktop: Horizontal layout */}
       <ul className="footer-links-desktop hidden md:flex flex-wrap justify-center items-center gap-2 list-none p-0 m-0 px-4">
         {footerLinks.map((link, index) => (
@@ -33,7 +36,7 @@ export default function Footer() {
       </ul>
       
       {/* Mobile: Vertical column layout */}
-      <ul className="footer-links-mobile flex md:hidden flex-col items-center gap-3 list-none p-0 m-0 px-4 mb-4">
+      <ul className="footer-links-mobile flex md:hidden flex-col items-center justify-center gap-0 list-none p-0 m-0 px-4 mb-4">
         {footerLinks.map((link) => (
           <li key={link.href}>
             <Link
@@ -46,8 +49,8 @@ export default function Footer() {
         ))}
       </ul>
       
-      {/* Copyright always at bottom */}
-      <p className="copyright text-center text-white text-xs mt-auto">Copyright 2025 All Rights Reserved.</p>
+      {/* Copyright - Mobile: Bottom position */}
+      <p className="copyright text-center text-white text-xs flex md:hidden mt-auto w-full  justify-center items-center">Copyright 2025 All Rights Reserved.</p>
     </footer>
   );
 }
