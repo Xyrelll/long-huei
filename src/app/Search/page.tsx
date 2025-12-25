@@ -9,6 +9,21 @@ import GoToTop from '@/components/layout/GoToTop/GoToTop';
 import BottomNav from '@/components/layout/BottomNav/BottomNav';
 import PageMetadata from '@/components/SEO/PageMetadata';
 import Link from 'next/link';
+import BookingArticleList from '@/components/features/BookingArticleList/BookingArticleList';
+import TagCategoryLayout from '@/components/layout/TagCategoryLayout/TagCategoryLayout';
+
+interface Article {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  imageMobile: string;
+  link: string;
+  views: number;
+  tags?: string[];
+  collapseId: string;
+  category?: string;
+}
 
 const hotKeywords = ['桑拿', '訂房', '優惠', '包車', '澳門', '澳門旅遊'];
 
@@ -30,17 +45,93 @@ function SearchContent() {
   const router = useRouter();
   const [searchKeyword, setSearchKeyword] = useState('');
   const [showError, setShowError] = useState(false);
+  const [allArticles, setAllArticles] = useState<Article[]>([]);
+  const [searchResults, setSearchResults] = useState<Article[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [hasSearched, setHasSearched] = useState(false);
+
+  // Load all articles
+  useEffect(() => {
+    async function fetchAllArticles() {
+      try {
+        const [
+          { bookingArticles },
+          { travelArticles },
+          { rentCarArticles },
+          { saunaArticles },
+          { entertainmentArticles },
+          { questionArticles },
+        ] = await Promise.all([
+          import('@/app/ArticleCategory/Booking/page'),
+          import('@/app/ArticleCategory/Travel/page'),
+          import('@/app/ArticleCategory/RentCar/page'),
+          import('@/app/ArticleCategory/Sauna/page'),
+          import('@/app/ArticleCategory/Entertainment/page'),
+          import('@/app/ArticleCategory/Question/page'),
+        ]);
+
+        // Combine all articles with category info
+        const articles: Article[] = [
+          ...(bookingArticles || []).map((a: any) => ({ ...a, category: '訂房' })),
+          ...(travelArticles || []).map((a: any) => ({ ...a, category: '旅遊' })),
+          ...(rentCarArticles || []).map((a: any) => ({ ...a, category: '包車' })),
+          ...(saunaArticles || []).map((a: any) => ({ ...a, category: '桑拿' })),
+          ...(entertainmentArticles || []).map((a: any) => ({ ...a, category: '其他娛樂' })),
+          ...(questionArticles || []).map((a: any) => ({ ...a, category: '常見問答' })),
+        ];
+
+        setAllArticles(articles);
+        setLoading(false);
+      } catch (error) {
+        console.error('Error fetching articles:', error);
+        setLoading(false);
+      }
+    }
+
+    fetchAllArticles();
+  }, []);
+
+  // Perform search function
+  const performSearch = (keyword: string) => {
+    if (!keyword.trim() || allArticles.length === 0) {
+      setSearchResults([]);
+      setHasSearched(false);
+      return;
+    }
+
+    const lowerKeyword = keyword.toLowerCase().trim();
+    const results = allArticles.filter((article) => {
+      // Search in title
+      const titleMatch = article.title.toLowerCase().includes(lowerKeyword);
+      
+      // Search in description
+      const descMatch = article.description.toLowerCase().includes(lowerKeyword);
+      
+      // Search in tags
+      const tagMatch = article.tags?.some(tag => 
+        tag.toLowerCase().includes(lowerKeyword)
+      ) || false;
+
+      return titleMatch || descMatch || tagMatch;
+    });
+
+    setSearchResults(results);
+    setHasSearched(true);
+  };
 
   // Initialize from URL on mount and when URL changes
   useEffect(() => {
     const keyword = searchParams.get('Keyword') || '';
-    if (keyword) {
+    if (keyword && allArticles.length > 0) {
       // Use requestAnimationFrame to defer state update
       requestAnimationFrame(() => {
         setSearchKeyword(keyword);
+        performSearch(keyword);
       });
+    } else if (keyword) {
+      setSearchKeyword(keyword);
     }
-  }, [searchParams]);
+  }, [searchParams, allArticles]);
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -51,13 +142,24 @@ function SearchContent() {
     setShowError(false);
     // Navigate to search results with keyword
     router.push(`/Search?Keyword=${encodeURIComponent(searchKeyword.trim())}`);
+    performSearch(searchKeyword.trim());
   };
 
   const handleKeywordClick = (keyword: string) => {
     setSearchKeyword(keyword);
     setShowError(false);
     router.push(`/Search?Keyword=${encodeURIComponent(keyword)}`);
+    performSearch(keyword);
   };
+
+  // Pagination for search results
+  const itemsPerPage = 3;
+  const totalPages = Math.ceil(searchResults.length / itemsPerPage);
+  const rawPage = parseInt(searchParams.get('PageNo') || '1', 10);
+  const validPage = Math.max(1, Math.min(rawPage, totalPages || 1));
+  const startIndex = (validPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const currentArticles = searchResults.slice(startIndex, endIndex);
 
   return (
     <>
@@ -98,17 +200,18 @@ function SearchContent() {
                 setShowError(false);
               }}
               placeholder="搜尋關鍵字"
-              className="w-full pl-12 pr-4 py-4 text-white bg-white rounded-lg text-lg focus:outline-none focus:ring-2 focus:ring-[#FFCD83] placeholder-gray-400"
+              className="w-full pl-12 pr-4 py-4 text-black bg-white rounded-lg text-lg focus:outline-none focus:ring-2 focus:ring-[#FFCD83] placeholder-gray-400"
            style={{ 
            paddingLeft: '60px',
            paddingRight: '60px',
            paddingTop: '20px',
            paddingBottom: '20px',
            borderRadius: '50px',
+           color: '#000000',
            }}
            />
           </div>
-          {!showError && (
+          {showError && (
             <p 
             style={{ 
               marginLeft: '50px',
@@ -118,7 +221,7 @@ function SearchContent() {
               fontSize: '18px',
               fontWeight: 'bold',
             }}
-            className="text-red-500 text-lg font-large   mt-2 text-left ml-100">請輸入關鍵字</p>
+            className="text-red-500 text-lg font-large mt-2 text-left">請輸入關鍵字</p>
           )}
         </form>
 
@@ -182,6 +285,58 @@ function SearchContent() {
             ))}
           </div>
         </div>
+
+        {/* Search Results */}
+        {hasSearched && !loading && (
+          <div className="w-full mt-12" style={{ paddingTop: '40px' }}>
+            <div className="text-center mb-8">
+              <h2 className="text-white text-2xl font-bold mb-2">
+                搜尋結果
+              </h2>
+              <p className="text-white/70 text-lg">
+                {searchResults.length > 0 
+                  ? `找到 ${searchResults.length} 筆相關文章`
+                  : '沒有找到相關文章'
+                }
+              </p>
+            </div>
+
+            {searchResults.length > 0 && (
+              <div className="container flex flex-col items-center justify-center mx-auto px-4">
+                <TagCategoryLayout
+                  pageTitle=""
+                  breadcrumbName="搜尋結果"
+                  baseUrl={`/Search?Keyword=${encodeURIComponent(searchKeyword)}`}
+                  articles={searchResults}
+                  currentArticles={currentArticles}
+                  currentPage={validPage}
+                  totalPages={totalPages}
+                  itemsPerPage={itemsPerPage}
+                  ArticleListComponent={BookingArticleList}
+                />
+              </div>
+            )}
+
+            {searchResults.length === 0 && (
+              <div className="text-center py-12">
+                <p className="text-white/70 text-lg mb-4">
+                  請嘗試使用不同的關鍵字搜尋
+                </p>
+                <div className="flex flex-wrap justify-center gap-2">
+                  {hotKeywords.slice(0, 6).map((keyword) => (
+                    <button
+                      key={keyword}
+                      onClick={() => handleKeywordClick(keyword)}
+                      className="px-4 py-2 bg-[#CD861A] text-white text-sm font-medium rounded-full hover:bg-[#FFCD83] hover:text-black transition-colors"
+                    >
+                      {keyword}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        )}
       </div>
     </>
   );
