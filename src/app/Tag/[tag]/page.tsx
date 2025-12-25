@@ -187,11 +187,20 @@ function TagContent() {
               </nav>
             </div>
 
-            <div className="container mx-auto px-4  flex flex-col items-center justify-center">
+            <div className="container mx-auto px-4  flex flex-col items-center justify-center ">
               {/* Page Title with Search Result Count */}
-              <div className="mb-6 flex flex-col items-center justify-center">
-                <h1 className="text-white text-[40px] font-medium mb-2">{decodedTag}</h1>
-                <p className="text-white/70 text-[20px]">(共有{filteredArticles.length}筆搜尋結果)</p>
+              <div 
+                style={ 
+                   {
+                    paddingTop: '60px',
+                    fontSize: '45px',
+                   }               
+                }
+              className="mb-6 flex flex-col items-center justify-center ">
+                <h1 className="text-white text-[45px] font-medium ">{decodedTag}</h1>
+                <p
+                style={ {fontSize: '20px', }     }
+                 className="text-white/70 text-[30px]">(共有{filteredArticles.length}筆搜尋結果)</p>
               </div>
 
               {/* Category Filter Buttons */}

@@ -386,17 +386,24 @@ export default function Navbar() {
         className="dropdown-menu-desktop"
         style={{ display: isdropdown ? "flex" : "none" }}
       >
-        {dropdownItems.map((item) => (
-          <li key={item.id} itemProp="name">
-            <Link
-              itemProp="url"
-              href={item.href}
-              className="dropdown-item"
-            >
-              {item.label}
-            </Link>
-          </li>
-        ))}
+        <li itemProp="name">
+          <Link
+            itemProp="url"
+            href="/ArticleCategory/RentCar"
+            className="dropdown-item"
+          >
+            包車
+          </Link>
+        </li>
+        <li itemProp="name">
+          <Link
+            itemProp="url"
+            href="/ArticleCategory/Entertainment"
+            className="dropdown-item"
+          >
+            其他娛樂
+          </Link>
+        </li>
       </ul>
     </div>
   </>
