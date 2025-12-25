@@ -111,17 +111,7 @@ function TagContent() {
     }
   }, [tagName]);
 
-  useEffect(() => {
-    if (tagName) {
-      const decodedTag = decodeURIComponent(tagName);
-      document.title = `${decodedTag} - 龍匯天下`;
-      
-      const metaDescription = document.querySelector('meta[name="description"]');
-      if (metaDescription) {
-        metaDescription.setAttribute('content', `查看所有標籤為「${decodedTag}」的文章`);
-      }
-    }
-  }, [tagName]);
+  // Metadata is now handled by server-side layout.tsx
 
   if (loading) {
     return (
