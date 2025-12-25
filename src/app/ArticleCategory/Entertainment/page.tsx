@@ -23,7 +23,7 @@ interface EntertainmentArticle {
   collapseId: string;
 }
 
-const entertainmentArticles: EntertainmentArticle[] = [
+export const entertainmentArticles: EntertainmentArticle[] = [
   {
     id: 1,
     title: '澳門怎麼玩？最新深度玩法大公開！',

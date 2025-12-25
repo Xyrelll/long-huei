@@ -23,7 +23,7 @@ interface SaunaArticle {
   collapseId: string;
 }
 
-const saunaArticles: SaunaArticle[] = [
+export const saunaArticles: SaunaArticle[] = [
   {
     id: 1,
     title: '澳門桑拿－老司機超詳細攻略',

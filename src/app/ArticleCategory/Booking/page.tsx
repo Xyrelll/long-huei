@@ -23,7 +23,7 @@ interface BookingArticle {
   collapseId: string;
 }
 
-const bookingArticles: BookingArticle[] = [
+export const bookingArticles: BookingArticle[] = [
   {
     id: 1,
     title: '【澳門訂房】最頂攻略它來了！',

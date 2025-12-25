@@ -23,7 +23,7 @@ interface TravelArticle {
   collapseId: string;
 }
 
-const travelArticles: TravelArticle[] = [
+export const travelArticles: TravelArticle[] = [
   {
     id: 1,
     title: '澳門2025最新懶人包：簽證、景點、美食、住宿全攻略',

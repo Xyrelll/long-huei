@@ -23,7 +23,7 @@ interface RentCarArticle {
   collapseId: string;
 }
 
-const rentCarArticles: RentCarArticle[] = [
+export const rentCarArticles: RentCarArticle[] = [
   {
     id: 1,
     title: '💎 澳門包車旅遊推薦：龍匯天下專屬私人行程，深度暢遊四大區域！',

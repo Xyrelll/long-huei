@@ -23,7 +23,7 @@ interface QuestionArticle {
   collapseId: string;
 }
 
-const questionArticles: QuestionArticle[] = [
+export const questionArticles: QuestionArticle[] = [
   {
     id: 1,
     title: '【澳門換錢】避坑攻略！匯率最好+免手續費據點實測',
