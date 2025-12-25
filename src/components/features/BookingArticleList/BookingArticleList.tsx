@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import './BookingArticleList.css';
 
 interface BookingArticle {
   id: number;
@@ -34,102 +35,114 @@ export default function BookingArticleList({ articles }: BookingArticleListProps
   };
 
   return (
-    <div className="row bg-green-500">
-      {articles.map((article) => (
-        <div key={article.id} className="col-12 pl-0">
-          <div className="row article-card-row flex  pb-4">
-            {/* Thumbnail - Left side on mobile, larger on desktop */}
-            <div className="col-4 col-md-4 px-0 cardpic md:w-2/7">
-              <Link href={article.link}>
-                <picture>
-                  <source srcSet={article.image} media="(min-width: 768px)" />
-                  <Image
-                    src={article.imageMobile || article.image}
-                    className="img-fluid rounded-lg md:rounded-[50px]"
-                    alt={article.title}
-                    title={article.title}
-                    width={150}
-                    height={100}
-                  />
-                </picture>
-              </Link>
-            </div>
-            
-            {/* Article Details - Right side */}
-            <div className="col-8 col-md-8 pl-2 md:w-5/7">
-              <Link href={article.link}>
-                <h3 className="card-title text-[#FFCD83] text-sm md:text-2xl md:text-3xl font-bold mb-2 md:mb-3 hover:text-[#CD861A] transition-colors">
-                  {article.title}
-                </h3>
-              </Link>
-              <div className="card-text row flex items-center justify-between">
-                <div className="col-8">
-                  <small className="text-read text-white text-xs">觀看人數：{article.views}</small>
-                </div>
-                <div className="col-4 text-end d-block d-md-none">
-                  <button
-                    className="btn btn-link p-0 js-btn-angle transition-transform duration-300"
-                    data-angle={expandedCards.has(article.id) ? 'up' : 'down'}
-                    type="button"
-                    onClick={() => toggleCard(article.id)}
-                    aria-label="向下展開"
-                    aria-expanded={expandedCards.has(article.id)}
-                  >
-                    <i 
-                      className={`fas fa-angle-down text-white text-2xl transition-transform duration-300 ${
-                        expandedCards.has(article.id) ? 'rotate-180' : ''
-                      }`} 
-                      style={{ fontSize: '30px' }} 
-                      aria-hidden="true"
-                    ></i>
-                  </button>
-                </div>
+    <div className="flex flex-col gap-6">
+      {articles.map((article) => {
+        const isExpanded = expandedCards.has(article.id);
+        
+        return (
+          <article key={article.id} className="flex flex-col pb-6 last:border-b-0">
+            {/* Top row: Image and Title */}
+            <div className="flex flex-row gap-3 md:gap-4">
+              {/* Thumbnail - Left side */}
+              <div className="flex-shrink-0 w-25 md:w-[40%] ">
+                <Link href={article.link} className="block">
+                  <picture>
+                    <source srcSet={article.image} media="(min-width: 768px)" />
+                    <Image
+                      src={article.imageMobile || article.image}
+                      className="w-full h-auto rounded-full md:rounded-[50px] object-cover"
+                      alt={article.title}
+                      title={article.title}
+                      width={150}
+                      height={100}
+                    />
+                  </picture>
+                </Link>
               </div>
               
-              {/* Tags - Shown on desktop in the right column, in accordion on mobile */}
-              {article.tags && article.tags.length > 0 && (
-                <div className="d-none d-md-block mt-4">
-                  <div className="flex flex-wrap gap-2">
+              {/* Article Details - Right side */}
+              <div className="flex-1 flex flex-col w-full md:w-[72%] gap-2 " >
+                <Link href={article.link}>
+                  <h3 className="text-[#FFCD83] text-md md:text-2xl lg:text-2xl font-bold mb-2 md:mb-3 transition-colors duration-300 leading-tight">
+                    {article.title}
+                  </h3>
+                </Link>
+                
+                <div className="flex items-center justify-between mb-2 md:mb-0">
+                  <span className="text-white text-xs md:text-[15px]">觀看人數：{article.views}</span>
+                 
+                  {/* Mobile expand button */}
+                  <button
+                    className="md:hidden  p-2 -mr-2 focus:outline-none focus:ring-2 focus:ring-[#FFCD83] rounded"
+                    type="button"
+                    onClick={() => toggleCard(article.id)}
+                    aria-label={isExpanded ? '收起內容' : '展開內容'}
+                    aria-expanded={isExpanded}
+                  >
+                    <i 
+                      className="fas fa-angle-down accordion-icon text-white text-2xl"
+                      style={{
+                        transform: isExpanded ? 'rotate(180deg)' : 'rotate(0deg)',
+                      }}
+                      aria-hidden="true"
+                    />
+                  </button>
+                </div>
+                <div className="w-full h-2"/>
+                
+                {/* Tags - Desktop only */}
+                {article.tags && article.tags.length > 0 && (
+                  <div className="hidden md:flex flex-wrap gap-1 mt-4  h-7 rounded-x">
                     {article.tags.map((tag, idx) => (
                       <Link
                         key={idx}
                         href={`/Tag/${tag}`}
-                        className="px-4 py-2 bg-[#ce8211] text-black text-xs font-medium rounded-lg hover:bg-[#CD861A] hover:text-white transition-colors"
+                        className="px-4 py-2 bg-[#ce8211] text-black text-xs font-medium
+                        flex justify-center items-center px-3
+                        rounded-full hover:bg-white hover:text-[#CD861A] transition-colors duration-300"
                       >
-                        {tag}
+                      <span className="text-xs w-full px-2 "> &nbsp; &nbsp;{tag}  &nbsp; &nbsp;</span>
                       </Link>
                     ))}
                   </div>
-                </div>
-              )}
+                )}
+              </div>
             </div>
             
-            {/* Expanded content - Accordion for mobile only, hidden on desktop */}
+            {/* Expanded content - Mobile accordion - Below image and title */}
             <div 
-              className={`col-12 overflow-hidden transition-all duration-300 ease-in-out block md:hidden ${
-                expandedCards.has(article.id) 
-                  ? 'max-h-[1000px] opacity-100 mt-3' 
-                  : 'max-h-0 opacity-0'
-              }`}
+              className="md:hidden accordion-content"
+              style={{
+                maxHeight: isExpanded ? '1000px' : '0',
+                opacity: isExpanded ? 1 : 0,
+                marginTop: isExpanded ? '0.75rem' : '0',
+              }}
             >
-              <p style={{ color: '#fff' }} className="text-sm mb-2">{article.description}</p>
-              {article.tags && article.tags.length > 0 && (
-                <div className="flex flex-wrap gap-2">
-                  {article.tags.map((tag, idx) => (
-                    <Link
-                      key={idx}
-                      href={`/Tag/${tag}`}
-                      className="px-3 py-1 bg-[#ce8211] text-black text-xs font-medium rounded-lg hover:bg-[#CD861A] hover:text-white transition-colors"
-                    >
-                      {tag}
-                    </Link>
-                  ))}
-                </div>
-              )}
+              <div className="pt-3">
+                <p className="text-white text-sm mb-3 leading-relaxed">{article.description}</p>
+                {article.tags && article.tags.length > 0 && (
+                  <div className="flex flex-wrap gap-2"
+                  style={{
+                   paddingTop: '20px',
+                   paddingBottom: '20px',
+                  }}
+                  >
+                    {article.tags.map((tag, idx) => (
+                      <Link
+                        key={idx}
+                        href={`/Tag/${tag}`}
+                        className="px-3 py-1 h-5 flex justify-center items-center rounded-full bg-[#ce8211] text-black text-xs font-medium rounded-lg hover:bg-[#CD861A] hover:text-white transition-colors duration-300"
+                      >
+                      &nbsp;  &nbsp;&nbsp;{tag}&nbsp;&nbsp;&nbsp;
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
             </div>
-          </div>
-        </div>
-      ))}
+          </article>
+        );
+      })}
     </div>
   );
 }

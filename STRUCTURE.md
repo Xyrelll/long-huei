@@ -158,3 +158,4 @@ import '@/styles/globals.css';
 5. **Configuration**: Centralize config in `config/` folder
 6. **Environment Variables**: Validate in `config/env.ts`
 
+

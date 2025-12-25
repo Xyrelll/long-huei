@@ -1,11 +1,13 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { useSearchParams } from 'next/navigation';
 import { generateBreadcrumbSchema } from '@/config/seo';
 import Navbar from '@/components/layout/Navbar/Navbar';
 import Footer from '@/components/layout/Footer/Footer';
 import GoToTop from '@/components/layout/GoToTop/GoToTop';
 import BookingArticleList from '@/components/features/BookingArticleList/BookingArticleList';
+import Pagination from '@/components/ui/Pagination/Pagination';
 import Link from 'next/link';
 import BottomNav from '@/components/layout/BottomNav/BottomNav';
 
@@ -103,24 +105,20 @@ const popularTags = [
 ];
 
 export default function BookingPage() {
-  // Initialize page from URL using lazy initializer (client-side only)
-  const [currentPage, setCurrentPage] = useState(() => {
-    if (typeof window !== 'undefined') {
-      const urlParams = new URLSearchParams(window.location.search);
-      return parseInt(urlParams.get('PageNo') || '1', 10);
-    }
-    return 1;
-  });
-  
-  const itemsPerPage = 9;
+  const searchParams = useSearchParams();
+  const itemsPerPage = 3;
   const totalPages = Math.ceil(bookingArticles.length / itemsPerPage);
+  
+  // Get current page from URL params
+  const pageParam = searchParams.get('PageNo');
+  const currentPage = Math.max(1, Math.min(parseInt(pageParam || '1', 10), totalPages));
   
   // Get articles for current page
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
   const currentArticles = bookingArticles.slice(startIndex, endIndex);
 
-  // Set page title/meta tags and listen for navigation changes
+  // Set page title/meta tags
   useEffect(() => {
     // Set page title
     document.title = '澳門訂房攻略 - 酒店推薦、住宿選擇全指南 | 龍匯天下';
@@ -133,16 +131,6 @@ export default function BookingPage() {
       document.head.appendChild(metaDescription);
     }
     metaDescription.setAttribute('content', '探索澳門訂房完整攻略，包含頂級酒店推薦、住宿區域指南、訂房省錢技巧等實用資訊。精選澳門訂房必看文章，從酒店選擇到優惠資訊一次搞定，讓您的澳門住宿體驗更加完美。');
-    
-    // Listen for navigation changes (back/forward buttons)
-    const handlePopState = () => {
-      const urlParams = new URLSearchParams(window.location.search);
-      const pageNo = parseInt(urlParams.get('PageNo') || '1', 10);
-      setCurrentPage(pageNo);
-    };
-    
-    window.addEventListener('popstate', handlePopState);
-    return () => window.removeEventListener('popstate', handlePopState);
   }, []);
 
   const breadcrumbSchema = generateBreadcrumbSchema([
@@ -186,13 +174,13 @@ export default function BookingPage() {
       <div className="relative w-full min-h-screen bg-black flex justify-center items-center">
         <Navbar />
         
-        <main className="inner-page w-[90%] mx-auto ">
-        <div className="w-full h-30"></div>
+        <main className="inner-page w-[90%] mx-auto  ">
+        <div className="w-full h-18 md:h-30"></div>
           {/* Breadcrumbs */}
          
 
           {/* Articles Section */}
-          <section className="articles w-full bg-black py-8" style={{ marginTop: '20px' }}>
+          <section className="articles w-full bg-black py-8" >
           <div className="container mx-auto  h-15 ">
             <nav className="nav-breadcrumb py-4" aria-label="breadcrumb">
               <ol className="breadcrumb flex items-center gap-2 text-white text-sm">
@@ -216,74 +204,69 @@ export default function BookingPage() {
             <div className="container mx-auto px-4">
               <h1 className="text-white text-3xl mb-8 h-15">訂房</h1>
               
-              <div className="row flex flex-col lg:flex-row gap-6 bg-red-500">
+              <div className="row flex flex-col lg:flex-row gap-6 ">
                 {/* Main Content - Articles List */}
-                <div className="col-xl-9 col-lg-8 col-md-8 col-sm-12 col-xs-12 w-full lg:w-7/10 bg-blue-500">
+                <div className="col-xl-9 col-lg-8 col-md-8 col-sm-12 col-xs-12 w-full lg:w-7/10 ">
                   <BookingArticleList articles={currentArticles} />
 
                   {/* Pagination */}
-                  <nav className="pagination mt-8" aria-label="Page navigation example">
-                    <div className="pagination-container flex justify-center">
-                      <ul className="pagination flex justify-center items-center border border-white rounded-lg overflow-hidden">
-                        {Array.from({ length: totalPages }, (_, i) => i + 1).map((pageNum, index) => (
-                          <li key={pageNum} className="page-item">
-                            {pageNum === currentPage ? (
-                              <span className={`page-link px-6 py-2 bg-[#CD861A] text-white ${index < totalPages - 1 ? 'border-r border-white' : ''}`}>
-                                {pageNum}
-                              </span>
-                            ) : (
-                              <Link 
-                                href={`/ArticleCategory/Booking?PageNo=${pageNum}&SortBy=DisplaySeq&SortDirection=ASC`}
-                                className={`page-link px-6 py-2 bg-black text-white hover:bg-[#2C261C] transition-colors ${index < totalPages - 1 ? 'border-r border-white' : ''}`}
-                              >
-                                {pageNum}
-                              </Link>
-                            )}
-                          </li>
-                        ))}
-                        {currentPage < totalPages && (
-                          <li className="page-item">
-                            <Link 
-                              href={`/ArticleCategory/Booking?PageNo=${currentPage + 1}&SortBy=DisplaySeq&SortDirection=ASC`} 
-                              rel="next"
-                              className="page-link px-6 py-2 bg-black text-white hover:bg-[#2C261C] transition-colors"
-                            >
-                              &gt;
-                            </Link>
-                          </li>
-                        )}
-                      </ul>
-                    </div>
-                  </nav>
+                  <Pagination
+                    currentPage={currentPage}
+                    totalPages={totalPages}
+                    baseUrl="/ArticleCategory/Booking"
+                    queryParams={{
+                      SortBy: 'DisplaySeq',
+                      SortDirection: 'ASC',
+                    }}
+                  />
 
 
 
                 </div>
 
                 {/* Sidebar */}
-                <div className="col-xl-3 col-lg-4 col-md-4 col-sm-12 col-xs-12 w-full lg:w-3/10">
+                <div className="col-xl-3 col-lg-4 col-md-4 col-sm-12 col-xs-12 w-full lg:w-3/12">
                   {/* Categories Box */}
                   <div 
                     className="cate-box rounded-[40px] mb-[30px]"
                     style={{
                       backgroundImage: 'linear-gradient(180deg, #151515 0%, #2d2d2d 100%)',
                       padding: '20px 0 10px',
-                      paddingLeft: '20px',
-                      height: '300px',
+                      paddingLeft: '0px',
+                      height: 'auto',
                       width: '100%',
                     }}
                   >
-                    <h4 className="text-white text-lg mb-4 flex items-center gap-2 border-b border-white/10 ">
-                      <i className="bi bi-bookmarks-fill text-[#FFCD83]"></i>
+                    <h4
+                    style={{
+                      paddingLeft: '20px',
+                      paddingTop: '10px',
+                      paddingBottom: '10px',
+                    }}
+                    className="text-white text-lg mb-4 flex items-center gap-2 border-b border-white/ ">
+                      <i className="bi bi-bookmarks-fill text-white"></i>
                       所有文章分類
                     </h4>
-                    <ul className="list-none p-0 m-0">
+                    <ul className="list-none p-0 m-0" style={{
+                      paddingTop: '10px',
+                      paddingBottom: '10px',
+                    }}>
                       {categories.map((category) => (
-                        <li key={category.name} className="flex items-center gap-2">
+                        <li key={category.name} 
+                        style={{
+                          paddingLeft: '20px',
+                          paddingTop: '5px',
+                          paddingBottom: '5px',
+                        }}
+                        className="flex items-center gap-2">
                           <span className="w-2 h-2 bg-white rounded-sm flex-shrink-0"></span>
                           <Link
                             href={category.href}
-                            className={`block py-2 text-white hover:text-[#FFCD83] transition-colors ${category.active ? 'text-[#FFCD83] font-bold' : ''}`}
+                            className={`block py-2 transition-colors ${
+                              category.active 
+                                ? 'text-[#FFCD83] font-bold' 
+                                : 'text-white hover:text-[#FFCD83]'
+                            }`}
                           >
                             {category.name} ({category.count})
                           </Link>
@@ -298,23 +281,51 @@ export default function BookingPage() {
                     style={{
                       marginTop: '15px',
                       backgroundImage: 'linear-gradient(180deg, #301e03 0%, #a76909 100%)',
-                      padding: '20px 10px 10px 20px',
-                      height: '300px',
+                          
+                      paddingRight: '0px',
+                      paddingBottom: '10px',
+                      paddingTop: '10px',
+                      paddingLeft: '0px',
+                      height: 'auto',
                       width: '100%',
                     }}
                   >
-                    <h4 className="text-white text-lg mb-4 flex items-center gap-2 border-b border-white/10 ">
-                      <i className="bi bi-tags-fill text-[#FFCD83]"></i>
+                    <h4
+                    style={{
+                      paddingLeft: '20px',
+                      paddingTop: '10px',
+                      paddingBottom: '10px',
+                    }}
+                     className="text-white text-lg mb-4 flex items-center gap-2 border-b  border-white/70 ">
+                      <i className="bi bi-tags-fill text-white"></i>
                       熱門 TAGs
                     </h4>
-                    <ul className="list-none p-0 m-0 flex flex-wrap gap-2">
+                    <div className="w-full h-3"/>
+                    <ul className="list-none p-0 m-0 flex flex-wrap gap-2"
+                      style={{
+                        paddingLeft: '20px',
+                        paddingTop: '10px',
+                        paddingBottom: '20px',
+                        paddingRight: '20px',
+                      }}
+                    >
                       {popularTags.map((tag) => (
-                        <li key={tag.name}>
+                        <li key={tag.name}
+                        style={{
+                          paddingLeft: '0px',
+                          paddingRight: '1px',
+                        }}
+                        >
                           <Link
                             href={tag.href}
-                            className="inline-block px-3 py-1 bg-black/50 text-[#CD861A] bg-white   text-sm rounded-lg hover:bg-[#CD861A] transition-colors"
+                            style={{
+                              paddingLeft: '0px',
+                              paddingRight: '1px',
+                            }}
+                            className=" h-7 rounded-full  bg-black/50 text-[#CD861A] bg-white 
+                              text-sm flex justify-center items-center hover:bg-[#CD861A] hover:text-white transition-colors"
                           >
-                            {tag.name}
+                           &nbsp;&nbsp; {tag.name}&nbsp;&nbsp;
                           </Link>
                         </li>
                       ))}

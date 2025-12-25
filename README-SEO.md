@@ -133,3 +133,4 @@ Make sure to add these files to `/public`:
 6. Configure Google Search Console
 7. Submit sitemap to search engines
 
+
