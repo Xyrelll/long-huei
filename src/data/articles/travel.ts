@@ -57,13 +57,14 @@ export const travelArticles: TravelArticle[] = [
   {
     id: 4,
     title: '澳門旅遊團｜深度探索東西文化交融的魅力之城',
-    description: 'Macau, known as the "Las Vegas of the East," boasts a unique charm born from the fusion of Chinese and Portuguese cultures. For those seeking an easy itinerary, minimal travel time, and a deep immersion in Macau\'s cuisine and culture, choosing a Macau tour group is undoubtedly the smartest option. Through a Macau tour group, you can enjoy expert guided tours...',
+    description: '澳門被譽為「東方拉斯維加斯」，同時擁有中葡文化交融的獨特魅力。想要輕鬆規劃行程、節省交通時間、深入體驗澳門的美食與文化，選擇 澳門旅遊團 絕對是最聰明的方式。透過 澳門旅遊團，不僅能享受專業導遊的講解，更能輕鬆走訪必去的世界文化遺產、人氣娛樂場與隱藏版美食，讓旅程充滿驚喜。',
     image: '/travel/9_8澳門旅遊團｜深度探索東西文化交融的魅力之城-c.jpg',
     imageMobile: '/travel/9_8澳門旅遊團｜深度探索東西文化交融的魅力之城-m.jpg',
     link: '/Article/macao-travelgroup1',
     views: 1127,
     tags: ['澳門訂房', '澳門推薦', '澳門旅遊'],
     collapseId: 'collapse-macao-travelgroup1',
+    contentBlocks: travelArticleContentBlocks[4],
   },
   {
     id: 5,

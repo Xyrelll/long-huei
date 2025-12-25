@@ -752,6 +752,180 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
         style: { marginTop: '40px', marginBottom: '40px' }
       }
     ]
+  },
+  4: {
+    // Article description (intro text)
+    description: [
+      {
+        type: 'text',
+        content: '澳門被譽為「東方拉斯維加斯」，同時擁有中葡文化交融的獨特魅力。想要輕鬆規劃行程、節省交通時間、深入體驗澳門的美食與文化，選擇 澳門旅遊團 絕對是最聰明的方式。透過 澳門旅遊團，不僅能享受專業導遊的講解，更能輕鬆走訪必去的世界文化遺產、人氣娛樂場與隱藏版美食，讓旅程充滿驚喜。',
+        style: { 
+          marginBottom: '20px',
+          fontSize: '0.8rem'
+        }
+      }
+    ],
+    // Table of Contents
+    tableOfContents: {
+      type: 'tableOfContents',
+      buttonText: '文章目錄',
+      buttonIcon: '☰',
+      items: [
+        { level: 1, text: '為什麼選擇澳門旅遊團？', id: 'why-choose' },
+        { level: 1, text: '澳門旅遊團熱門路線推薦', id: 'popular-routes' },
+        { level: 1, text: '澳門旅遊團的特色', id: 'features' },
+        { level: 1, text: '適合哪些人參加澳門旅遊團？', id: 'who-should-join' },
+        { level: 1, text: '如何選擇適合的澳門旅遊團？', id: 'how-to-choose' },
+        { level: 1, text: '結語', id: 'conclusion' }
+      ],
+      style: {
+        backgroundColor: 'rgba(83, 52, 4, 0.842)',
+        borderRadius: '30px',
+        padding: '20px',
+        marginTop: '20px',
+        marginBottom: '30px',
+        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 165, 0, 0.2)',
+        border: '1px solid #d18411',
+        backdropFilter: 'blur(10px)',
+      }
+    },
+    // Array of sections
+    sections: [
+      {
+        type: 'section',
+        title: '為什麼選擇澳門旅遊團？',
+        titleLevel: 2,
+        id: 'why-choose',
+        image: {
+          src: '/travel/macao-travelgroup1/macau-3766162_1920.jpg',
+          alt: '為什麼選擇澳門旅遊團？',
+          width: 800,
+          height: 450
+        },
+        description: '選擇 澳門旅遊團 的最大好處，就是可以省去自行安排行程的麻煩',
+        content: [
+          {
+            type: 'text',
+            content: '選擇 澳門旅遊團 的最大好處，就是可以省去自行安排行程的麻煩。無論是兩天一夜還是三天兩夜，澳門旅遊團 都能根據需求規劃完整路線，涵蓋景點、餐食、交通，甚至住宿。許多首次到訪的旅客往往不知道該如何取捨景點，而專業的 澳門旅遊團 則會幫你安排最精華的行程，避免浪費寶貴時間。',
+            style: { marginBottom: '20px', fontSize: '0.8rem' }
+          }
+        ],
+        style: { marginTop: '40px', marginBottom: '40px' }
+      },
+      {
+        type: 'section',
+        title: '澳門旅遊團熱門路線推薦',
+        titleLevel: 2,
+        id: 'popular-routes',
+        image: {
+          src: '/travel/macao-travelgroup1/macao-4769471_1920.jpg',
+          alt: '澳門旅遊團熱門路線推薦',
+          width: 800,
+          height: 450
+        },
+        description: '精選三種不同主題的澳門旅遊團路線',
+        content: [
+          {
+            type: 'list',
+            items: [
+              '文化古蹟深度遊：澳門擁有多達八項世界文化遺產，例如大三巴牌坊、媽閣廟、東望洋炮台等。參加 澳門旅遊團，能由專業導遊講解背後的歷史故事，體會葡式建築與中國文化的結合。',
+              '美食探索之旅：澳門被譽為「美食之都」，從葡撻、馬介休球到水蟹粥，每一道都是饕客必吃。許多 澳門旅遊團 會特別安排特色餐廳，帶領團員品嚐在地料理。',
+              '娛樂購物體驗遊：澳門的娛樂場聞名世界，同時也有許多大型購物中心。透過 澳門旅遊團，不僅能體驗國際級的娛樂氛圍，也能享受購物優惠與貼心接送服務。'
+            ],
+            ordered: true,
+            style: { marginBottom: '20px', fontSize: '0.8rem' }
+          }
+        ],
+        style: { marginTop: '40px', marginBottom: '40px' }
+      },
+      {
+        type: 'section',
+        title: '澳門旅遊團的特色',
+        titleLevel: 2,
+        id: 'features',
+        image: {
+          src: '/travel/macao-travelgroup1/china-5131521_1920.jpg',
+          alt: '澳門旅遊團的特色',
+          width: 800,
+          height: 450
+        },
+        description: '澳門旅遊團提供的專業服務與特色',
+        content: [
+          {
+            type: 'list',
+            items: [
+              '專業導遊帶領：深入了解景點歷史與文化背景。',
+              '交通無憂：專車接送，避免自行找路的困擾。',
+              '彈性行程：可選擇自由行搭配部分 澳門旅遊團，享受兩全其美的旅行方式。',
+              '價格透明：不同預算都有適合的 澳門旅遊團，無需擔心隱藏收費。'
+            ],
+            style: { marginBottom: '20px', fontSize: '0.8rem' }
+          }
+        ],
+        style: { marginTop: '40px', marginBottom: '40px' }
+      },
+      {
+        type: 'section',
+        title: '適合哪些人參加澳門旅遊團？',
+        titleLevel: 2,
+        id: 'who-should-join',
+        description: '了解哪些類型的旅客最適合參加澳門旅遊團',
+        content: [
+          {
+            type: 'list',
+            items: [
+              '第一次到澳門的遊客：透過 澳門旅遊團 能快速掌握必去景點。',
+              '長輩或親子旅客：行程規劃完善，交通方便又省心。',
+              '時間有限的上班族：短時間內體驗澳門精華，效率最高。',
+              '美食與文化愛好者：跟著 澳門旅遊團 深入品味在地風情。'
+            ],
+            style: { marginBottom: '20px', fontSize: '0.8rem' }
+          }
+        ],
+        style: { marginTop: '40px', marginBottom: '40px' }
+      },
+      {
+        type: 'section',
+        title: '如何選擇適合的澳門旅遊團？',
+        titleLevel: 2,
+        id: 'how-to-choose',
+        description: '挑選澳門旅遊團時需要注意的事項',
+        content: [
+          {
+            type: 'text',
+            content: '在挑選 澳門旅遊團 時，建議注意以下幾點：',
+            style: { marginBottom: '15px', fontSize: '0.8rem' }
+          },
+          {
+            type: 'list',
+            items: [
+              '行程內容：是否包含你最想去的景點與餐廳。',
+              '團費透明度：避免隱藏消費，選擇口碑良好的旅行社。',
+              '導遊專業度：好的導遊能讓整個旅程更加豐富。',
+              '評價與口碑：參考其他旅客對該 澳門旅遊團 的評價。'
+            ],
+            ordered: true,
+            style: { marginBottom: '20px', fontSize: '0.8rem' }
+          }
+        ],
+        style: { marginTop: '40px', marginBottom: '40px' }
+      },
+      {
+        type: 'section',
+        title: '結語',
+        titleLevel: 2,
+        id: 'conclusion',
+        description: '澳門旅遊團能滿足不同需求，讓旅程更輕鬆精彩',
+        content: [
+          {
+            type: 'text',
+            content: '無論你是想體驗世界遺產的文化深度、美食的無窮魅力，還是娛樂購物的奢華享受，澳門旅遊團 都能滿足不同需求。與其自己花時間研究路線，不如交給專業的 龍匯天下，讓旅程更輕鬆、更精彩。下次規劃假期時，不妨選擇一個口碑良好的 澳門旅遊團，帶你探索這座中西交融、充滿驚喜的城市，點擊下方LINE連結了解更多喔。',
+            style: { marginBottom: '20px', fontSize: '0.8rem' }
+          }
+        ],
+        style: { marginTop: '40px', marginBottom: '40px' }
+      }
+    ]
   }
 };
 
