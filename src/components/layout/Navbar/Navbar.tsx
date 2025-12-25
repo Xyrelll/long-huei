@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 import TravelIcon from '../../../../public/Images/nacicon';
 import '../../../styles/navbar.css';
 
@@ -88,10 +89,36 @@ interface MobileDropdownProps {
 }
 
 function MobileDropdown({ isOpen, onToggle, onItemClick, items }: MobileDropdownProps) {
-  const handleItemClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    // Close menu when item is clicked
+  const router = useRouter();
+  const touchHandledRef = useRef(false);
+
+  const handleNavigation = (href: string, e: React.MouseEvent<HTMLAnchorElement> | React.TouchEvent<HTMLAnchorElement>) => {
+    // Prevent default to handle navigation manually
+    e.preventDefault();
+    e.stopPropagation();
+    
+    // Close menu
     onItemClick();
-    // Navigation will happen automatically via Link href
+    
+    // Navigate programmatically
+    router.push(href);
+  };
+
+  const handleItemClick = (href: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
+    handleNavigation(href, e);
+  };
+
+  const handleTouchEnd = (href: string) => (e: React.TouchEvent<HTMLAnchorElement>) => {
+    // Prevent double-firing
+    if (touchHandledRef.current) {
+      return;
+    }
+    touchHandledRef.current = true;
+    handleNavigation(href, e);
+    // Reset after a short delay
+    setTimeout(() => {
+      touchHandledRef.current = false;
+    }, 300);
   };
 
   return (
@@ -120,7 +147,8 @@ function MobileDropdown({ isOpen, onToggle, onItemClick, items }: MobileDropdown
             itemProp="url"
             href="/ArticleCategory/RentCar"
             className="mobile-dropdown-item"
-            onClick={handleItemClick}
+            onClick={handleItemClick('/ArticleCategory/RentCar')}
+            onTouchEnd={handleTouchEnd('/ArticleCategory/RentCar')}
           >
             包車
           </Link>
@@ -130,7 +158,8 @@ function MobileDropdown({ isOpen, onToggle, onItemClick, items }: MobileDropdown
             itemProp="url"
             href="/ArticleCategory/Entertainment"
             className="mobile-dropdown-item"
-            onClick={handleItemClick}
+            onClick={handleItemClick('/ArticleCategory/Entertainment')}
+            onTouchEnd={handleTouchEnd('/ArticleCategory/Entertainment')}
           >
             其他娛樂
           </Link>
