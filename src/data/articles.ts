@@ -71,18 +71,50 @@ export async function getAllArticles(): Promise<Article[]> {
 
 // Helper function to find article by slug
 export async function findArticleBySlug(slug: string): Promise<Article | null> {
-  const allArticles = await getAllArticles();
-  const decodedSlug = decodeURIComponent(slug);
-  
-  return allArticles.find(
-    a => {
-      const articleLink = a.link.replace('/Article/', '');
-      return articleLink === slug || 
-             articleLink === decodedSlug ||
-             articleLink.includes(slug) ||
-             articleLink.includes(decodedSlug) ||
-             a.link === `/Article/${slug}` ||
-             a.link === `/Article/${decodedSlug}`;
-    }
-  ) || null;
+  try {
+    const allArticles = await getAllArticles();
+    const decodedSlug = decodeURIComponent(slug);
+    const normalizedSlug = slug.toLowerCase().trim();
+    const normalizedDecodedSlug = decodedSlug.toLowerCase().trim();
+    
+    // Try multiple matching strategies
+    const found = allArticles.find(
+      a => {
+        // Extract slug from article link
+        const articleLink = a.link.replace('/Article/', '').toLowerCase().trim();
+        const articleLinkDecoded = decodeURIComponent(articleLink).toLowerCase().trim();
+        
+        // Exact matches
+        if (articleLink === normalizedSlug || 
+            articleLink === normalizedDecodedSlug ||
+            articleLinkDecoded === normalizedSlug ||
+            articleLinkDecoded === normalizedDecodedSlug) {
+          return true;
+        }
+        
+        // Partial matches (handle URL encoding)
+        if (articleLink.includes(normalizedSlug) || 
+            articleLink.includes(normalizedDecodedSlug) ||
+            normalizedSlug.includes(articleLink) ||
+            normalizedDecodedSlug.includes(articleLink)) {
+          return true;
+        }
+        
+        // Full link matches
+        if (a.link === `/Article/${slug}` || 
+            a.link === `/Article/${decodedSlug}` ||
+            a.link.toLowerCase() === `/article/${normalizedSlug}` ||
+            a.link.toLowerCase() === `/article/${normalizedDecodedSlug}`) {
+          return true;
+        }
+        
+        return false;
+      }
+    );
+    
+    return found || null;
+  } catch (error) {
+    console.error('Error finding article by slug:', error);
+    return null;
+  }
 }
