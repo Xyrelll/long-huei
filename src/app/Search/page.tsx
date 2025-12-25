@@ -72,12 +72,12 @@ function SearchContent() {
 
         // Combine all articles with category info
         const articles: Article[] = [
-          ...(bookingArticles || []).map((a: any) => ({ ...a, category: '訂房' })),
-          ...(travelArticles || []).map((a: any) => ({ ...a, category: '旅遊' })),
-          ...(rentCarArticles || []).map((a: any) => ({ ...a, category: '包車' })),
-          ...(saunaArticles || []).map((a: any) => ({ ...a, category: '桑拿' })),
-          ...(entertainmentArticles || []).map((a: any) => ({ ...a, category: '其他娛樂' })),
-          ...(questionArticles || []).map((a: any) => ({ ...a, category: '常見問答' })),
+          ...(bookingArticles || []).map((a: Omit<Article, 'category'>) => ({ ...a, category: '訂房' })),
+          ...(travelArticles || []).map((a: Omit<Article, 'category'>) => ({ ...a, category: '旅遊' })),
+          ...(rentCarArticles || []).map((a: Omit<Article, 'category'>) => ({ ...a, category: '包車' })),
+          ...(saunaArticles || []).map((a: Omit<Article, 'category'>) => ({ ...a, category: '桑拿' })),
+          ...(entertainmentArticles || []).map((a: Omit<Article, 'category'>) => ({ ...a, category: '其他娛樂' })),
+          ...(questionArticles || []).map((a: Omit<Article, 'category'>) => ({ ...a, category: '常見問答' })),
         ];
 
         setAllArticles(articles);

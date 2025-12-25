@@ -2,7 +2,6 @@
 
 import { useEffect, useState, Suspense } from 'react';
 import { useParams, useSearchParams } from 'next/navigation';
-import { generateBreadcrumbSchema } from '@/config/seo';
 import Navbar from '@/components/layout/Navbar/Navbar';
 import Footer from '@/components/layout/Footer/Footer';
 import GoToTop from '@/components/layout/GoToTop/GoToTop';
@@ -34,19 +33,6 @@ const categories = [
   { name: '專人客服', href: '/CustomerService', count: 0 },
 ];
 
-const popularTags = [
-  { name: '澳門包車', href: '/Tag/澳門包車' },
-  { name: '澳門旅遊', href: '/Tag/澳門旅遊' },
-  { name: '龍匯天下', href: '/Tag/龍匯天下' },
-  { name: '澳門訂房', href: '/Tag/澳門訂房' },
-  { name: '龍匯包車', href: '/Tag/龍匯包車' },
-  { name: '澳門龍匯天下', href: '/Tag/澳門龍匯天下' },
-  { name: '澳門包車景點', href: '/Tag/澳門包車景點' },
-  { name: '龍匯天下訂房', href: '/Tag/龍匯天下訂房' },
-  { name: '澳門旅遊找龍匯', href: '/Tag/澳門旅遊找龍匯' },
-  { name: '澳門通龍匯天下', href: '/Tag/澳門通龍匯天下' },
-];
-
 function TagContent() {
   const params = useParams();
   const searchParams = useSearchParams();
@@ -70,7 +56,7 @@ function TagContent() {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  const itemsPerPage = 3;
+  const itemsPerPage = 9;
   
   // Filter articles by selected category (if any)
   const filteredArticles = selectedCategory
@@ -108,12 +94,12 @@ function TagContent() {
 
         // Combine all articles with category info
         const allArticles: Article[] = [
-          ...(bookingArticles || []).map((a: any) => ({ ...a, category: '訂房' })),
-          ...(travelArticles || []).map((a: any) => ({ ...a, category: '旅遊' })),
-          ...(rentCarArticles || []).map((a: any) => ({ ...a, category: '包車' })),
-          ...(saunaArticles || []).map((a: any) => ({ ...a, category: '桑拿' })),
-          ...(entertainmentArticles || []).map((a: any) => ({ ...a, category: '其他娛樂' })),
-          ...(questionArticles || []).map((a: any) => ({ ...a, category: '常見問答' })),
+          ...(bookingArticles || []).map((a: Omit<Article, 'category'>) => ({ ...a, category: '訂房' })),
+          ...(travelArticles || []).map((a: Omit<Article, 'category'>) => ({ ...a, category: '旅遊' })),
+          ...(rentCarArticles || []).map((a: Omit<Article, 'category'>) => ({ ...a, category: '包車' })),
+          ...(saunaArticles || []).map((a: Omit<Article, 'category'>) => ({ ...a, category: '桑拿' })),
+          ...(entertainmentArticles || []).map((a: Omit<Article, 'category'>) => ({ ...a, category: '其他娛樂' })),
+          ...(questionArticles || []).map((a: Omit<Article, 'category'>) => ({ ...a, category: '常見問答' })),
         ];
 
         // Decode the tag name from URL
