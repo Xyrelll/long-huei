@@ -1,5 +1,7 @@
 // Shared article data for Travel category
 // Can be imported by both client and server components
+import { ArticleContent } from '@/types/articleContent';
+import { travelArticleContentBlocks } from './travelContentBlocks';
 
 export interface TravelArticle {
   id: number;
@@ -11,19 +13,22 @@ export interface TravelArticle {
   views: number;
   tags?: string[];
   collapseId: string;
+  content?: string; // Legacy plain text content
+  contentBlocks?: ArticleContent; // New structured content blocks
 }
 
 export const travelArticles: TravelArticle[] = [
   {
     id: 1,
     title: '澳門2025最新懶人包：簽證、景點、美食、住宿全攻略',
-    description: 'As a special administrative region that blends Chinese and Western cultures, Macau will continue to launch new attractions and upgrade services in 2025. Key updates of greatest interest to Taiwanese travelers include: New Visa System: Taiwanese travelers holding passports valid for more than six months can stay visa-free for up to 30 days. Entry will now utilize "electronic clearance + facial recognition," resulting in faster clearance.',
+    description: '澳門作為融合中西文化的特別行政區,2025年持續推出新景點與服務升級。台灣旅客最關心的重點更新: 簽證新制、交通升級、支付便利等完整攻略。',
     image: '/travel/251121-c.jpg',
     imageMobile: '/travel/251121-m.jpg',
     link: '/Article/macau-all',
     views: 1021,
     tags: ['澳門通龍匯天下', '龍匯包車', '龍匯天下訂房'],
     collapseId: 'collapse-macau-all',
+    contentBlocks: travelArticleContentBlocks[1],
   },
   {
     id: 2,
