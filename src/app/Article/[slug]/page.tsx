@@ -27,6 +27,7 @@ interface Article {
   category?: string;
   content?: string;
   contentBlocks?: ArticleContent;
+  date?: string;
 }
 
 const categories = [
@@ -165,7 +166,7 @@ function ArticleContent() {
         image: a.image,
         link: a.link,
         tags: a.tags,
-        // date is optional, so we don't include it if not available
+        date: a.date, // Include date if available
       }));
     
     return sameCategoryArticles;
