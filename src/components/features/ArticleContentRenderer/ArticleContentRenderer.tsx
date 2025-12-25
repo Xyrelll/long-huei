@@ -102,6 +102,7 @@ export default function ArticleContentRenderer({ blocks, content }: ArticleConte
               backdropFilter: headingStyle.backdropFilter,
               padding: headingStyle.padding,
               display: headingStyle.display,
+              scrollMarginTop: '120px', // Add scroll margin for better navigation
             }}
             className="text-white"
           >
@@ -344,6 +345,7 @@ export default function ArticleContentRenderer({ blocks, content }: ArticleConte
               const HeadingTag = `h${block.titleLevel || 2}` as keyof React.JSX.IntrinsicElements;
               return (
                 <HeadingTag
+                  id={block.id}
                   style={{
                     marginTop: '0',
                     marginBottom: '20px',
@@ -364,7 +366,7 @@ export default function ArticleContentRenderer({ blocks, content }: ArticleConte
                   marginTop: '0',
                   marginBottom: '30px',
                 }}
-                className="w-full"
+                className="w-full flex justify-center"
               >
                 <Image
                   src={block.image.src}
@@ -374,8 +376,9 @@ export default function ArticleContentRenderer({ blocks, content }: ArticleConte
                   style={{
                     borderRadius: '12px',
                     maxWidth: '100%',
+                    maxHeight: '450px',
                   }}
-                  className="w-full h-auto"
+                  className="w-full h-auto md:max-w-[300px] md:max-h-[450px] object-contain"
                 />
                 {block.image.caption && (
                   <p className="text-white/70 text-sm mt-2 text-center">{block.image.caption}</p>
@@ -434,20 +437,43 @@ function TableOfContentsComponent({ block, index }: { block: ArticleContentBlock
     e.preventDefault();
     setIsOpen(false);
     
-    // Find the target element
-    const targetElement = document.getElementById(itemId);
-    if (targetElement) {
-      // Calculate offset to account for fixed navbar
-      const navbarHeight = 100; // Adjust based on your navbar height
-      const elementPosition = targetElement.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+    // Use setTimeout to ensure DOM is updated after state change
+    setTimeout(() => {
+      // Find the target element - try multiple methods
+      let targetElement = document.getElementById(itemId);
+      
+      // If not found, try querySelector
+      if (!targetElement) {
+        targetElement = document.querySelector(`[id="${itemId}"]`) as HTMLElement;
+      }
+      
+      // If still not found, try finding by heading text (fallback)
+      if (!targetElement) {
+        const allHeadings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+        for (const heading of allHeadings) {
+          if (heading.id === itemId) {
+            targetElement = heading as HTMLElement;
+            break;
+          }
+        }
+      }
+      
+      if (targetElement) {
+        // Calculate offset to account for fixed navbar
+        const navbarHeight = 100; // Adjust based on your navbar height
+        const elementPosition = targetElement.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
 
-      // Smooth scroll to the element
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
-    }
+        // Use scrollIntoView with offset calculation
+        // First scroll to position, then fine-tune
+        window.scrollTo({
+          top: Math.max(0, offsetPosition),
+          behavior: 'smooth'
+        });
+      } else {
+        console.warn(`Element with id "${itemId}" not found`);
+      }
+    }, 200);
   };
 
   return (
@@ -502,110 +528,158 @@ function TableOfContentsComponent({ block, index }: { block: ArticleContentBlock
         }}
         className="toc-panel"
       >
-        <ul
-              style={{
-                listStyle: 'none',
-                padding: '0',
-                margin: '0',
-                color: '#000000',
-              }}
-            >
-              {(() => {
-                // Calculate hierarchical numbering (1, 1.1, 1.2, 2, 3, 3.1, 3.2)
-                const getNumber = (items: typeof block.items, currentIndex: number): string => {
-                  const currentItem = items[currentIndex];
-                  if (currentItem.level === 1) {
-                    // Count level 1 items before this one
-                    let count = 1;
-                    for (let i = 0; i < currentIndex; i++) {
-                      if (items[i].level === 1) count++;
-                    }
-                    return count.toString();
-                  } else {
-                    // Find parent level 1 item
-                    let parentIndex = -1;
-                    for (let i = currentIndex - 1; i >= 0; i--) {
-                      if (items[i].level === 1) {
-                        parentIndex = i;
-                        break;
-                      }
-                    }
-                    if (parentIndex === -1) return '';
-                    
-                    // Count level 2 items under this parent
-                    let subCount = 1;
-                    for (let i = parentIndex + 1; i < currentIndex; i++) {
-                      if (items[i].level === 2) subCount++;
-                    }
-                    
-                    // Get parent number
-                    let parentCount = 1;
-                    for (let i = 0; i < parentIndex; i++) {
-                      if (items[i].level === 1) parentCount++;
-                    }
-                    
-                    return `${parentCount}.${subCount}`;
-                  }
-                };
+        {(() => {
+          // Build nested structure from flat items array
+          interface TOCItem {
+            level: number;
+            text: string;
+            id?: string;
+            children?: TOCItem[];
+          }
 
-                return block.items.map((item, itemIndex) => {
-                  const number = getNumber(block.items, itemIndex);
+          const buildNestedStructure = (items: typeof block.items): TOCItem[] => {
+            const result: TOCItem[] = [];
+            const stack: TOCItem[] = [];
+
+            items.forEach((item) => {
+              // Skip level 3 items - hide them from TOC but keep in data
+              if (item.level === 3) {
+                return;
+              }
+
+              const tocItem: TOCItem = {
+                level: item.level,
+                text: item.text,
+                id: item.id,
+                children: [],
+              };
+
+              // Remove items from stack that are at same or higher level
+              while (stack.length > 0 && stack[stack.length - 1].level >= item.level) {
+                stack.pop();
+              }
+
+              if (stack.length === 0) {
+                // Top level item
+                result.push(tocItem);
+                stack.push(tocItem);
+              } else {
+                // Child item - add to parent's children
+                const parent = stack[stack.length - 1];
+                if (!parent.children) parent.children = [];
+                parent.children.push(tocItem);
+                stack.push(tocItem);
+              }
+            });
+
+            return result;
+          };
+
+          const renderNestedList = (items: TOCItem[], isRoot: boolean = false, parentNumbers: string[] = []): React.ReactNode => {
+            const listStyle = isRoot 
+              ? { listStyle: 'none', padding: '0', margin: '0', color: '#000000' }
+              : { listStyle: 'none', padding: '0', margin: '0', color: '#000000' };
+            
+            return (
+              <ol 
+                className={isRoot ? "article-menu-box-list" : ""} 
+                style={listStyle}
+              >
+                {items.map((item, index) => {
+                  // Calculate numbering recursively (only level 1 and 2, level 3 is hidden)
+                  let number = '';
+                  if (item.level === 1) {
+                    // For root level, count level 1 items in the entire structure
+                    if (isRoot) {
+                      const allLevel1 = buildNestedStructure(block.items).filter(i => i.level === 1);
+                      const currentPos = allLevel1.findIndex(i => i.text === item.text);
+                      number = (currentPos + 1).toString();
+                    } else {
+                      // Should not happen, but fallback
+                      number = (index + 1).toString();
+                    }
+                  } else if (item.level === 2) {
+                    // Parent is level 1 - use the parent number from parentNumbers
+                    const parentNumber = parentNumbers[0] || '1';
+                    // Count level 2 siblings at same level before this one in current array
+                    const siblings = items.filter((_, i) => i < index && items[i].level === 2);
+                    number = `${parentNumber}.${siblings.length + 1}`;
+                  }
+                  // Level 3 items are filtered out, so no need to handle them here
+
+                  const paddingLeft = item.level === 1 ? '0' : '24px';
+                  const fontSize = item.level === 1 ? '16px' : '14px';
+                  const fontWeight = item.level === 1 ? '600' : '500';
+
                   return (
                     <li
-                      key={itemIndex}
+                      key={`${item.level}-${index}`}
+                      className="js-content-click"
                       style={{
-                        paddingLeft: item.level === 1 ? '0' : '24px',
                         marginBottom: '12px',
-                        fontSize: item.level === 1 ? '16px' : '14px',
-                        fontWeight: item.level === 1 ? '600' : '400',
                         lineHeight: '1.6',
-                        display: 'flex',
-                        alignItems: 'center',
                       }}
                     >
-                      <span
-                        style={{
-                          marginRight: '8px',
-                          color: '#000000',
-                          fontWeight: item.level === 1 ? '600' : '400',
-                        }}
-                      >
-                        {number}
-                      </span>
-                      {item.id ? (
-                        <a
-                          href={`#${item.id}`}
-                          onClick={(e) => handleTOCClick(e, item.id!)}
-                          style={{
-                            color: '#000000',
-                            textDecoration: 'none',
-                            display: 'block',
-                            cursor: 'pointer',
-                            transition: 'color 0.2s ease',
-                            flex: 1,
-                          }}
-                          className="hover:text-[#CD861A]"
-                        >
-                          {item.text}
-                        </a>
-                      ) : (
+                      <div style={{ display: 'flex', alignItems: 'center', paddingLeft }}>
                         <span
                           style={{
+                            marginRight: '8px',
                             color: '#000000',
-                            display: 'block',
-                            transition: 'color 0.2s ease',
-                            flex: 1,
+                            fontWeight: fontWeight,
+                            fontSize: fontSize,
                           }}
-                          className="hover:text-[#CD861A]"
                         >
-                          {item.text}
+                          {number}
                         </span>
+                        {item.id ? (
+                          <a
+                            href={`#${item.id}`}
+                            onClick={(e) => handleTOCClick(e, item.id!)}
+                            style={{
+                              color: '#000000',
+                              textDecoration: 'none',
+                              display: 'block',
+                              cursor: 'pointer',
+                              transition: 'color 0.2s ease',
+                              flex: 1,
+                              fontSize: fontSize,
+                              fontWeight: fontWeight,
+                            }}
+                            className="hover:text-[#CD861A]"
+                          >
+                            {item.text}
+                          </a>
+                        ) : (
+                          <span
+                            style={{
+                              color: '#000000',
+                              display: 'block',
+                              transition: 'color 0.2s ease',
+                              flex: 1,
+                              fontSize: fontSize,
+                              fontWeight: fontWeight,
+                            }}
+                            className="hover:text-[#CD861A]"
+                          >
+                            {item.text}
+                          </span>
+                        )}
+                      </div>
+                      {item.children && item.children.length > 0 && (
+                        <div>
+                          {renderNestedList(item.children, false, [...parentNumbers, number])}
+                        </div>
                       )}
                     </li>
                   );
-                });
-              })()}
-        </ul>
+                })}
+              </ol>
+            );
+          };
+
+          const nestedItems = buildNestedStructure(block.items);
+          return renderNestedList(nestedItems, true);
+        })()}
       </div>
     </div>
   );
