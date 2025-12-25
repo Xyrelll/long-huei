@@ -17,19 +17,14 @@ const bottomNavItems = [
     icon: 'bed' as const,
   },
   {
-    label: '桑拿',
-    href: '/ArticleCategory/Sauna',
-    icon: 'sauna' as const,
-  },
-  {
     label: '包車',
     href: '/ArticleCategory/RentCar',
     icon: 'car' as const,
   },
   {
-    label: '常見問答',
-    href: '/ArticleCategory/Question',
-    icon: 'question' as const,
+    label: '專人客服',
+    href: '/CustomerService',
+    icon: 'headset' as const,
   },
 ];
 

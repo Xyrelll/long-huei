@@ -1,16 +1,16 @@
-'use client';
+"use client";
 
-import { useEffect, Suspense, useState } from 'react';
-import { useParams } from 'next/navigation';
-import { generateBreadcrumbSchema } from '@/config/seo';
-import Navbar from '@/components/layout/Navbar/Navbar';
-import Footer from '@/components/layout/Footer/Footer';
-import GoToTop from '@/components/layout/GoToTop/GoToTop';
-import BottomNav from '@/components/layout/BottomNav/BottomNav';
-import Link from 'next/link';
-import Image from 'next/image';
-import ArticleSidebar from '@/components/layout/ArticleSidebar/ArticleSidebar';
-import RecommendedArticles from '@/components/features/RecommendedArticles/RecommendedArticles';
+import { useEffect, Suspense, useState } from "react";
+import { useParams } from "next/navigation";
+import { generateBreadcrumbSchema } from "@/config/seo";
+import Navbar from "@/components/layout/Navbar/Navbar";
+import Footer from "@/components/layout/Footer/Footer";
+import GoToTop from "@/components/layout/GoToTop/GoToTop";
+import BottomNav from "@/components/layout/BottomNav/BottomNav";
+import Link from "next/link";
+import Image from "next/image";
+import ArticleSidebar from "@/components/layout/ArticleSidebar/ArticleSidebar";
+import RecommendedArticles from "@/components/features/RecommendedArticles/RecommendedArticles";
 
 interface Article {
   id: number;
@@ -27,30 +27,40 @@ interface Article {
 }
 
 const categories = [
-  { name: '旅遊', href: '/ArticleCategory/Travel', count: 11 },
-  { name: '桑拿', href: '/ArticleCategory/Sauna', count: 11 },
-  { name: '包車', href: '/ArticleCategory/RentCar', count: 12 },
-  { name: '訂房', href: '/ArticleCategory/Booking', count: 5 },
-  { name: '其他娛樂', href: '/ArticleCategory/Entertainment', count: 10 },
-  { name: '常見問答', href: '/ArticleCategory/Question', count: 3 },
-  { name: '專人客服', href: '/CustomerService', count: 0 },
+  { name: "旅遊", href: "/ArticleCategory/Travel", count: 11 },
+  { name: "桑拿", href: "/ArticleCategory/Sauna", count: 11 },
+  { name: "包車", href: "/ArticleCategory/RentCar", count: 12 },
+  { name: "訂房", href: "/ArticleCategory/Booking", count: 5 },
+  { name: "其他娛樂", href: "/ArticleCategory/Entertainment", count: 10 },
+  { name: "常見問答", href: "/ArticleCategory/Question", count: 3 },
+  { name: "專人客服", href: "/CustomerService", count: 0 },
 ];
 
 const popularTags = [
-  { name: '澳門包車', href: '/Tag/澳門包車' },
-  { name: '澳門旅遊', href: '/Tag/澳門旅遊' },
-  { name: '龍匯天下', href: '/Tag/龍匯天下' },
-  { name: '澳門訂房', href: '/Tag/澳門訂房' },
-  { name: '龍匯包車', href: '/Tag/龍匯包車' },
-  { name: '澳門龍匯天下', href: '/Tag/澳門龍匯天下' },
-  { name: '澳門包車景點', href: '/Tag/澳門包車景點' },
-  { name: '龍匯天下訂房', href: '/Tag/龍匯天下訂房' },
-  { name: '澳門推薦', href: '/Tag/澳門推薦' },
-  { name: '澳門旅遊找龍匯', href: '/Tag/澳門旅遊找龍匯' },
+  { name: "澳門包車", href: "/Tag/澳門包車" },
+  { name: "澳門旅遊", href: "/Tag/澳門旅遊" },
+  { name: "龍匯天下", href: "/Tag/龍匯天下" },
+  { name: "澳門訂房", href: "/Tag/澳門訂房" },
+  { name: "龍匯包車", href: "/Tag/龍匯包車" },
+  { name: "澳門龍匯天下", href: "/Tag/澳門龍匯天下" },
+  { name: "澳門包車景點", href: "/Tag/澳門包車景點" },
+  { name: "龍匯天下訂房", href: "/Tag/龍匯天下訂房" },
+  { name: "澳門推薦", href: "/Tag/澳門推薦" },
+  { name: "澳門旅遊找龍匯", href: "/Tag/澳門旅遊找龍匯" },
 ];
 
 function ArticleContent() {
   const params = useParams();
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
   const slug = params?.slug as string;
   const [article, setArticle] = useState<Article | null>(null);
   const [loading, setLoading] = useState(true);
@@ -67,41 +77,59 @@ function ArticleContent() {
           { entertainmentArticles },
           { questionArticles },
         ] = await Promise.all([
-          import('@/app/ArticleCategory/Booking/page'),
-          import('@/app/ArticleCategory/Travel/page'),
-          import('@/app/ArticleCategory/RentCar/page'),
-          import('@/app/ArticleCategory/Sauna/page'),
-          import('@/app/ArticleCategory/Entertainment/page'),
-          import('@/app/ArticleCategory/Question/page'),
+          import("@/app/ArticleCategory/Booking/page"),
+          import("@/app/ArticleCategory/Travel/page"),
+          import("@/app/ArticleCategory/RentCar/page"),
+          import("@/app/ArticleCategory/Sauna/page"),
+          import("@/app/ArticleCategory/Entertainment/page"),
+          import("@/app/ArticleCategory/Question/page"),
         ]);
 
         // Combine all articles
         const allArticles: Article[] = [
-          ...(bookingArticles || []).map((a: any) => ({ ...a, category: '訂房' })),
-          ...(travelArticles || []).map((a: any) => ({ ...a, category: '旅遊' })),
-          ...(rentCarArticles || []).map((a: any) => ({ ...a, category: '包車' })),
-          ...(saunaArticles || []).map((a: any) => ({ ...a, category: '桑拿' })),
-          ...(entertainmentArticles || []).map((a: any) => ({ ...a, category: '其他娛樂' })),
-          ...(questionArticles || []).map((a: any) => ({ ...a, category: '常見問答' })),
+          ...(bookingArticles || []).map((a: any) => ({
+            ...a,
+            category: "訂房",
+          })),
+          ...(travelArticles || []).map((a: any) => ({
+            ...a,
+            category: "旅遊",
+          })),
+          ...(rentCarArticles || []).map((a: any) => ({
+            ...a,
+            category: "包車",
+          })),
+          ...(saunaArticles || []).map((a: any) => ({
+            ...a,
+            category: "桑拿",
+          })),
+          ...(entertainmentArticles || []).map((a: any) => ({
+            ...a,
+            category: "其他娛樂",
+          })),
+          ...(questionArticles || []).map((a: any) => ({
+            ...a,
+            category: "常見問答",
+          })),
         ];
 
         // Find article by slug (handle URL encoding and different formats)
         const decodedSlug = decodeURIComponent(slug);
-        const foundArticle = allArticles.find(
-          a => {
-            const articleLink = a.link.replace('/Article/', '');
-            return articleLink === slug || 
-                   articleLink === decodedSlug ||
-                   articleLink.includes(slug) ||
-                   articleLink.includes(decodedSlug) ||
-                   a.link === `/Article/${slug}` ||
-                   a.link === `/Article/${decodedSlug}`;
-          }
-        );
+        const foundArticle = allArticles.find((a) => {
+          const articleLink = a.link.replace("/Article/", "");
+          return (
+            articleLink === slug ||
+            articleLink === decodedSlug ||
+            articleLink.includes(slug) ||
+            articleLink.includes(decodedSlug) ||
+            a.link === `/Article/${slug}` ||
+            a.link === `/Article/${decodedSlug}`
+          );
+        });
 
         setArticle(foundArticle || null);
       } catch (error) {
-        console.error('Error fetching article:', error);
+        console.error("Error fetching article:", error);
         setArticle(null);
       } finally {
         setLoading(false);
@@ -116,14 +144,14 @@ function ArticleContent() {
   useEffect(() => {
     if (article) {
       document.title = `${article.title} | 龍匯天下`;
-      
+
       let metaDescription = document.querySelector('meta[name="description"]');
       if (!metaDescription) {
-        metaDescription = document.createElement('meta');
-        metaDescription.setAttribute('name', 'description');
+        metaDescription = document.createElement("meta");
+        metaDescription.setAttribute("name", "description");
         document.head.appendChild(metaDescription);
       }
-      metaDescription.setAttribute('content', article.description);
+      metaDescription.setAttribute("content", article.description);
     }
   }, [article]);
 
@@ -156,21 +184,36 @@ function ArticleContent() {
   }
 
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: '首頁', url: 'https://longhuei.netlify.app' },
-    { name: article.category || '文章', url: `https://longhuei.netlify.app/ArticleCategory/${article.category === '訂房' ? 'Booking' : article.category === '旅遊' ? 'Travel' : article.category === '包車' ? 'RentCar' : article.category === '桑拿' ? 'Sauna' : article.category === '其他娛樂' ? 'Entertainment' : 'Question'}` },
+    { name: "首頁", url: "https://longhuei.netlify.app" },
+    {
+      name: article.category || "文章",
+      url: `https://longhuei.netlify.app/ArticleCategory/${
+        article.category === "訂房"
+          ? "Booking"
+          : article.category === "旅遊"
+          ? "Travel"
+          : article.category === "包車"
+          ? "RentCar"
+          : article.category === "桑拿"
+          ? "Sauna"
+          : article.category === "其他娛樂"
+          ? "Entertainment"
+          : "Question"
+      }`,
+    },
     { name: article.title, url: `https://longhuei.netlify.app${article.link}` },
   ]);
 
   const getCategoryUrl = (category: string) => {
     const map: Record<string, string> = {
-      '訂房': 'Booking',
-      '旅遊': 'Travel',
-      '包車': 'RentCar',
-      '桑拿': 'Sauna',
-      '其他娛樂': 'Entertainment',
-      '常見問答': 'Question',
+      訂房: "Booking",
+      旅遊: "Travel",
+      包車: "RentCar",
+      桑拿: "Sauna",
+      其他娛樂: "Entertainment",
+      常見問答: "Question",
     };
-    return `/ArticleCategory/${map[category] || 'Travel'}`;
+    return `/ArticleCategory/${map[category] || "Travel"}`;
   };
 
   return (
@@ -186,150 +229,191 @@ function ArticleContent() {
           <div className="w-full "></div>
 
           {/* Breadcrumb */}
-          <nav className="nav-breadcrumb py-4" aria-label="breadcrumb">
-            <ol className="breadcrumb flex items-center gap-2 text-white text-sm">
+          <nav
+            style={{
+              marginTop: isMobile ? '10px' : '30px',
+            }}
+            className="nav-breadcrumb py-4"
+            aria-label="breadcrumb"
+          >
+            <ol className="breadcrumb flex items-center gap-1 md:gap-2 text-white text-xs md:text-sm flex-wrap">
               <li className="breadcrumb-item">
-                <Link href="/" className="flex items-center gap-1 hover:text-[#FFCD83]">
+                <Link
+                  href="/"
+                  className="flex items-center gap-1 hover:text-[#FFCD83]"
+                >
                   <i className="bi bi-house-door-fill"></i>
-                  首頁
+                  <span className="hidden sm:inline">首頁</span>
                 </Link>
               </li>
-              <li className="breadcrumb-separator text-white/70">&gt;</li>
+              <li className="breadcrumb-separator text-white/70">
+                &gt;
+              </li>
               {article.category && (
                 <>
                   <li className="breadcrumb-item">
-                    <Link href={getCategoryUrl(article.category)} className="hover:text-[#FFCD83]">
+                    <Link
+                      href={getCategoryUrl(article.category)}
+                      className="hover:text-[#FFCD83]"
+                    >
                       {article.category}
                     </Link>
                   </li>
-                  <li className="breadcrumb-separator text-white/70">&gt;</li>
+                  <li className="breadcrumb-separator text-white/70">
+                    &gt;
+                  </li>
                 </>
               )}
-              <li className="breadcrumb-item active" aria-current="page">
-                <span className="text-white/70">{article.title}</span>
+              <li
+                className="breadcrumb-item active"
+                aria-current="page"
+              >
+                <span className="text-white/70">
+                  {article.title}
+                </span>
               </li>
             </ol>
           </nav>
 
-         
           <div
-           style={{ 
-            paddingTop: '50px',
-          }}
-           className="flex flex-col w-full items-start justify-start">
-   {/* Article Title */}
-   <h1
-   style={{ 
-    paddingBottom: '24px',
-   }}
-    className="text-white text-3xl md:text-[30px] font-medium mb-6">{article.title}</h1>
+            style={{
+              paddingTop: "30px",
+            }}
+            className="flex flex-col w-full items-start justify-start"
+          >
+            {/* Article Title */}
+            <h1
+              style={{
+                paddingBottom: "24px",
+              }}
+              className="text-white text-3xl md:text-[30px] font-medium mb-6"
+            >
+              {article.title}
+            </h1>
 
-{/* Interactive Buttons (Tags) */}
-{article.tags && article.tags.length > 0 && (
-  <div className="flex flex-wrap gap-3 mb-8">
-    {article.tags.map((tag, idx) => (
-      <Link
-        key={idx}
-        href={`/Tag/${tag}`}
-        style={{ 
-          paddingLeft: '10px',
-          paddingRight: '10px',
-          paddingTop: '5px',
-          paddingBottom: '5px',
-          borderRadius: '50px',
-        }}
-        className="px-4 py-2 bg-[#CD861A] text-white hover:bg-white hover:text-[#CD861A] transition-colors text-sm"
-      >
-        {tag}
-      </Link>
-    ))}
-  </div>
-)}
-</div>
-<div
-          style={{ 
-            paddingTop: '10px',
-          }}
-           className="flex flex-col lg:flex-row gap-6 py-8">
+            {/* Interactive Buttons (Tags) */}
+            {article.tags && article.tags.length > 0 && (
+              <div className="flex flex-wrap gap-3 mb-8">
+                {article.tags.map((tag, idx) => (
+                  <Link
+                    key={idx}
+                    href={`/Tag/${tag}`}
+                    style={{
+                      paddingLeft: "10px",
+                      paddingRight: "10px",
+                      paddingTop: "5px",
+                      paddingBottom: "5px",
+                      borderRadius: "50px",
+                    }}
+                    className="px-4 py-2 bg-[#CD861A] text-white hover:bg-white hover:text-[#CD861A] transition-colors text-sm"
+                  >
+                    {tag}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+          <div
+            style={{
+              paddingTop: "10px",
+            }}
+            className="flex flex-col lg:flex-row gap-6 py-8"
+          >
             {/* Main Content */}
             <div className="flex-1 lg:max-w-3xl ">
-           
-            <div className="flex flex-row items-start justify-center">
-                {/* Left Sidebar - Social Media */}
+              <div className="flex  md:flex-row  items-start justify-center">
+                 {/* Left Sidebar - Social Media */}
+                 <div
+                   style={{
+                     paddingTop: "10px",
+                     paddingLeft: "10px",
+                     paddingRight: "10px",
+                     paddingBottom: "10px",
+                     borderRadius: "50px",
+                   }}
+                   className="hidden lg:block lg:w-20 flex"
+                 >
+                   <div
+                     style={{
+                       paddingTop: "20px",
+                       paddingLeft: "10px",
+                       paddingRight: "10px",
+                       paddingBottom: "30px",
+                       borderRadius: "50px",
+                       gap: "5px",
+                     }}
+                     className="sticky top-24 bg-white "
+                   >
+                     <div className="text-gray-500 mb-4 text-sm">
+                       加入
+                       <br />
+                       好友
+                     </div>
+                     <div
+                       style={{
+                         marginTop: "20px",
+                       }}
+                       className="flex flex-col gap-4 "
+                     >
+                       <a
+                         href="#"
+                         className="w-8 h-8 rounded-md bg-green-500 flex items-center justify-center hover:opacity-80 transition-opacity"
+                       >
+                         <i className="bi bi-line text-white text-xl"></i>
+                       </a>
+                       <a
+                         href="#"
+                         className="w-8 h-8 rounded-md bg-gradient-to-br from-purple-600 to-pink-500 flex items-center justify-center hover:opacity-80 transition-opacity"
+                       >
+                         <i className="bi bi-instagram text-white text-xl"></i>
+                       </a>
+                     </div>
+                   </div>
+                 </div>
                 <div
-                style={{ 
-                  paddingTop: '10px',
-                  paddingLeft: '10px',
-                  paddingRight: '10px',
-                  paddingBottom: '10px',
-                  borderRadius: '50px',
-                }}
-                className="hidden lg:block lg:w-20 flex">
-              <div 
+                  style={{
+                    paddingTop: "10px",
+                    paddingLeft: "10px",
+                    paddingRight: "10px",
+                    paddingBottom: "10px",
+                    borderRadius: "50px",
+                  }}
+                  className="flex flex-col items-center justify-center"
+                >
+                  {/* Featured Image */}
+                  <div
+                  style={{
+                    borderRadius: '50px',
+                    marginBottom: '30px',
+                  }}
+                  className="mb-8 w-full ">
+                    <Image
+                      src={article.image}
+                      alt={article.title}
+                      width={800}
+                      height={450}
+                      className="w-full h-auto rounded-[50px]"
+                      priority
+                    />
+                  </div>
 
-                style={{ 
-                  paddingTop: '20px',
-                  paddingLeft: '10px',
-                  paddingRight: '10px',
-                  paddingBottom: '30px',
-                  borderRadius: '50px',
-                 gap: '5px',
-                }}
-              className="sticky top-24 bg-white ">
-                <div className="text-gray-500 mb-4 text-sm">加入
-                  <br />好友</div>
-                <div
-                 style={{ 
-                  marginTop: '20px',
-                 }}
-                 className="flex flex-col gap-4 ">
-                  <a href="#" className="w-8 h-8 rounded-md bg-green-500 flex items-center justify-center hover:opacity-80 transition-opacity">
-                    <i className="bi bi-line text-white text-xl"></i>
-                  </a>
-                  <a href="#" className="w-8 h-8 rounded-md bg-gradient-to-br from-purple-600 to-pink-500 flex items-center justify-center hover:opacity-80 transition-opacity">
-                    <i className="bi bi-instagram text-white text-xl"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
- <div 
- style={{ 
-  paddingTop: '10px',
-  paddingLeft: '10px',
-  paddingRight: '10px',
-  paddingBottom: '10px',
-  borderRadius: '50px',
- }}
- className="flex flex-col items-center justify-center">
-              {/* Featured Image */}
-              <div className="mb-8">
-                <Image
-                  src={article.image}
-                  alt={article.title}
-                  width={800}
-                  height={450}
-                  className="w-full h-auto rounded-lg"
-                  priority
-                />
-              </div>
+                  {/* Article Content */}
+                  <div className="prose prose-invert max-w-none">
+                    <div className="text-white text-lg leading-relaxed whitespace-pre-line">
+                      {article.content || article.description}
+                    </div>
+                  </div>
 
-              {/* Article Content */}
-              <div className="prose prose-invert max-w-none">
-                <div className="text-white text-lg leading-relaxed whitespace-pre-line">
-                  {article.content || article.description}
+                  {/* Article Meta */}
+                  <div className="mt-8 pt-8 border-t border-white/10">
+                    <div className="flex items-center gap-4 text-white/70 text-sm">
+                      <span>觀看人數：{article.views}</span>
+                      {article.category && (
+                        <span>分類：{article.category}</span>
+                      )}
+                    </div>
+                  </div>
                 </div>
-              </div>
-
-              {/* Article Meta */}
-              <div className="mt-8 pt-8 border-t border-white/10">
-                <div className="flex items-center gap-4 text-white/70 text-sm">
-                  <span>觀看人數：{article.views}</span>
-                  {article.category && (
-                    <span>分類：{article.category}</span>
-                  )}
-                </div>
-              </div>
-              </div>
               </div>
             </div>
 
@@ -351,84 +435,153 @@ function ArticleContent() {
               articles={[
                 {
                   id: 1,
-                  title: '【澳門景點】2025最強攻略!必訪10大秘境、路線、美食全收錄',
-                  description: '澳門不只賭場與蛋塔!這座世界遺產小城藏著葡式浪漫、漁村風情與隱藏版打卡點。本篇精選12個「連在地人都推薦」的必訪景點，從歷史古蹟到網美打卡點一次整理，搭配本文獨家的實用攻略，教你用最',
-                  image: '/travel/【澳門景點】2025最強攻略！必訪10大秘境、路線、美食全收錄-c.jpg',
-                  link: '/Article/macao%20view',
-                  tags: ['澳門龍匯', '龍匯天下澳門旅遊', '澳門包車', '澳門包車景點'],
-                  date: '2025/06/02',
+                  title:
+                    "【澳門景點】2025最強攻略!必訪10大秘境、路線、美食全收錄",
+                  description:
+                    "澳門不只賭場與蛋塔!這座世界遺產小城藏著葡式浪漫、漁村風情與隱藏版打卡點。本篇精選12個「連在地人都推薦」的必訪景點，從歷史古蹟到網美打卡點一次整理，搭配本文獨家的實用攻略，教你用最",
+                  image:
+                    "/travel/【澳門景點】2025最強攻略！必訪10大秘境、路線、美食全收錄-c.jpg",
+                  link: "/Article/macao%20view",
+                  tags: [
+                    "澳門龍匯",
+                    "龍匯天下澳門旅遊",
+                    "澳門包車",
+                    "澳門包車景點",
+                  ],
+                  date: "2025/06/02",
                 },
                 {
                   id: 2,
-                  title: '【大三巴牌坊】2025澳門自由行必訪深度攻略：歷史、周邊景點與美食全解析',
-                  description: '澳門大三巴牌坊是這座城市的靈魂地標,更是聯合國世界文化遺產的核心區域。無論是初訪旅客還是重返探索者,澳門大三巴牌坊將在2025年以更好的設施和更豐富的體驗迎接訪客。',
-                  image: '/travel/【大三巴牌坊】2025澳門自由行必訪深度攻略：歷史、周邊景點與美食全解析-c.jpg',
-                  link: '/Article/macao%20dasanbaa',
-                  tags: ['澳門大三巴', '大三巴澳門龍匯', '龍匯大三巴澳門', '澳門龍匯天下大三巴'],
-                  date: '2025/07/04',
+                  title:
+                    "【大三巴牌坊】2025澳門自由行必訪深度攻略：歷史、周邊景點與美食全解析",
+                  description:
+                    "澳門大三巴牌坊是這座城市的靈魂地標,更是聯合國世界文化遺產的核心區域。無論是初訪旅客還是重返探索者,澳門大三巴牌坊將在2025年以更好的設施和更豐富的體驗迎接訪客。",
+                  image:
+                    "/travel/【大三巴牌坊】2025澳門自由行必訪深度攻略：歷史、周邊景點與美食全解析-c.jpg",
+                  link: "/Article/macao%20dasanbaa",
+                  tags: [
+                    "澳門大三巴",
+                    "大三巴澳門龍匯",
+                    "龍匯大三巴澳門",
+                    "澳門龍匯天下大三巴",
+                  ],
+                  date: "2025/07/04",
                 },
                 {
                   id: 3,
-                  title: '【澳門景點】自由行必收的12個玩樂秘笈！',
-                  description: '澳門融合了葡式風情與中華文化,更坐擁8項世界遺產與頂級度假村,是亞洲旅客短程出遊的熱門選擇。本文精選12個「連在地人都推薦」的必訪景點，從歷史古蹟到網美打卡點一次整理',
-                  image: '/travel/【澳門景點】自由行必收的12個玩樂秘笈！-c.jpg',
-                  link: '/Article/travel1',
-                  tags: ['澳門旅遊', '澳門安全', '澳門景點', '澳門推薦', '龍匯天下'],
-                  date: '2025/05/17',
+                  title: "【澳門景點】自由行必收的12個玩樂秘笈！",
+                  description:
+                    "澳門融合了葡式風情與中華文化,更坐擁8項世界遺產與頂級度假村,是亞洲旅客短程出遊的熱門選擇。本文精選12個「連在地人都推薦」的必訪景點，從歷史古蹟到網美打卡點一次整理",
+                  image: "/travel/【澳門景點】自由行必收的12個玩樂秘笈！-c.jpg",
+                  link: "/Article/travel1",
+                  tags: [
+                    "澳門旅遊",
+                    "澳門安全",
+                    "澳門景點",
+                    "澳門推薦",
+                    "龍匯天下",
+                  ],
+                  date: "2025/05/17",
                 },
                 {
-                  id:  4 ,
-                  title: '【澳門景點】2025最強攻略!必訪10大秘境、路線、美食全收錄',
-                  description: '澳門不只賭場與蛋塔!這座世界遺產小城藏著葡式浪漫、漁村風情與隱藏版打卡點。本篇精選12個「連在地人都推薦」的必訪景點，從歷史古蹟到網美打卡點一次整理，搭配本文獨家的實用攻略，教你用最',
-                  image: '/travel/【澳門景點】2025最強攻略！必訪10大秘境、路線、美食全收錄-c.jpg',
-                  link: '/Article/macao%20view',
-                  tags: ['澳門龍匯', '龍匯天下澳門旅遊', '澳門包車', '澳門包車景點'],
-                  date: '2025/06/02',
+                  id: 4,
+                  title:
+                    "【澳門景點】2025最強攻略!必訪10大秘境、路線、美食全收錄",
+                  description:
+                    "澳門不只賭場與蛋塔!這座世界遺產小城藏著葡式浪漫、漁村風情與隱藏版打卡點。本篇精選12個「連在地人都推薦」的必訪景點，從歷史古蹟到網美打卡點一次整理，搭配本文獨家的實用攻略，教你用最",
+                  image:
+                    "/travel/【澳門景點】2025最強攻略！必訪10大秘境、路線、美食全收錄-c.jpg",
+                  link: "/Article/macao%20view",
+                  tags: [
+                    "澳門龍匯",
+                    "龍匯天下澳門旅遊",
+                    "澳門包車",
+                    "澳門包車景點",
+                  ],
+                  date: "2025/06/02",
                 },
                 {
                   id: 5,
-                  title: '【大三巴牌坊】2025澳門自由行必訪深度攻略：歷史、周邊景點與美食全解析',
-                  description: '澳門大三巴牌坊是這座城市的靈魂地標,更是聯合國世界文化遺產的核心區域。無論是初訪旅客還是重返探索者,澳門大三巴牌坊將在2025年以更好的設施和更豐富的體驗迎接訪客。',
-                  image: '/travel/【大三巴牌坊】2025澳門自由行必訪深度攻略：歷史、周邊景點與美食全解析-c.jpg',
-                  link: '/Article/macao%20dasanbaa',
-                  tags: ['澳門大三巴', '大三巴澳門龍匯', '龍匯大三巴澳門', '澳門龍匯天下大三巴'],
-                  date: '2025/07/04',
+                  title:
+                    "【大三巴牌坊】2025澳門自由行必訪深度攻略：歷史、周邊景點與美食全解析",
+                  description:
+                    "澳門大三巴牌坊是這座城市的靈魂地標,更是聯合國世界文化遺產的核心區域。無論是初訪旅客還是重返探索者,澳門大三巴牌坊將在2025年以更好的設施和更豐富的體驗迎接訪客。",
+                  image:
+                    "/travel/【大三巴牌坊】2025澳門自由行必訪深度攻略：歷史、周邊景點與美食全解析-c.jpg",
+                  link: "/Article/macao%20dasanbaa",
+                  tags: [
+                    "澳門大三巴",
+                    "大三巴澳門龍匯",
+                    "龍匯大三巴澳門",
+                    "澳門龍匯天下大三巴",
+                  ],
+                  date: "2025/07/04",
                 },
                 {
                   id: 6,
-                  title: '【澳門景點】自由行必收的12個玩樂秘笈！',
-                  description: '澳門融合了葡式風情與中華文化,更坐擁8項世界遺產與頂級度假村,是亞洲旅客短程出遊的熱門選擇。本文精選12個「連在地人都推薦」的必訪景點，從歷史古蹟到網美打卡點一次整理',
-                  image: '/travel/【澳門景點】自由行必收的12個玩樂秘笈！-c.jpg',
-                  link: '/Article/travel1',
-                  tags: ['澳門旅遊', '澳門安全', '澳門景點', '澳門推薦', '龍匯天下'],
-                  date: '2025/05/17',
+                  title: "【澳門景點】自由行必收的12個玩樂秘笈！",
+                  description:
+                    "澳門融合了葡式風情與中華文化,更坐擁8項世界遺產與頂級度假村,是亞洲旅客短程出遊的熱門選擇。本文精選12個「連在地人都推薦」的必訪景點，從歷史古蹟到網美打卡點一次整理",
+                  image: "/travel/【澳門景點】自由行必收的12個玩樂秘笈！-c.jpg",
+                  link: "/Article/travel1",
+                  tags: [
+                    "澳門旅遊",
+                    "澳門安全",
+                    "澳門景點",
+                    "澳門推薦",
+                    "龍匯天下",
+                  ],
+                  date: "2025/05/17",
                 },
                 {
                   id: 7,
-                  title: '【澳門景點】2025最強攻略!必訪10大秘境、路線、美食全收錄',
-                  description: '澳門不只賭場與蛋塔!這座世界遺產小城藏著葡式浪漫、漁村風情與隱藏版打卡點。本篇精選12個「連在地人都推薦」的必訪景點，從歷史古蹟到網美打卡點一次整理，搭配本文獨家的實用攻略，教你用最',
-                  image: '/travel/【澳門景點】2025最強攻略！必訪10大秘境、路線、美食全收錄-c.jpg',
-                  link: '/Article/macao%20view',
-                  tags: ['澳門龍匯', '龍匯天下澳門旅遊', '澳門包車', '澳門包車景點'],
-                  date: '2025/06/02',
+                  title:
+                    "【澳門景點】2025最強攻略!必訪10大秘境、路線、美食全收錄",
+                  description:
+                    "澳門不只賭場與蛋塔!這座世界遺產小城藏著葡式浪漫、漁村風情與隱藏版打卡點。本篇精選12個「連在地人都推薦」的必訪景點，從歷史古蹟到網美打卡點一次整理，搭配本文獨家的實用攻略，教你用最",
+                  image:
+                    "/travel/【澳門景點】2025最強攻略！必訪10大秘境、路線、美食全收錄-c.jpg",
+                  link: "/Article/macao%20view",
+                  tags: [
+                    "澳門龍匯",
+                    "龍匯天下澳門旅遊",
+                    "澳門包車",
+                    "澳門包車景點",
+                  ],
+                  date: "2025/06/02",
                 },
                 {
                   id: 8,
-                  title: '【大三巴牌坊】2025澳門自由行必訪深度攻略：歷史、周邊景點與美食全解析',
-                  description: '澳門大三巴牌坊是這座城市的靈魂地標,更是聯合國世界文化遺產的核心區域。無論是初訪旅客還是重返探索者,澳門大三巴牌坊將在2025年以更好的設施和更豐富的體驗迎接訪客。',
-                  image: '/travel/【大三巴牌坊】2025澳門自由行必訪深度攻略：歷史、周邊景點與美食全解析-c.jpg',
-                  link: '/Article/macao%20dasanbaa',
-                  tags: ['澳門大三巴', '大三巴澳門龍匯', '龍匯大三巴澳門', '澳門龍匯天下大三巴'],
-                  date: '2025/07/04',
+                  title:
+                    "【大三巴牌坊】2025澳門自由行必訪深度攻略：歷史、周邊景點與美食全解析",
+                  description:
+                    "澳門大三巴牌坊是這座城市的靈魂地標,更是聯合國世界文化遺產的核心區域。無論是初訪旅客還是重返探索者,澳門大三巴牌坊將在2025年以更好的設施和更豐富的體驗迎接訪客。",
+                  image:
+                    "/travel/【大三巴牌坊】2025澳門自由行必訪深度攻略：歷史、周邊景點與美食全解析-c.jpg",
+                  link: "/Article/macao%20dasanbaa",
+                  tags: [
+                    "澳門大三巴",
+                    "大三巴澳門龍匯",
+                    "龍匯大三巴澳門",
+                    "澳門龍匯天下大三巴",
+                  ],
+                  date: "2025/07/04",
                 },
                 {
                   id: 9,
-                  title: '【澳門景點】自由行必收的12個玩樂秘笈！',
-                  description: '澳門融合了葡式風情與中華文化,更坐擁8項世界遺產與頂級度假村,是亞洲旅客短程出遊的熱門選擇。本文精選12個「連在地人都推薦」的必訪景點，從歷史古蹟到網美打卡點一次整理',
-                  image: '/travel/【澳門景點】自由行必收的12個玩樂秘笈！-c.jpg',
-                  link: '/Article/travel1',
-                  tags: ['澳門旅遊', '澳門安全', '澳門景點', '澳門推薦', '龍匯天下'],
-                  date: '2025/05/17',
+                  title: "【澳門景點】自由行必收的12個玩樂秘笈！",
+                  description:
+                    "澳門融合了葡式風情與中華文化,更坐擁8項世界遺產與頂級度假村,是亞洲旅客短程出遊的熱門選擇。本文精選12個「連在地人都推薦」的必訪景點，從歷史古蹟到網美打卡點一次整理",
+                  image: "/travel/【澳門景點】自由行必收的12個玩樂秘笈！-c.jpg",
+                  link: "/Article/travel1",
+                  tags: [
+                    "澳門旅遊",
+                    "澳門安全",
+                    "澳門景點",
+                    "澳門推薦",
+                    "龍匯天下",
+                  ],
+                  date: "2025/05/17",
                 },
               ]}
             />
