@@ -510,6 +510,248 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
         style: { marginTop: '40px', marginBottom: '40px' }
       }
     ]
+  },
+  3: {
+    // Article description (intro text)
+    description: [
+      {
+        type: 'text',
+        content: '想帶著孩子來一趟輕鬆又充滿驚喜的旅程嗎？近年來，澳門親子自由行 成為許多家庭旅遊的熱門選擇。不同於單純的觀光購物，澳門除了世界遺產與美食文化，更有許多適合親子同樂的景點與活動，無論是寓教於樂的體驗，還是盡情放鬆的休閒空間，都能讓爸媽與小孩留下難忘回憶。',
+        style: { 
+          marginBottom: '20px',
+          fontSize: '0.8rem'
+        }
+      }
+    ],
+    // Table of Contents
+    tableOfContents: {
+      type: 'tableOfContents',
+      buttonText: '文章目錄',
+      buttonIcon: '☰',
+      items: [
+        { level: 1, text: '為什麼選擇澳門親子自由行？', id: 'why-choose' },
+        { level: 1, text: '澳門親子自由行必去景點', id: 'must-visit' },
+        { level: 2, text: '1. 新濠影滙水上樂園', id: 'studio-city-waterpark' },
+        { level: 2, text: '2. 澳門科學館', id: 'science-museum' },
+        { level: 2, text: '3. 路氹區親子酒店', id: 'cotai-family-hotels' },
+        { level: 2, text: '4. 大熊貓館（石排灣郊野公園）', id: 'panda-pavilion' },
+        { level: 2, text: '5. 澳門旅遊塔', id: 'macau-tower' },
+        { level: 1, text: '親子自由行玩法建議', id: 'itinerary-suggestions' },
+        { level: 1, text: '澳門親子自由行住宿推薦', id: 'accommodation' },
+        { level: 1, text: '美食體驗', id: 'food-experience' },
+        { level: 1, text: '小提醒', id: 'tips' },
+        { level: 1, text: '結語', id: 'conclusion' }
+      ],
+      style: {
+        backgroundColor: 'rgba(83, 52, 4, 0.842)',
+        borderRadius: '30px',
+        padding: '20px',
+        marginTop: '20px',
+        marginBottom: '30px',
+        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 165, 0, 0.2)',
+        border: '1px solid #d18411',
+        backdropFilter: 'blur(10px)',
+      }
+    },
+    // Array of sections
+    sections: [
+      {
+        type: 'section',
+        title: '為什麼選擇澳門親子自由行？',
+        titleLevel: 2,
+        id: 'why-choose',
+        image: {
+          src: '/travel/macao-parent-child/frogs-897981_1920.jpg',
+          alt: '為什麼選擇澳門親子自由行？',
+          width: 800,
+          height: 450
+        },
+        description: '澳門親子自由行的優勢',
+        content: [
+          {
+            type: 'list',
+            items: [
+              '交通便利：澳門不大，主要景點之間距離近，可以找龍匯天下包車非常方便。',
+              '親子友善：許多飯店、樂園和博物館都設有兒童設施與親子活動。',
+              '中西文化融合：在遊玩同時，孩子可以感受中葡文化交織的氛圍，寓教於樂。'
+            ],
+            ordered: true,
+            style: { marginBottom: '20px', fontSize: '0.8rem' }
+          },
+          {
+            type: 'text',
+            content: '因此，澳門親子自由行能兼顧玩樂與學習，適合週末或短假期安排。',
+            style: { marginBottom: '20px', fontSize: '0.8rem' }
+          }
+        ],
+        style: { marginTop: '40px', marginBottom: '40px' }
+      },
+      {
+        type: 'section',
+        title: '澳門親子自由行必去景點',
+        titleLevel: 2,
+        id: 'must-visit',
+        image: {
+          src: '/travel/macao-parent-child/singapore-2556630_1920.jpg',
+          alt: '澳門親子自由行必去景點',
+          width: 800,
+          height: 450
+        },
+        description: '精選適合親子同樂的澳門景點',
+        content: [
+          {
+            type: 'heading',
+            level: 3,
+            content: '1. 新濠影滙水上樂園',
+            id: 'studio-city-waterpark',
+            style: { marginTop: '0', marginBottom: '15px' }
+          },
+          {
+            type: 'text',
+            content: '夏季必玩！這裡擁有室內與戶外雙區域，孩子能玩滑水道、漂流河，大人也能享受衝浪模擬器。全年恆溫設計，即便冬天也能開心玩水。',
+            style: { marginBottom: '20px', fontSize: '0.8rem' }
+          },
+          {
+            type: 'heading',
+            level: 3,
+            content: '2. 澳門科學館',
+            id: 'science-museum',
+            style: { marginTop: '20px', marginBottom: '15px' }
+          },
+          {
+            type: 'text',
+            content: '外型像太空飛碟，館內有互動實驗、天文館與親子展區，非常適合啟發孩子的好奇心與探索精神。',
+            style: { marginBottom: '20px', fontSize: '0.8rem' }
+          },
+          {
+            type: 'heading',
+            level: 3,
+            content: '3. 路氹區親子酒店',
+            id: 'cotai-family-hotels',
+            style: { marginTop: '20px', marginBottom: '15px' }
+          },
+          {
+            type: 'text',
+            content: '不少酒店如銀河、新濠影滙、威尼斯人都設有兒童遊戲區、泳池與家庭套房，爸媽能安心休息，小朋友也不無聊。',
+            style: { marginBottom: '20px', fontSize: '0.8rem' }
+          },
+          {
+            type: 'heading',
+            level: 3,
+            content: '4. 大熊貓館（石排灣郊野公園）',
+            id: 'panda-pavilion',
+            style: { marginTop: '20px', marginBottom: '15px' }
+          },
+          {
+            type: 'text',
+            content: '觀看大熊貓、紅頰黑猴等珍稀動物，是孩子最期待的親子行程之一。',
+            style: { marginBottom: '20px', fontSize: '0.8rem' }
+          },
+          {
+            type: 'heading',
+            level: 3,
+            content: '5. 澳門旅遊塔',
+            id: 'macau-tower',
+            style: { marginTop: '20px', marginBottom: '15px' }
+          },
+          {
+            type: 'text',
+            content: '除了欣賞 360 度城市美景，勇敢的家庭還能挑戰高空觀景平台，孩子則能參加較安全的親子活動。',
+            style: { marginBottom: '20px', fontSize: '0.8rem' }
+          }
+        ],
+        style: { marginTop: '40px', marginBottom: '40px' }
+      },
+      {
+        type: 'section',
+        title: '親子自由行玩法建議',
+        titleLevel: 2,
+        id: 'itinerary-suggestions',
+        description: '不同主題的親子行程安排',
+        content: [
+          {
+            type: 'list',
+            items: [
+              '文化探索日：上午參觀大三巴牌坊、媽閣廟，下午走訪澳門博物館，讓孩子接觸歷史文化。',
+              '親子娛樂日：入住路氹區度假村，享受水上樂園、遊戲區，晚上逛美食街。',
+              '自然放鬆日：到路環或氹仔，走進石排灣郊野公園或海灘，親近自然。'
+            ],
+            style: { marginBottom: '20px', fontSize: '0.8rem' }
+          }
+        ],
+        style: { marginTop: '40px', marginBottom: '40px' }
+      },
+      {
+        type: 'section',
+        title: '澳門親子自由行住宿推薦',
+        titleLevel: 2,
+        id: 'accommodation',
+        image: {
+          src: '/travel/macao-parent-child/hotel-1749602_1920.jpg',
+          alt: '澳門親子自由行住宿推薦',
+          width: 800,
+          height: 450
+        },
+        description: '選擇住宿是親子旅行的關鍵',
+        content: [
+          {
+            type: 'text',
+            content: '選擇住宿是親子旅行的關鍵。若預算充足，可選擇 新濠影滙酒店、銀河酒店，設施豐富且有專屬兒童天地。若偏向經濟型旅遊，可考慮氹仔或澳門本島的親子友善民宿，如果想知道有什麼優惠又不錯的飯店，可以在龍匯天下Line了解更多喔！',
+            style: { marginBottom: '20px', fontSize: '0.8rem' }
+          }
+        ],
+        style: { marginTop: '40px', marginBottom: '40px' }
+      },
+      {
+        type: 'section',
+        title: '美食體驗',
+        titleLevel: 2,
+        id: 'food-experience',
+        description: '親子出遊怎能少了美食',
+        content: [
+          {
+            type: 'text',
+            content: '親子出遊怎能少了美食？澳門擁有葡式蛋撻、豬扒包、水蟹粥等經典美食，許多餐廳也設有兒童餐點。家庭旅遊時，可以安排在氹仔官也街或路環享用在地小吃。',
+            style: { marginBottom: '20px', fontSize: '0.8rem' }
+          }
+        ],
+        style: { marginTop: '40px', marginBottom: '40px' }
+      },
+      {
+        type: 'section',
+        title: '小提醒',
+        titleLevel: 2,
+        id: 'tips',
+        description: '實用建議讓親子旅行更順利',
+        content: [
+          {
+            type: 'list',
+            items: [
+              '記得攜帶防曬用品與替換衣物，特別是玩水設施時。',
+              '提前規劃景點路線，避免孩子過度疲累。',
+              '選擇適合孩子年齡的活動，安全與舒適最重要。'
+            ],
+            style: { marginBottom: '20px', fontSize: '0.8rem' }
+          }
+        ],
+        style: { marginTop: '40px', marginBottom: '40px' }
+      },
+      {
+        type: 'section',
+        title: '結語',
+        titleLevel: 2,
+        id: 'conclusion',
+        description: '澳門親子自由行能帶給家庭成員不同的驚喜',
+        content: [
+          {
+            type: 'text',
+            content: '無論是體驗水上樂園的刺激，還是探索博物館的知識，澳門親子自由行 都能帶給家庭成員不同的驚喜。這是一座小而美的城市，既能滿足孩子的好奇心，也能讓爸媽享受悠閒氛圍。如果你正在規劃家庭旅遊，不妨把澳門列入清單，親子同遊的美好回憶，將會在這裡誕生。',
+            style: { marginBottom: '20px', fontSize: '0.8rem' }
+          }
+        ],
+        style: { marginTop: '40px', marginBottom: '40px' }
+      }
+    ]
   }
 };
 

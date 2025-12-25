@@ -45,13 +45,14 @@ export const travelArticles: TravelArticle[] = [
   {
     id: 3,
     title: '澳門親子自由行：全家出遊必做行程',
-    description: 'Looking for a relaxing and surprising trip with your kids? In recent years, Macau has become a popular choice for family travel. Unlike simple sightseeing and shopping, Macau offers more than just World Heritage sites and culinary culture; it boasts numerous attractions and activities suitable for families, ranging from educational to fun-filled experiences.',
+    description: '想帶著孩子來一趟輕鬆又充滿驚喜的旅程嗎？近年來，澳門親子自由行 成為許多家庭旅遊的熱門選擇。不同於單純的觀光購物，澳門除了世界遺產與美食文化，更有許多適合親子同樂的景點與活動，無論是寓教於樂的體驗，還是盡情放鬆的休閒空間，都能讓爸媽與小孩留下難忘回憶。',
     image: '/travel/parenttravel-c.jpg',
     imageMobile: '/travel/parenttravel-m.jpg',
     link: '/Article/macao-parent-child',
     views: 1189,
     tags: ['澳門親子自由行', '澳門旅遊', '龍匯天下訂房', '澳門包車'],
     collapseId: 'collapse-macao-parent-child',
+    contentBlocks: travelArticleContentBlocks[3],
   },
   {
     id: 4,
