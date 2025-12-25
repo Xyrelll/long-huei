@@ -47,7 +47,7 @@ export default function Home() {
     name: "龍匯天下",
     alternateName: "Long Huei",
     url: "https://longhuei.netlify.app",
-    logo: "https://longhuei.netlify.app/Images/Logo.png",
+    logo: "https://longhuei.netlify.app/Images/logo-m.png",
     description: "澳門龍匯天下、澳門旅遊、桑拿、訂房包車、最好的澳門旅遊幫手",
     contactPoint: {
       "@type": "ContactPoint",

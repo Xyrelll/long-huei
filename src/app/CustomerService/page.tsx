@@ -39,7 +39,7 @@ export default function CustomerServicePage() {
         title="專人客服 - 龍匯天下"
         description="龍匯天下專人客服-澳門旅遊-訂房-包車-桑拿-專人客服。加入LINE或WeChat好友享優惠，提供24小時專業客服服務。"
         url="https://longhuei.netlify.app/CustomerService"
-        image="https://longhuei.netlify.app/Images/Logo.png"
+        image="https://longhuei.netlify.app/Images/logo-m.png"
       />
       <script
         type="application/ld+json"

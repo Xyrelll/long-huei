@@ -9,7 +9,7 @@ export const siteConfig = {
   nameEn: 'Long Huei',
   description: '探索澳門，享受極致服務。提供豪華酒店訂房、專業包車導覽、桑拿體驗等高端定制服務。',
   url: env.NEXT_PUBLIC_SITE_URL,
-  ogImage: '/og-image.jpg',
+  ogImage: '/Images/logo-m.png',
   twitterHandle: '@longhuei',
   locale: 'zh_TW',
   type: 'website',

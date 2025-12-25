@@ -54,7 +54,7 @@ export function generateArticleSchema({
       name: "龍匯天下",
       logo: {
         "@type": "ImageObject",
-        url: "https://longhuei.netlify.app/logo.png",
+        url: "https://longhuei.netlify.app/logo-m.png",
       },
     },
     mainEntityOfPage: {

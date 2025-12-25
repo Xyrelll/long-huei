@@ -105,7 +105,7 @@ export default function RentCarPage() {
         title="澳門包車服務 - 專車接送、機場接送全指南 | 龍匯天下"
         description="探索澳門包車服務完整攻略，包含專車接送、機場接送、一日遊包車等實用資訊。精選澳門包車必看文章，從預訂方式到行程規劃一次搞定，讓您的澳門之旅更加輕鬆便利。"
         url="https://longhuei.netlify.app/ArticleCategory/RentCar"
-        image="https://longhuei.netlify.app/Images/Logo.png"
+        image="https://longhuei.netlify.app/Images/logo-m.png"
       />
       <script
         type="application/ld+json"

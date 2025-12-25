@@ -9,7 +9,7 @@ interface PageMetadataProps {
   image?: string;
 }
 
-export default function PageMetadata({ title, description, url, image = 'https://longhuei.netlify.app/Images/Logo.png' }: PageMetadataProps) {
+export default function PageMetadata({ title, description, url, image = 'https://longhuei.netlify.app/Images/logo-m.png' }: PageMetadataProps) {
   useEffect(() => {
     // Set page title
     document.title = title;

@@ -199,7 +199,7 @@ export default function SearchPage() {
         title="搜尋 - 龍匯天下"
         description="搜尋澳門旅遊、桑拿、訂房、包車等相關文章。快速找到您需要的澳門旅遊資訊、酒店推薦、包車服務、桑拿體驗等內容。"
         url="https://longhuei.netlify.app/Search"
-        image="https://longhuei.netlify.app/Images/Logo.png"
+        image="https://longhuei.netlify.app/Images/logo-m.png"
       />
       <script
         type="application/ld+json"

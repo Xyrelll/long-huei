@@ -106,7 +106,7 @@ export default function BookingPage() {
         title="澳門訂房攻略 - 酒店推薦、住宿選擇全指南 | 龍匯天下"
         description="探索澳門訂房完整攻略，包含頂級酒店推薦、住宿區域指南、訂房省錢技巧等實用資訊。精選澳門訂房必看文章，從酒店選擇到優惠資訊一次搞定，讓您的澳門住宿體驗更加完美。"
         url="https://longhuei.netlify.app/ArticleCategory/Booking"
-        image="https://longhuei.netlify.app/Images/Logo.png"
+        image="https://longhuei.netlify.app/Images/logo-m.png"
       />
       <script
         type="application/ld+json"

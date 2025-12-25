@@ -104,7 +104,7 @@ export default function SaunaPage() {
         title="澳門桑拿攻略 - 水療、按摩、劇本殺全指南 | 龍匯天下"
         description="探索澳門桑拿完整攻略，包含水療、按摩、劇本殺等娛樂場所介紹。精選澳門桑拿必看文章，從入門技巧到熱門店家推薦一次搞定，讓您的澳門之旅更加放鬆享受。"
         url="https://longhuei.netlify.app/ArticleCategory/Sauna"
-        image="https://longhuei.netlify.app/Images/Logo.png"
+        image="https://longhuei.netlify.app/Images/logo-m.png"
       />
       <script
         type="application/ld+json"

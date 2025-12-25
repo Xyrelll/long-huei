@@ -105,7 +105,7 @@ export default function EntertainmentPage() {
         title="澳門其他娛樂攻略 - 水舞間、百老匯、美高梅全指南 | 龍匯天下"
         description="探索澳門其他娛樂完整攻略，包含水舞間、百老匯、美高梅、永利等娛樂場所介紹。精選澳門娛樂必看文章，從表演節目到娛樂設施一次搞定，讓您的澳門之旅更加精彩。"
         url="https://longhuei.netlify.app/ArticleCategory/Entertainment"
-        image="https://longhuei.netlify.app/Images/Logo.png"
+        image="https://longhuei.netlify.app/Images/logo-m.png"
       />
       <script
         type="application/ld+json"
