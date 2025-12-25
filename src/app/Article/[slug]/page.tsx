@@ -9,6 +9,7 @@ import GoToTop from '@/components/layout/GoToTop/GoToTop';
 import BottomNav from '@/components/layout/BottomNav/BottomNav';
 import Link from 'next/link';
 import Image from 'next/image';
+import ArticleSidebar from '@/components/layout/ArticleSidebar/ArticleSidebar';
 
 interface Article {
   id: number;
@@ -209,45 +210,96 @@ function ArticleContent() {
             </ol>
           </nav>
 
-          <div className="flex flex-col lg:flex-row gap-6 py-8">
-            {/* Left Sidebar - Social Media */}
-            <div className="hidden lg:block lg:w-20 flex-shrink-0">
-              <div className="sticky top-24">
-                <div className="text-white mb-4 text-sm">加入好友</div>
-                <div className="flex flex-col gap-4">
-                  <a href="#" className="w-12 h-12 rounded-full bg-green-500 flex items-center justify-center hover:opacity-80 transition-opacity">
+         
+          <div
+           style={{ 
+            paddingTop: '50px',
+          }}
+           className="flex flex-col w-full items-start justify-start">
+   {/* Article Title */}
+   <h1
+   style={{ 
+    paddingBottom: '24px',
+   }}
+    className="text-white text-3xl md:text-[30px] font-medium mb-6">{article.title}</h1>
+
+{/* Interactive Buttons (Tags) */}
+{article.tags && article.tags.length > 0 && (
+  <div className="flex flex-wrap gap-3 mb-8">
+    {article.tags.map((tag, idx) => (
+      <Link
+        key={idx}
+        href={`/Tag/${tag}`}
+        style={{ 
+          paddingLeft: '10px',
+          paddingRight: '10px',
+          paddingTop: '5px',
+          paddingBottom: '5px',
+          borderRadius: '50px',
+        }}
+        className="px-4 py-2 bg-[#CD861A] text-white hover:bg-white hover:text-[#CD861A] transition-colors text-sm"
+      >
+        {tag}
+      </Link>
+    ))}
+  </div>
+)}
+</div>
+<div
+          style={{ 
+            paddingTop: '10px',
+          }}
+           className="flex flex-col lg:flex-row gap-6 py-8">
+            {/* Main Content */}
+            <div className="flex-1 lg:max-w-3xl ">
+           
+            <div className="flex flex-row items-start justify-center">
+                {/* Left Sidebar - Social Media */}
+                <div
+                style={{ 
+                  paddingTop: '10px',
+                  paddingLeft: '10px',
+                  paddingRight: '10px',
+                  paddingBottom: '10px',
+                  borderRadius: '50px',
+                }}
+                className="hidden lg:block lg:w-20 flex">
+              <div 
+
+                style={{ 
+                  paddingTop: '30px',
+                  paddingLeft: '10px',
+                  paddingRight: '10px',
+                  paddingBottom: '30px',
+                  borderRadius: '50px',
+                 gap: '5px',
+                }}
+              className="sticky top-24 bg-white ">
+                <div className="text-gray-500 mb-4 text-sm">加入
+                  <br />好友</div>
+                <div
+                 style={{ 
+                  marginTop: '20px',
+                 }}
+                 className="flex flex-col gap-4 ">
+                  <a href="#" className="w-8 h-8 rounded-md bg-green-500 flex items-center justify-center hover:opacity-80 transition-opacity">
                     <i className="bi bi-line text-white text-xl"></i>
                   </a>
-                  <a href="#" className="w-12 h-12 rounded-full bg-white flex items-center justify-center hover:opacity-80 transition-opacity">
-                    <i className="bi bi-telephone text-black text-xl"></i>
-                  </a>
-                  <a href="#" className="w-12 h-12 rounded-full bg-gradient-to-br from-purple-600 to-pink-500 flex items-center justify-center hover:opacity-80 transition-opacity">
+                  <a href="#" className="w-8 h-8 rounded-md bg-gradient-to-br from-purple-600 to-pink-500 flex items-center justify-center hover:opacity-80 transition-opacity">
                     <i className="bi bi-instagram text-white text-xl"></i>
                   </a>
                 </div>
               </div>
             </div>
-
-            {/* Main Content */}
-            <div className="flex-1 lg:max-w-3xl">
-              {/* Article Title */}
-              <h1 className="text-white text-3xl md:text-4xl font-bold mb-6">{article.title}</h1>
-
-              {/* Interactive Buttons (Tags) */}
-              {article.tags && article.tags.length > 0 && (
-                <div className="flex flex-wrap gap-3 mb-8">
-                  {article.tags.map((tag, idx) => (
-                    <Link
-                      key={idx}
-                      href={`/Tag/${tag}`}
-                      className="px-4 py-2 bg-[#2C261C] text-white rounded-lg hover:bg-[#CD861A] transition-colors text-sm"
-                    >
-                      {tag}
-                    </Link>
-                  ))}
-                </div>
-              )}
-
+ <div 
+ style={{ 
+  paddingTop: '10px',
+  paddingLeft: '10px',
+  paddingRight: '10px',
+  paddingBottom: '10px',
+  borderRadius: '50px',
+ }}
+ className="flex flex-col items-center justify-center">
               {/* Featured Image */}
               <div className="mb-8">
                 <Image
@@ -276,123 +328,18 @@ function ArticleContent() {
                   )}
                 </div>
               </div>
+              </div>
+              </div>
             </div>
 
             {/* Right Sidebar */}
             <div className="lg:w-80 flex-shrink-0">
               <div className="sticky top-24">
-                {/* Categories Box */}
-                <div
-                  className="cate-box rounded-[40px] mb-[30px]"
-                  style={{
-                    backgroundImage: 'linear-gradient(180deg, #151515 0%, #2d2d2d 100%)',
-                    padding: '20px 0 10px',
-                    paddingLeft: '0px',
-                    height: 'auto',
-                    width: '100%',
-                  }}
-                >
-                  <h4
-                    style={{
-                      paddingLeft: '20px',
-                      paddingTop: '10px',
-                      paddingBottom: '10px',
-                    }}
-                    className="text-white text-lg mb-4 flex items-center gap-2 border-b border-white/"
-                  >
-                    <i className="bi bi-bookmarks-fill text-white"></i>
-                    所有文章分類
-                  </h4>
-                  <ul
-                    className="list-none p-0 m-0"
-                    style={{
-                      paddingTop: '10px',
-                      paddingBottom: '10px',
-                    }}
-                  >
-                    {categories.map((category) => (
-                      <li
-                        key={category.name}
-                        style={{
-                          paddingLeft: '20px',
-                          paddingTop: '5px',
-                          paddingBottom: '5px',
-                        }}
-                        className="flex items-center gap-2"
-                      >
-                        <span className="w-2 h-2 bg-white rounded-sm flex-shrink-0"></span>
-                        <Link
-                          href={category.href}
-                          className={`block py-2 transition-colors ${
-                            category.name === article.category
-                              ? 'text-[#FFCD83] font-bold'
-                              : 'text-white hover:text-[#FFCD83]'
-                          }`}
-                        >
-                          {category.name} ({category.count})
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* Popular Tags Box */}
-                <div
-                  className="hot-tags-box rounded-[40px]"
-                  style={{
-                    marginTop: '15px',
-                    backgroundImage: 'linear-gradient(180deg, #301e03 0%, #a76909 100%)',
-                    paddingRight: '0px',
-                    paddingBottom: '10px',
-                    paddingTop: '10px',
-                    paddingLeft: '0px',
-                    height: 'auto',
-                    width: '100%',
-                  }}
-                >
-                  <h4
-                    style={{
-                      paddingLeft: '20px',
-                      paddingTop: '10px',
-                      paddingBottom: '10px',
-                    }}
-                    className="text-white text-lg mb-4 flex items-center gap-2 border-b border-white/70"
-                  >
-                    <i className="bi bi-tags-fill text-white"></i>
-                    熱門 TAGs
-                  </h4>
-                  <div className="w-full h-3" />
-                  <ul
-                    className="list-none p-0 m-0 flex flex-wrap gap-2"
-                    style={{
-                      paddingLeft: '20px',
-                      paddingTop: '10px',
-                      paddingBottom: '20px',
-                      paddingRight: '20px',
-                    }}
-                  >
-                    {popularTags.map((tag) => (
-                      <li
-                        key={tag.name}
-                        style={{
-                          paddingLeft: '0px',
-                          paddingRight: '1px',
-                        }}
-                      >
-                        <Link
-                          href={tag.href}
-                          style={{
-                            paddingLeft: '0px',
-                            paddingRight: '1px',
-                          }}
-                          className="h-7 rounded-full bg-black/50 text-[#CD861A] bg-white text-sm flex justify-center items-center hover:bg-[#CD861A] hover:text-white transition-colors"
-                        >
-                          &nbsp;&nbsp; {tag.name}&nbsp;&nbsp;
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                <ArticleSidebar
+                  categories={categories}
+                  popularTags={popularTags}
+                  activeCategory={article.category}
+                />
               </div>
             </div>
           </div>
