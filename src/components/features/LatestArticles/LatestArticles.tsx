@@ -26,6 +26,7 @@ const latestArticles: Article[] = [
     link: '/Article/macao-rentalcar',
     views: 143,
     tags: ['澳門包車景點', '澳門包車'],
+    description: '❓ 為什麼澳門旅遊您需要選擇包車服務？ 澳門雖然面積不大，但其豐富的世遺景點分散於各區，且四季陽光熱烈。對於拖家帶口、有老有小的家庭旅客，或是不想在烈日下日均暴走 3 萬步的貴賓來說，傳統的公共交通',
   },
   {
     id: 2,
@@ -36,6 +37,7 @@ const latestArticles: Article[] = [
     link: '/Article/privatecar',
     views: 241,
     tags: ['澳門找龍匯包車', '澳門包車', '包車接送'],
+    description: '在澳門這座融合了商業與旅遊的城市中，時間就是金錢，舒適度更是決定行程品質的關鍵。',
   },
   {
     id: 3,
@@ -46,6 +48,7 @@ const latestArticles: Article[] = [
     link: '/Article/airplane-rentcar',
     views: 501,
     tags: ['澳門包車', '澳門包車景點', '澳門找龍匯包車'],
+    description: '為什麼您需要預訂澳門機場接送服務？您剛抵達澳門國際機場（Macau International Airport, MFM），拖著行李',
   },
   {
     id: 4,
@@ -56,6 +59,7 @@ const latestArticles: Article[] = [
     link: '/Article/macao%20play',
     views: 708,
     tags: ['澳門訂房', '澳門龍匯', '龍匯天下包車'],
+    description: '澳門遠不止賭場和歷史遺跡，這座城市正以全新面貌迎接旅客。小編推薦這些與眾不同的體驗方式：',
   },
   {
     id: 5,
@@ -66,6 +70,7 @@ const latestArticles: Article[] = [
     link: '/Article/macau-all',
     views: 1014,
     tags: ['澳門通龍匯天下', '龍匯包車', '龍匯天下訂房'],
+    description: '澳門作為融合中西文化的特別行政區，2025年持續推出新景點與服務升級。',
   },
   {
     id: 6,
@@ -76,6 +81,7 @@ const latestArticles: Article[] = [
     link: '/Article/macao-carpass',
     views: 1147,
     tags: ['澳門找龍匯包車', '澳門包車景點', '澳門包車'],
+    description: '澳門雖然不大，但景點分散，加上天氣炎熱、交通複雜，對初次來訪的旅客來說並不容易安排行程。若想輕鬆探索這座「東西交融的城市」，包車服務 就是最聰明的選擇。',
   },
   {
     id: 7,
@@ -86,6 +92,7 @@ const latestArticles: Article[] = [
     link: '/Article/macao-onedaypass',
     views: 1108,
     tags: ['澳門一日遊', '澳門包車', '澳門龍匯天下'],
+    description: '如果你只有一天時間在澳門停留，該怎麼玩才能值回票價？這就是 澳門一日遊 的魅力所在。這座小城融合了中西文化，既有古老的歷史建築，又有國際級的娛樂度假村，只要行程安排得宜，即使僅有 24 小時，也能從清',
   },
   {
     id: 8,
@@ -96,6 +103,7 @@ const latestArticles: Article[] = [
     link: '/Article/airportrencar1',
     views: 1131,
     tags: ['澳門機場接送', '澳門包車', '龍匯包車'],
+    description: '來到澳門旅遊或出差，第一件需要解決的事情就是交通。無論是剛下飛機抵達，還是準備返程回家，選擇 澳門機場接送 都能讓你的行程更加輕鬆自在。相比自己搭巴士或計程車，澳門機場接送 提供專屬司機、舒適車輛以及',
   },
 ];
 
@@ -109,6 +117,7 @@ const popularArticles: Article[] = [
     link: '/Article/sauna1',
     views: 5179,
     tags: ['澳門桑拿', '桑拿', '龍匯天下', '澳門旅遊'],
+    description: '澳門桑拿最新現況總覽：疫情後全線回歸，甚至更勝以往！如果你近期有計畫前往澳門放鬆一下，那你可能會好奇：澳門的桑拿現在恢復得怎麼樣了？答案是——不僅回來了，而且是全面升級回歸！',
   },
   {
     id: 2,
@@ -119,6 +128,7 @@ const popularArticles: Article[] = [
     link: '/Article/sauna2',
     views: 4067,
     tags: ['澳門', '澳門桑拿', '澳門劇本殺', '桑拿'],
+    description: '不論你是老司機，還是初次探訪澳門桑拿的新手，選對一家店真的很關鍵！以下是四間評價極高、網友熱推的澳門桑拿，每間都有不同亮點與玩法，從24小時營業的尊貴水療，到主打劇本殺玩法，總有一間適合你。',
   },
   {
     id: 3,
@@ -129,6 +139,7 @@ const popularArticles: Article[] = [
     link: '/Article/sauna3',
     views: 2334,
     tags: ['澳門', '澳門推薦', '澳門旅遊', '桑拿', '澳門劇本殺', '澳門桑拿', '龍匯天下'],
+    description: '🌐 氹仔＆澳門本島｜頂尖高顏值澳門桑拿會所續篇（進階玩家必看）接續上文介紹的【尊貴水療】、【壹號桑拿】等四家熱店，這次我們聚焦在氹仔區的高顏值澳門桑拿、以及價格與體驗感拉滿的高端店家。若你已經厭倦常',
   },
   {
     id: 4,
@@ -139,6 +150,7 @@ const popularArticles: Article[] = [
     link: '/Article/macao-sauna-how',
     views: 2305,
     tags: ['澳門桑拿', '龍匯澳門按摩', '澳門按摩', '澳門劇本殺', '澳門龍匯天下'],
+    description: '說到「澳門桑拿玩法」，很多人第一時間會聯想到按摩、三溫暖、熱食區，甚至還有人將之視為澳門旅遊不可或缺的一環。不過，與香港、大陸等地的桑拿相比，澳門桑拿文化可說是自成一格，從價格、玩法到服務形式都有其特',
   },
   {
     id: 5,
@@ -149,6 +161,7 @@ const popularArticles: Article[] = [
     link: '/Article/macao-spa',
     views: 2275,
     tags: ['澳門桑拿', '澳門水療', '澳門劇本殺', '澳門旅遊', '澳門龍匯天下', '龍匯天下包車', '龍匯天下'],
+    description: '想在澳門來點「不一樣的放鬆」？無論你剛從賭場大殺四方、還是想找個寧靜角落讓身體徹底釋放壓力，「澳門水療」就是那道你不該錯過的祕密選項。',
   },
   {
     id: 6,
@@ -159,6 +172,7 @@ const popularArticles: Article[] = [
     link: '/Article/macao%20massage',
     views: 2227,
     tags: ['澳門按摩', '龍匯澳門按摩', '澳門龍匯天下', '龍匯按摩'],
+    description: '澳門不只賭場與豬扒包！這座不夜城藏著頂級水療會館、24小時平價足療，甚至賭場免費按摩區。教你用最聰明姿勢消除暴走疲勞！',
   },
   {
     id: 7,
@@ -169,6 +183,7 @@ const popularArticles: Article[] = [
     link: '/Article/sauna4',
     views: 2097,
     tags: ['澳門桑拿', '澳門劇本殺', '澳門', '龍匯天下', '桑拿'],
+    description: '想在澳門玩點不一樣的劇本殺？別以為這只是燒腦推理，澳門劇本殺已進化成結合角色、情境與慾望的現場劇演。走進這場「遊戲」，你將成為慾望推理的主角，每個場景、每句台詞、每次互動，都是一場情緒與快感的試探。',
   },
   {
     id: 8,
@@ -179,13 +194,25 @@ const popularArticles: Article[] = [
     link: '/Article/macao%20pass',
     views: 2508,
     tags: ['澳門通龍匯天下', '龍匯澳門通', '澳門龍匯天下澳門通', '龍匯天下澳門通'],
+    description: '澳門通（Macau Pass）是旅客探索澳門的智慧神卡，2025年全面升級後，整合交通、消費、景點門票等多元功能，成為自由行省錢省時的必備工具。本文從最新功能、使用範圍到隱藏優惠，帶你掌握這張小卡的無',
   },
 ];
 
 function ArticleCarousel({ title, articles }: { title: string; articles: Article[] }) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [expandedCards, setExpandedCards] = useState<Set<number>>(new Set());
   const itemsPerPage = 4;
   const totalPages = Math.ceil(articles.length / itemsPerPage);
+
+  const toggleCard = (id: number) => {
+    const newExpanded = new Set(expandedCards);
+    if (newExpanded.has(id)) {
+      newExpanded.delete(id);
+    } else {
+      newExpanded.add(id);
+    }
+    setExpandedCards(newExpanded);
+  };
 
   const goToPrevious = () => {
     setCurrentIndex((prev) => (prev - 1 + totalPages) % totalPages);
@@ -259,9 +286,9 @@ function ArticleCarousel({ title, articles }: { title: string; articles: Article
       <div className="block md:hidden">
         <div className="row">
           {articles.map((article) => (
-            <div key={article.id} className="col-12 pl-0 mb-4">
-              <div className="row mb-4 article-card-row flex border-b border-gray-800 pb-4">
-                <div className="col-4 col-md-4 px-0 cardpic">
+              <div key={article.id} className="col-12 pl-0 mb-4">
+              <div className="row mb-4 article-card-row flex items-start border-b border-gray-800 pb-4" style={{ position: 'relative' }}>
+                <div className="col-4 col-md-4 px-0 cardpic" style={{ flexShrink: 0 }}>
                   <Link href={article.link}>
                     <picture>
                       <source srcSet={article.image} media="(min-width: 768px)" />
@@ -276,12 +303,12 @@ function ArticleCarousel({ title, articles }: { title: string; articles: Article
                     </picture>
                   </Link>
                 </div>
-                <div className="col-8 col-md-8 pl-2">
+                <div className="col-8 col-md-8 pl-2" style={{ position: 'relative', flex: '1', minWidth: 0 }}>
                   <Link href={article.link}>
                     <h3 className="card-title text-white text-sm mb-2">{article.title}</h3>
                   </Link>
-                  <div className="card-text row flex items-center justify-between">
-                    <div className="col-8">
+                  <div className="card-text" style={{ position: 'relative', display: 'flex', alignItems: 'center', width: '100%', paddingRight: '32px' }}>
+                    <div style={{ flex: '1', minWidth: 0 }}>
                       {article.views && (
                         <small className="text-read text-white text-xs">觀看人數：{article.views}</small>
                       )}
@@ -289,13 +316,71 @@ function ArticleCarousel({ title, articles }: { title: string; articles: Article
                         <small className="text-read text-white text-xs">{article.date}</small>
                       )}
                     </div>
+                    <div style={{ position: 'absolute', right: 0, top: '50%', transform: 'translateY(-50%)', width: '24px', height: '24px', display: 'flex', alignItems: 'center', justifyContent: 'center' }} className="d-block d-md-none">
+                      <button
+                        className="btn btn-link p-0 js-btn-angle"
+                        data-angle={expandedCards.has(article.id) ? 'up' : 'down'}
+                        type="button"
+                        onClick={() => toggleCard(article.id)}
+                        aria-label="向下展開"
+                        style={{ margin: 0, lineHeight: 1 }}
+                      >
+                        <i className="fas fa-angle-down text-white text-2xl" aria-hidden="true"></i>
+                      </button>
+                    </div>
                   </div>
+                  {expandedCards.has(article.id) && (
+                    <div className="d-block d-md-none mt-3">
+                      {article.description && (
+                        <p style={{ color: '#fff' }} className="text-sm mb-2">{article.description}</p>
+                      )}
+                      {article.tags && (
+                        <ul className="tags flex flex-wrap" style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+                          {article.tags.map((tag, idx) => (
+                            <li key={idx} style={{ margin: '0 5px 5px 0' }}>
+                              <Link 
+                                href={`/Tag/${tag}`} 
+                                className="text-xs text-white"
+                                style={{
+                                  display: 'inline-block',
+                                  backgroundColor: '#CD861A',
+                                  padding: '0 10px',
+                                  height: '28px',
+                                  lineHeight: '28px',
+                                  borderRadius: '4px',
+                                  textDecoration: 'none',
+                                  color: '#fff'
+                                }}
+                              >
+                                {tag}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
+                  )}
                   {article.tags && (
                     <div className="article-title d-none d-md-block mt-4">
-                      <ul className="tags flex flex-wrap gap-2">
+                      <ul className="tags flex flex-wrap" style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                         {article.tags.map((tag, idx) => (
-                          <li key={idx}>
-                            <Link href={`/Tag/${tag}`} className="text-xs text-gray-400">{tag}</Link>
+                          <li key={idx} style={{ margin: '0 5px 5px 0' }}>
+                            <Link 
+                              href={`/Tag/${tag}`} 
+                              className="text-xs text-white"
+                              style={{
+                                display: 'inline-block',
+                                backgroundColor: '#CD861A',
+                                padding: '0 10px',
+                                height: '28px',
+                                lineHeight: '28px',
+                                borderRadius: '4px',
+                                textDecoration: 'none',
+                                color: '#fff'
+                              }}
+                            >
+                              {tag}
+                            </Link>
                           </li>
                         ))}
                       </ul>
