@@ -6,7 +6,9 @@ import { generateBreadcrumbSchema } from '@/config/seo';
 import Navbar from '@/components/layout/Navbar/Navbar';
 import Footer from '@/components/layout/Footer/Footer';
 import GoToTop from '@/components/layout/GoToTop/GoToTop';
-import TravelArticleList from '@/components/features/TravelArticleList/TravelArticleList';
+import BottomNav from '@/components/layout/BottomNav/BottomNav';
+import BookingArticleList from '@/components/features/BookingArticleList/BookingArticleList';
+import ArticleCategoryLayout from '@/components/layout/ArticleCategoryLayout/ArticleCategoryLayout';
 import Link from 'next/link';
 
 interface EntertainmentArticle {
@@ -124,177 +126,99 @@ const entertainmentArticles: EntertainmentArticle[] = [
 ];
 
 const categories = [
-  { name: '旅遊', link: '/ArticleCategory/Travel', active: false },
-  { name: '訂房', link: '/ArticleCategory/Booking', active: false },
-  { name: '桑拿', link: '/ArticleCategory/Sauna', active: false },
-  { name: '包車', link: '/ArticleCategory/RentCar', active: false },
-  { name: '其他娛樂', link: '/ArticleCategory/Entertainment', active: true },
+  { name: '旅遊', href: '/ArticleCategory/Travel', count: 11 },
+  { name: '桑拿', href: '/ArticleCategory/Sauna', count: 11 },
+  { name: '包車', href: '/ArticleCategory/RentCar', count: 12 },
+  { name: '訂房', href: '/ArticleCategory/Booking', count: 5 },
+  { name: '其他娛樂', href: '/ArticleCategory/Entertainment', count: 10, active: true },
+  { name: '常見問答', href: '/ArticleCategory/Question', count: 3 },
+  { name: '專人客服', href: '/CustomerService', count: 0 },
 ];
 
 const popularTags = [
-  '澳門包車',
-  '澳門旅遊',
-  '澳門訂房',
-  '龍匯天下包車',
-  '澳門百老匯',
-  '澳門龍匯',
-  '龍匯天下按摩',
-  '龍匯澳們百老匯',
-  '龍匯美高梅',
-  '龍匯澳門永利',
+  { name: '澳門包車', href: '/Tag/澳門包車' },
+  { name: '澳門旅遊', href: '/Tag/澳門旅遊' },
+  { name: '澳門訂房', href: '/Tag/澳門訂房' },
+  { name: '龍匯天下包車', href: '/Tag/龍匯天下包車' },
+  { name: '澳門百老匯', href: '/Tag/澳門百老匯' },
+  { name: '澳門龍匯', href: '/Tag/澳門龍匯' },
+  { name: '龍匯天下按摩', href: '/Tag/龍匯天下按摩' },
+  { name: '龍匯澳們百老匯', href: '/Tag/龍匯澳們百老匯' },
+  { name: '龍匯美高梅', href: '/Tag/龍匯美高梅' },
+  { name: '龍匯澳門永利', href: '/Tag/龍匯澳門永利' },
 ];
 
 function EntertainmentContent() {
   const searchParams = useSearchParams();
-  const pageParam = searchParams.get('PageNo');
-  const currentPage = parseInt(pageParam || '1', 10);
-  
-  const itemsPerPage = 9;
+  const itemsPerPage = 3;
   const totalPages = Math.ceil(entertainmentArticles.length / itemsPerPage);
-  
+
+  // Get current page from URL params
+  const pageParam = searchParams.get('PageNo');
+  const currentPage = Math.max(1, Math.min(parseInt(pageParam || '1', 10), totalPages));
+
   // Get articles for current page
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
   const currentArticles = entertainmentArticles.slice(startIndex, endIndex);
 
   return (
-    <>
-      {/* Articles Section */}
-      <section className="articles w-full bg-black py-8" style={{ marginTop: '20px' }}>
-        <div className="container mx-auto px-4">
-          <h1 className="text-white text-3xl mb-8">其他娛樂</h1>
-          
-          <div className="row flex flex-col lg:flex-row gap-6">
-            {/* Main Content - Articles List */}
-            <div className="col-xl-9 col-lg-8 col-md-8 col-sm-12 col-xs-12 w-full lg:w-9/12">
-              <TravelArticleList articles={currentArticles as unknown as Parameters<typeof TravelArticleList>[0]['articles']} />
-
-              {/* Pagination */}
-              <nav className="pagination mt-8" aria-label="Page navigation example">
-                <div className="pagination-container">
-                  <ul className="pagination flex justify-center items-center gap-2">
-                    {currentPage > 1 && (
-                      <li className="page-item">
-                        <Link 
-                          href={`/ArticleCategory/Entertainment?PageNo=${currentPage - 1}&SortBy=DisplaySeq&SortDirection=ASC`} 
-                          rel="prev"
-                          className="page-link px-4 py-2 bg-[#2C261C] text-white rounded hover:bg-[#CD861A]"
-                        >
-                          &lt;
-                        </Link>
-                      </li>
-                    )}
-                    {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-                      <li key={page} className={`page-item ${page === currentPage ? 'active' : ''}`}>
-                        {page === currentPage ? (
-                          <span className="page-link px-4 py-2 bg-[#CD861A] text-white rounded">
-                            {page}
-                          </span>
-                        ) : (
-                          <Link
-                            href={`/ArticleCategory/Entertainment?PageNo=${page}&SortBy=DisplaySeq&SortDirection=ASC`}
-                            className="page-link px-4 py-2 bg-[#2C261C] text-white rounded hover:bg-[#CD861A]"
-                          >
-                            {page}
-                          </Link>
-                        )}
-                      </li>
-                    ))}
-                    {currentPage < totalPages && (
-                      <li className="page-item">
-                        <Link 
-                          href={`/ArticleCategory/Entertainment?PageNo=${currentPage + 1}&SortBy=DisplaySeq&SortDirection=ASC`} 
-                          rel="next"
-                          className="page-link px-4 py-2 bg-[#2C261C] text-white rounded hover:bg-[#CD861A]"
-                        >
-                          &gt;
-                        </Link>
-                      </li>
-                    )}
-                  </ul>
-                </div>
-              </nav>
-            </div>
-
-            {/* Sidebar */}
-            <div className="col-xl-3 col-lg-4 col-md-4 col-sm-12 col-xs-12 w-full lg:w-3/12">
-              {/* Categories Box */}
-              <div className="cate-box mb-6">
-                <h4 className="text-white mb-4">
-                  <i className="bi bi-bookmarks-fill"></i> 所有文章分類
-                </h4>
-                <ul className="list-unstyled">
-                  {categories.map((category) => (
-                    <li key={category.name}>
-                      <Link
-                        href={category.link}
-                        className={`text-white hover:text-[#FFCD83] ${category.active ? 'active font-bold' : ''}`}
-                      >
-                        {category.name}
-                        {category.name === '旅遊' && '(11)'}
-                        {category.name === '桑拿' && '(11)'}
-                        {category.name === '包車' && '(12)'}
-                        {category.name === '訂房' && '(5)'}
-                        {category.name === '其他娛樂' && '(10)'}
-                        {category.name === '常見問答' && '(3)'}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Popular Tags Box */}
-              <div className="hot-tags-box">
-                <h4 className="text-white mb-4">
-                  <i className="bi bi-tags-fill"></i> 熱門TAG
-                </h4>
-                <ul className="tags flex flex-wrap gap-2">
-                  {popularTags.map((tag, idx) => (
-                    <li key={idx}>
-                      <Link href={`/Tag/${tag}`} className="text-xs text-gray-400 hover:text-[#FFCD83]">
-                        {tag}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </>
+    <ArticleCategoryLayout
+      pageTitle="其他娛樂"
+      breadcrumbName="其他娛樂"
+      baseUrl="/ArticleCategory/Entertainment"
+      articles={entertainmentArticles}
+      currentArticles={currentArticles}
+      currentPage={currentPage}
+      totalPages={totalPages}
+      itemsPerPage={3}
+      ArticleListComponent={BookingArticleList}
+      categories={categories}
+      popularTags={popularTags}
+    />
   );
 }
 
 export default function EntertainmentPage() {
   // Set page title/meta tags
   useEffect(() => {
-    // Set page title
-    document.title = '其他娛樂 - 龍匯天下';
-    
-    // Update meta description
+    document.title = '澳門其他娛樂攻略 - 水舞間、百老匯、美高梅全指南 | 龍匯天下';
+
     let metaDescription = document.querySelector('meta[name="description"]');
     if (!metaDescription) {
       metaDescription = document.createElement('meta');
       metaDescription.setAttribute('name', 'description');
       document.head.appendChild(metaDescription);
     }
-    metaDescription.setAttribute('content', '龍匯天下-包車-訂房-桑拿-其他娛樂');
+    metaDescription.setAttribute('content', '探索澳門其他娛樂完整攻略，包含水舞間、百老匯、美高梅、永利等娛樂場所介紹。精選澳門娛樂必看文章，從表演節目到娛樂設施一次搞定，讓您的澳門之旅更加精彩。');
   }, []);
 
-  // Generate breadcrumb schema
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: '首頁', url: 'https://www.long-huei.com/' },
+    { name: '首頁', url: 'https://www.long-huei.com' },
     { name: '其他娛樂', url: 'https://www.long-huei.com/ArticleCategory/Entertainment' },
   ]);
 
-  // Generate CollectionPage schema
-  const collectionPageSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'CollectionPage',
-    name: '其他娛樂',
-    description: '龍匯天下其他娛樂相關文章',
-    url: 'https://www.long-huei.com/ArticleCategory/Entertainment',
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "澳門其他娛樂攻略",
+    description: "探索澳門其他娛樂完整攻略，包含水舞間、百老匯、美高梅、永利等娛樂場所介紹",
+    url: "https://www.long-huei.com/ArticleCategory/Entertainment",
+    inLanguage: "zh-TW",
+    mainEntity: {
+      "@type": "ItemList",
+      numberOfItems: entertainmentArticles.length,
+      itemListElement: entertainmentArticles.map((article, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        item: {
+          "@type": "Article",
+          headline: article.title,
+          description: article.description,
+          url: `https://www.long-huei.com${article.link}`,
+        },
+      })),
+    },
   };
 
   return (
@@ -305,30 +229,24 @@ export default function EntertainmentPage() {
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionPageSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      <Navbar />
-      
-      <main className="inner-page">
-        <div className="container">
-          {/* Breadcrumbs */}
-          <nav className="nav-breadcrumb" style={{ '--bs-breadcrumb-divider': '>' } as React.CSSProperties} aria-label="breadcrumb">
-            <ol className="breadcrumb">
-              <li className="breadcrumb-item">
-                <Link href="/"><i className="bi bi-house-door-fill"></i>首頁</Link>
-              </li>
-              <li className="breadcrumb-item active" aria-current="page">其他娛樂</li>
-            </ol>
-          </nav>
-        </div>
+      <div className="relative w-full min-h-screen bg-black flex justify-center items-center">
+        <Navbar />
 
-        <Suspense fallback={<div className="text-white p-8">Loading...</div>}>
-          <EntertainmentContent />
-        </Suspense>
-      </main>
+        <main className="inner-page w-[90%] mx-auto">
+          <div className="w-full h-18 md:h-30"></div>
 
-      <Footer />
-      <GoToTop />
+          {/* Articles Section */}
+          <Suspense fallback={<div className="text-white p-8">Loading...</div>}>
+            <EntertainmentContent />
+          </Suspense>
+          <Footer />
+        </main>
+
+        <GoToTop />
+        <BottomNav />
+      </div>
     </>
   );
 }

@@ -18,7 +18,7 @@ interface NavItem {
 const navItems: NavItem[] = [
   { id: 'travel', label: '旅遊', href: '/ArticleCategory/Travel', icon: 'travel', isActive: true },
   { id: 'booking', label: '訂房', href: '/ArticleCategory/Booking', icon: 'bed' },
-  { id: 'sauna', label: '桑拿', href: '/ArticleCategory/Booking', icon: 'sauna' },
+  { id: 'sauna', label: '桑拿', href: '/ArticleCategory/Sauna', icon: 'sauna' },
   { id: 'question', label: '常見問答', href: '/ArticleCategory/Question', icon: 'question' },
   { id: 'customer-service', label: '專人客服', href: '/CustomerService', icon: 'headset' },
   { id: 'search', label: '搜尋', href: '/Search', icon: 'search' },

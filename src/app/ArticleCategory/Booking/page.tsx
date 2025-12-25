@@ -1,15 +1,15 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { generateBreadcrumbSchema } from '@/config/seo';
 import Navbar from '@/components/layout/Navbar/Navbar';
 import Footer from '@/components/layout/Footer/Footer';
 import GoToTop from '@/components/layout/GoToTop/GoToTop';
+import BottomNav from '@/components/layout/BottomNav/BottomNav';
 import BookingArticleList from '@/components/features/BookingArticleList/BookingArticleList';
 import ArticleCategoryLayout from '@/components/layout/ArticleCategoryLayout/ArticleCategoryLayout';
 import Link from 'next/link';
-import BottomNav from '@/components/layout/BottomNav/BottomNav';
 
 interface BookingArticle {
   id: number;
@@ -104,26 +104,42 @@ const popularTags = [
   { name: '澳門親子', href: '/Tag/澳門親子' },
 ];
 
-export default function BookingPage() {
+function BookingContent() {
   const searchParams = useSearchParams();
   const itemsPerPage = 3;
   const totalPages = Math.ceil(bookingArticles.length / itemsPerPage);
-  
+
   // Get current page from URL params
   const pageParam = searchParams.get('PageNo');
   const currentPage = Math.max(1, Math.min(parseInt(pageParam || '1', 10), totalPages));
-  
+
   // Get articles for current page
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
   const currentArticles = bookingArticles.slice(startIndex, endIndex);
 
+  return (
+    <ArticleCategoryLayout
+      pageTitle="訂房"
+      breadcrumbName="訂房"
+      baseUrl="/ArticleCategory/Booking"
+      articles={bookingArticles}
+      currentArticles={currentArticles}
+      currentPage={currentPage}
+      totalPages={totalPages}
+      itemsPerPage={3}
+      ArticleListComponent={BookingArticleList}
+      categories={categories}
+      popularTags={popularTags}
+    />
+  );
+}
+
+export default function BookingPage() {
   // Set page title/meta tags
   useEffect(() => {
-    // Set page title
     document.title = '澳門訂房攻略 - 酒店推薦、住宿選擇全指南 | 龍匯天下';
-    
-    // Update meta description
+
     let metaDescription = document.querySelector('meta[name="description"]');
     if (!metaDescription) {
       metaDescription = document.createElement('meta');
@@ -173,30 +189,17 @@ export default function BookingPage() {
       />
       <div className="relative w-full min-h-screen bg-black flex justify-center items-center">
         <Navbar />
-        
-        <main className="inner-page w-[90%] mx-auto  ">
-        <div className="w-full h-18 md:h-30"></div>
-          {/* Breadcrumbs */}
-         
+
+        <main className="inner-page w-[90%] mx-auto">
+          <div className="w-full h-18 md:h-30"></div>
 
           {/* Articles Section */}
-          <ArticleCategoryLayout
-            pageTitle="訂房"
-            breadcrumbName="訂房"
-            baseUrl="/ArticleCategory/Booking"
-            articles={bookingArticles}
-            currentArticles={currentArticles}
-            currentPage={currentPage}
-            totalPages={totalPages}
-            itemsPerPage={3}
-            ArticleListComponent={BookingArticleList}
-            categories={categories}
-            popularTags={popularTags}
-          />
+          <Suspense fallback={<div className="text-white p-8">Loading...</div>}>
+            <BookingContent />
+          </Suspense>
           <Footer />
         </main>
 
-       
         <GoToTop />
         <BottomNav />
       </div>

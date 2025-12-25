@@ -6,7 +6,9 @@ import { generateBreadcrumbSchema } from '@/config/seo';
 import Navbar from '@/components/layout/Navbar/Navbar';
 import Footer from '@/components/layout/Footer/Footer';
 import GoToTop from '@/components/layout/GoToTop/GoToTop';
-import TravelArticleList from '@/components/features/TravelArticleList/TravelArticleList';
+import BottomNav from '@/components/layout/BottomNav/BottomNav';
+import BookingArticleList from '@/components/features/BookingArticleList/BookingArticleList';
+import ArticleCategoryLayout from '@/components/layout/ArticleCategoryLayout/ArticleCategoryLayout';
 import Link from 'next/link';
 
 interface QuestionArticle {
@@ -58,178 +60,99 @@ const questionArticles: QuestionArticle[] = [
 ];
 
 const categories = [
-  { name: '旅遊', link: '/ArticleCategory/Travel', active: false },
-  { name: '訂房', link: '/ArticleCategory/Booking', active: false },
-  { name: '桑拿', link: '/ArticleCategory/Sauna', active: false },
-  { name: '包車', link: '/ArticleCategory/RentCar', active: false },
-  { name: '其他娛樂', link: '/ArticleCategory/Entertainment', active: false },
-  { name: '常見問答', link: '/ArticleCategory/Question', active: true },
+  { name: '旅遊', href: '/ArticleCategory/Travel', count: 11 },
+  { name: '桑拿', href: '/ArticleCategory/Sauna', count: 11 },
+  { name: '包車', href: '/ArticleCategory/RentCar', count: 12 },
+  { name: '訂房', href: '/ArticleCategory/Booking', count: 5 },
+  { name: '其他娛樂', href: '/ArticleCategory/Entertainment', count: 10 },
+  { name: '常見問答', href: '/ArticleCategory/Question', count: 3, active: true },
+  { name: '專人客服', href: '/CustomerService', count: 0 },
 ];
 
 const popularTags = [
-  '澳門旅遊',
-  '澳門訂房',
-  '澳門',
-  '澳門龍匯天下',
-  '澳門旅遊找龍匯',
-  '澳門安全',
-  '澳門通龍匯天下',
-  '龍匯天下澳門通',
-  '澳門龍匯天下澳門通',
-  '龍匯澳門通',
+  { name: '澳門旅遊', href: '/Tag/澳門旅遊' },
+  { name: '澳門訂房', href: '/Tag/澳門訂房' },
+  { name: '澳門', href: '/Tag/澳門' },
+  { name: '澳門龍匯天下', href: '/Tag/澳門龍匯天下' },
+  { name: '澳門旅遊找龍匯', href: '/Tag/澳門旅遊找龍匯' },
+  { name: '澳門安全', href: '/Tag/澳門安全' },
+  { name: '澳門通龍匯天下', href: '/Tag/澳門通龍匯天下' },
+  { name: '龍匯天下澳門通', href: '/Tag/龍匯天下澳門通' },
+  { name: '澳門龍匯天下澳門通', href: '/Tag/澳門龍匯天下澳門通' },
+  { name: '龍匯澳門通', href: '/Tag/龍匯澳門通' },
 ];
 
 function QuestionContent() {
   const searchParams = useSearchParams();
-  const pageParam = searchParams.get('PageNo');
-  const currentPage = parseInt(pageParam || '1', 10);
-  
-  const itemsPerPage = 9;
+  const itemsPerPage = 3;
   const totalPages = Math.ceil(questionArticles.length / itemsPerPage);
-  
+
+  // Get current page from URL params
+  const pageParam = searchParams.get('PageNo');
+  const currentPage = Math.max(1, Math.min(parseInt(pageParam || '1', 10), totalPages));
+
   // Get articles for current page
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
   const currentArticles = questionArticles.slice(startIndex, endIndex);
 
   return (
-    <>
-      {/* Articles Section */}
-      <section className="articles w-full bg-black py-8" style={{ marginTop: '20px' }}>
-        <div className="container mx-auto px-4">
-          <h1 className="text-white text-3xl mb-8">常見問答</h1>
-          
-          <div className="row flex flex-col lg:flex-row gap-6">
-            {/* Main Content - Articles List */}
-            <div className="col-xl-9 col-lg-8 col-md-8 col-sm-12 col-xs-12 w-full lg:w-9/12">
-              <TravelArticleList articles={currentArticles as unknown as Parameters<typeof TravelArticleList>[0]['articles']} />
-
-              {/* Pagination */}
-              <nav className="pagination mt-8" aria-label="Page navigation example">
-                <div className="pagination-container">
-                  <ul className="pagination flex justify-center items-center gap-2">
-                    {currentPage > 1 && (
-                      <li className="page-item">
-                        <Link 
-                          href={`/ArticleCategory/Question?PageNo=${currentPage - 1}&SortBy=DisplaySeq&SortDirection=ASC`} 
-                          rel="prev"
-                          className="page-link px-4 py-2 bg-[#2C261C] text-white rounded hover:bg-[#CD861A]"
-                        >
-                          &lt;
-                        </Link>
-                      </li>
-                    )}
-                    {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-                      <li key={page} className={`page-item ${page === currentPage ? 'active' : ''}`}>
-                        {page === currentPage ? (
-                          <span className="page-link px-4 py-2 bg-[#CD861A] text-white rounded">
-                            {page}
-                          </span>
-                        ) : (
-                          <Link
-                            href={`/ArticleCategory/Question?PageNo=${page}&SortBy=DisplaySeq&SortDirection=ASC`}
-                            className="page-link px-4 py-2 bg-[#2C261C] text-white rounded hover:bg-[#CD861A]"
-                          >
-                            {page}
-                          </Link>
-                        )}
-                      </li>
-                    ))}
-                    {currentPage < totalPages && (
-                      <li className="page-item">
-                        <Link 
-                          href={`/ArticleCategory/Question?PageNo=${currentPage + 1}&SortBy=DisplaySeq&SortDirection=ASC`} 
-                          rel="next"
-                          className="page-link px-4 py-2 bg-[#2C261C] text-white rounded hover:bg-[#CD861A]"
-                        >
-                          &gt;
-                        </Link>
-                      </li>
-                    )}
-                  </ul>
-                </div>
-              </nav>
-            </div>
-
-            {/* Sidebar */}
-            <div className="col-xl-3 col-lg-4 col-md-4 col-sm-12 col-xs-12 w-full lg:w-3/12">
-              {/* Categories Box */}
-              <div className="cate-box mb-6">
-                <h4 className="text-white mb-4">
-                  <i className="bi bi-bookmarks-fill"></i> 所有文章分類
-                </h4>
-                <ul className="list-unstyled">
-                  {categories.map((category) => (
-                    <li key={category.name}>
-                      <Link
-                        href={category.link}
-                        className={`text-white hover:text-[#FFCD83] ${category.active ? 'active font-bold' : ''}`}
-                      >
-                        {category.name}
-                        {category.name === '旅遊' && '(11)'}
-                        {category.name === '桑拿' && '(11)'}
-                        {category.name === '包車' && '(12)'}
-                        {category.name === '訂房' && '(5)'}
-                        {category.name === '其他娛樂' && '(10)'}
-                        {category.name === '常見問答' && '(3)'}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Popular Tags Box */}
-              <div className="hot-tags-box">
-                <h4 className="text-white mb-4">
-                  <i className="bi bi-tags-fill"></i> 熱門TAG
-                </h4>
-                <ul className="tags flex flex-wrap gap-2">
-                  {popularTags.map((tag, idx) => (
-                    <li key={idx}>
-                      <Link href={`/Tag/${tag}`} className="text-xs text-gray-400 hover:text-[#FFCD83]">
-                        {tag}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </>
+    <ArticleCategoryLayout
+      pageTitle="常見問答"
+      breadcrumbName="常見問答"
+      baseUrl="/ArticleCategory/Question"
+      articles={questionArticles}
+      currentArticles={currentArticles}
+      currentPage={currentPage}
+      totalPages={totalPages}
+      itemsPerPage={3}
+      ArticleListComponent={BookingArticleList}
+      categories={categories}
+      popularTags={popularTags}
+    />
   );
 }
 
 export default function QuestionPage() {
   // Set page title/meta tags
   useEffect(() => {
-    // Set page title
-    document.title = '常見問答 - 龍匯天下';
-    
-    // Update meta description
+    document.title = '澳門常見問答 - 換錢、澳門通、旅遊安全全指南 | 龍匯天下';
+
     let metaDescription = document.querySelector('meta[name="description"]');
     if (!metaDescription) {
       metaDescription = document.createElement('meta');
       metaDescription.setAttribute('name', 'description');
       document.head.appendChild(metaDescription);
     }
-    metaDescription.setAttribute('content', '龍匯天下-澳門旅遊-桑拿-訂房-包車-常見問題');
+    metaDescription.setAttribute('content', '探索澳門常見問答完整攻略，包含換錢、澳門通、旅遊安全等實用資訊。精選澳門常見問題必看文章，從實用技巧到安全指南一次搞定，讓您的澳門之旅更加順利。');
   }, []);
 
-  // Generate breadcrumb schema
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: '首頁', url: 'https://www.long-huei.com/' },
+    { name: '首頁', url: 'https://www.long-huei.com' },
     { name: '常見問答', url: 'https://www.long-huei.com/ArticleCategory/Question' },
   ]);
 
-  // Generate CollectionPage schema
-  const collectionPageSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'CollectionPage',
-    name: '常見問答',
-    description: '龍匯天下常見問答相關文章',
-    url: 'https://www.long-huei.com/ArticleCategory/Question',
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "澳門常見問答",
+    description: "探索澳門常見問答完整攻略，包含換錢、澳門通、旅遊安全等實用資訊",
+    url: "https://www.long-huei.com/ArticleCategory/Question",
+    inLanguage: "zh-TW",
+    mainEntity: {
+      "@type": "ItemList",
+      numberOfItems: questionArticles.length,
+      itemListElement: questionArticles.map((article, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        item: {
+          "@type": "Article",
+          headline: article.title,
+          description: article.description,
+          url: `https://www.long-huei.com${article.link}`,
+        },
+      })),
+    },
   };
 
   return (
@@ -240,30 +163,24 @@ export default function QuestionPage() {
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionPageSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      <Navbar />
-      
-      <main className="inner-page">
-        <div className="container">
-          {/* Breadcrumbs */}
-          <nav className="nav-breadcrumb" style={{ '--bs-breadcrumb-divider': '>' } as React.CSSProperties} aria-label="breadcrumb">
-            <ol className="breadcrumb">
-              <li className="breadcrumb-item">
-                <Link href="/"><i className="bi bi-house-door-fill"></i>首頁</Link>
-              </li>
-              <li className="breadcrumb-item active" aria-current="page">常見問答</li>
-            </ol>
-          </nav>
-        </div>
+      <div className="relative w-full min-h-screen bg-black flex justify-center items-center">
+        <Navbar />
 
-        <Suspense fallback={<div className="text-white p-8">Loading...</div>}>
-          <QuestionContent />
-        </Suspense>
-      </main>
+        <main className="inner-page w-[90%] mx-auto">
+          <div className="w-full h-18 md:h-30"></div>
 
-      <Footer />
-      <GoToTop />
+          {/* Articles Section */}
+          <Suspense fallback={<div className="text-white p-8">Loading...</div>}>
+            <QuestionContent />
+          </Suspense>
+          <Footer />
+        </main>
+
+        <GoToTop />
+        <BottomNav />
+      </div>
     </>
   );
 }

@@ -6,7 +6,9 @@ import { generateBreadcrumbSchema } from '@/config/seo';
 import Navbar from '@/components/layout/Navbar/Navbar';
 import Footer from '@/components/layout/Footer/Footer';
 import GoToTop from '@/components/layout/GoToTop/GoToTop';
-import TravelArticleList from '@/components/features/TravelArticleList/TravelArticleList';
+import BottomNav from '@/components/layout/BottomNav/BottomNav';
+import BookingArticleList from '@/components/features/BookingArticleList/BookingArticleList';
+import ArticleCategoryLayout from '@/components/layout/ArticleCategoryLayout/ArticleCategoryLayout';
 import Link from 'next/link';
 
 interface SaunaArticle {
@@ -147,137 +149,47 @@ const popularTags = [
 
 function SaunaContent() {
   const searchParams = useSearchParams();
-  const pageParam = searchParams.get('PageNo');
-  const currentPage = parseInt(pageParam || '1', 10);
-  
-  const itemsPerPage = 9;
+  const itemsPerPage = 3;
   const totalPages = Math.ceil(saunaArticles.length / itemsPerPage);
-  
+
+  // Get current page from URL params
+  const pageParam = searchParams.get('PageNo');
+  const currentPage = Math.max(1, Math.min(parseInt(pageParam || '1', 10), totalPages));
+
   // Get articles for current page
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
   const currentArticles = saunaArticles.slice(startIndex, endIndex);
 
   return (
-    <>
-      {/* Articles Section */}
-      <section className="articles w-full bg-black py-8" style={{ marginTop: '20px' }}>
-        <div className="container mx-auto px-4">
-          <h1 className="text-white text-3xl mb-8">桑拿</h1>
-          
-          <div className="row flex flex-col lg:flex-row gap-6">
-            {/* Main Content - Articles List */}
-            <div className="col-xl-9 col-lg-8 col-md-8 col-sm-12 col-xs-12 w-full lg:w-9/12">
-              <TravelArticleList articles={currentArticles as unknown as Parameters<typeof TravelArticleList>[0]['articles']} />
-
-              {/* Pagination */}
-              <nav className="pagination mt-8" aria-label="Page navigation example">
-                <div className="pagination-container">
-                  <ul className="pagination flex justify-center items-center gap-2">
-                    {currentPage > 1 && (
-                      <li className="page-item">
-                        <Link 
-                          href={`/ArticleCategory/Sauna?PageNo=${currentPage - 1}&SortBy=DisplaySeq&SortDirection=ASC`} 
-                          rel="prev"
-                          className="page-link px-4 py-2 bg-[#2C261C] text-white rounded hover:bg-[#CD861A]"
-                        >
-                          &lt;
-                        </Link>
-                      </li>
-                    )}
-                    {Array.from({ length: totalPages }, (_, i) => i + 1).map((pageNum) => (
-                      <li key={pageNum} className="page-item">
-                        {pageNum === currentPage ? (
-                          <span className="page-link px-4 py-2 bg-[#CD861A] text-white rounded">{pageNum}</span>
-                        ) : (
-                          <Link 
-                            href={`/ArticleCategory/Sauna?PageNo=${pageNum}&SortBy=DisplaySeq&SortDirection=ASC`}
-                            className="page-link px-4 py-2 bg-[#2C261C] text-white rounded hover:bg-[#CD861A]"
-                          >
-                            {pageNum}
-                          </Link>
-                        )}
-                      </li>
-                    ))}
-                    {currentPage < totalPages && (
-                      <li className="page-item">
-                        <Link 
-                          href={`/ArticleCategory/Sauna?PageNo=${currentPage + 1}&SortBy=DisplaySeq&SortDirection=ASC`} 
-                          rel="next"
-                          className="page-link px-4 py-2 bg-[#2C261C] text-white rounded hover:bg-[#CD861A]"
-                        >
-                          &gt;
-                        </Link>
-                      </li>
-                    )}
-                  </ul>
-                </div>
-              </nav>
-            </div>
-
-            {/* Sidebar */}
-            <div className="col-xl-3 col-lg-4 col-md-4 col-sm-12 col-xs-12 w-full lg:w-3/12">
-              {/* Categories Box */}
-              <div className="cate-box bg-[#2C261C] rounded-lg p-6 mb-6">
-                <h4 className="text-white text-lg mb-4 flex items-center gap-2">
-                  <i className="bi bi-bookmarks-fill text-[#FFCD83]"></i>
-                  所有文章分類
-                </h4>
-                <ul className="list-none p-0 m-0">
-                  {categories.map((category) => (
-                    <li key={category.name}>
-                      <Link
-                        href={category.href}
-                        className={`block py-2 text-white hover:text-[#FFCD83] transition-colors ${category.active ? 'text-[#FFCD83] font-bold' : ''}`}
-                      >
-                        {category.name} ({category.count})
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Popular Tags Box */}
-              <div className="hot-tags-box bg-[#2C261C] rounded-lg p-6">
-                <h4 className="text-white text-lg mb-4 flex items-center gap-2">
-                  <i className="bi bi-tags-fill text-[#FFCD83]"></i>
-                  熱門 TAGs
-                </h4>
-                <ul className="list-none p-0 m-0 flex flex-wrap gap-2">
-                  {popularTags.map((tag) => (
-                    <li key={tag.name}>
-                      <Link
-                        href={tag.href}
-                        className="inline-block px-3 py-1 bg-black/50 text-white text-sm rounded hover:bg-[#CD861A] transition-colors"
-                      >
-                        {tag.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </>
+    <ArticleCategoryLayout
+      pageTitle="桑拿"
+      breadcrumbName="桑拿"
+      baseUrl="/ArticleCategory/Sauna"
+      articles={saunaArticles}
+      currentArticles={currentArticles}
+      currentPage={currentPage}
+      totalPages={totalPages}
+      itemsPerPage={3}
+      ArticleListComponent={BookingArticleList}
+      categories={categories}
+      popularTags={popularTags}
+    />
   );
 }
 
 export default function SaunaPage() {
   // Set page title/meta tags
   useEffect(() => {
-    // Set page title
-    document.title = '桑拿-澳門桑拿-龍匯天下';
-    
-    // Update meta description
+    document.title = '澳門桑拿攻略 - 水療、按摩、劇本殺全指南 | 龍匯天下';
+
     let metaDescription = document.querySelector('meta[name="description"]');
     if (!metaDescription) {
       metaDescription = document.createElement('meta');
       metaDescription.setAttribute('name', 'description');
       document.head.appendChild(metaDescription);
     }
-    metaDescription.setAttribute('content', '澳門桑拿，桑拿旅遊-龍匯天下');
+    metaDescription.setAttribute('content', '探索澳門桑拿完整攻略，包含水療、按摩、劇本殺等娛樂場所介紹。精選澳門桑拿必看文章，從入門技巧到熱門店家推薦一次搞定，讓您的澳門之旅更加放鬆享受。');
   }, []);
 
   const breadcrumbSchema = generateBreadcrumbSchema([
@@ -289,7 +201,7 @@ export default function SaunaPage() {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     name: "澳門桑拿攻略",
-    description: "澳門桑拿，桑拿旅遊-龍匯天下",
+    description: "探索澳門桑拿完整攻略，包含水療、按摩、劇本殺等娛樂場所介紹",
     url: "https://www.long-huei.com/ArticleCategory/Sauna",
     inLanguage: "zh-TW",
     mainEntity: {
@@ -318,34 +230,21 @@ export default function SaunaPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      <div className="relative w-full min-h-screen bg-black">
+      <div className="relative w-full min-h-screen bg-black flex justify-center items-center">
         <Navbar />
-        
-        <main className="inner-page w-full pt-[99px]">
-          {/* Breadcrumbs */}
-          <div className="container mx-auto px-4">
-            <nav className="nav-breadcrumb py-4" aria-label="breadcrumb">
-              <ol className="breadcrumb flex items-center gap-2 text-white text-sm">
-                <li className="breadcrumb-item">
-                  <Link href="/" className="flex items-center gap-1 hover:text-[#FFCD83]">
-                    <i className="bi bi-house-door-fill"></i>
-                    首頁
-                  </Link>
-                </li>
-                <li className="breadcrumb-item active" aria-current="page">
-                  <span className="text-white/70">桑拿</span>
-                </li>
-              </ol>
-            </nav>
-          </div>
 
+        <main className="inner-page w-[90%] mx-auto">
+          <div className="w-full h-18 md:h-30"></div>
+
+          {/* Articles Section */}
           <Suspense fallback={<div className="text-white p-8">Loading...</div>}>
             <SaunaContent />
           </Suspense>
+          <Footer />
         </main>
 
-        <Footer />
         <GoToTop />
+        <BottomNav />
       </div>
     </>
   );
