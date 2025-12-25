@@ -9,7 +9,7 @@ import GoToTop from '@/components/layout/GoToTop/GoToTop';
 import BottomNav from '@/components/layout/BottomNav/BottomNav';
 import ArticleCategoryLayout from '@/components/layout/ArticleCategoryLayout/ArticleCategoryLayout';
 import BookingArticleList from '@/components/features/BookingArticleList/BookingArticleList';
-import Link from 'next/link';
+// import Link from 'next/link';
 
 interface RentCarArticle {
   id: number;
