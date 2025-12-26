@@ -72,8 +72,8 @@ function RentCarContent() {
 export default function RentCarPage() {
 
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: '首頁', url: 'https://longhuei.netlify.app' },
-    { name: '包車', url: 'https://longhuei.netlify.app/ArticleCategory/RentCar' },
+    { name: '首頁', url: 'https://long-huei.vercel.app/' },
+    { name: '包車', url: 'https://long-huei.vercel.app/ArticleCategory/RentCar' },
   ]);
 
   const structuredData = {
@@ -81,7 +81,7 @@ export default function RentCarPage() {
     "@type": "CollectionPage",
     name: "澳門包車服務",
     description: "探索澳門包車服務完整攻略，包含專車接送、機場接送、一日遊包車等實用資訊",
-    url: "https://longhuei.netlify.app/ArticleCategory/RentCar",
+    url: "https://long-huei.vercel.app/ArticleCategory/RentCar",
     inLanguage: "zh-TW",
     mainEntity: {
       "@type": "ItemList",
@@ -93,7 +93,7 @@ export default function RentCarPage() {
           "@type": "Article",
           headline: article.title,
           description: article.description,
-          url: `https://longhuei.netlify.app${article.link}`,
+          url: `https://long-huei.vercel.app/${article.link}`,
         },
       })),
     },
@@ -104,8 +104,8 @@ export default function RentCarPage() {
       <PageMetadata
         title="澳門包車服務 - 專車接送、機場接送全指南 | 龍匯天下"
         description="探索澳門包車服務完整攻略，包含專車接送、機場接送、一日遊包車等實用資訊。精選澳門包車必看文章，從預訂方式到行程規劃一次搞定，讓您的澳門之旅更加輕鬆便利。"
-        url="https://longhuei.netlify.app/ArticleCategory/RentCar"
-        image="https://longhuei.netlify.app/Images/logo-m.png"
+        url="https://long-huei.vercel.app/ArticleCategory/RentCar"
+        image="https://long-huei.vercel.app/Images/logo-m.png"
       />
       <script
         type="application/ld+json"

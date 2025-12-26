@@ -217,10 +217,10 @@ function ArticleContent() {
   }
 
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: "首頁", url: "https://longhuei.netlify.app" },
+    { name: "首頁", url: "https://long-huei.vercel.app/" },
     {
       name: article.category || "文章",
-      url: `https://longhuei.netlify.app/ArticleCategory/${
+      url: `https://long-huei.vercel.app/ArticleCategory/${
         article.category === "訂房"
           ? "Booking"
           : article.category === "旅遊"
@@ -234,7 +234,7 @@ function ArticleContent() {
           : "Question"
       }`,
     },
-    { name: article.title, url: `https://longhuei.netlify.app${article.link}` },
+    { name: article.title, url: `https://long-huei.vercel.app/${article.link}` },
   ]);
 
   const getCategoryUrl = (category: string) => {

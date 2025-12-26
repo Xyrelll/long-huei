@@ -16,7 +16,7 @@ export async function generateMetadata({
       title: '文章 - 龍匯天下',
       description: '探索澳門旅遊、訂房、包車、桑拿等相關文章',
       path: '/Article',
-      image: 'https://longhuei.netlify.app/Images/logo-m.png',
+      image: 'https://long-huei.vercel.app/Images/logo-m.png',
     });
   }
 
@@ -29,7 +29,7 @@ export async function generateMetadata({
         title: '文章 - 龍匯天下',
         description: '探索澳門旅遊、訂房、包車、桑拿等相關文章',
         path: `/Article/${slug}`,
-        image: 'https://longhuei.netlify.app/Images/logo-m.png',
+        image: 'https://long-huei.vercel.app/Images/logo-m.png',
       });
     }
 
@@ -37,9 +37,9 @@ export async function generateMetadata({
     // Convert relative paths to absolute URLs for Open Graph
     let articleImage = article.image || article.imageMobile || '/Images/logo-m.png';
     if (articleImage.startsWith('/')) {
-      articleImage = `https://longhuei.netlify.app${articleImage}`;
+      articleImage = `https://long-huei.vercel.app/${articleImage}`;
     } else if (!articleImage.startsWith('http')) {
-      articleImage = `https://longhuei.netlify.app/${articleImage}`;
+      articleImage = `https://long-huei.vercel.app/${articleImage}`;
     }
 
     return genMeta({
@@ -55,7 +55,7 @@ export async function generateMetadata({
       title: '文章 - 龍匯天下',
       description: '探索澳門旅遊、訂房、包車、桑拿等相關文章',
       path: `/Article/${slug}`,
-      image: 'https://longhuei.netlify.app/Images/logo-m.png',
+      image: 'https://long-huei.vercel.app/Images/logo-m.png',
     });
   }
 }

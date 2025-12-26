@@ -339,8 +339,8 @@ function SearchContent() {
 export default function SearchPage() {
 
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: '首頁', url: 'https://longhuei.netlify.app' },
-    { name: '搜尋', url: 'https://longhuei.netlify.app/Search' },
+    { name: '首頁', url: 'https://long-huei.vercel.app/' },
+    { name: '搜尋', url: 'https://long-huei.vercel.app/Search' },
   ]);
 
   return (
@@ -348,8 +348,8 @@ export default function SearchPage() {
       <PageMetadata
         title="搜尋 - 龍匯天下"
         description="搜尋澳門旅遊、桑拿、訂房、包車等相關文章。快速找到您需要的澳門旅遊資訊、酒店推薦、包車服務、桑拿體驗等內容。"
-        url="https://longhuei.netlify.app/Search"
-        image="https://longhuei.netlify.app/Images/logo-m.png"
+        url="https://long-huei.vercel.app/Search"
+        image="https://long-huei.vercel.app/Images/logo-m.png"
       />
       <script
         type="application/ld+json"

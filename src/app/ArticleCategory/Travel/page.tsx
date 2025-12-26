@@ -73,8 +73,8 @@ function TravelContent() {
 export default function TravelPage() {
 
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: '首頁', url: 'https://longhuei.netlify.app' },
-    { name: '旅遊', url: 'https://longhuei.netlify.app/ArticleCategory/Travel' },
+    { name: '首頁', url: 'https://long-huei.vercel.app/' },
+    { name: '旅遊', url: 'https://long-huei.vercel.app/ArticleCategory/Travel' },
   ]);
 
   const structuredData = {
@@ -82,7 +82,7 @@ export default function TravelPage() {
     "@type": "CollectionPage",
     name: "澳門旅遊攻略",
     description: "探索澳門旅遊完整攻略，包含必訪景點、美食推薦、住宿選擇、交通指南等實用資訊",
-    url: "https://longhuei.netlify.app/ArticleCategory/Travel",
+    url: "https://long-huei.vercel.app/ArticleCategory/Travel",
     inLanguage: "zh-TW",
     mainEntity: {
       "@type": "ItemList",
@@ -94,7 +94,7 @@ export default function TravelPage() {
           "@type": "Article",
           headline: article.title,
           description: article.description,
-          url: `https://longhuei.netlify.app${article.link}`,
+          url: `https://long-huei.vercel.app/${article.link}`,
         },
       })),
     },
@@ -105,8 +105,8 @@ export default function TravelPage() {
       <PageMetadata
         title="澳門旅遊攻略 - 景點、美食、住宿全指南 | 龍匯天下"
         description="探索澳門旅遊完整攻略，包含必訪景點、美食推薦、住宿選擇、交通指南等實用資訊。精選澳門自由行必看文章，從簽證辦理到行程規劃一次搞定，讓您的澳門之旅更加精彩。"
-        url="https://longhuei.netlify.app/ArticleCategory/Travel"
-        image="https://longhuei.netlify.app/Images/logo-m.png"
+        url="https://long-huei.vercel.app/ArticleCategory/Travel"
+        image="https://long-huei.vercel.app/Images/logo-m.png"
       />
       <script
         type="application/ld+json"

@@ -2,6 +2,8 @@
  * SEO utility functions
  */
 
+import { siteConfig } from './site';
+
 export interface BreadcrumbItem {
   name: string;
   url: string;
@@ -42,7 +44,7 @@ export function generateArticleSchema({
     "@type": "Article",
     headline: title,
     description,
-    image: image || "https://longhuei.netlify.app/og-image.jpg",
+    image: image || `${siteConfig.url}${siteConfig.ogImage}`,
     datePublished,
     dateModified: dateModified || datePublished,
     author: {
@@ -54,7 +56,7 @@ export function generateArticleSchema({
       name: "龍匯天下",
       logo: {
         "@type": "ImageObject",
-        url: "https://longhuei.netlify.app/logo-m.png",
+        url: "https://long-huei.vercel.app/logo-m.png",
       },
     },
     mainEntityOfPage: {
