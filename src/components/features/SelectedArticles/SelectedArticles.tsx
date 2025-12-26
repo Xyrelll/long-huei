@@ -154,13 +154,15 @@ export default function SelectedArticles() {
         .featured h3 {
           line-height: 1.3em;
           font-size: 1.4rem;
+          font-weight: 900;
           color: #ffcd83;
           margin-bottom: 0px;
           padding: 5px;
         }
         .featured .featured-sm h3 {
           line-height: 1.4em;
-          font-size: 1rem;
+          font-size: 1.25rem;
+          font-weight: 900;
           padding: 0 0 5px 0;
         }
         .featured a {

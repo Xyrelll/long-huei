@@ -80,7 +80,7 @@ export default function FAQ() {
                   <i className="fas fa-question-circle text-[#CD861A] mr-2" aria-hidden="true"></i>
                   {faq.number} - {faq.title}
                 </h3>
-                <div className="text-white text-sm leading-relaxed">
+                <div className="text-white text-xl font-bold leading-relaxed">
                   {faq.content}
                 </div>
                 <Link 

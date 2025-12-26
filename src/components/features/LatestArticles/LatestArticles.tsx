@@ -19,7 +19,7 @@ interface Article {
 const latestArticles: Article[] = [
   {
     id: 1,
-    title: '澳門包車旅遊推薦：龍匯天下專屬私人行程，深度暢遊四大區域！',
+    title: '💎澳門包車旅遊推薦：龍匯天下專屬私人行程，深度暢遊四大區域！',
     date: '2025/12/19',
     image: '/articles/251219-h.jpg',
     imageMobile: '/articles/251219-m.jpg',

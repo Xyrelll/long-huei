@@ -190,6 +190,7 @@ html {
 }
 
 .featured h3 {
+  font-weight: 900;
   line-height: 1.3em;
   font-size: 1.4rem;
   color: #ffcd83;
@@ -199,7 +200,8 @@ html {
 
 .featured .featured-sm h3 {
   line-height: 1.4em;
-  font-size: 1rem;
+  font-size: 1.25rem;
+  font-weight: 900;
   padding: 0 0 5px 0;
 }
 
@@ -233,7 +235,9 @@ html {
 }
 
 .card-title {
-  font-size: 14px;
+  font-size: 1.03rem;
+  font-weight: 900;
+  color: #f5ca69;
   line-height: 1.4;
   margin-bottom: 8px;
 }
@@ -281,14 +285,17 @@ html {
 }
 
 .question-answer-card h3 {
-  color: white;
-  font-size: 18px;
+  color: #F5CA69;
+  font-size: 1.25rem;
   margin-bottom: 16px;
+  font-weight: 900;
 }
 
 .question-answer-card p {
   color: white;
   margin-bottom: 12px;
+  font-size: 1.125rem;
+  font-weight: 700;
 }
 
 .question-answer-card ul {
@@ -446,7 +453,8 @@ html {
 
 .article-card-title {
   color: #FFCD83;
-  font-size: 14px;
+  font-size: 1.25rem;
+  font-weight: 900;
   line-height: 1.4;
   margin-bottom: 8px;
 }
