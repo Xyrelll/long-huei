@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArticleContentBlock, ArticleContent } from '@/types/articleContent';
+import { ArticleContentBlock, ArticleContent, LinkBlock, TextBlock } from '@/types/articleContent';
 
 interface ArticleContentRendererProps {
   blocks?: ArticleContentBlock[];
@@ -27,7 +27,6 @@ export default function ArticleContentRenderer({ blocks, content }: ArticleConte
           <div className="article-toc">
             <TableOfContentsComponent
               block={content.tableOfContents}
-              index={0}
             />
           </div>
         )}
@@ -322,7 +321,6 @@ export default function ArticleContentRenderer({ blocks, content }: ArticleConte
           <TableOfContentsComponent
             key={block.id || index}
             block={block}
-            index={index}
           />
         );
 
@@ -427,12 +425,12 @@ export default function ArticleContentRenderer({ blocks, content }: ArticleConte
       // Check if current block is text and next block is link
       if (currentBlock.type === 'text' && i + 1 < blocks.length && blocks[i + 1].type === 'link') {
         const textBlock = currentBlock;
-        const linkBlock = blocks[i + 1];
+        const linkBlock = blocks[i + 1] as LinkBlock;
         const textStyle = textBlock.style || {};
         const linkStyle = linkBlock.style || {};
         
         // Check if there's a text block after the link
-        const nextTextBlock = i + 2 < blocks.length && blocks[i + 2].type === 'text' ? blocks[i + 2] : null;
+        const nextTextBlock = i + 2 < blocks.length && blocks[i + 2].type === 'text' ? (blocks[i + 2] as TextBlock) : null;
         const nextTextStyle = nextTextBlock?.style || {};
         
         // Use the style from the first text block, but merge marginBottom from the last block
@@ -498,7 +496,7 @@ export default function ArticleContentRenderer({ blocks, content }: ArticleConte
 }
 
 // Table of Contents Component
-function TableOfContentsComponent({ block, index }: { block: ArticleContentBlock; index: number }) {
+function TableOfContentsComponent({ block }: { block: ArticleContentBlock }) {
   const [isOpen, setIsOpen] = useState(false);
   
   if (block.type !== 'tableOfContents') return null;
