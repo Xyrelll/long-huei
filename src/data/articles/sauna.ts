@@ -1,5 +1,7 @@
 // Shared article data for Sauna category
 // Can be imported by both client and server components
+import { ArticleContent } from '@/types/articleContent';
+import { saunaArticleContentBlocks } from './saunaContentBlocks';
 
 export interface SaunaArticle {
   id: number;
@@ -11,6 +13,8 @@ export interface SaunaArticle {
   views: number;
   tags?: string[];
   collapseId: string;
+  content?: string; // Legacy plain text content
+  contentBlocks?: ArticleContent; // New structured content blocks
 }
 
 export const saunaArticles: SaunaArticle[] = [
@@ -24,6 +28,7 @@ export const saunaArticles: SaunaArticle[] = [
     views: 5186,
     tags: ['澳門桑拿', '桑拿', '龍匯天下', '澳門旅遊'],
     collapseId: 'collapse-sauna1',
+    contentBlocks: saunaArticleContentBlocks[1],
   },
   {
     id: 2,
@@ -35,6 +40,7 @@ export const saunaArticles: SaunaArticle[] = [
     views: 4068,
     tags: ['澳門', '澳門桑拿', '澳門劇本殺', '桑拿'],
     collapseId: 'collapse-sauna2',
+    contentBlocks: saunaArticleContentBlocks[2],
   },
   {
     id: 3,
@@ -46,6 +52,7 @@ export const saunaArticles: SaunaArticle[] = [
     views: 1936,
     tags: ['澳門龍匯天下水療', '水療龍匯', '龍匯澳門水療', '龍匯天下澳門水療'],
     collapseId: 'collapse-macao-waterrr',
+    contentBlocks: saunaArticleContentBlocks[3],
   },
   {
     id: 4,
@@ -57,6 +64,7 @@ export const saunaArticles: SaunaArticle[] = [
     views: 1503,
     tags: ['澳門水療', '龍匯澳門水療', '澳門龍匯天下水療', '龍匯天下水療'],
     collapseId: 'collapse-macao-waterr',
+    contentBlocks: saunaArticleContentBlocks[4],
   },
   {
     id: 5,
@@ -68,6 +76,7 @@ export const saunaArticles: SaunaArticle[] = [
     views: 1885,
     tags: ['澳門按摩', '澳門桑拿', '龍匯天下按摩', '澳門龍匯天下'],
     collapseId: 'collapse-macao-massage-1',
+    contentBlocks: saunaArticleContentBlocks[5],
   },
   {
     id: 6,
@@ -79,6 +88,7 @@ export const saunaArticles: SaunaArticle[] = [
     views: 2232,
     tags: ['澳門按摩', '龍匯澳門按摩', '澳門龍匯天下', '龍匯按摩'],
     collapseId: 'collapse-macao-massage',
+    contentBlocks: saunaArticleContentBlocks[6],
   },
   {
     id: 7,
@@ -90,6 +100,7 @@ export const saunaArticles: SaunaArticle[] = [
     views: 2307,
     tags: ['澳門桑拿', '龍匯澳門按摩', '澳門按摩', '澳門劇本殺', '澳門龍匯天下'],
     collapseId: 'collapse-macao-sauna-how',
+    contentBlocks: saunaArticleContentBlocks[7],
   },
   {
     id: 8,
@@ -101,6 +112,7 @@ export const saunaArticles: SaunaArticle[] = [
     views: 2278,
     tags: ['澳門桑拿', '澳門水療', '澳門劇本殺', '澳門旅遊', '澳門龍匯天下', '龍匯天下包車', '龍匯天下'],
     collapseId: 'collapse-macao-spa',
+    contentBlocks: saunaArticleContentBlocks[8],
   },
   {
     id: 9,
@@ -112,6 +124,7 @@ export const saunaArticles: SaunaArticle[] = [
     views: 2098,
     tags: ['澳門桑拿', '澳門劇本殺', '澳門', '龍匯天下', '桑拿'],
     collapseId: 'collapse-sauna4',
+    contentBlocks: saunaArticleContentBlocks[9],
   },
   {
     id: 10,
@@ -123,6 +136,7 @@ export const saunaArticles: SaunaArticle[] = [
     views: 2349,
     tags: ['澳門', '澳門推薦', '澳門旅遊', '桑拿', '澳門劇本殺', '澳門桑拿', '龍匯天下'],
     collapseId: 'collapse-sauna3',
+    contentBlocks: saunaArticleContentBlocks[10],
   },
   {
     id: 11,
@@ -134,6 +148,7 @@ export const saunaArticles: SaunaArticle[] = [
     views: 2364,
     tags: ['澳門旅遊', '澳門', '澳門桑拿'],
     collapseId: 'collapse-sauna',
+    contentBlocks: saunaArticleContentBlocks[11],
   },
 ];
 
