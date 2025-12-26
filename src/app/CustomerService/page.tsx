@@ -22,7 +22,7 @@ export default function CustomerServicePage() {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: '首頁', url: 'https://long-huei.vercel.app/' },
+    { name: '首頁', url: 'https://long-huei.vercel.app' },
     { name: '專人客服', url: 'https://long-huei.vercel.app/CustomerService' },
   ]);
 

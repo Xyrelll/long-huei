@@ -72,7 +72,7 @@ function EntertainmentContent() {
 export default function EntertainmentPage() {
 
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: '首頁', url: 'https://long-huei.vercel.app/' },
+    { name: '首頁', url: 'https://long-huei.vercel.app' },
     { name: '其他娛樂', url: 'https://long-huei.vercel.app/ArticleCategory/Entertainment' },
   ]);
 

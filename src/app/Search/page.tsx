@@ -339,7 +339,7 @@ function SearchContent() {
 export default function SearchPage() {
 
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: '首頁', url: 'https://long-huei.vercel.app/' },
+    { name: '首頁', url: 'https://long-huei.vercel.app' },
     { name: '搜尋', url: 'https://long-huei.vercel.app/Search' },
   ]);
 

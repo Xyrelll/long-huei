@@ -71,7 +71,7 @@ function SaunaContent() {
 export default function SaunaPage() {
 
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: '首頁', url: 'https://long-huei.vercel.app/' },
+    { name: '首頁', url: 'https://long-huei.vercel.app' },
     { name: '桑拿', url: 'https://long-huei.vercel.app/ArticleCategory/Sauna' },
   ]);
 

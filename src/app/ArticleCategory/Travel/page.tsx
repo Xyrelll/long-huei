@@ -73,7 +73,7 @@ function TravelContent() {
 export default function TravelPage() {
 
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: '首頁', url: 'https://long-huei.vercel.app/' },
+    { name: '首頁', url: 'https://long-huei.vercel.app' },
     { name: '旅遊', url: 'https://long-huei.vercel.app/ArticleCategory/Travel' },
   ]);
 

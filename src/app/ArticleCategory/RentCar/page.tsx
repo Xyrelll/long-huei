@@ -72,7 +72,7 @@ function RentCarContent() {
 export default function RentCarPage() {
 
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: '首頁', url: 'https://long-huei.vercel.app/' },
+    { name: '首頁', url: 'https://long-huei.vercel.app' },
     { name: '包車', url: 'https://long-huei.vercel.app/ArticleCategory/RentCar' },
   ]);
 

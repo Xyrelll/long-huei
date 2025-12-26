@@ -37,9 +37,9 @@ export async function generateMetadata({
     // Convert relative paths to absolute URLs for Open Graph
     let articleImage = article.image || article.imageMobile || '/Images/logo-m.png';
     if (articleImage.startsWith('/')) {
-      articleImage = `https://long-huei.vercel.app/${articleImage}`;
+      articleImage = `https://long-huei.vercel.app${articleImage}`;
     } else if (!articleImage.startsWith('http')) {
-      articleImage = `https://long-huei.vercel.app/${articleImage}`;
+      articleImage = `https://long-huei.vercel.app${articleImage}`;
     }
 
     return genMeta({

@@ -73,7 +73,7 @@ function BookingContent() {
 export default function BookingPage() {
 
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: '首頁', url: 'https://long-huei.vercel.app/' },
+    { name: '首頁', url: 'https://long-huei.vercel.app' },
     { name: '訂房', url: 'https://long-huei.vercel.app/ArticleCategory/Booking' },
   ]);
 
