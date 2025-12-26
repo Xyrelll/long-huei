@@ -355,20 +355,24 @@ function ArticleContent() {
               <div className="flex flex-col lg:flex-row  items-start justify-center">
                  {/* Left Sidebar - Social Media */}
                  <div
-                   className="w-[95%] lg:w-20 flex mb-4 lg:mb-0"
+                   className="w-full lg:w-20 flex mb-4 lg:mb-0"
+                   style={{
+                     paddingLeft: isMobile ? "10px" : "0",
+                     paddingRight: isMobile ? "10px" : "0",
+                   }}
                  >
                    <div
                      style={{
                       marginTop: isMobile ? "0px" : "10px",
                        paddingTop:  isMobile ? "10px" : "20px",
-                       paddingLeft: isMobile ? "10px" : "10px",
-                       paddingRight: isMobile ? "10px" : "10px",
+                       paddingLeft: isMobile ? "0px" : "10px",
+                       paddingRight: isMobile ? "0px" : "10px",
                        paddingBottom: isMobile ? "10px" : "30px",
                        borderRadius: isMobile ? "50px" : "50px",
                      }}
                      className="w-full lg:w-auto bg-white flex flex-row lg:flex-col items-center lg:items-start justify-start lg:justify-start gap-4 lg:gap-0 sticky top-24"
                    >
-                     <div className="text-gray-500 text-sm lg:mb-4">
+                     <div className="text-gray-500 text-sm lg:mb-4" style={{ paddingLeft: isMobile ? "25px" : "0" }}>
                        加入
                        <br className="hidden lg:block" />
                        <span className="lg:hidden"> </span>
@@ -380,13 +384,13 @@ function ArticleContent() {
                      }}
                      className="flex flex-row lg:flex-col gap-4 lg:mt-5">
                        <a
-                         href="#"
+                         href="https://lin.ee/rQgNQ6D"
                          className="w-8 h-8 rounded-md bg-green-500 flex items-center justify-center hover:opacity-80 transition-opacity flex-shrink-0"
                        >
                          <i className="bi bi-line text-white text-xl"></i>
                        </a>
                        <a
-                         href="#"
+                         href="https://www.instagram.com/lhts.8899/"
                          className="w-8 h-8 rounded-md bg-gradient-to-br from-purple-600 to-pink-500 flex items-center justify-center hover:opacity-80 transition-opacity flex-shrink-0"
                        >
                          <i className="bi bi-instagram text-white text-xl"></i>
@@ -454,7 +458,7 @@ function ArticleContent() {
                   className="mt-8 mb-8">
                     <a 
                       href="https://lin.ee/rQgNQ6D"
-                      target="_blank"
+                      // target="_blank"
                       rel="noopener noreferrer"
                       className="inline-block"
                     >

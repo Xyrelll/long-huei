@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { useRouter } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 import TravelIcon from '../../../../public/Images/nacicon';
 import '../../../styles/navbar.css';
 
@@ -199,6 +199,16 @@ export default function Navbar() {
   const dropdownButtonRef = useRef<HTMLLIElement>(null);
   const dropdownMenuRef = useRef<HTMLDivElement>(null);
   const isDropdownRef = useRef(false);
+  const pathname = usePathname();
+  const router = useRouter();
+
+  const handleHomeClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (pathname === '/') {
+      e.preventDefault();
+      router.refresh();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -289,7 +299,7 @@ export default function Navbar() {
           </button>
 
           {/* Logo - Centered */}
-          <Link href="/" className="navbar-brand">
+          <Link href="/" className="navbar-brand" onClick={handleHomeClick}>
             <Image
               src="/Images/logo-m.png"
               alt="Dragon Gathering World"
@@ -361,7 +371,7 @@ export default function Navbar() {
         {/* Desktop Navigation */}
         <div className="navbar-nav-desktop hidden lg:flex  ">
           {/* Desktop Logo */}
-          <Link href="/" className="navbar-brand-desktop ">
+          <Link href="/" className="navbar-brand-desktop " onClick={handleHomeClick}>
             <Image
               src="/Images/logo-m.png"
               alt="Dragon Gathering World"

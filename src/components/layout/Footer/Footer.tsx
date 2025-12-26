@@ -1,4 +1,7 @@
+'use client';
+
 import Link from 'next/link';
+import { usePathname, useRouter } from 'next/navigation';
 
 const footerLinks = [
   { label: '龍匯天下', href: '/' },
@@ -13,10 +16,21 @@ const footerLinks = [
 ];
 
 export default function Footer() {
+  const pathname = usePathname();
+  const router = useRouter();
+
+  const handleHomeClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (pathname === '/') {
+      e.preventDefault();
+      router.refresh();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
   return (
     <footer id="footer" className="w-full bg-black py-8 mb-100 flex flex-col mt-8 border-t border-white/20 md:border-t-0  relative ">
       {/* Copyright - Desktop: Top position */}
-      <p className="copyright text-center text-white text-xs hidden md:block mb-4">Copyright 2025 All Rights Reserved.</p>
+      <p className="copyright text-center text-white text-xs hidden md:block mb-4">Copyright {new Date().getFullYear()} All Rights Reserved.</p>
       
       {/* Desktop: Horizontal layout */}
       <ul className="footer-links-desktop hidden md:flex flex-wrap justify-center items-center gap-2 list-none p-0 m-0 px-4">
@@ -25,6 +39,7 @@ export default function Footer() {
             <Link
               href={link.href}
               className="text-white text-sm hover:text-[#FFCD83] transition-colors"
+              onClick={link.href === '/' ? handleHomeClick : undefined}
             >
               {link.label}
             </Link>
@@ -42,6 +57,7 @@ export default function Footer() {
             <Link
               href={link.href}
               className="text-white text-sm hover:text-[#FFCD83] transition-colors"
+              onClick={link.href === '/' ? handleHomeClick : undefined}
             >
               {link.label}
             </Link>
@@ -50,7 +66,7 @@ export default function Footer() {
       </ul>
       
       {/* Copyright - Mobile: Bottom position */}
-      <p className="copyright mobile-only text-center text-white text-xs mt-auto w-full">Copyright 2025 All Rights Reserved.</p>
+      <p className="copyright mobile-only text-center text-white text-xs mt-auto w-full">Copyright {new Date().getFullYear()} All Rights Reserved.</p>
     </footer>
   );
 }
