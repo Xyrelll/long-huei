@@ -22,8 +22,8 @@ export default function CustomerServicePage() {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: '首頁', url: 'https://longhuei.netlify.app' },
-    { name: '專人客服', url: 'https://longhuei.netlify.app/CustomerService' },
+    { name: '首頁', url: 'https://long-huei.vercel.app/' },
+    { name: '專人客服', url: 'https://long-huei.vercel.app/CustomerService' },
   ]);
 
   const structuredData = {
@@ -31,7 +31,7 @@ export default function CustomerServicePage() {
     "@type": "ContactPage",
     name: "專人客服 - 龍匯天下",
     description: "龍匯天下專人客服-澳門旅遊-訂房-包車-桑拿-專人客服",
-    url: "https://longhuei.netlify.app/CustomerService",
+    url: "https://long-huei.vercel.app/CustomerService",
     inLanguage: "zh-TW",
     mainEntity: {
       "@type": "Organization",
@@ -49,8 +49,8 @@ export default function CustomerServicePage() {
       <PageMetadata
         title="專人客服 - 龍匯天下"
         description="龍匯天下專人客服-澳門旅遊-訂房-包車-桑拿-專人客服。加入LINE或WeChat好友享優惠，提供24小時專業客服服務。"
-        url="https://longhuei.netlify.app/CustomerService"
-        image="https://longhuei.netlify.app/Images/logo-m.png"
+        url="https://long-huei.vercel.app/CustomerService"
+        image="https://long-huei.vercel.app/Images/logo-m.png"
       />
       <script
         type="application/ld+json"

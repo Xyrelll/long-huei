@@ -1,7 +1,7 @@
 export const SITE_CONFIG = {
   name: '龍匯天下',
   description: '探索澳門，享受極致服務',
-  url: 'https://longhuei.netlify.app',
+  url: 'https://long-huei.vercel.app',
 };
 
 export const COLORS = {

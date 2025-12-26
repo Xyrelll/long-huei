@@ -50,17 +50,13 @@ function SearchContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const [searchKeyword, setSearchKeyword] = useState("");
-  const [showError, setShowError] = useState(false);
-  const [allArticles, setAllArticles] = useState<Article[]>([]);
-  const [searchResults, setSearchResults] = useState<Article[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [hasSearched, setHasSearched] = useState(false);
-  const [windowWidth, setWindowWidth] = useState<number>(1024);
-
-  // Load all articles
-  useEffect(() => {
+  const [showError, 
+    setShowError] = useState(false);
+  
+  // Initialize articles with lazy initialization to avoid setState in effect
+  const [allArticles, setAllArticles] = useState<Article[]>(() => {
     // Combine all articles with category info
-    const articles: Article[] = [
+    return [
       ...(bookingArticles || []).map((a: Omit<Article, "category">) => ({
         ...a,
         category: "訂房",
@@ -85,10 +81,19 @@ function SearchContent() {
         category: "常見問答",
       })),
     ];
-
-    setAllArticles(articles);
-    setLoading(false);
-  }, []);
+  });
+  
+  const [searchResults, setSearchResults] = useState<Article[]>([]);
+  const [loading, setLoading] = useState(false);
+  const [hasSearched, setHasSearched] = useState(false);
+  
+  // Initialize window width safely
+  const [windowWidth, setWindowWidth] = useState<number>(() => {
+    if (typeof window !== "undefined") {
+      return window.innerWidth;
+    }
+    return 1024;
+  });
 
   // Perform search function
   const performSearch = useCallback((keyword: string) => {
@@ -130,7 +135,10 @@ function SearchContent() {
         performSearch(keyword);
       });
     } else if (keyword) {
-      setSearchKeyword(keyword);
+      // Use requestAnimationFrame to defer state update
+      requestAnimationFrame(() => {
+        setSearchKeyword(keyword);
+      });
     }
   }, [searchParams, allArticles, performSearch]);
 
@@ -140,9 +148,8 @@ function SearchContent() {
       setWindowWidth(window.innerWidth);
     };
 
-    // Set initial width
+    // Only add event listener, initial width is set via state initialization
     if (typeof window !== "undefined") {
-      setWindowWidth(window.innerWidth);
       window.addEventListener("resize", handleResize);
     }
 
@@ -499,7 +506,7 @@ function SearchContent() {
 
 export default function SearchPage() {
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: "首頁", url: "https://long-huei.vercel.app" },
+    { name: "首頁", url: "https://long-huei.vercel.app/" },
     { name: "搜尋", url: "https://long-huei.vercel.app/Search" },
   ]);
 

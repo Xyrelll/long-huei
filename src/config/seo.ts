@@ -42,7 +42,7 @@ export function generateArticleSchema({
     "@type": "Article",
     headline: title,
     description,
-    image: image || "https://longhuei.netlify.app/og-image.jpg",
+    image: image || "https://long-huei.vercel.app/og-image.jpg",
     datePublished,
     dateModified: dateModified || datePublished,
     author: {
@@ -54,7 +54,7 @@ export function generateArticleSchema({
       name: "龍匯天下",
       logo: {
         "@type": "ImageObject",
-        url: "https://longhuei.netlify.app/logo-m.png",
+        url: "https://long-huei.vercel.app/logo-m.png",
       },
     },
     mainEntityOfPage: {

@@ -42,8 +42,8 @@ export default function RootLayout({
               "@type": "TravelAgency",
               name: "龍匯天下",
               description: "探索澳門，享受極致服務。提供豪華酒店訂房、專業包車導覽、桑拿體驗等高端定制服務。",
-              url: "https://longhuei.netlify.app",
-              logo: "https://longhuei.netlify.app/logo-m.png",
+              url: "https://long-huei.vercel.app/",
+              logo: "https://long-huei.vercel.app/logo-m.png",
               address: {
                 "@type": "PostalAddress",
                 addressCountry: "MO",

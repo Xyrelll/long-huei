@@ -71,8 +71,8 @@ function SaunaContent() {
 export default function SaunaPage() {
 
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: '首頁', url: 'https://longhuei.netlify.app' },
-    { name: '桑拿', url: 'https://longhuei.netlify.app/ArticleCategory/Sauna' },
+    { name: '首頁', url: 'https://long-huei.vercel.app/' },
+    { name: '桑拿', url: 'https://long-huei.vercel.app/ArticleCategory/Sauna' },
   ]);
 
   const structuredData = {
@@ -80,7 +80,7 @@ export default function SaunaPage() {
     "@type": "CollectionPage",
     name: "澳門桑拿攻略",
     description: "探索澳門桑拿完整攻略，包含水療、按摩、劇本殺等娛樂場所介紹",
-    url: "https://longhuei.netlify.app/ArticleCategory/Sauna",
+    url: "https://long-huei.vercel.app/ArticleCategory/Sauna",
     inLanguage: "zh-TW",
     mainEntity: {
       "@type": "ItemList",
@@ -92,7 +92,7 @@ export default function SaunaPage() {
           "@type": "Article",
           headline: article.title,
           description: article.description,
-          url: `https://longhuei.netlify.app${article.link}`,
+          url: `https://long-huei.vercel.app${article.link}`,
         },
       })),
     },
@@ -103,8 +103,8 @@ export default function SaunaPage() {
       <PageMetadata
         title="澳門桑拿攻略 - 水療、按摩、劇本殺全指南 | 龍匯天下"
         description="探索澳門桑拿完整攻略，包含水療、按摩、劇本殺等娛樂場所介紹。精選澳門桑拿必看文章，從入門技巧到熱門店家推薦一次搞定，讓您的澳門之旅更加放鬆享受。"
-        url="https://longhuei.netlify.app/ArticleCategory/Sauna"
-        image="https://longhuei.netlify.app/Images/logo-m.png"
+        url="https://long-huei.vercel.app/ArticleCategory/Sauna"
+        image="https://long-huei.vercel.app/Images/logo-m.png"
       />
       <script
         type="application/ld+json"

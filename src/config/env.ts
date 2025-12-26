@@ -8,7 +8,7 @@ const requiredEnvVars = {
 } as const;
 
 const optionalEnvVars = {
-  NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL || 'https://longhuei.netlify.app',
+  NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL || 'https://long-huei.vercel.app',
   NEXT_PUBLIC_GA_ID: process.env.NEXT_PUBLIC_GA_ID || '',
 } as const;
 
