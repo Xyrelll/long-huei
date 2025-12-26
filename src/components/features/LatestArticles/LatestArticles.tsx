@@ -305,7 +305,7 @@ function ArticleCarousel({ title, articles }: { title: string; articles: Article
                 </div>
                 <div className="col-8 col-md-8 pl-2" style={{ position: 'relative', flex: '1', minWidth: 0 }}>
                   <Link href={article.link}>
-                    <h3 className="card-title text-white text-sm mb-2">{article.title}</h3>
+                    <h3 className="card-title text-sm mb-2">{article.title}</h3>
                   </Link>
                   <div className="card-text" style={{ position: 'relative', display: 'flex', alignItems: 'center', width: '100%', paddingRight: '32px' }}>
                     <div style={{ flex: '1', minWidth: 0 }}>

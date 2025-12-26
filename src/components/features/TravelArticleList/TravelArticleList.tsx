@@ -55,7 +55,7 @@ export default function TravelArticleList({ articles }: TravelArticleListProps) 
             </div>
             <div className="col-8 col-md-8 pl-2">
               <Link href={article.link}>
-                <h3 className="card-title text-white text-sm mb-2">{article.title}</h3>
+                <h3 className="card-title text-sm mb-2">{article.title}</h3>
               </Link>
               <div className="card-text row flex items-center justify-between">
                 <div className="col-8">
