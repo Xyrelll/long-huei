@@ -93,7 +93,7 @@ export default function QuestionPage() {
           "@type": "Article",
           headline: article.title,
           description: article.description,
-          url: `https://long-huei.vercel.app/${article.link}`,
+          url: `https://long-huei.vercel.app${article.link}`,
         },
       })),
     },
