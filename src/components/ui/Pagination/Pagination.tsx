@@ -50,7 +50,7 @@ export default function Pagination({
             <li
               className="page-item border-r border-white bg-black hover:bg-[#2C261C] transition-colors"
               style={{
-                padding: '10px 10px',
+                padding: '5px 10px',
               }}
             >
               <Link
@@ -73,7 +73,7 @@ export default function Pagination({
               <li
                 key={pageNum}
                 style={{
-                  padding: '10px 10px',
+                  padding: '5px 10px',
                 }}
                 className={`page-item ${shouldHaveBorder ? 'border-r border-white' : ''} ${
                   pageNum === currentPage ? 'bg-[#CD861A]' : 'bg-black hover:bg-[#2C261C]'
@@ -98,7 +98,7 @@ export default function Pagination({
             <li
               className="page-item bg-black hover:bg-[#2C261C] transition-colors"
               style={{
-                padding: '10px 10px',
+                padding: '5px 10px',
               }}
             >
               <Link

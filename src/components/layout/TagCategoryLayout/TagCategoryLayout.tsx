@@ -18,6 +18,11 @@ interface TagCategoryLayoutProps {
   
   // Article list component
   ArticleListComponent: React.ComponentType<{ articles: any[] }>;
+  
+  // Optional styling
+  width?: string | number;
+  style?: React.CSSProperties;
+  className?: string;
 }
 
 function TagCategoryLayoutContent({
@@ -26,6 +31,9 @@ function TagCategoryLayoutContent({
   currentPage,
   totalPages,
   ArticleListComponent,
+  width,
+  style,
+  className,
 }: TagCategoryLayoutProps) {
   const [isMobile, setIsMobile] = useState(false);
 
@@ -39,10 +47,21 @@ function TagCategoryLayoutContent({
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
+  // Determine width: use prop if provided, otherwise use default behavior
+  const containerWidth = width !== undefined 
+    ? width 
+    : (isMobile ? '100%' : '50%');
+
+  // Merge styles: prop style takes precedence, but width is applied separately
+  const containerStyle: React.CSSProperties = {
+    width: containerWidth,
+    ...style,
+  };
+
   return (
     <>
       {/* Main Content - Articles List - Full Width (No Sidebar) */}
-      <div style={{ width: isMobile ? '100%' : '50%' }}>
+      <div style={containerStyle} className={className}>
         <ArticleListComponent articles={currentArticles} />
 
         {/* Pagination */}

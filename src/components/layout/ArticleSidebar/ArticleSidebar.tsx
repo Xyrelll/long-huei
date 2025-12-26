@@ -71,7 +71,7 @@ export default function ArticleSidebar({
                 href={category.href}
                 className={`block py-2 transition-colors ${
                   category.active || category.name === activeCategory
-                    ? 'text-[#FFCD83] font-bold'
+                    ? 'text-[#ce8211] font-bold'
                     : 'text-white hover:text-[#FFCD83]'
                 }`}
               >

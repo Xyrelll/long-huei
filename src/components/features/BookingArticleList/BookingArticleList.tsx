@@ -157,9 +157,16 @@ export default function BookingArticleList({ articles }: BookingArticleListProps
                       <Link
                         key={idx}
                         href={`/Tag/${tag}`}
-                        className="px-3 py-1 h-5 flex justify-center items-center rounded-full bg-[#ce8211] text-black text-xs font-medium rounded-lg hover:bg-[#CD861A] hover:text-white transition-colors duration-300"
+                        style={{    
+                        paddingLeft: '12px',
+                        paddingRight: '12px',
+                        paddingTop: '12px',
+                        paddingBottom: '12px',
+                        borderRadius: '50px',
+                        }}
+                        className="px-3 py-1 h-5 flex justify-center items-center rounded-full bg-[#ce8211] text-white text-xs font-medium rounded-lg hover:bg-[#CD861A] hover:text-white transition-colors duration-300"
                       >
-                      &nbsp;  &nbsp;&nbsp;{tag}&nbsp;&nbsp;&nbsp;
+                     {tag}
                       </Link>
                     ))}
                   </div>
