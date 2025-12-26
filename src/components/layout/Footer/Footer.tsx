@@ -50,7 +50,7 @@ export default function Footer() {
       </ul>
       
       {/* Copyright - Mobile: Bottom position */}
-      <p className="copyright text-center text-white text-xs flex md:hidden mt-auto w-full  justify-center items-center">Copyright 2025 All Rights Reserved.</p>
+      <p className="copyright mobile-only text-center text-white text-xs mt-auto w-full">Copyright 2025 All Rights Reserved.</p>
     </footer>
   );
 }

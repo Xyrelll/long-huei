@@ -575,6 +575,10 @@ p {
   padding: 20px 0;
 }
 
+.inner-page h3 {
+  font-weight: 900;
+}
+
 section {
   max-width: 1200px;
   margin: 0 auto;
@@ -673,6 +677,19 @@ footer {
   padding: 2%;
   width: 100%;
   margin-top: 30px;
+  position: relative;
+}
+
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #444;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
 }
 
 footer p.copyright {
@@ -680,6 +697,16 @@ footer p.copyright {
   font-weight: 900;
   margin-bottom: 10px;
   color: #ddd;
+}
+
+footer p.copyright.mobile-only {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  footer p.copyright.mobile-only {
+    display: none !important;
+  }
 }
 
 footer ul.footer-links-desktop,
@@ -716,7 +743,6 @@ footer ul li a:hover {
   footer {
     flex-direction: column;
     display: flex;
-    border-top: 1px solid #444;
     margin-top: 50px !important;
     margin-bottom: 30px;
     padding-top: 10px;
