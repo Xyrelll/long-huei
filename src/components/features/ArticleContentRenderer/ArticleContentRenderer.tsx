@@ -335,6 +335,7 @@ export default function ArticleContentRenderer({ blocks, content }: ArticleConte
               padding: sectionStyle.padding || '0',
               backgroundColor: sectionStyle.backgroundColor,
               borderRadius: sectionStyle.borderRadius,
+              ...(block.borderTop === 'on' && { borderTop: '1px solid #808080' }),
             }}
             className="section-group"
           >

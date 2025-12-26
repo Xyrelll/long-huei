@@ -186,6 +186,7 @@ export interface SectionBlock extends BaseContentBlock {
   };
   description?: string;
   content?: ArticleContentBlock[]; // Nested content blocks
+  borderTop?: 'on' | 'off'; // Add border-top when value is 'on'
   style?: {
     marginTop?: string;
     marginBottom?: string;

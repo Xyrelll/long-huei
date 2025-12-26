@@ -66,7 +66,9 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
         type: 'section',
         title: '🚗 龍匯天下：澳門包車旅遊的專屬優勢與服務內容',
         titleLevel: 2,
+        
         id: 'longhui-advantages',
+        borderTop: 'on',
         image: {
           src: '/rentcar/id1/S__256245805.jpg',
           alt: '🚗 龍匯天下：澳門包車旅遊的專屬優勢與服務內容',
@@ -150,6 +152,7 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
         type: 'section',
         title: '⏰ 澳門包車旅遊服務時間與使用範圍',
         titleLevel: 2,
+        borderTop: 'on',
         id: 'service-time-scope',
         content: [
           {
@@ -208,6 +211,7 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
         type: 'section',
         title: '🗺️ 澳門包車旅遊：預訂與行程參考',
         titleLevel: 2,
+        borderTop: 'on',
         id: 'booking-itinerary',
         content: [
           {
@@ -266,6 +270,7 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
         type: 'section',
         title: '💡 澳門包車旅遊常見問題 Q&A',
         titleLevel: 2,
+        borderTop: 'on',
         id: 'faq',
         content: [
           {
@@ -434,6 +439,7 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
         type: 'section',
         title: '🚗 龍匯天下：全方位澳門專車接送服務種類介紹',
         titleLevel: 2,
+        borderTop: 'on',
         id: 'service-types',
         content: [
           {
@@ -552,6 +558,7 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
         type: 'section',
         title: '💎 龍匯天下專車接送服務的頂級價值體現',
         titleLevel: 2,
+        borderTop: 'on',
         id: 'premium-value',
         content: [
           {
@@ -593,6 +600,7 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
         type: 'section',
         title: '💡 澳門專車接送服務常見問題與快速解答',
         titleLevel: 2,
+        borderTop: 'on',
         id: 'faq',
         content: [
           {
@@ -675,6 +683,7 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
         type: 'section',
         title: '總結：您的成功，從龍匯天下專車接送開始',
         titleLevel: 2,
+        borderTop: 'on',
         id: 'conclusion',
         content: [
           {
@@ -771,6 +780,7 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
         type: 'section',
         title: '🚗 澳門機場接送推薦方案一：最舒適高效的私人專車接送',
         titleLevel: 2,
+        borderTop: 'on',
         id: 'private-car-service',
         content: [
           {
@@ -850,6 +860,7 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
         type: 'section',
         title: '🚌 澳門機場接送推薦方案二：豪華酒店免費穿梭巴士',
         titleLevel: 2,
+        borderTop: 'on',
         id: 'hotel-shuttle',
         content: [
           {
@@ -899,6 +910,7 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
         type: 'section',
         title: '🚖 澳門機場接送推薦方案三：隨叫隨走的士/計程車（機動性高）',
         titleLevel: 2,
+        borderTop: 'on',
         id: 'taxi-service',
         content: [
           {
@@ -983,6 +995,7 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
         type: 'section',
         title: '💡 澳門機場接送服務常見問題與快速解答',
         titleLevel: 2,
+        borderTop: 'on',
         id: 'faq',
         content: [
           {
@@ -1065,6 +1078,7 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
         type: 'section',
         title: '結論：鎖定您的最佳澳門機場接送方案',
         titleLevel: 2,
+        borderTop: 'on',
         id: 'conclusion',
         content: [
           {
@@ -1138,6 +1152,7 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
         type: 'section',
         title: '🚗 一、澳門包車服務有哪些類型？',
         titleLevel: 2,
+        borderTop: 'on',
         id: 'service-types',
         content: [
           {
@@ -1161,6 +1176,7 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
         type: 'section',
         title: '🏙️ 二、熱門澳門包車行程推薦',
         titleLevel: 2,
+        borderTop: 'on',
         id: 'popular-itineraries',
         content: [
           {
@@ -1185,6 +1201,7 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
         type: 'section',
         title: '💰 三、澳門包車參考',
         titleLevel: 2,
+        borderTop: 'on',
         id: 'pricing-reference',
         content: [
           {
@@ -1209,6 +1226,7 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
         type: 'section',
         title: '⚠️ 四、澳門包車注意事項',
         titleLevel: 2,
+        borderTop: 'on',
         id: 'precautions',
         content: [
           {
@@ -1233,6 +1251,7 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
         type: 'section',
         title: '💬 常見問答',
         titleLevel: 2,
+        borderTop: 'on',
         id: 'faq',
         content: [
           {
@@ -1299,6 +1318,7 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
         type: 'section',
         title: '🏁 結語：用包車的方式，體驗更自在的澳門',
         titleLevel: 2,
+        borderTop: 'on',
         id: 'conclusion',
         content: [
           {
@@ -2000,6 +2020,7 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
         type: 'section',
         title: '澳門機場接送服務特色',
         titleLevel: 2,
+        borderTop: 'on',
         id: 'service-features',
         content: [
           {
@@ -2024,6 +2045,7 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
         type: 'section',
         title: '適合使用澳門機場接送的族群',
         titleLevel: 2,
+        borderTop: 'on',
         id: 'target-groups',
         content: [
           {
@@ -2070,6 +2092,7 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
         type: 'section',
         title: '小結：澳門機場接送讓你的旅程零煩惱',
         titleLevel: 2,
+        borderTop: 'on',
         id: 'conclusion',
         content: [
           {
@@ -2344,6 +2367,7 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
         type: 'section',
         title: '尊榮車隊選擇，滿足不同旅遊需求',
         titleLevel: 2,
+        borderTop: 'on',
         id: 'fleet-selection',
         image: {
           src: '/rentcar/id10/parking-4061323_1280.jpg',
@@ -2383,6 +2407,7 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
         type: 'section',
         title: '澳門包車推薦-行程範例',
         titleLevel: 2,
+        borderTop: 'on',
         id: 'itinerary-examples',
         content: [
           {
@@ -2416,6 +2441,7 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
         type: 'section',
         title: '澳門包車推薦｜服務特色',
         titleLevel: 2,
+        borderTop: 'on',
         id: 'service-features',
         content: [
           {
@@ -2449,6 +2475,7 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
         type: 'section',
         title: '誰適合使用澳門包車服務？',
         titleLevel: 2,
+        borderTop: 'on',
         id: 'who-is-it-for',
         content: [
           {
@@ -2474,6 +2501,7 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
         type: 'section',
         title: '立即預約，開啟尊榮旅程！',
         titleLevel: 2,
+        borderTop: 'on',
         id: 'conclusion',
         content: [
           {
