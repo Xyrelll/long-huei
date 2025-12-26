@@ -1,5 +1,7 @@
 // Shared article data for RentCar category
 // Can be imported by both client and server components
+import { ArticleContent } from '@/types/articleContent';
+import { rentCarArticleContentBlocks } from './rentCarContentBlocks';
 
 export interface RentCarArticle {
   id: number;
@@ -11,6 +13,8 @@ export interface RentCarArticle {
   views: number;
   tags?: string[];
   collapseId: string;
+  content?: string; // Legacy plain text content
+  contentBlocks?: ArticleContent; // New structured content blocks
 }
 
 export const rentCarArticles: RentCarArticle[] = [
@@ -24,6 +28,7 @@ export const rentCarArticles: RentCarArticle[] = [
     views: 154,
     tags: ['澳門包車景點', '澳門包車'],
     collapseId: 'collapse-macao-rentalcar',
+    contentBlocks: rentCarArticleContentBlocks[1],
   },
   {
     id: 2,
@@ -35,6 +40,7 @@ export const rentCarArticles: RentCarArticle[] = [
     views: 251,
     tags: ['澳門找龍匯包車', '澳門包車', '包車接送'],
     collapseId: 'collapse-privatecar',
+    contentBlocks: rentCarArticleContentBlocks[2],
   },
   {
     id: 3,
@@ -46,6 +52,7 @@ export const rentCarArticles: RentCarArticle[] = [
     views: 513,
     tags: ['澳門包車', '澳門包車景點', '澳門找龍匯包車'],
     collapseId: 'collapse-airplane-rentcar',
+    contentBlocks: rentCarArticleContentBlocks[3],
   },
   {
     id: 4,
@@ -57,6 +64,7 @@ export const rentCarArticles: RentCarArticle[] = [
     views: 1147,
     tags: ['澳門找龍匯包車', '澳門包車景點', '澳門包車'],
     collapseId: 'collapse-macao-carpass',
+    contentBlocks: rentCarArticleContentBlocks[4],
   },
   {
     id: 5,
@@ -68,6 +76,7 @@ export const rentCarArticles: RentCarArticle[] = [
     views: 1132,
     tags: ['澳門機場接送', '澳門包車', '龍匯包車'],
     collapseId: 'collapse-airportrencar1',
+    contentBlocks: rentCarArticleContentBlocks[5],
   },
   {
     id: 6,
@@ -79,6 +88,7 @@ export const rentCarArticles: RentCarArticle[] = [
     views: 1137,
     tags: ['澳門包車', '包車接送', '澳門機場接送', '澳門接送'],
     collapseId: 'collapse-macao-baocar',
+    contentBlocks: rentCarArticleContentBlocks[6],
   },
   {
     id: 7,
@@ -90,6 +100,7 @@ export const rentCarArticles: RentCarArticle[] = [
     views: 1117,
     tags: ['澳門包車', '澳門旅遊'],
     collapseId: 'collapse-macao-onedaytrvl',
+    contentBlocks: rentCarArticleContentBlocks[7],
   },
   {
     id: 8,
@@ -101,6 +112,7 @@ export const rentCarArticles: RentCarArticle[] = [
     views: 1180,
     tags: ['澳門機場接送', '澳門機場', '澳門找龍匯包車', '龍匯包車'],
     collapseId: 'collapse-airportrencar',
+    contentBlocks: rentCarArticleContentBlocks[8],
   },
   {
     id: 9,
@@ -112,6 +124,7 @@ export const rentCarArticles: RentCarArticle[] = [
     views: 1139,
     tags: ['澳門包車', '澳門旅遊', '龍匯澳門', '包車推薦'],
     collapseId: 'collapse-rentcar1',
+    contentBlocks: rentCarArticleContentBlocks[9],
   },
   {
     id: 10,
@@ -123,20 +136,10 @@ export const rentCarArticles: RentCarArticle[] = [
     views: 1480,
     tags: ['澳門包車', '包車', '龍匯包車'],
     collapseId: 'collapse-macao-rent-car',
+    contentBlocks: rentCarArticleContentBlocks[10],
   },
   {
     id: 11,
-    title: '澳門包車｜豪華專車接送，尊享舒適旅程',
-    description: '想在澳門自由暢遊、舒適無憂？選擇【澳門包車】服務，讓您的旅程升級，無論是商務接待、婚禮包車、家庭出遊，還是私人觀光，我們都能為您量身打造專屬路線和尊榮體驗。',
-    image: '/rentcar/【澳門包車】三種頂級車種聰明挑，輕鬆解鎖高品質旅程_(1)-c.jpg',
-    imageMobile: '/rentcar/【澳門包車】三種頂級車種聰明挑，輕鬆解鎖高品質旅程_(1)-c.jpg',
-    link: '/Article/rentcal',
-    views: 1813,
-    tags: ['澳門包車', '澳門找龍匯包車', '龍匯天下旅遊', '澳門旅遊', '澳門景點'],
-    collapseId: 'collapse-rentcal',
-  },
-  {
-    id: 12,
     title: '【澳門包車】三種頂級車種聰明挑，輕鬆解鎖高品質旅程',
     description: '和家人朋友出遊澳門卻不知道要包什麼車嗎?那你來對地方了，小編給您統整了三種頂級車款的受眾，只要根據你的需求選擇就行了，怎麼樣?是不是很方便呀~廢話不多說，進正片！',
     image: '/rentcar/包車-c.png',
@@ -145,6 +148,19 @@ export const rentCarArticles: RentCarArticle[] = [
     views: 1548,
     tags: ['龍匯天下包車', '包車澳門龍匯', '龍匯包車', '澳門找龍匯包車'],
     collapseId: 'collapse-wei123',
+    contentBlocks: rentCarArticleContentBlocks[12],
+  },
+  {
+    id: 12,
+    title: '澳門包車｜豪華專車接送，尊享舒適旅程',
+    description: '想在澳門自由暢遊、舒適無憂？選擇【澳門包車】服務，讓您的旅程升級，無論是商務接待、婚禮包車、家庭出遊，還是私人觀光，我們都能為您量身打造專屬路線和尊榮體驗。',
+    image: '/rentcar/【澳門包車】三種頂級車種聰明挑，輕鬆解鎖高品質旅程_(1)-c.jpg',
+    imageMobile: '/rentcar/【澳門包車】三種頂級車種聰明挑，輕鬆解鎖高品質旅程_(1)-c.jpg',
+    link: '/Article/rentcal',
+    views: 1813,
+    tags: ['澳門包車', '澳門找龍匯包車', '龍匯天下旅遊', '澳門旅遊', '澳門景點'],
+    collapseId: 'collapse-rentcal',
+    contentBlocks: rentCarArticleContentBlocks[11],
   },
 ];
 
