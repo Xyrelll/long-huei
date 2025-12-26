@@ -570,6 +570,11 @@ p {
   line-height: 1.8em;
 }
 
+.search-error-message {
+  font-weight: 900 !important;
+  font-size: 1.25rem !important;
+}
+
 /* Inner Page Styles */
 .inner-page h1 {
   text-align: left;

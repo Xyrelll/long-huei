@@ -223,7 +223,7 @@ function SearchContent() {
     <>
       {/* Breadcrumb */}
       <nav className="nav-breadcrumb py-4" aria-label="breadcrumb">
-        <ol className="breadcrumb flex items-center gap-2 text-white text-sm">
+        <ol className="breadcrumb flex items-center justify-left gap-2 text-white text-sm">
           <li className="breadcrumb-item">
             <Link
               href="/"
@@ -252,13 +252,13 @@ function SearchContent() {
 
       {/* Search Section */}
       <div
-        className="flex flex-col items-center justify-center py-12"
+        className="flex flex-col items-center justify-center py-12 w-full"
         style={{
           paddingTop: "30px",
         }}
       >
         {/* Search Bar */}
-        <form onSubmit={handleSearch} className="w-full mx-auto max-w-2xl">
+        <form onSubmit={handleSearch} className="w-[85%] mx-auto max-w-2xl">
           <div className="relative">
             <div className="absolute inset-y-0 left-6 flex items-center pl-4 pointer-events-none">
               <i className="bi bi-search text-gray-400 text-xl"></i>
@@ -289,10 +289,8 @@ function SearchContent() {
                 paddingTop: "1px",
                 paddingBottom: "40px",
                 color: "red",
-                fontSize: "18px",
-                fontWeight: "bold",
               }}
-              className="text-red-500 text-lg font-large mt-2 text-left"
+              className="text-red-500 mt-2 text-left search-error-message"
             >
               請輸入關鍵字
             </p>
@@ -329,7 +327,7 @@ function SearchContent() {
                 justifyContent: "center",
                 alignItems: "center",
               }}
-              className="text-white text-xl w-full text-center   "
+              className="text-white text-xl w-full text-center font-bold  "
             >
               熱門關鍵字
             </h2>
@@ -343,7 +341,8 @@ function SearchContent() {
               <span key={keyword}>
                 <button
                   onClick={() => handleKeywordClick(keyword)}
-                  className="hover:text-[#FFCD83] text-[#CD861A] transition-colors"
+                  className="hover:text-[#FFCD83] text-[#CD861A] transition-colors underline"
+                  style={{ fontWeight: 900 }}
                 >
                   {keyword}
                 </button>
@@ -364,7 +363,7 @@ function SearchContent() {
                 paddingRight: "60px",
                 paddingBottom: "20px",
               }}
-              className="text-white text-xl mb-6"
+              className="text-white text-xl mb-6 font-bold"
             >
               熱門標籤
             </h2>
@@ -379,6 +378,7 @@ function SearchContent() {
                     paddingTop: "8px",
                     paddingBottom: "8px",
                     borderRadius: "50px",
+                    fontWeight: 900,
                   }}
                   className="px-4 py-2 bg-[#CD861A] text-white text-sm font-medium rounded-full hover:bg-[#FFCD83] hover:text-black transition-colors"
                 >
@@ -521,8 +521,8 @@ export default function SearchPage() {
       />
       <PageLayout 
         containerWidth="70%" 
-        outerContainerClassName="flex justify-center items-start"
-        mainClassName="items-start"
+        outerContainerClassName="flex justify-center items-center"
+        mainClassName="items-center justify-center"
       >
         <div className="w-full h-0 md:h-12 "></div>
 
