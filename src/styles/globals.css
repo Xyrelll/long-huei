@@ -605,7 +605,7 @@ nav.nav-breadcrumb a,
 nav.nav-breadcrumb li,
 .breadcrumb-item + .breadcrumb-item::before {
   color: #fff !important;
-  font-size: 0.8rem;
+  font-size: 1.125rem;
 }
 
 nav.nav-breadcrumb a i.bi {
@@ -668,7 +668,7 @@ footer {
 }
 
 footer p.copyright {
-  font-size: 0.8rem;
+  font-size: 1.125rem;
   margin-bottom: 10px;
   color: #ddd;
 }
@@ -693,7 +693,7 @@ footer ul li a {
   color: #fff;
   text-decoration: none;
   transition: 0.1s;
-  font-size: 0.8rem;
+  font-size: 1.125rem;
   letter-spacing: 0.1em;
 }
 

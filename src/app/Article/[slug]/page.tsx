@@ -255,11 +255,15 @@ function ArticleContent() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <div className="relative w-full min-h-screen bg-black flex justify-center items-center ">
+      <div
+      style={{
+        padding: '0px 20px',
+      }}
+       className="relative w-full min-h-screen bg-black flex justify-center items-center ">
         <Navbar />
 
         <main 
-          className="inner-page md:w-[60%] mx-auto items-center justify-center"
+          className="inner-page md:w-[90%] lg:w-[70%] mx-auto items-center justify-center"
           style={{
             paddingLeft: isMobile ? '15px' : '0',
             paddingRight: isMobile ? '15px' : '0',
@@ -332,7 +336,7 @@ function ArticleContent() {
 
             {/* Interactive Buttons (Tags) */}
             {article.tags && article.tags.length > 0 && (
-              <div className="flex flex-wrap gap-3 mb-8">
+              <div className="flex flex-wrap gap-1 mb-8">
                 {article.tags.map((tag, idx) => (
                   <Link
                     key={idx}
@@ -359,8 +363,8 @@ function ArticleContent() {
             className="flex flex-col lg:flex-row gap-6 py-8 " 
           >
             {/* Main Content */}
-            <div className="flex-1 lg:max-w-3xl ">
-              <div className="flex flex-col md:flex-row  items-start justify-center">
+            <div className="flex-1 lg:w-full ">
+              <div className="flex flex-col lg:flex-row  items-start justify-center">
                  {/* Left Sidebar - Social Media */}
                  <div
                    className="w-[95%] lg:w-20 flex mb-4 lg:mb-0"
@@ -454,7 +458,12 @@ function ArticleContent() {
                     )}
                   </div>
                   {/* LINE Add Friend Button - Below Content (Mobile & Desktop) */}
-                  <div className="mt-8 mb-8">
+                  <div 
+                  
+                  style={{
+                    width: '100px',
+                  }}
+                  className="mt-8 mb-8">
                     <a 
                       href="https://lin.ee/rQgNQ6D"
                       target="_blank"

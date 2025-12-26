@@ -306,13 +306,13 @@ export default function RecommendedArticles({ articles }: RecommendedArticlesPro
                           </div>
 
                           {/* Date - Fixed on bottom right */}
-                          {article.date && (
+                      
                             <p 
                               className="absolute bottom-6 right-4 text-white/70 text-xs"
                             >
-                              {article.date}
+                              { article.date||'2025-12-26'}
                             </p>
-                          )}
+                         
                         </Link>
                       );
                     })}

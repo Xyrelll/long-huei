@@ -11,7 +11,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
         content: '澳門遠不止賭場和歷史遺跡，這座城市正以全新面貌迎接旅客。小編推薦這些與眾不同的體驗方式：',
         style: { 
           marginBottom: '20px',
-          fontSize: '0.8rem'
+          fontSize: '1.125rem'
         }
       },
       {
@@ -27,7 +27,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
         style: { 
           marginBottom: '10px', 
           marginTop: '0', 
-          fontSize: '0.8rem'
+          fontSize: '1.125rem'
         }
       },
       {
@@ -36,7 +36,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
         style: { 
           marginBottom: '20px', 
           marginTop: '0', 
-          fontSize: '0.8rem'
+          fontSize: '1.125rem'
         }
       },
       {
@@ -52,7 +52,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
         style: { 
           marginBottom: '10px', 
           marginTop: '0', 
-          fontSize: '0.8rem'
+          fontSize: '1.125rem'
         }
       },
       {
@@ -61,7 +61,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
         style: { 
           marginBottom: '20px', 
           marginTop: '0', 
-          fontSize: '0.8rem'
+          fontSize: '1.125rem'
         }
       }
     ],
@@ -129,7 +129,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -138,7 +138,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -147,7 +147,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -163,7 +163,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -172,7 +172,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -188,7 +188,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -197,7 +197,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -206,7 +206,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           }
         ],
@@ -238,7 +238,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -247,7 +247,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -263,7 +263,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -272,7 +272,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -288,7 +288,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -297,7 +297,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -313,7 +313,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -322,7 +322,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           }
         ],
@@ -354,7 +354,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -363,7 +363,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -379,7 +379,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -388,7 +388,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -404,7 +404,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -413,7 +413,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -429,7 +429,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -438,7 +438,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -447,7 +447,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -463,7 +463,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -472,7 +472,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -488,7 +488,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -497,7 +497,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           }
         ],
@@ -523,7 +523,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -539,7 +539,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -555,7 +555,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -571,7 +571,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           }
         ],
@@ -590,7 +590,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -599,7 +599,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           }
         ],
@@ -615,7 +615,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
         content: '提到澳門，很多人第一時間想到的是大三巴、美食或世界級的酒店，但其實還有一個不能錯過的玩樂去處，那就是 澳門水上樂園。炎炎夏日，最適合和家人朋友一起暢玩水上設施，體驗刺激又清涼的快感。無論是親子家庭、情侶出遊，還是三五好友，澳門水上樂園 都能帶來無限歡樂。',
         style: { 
           marginBottom: '20px',
-          fontSize: '0.8rem'
+          fontSize: '1.125rem'
         }
       }
     ],
@@ -665,7 +665,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           }
         ],
@@ -690,7 +690,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           }
         ],
@@ -715,7 +715,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           }
         ],
@@ -740,7 +740,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           }
         ],
@@ -771,7 +771,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -787,7 +787,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           }
         ],
@@ -806,7 +806,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           }
         ],
@@ -822,7 +822,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
         content: '說到澳門旅遊，不得不提「澳門百老匯」這個集美食、娛樂與文化於一體的熱門地點。無論是自由行旅客還是家庭出遊，澳門百老匯都是不可錯過的行程之一。它不僅擁有豐富多元的地道美食，更有精彩不斷的現場表演與舒適的住宿選擇，讓遊客在短短數日內體驗澳門的多重魅力。',
         style: { 
           marginBottom: '20px',
-          fontSize: '0.8rem'
+          fontSize: '1.125rem'
         }
       }
     ],
@@ -870,7 +870,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -879,7 +879,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           }
         ],
@@ -904,7 +904,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -913,7 +913,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           }
         ],
@@ -938,7 +938,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -947,7 +947,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           }
         ],
@@ -966,7 +966,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           }
         ],
@@ -985,7 +985,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           }
         ],
@@ -1001,7 +1001,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
         content: '藝術、夜景與在地融合的極致體驗，這可不是一般來【澳門永利】的觀光客能夠擁有的，但經過小編的整理，只要看完這篇文章，你就懂啦，走起！',
         style: { 
           marginBottom: '20px',
-          fontSize: '0.8rem'
+          fontSize: '1.125rem'
         }
       }
     ],
@@ -1049,7 +1049,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           }
         ],
@@ -1074,7 +1074,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -1083,7 +1083,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -1092,7 +1092,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -1101,7 +1101,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -1110,7 +1110,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           }
         ],
@@ -1135,7 +1135,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           }
         ],
@@ -1160,7 +1160,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           }
         ],
@@ -1185,7 +1185,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -1194,7 +1194,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '20px', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           }
         ],
@@ -1210,7 +1210,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
         content: '想在澳門永利享受頂級住宿，卻擔心荷包失血或人擠人？2024年實測發現，80%台灣旅客直接官網訂房，都2025年了，可千萬別再這麼做！為什麼呢?文末我再告訴你~',
         style: { 
           marginBottom: '20px',
-          fontSize: '0.8rem'
+          fontSize: '1.125rem'
         }
       }
     ],
@@ -1258,7 +1258,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           }
         ],
@@ -1283,7 +1283,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           }
         ],
@@ -1302,7 +1302,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           }
         ],
@@ -1327,7 +1327,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           }
         ],
@@ -1352,7 +1352,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -1361,7 +1361,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '20px', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           }
         ],
@@ -1377,7 +1377,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
         content: '來到澳門旅遊最不能錯過的就是《水舞間》，耗資超過二十億港元，是全球最壯觀最大型的水上匯演舞台劇，還曾榮獲2011年度「HKMA/TVB 傑出市場策劃獎」金獎；表演橋段結合高難度特技、絢爛炫目燈光、特殊服裝以及絕佳空間設計，視覺、聽覺都讓人驚豔，小編今天特別整理出了超吸引人的獨家亮點，包準你看完就想去！Let\'s Go！',
         style: { 
           marginBottom: '20px',
-          fontSize: '0.8rem'
+          fontSize: '1.125rem'
         }
       }
     ],
@@ -1425,7 +1425,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -1434,7 +1434,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -1443,7 +1443,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -1452,7 +1452,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           }
         ],
@@ -1477,7 +1477,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem',
+              fontSize: '1.125rem',
               fontWeight: 'bold'
             }
           },
@@ -1487,7 +1487,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -1496,7 +1496,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -1505,7 +1505,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -1514,7 +1514,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           }
         ],
@@ -1539,7 +1539,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -1548,7 +1548,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -1557,7 +1557,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -1566,7 +1566,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -1575,7 +1575,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           }
         ],
@@ -1600,7 +1600,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -1609,7 +1609,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -1618,7 +1618,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -1627,7 +1627,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           }
         ],
@@ -1652,7 +1652,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem',
+              fontSize: '1.125rem',
               fontWeight: 'bold'
             }
           },
@@ -1662,7 +1662,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -1671,7 +1671,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -1680,7 +1680,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -1689,7 +1689,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '20px', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -1698,7 +1698,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           }
         ],
@@ -1714,7 +1714,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
         content: '澳門的夜，指尖暗藏玄機！半島小巷裡的 「18+沉浸式按摩」 ，用熱石與精油解鎖你不敢說的渴望：雙人鴛鴦浴缸暗門、角色扮演情境理療、VIP密室筋膜調教...',
         style: { 
           marginBottom: '20px',
-          fontSize: '0.8rem'
+          fontSize: '1.125rem'
         }
       }
     ],
@@ -1768,7 +1768,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -1777,7 +1777,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -1786,7 +1786,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -1813,7 +1813,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -1829,7 +1829,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -1838,7 +1838,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -1854,7 +1854,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -1863,7 +1863,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           }
         ],
@@ -1895,7 +1895,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -1904,7 +1904,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -1913,7 +1913,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -1929,7 +1929,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -1938,7 +1938,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -1954,7 +1954,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -1963,7 +1963,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           }
         ],
@@ -1989,7 +1989,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -1998,7 +1998,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -2007,7 +2007,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -2023,7 +2023,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -2032,7 +2032,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -2053,7 +2053,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           }
         ],
@@ -2072,7 +2072,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           }
         ],
@@ -2088,7 +2088,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
         content: '【澳門美高梅】不只奢華賭場！從海底藝術殿堂到空中糖雕塑、免費水上大秀，這座娛樂王國藏著連在地人都驚豔的玩法。教你用賭場積分換免費下午茶、解鎖房客專屬機位，連非住客都能爽玩一整天！',
         style: { 
           marginBottom: '20px',
-          fontSize: '0.8rem'
+          fontSize: '1.125rem'
         }
       }
     ],
@@ -2138,7 +2138,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -2147,7 +2147,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -2174,7 +2174,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -2183,7 +2183,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -2203,7 +2203,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -2212,7 +2212,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -2221,7 +2221,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -2237,7 +2237,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -2246,7 +2246,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -2255,7 +2255,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -2264,7 +2264,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           }
         ],
@@ -2282,7 +2282,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -2291,7 +2291,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -2300,7 +2300,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -2309,7 +2309,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -2318,7 +2318,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           }
         ],
@@ -2336,7 +2336,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -2345,7 +2345,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -2354,7 +2354,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -2363,7 +2363,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           }
         ],
@@ -2381,7 +2381,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem',
+              fontSize: '1.125rem',
               fontWeight: 'bold'
             }
           },
@@ -2391,7 +2391,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -2400,7 +2400,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem',
+              fontSize: '1.125rem',
               fontWeight: 'bold'
             }
           },
@@ -2410,7 +2410,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -2419,7 +2419,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -2428,7 +2428,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -2437,7 +2437,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem',
+              fontSize: '1.125rem',
               fontWeight: 'bold'
             }
           },
@@ -2447,7 +2447,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -2456,7 +2456,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -2465,7 +2465,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -2474,7 +2474,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -2483,7 +2483,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           }
         ],
@@ -2499,7 +2499,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
         content: '誰說【澳門賭場】只有老虎機和牌桌？這座東方拉斯維加斯藏著太多你不知道的驚喜！今天就跟著小編解鎖【澳門賭場】的另類玩法，連本地人都驚呼"原來還能這樣玩"～',
         style: { 
           marginBottom: '20px',
-          fontSize: '0.8rem'
+          fontSize: '1.125rem'
         }
       }
     ],
@@ -2544,7 +2544,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -2553,7 +2553,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -2562,7 +2562,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -2571,7 +2571,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -2580,7 +2580,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -2589,7 +2589,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           }
         ],
@@ -2613,7 +2613,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -2622,7 +2622,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -2631,7 +2631,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -2640,7 +2640,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -2649,7 +2649,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           }
         ],
@@ -2667,7 +2667,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -2676,7 +2676,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -2696,7 +2696,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -2716,7 +2716,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -2736,7 +2736,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -2745,7 +2745,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           }
         ],
@@ -2763,7 +2763,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -2772,7 +2772,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -2781,7 +2781,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -2790,7 +2790,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           }
         ],
@@ -2808,7 +2808,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -2817,7 +2817,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -2826,7 +2826,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -2835,7 +2835,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -2844,7 +2844,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           }
         ],
@@ -2862,7 +2862,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -2871,7 +2871,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -2880,7 +2880,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -2889,7 +2889,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -2898,7 +2898,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -2907,7 +2907,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           }
         ],
@@ -2923,7 +2923,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
         content: '澳門永利可不只是賭場那麽簡單！這座金光閃閃的度假王國，藏著米其林星星、夢幻噴泉秀和藝術珍品。今天就讓小編帶你解鎖【澳門永利】度假村的正確打開方式，就算不碰老虎機也能玩到捨不得回家～',
         style: { 
           marginBottom: '20px',
-          fontSize: '0.8rem'
+          fontSize: '1.125rem'
         }
       }
     ],
@@ -2969,7 +2969,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -3004,7 +3004,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           }
         ],
@@ -3022,7 +3022,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -3042,7 +3042,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -3062,7 +3062,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -3082,7 +3082,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           }
         ],
@@ -3100,7 +3100,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           }
         ],
@@ -3124,7 +3124,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           }
         ],
@@ -3142,7 +3142,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           }
         ],
@@ -3160,7 +3160,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -3169,7 +3169,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -3178,7 +3178,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -3187,7 +3187,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           },
           {
@@ -3196,7 +3196,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '0.8rem'
+              fontSize: '1.125rem'
             }
           }
         ],

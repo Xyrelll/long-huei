@@ -57,7 +57,7 @@ export default function ArticleContentRenderer({ blocks, content }: ArticleConte
           <p
             key={block.id || index}
             style={{
-              fontSize: textStyle.fontSize || '1.125rem',
+              fontSize: textStyle.fontSize || '2rem',
               fontWeight: textStyle.fontWeight || 'normal',
               color: textStyle.color || '#FFFFFF',
               textAlign: textStyle.textAlign || 'left',
