@@ -20,6 +20,32 @@ interface RecommendedArticlesProps {
 
 export default function RecommendedArticles({ articles }: RecommendedArticlesProps) {
   const itemsPerPage = 3;
+  
+  // Helper function to fill articles to always have 3 items per page
+  const fillArticlesToPage = (pageArticles: RecommendedArticle[]): RecommendedArticle[] => {
+    if (pageArticles.length >= itemsPerPage) {
+      return pageArticles.slice(0, itemsPerPage);
+    }
+    
+    // If we have less than 3 items, cycle through all available articles to fill
+    const filled: RecommendedArticle[] = [...pageArticles];
+    let sourceIndex = 0;
+    
+    while (filled.length < itemsPerPage && articles.length > 0) {
+      // Cycle through all articles to fill the remaining slots
+      const articleToAdd = articles[sourceIndex % articles.length];
+      // Avoid duplicates in the same page
+      if (!filled.some(a => a.id === articleToAdd.id)) {
+        filled.push(articleToAdd);
+      }
+      sourceIndex++;
+      // Safety check to prevent infinite loop
+      if (sourceIndex > articles.length * 2) break;
+    }
+    
+    return filled.slice(0, itemsPerPage);
+  };
+  
   const totalPages = Math.ceil(articles.length / itemsPerPage);
   const autoSlideIntervalRef = useRef<NodeJS.Timeout | null>(null);
   const [isSliding, setIsSliding] = useState(false);
@@ -44,21 +70,23 @@ export default function RecommendedArticles({ articles }: RecommendedArticlesPro
     if (totalPages > 1) {
       // Add last page at the beginning (for seamless backward scroll)
       const lastPageArticles = articles.slice(-itemsPerPage);
-      pages.push(lastPageArticles);
+      pages.push(fillArticlesToPage(lastPageArticles));
       
       // Add all pages multiple times for seamless forward scroll
       for (let dup = 0; dup < duplicateCount; dup++) {
         for (let i = 0; i < totalPages; i++) {
-          pages.push(articles.slice(i * itemsPerPage, (i + 1) * itemsPerPage));
+          const pageArticles = articles.slice(i * itemsPerPage, (i + 1) * itemsPerPage);
+          pages.push(fillArticlesToPage(pageArticles));
         }
       }
       
       // Add first page at the end (for seamless forward scroll)
       const firstPageArticles = articles.slice(0, itemsPerPage);
-      pages.push(firstPageArticles);
+      pages.push(fillArticlesToPage(firstPageArticles));
     } else {
-      // Single page, no duplicates needed
-      pages.push(articles.slice(0, itemsPerPage));
+      // Single page, ensure it has 3 items
+      const singlePageArticles = articles.slice(0, itemsPerPage);
+      pages.push(fillArticlesToPage(singlePageArticles));
     }
     
     return pages;
@@ -233,15 +261,13 @@ export default function RecommendedArticles({ articles }: RecommendedArticlesPro
               }}
             >
               {allPages.map((pageArticles, pageIndex) => {
-                // Ensure we always show exactly 3 items per slide
-                const displayArticles = pageArticles.length === itemsPerPage 
-                  ? pageArticles 
-                  : [...pageArticles, ...Array(itemsPerPage - pageArticles.length).fill(null)].slice(0, itemsPerPage);
+                // Ensure we always show exactly 3 items per slide (already filled in createPages, but double-check)
+                const displayArticles = fillArticlesToPage(pageArticles);
                 
                 return (
                   <div
                     key={pageIndex}
-                    className="grid grid-cols-1 md:grid-cols-3 gap-6 flex-shrink-0 w-full px-2"
+                    className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 flex-shrink-0 w-full px-2"
                   >
                     {displayArticles.map((article, idx) => {
                       if (!article) return <div key={`empty-${idx}`} className="hidden md:block" />;
