@@ -123,7 +123,7 @@ export default function CustomerServicePage() {
                               className="col-auto flex items-center">
                                 <a 
                                   href="https://lin.ee/rQgNQ6D"
-                                  target="_blank"
+                                  // target="_blank"
                                   rel="noopener noreferrer"
                                 >
                                   <Image

@@ -52,10 +52,10 @@ const whyChooseUs = [
 
 export default function About() {
   return (
-    <section className="about-top js-about-top w-full bg-black py-12">
+    <section className="about-top js-about-top w-full bg-black">
       <h2 className="text-center text-white text-4xl mb-8">關於龍匯天下｜探索澳門，享受極致服務</h2>
       
-      <div className="container mx-auto px-4 max-w-4xl">
+      <div className="container mx-auto max-w-4xl">
         <div className="row mb-4">
           <div className="col-12">
             <p className="content text-white mb-4">
@@ -73,7 +73,7 @@ export default function About() {
 
       <h2 className="page-title text-center text-[#f5ca69] text-3xl mb-8">為什麼選擇我們？</h2>
       
-      <div className="container mx-auto px-4 max-w-5xl">
+      <div className="container mx-auto max-w-5xl">
         <div className="row mb-4">
           {whyChooseUs.map((item, index) => (
             <div key={index} className="flex flex-col md:flex-row mb-3">
@@ -88,13 +88,13 @@ export default function About() {
         </div>
       </div>
 
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto">
         <div className="row mt-1 mt-md-3 max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full" style={{ display: 'grid' }}>
             {features.map((feature, index) => (
               <div key={index} className="mb-4">
                 <div className="about-card flex items-start gap-4">
-                  <i className={`${feature.icon} about-icon text-2xl text-[#FFCD83] flex-shrink-0`} aria-hidden="true"></i>
+                  <i className={`${feature.icon} about-icon text-2xl text-[#FFCD83] shrink-0`} aria-hidden="true"></i>
                   <div className="flex-1">
                     <h3 className="about-title text-[#FFCD83] text-lg font-bold mb-2">{feature.title}</h3>
                     <div className="about-content text-white text-sm leading-relaxed">

@@ -322,13 +322,19 @@ html {
 .about-top {
   width: 100%;
   background: #000000;
-  padding: 60px 0;
+  padding: 60px 25px;
+}
+
+@media (min-width: 768px) {
+  .about-top {
+    padding: 60px 50px;
+  }
 }
 
 .about-top .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 0;
 }
 
 .about-top h2 {
