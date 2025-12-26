@@ -416,9 +416,83 @@ export default function ArticleContentRenderer({ blocks, content }: ArticleConte
     }
   };
 
+  // Group text and link blocks together for inline rendering
+  const renderBlocks = () => {
+    const elements: React.ReactNode[] = [];
+    let i = 0;
+    
+    while (i < blocks.length) {
+      const currentBlock = blocks[i];
+      
+      // Check if current block is text and next block is link
+      if (currentBlock.type === 'text' && i + 1 < blocks.length && blocks[i + 1].type === 'link') {
+        const textBlock = currentBlock;
+        const linkBlock = blocks[i + 1];
+        const textStyle = textBlock.style || {};
+        const linkStyle = linkBlock.style || {};
+        
+        // Check if there's a text block after the link
+        const nextTextBlock = i + 2 < blocks.length && blocks[i + 2].type === 'text' ? blocks[i + 2] : null;
+        const nextTextStyle = nextTextBlock?.style || {};
+        
+        // Use the style from the first text block, but merge marginBottom from the last block
+        const mergedStyle = {
+          fontSize: textStyle.fontSize || '1.125rem',
+          fontWeight: textStyle.fontWeight || 'normal',
+          color: textStyle.color || '#FFFFFF',
+          textAlign: textStyle.textAlign || 'left',
+          marginTop: textStyle.marginTop || '0',
+          marginBottom: nextTextBlock ? (nextTextStyle.marginBottom || textStyle.marginBottom || '0') : (textStyle.marginBottom || '0'),
+          lineHeight: '1.8',
+          whiteSpace: 'pre-line',
+        };
+        
+        elements.push(
+          <p
+            key={textBlock.id || i}
+            style={mergedStyle}
+            className="text-white"
+          >
+            {textBlock.content}{' '}
+            <Link
+              href={linkBlock.href}
+              target={linkBlock.target || '_self'}
+              style={{
+                color: linkStyle.color || '#FFCD83',
+                textDecoration: linkStyle.textDecoration || 'underline',
+                display: 'inline',
+              }}
+              className="hover:text-[#FFCD83]"
+            >
+              {linkBlock.text}
+            </Link>
+            {nextTextBlock && (
+              <>
+                {' '}
+                {nextTextBlock.content}
+              </>
+            )}
+          </p>
+        );
+        
+        // Skip the link block and next text block if it exists
+        if (nextTextBlock) {
+          i += 3;
+        } else {
+          i += 2;
+        }
+      } else {
+        elements.push(renderBlock(currentBlock, i));
+        i++;
+      }
+    }
+    
+    return elements;
+  };
+
   return (
     <div className="article-content">
-      {blocks.map((block, index) => renderBlock(block, index))}
+      {renderBlocks()}
     </div>
   );
 }

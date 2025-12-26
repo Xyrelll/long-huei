@@ -1345,7 +1345,23 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           },
           {
             type: 'text',
-            content: '【大三巴牌坊】結語：行了！我們龍匯天下官方賴連結給你放下面啦，記得也去追蹤一下我們官方IG才不會錯過最新有關澳門旅遊的消息喔~',
+            content: '【大三巴牌坊】結語：行了！我們龍匯天下官方賴連結給你放下面啦，記得也去追蹤一下我們官方',
+            style: { marginBottom: '5px', fontSize: '0.8rem' }
+          },
+          {
+            type: 'link',
+            text: 'IG',
+            href: 'https://www.instagram.com/lhts.8899/',
+            target: '_blank',
+            style: {
+              color: '#FFCD83',
+              textDecoration: 'underline',
+              marginBottom: '5px'
+            }
+          },
+          {
+            type: 'text',
+            content: '才不會錯過最新有關澳門旅遊的消息喔~',
             style: { marginBottom: '20px', fontSize: '0.8rem' }
           }
         ],
@@ -1534,7 +1550,23 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           },
           {
             type: 'text',
-            content: '不錯吧~是不是很值得去走上一遭呢?想知道更多關於【澳門百老匯】可以點擊下方龍匯天下官方賴連結詢問，也記得追蹤一下我們龍匯天下官方IG才不會錯過澳門旅遊最新活動及消息喔！',
+            content: '不錯吧~是不是很值得去走上一遭呢?想知道更多關於【澳門百老匯】可以點擊下方龍匯天下官方賴連結詢問，也記得追蹤一下我們龍匯天下官方',
+            style: { marginBottom: '5px', fontSize: '0.8rem' }
+          },
+          {
+            type: 'link',
+            text: 'IG',
+            href: 'https://www.instagram.com/lhts.8899/',
+            target: '_blank',
+            style: {
+              color: '#FFCD83',
+              textDecoration: 'underline',
+              marginBottom: '5px'
+            }
+          },
+          {
+            type: 'text',
+            content: '才不會錯過澳門旅遊最新活動及消息喔！',
             style: { marginBottom: '20px', fontSize: '0.8rem' }
           }
         ],
@@ -1848,7 +1880,23 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
         content: [
           {
             type: 'text',
-            content: '立即追蹤 龍匯天下官方IG 另外也可點擊下方連結加入龍匯天下官方賴喔~',
+            content: '立即追蹤 龍匯天下官方',
+            style: { marginBottom: '5px', fontSize: '0.8rem' }
+          },
+          {
+            type: 'link',
+            text: 'IG',
+            href: 'https://www.instagram.com/lhts.8899/',
+            target: '_blank',
+            style: {
+              color: '#FFCD83',
+              textDecoration: 'underline',
+              marginBottom: '5px'
+            }
+          },
+          {
+            type: 'text',
+            content: ' 另外也可點擊下方連結加入龍匯天下官方賴喔~',
             style: { marginBottom: '20px', fontSize: '0.8rem' }
           }
         ],
@@ -2090,7 +2138,23 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           },
           {
             type: 'text',
-            content: '想了解更多關於【澳門自由行】，歡迎點擊下方「龍匯天下」的官方賴連結，或是在IG上追蹤也可以',
+            content: '想了解更多關於【澳門自由行】，歡迎點擊下方「龍匯天下」的官方賴連結，或是在',
+            style: { marginBottom: '5px', fontSize: '0.8rem' }
+          },
+          {
+            type: 'link',
+            text: 'IG',
+            href: 'https://www.instagram.com/lhts.8899/',
+            target: '_blank',
+            style: {
+              color: '#FFCD83',
+              textDecoration: 'underline',
+              marginBottom: '5px'
+            }
+          },
+          {
+            type: 'text',
+            content: '上追蹤也可以',
             style: { marginBottom: '20px', fontSize: '0.8rem' }
           }
         ],
@@ -2542,7 +2606,23 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           },
           {
             type: 'text',
-            content: '現在就透過龍匯天下官方IG或下方官方賴連結了解更多獨家優惠吧！',
+            content: '現在就透過龍匯天下官方',
+            style: { marginBottom: '5px', fontSize: '0.8rem' }
+          },
+          {
+            type: 'link',
+            text: 'IG',
+            href: 'https://www.instagram.com/lhts.8899/',
+            target: '_blank',
+            style: {
+              color: '#FFCD83',
+              textDecoration: 'underline',
+              marginBottom: '5px'
+            }
+          },
+          {
+            type: 'text',
+            content: '或下方官方賴連結了解更多獨家優惠吧！',
             style: { marginBottom: '20px', fontSize: '0.8rem' }
           }
         ],
