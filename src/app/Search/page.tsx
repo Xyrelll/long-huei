@@ -11,6 +11,12 @@ import PageMetadata from "@/components/SEO/PageMetadata";
 import Link from "next/link";
 import BookingArticleList from "@/components/features/BookingArticleList/BookingArticleList";
 import TagCategoryLayout from "@/components/layout/TagCategoryLayout/TagCategoryLayout";
+import { bookingArticles } from "@/data/articles/booking";
+import { travelArticles } from "@/data/articles/travel";
+import { rentCarArticles } from "@/data/articles/rentCar";
+import { saunaArticles } from "@/data/articles/sauna";
+import { entertainmentArticles } from "@/data/articles/entertainment";
+import { questionArticles } from "@/data/articles/question";
 
 interface Article {
   id: number;
@@ -53,60 +59,35 @@ function SearchContent() {
 
   // Load all articles
   useEffect(() => {
-    async function fetchAllArticles() {
-      try {
-        const [
-          { bookingArticles },
-          { travelArticles },
-          { rentCarArticles },
-          { saunaArticles },
-          { entertainmentArticles },
-          { questionArticles },
-        ] = await Promise.all([
-          import("@/app/ArticleCategory/Booking/page"),
-          import("@/app/ArticleCategory/Travel/page"),
-          import("@/app/ArticleCategory/RentCar/page"),
-          import("@/app/ArticleCategory/Sauna/page"),
-          import("@/app/ArticleCategory/Entertainment/page"),
-          import("@/app/ArticleCategory/Question/page"),
-        ]);
+    // Combine all articles with category info
+    const articles: Article[] = [
+      ...(bookingArticles || []).map((a: Omit<Article, "category">) => ({
+        ...a,
+        category: "訂房",
+      })),
+      ...(travelArticles || []).map((a: Omit<Article, "category">) => ({
+        ...a,
+        category: "旅遊",
+      })),
+      ...(rentCarArticles || []).map((a: Omit<Article, "category">) => ({
+        ...a,
+        category: "包車",
+      })),
+      ...(saunaArticles || []).map((a: Omit<Article, "category">) => ({
+        ...a,
+        category: "桑拿",
+      })),
+      ...(entertainmentArticles || []).map(
+        (a: Omit<Article, "category">) => ({ ...a, category: "其他娛樂" })
+      ),
+      ...(questionArticles || []).map((a: Omit<Article, "category">) => ({
+        ...a,
+        category: "常見問答",
+      })),
+    ];
 
-        // Combine all articles with category info
-        const articles: Article[] = [
-          ...(bookingArticles || []).map((a: Omit<Article, "category">) => ({
-            ...a,
-            category: "訂房",
-          })),
-          ...(travelArticles || []).map((a: Omit<Article, "category">) => ({
-            ...a,
-            category: "旅遊",
-          })),
-          ...(rentCarArticles || []).map((a: Omit<Article, "category">) => ({
-            ...a,
-            category: "包車",
-          })),
-          ...(saunaArticles || []).map((a: Omit<Article, "category">) => ({
-            ...a,
-            category: "桑拿",
-          })),
-          ...(entertainmentArticles || []).map(
-            (a: Omit<Article, "category">) => ({ ...a, category: "其他娛樂" })
-          ),
-          ...(questionArticles || []).map((a: Omit<Article, "category">) => ({
-            ...a,
-            category: "常見問答",
-          })),
-        ];
-
-        setAllArticles(articles);
-        setLoading(false);
-      } catch (error) {
-        console.error("Error fetching articles:", error);
-        setLoading(false);
-      }
-    }
-
-    fetchAllArticles();
+    setAllArticles(articles);
+    setLoading(false);
   }, []);
 
   // Perform search function
@@ -491,15 +472,6 @@ function SearchContent() {
         {/* Search Results - Show when there are results */}
         {hasSearched && !loading && searchResults.length > 0 && (
           <div className="w-full mt-12" style={{ paddingTop: "40px" }}>
-            {/* <div className="text-center mb-8">
-              <h2 className="text-white text-2xl font-bold mb-2">
-                搜尋結果
-              </h2>
-              <p className="text-white/70 text-lg">
-                找到 {searchResults.length} 筆相關文章
-              </p>
-            </div> */}
-
             <div className="container flex flex-col items-center justify-center mx-auto px-4">
               <TagCategoryLayout
                 pageTitle=""
@@ -527,8 +499,8 @@ function SearchContent() {
 
 export default function SearchPage() {
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: "首頁", url: "https://longhuei.netlify.app" },
-    { name: "搜尋", url: "https://longhuei.netlify.app/Search" },
+    { name: "首頁", url: "https://long-huei.vercel.app" },
+    { name: "搜尋", url: "https://long-huei.vercel.app/Search" },
   ]);
 
   return (
@@ -536,8 +508,8 @@ export default function SearchPage() {
       <PageMetadata
         title="搜尋 - 龍匯天下"
         description="搜尋澳門旅遊、桑拿、訂房、包車等相關文章。快速找到您需要的澳門旅遊資訊、酒店推薦、包車服務、桑拿體驗等內容。"
-        url="https://longhuei.netlify.app/Search"
-        image="https://longhuei.netlify.app/Images/logo-m.png"
+        url="https://long-huei.vercel.app/Search"
+        image="https://long-huei.vercel.app/Images/logo-m.png"
       />
       <script
         type="application/ld+json"
