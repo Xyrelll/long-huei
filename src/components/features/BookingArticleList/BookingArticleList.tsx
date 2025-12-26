@@ -78,7 +78,7 @@ export default function BookingArticleList({ articles }: BookingArticleListProps
                 <Link href={article.link}>
                   <h3
                    style={{ fontSize: isMobile ? '15px' : '20px',
-                    color: '#f5ca69',
+                    color:isMobile ? '#f5ca69' : '#ce8211',
                     fontWeight: '600',
                     }}
                   className="text-[#FFCD83] font-bold mb-2 md:mb-3 transition-colors duration-300 leading-tight">

@@ -9,6 +9,12 @@ import BottomNav from '@/components/layout/BottomNav/BottomNav';
 import BookingArticleList from '@/components/features/BookingArticleList/BookingArticleList';
 import TagCategoryLayout from '@/components/layout/TagCategoryLayout/TagCategoryLayout';
 import Link from 'next/link';
+import { bookingArticles } from '@/data/articles/booking';
+import { travelArticles } from '@/data/articles/travel';
+import { rentCarArticles } from '@/data/articles/rentCar';
+import { saunaArticles } from '@/data/articles/sauna';
+import { entertainmentArticles } from '@/data/articles/entertainment';
+import { questionArticles } from '@/data/articles/question';
 
 interface Article {
   id: number;
@@ -74,53 +80,26 @@ function TagContent() {
   const currentArticles = filteredArticles.slice(startIndex, endIndex);
 
   useEffect(() => {
-    async function fetchArticles() {
-      try {
-        const [
-          { bookingArticles },
-          { travelArticles },
-          { rentCarArticles },
-          { saunaArticles },
-          { entertainmentArticles },
-          { questionArticles },
-        ] = await Promise.all([
-          import('@/app/ArticleCategory/Booking/page'),
-          import('@/app/ArticleCategory/Travel/page'),
-          import('@/app/ArticleCategory/RentCar/page'),
-          import('@/app/ArticleCategory/Sauna/page'),
-          import('@/app/ArticleCategory/Entertainment/page'),
-          import('@/app/ArticleCategory/Question/page'),
-        ]);
+    // Combine all articles with category info
+    const allArticles: Article[] = [
+      ...(bookingArticles || []).map((a: Omit<Article, 'category'>) => ({ ...a, category: '訂房' })),
+      ...(travelArticles || []).map((a: Omit<Article, 'category'>) => ({ ...a, category: '旅遊' })),
+      ...(rentCarArticles || []).map((a: Omit<Article, 'category'>) => ({ ...a, category: '包車' })),
+      ...(saunaArticles || []).map((a: Omit<Article, 'category'>) => ({ ...a, category: '桑拿' })),
+      ...(entertainmentArticles || []).map((a: Omit<Article, 'category'>) => ({ ...a, category: '其他娛樂' })),
+      ...(questionArticles || []).map((a: Omit<Article, 'category'>) => ({ ...a, category: '常見問答' })),
+    ];
 
-        // Combine all articles with category info
-        const allArticles: Article[] = [
-          ...(bookingArticles || []).map((a: Omit<Article, 'category'>) => ({ ...a, category: '訂房' })),
-          ...(travelArticles || []).map((a: Omit<Article, 'category'>) => ({ ...a, category: '旅遊' })),
-          ...(rentCarArticles || []).map((a: Omit<Article, 'category'>) => ({ ...a, category: '包車' })),
-          ...(saunaArticles || []).map((a: Omit<Article, 'category'>) => ({ ...a, category: '桑拿' })),
-          ...(entertainmentArticles || []).map((a: Omit<Article, 'category'>) => ({ ...a, category: '其他娛樂' })),
-          ...(questionArticles || []).map((a: Omit<Article, 'category'>) => ({ ...a, category: '常見問答' })),
-        ];
+    // Decode the tag name from URL
+    const decodedTag = decodeURIComponent(tagName);
 
-        // Decode the tag name from URL
-        const decodedTag = decodeURIComponent(tagName);
+    // Filter articles by tag
+    const filtered = allArticles.filter((article) => {
+      return article.tags && article.tags.some((tag) => tag === decodedTag);
+    });
 
-        // Filter articles by tag
-        const filtered = allArticles.filter((article) => {
-          return article.tags && article.tags.some((tag) => tag === decodedTag);
-        });
-
-        setAllFilteredArticles(filtered);
-        setLoading(false);
-      } catch (error) {
-        console.error('Error fetching articles:', error);
-        setLoading(false);
-      }
-    }
-
-    if (tagName) {
-      fetchArticles();
-    }
+    setAllFilteredArticles(filtered);
+    setLoading(false);
   }, [tagName]);
 
   // Metadata is now handled by server-side layout.tsx
@@ -164,10 +143,14 @@ function TagContent() {
       <Navbar />
       <div className="relative w-full min-h-screen bg-black flex flex-col">
         <main className="inner-page w-[90%] mx-auto">
-          {/* Breadcrumb - Fixed at top */}
-          <div className="w-full bg-black" style={{ position: 'sticky', top: 0, zIndex: 10, height: '60px', flexShrink: 0 }}>
-            <div className="container mx-auto h-full">
-              <nav className="nav-breadcrumb h-full" aria-label="breadcrumb"
+         
+
+          {/* Articles Section */}
+          <section className="articles w-full bg-black py-8">
+ {/* Breadcrumb */}
+ <div className="w-full bg-black">
+            <div className="container mx-auto">
+              <nav className="nav-breadcrumb" aria-label="breadcrumb"
                style={{ 
                  display: 'flex', 
                  alignItems: 'center', 
@@ -195,8 +178,6 @@ function TagContent() {
             </div>
           </div>
 
-          {/* Articles Section */}
-          <section className="articles w-full bg-black py-8">
 
             <div className="container mx-auto px-4  flex flex-col items-center justify-center ">
               {/* Page Title with Search Result Count */}
@@ -263,10 +244,11 @@ function TagContent() {
                             paddingRight: '15px',
                             paddingTop: '10px',
                             paddingBottom: '10px',
-                            backgroundColor: isSelected ? 'transparent' : '#000000',
+                            backgroundColor: isSelected ? undefined : '#000000',
+                            background: isSelected ? 'linear-gradient(to left, #CD861A 50%, #FFCD83 100%)' : 'black',
                             color: 'white',
                             transition: 'background 0.3s ease',
-                            borderRight: '1px solid #CD861A',
+                            borderRight: isSelected ? 'none' : '1px solid #CD861A',
                           }}
                           className="text-white"
                           onMouseEnter={(e) => {
@@ -291,9 +273,12 @@ function TagContent() {
                             paddingRight: '15px',
                             paddingTop: '10px',
                             paddingBottom: '10px',
+                            backgroundImage: isSelected ? 'linear-gradient(120deg, #ffcb7e 10%, #9c5f04 100%)' : 'none',
                             backgroundColor: isSelected ? 'transparent' : '#CD861A',
+                            boxShadow: isSelected ? '0 0 10px 0 #ffaa2b' : 'none',
                             color: 'white',
                             transition: 'background 0.3s ease',
+                            borderLeft: isSelected ? '1px solid rgba(255, 255, 255, 0.3)' : 'none',
                           }}
                           className="text-white"
                           onMouseEnter={(e) => {
@@ -336,6 +321,7 @@ function TagContent() {
                 totalPages={totalPages}
                 itemsPerPage={itemsPerPage}
                 ArticleListComponent={BookingArticleList}
+                width={isMobile ? "90%" : "60%"}
               />
             </div>
           </section>
