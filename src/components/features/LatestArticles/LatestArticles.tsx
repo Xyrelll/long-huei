@@ -287,7 +287,7 @@ function ArticleCarousel({ title, articles }: { title: string; articles: Article
         <div className="row">
           {articles.map((article) => (
               <div key={article.id} className="col-12 pl-0 mb-4">
-              <div className="row mb-4 article-card-row flex items-start border-b border-gray-800 pb-4" style={{ position: 'relative' }}>
+              <div className="row mb-4 article-card-row flex items-start  pb-4" style={{ position: 'relative', borderRadius: '50px' ,marginTop:'50px' }}>
                 <div className="col-4 col-md-4 px-0 cardpic" style={{ flexShrink: 0 }}>
                   <Link href={article.link}>
                     <picture>
@@ -336,42 +336,11 @@ function ArticleCarousel({ title, articles }: { title: string; articles: Article
                       </button>
                     </div>
                   </div>
-                  {expandedCards.has(article.id) && (
-                    <div className="d-block d-md-none mt-3">
-                      {article.description && (
-                        <p style={{ color: '#fff' }} className="text-sm mb-2">{article.description}</p>
-                      )}
-                      {article.tags && (
-                        <ul className="tags flex flex-wrap" style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-                          {article.tags.map((tag, idx) => (
-                            <li key={idx} style={{ margin: '0 5px 5px 0' }}>
-                              <Link 
-                                href={`/Tag/${tag}`} 
-                                className="text-xs text-white"
-                                style={{
-                                  display: 'inline-block',
-                                  backgroundColor: '#CD861A',
-                                  padding: '0 10px',
-                                  height: '28px',
-                                  lineHeight: '28px',
-                                  borderRadius: '4px',
-                                  textDecoration: 'none',
-                                  color: '#fff'
-                                }}
-                              >
-                                {tag}
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      )}
-                    </div>
-                  )}
                   {article.tags && (
                     <div className="article-title d-none d-md-block mt-4">
-                      <ul className="tags flex flex-wrap" style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+                      <ul className="tags flex flex-wrap gap-1" style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                         {article.tags.map((tag, idx) => (
-                          <li key={idx} style={{ margin: '0 5px 5px 0' }}>
+                          <li key={idx} style={{ margin: 0 }}>
                             <Link 
                               href={`/Tag/${tag}`} 
                               className="text-xs text-white"
@@ -381,7 +350,7 @@ function ArticleCarousel({ title, articles }: { title: string; articles: Article
                                 padding: '0 10px',
                                 height: '28px',
                                 lineHeight: '28px',
-                                borderRadius: '4px',
+                                borderRadius: '50px',
                                 textDecoration: 'none',
                                 color: '#fff'
                               }}
@@ -395,6 +364,37 @@ function ArticleCarousel({ title, articles }: { title: string; articles: Article
                   )}
                 </div>
               </div>
+              {expandedCards.has(article.id) && (
+                <div className="d-block d-md-none mt-3">
+                  {article.description && (
+                    <p style={{ color: '#fff' }} className="text-sm mb-2">{article.description}</p>
+                  )}
+                  {article.tags && (
+                    <ul className="tags flex flex-wrap gap-1" style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+                      {article.tags.map((tag, idx) => (
+                        <li key={idx} style={{ margin: 0 }}>
+                          <Link 
+                            href={`/Tag/${tag}`} 
+                            className="text-xs text-white"
+                            style={{
+                              display: 'inline-block',
+                              backgroundColor: '#CD861A',
+                              padding: '0 10px',
+                              height: '28px',
+                              lineHeight: '28px',
+                              borderRadius: '50px',
+                              textDecoration: 'none',
+                              color: '#fff'
+                            }}
+                          >
+                            {tag}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              )}
             </div>
           ))}
         </div>

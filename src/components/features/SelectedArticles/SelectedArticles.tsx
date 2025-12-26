@@ -177,7 +177,13 @@ export default function SelectedArticles() {
         }
       `}</style>
 
-      <h2 className="text-center text-white text-2xl mb-8">精選文章</h2>
+      <h2
+      style={{
+        marginTop: '-20px',
+        padding: '10px 0',
+        paddingBottom: '30px',
+      }}
+       className="text-center text-white text-2xl ">精選文章</h2>
       <div className="container mx-auto px-4 max-w-6xl">
         {/* Desktop Layout */}
         <div className="hidden lg:block">
@@ -239,7 +245,7 @@ export default function SelectedArticles() {
         <div className="block lg:hidden">
           <div className="row">
             <div className="col-12 pl-0">
-              <div className="row mb-4 article-card-row flex items-start border-b border-gray-800 pb-4" style={{ position: 'relative' }}>
+              <div className="row mb-4 article-card-row flex items-start  pb-4" style={{ position: 'relative' }}>
                 <div className="col-4 col-md-4 px-0 cardpic" style={{ flexShrink: 0 }}>
                   <Link href={featuredArticle.link}>
                     <picture>
@@ -259,7 +265,7 @@ export default function SelectedArticles() {
                   <Link href={featuredArticle.link}>
                     <h3 className="card-title text-sm mb-2">{featuredArticle.title}</h3>
                   </Link>
-                  <div className="card-text" style={{ position: 'relative', display: 'flex', alignItems: 'center', width: '100%', paddingRight: '32px' }}>
+                  <div className="card-text " style={{ position: 'relative', display: 'flex', alignItems: 'center', width: '100%', paddingRight: '32px' }}>
                     <div style={{ flex: '1', minWidth: 0 }}>
                       <small className="text-read text-white text-xs">觀看人數：{featuredArticle.views}</small>
                     </div>
@@ -283,42 +289,11 @@ export default function SelectedArticles() {
                       </button>
                     </div>
                   </div>
-                  {expandedCards.has(featuredArticle.id) && (
-                    <div className="d-block d-md-none mt-3">
-                      {featuredArticle.description && (
-                        <p style={{ color: '#fff' }} className="text-sm mb-2">{featuredArticle.description}</p>
-                      )}
-                      {featuredArticle.tags && (
-                        <ul className="tags flex flex-wrap" style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-                          {featuredArticle.tags.map((tag, idx) => (
-                            <li key={idx} style={{ margin: '0 5px 5px 0' }}>
-                              <Link 
-                                href={`/Tag/${tag}`} 
-                                className="text-xs text-white"
-                                style={{
-                                  display: 'inline-block',
-                                  backgroundColor: '#CD861A',
-                                  padding: '0 10px',
-                                  height: '28px',
-                                  lineHeight: '28px',
-                                  borderRadius: '4px',
-                                  textDecoration: 'none',
-                                  color: '#fff'
-                                }}
-                              >
-                                {tag}
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      )}
-                    </div>
-                  )}
                   {featuredArticle.tags && (
-                    <div className="article-title d-none d-md-block mt-4">
-                      <ul className="tags flex flex-wrap" style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+                    <div className="article-title d-none d-md-block mt-4 ">
+                      <ul className="tags flex flex-wrap gap-1" style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                         {featuredArticle.tags.map((tag, idx) => (
-                          <li key={idx} style={{ margin: '0 5px 5px 0' }}>
+                          <li key={idx} style={{ margin: 0 }}>
                             <Link 
                               href={`/Tag/${tag}`} 
                               className="text-xs text-white"
@@ -328,7 +303,7 @@ export default function SelectedArticles() {
                                 padding: '0 10px',
                                 height: '28px',
                                 lineHeight: '28px',
-                                borderRadius: '4px',
+                                borderRadius: '50px',
                                 textDecoration: 'none',
                                 color: '#fff'
                               }}
@@ -342,11 +317,42 @@ export default function SelectedArticles() {
                   )}
                 </div>
               </div>
+              {expandedCards.has(featuredArticle.id) && (
+                <div className="d-block d-md-none mt-3">
+                  {featuredArticle.description && (
+                    <p style={{ color: '#fff' }} className="text-sm mb-2">{featuredArticle.description}</p>
+                  )}
+                  {featuredArticle.tags && (
+                    <ul className="tags flex flex-wrap gap-1" style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+                      {featuredArticle.tags.map((tag, idx) => (
+                        <li key={idx} style={{ margin: 0 }}>
+                          <Link 
+                            href={`/Tag/${tag}`} 
+                            className="text-xs text-white"
+                            style={{
+                              display: 'inline-block',
+                              backgroundColor: '#CD861A',
+                              padding: '0 10px',
+                              height: '28px',
+                              lineHeight: '28px',
+                              borderRadius: '50px',
+                              textDecoration: 'none',
+                              color: '#fff'
+                            }}
+                          >
+                            {tag}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              )}
             </div>
 
             {visibleArticles.map((article) => (
               <div key={article.id} className="col-12 pl-0">
-                <div className="row mb-4 article-card-row flex items-start border-b border-gray-800 pb-4" style={{ position: 'relative' }}>
+                <div className="row mb-4 article-card-row flex items-start  pb-4" style={{ position: 'relative' ,marginTop: '50px'}}>
                   <div className="col-4 col-md-4 px-0 cardpic" style={{ flexShrink: 0 }}>
                     <Link href={article.link}>
                       <picture>
@@ -390,42 +396,11 @@ export default function SelectedArticles() {
                         </button>
                       </div>
                     </div>
-                    {expandedCards.has(article.id) && (
-                      <div className="d-block d-md-none mt-3">
-                        {article.description && (
-                          <p style={{ color: '#fff' }} className="text-sm mb-2">{article.description}</p>
-                        )}
-                        {article.tags && (
-                          <ul className="tags flex flex-wrap" style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-                            {article.tags.map((tag, idx) => (
-                              <li key={idx} style={{ margin: '0 5px 5px 0' }}>
-                                <Link 
-                                  href={`/Tag/${tag}`} 
-                                  className="text-xs text-white"
-                                  style={{
-                                    display: 'inline-block',
-                                    backgroundColor: '#CD861A',
-                                    padding: '0 10px',
-                                    height: '28px',
-                                    lineHeight: '28px',
-                                    borderRadius: '4px',
-                                    textDecoration: 'none',
-                                    color: '#fff'
-                                  }}
-                                >
-                                  {tag}
-                                </Link>
-                              </li>
-                            ))}
-                          </ul>
-                        )}
-                      </div>
-                    )}
                     {article.tags && (
                       <div className="article-title d-none d-md-block mt-4">
-                        <ul className="tags flex flex-wrap" style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+                        <ul className="tags flex flex-wrap gap-1" style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                           {article.tags.map((tag, idx) => (
-                            <li key={idx} style={{ margin: '0 5px 5px 0' }}>
+                            <li key={idx} style={{ margin: 0 }}>
                               <Link 
                                 href={`/Tag/${tag}`} 
                                 className="text-xs text-white"
@@ -435,7 +410,7 @@ export default function SelectedArticles() {
                                   padding: '0 10px',
                                   height: '28px',
                                   lineHeight: '28px',
-                                  borderRadius: '4px',
+                                  borderRadius: '50px',
                                   textDecoration: 'none',
                                   color: '#fff'
                                 }}
@@ -449,12 +424,48 @@ export default function SelectedArticles() {
                     )}
                   </div>
                 </div>
+                {expandedCards.has(article.id) && (
+                  <div className="d-block d-md-none mt-3">
+                    {article.description && (
+                      <p style={{ color: '#fff' }} className="text-sm mb-2">{article.description}</p>
+                    )}
+                    {article.tags && (
+                      <ul className="tags flex flex-wrap gap-1" style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+                        {article.tags.map((tag, idx) => (
+                          <li key={idx} style={{ margin: 0 }}>
+                            <Link 
+                              href={`/Tag/${tag}`} 
+                              className="text-xs text-white"
+                              style={{
+                                display: 'inline-block',
+                                backgroundColor: '#CD861A',
+                                padding: '0 10px',
+                                height: '28px',
+                                lineHeight: '28px',
+                                borderRadius: '50px',
+                                textDecoration: 'none',
+                                color: '#fff'
+                              }}
+                            >
+                              {tag}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                )}
               </div>
             ))}
 
             {!showMore && (
               <button
                 type="button"
+                style={{
+                  borderRadius: '50px',
+                  width: '100%',
+                  marginTop : '50px',
+                }}
                 className="btn btn-primary btn-a-top mx-auto block mt-4 px-6 py-2 bg-[#CD861A] text-white rounded"
                 id="show-more-article"
                 onClick={() => setShowMore(true)}

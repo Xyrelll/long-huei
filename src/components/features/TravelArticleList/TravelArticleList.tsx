@@ -75,7 +75,7 @@ export default function TravelArticleList({ articles }: TravelArticleListProps) 
               </div>
               {article.tags && (
                 <div className="article-title d-none d-md-block mt-4">
-                  <ul className="tags flex flex-wrap gap-2">
+                  <ul className="tags flex flex-wrap gap-1">
                     {article.tags.map((tag, idx) => (
                       <li key={idx}>
                         <Link href={`/Tag/${tag}`} className="text-xs text-gray-400 hover:text-[#FFCD83]">{tag}</Link>
@@ -89,7 +89,7 @@ export default function TravelArticleList({ articles }: TravelArticleListProps) 
               <div className="col-12 d-block d-md-none mt-3">
                 <p style={{ color: '#fff' }} className="text-sm mb-2">{article.description}</p>
                 {article.tags && (
-                  <ul className="tags flex flex-wrap gap-2">
+                  <ul className="tags flex flex-wrap gap-1">
                     {article.tags.map((tag, idx) => (
                       <li key={idx}>
                         <Link href={`/Tag/${tag}`} className="text-xs text-gray-400 hover:text-[#FFCD83]">{tag}</Link>
