@@ -200,7 +200,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             href: 'https://line.me/R/ti/p/@vgl8843j?from=page&searchId=vgl8843j',
             target: '_blank',
             style: {
-              color: '#FFCD83',
+              color: '#3b82f6',
               textDecoration: 'underline',
               marginBottom: '5px'
             }
@@ -424,7 +424,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             href: 'https://www.long-huei.com/Article/sauna2',
             target: '_self',
             style: {
-              color: '#FFCD83',
+              color: '#3b82f6',
               textDecoration: 'underline',
               marginBottom: '20px'
             }
@@ -744,7 +744,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             href: 'https://www.long-huei.com/Article/sauna3',
             target: '_self',
             style: {
-              color: '#FFCD83',
+              color: '#3b82f6',
               textDecoration: 'underline',
               marginBottom: '5px'
             }
@@ -1006,7 +1006,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             href: 'https://www.instagram.com/lhts.8899/',
             target: '_blank',
             style: {
-              color: '#FFCD83',
+              color: '#3b82f6',
               textDecoration: 'underline',
               marginBottom: '5px'
             }
@@ -1289,7 +1289,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             href: 'https://www.instagram.com/lhts.8899/',
             target: '_blank',
             style: {
-              color: '#FFCD83',
+              color: '#3b82f6',
               textDecoration: 'underline',
               marginBottom: '5px'
             }
@@ -1945,7 +1945,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             href: 'https://www.instagram.com/lhts.8899/',
             target: '_blank',
             style: {
-              color: '#FFCD83',
+              color: '#3b82f6',
               textDecoration: 'underline',
               marginBottom: '5px'
             }
@@ -3498,7 +3498,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             href: 'https://www.long-huei.com/Article/sauna1',
             target: '_self',
             style: {
-              color: '#FFCD83',
+              color: '#3b82f6',
               textDecoration: 'underline',
               marginBottom: '5px'
             }
@@ -3748,7 +3748,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             href: 'https://www.instagram.com/lhts.8899/',
             target: '_blank',
             style: {
-              color: '#FFCD83',
+              color: '#3b82f6',
               textDecoration: 'underline',
               marginBottom: '5px'
             }
@@ -3775,7 +3775,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             href: 'https://www.long-huei.com/Article/sauna1',
             target: '_self',
             style: {
-              color: '#FFCD83',
+              color: '#3b82f6',
               textDecoration: 'underline',
               marginBottom: '20px'
             }

@@ -274,7 +274,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             href: 'https://www.instagram.com/lhts.8899/',
             target: '_blank',
             style: {
-              color: '#FFCD83',
+              color: '#3b82f6',
               textDecoration: 'underline',
               marginBottom: '5px'
             }
@@ -624,7 +624,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             href: 'https://www.instagram.com/lhts.8899/',
             target: '_blank',
             style: {
-              color: '#FFCD83',
+              color: '#3b82f6',
               textDecoration: 'underline',
               marginBottom: '5px'
             }
@@ -930,7 +930,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             href: 'https://www.instagram.com/lhts.8899/',
             target: '_blank',
             style: {
-              color: '#FFCD83',
+              color: '#3b82f6',
               textDecoration: 'underline',
               marginBottom: '5px'
             }
@@ -1457,7 +1457,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             href: 'https://www.long-huei.com/Article/wei2',
             target: '_self',
             style: {
-              color: '#FFCD83',
+              color: '#3b82f6',
               textDecoration: 'underline',
               marginBottom: '5px'
             }

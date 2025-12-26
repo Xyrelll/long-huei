@@ -1927,7 +1927,7 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
             href: 'https://www.long-huei.com/Article/macao-rent-car',
             target: '_self',
             style: {
-              color: '#FFCD83',
+              color: '#3b82f6',
               textDecoration: 'underline',
               marginTop: '0',
               marginBottom: '20px'
@@ -2644,7 +2644,7 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
             href: 'https://www.instagram.com/lhts.8899/',
             target: '_blank',
             style: {
-              color: '#FFCD83',
+              color: '#3b82f6',
               textDecoration: 'underline',
               marginTop: '0',
               marginBottom: '10px'
