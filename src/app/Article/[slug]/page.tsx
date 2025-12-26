@@ -258,7 +258,13 @@ function ArticleContent() {
       <div className="relative w-full min-h-screen bg-black flex justify-center items-center ">
         <Navbar />
 
-        <main className="inner-page md:w-[60%] mx-auto items-center justify-center ">
+        <main 
+          className="inner-page md:w-[60%] mx-auto items-center justify-center"
+          style={{
+            paddingLeft: isMobile ? '15px' : '0',
+            paddingRight: isMobile ? '15px' : '0',
+          }}
+        >
         
 
           {/* Breadcrumb */}
@@ -467,14 +473,14 @@ function ArticleContent() {
                   </div>
 
                   {/* Article Meta */}
-                  <div className="mt-8 pt-8 border-t border-white/10">
+                  {/* <div className="mt-8 pt-8 border-t border-white/10">
                     <div className="flex items-center gap-4 text-white/70 text-sm">
                       <span>觀看人數：{article.views}</span>
                       {article.category && (
                         <span>分類：{article.category}</span>
                       )}
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

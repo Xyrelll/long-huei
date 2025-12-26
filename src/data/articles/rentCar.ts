@@ -140,7 +140,7 @@ export const rentCarArticles: RentCarArticle[] = [
   },
   {
     id: 11,
-    title: '【澳門包車】三種頂級車種聰明挑，輕鬆解鎖高品質旅程',
+    title: '澳門包車｜豪華專車接送，尊享舒適旅程',
     description: '和家人朋友出遊澳門卻不知道要包什麼車嗎?那你來對地方了，小編給您統整了三種頂級車款的受眾，只要根據你的需求選擇就行了，怎麼樣?是不是很方便呀~廢話不多說，進正片！',
     image: '/rentcar/包車-c.png',
     imageMobile: '/rentcar/包車-c.png',
@@ -152,7 +152,7 @@ export const rentCarArticles: RentCarArticle[] = [
   },
   {
     id: 12,
-    title: '澳門包車｜豪華專車接送，尊享舒適旅程',
+    title: '【澳門包車】三種頂級車種聰明挑，輕鬆解鎖高品質旅程',
     description: '想在澳門自由暢遊、舒適無憂？選擇【澳門包車】服務，讓您的旅程升級，無論是商務接待、婚禮包車、家庭出遊，還是私人觀光，我們都能為您量身打造專屬路線和尊榮體驗。',
     image: '/rentcar/【澳門包車】三種頂級車種聰明挑，輕鬆解鎖高品質旅程_(1)-c.jpg',
     imageMobile: '/rentcar/【澳門包車】三種頂級車種聰明挑，輕鬆解鎖高品質旅程_(1)-c.jpg',
