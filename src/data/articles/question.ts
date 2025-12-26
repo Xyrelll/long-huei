@@ -1,5 +1,7 @@
 // Shared article data for Question category
 // Can be imported by both client and server components
+import { ArticleContent } from '@/types/articleContent';
+import { questionArticleContentBlocks } from './questionContentBlocks';
 
 export interface QuestionArticle {
   id: number;
@@ -11,6 +13,8 @@ export interface QuestionArticle {
   views: number;
   tags?: string[];
   collapseId: string;
+  content?: string; // Legacy plain text content
+  contentBlocks?: ArticleContent; // New structured content blocks
 }
 
 export const questionArticles: QuestionArticle[] = [
@@ -24,6 +28,7 @@ export const questionArticles: QuestionArticle[] = [
     views: 2333,
     tags: ['澳門龍匯天下', '澳門換錢', '澳門旅遊找龍匯', '澳門訂房'],
     collapseId: 'collapse-money-exchange',
+    contentBlocks: questionArticleContentBlocks[1],
   },
   {
     id: 2,
@@ -35,6 +40,7 @@ export const questionArticles: QuestionArticle[] = [
     views: 2513,
     tags: ['澳門通龍匯天下', '龍匯澳門通', '澳門龍匯天下澳門通', '龍匯天下澳門通'],
     collapseId: 'collapse-macao-pass',
+    contentBlocks: questionArticleContentBlocks[2],
   },
   {
     id: 3,
@@ -46,6 +52,7 @@ export const questionArticles: QuestionArticle[] = [
     views: 2493,
     tags: ['澳門旅遊', '澳門安全', '澳門'],
     collapseId: 'collapse-safe1',
+    contentBlocks: questionArticleContentBlocks[3],
   },
 ];
 
