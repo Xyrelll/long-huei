@@ -143,7 +143,7 @@ export const saunaArticles: SaunaArticle[] = [
     title: '【澳門桑拿】身為老司機的你絕對不能錯過的澳門暗黑密笈！',
     description: '本站講解的澳門桑拿都是全套桑拿，讓人心跳加速的體驗報你知，這裡也特別整理了一些各位老司機比較感興趣的問題，讓我們一起看下去吧。',
     image: '/sauna/sauna-c.jpg',
-    imageMobile: '/sauna/【sauna-c.jpg',
+    imageMobile: '/sauna/sauna-c.jpg',
     link: '/Article/sauna',
     views: 2364,
     tags: ['澳門旅遊', '澳門', '澳門桑拿'],

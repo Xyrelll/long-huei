@@ -252,7 +252,7 @@ export default function RecommendedArticles({ articles }: RecommendedArticlesPro
                           className="bg-[#2C261C] rounded-[50px] overflow-hidden relative"
                         >
                           {/* Article Image */}
-                          <div className="relative w-full h-35">
+                          <div className="relative w-full h-48">
                             <Image
                               src={article.image}
                               alt={article.title}
