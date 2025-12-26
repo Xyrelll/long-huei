@@ -7,7 +7,8 @@
   transform: translateX(-50%);
   width: 100vw;
   max-width: 100vw;
-  background: rgba(0, 0, 0, 1);
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
   border-bottom: 3px solid #CD861A;
   border-radius: 0;
   mix-blend-mode: normal;
@@ -64,7 +65,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    height: 99px;
+    height: 95px;
     padding: .5rem 2%;
   }
 }
@@ -125,7 +126,9 @@
   .navbar-nav-desktop {
     display: flex;
     align-items: center;
+    padding-right: 50px;
     width: 100%;
+    
   }
 }
 
@@ -373,14 +376,14 @@
   z-index: 100;
   display: none;
   pointer-events: none;
-  top: 4;
+  top: 98;
   padding-bottom: 10px;
   left: 0;
   width: 100vw;
   max-width: 100vw;
-  height: 150;
+  height: 48;
   box-sizing: border-box;
-  background-color: rgba(0, 0, 0, .1);;
+  background-color: rgba(0, 0, 0, .8);;
 }
 
 @media (min-width: 1024px) {
@@ -404,7 +407,7 @@
 .dropdown-menu-desktop {
   position: absolute;
   left: 0;
-  top: 0;
+  top: -100px;
   flex-direction: row;
   background: transparent;
   padding: 0px 0;
@@ -412,7 +415,7 @@
   display: none;
   pointer-events: auto;
   box-sizing: border-box;
-  z-index: 101;
+  z-index: 1000;
   align-items: stretch;
 }
 

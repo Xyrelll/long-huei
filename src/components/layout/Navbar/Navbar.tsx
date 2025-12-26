@@ -223,7 +223,7 @@ export default function Navbar() {
         const menu = dropdownMenuRef.current.querySelector('.dropdown-menu-desktop') as HTMLElement;
         if (menu) {
           menu.style.left = `${buttonRect.left}px`;
-          menu.style.top = `${buttonRect.bottom + 8}px`;
+          menu.style.top = `5px`;
         }
       }
     };
@@ -366,8 +366,8 @@ export default function Navbar() {
               src="/Images/logo-m.png"
               alt="Dragon Gathering World"
               title="Dragon Gathering World"
-              width={60}
-              height={60}
+              width={50}
+              height={50}
               className="object-cover "
               priority
               style={{
