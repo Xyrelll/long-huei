@@ -706,18 +706,6 @@ footer {
   position: relative;
 }
 
-footer::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: #444;
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
-}
-
 footer p.copyright {
   font-size: 0.8rem;
   font-weight: 900;

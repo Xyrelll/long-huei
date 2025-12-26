@@ -3,10 +3,7 @@
 import { useEffect, Suspense, useState, useMemo } from "react";
 import { useParams } from "next/navigation";
 import { generateBreadcrumbSchema } from "@/config/seo";
-import Navbar from "@/components/layout/Navbar/Navbar";
-import Footer from "@/components/layout/Footer/Footer";
-import GoToTop from "@/components/layout/GoToTop/GoToTop";
-import BottomNav from "@/components/layout/BottomNav/BottomNav";
+import PageLayout from "@/components/layout/PageLayout/PageLayout";
 import Link from "next/link";
 import Image from "next/image";
 import ArticleSidebar from "@/components/layout/ArticleSidebar/ArticleSidebar";
@@ -198,21 +195,15 @@ function ArticleContent() {
 
   if (!article) {
     return (
-      <div className="relative w-full min-h-screen bg-black flex justify-center items-start">
-        <Navbar />
-        <main className="inner-page w-[90%] mx-auto">
-          <div className="w-full "></div>
-          <div className="flex flex-col items-center justify-center py-20">
-            <h1 className="text-white text-3xl mb-4">文章未找到</h1>
-            <Link href="/" className="text-[#FFCD83] hover:underline">
-              返回首頁
-            </Link>
-          </div>
-          <Footer />
-        </main>
-        <GoToTop />
-        <BottomNav />
-      </div>
+      <PageLayout mainClassName="items-start">
+        <div className="w-full "></div>
+        <div className="flex flex-col items-center justify-center py-20">
+          <h1 className="text-white text-3xl mb-4">文章未找到</h1>
+          <Link href="/" className="text-[#FFCD83] hover:underline">
+            返回首頁
+          </Link>
+        </div>
+      </PageLayout>
     );
   }
 
@@ -255,15 +246,12 @@ function ArticleContent() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <div
-      style={{
-        padding: '0px 20px',
-      }}
-       className="relative w-full min-h-screen bg-black flex justify-center items-center ">
-        <Navbar />
-
-        <main 
-          className="inner-page md:w-[90%] lg:w-[70%] mx-auto items-center justify-center"
+      <PageLayout 
+        containerWidth="90%"
+        contentClassName="md:w-[90%] lg:w-[70%] items-center justify-center"
+        mainClassName="items-center"
+      >
+        <div
           style={{
             paddingLeft: isMobile ? '15px' : '0',
             paddingRight: isMobile ? '15px' : '0',
@@ -512,13 +500,8 @@ function ArticleContent() {
               articles={recommendedArticles}
             />
           )}
-
-          <Footer />
-        </main>
-
-        <GoToTop />
-        <BottomNav />
-      </div>
+        </div>
+      </PageLayout>
     </>
   );
 }

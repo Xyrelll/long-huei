@@ -3,10 +3,7 @@
 import { useEffect, useState, Suspense, useCallback } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import { generateBreadcrumbSchema } from "@/config/seo";
-import Navbar from "@/components/layout/Navbar/Navbar";
-import Footer from "@/components/layout/Footer/Footer";
-import GoToTop from "@/components/layout/GoToTop/GoToTop";
-import BottomNav from "@/components/layout/BottomNav/BottomNav";
+import PageLayout from "@/components/layout/PageLayout/PageLayout";
 import PageMetadata from "@/components/SEO/PageMetadata";
 import Link from "next/link";
 import BookingArticleList from "@/components/features/BookingArticleList/BookingArticleList";
@@ -522,26 +519,19 @@ export default function SearchPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <div className="relative w-full min-h-screen bg-black flex justify-center items-center">
-        <div className="relative w-full md:w-[70%]  min-h-screen bg-black flex justify-center items-start ">
-          <Navbar />
+      <PageLayout 
+        containerWidth="70%" 
+        outerContainerClassName="flex justify-center items-start"
+        mainClassName="items-start"
+      >
+        <div className="w-full h-0 md:h-12 "></div>
 
-          <main className="inner-page w-[90%] mx-auto">
-            <div className="w-full h-0 md:h-12 "></div>
-
-            <Suspense
-              fallback={<div className="text-white p-8">Loading...</div>}
-            >
-              <SearchContent />
-            </Suspense>
-
-            <Footer />
-          </main>
-
-          <GoToTop />
-          <BottomNav />
-        </div>
-      </div>
+        <Suspense
+          fallback={<div className="text-white p-8">Loading...</div>}
+        >
+          <SearchContent />
+        </Suspense>
+      </PageLayout>
     </>
   );
 }

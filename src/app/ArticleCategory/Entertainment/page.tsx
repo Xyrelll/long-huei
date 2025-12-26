@@ -3,10 +3,7 @@
 import { Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { generateBreadcrumbSchema } from '@/config/seo';
-import Navbar from '@/components/layout/Navbar/Navbar';
-import Footer from '@/components/layout/Footer/Footer';
-import GoToTop from '@/components/layout/GoToTop/GoToTop';
-import BottomNav from '@/components/layout/BottomNav/BottomNav';
+import PageLayout from '@/components/layout/PageLayout/PageLayout';
 import BookingArticleList from '@/components/features/BookingArticleList/BookingArticleList';
 import ArticleCategoryLayout from '@/components/layout/ArticleCategoryLayout/ArticleCategoryLayout';
 import PageMetadata from '@/components/SEO/PageMetadata';
@@ -115,22 +112,12 @@ export default function EntertainmentPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      <div className="relative w-full min-h-screen bg-black flex justify-center items-center">
-        <Navbar />
-
-        <main className="inner-page w-[90%] mx-auto">
-          <div className="w-full "></div>
-
-          {/* Articles Section */}
-          <Suspense fallback={<div className="text-white p-8">Loading...</div>}>
-            <EntertainmentContent />
-          </Suspense>
-          <Footer />
-        </main>
-
-        <GoToTop />
-        <BottomNav />
-      </div>
+      <PageLayout>
+        {/* Articles Section */}
+        <Suspense fallback={<div className="text-white p-8">Loading...</div>}>
+          <EntertainmentContent />
+        </Suspense>
+      </PageLayout>
     </>
   );
 }

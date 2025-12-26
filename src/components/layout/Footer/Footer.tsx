@@ -14,7 +14,7 @@ const footerLinks = [
 
 export default function Footer() {
   return (
-    <footer id="footer" className="w-full bg-black py-8 mb-100 flex flex-col mt-8">
+    <footer id="footer" className="w-full bg-black py-8 mb-100 flex flex-col mt-8 border-t border-white/20 md:border-t-0  relative ">
       {/* Copyright - Desktop: Top position */}
       <p className="copyright text-center text-white text-xs hidden md:block mb-4">Copyright 2025 All Rights Reserved.</p>
       

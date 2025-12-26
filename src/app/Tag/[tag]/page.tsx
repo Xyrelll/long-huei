@@ -2,10 +2,7 @@
 
 import { useEffect, useState, Suspense } from 'react';
 import { useParams, useSearchParams } from 'next/navigation';
-import Navbar from '@/components/layout/Navbar/Navbar';
-import Footer from '@/components/layout/Footer/Footer';
-import GoToTop from '@/components/layout/GoToTop/GoToTop';
-import BottomNav from '@/components/layout/BottomNav/BottomNav';
+import PageLayout from '@/components/layout/PageLayout/PageLayout';
 import BookingArticleList from '@/components/features/BookingArticleList/BookingArticleList';
 import TagCategoryLayout from '@/components/layout/TagCategoryLayout/TagCategoryLayout';
 import Link from 'next/link';
@@ -106,15 +103,11 @@ function TagContent() {
 
   if (loading) {
     return (
-      <>
-        <Navbar />
+      <PageLayout>
         <div className="min-h-screen bg-black text-white flex items-center justify-center">
           <p>載入中...</p>
         </div>
-        <Footer />
-        <GoToTop />
-        <BottomNav />
-      </>
+      </PageLayout>
     );
   }
 
@@ -139,14 +132,9 @@ function TagContent() {
     }));
 
   return (
-    <>
-      <Navbar />
-      <div className="relative w-full min-h-screen bg-black flex flex-col">
-        <main className="inner-page w-[90%] mx-auto">
-         
-
-          {/* Articles Section */}
-          <section className="articles w-full bg-black py-8">
+    <PageLayout mainClassName="flex flex-col">
+      {/* Articles Section */}
+      <section className="articles w-full bg-black py-8">
  {/* Breadcrumb */}
  <div className="w-full bg-black">
             <div className="container mx-auto">
@@ -325,29 +313,18 @@ function TagContent() {
               />
             </div>
           </section>
-
-          <Footer />
-        </main>
-
-        <GoToTop />
-        <BottomNav />
-      </div>
-    </>
+    </PageLayout>
   );
 }
 
 export default function TagPage() {
   return (
     <Suspense fallback={
-      <>
-        <Navbar />
+      <PageLayout>
         <div className="min-h-screen bg-black text-white flex items-center justify-center">
           <p>載入中...</p>
         </div>
-        <Footer />
-        <GoToTop />
-        <BottomNav />
-      </>
+      </PageLayout>
     }>
       <TagContent />
     </Suspense>
