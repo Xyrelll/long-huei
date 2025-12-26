@@ -122,11 +122,13 @@ function ArticleContent() {
         const decodedSlug = decodeURIComponent(slug);
         const foundArticle = allArticles.find((a) => {
           const articleLink = a.link.replace("/Article/", "");
+          const decodedArticleLink = decodeURIComponent(articleLink);
+          // Use exact matching to avoid substring conflicts (e.g., macao%20water matching macao%20waterrr)
           return (
             articleLink === slug ||
             articleLink === decodedSlug ||
-            articleLink.includes(slug) ||
-            articleLink.includes(decodedSlug) ||
+            decodedArticleLink === slug ||
+            decodedArticleLink === decodedSlug ||
             a.link === `/Article/${slug}` ||
             a.link === `/Article/${decodedSlug}`
           );

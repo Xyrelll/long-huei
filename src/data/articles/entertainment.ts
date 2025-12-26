@@ -1,5 +1,7 @@
 // Shared article data for Entertainment category
 // Can be imported by both client and server components
+import { ArticleContent } from '@/types/articleContent';
+import { entertainmentArticleContentBlocks } from './entertainmentContentBlocks';
 
 export interface EntertainmentArticle {
   id: number;
@@ -11,6 +13,8 @@ export interface EntertainmentArticle {
   views: number;
   tags?: string[];
   collapseId: string;
+  content?: string; // Legacy plain text content
+  contentBlocks?: ArticleContent; // New structured content blocks
 }
 
 export const entertainmentArticles: EntertainmentArticle[] = [
@@ -24,6 +28,7 @@ export const entertainmentArticles: EntertainmentArticle[] = [
     views: 717,
     tags: ['澳門訂房', '澳門龍匯', '龍匯天下包車'],
     collapseId: 'collapse-macao-play',
+    contentBlocks: entertainmentArticleContentBlocks[1],
   },
   {
     id: 2,
@@ -35,6 +40,7 @@ export const entertainmentArticles: EntertainmentArticle[] = [
     views: 1119,
     tags: ['澳門包車', '澳門水上樂園', '澳門旅遊'],
     collapseId: 'collapse-macao-waterpark',
+    contentBlocks: entertainmentArticleContentBlocks[2],
   },
   {
     id: 3,
@@ -46,6 +52,7 @@ export const entertainmentArticles: EntertainmentArticle[] = [
     views: 1358,
     tags: ['澳門百老匯', '百老匯', '龍匯澳們百老匯'],
     collapseId: 'collapse-bailaohuei',
+    contentBlocks: entertainmentArticleContentBlocks[3],
   },
   {
     id: 4,
@@ -57,6 +64,7 @@ export const entertainmentArticles: EntertainmentArticle[] = [
     views: 1294,
     tags: ['澳門永利龍匯', '龍匯澳門永利', '龍匯天下永利', '永利澳門龍匯天下'],
     collapseId: 'collapse-macao-yongliii',
+    contentBlocks: entertainmentArticleContentBlocks[4],
   },
   {
     id: 5,
@@ -68,17 +76,19 @@ export const entertainmentArticles: EntertainmentArticle[] = [
     views: 1324,
     tags: ['澳門永利', '龍匯澳門永利', '永利澳門龍匯天下', '龍匯天下澳門永利'],
     collapseId: 'collapse-macao-yongli',
+    contentBlocks: entertainmentArticleContentBlocks[5],
   },
   {
     id: 6,
     title: '【澳門水舞間】超絕視覺震撼！給你不得不去的理由！',
-    description: '來到澳門旅遊最不能錯過的就是《水舞間》，耗資超過二十億港元，是全球最壯觀最大型的水上匯演舞台劇，還曾榮獲2011年度「HKMA/TVB 傑出市場策劃獎」金獎；表演橋段結合高難度特技、絢爛炫目燈光、特殊',
-    image: '/articles/【澳門水舞間】超絕視覺震撼！給你不得不去的理由！-h.jpg',
-    imageMobile: '/articles/【澳門水舞間】超絕視覺震撼！給你不得不去的理由！-m.jpg',
+    description: '來到澳門旅遊最不能錯過的就是《水舞間》，耗資超過二十億港元，是全球最壯觀最大型的水上匯演舞台劇，還曾榮獲2011年度「HKMA/TVB 傑出市場策劃獎」金獎；表演橋段結合高難度特技、絢爛炫目燈光、特殊服裝以及絕佳空間設計，視覺、聽覺都讓人驚豔，小編今天特別整理出了超吸引人的獨家亮點，包準你看完就想去！Let\'s Go！',
+    image: '/entertainment/id6/1234.jpg',
+    imageMobile: '/entertainment/id6/1234.jpg',
     link: '/Article/macao%20water',
     views: 1455,
     tags: ['澳門水舞間', '龍匯澳門水舞間', '水舞間龍匯天下', '龍匯水舞間'],
     collapseId: 'collapse-macao-water',
+    contentBlocks: entertainmentArticleContentBlocks[6],
   },
   {
     id: 7,
@@ -90,6 +100,7 @@ export const entertainmentArticles: EntertainmentArticle[] = [
     views: 1994,
     tags: ['澳門按摩', '澳門龍匯按摩', '龍匯天下按摩', '澳門龍匯天下按摩'],
     collapseId: 'collapse-macao-massage2',
+    contentBlocks: entertainmentArticleContentBlocks[7],
   },
   {
     id: 8,
@@ -101,6 +112,7 @@ export const entertainmentArticles: EntertainmentArticle[] = [
     views: 1880,
     tags: ['澳門美高梅', '美高梅澳門龍匯', '龍匯美高梅', '龍匯天下澳門美高梅'],
     collapseId: 'collapse-macao-meigaomei',
+    contentBlocks: entertainmentArticleContentBlocks[8],
   },
   {
     id: 9,
@@ -112,6 +124,7 @@ export const entertainmentArticles: EntertainmentArticle[] = [
     views: 2104,
     tags: ['澳門賭場攻略', '龍匯天下澳門賭場', '澳門賭場龍匯', '澳門賭場哪家好'],
     collapseId: 'collapse-macao-casino',
+    contentBlocks: entertainmentArticleContentBlocks[9],
   },
   {
     id: 10,
@@ -123,6 +136,7 @@ export const entertainmentArticles: EntertainmentArticle[] = [
     views: 1315,
     tags: ['澳門永利龍匯天下', '永利澳門龍匯', '澳門永利有什麼好玩', '永利龍匯天下'],
     collapseId: 'collapse-macao-wynn',
+    contentBlocks: entertainmentArticleContentBlocks[10],
   },
 ];
 
