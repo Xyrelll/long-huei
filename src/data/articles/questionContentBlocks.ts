@@ -614,10 +614,29 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           },
           {
             type: 'text',
-            content: '立即追蹤龍匯天下官方IG或點擊下方連結加入官方賴，也可以找我們換錢喔~',
+            content: '立即追蹤龍匯天下官方',
+            style: { 
+              marginBottom: '5px', 
+              marginTop: '20px', 
+              fontSize: '0.8rem'
+            }
+          },
+          {
+            type: 'link',
+            text: 'IG',
+            href: 'https://www.instagram.com/lhts.8899/',
+            target: '_blank',
+            style: {
+              color: '#FFCD83',
+              textDecoration: 'underline',
+              marginBottom: '5px'
+            }
+          },
+          {
+            type: 'text',
+            content: '或點擊下方連結加入官方賴，也可以找我們換錢喔~',
             style: { 
               marginBottom: '20px', 
-              marginTop: '20px', 
               fontSize: '0.8rem'
             }
           },
@@ -1179,10 +1198,29 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           },
           {
             type: 'text',
-            content: '想知道更多有關澳門的獨家消息嗎?快追蹤龍匯天下官方IG吧~',
+            content: '想知道更多有關澳門的獨家消息嗎?快追蹤龍匯天下官方',
+            style: { 
+              marginBottom: '5px', 
+              marginTop: '0', 
+              fontSize: '0.8rem'
+            }
+          },
+          {
+            type: 'link',
+            text: 'IG',
+            href: 'https://www.instagram.com/lhts.8899/',
+            target: '_blank',
+            style: {
+              color: '#FFCD83',
+              textDecoration: 'underline',
+              marginBottom: '5px'
+            }
+          },
+          {
+            type: 'text',
+            content: '吧~',
             style: { 
               marginBottom: '10px', 
-              marginTop: '0', 
               fontSize: '0.8rem'
             }
           },
@@ -1571,10 +1609,29 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           },
           {
             type: 'text',
-            content: '掌握「分散財物、使用電子支付、避開深夜小巷」3原則，即可安心探索世界遺產與米其林美食。建議出發前投保旅遊險，並追蹤龍匯天下官方IG以及點擊下方官方賴獲取更多資訊。',
+            content: '掌握「分散財物、使用電子支付、避開深夜小巷」3原則，即可安心探索世界遺產與米其林美食。建議出發前投保旅遊險，並追蹤龍匯天下官方',
+            style: { 
+              marginBottom: '5px', 
+              marginTop: '0', 
+              fontSize: '0.8rem'
+            }
+          },
+          {
+            type: 'link',
+            text: 'IG',
+            href: 'https://www.instagram.com/lhts.8899/',
+            target: '_blank',
+            style: {
+              color: '#FFCD83',
+              textDecoration: 'underline',
+              marginBottom: '5px'
+            }
+          },
+          {
+            type: 'text',
+            content: '以及點擊下方官方賴獲取更多資訊。',
             style: { 
               marginBottom: '20px', 
-              marginTop: '0', 
               fontSize: '0.8rem'
             }
           }

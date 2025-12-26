@@ -595,10 +595,29 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
           },
           {
             type: 'text',
-            content: '立即追蹤龍匯天下官方 IG 或加入官方賴，開啟你的澳門之旅！',
+            content: '立即追蹤龍匯天下官方',
+            style: { 
+              marginBottom: '5px', 
+              marginTop: '0', 
+              fontSize: '0.8rem'
+            }
+          },
+          {
+            type: 'link',
+            text: 'IG',
+            href: 'https://www.instagram.com/lhts.8899/',
+            target: '_blank',
+            style: {
+              color: '#FFCD83',
+              textDecoration: 'underline',
+              marginBottom: '5px'
+            }
+          },
+          {
+            type: 'text',
+            content: '或加入官方賴，開啟你的澳門之旅！',
             style: { 
               marginBottom: '20px', 
-              marginTop: '0', 
               fontSize: '0.8rem'
             }
           }
@@ -1190,10 +1209,29 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
           },
           {
             type: 'text',
-            content: '結語：怎麼樣?澳門永利很值得一去吧，快點擊下方龍匯天下官方賴連結或是追蹤官方IG了結更多吧~',
+            content: '結語：怎麼樣?澳門永利很值得一去吧，快點擊下方龍匯天下官方賴連結或是追蹤官方',
+            style: { 
+              marginBottom: '5px', 
+              marginTop: '20px', 
+              fontSize: '0.8rem'
+            }
+          },
+          {
+            type: 'link',
+            text: 'IG',
+            href: 'https://www.instagram.com/lhts.8899/',
+            target: '_blank',
+            style: {
+              color: '#FFCD83',
+              textDecoration: 'underline',
+              marginBottom: '5px'
+            }
+          },
+          {
+            type: 'text',
+            content: '了結更多吧~',
             style: { 
               marginBottom: '20px', 
-              marginTop: '20px', 
               fontSize: '0.8rem'
             }
           }
@@ -1357,10 +1395,29 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
           },
           {
             type: 'text',
-            content: '還在等什麼?快點擊下方連結加入「龍匯天下」官方賴預訂，也別忘了追蹤龍匯天下官方IG解鎖你的VIP級澳門之旅吧！',
+            content: '還在等什麼?快點擊下方連結加入「龍匯天下」官方賴預訂，也別忘了追蹤龍匯天下官方',
+            style: { 
+              marginBottom: '5px', 
+              marginTop: '20px', 
+              fontSize: '0.8rem'
+            }
+          },
+          {
+            type: 'link',
+            text: 'IG',
+            href: 'https://www.instagram.com/lhts.8899/',
+            target: '_blank',
+            style: {
+              color: '#FFCD83',
+              textDecoration: 'underline',
+              marginBottom: '5px'
+            }
+          },
+          {
+            type: 'text',
+            content: '解鎖你的VIP級澳門之旅吧！',
             style: { 
               marginBottom: '20px', 
-              marginTop: '20px', 
               fontSize: '0.8rem'
             }
           }
@@ -1694,10 +1751,29 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
           },
           {
             type: 'text',
-            content: '另外也可以追蹤龍匯天下官方IG喔~',
+            content: '另外也可以追蹤龍匯天下官方',
+            style: { 
+              marginBottom: '5px', 
+              marginTop: '0', 
+              fontSize: '0.8rem'
+            }
+          },
+          {
+            type: 'link',
+            text: 'IG',
+            href: 'https://www.instagram.com/lhts.8899/',
+            target: '_blank',
+            style: {
+              color: '#FFCD83',
+              textDecoration: 'underline',
+              marginBottom: '5px'
+            }
+          },
+          {
+            type: 'text',
+            content: '喔~',
             style: { 
               marginBottom: '20px', 
-              marginTop: '0', 
               fontSize: '0.8rem'
             }
           }
@@ -2068,10 +2144,29 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
         content: [
           {
             type: 'text',
-            content: '立即點擊 龍匯天下 官方賴入口，別忘了追蹤龍匯天下官方IG',
+            content: '立即點擊 龍匯天下 官方賴入口，別忘了追蹤龍匯天下官方',
+            style: { 
+              marginBottom: '5px', 
+              marginTop: '0', 
+              fontSize: '0.8rem'
+            }
+          },
+          {
+            type: 'link',
+            text: 'IG',
+            href: 'https://www.instagram.com/lhts.8899/',
+            target: '_blank',
+            style: {
+              color: '#FFCD83',
+              textDecoration: 'underline',
+              marginBottom: '5px'
+            }
+          },
+          {
+            type: 'text',
+            content: '',
             style: { 
               marginBottom: '20px', 
-              marginTop: '0', 
               fontSize: '0.8rem'
             }
           }
@@ -2479,10 +2574,29 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
           },
           {
             type: 'text',
-            content: '手刀追蹤 龍匯天下官方IG，點擊下方官方LINE獲取更多獨家行程情報！',
+            content: '手刀追蹤 龍匯天下官方',
+            style: { 
+              marginBottom: '5px', 
+              marginTop: '0', 
+              fontSize: '0.8rem'
+            }
+          },
+          {
+            type: 'link',
+            text: 'IG',
+            href: 'https://www.instagram.com/lhts.8899/',
+            target: '_blank',
+            style: {
+              color: '#FFCD83',
+              textDecoration: 'underline',
+              marginBottom: '5px'
+            }
+          },
+          {
+            type: 'text',
+            content: '，點擊下方官方LINE獲取更多獨家行程情報！',
             style: { 
               marginBottom: '20px', 
-              marginTop: '0', 
               fontSize: '0.8rem'
             }
           }
@@ -2894,10 +3008,29 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
           },
           {
             type: 'text',
-            content: '快追蹤我們的官方IG；龍匯天下，或是點擊下方龍匯天下官方賴連結！',
+            content: '快追蹤我們的官方',
+            style: { 
+              marginBottom: '5px', 
+              marginTop: '0', 
+              fontSize: '0.8rem'
+            }
+          },
+          {
+            type: 'link',
+            text: 'IG',
+            href: 'https://www.instagram.com/lhts.8899/',
+            target: '_blank',
+            style: {
+              color: '#FFCD83',
+              textDecoration: 'underline',
+              marginBottom: '5px'
+            }
+          },
+          {
+            type: 'text',
+            content: '；龍匯天下，或是點擊下方龍匯天下官方賴連結！',
             style: { 
               marginBottom: '20px', 
-              marginTop: '0', 
               fontSize: '0.8rem'
             }
           },
