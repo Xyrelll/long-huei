@@ -4,81 +4,389 @@
 
   <!-- Home -->
   <url>
-    <loc>https://yourdomain.com/</loc>
+    <loc>https://long-huei.vercel.app/</loc>
     <priority>1.0</priority>
+    <changefreq>daily</changefreq>
   </url>
 
-  <!-- Main Pages -->
+  <!-- Main Category Pages -->
   <url>
-    <loc>https://yourdomain.com/booking</loc>
-  </url>
-
-  <url>
-    <loc>https://yourdomain.com/travel</loc>
-  </url>
-
-  <url>
-    <loc>https://yourdomain.com/car-service</loc>
+    <loc>https://long-huei.vercel.app/ArticleCategory/Travel</loc>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
   </url>
 
   <url>
-    <loc>https://yourdomain.com/wellness</loc>
+    <loc>https://long-huei.vercel.app/ArticleCategory/Booking</loc>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
   </url>
 
   <url>
-    <loc>https://yourdomain.com/entertainment</loc>
+    <loc>https://long-huei.vercel.app/ArticleCategory/RentCar</loc>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
   </url>
 
   <url>
-    <loc>https://yourdomain.com/faq</loc>
+    <loc>https://long-huei.vercel.app/ArticleCategory/Sauna</loc>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
   </url>
 
   <url>
-    <loc>https://yourdomain.com/contact</loc>
+    <loc>https://long-huei.vercel.app/ArticleCategory/Entertainment</loc>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
   </url>
 
   <url>
-    <loc>https://yourdomain.com/search</loc>
+    <loc>https://long-huei.vercel.app/ArticleCategory/Question</loc>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <!-- Other Main Pages -->
+  <url>
+    <loc>https://long-huei.vercel.app/CustomerService</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://long-huei.vercel.app/faq</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://long-huei.vercel.app/Privacy</loc>
+    <priority>0.5</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://long-huei.vercel.app/Search</loc>
+    <priority>0.6</priority>
+    <changefreq>weekly</changefreq>
   </url>
 
   <!-- Travel Articles -->
   <url>
-    <loc>https://yourdomain.com/travel/macau-1-day</loc>
+    <loc>https://long-huei.vercel.app/Article/macau-all</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>https://yourdomain.com/travel/macau-guide-2025</loc>
+    <loc>https://long-huei.vercel.app/Article/macao-onedaypass</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>https://yourdomain.com/travel/macau-family</loc>
-  </url>
-
-  <!-- Car Services -->
-  <url>
-    <loc>https://yourdomain.com/car-service/airport-transfer</loc>
+    <loc>https://long-huei.vercel.app/Article/macao-parent-child</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>https://yourdomain.com/car-service/private-tour</loc>
-  </url>
-
-  <!-- Wellness -->
-  <url>
-    <loc>https://yourdomain.com/wellness/sauna</loc>
+    <loc>https://long-huei.vercel.app/Article/macao-travelgroup1</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>https://yourdomain.com/wellness/massage</loc>
+    <loc>https://long-huei.vercel.app/Article/grouptravel</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>https://yourdomain.com/wellness/spa</loc>
+    <loc>https://long-huei.vercel.app/Article/macao%20dasanbaa</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
   </url>
 
-  <!-- Entertainment -->
   <url>
-    <loc>https://yourdomain.com/entertainment/murder-mystery</loc>
+    <loc>https://long-huei.vercel.app/Article/macao%20hundred%20old</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://long-huei.vercel.app/Article/macao%20view</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://long-huei.vercel.app/Article/macao%20free%20go</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://long-huei.vercel.app/Article/macao%20travel</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://long-huei.vercel.app/Article/travel1</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- Booking Articles -->
+  <url>
+    <loc>https://long-huei.vercel.app/Article/macao%20hotell</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://long-huei.vercel.app/Article/macao%20hotell1</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://long-huei.vercel.app/Article/macao%20dacang</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://long-huei.vercel.app/Article/wei2</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://long-huei.vercel.app/Article/wei%20i</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- RentCar Articles -->
+  <url>
+    <loc>https://long-huei.vercel.app/Article/macao-rentalcar</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://long-huei.vercel.app/Article/privatecar</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://long-huei.vercel.app/Article/airplane-rentcar</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://long-huei.vercel.app/Article/macao-carpass</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://long-huei.vercel.app/Article/airportrencar1</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://long-huei.vercel.app/Article/macao-baocar</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://long-huei.vercel.app/Article/macao-onedaytrvl</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://long-huei.vercel.app/Article/airportrencar</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://long-huei.vercel.app/Article/rentcar1</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://long-huei.vercel.app/Article/macao-rent-car</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://long-huei.vercel.app/Article/wei123</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://long-huei.vercel.app/Article/rentcal</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- Sauna Articles -->
+  <url>
+    <loc>https://long-huei.vercel.app/Article/sauna1</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://long-huei.vercel.app/Article/sauna2</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://long-huei.vercel.app/Article/macao%20waterrr</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://long-huei.vercel.app/Article/macao%20waterr</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://long-huei.vercel.app/Article/macao%20massage%201</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://long-huei.vercel.app/Article/macao%20massage</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://long-huei.vercel.app/Article/macao-sauna-how</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://long-huei.vercel.app/Article/macao-spa</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://long-huei.vercel.app/Article/sauna4</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://long-huei.vercel.app/Article/sauna3</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://long-huei.vercel.app/Article/sauna</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- Entertainment Articles -->
+  <url>
+    <loc>https://long-huei.vercel.app/Article/macao%20play</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://long-huei.vercel.app/Article/macao-waterpark</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://long-huei.vercel.app/Article/bailaohuei</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://long-huei.vercel.app/Article/MACAO%20yongliii</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://long-huei.vercel.app/Article/macao%20yongli</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://long-huei.vercel.app/Article/macao%20water</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://long-huei.vercel.app/Article/macao%20massage2</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://long-huei.vercel.app/Article/macao%20meigaomei</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://long-huei.vercel.app/Article/macao%20casino</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://long-huei.vercel.app/Article/macao%20wynn</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- Question Articles -->
+  <url>
+    <loc>https://long-huei.vercel.app/Article/money-exchange</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://long-huei.vercel.app/Article/macao%20pass</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://long-huei.vercel.app/Article/safe1</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
   </url>
 
 </urlset>
