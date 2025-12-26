@@ -595,7 +595,28 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
           },
           {
             type: 'text',
-            content: '立即追蹤龍匯天下官方 IG 或加入官方賴，開啟你的澳門之旅！',
+            content: '立即追蹤龍匯天下官方 ',
+            style: { 
+              marginBottom: '0', 
+              marginTop: '0', 
+              fontSize: '1.125rem'
+            }
+          },
+          {
+            type: 'link',
+            text: 'IG',
+            href: 'https://line.me/R/ti/p/@vgl8843j?from=page&searchId=vgl8843j',
+            target: '_blank',
+            style: {
+              color: '#3b82f6',
+              textDecoration: 'underline',
+              marginTop: '0',
+              marginBottom: '0'
+            }
+          },
+          {
+            type: 'text',
+            content: ' 或加入官方賴，開啟你的澳門之旅！',
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 

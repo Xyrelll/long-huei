@@ -64,40 +64,26 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
             }
           },
           {
-            type: 'text',
+            type: 'heading',
+            level: 3,
             content: '渠道可得澳門元（MOP）手續費優缺點分析',
             style: { 
-              marginBottom: '10px', 
+              marginBottom: '20px', 
               marginTop: '20px', 
-              fontSize: '1.125rem',
-              fontWeight: 'bold'
-            }
-          },
-          {
-            type: 'text',
-            content: '民間兌換所（推薦）1,028-1,032無匯率最佳，但需比價',
-            style: { 
-              marginBottom: '10px', 
-              marginTop: '10px', 
               fontSize: '1.125rem'
             }
           },
           {
-            type: 'text',
-            content: '銀行（中國銀行）1,020-1,025MOP 20安全但耗時，排隊>30分鐘',
-            style: { 
-              marginBottom: '10px', 
-              marginTop: '10px', 
-              fontSize: '1.125rem'
-            }
-          },
-          {
-            type: 'text',
-            content: '酒店/機場櫃台1,010-1,015MOP 50起緊急備用，匯率最差',
+            type: 'table',
+            headers: ['渠道', '匯率', '手續費', '優缺點'],
+            rows: [
+              ['民間兌換所（推薦）', '1,028-1,032', '無', '匯率最佳，但需比價'],
+              ['銀行（中國銀行）', '1,020-1,025', 'MOP 20', '安全但耗時，排隊>30分鐘'],
+              ['酒店/機場櫃台', '1,010-1,015', 'MOP 50起', '緊急備用，匯率最差']
+            ],
             style: { 
               marginBottom: '20px', 
-              marginTop: '10px', 
-              fontSize: '1.125rem'
+              marginTop: '10px'
             }
           },
           {
@@ -1571,7 +1557,28 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           },
           {
             type: 'text',
-            content: '掌握「分散財物、使用電子支付、避開深夜小巷」3原則，即可安心探索世界遺產與米其林美食。建議出發前投保旅遊險，並追蹤龍匯天下官方IG以及點擊下方官方賴獲取更多資訊。',
+            content: '掌握「分散財物、使用電子支付、避開深夜小巷」3原則，即可安心探索世界遺產與米其林美食。建議出發前投保旅遊險，並追蹤龍匯天下官方',
+            style: { 
+              marginBottom: '0', 
+              marginTop: '0', 
+              fontSize: '1.125rem'
+            }
+          },
+          {
+            type: 'link',
+            text: 'IG',
+            href: 'https://line.me/R/ti/p/@vgl8843j?from=page&searchId=vgl8843j',
+            target: '_blank',
+            style: {
+              color: '#3b82f6',
+              textDecoration: 'underline',
+              marginTop: '0',
+              marginBottom: '0'
+            }
+          },
+          {
+            type: 'text',
+            content: '以及點擊下方官方賴獲取更多資訊。',
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
