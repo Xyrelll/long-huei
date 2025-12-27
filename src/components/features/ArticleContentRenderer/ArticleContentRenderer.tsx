@@ -614,6 +614,7 @@ function TableOfContentsComponent({ block }: { block: ArticleContentBlock }) {
   const baseStyle = block.style || {};
   const buttonText = block.buttonText || '文章目錄';
   const buttonIcon = block.buttonIcon || '☰';
+  const hoverTextColor = (baseStyle as any).hoverTextColor || '#CD861A';
 
   const handleTOCClick = (e: React.MouseEvent<HTMLAnchorElement>, itemId: string) => {
     e.preventDefault();
@@ -840,7 +841,12 @@ function TableOfContentsComponent({ block }: { block: ArticleContentBlock }) {
                               fontSize: fontSize,
                               fontWeight: fontWeight,
                             }}
-                            className="hover:text-[#CD861A]"
+                            onMouseEnter={(e) => {
+                              e.currentTarget.style.color = hoverTextColor;
+                            }}
+                            onMouseLeave={(e) => {
+                              e.currentTarget.style.color = '#000000';
+                            }}
                           >
                             {item.text}
                           </a>
@@ -854,7 +860,12 @@ function TableOfContentsComponent({ block }: { block: ArticleContentBlock }) {
                               fontSize: fontSize,
                               fontWeight: fontWeight,
                             }}
-                            className="hover:text-[#CD861A]"
+                            onMouseEnter={(e) => {
+                              e.currentTarget.style.color = hoverTextColor;
+                            }}
+                            onMouseLeave={(e) => {
+                              e.currentTarget.style.color = '#000000';
+                            }}
                           >
                             {item.text}
                           </span>

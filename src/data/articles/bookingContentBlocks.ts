@@ -2,6 +2,51 @@
 // Mapped by article ID for easy reference
 import { ArticleContent } from '@/types/articleContent';
 
+// Common style constants - edit here to update all instances
+const TEXT_STYLE_BOTTOM_20 = { 
+  marginBottom: '20px', 
+  marginTop: '0', 
+  fontSize: '1.125rem'
+};
+
+const TEXT_STYLE_BOTTOM_10 = { 
+  marginBottom: '10px', 
+  marginTop: '0', 
+  fontSize: '1.125rem'
+};
+
+const TEXT_STYLE_BOTTOM_20_NO_TOP = { 
+  marginBottom: '20px',
+  fontSize: '1.125rem'
+};
+
+const TEXT_STYLE_BOTTOM_20_1_1 = { 
+  marginBottom: '20px',
+  fontSize: '1.1rem'
+};
+
+const HEADING_STYLE_H3 = { 
+  marginTop: '20px', 
+  marginBottom: '10px' 
+};
+
+const TABLE_OF_CONTENTS_STYLE = {
+  backgroundColor: 'rgba(83, 52, 4, 0.842)',
+  borderRadius: '30px',
+  padding: '20px',
+  marginTop: '20px',
+  marginBottom: '30px',
+  boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 165, 0, 0.2)',
+  border: '1px solid #d18411',
+  backdropFilter: 'blur(10px)',
+  hoverTextColor: '#FFCD83',
+};
+
+const SECTION_STYLE = {
+  marginTop: '40px',
+  marginBottom: '40px'
+};
+
 export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
   1: {
     // Article description (intro text)
@@ -9,10 +54,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
       {
         type: 'text',
         content: '計劃澳門自由行的旅客常面臨訂房價格不透明與區域選擇困難的問題。根據澳門消費者委員會統計，2023年酒店類投訴案件中，61%涉及未預先告知的附加費用，例如抵達後加收的度假村服務費或網絡使用費等等，但是不用擔心！小編都知道，這篇文章建議收藏，帶你避開各式隱形支出也帶你開心遊澳門！',
-            style: { 
-              marginBottom: '20px',
-              fontSize: '1.1rem'
-            }
+            style: TEXT_STYLE_BOTTOM_20_1_1
       }
     ],
     // Table of Contents
@@ -30,16 +72,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
         { level: 2, text: '分析3,000+旅客評價得出的黃金比例', id: 'golden-ratio' },
         { level: 1, text: '【澳門訂房】聰明規劃讓旅程價值翻倍', id: 'smart-planning' }
       ],
-      style: {
-        backgroundColor: 'rgba(83, 52, 4, 0.842)',
-        borderRadius: '30px',
-        padding: '20px',
-        marginTop: '20px',
-        marginBottom: '30px',
-        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 165, 0, 0.2)',
-        border: '1px solid #d18411',
-        backdropFilter: 'blur(10px)',
-      }
+      style: TABLE_OF_CONTENTS_STYLE
     },
     // Array of sections
     sections: [
@@ -99,7 +132,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -164,7 +197,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -195,7 +228,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -242,7 +275,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -297,7 +330,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       }
     ]
   },
@@ -307,10 +340,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
       {
         type: 'text',
         content: '澳門的飯店數不勝數，是不是不知道找哪家?沒問題！小編聽到你的困擾了，今天特別精挑細選澳門最不能錯過的五大奢華飯店各自的特點，信我一把接著看！總有你滿意的！',
-            style: { 
-              marginBottom: '20px',
-              fontSize: '1.1rem'
-            }
+            style: TEXT_STYLE_BOTTOM_20_1_1
       }
     ],
     // Table of Contents
@@ -326,16 +356,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
         { level: 1, text: '【澳門飯店】美高梅｜藝術科技狂想曲', id: 'mgm' },
         { level: 1, text: '【澳門飯店】行家才知道的「隱藏版體驗」', id: 'hidden-experiences' }
       ],
-      style: {
-        backgroundColor: 'rgba(83, 52, 4, 0.842)',
-        borderRadius: '30px',
-        padding: '20px',
-        marginTop: '20px',
-        marginBottom: '30px',
-        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 165, 0, 0.2)',
-        border: '1px solid #d18411',
-        backdropFilter: 'blur(10px)',
-      }
+      style: TABLE_OF_CONTENTS_STYLE
     },
     // Array of sections
     sections: [
@@ -385,7 +406,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -433,7 +454,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -481,7 +502,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -529,7 +550,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -577,7 +598,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -638,7 +659,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       }
     ]
   },
@@ -666,16 +687,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
         { level: 1, text: '【澳門大倉酒店】永續款待進行式｜零廢棄酒店實證數據', id: 'sustainable-hospitality' },
         { level: 1, text: '【澳門大倉酒店】行家級選房公式｜三菱UFJ建築研究所實測數據', id: 'room-selection-formula' }
       ],
-      style: {
-        backgroundColor: 'rgba(83, 52, 4, 0.842)',
-        borderRadius: '30px',
-        padding: '20px',
-        marginTop: '20px',
-        marginBottom: '30px',
-        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 165, 0, 0.2)',
-        border: '1px solid #d18411',
-        backdropFilter: 'blur(10px)',
-      }
+      style: TABLE_OF_CONTENTS_STYLE
     },
     // Array of sections
     sections: [
@@ -719,13 +731,10 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '枯山水聲景庭園：東京藝術大學音響研究所設計的7.1聲道竹筒水琴系統，重現龍安寺方丈庭園音效',
-            style: { 
-              marginBottom: '20px',
-              fontSize: '1.1rem'
-            }
+            style: TEXT_STYLE_BOTTOM_20_1_1
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -767,13 +776,10 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '空氣觸覺管理：大堂安裝三菱重工定製香氛系統，依時段切換「晨露/午磬/夜檀」三種分子濃度',
-            style: { 
-              marginBottom: '20px',
-              fontSize: '1.1rem'
-            }
+            style: TEXT_STYLE_BOTTOM_20_1_1
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -815,13 +821,10 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '茶杓AI鑑定系統：運用東大研發的3D掃描技術，可解析客房內樂燒茶碗的300年窯變歷程',
-            style: { 
-              marginBottom: '20px',
-              fontSize: '1.1rem'
-            }
+            style: TEXT_STYLE_BOTTOM_20_1_1
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -863,13 +866,10 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '人力發電廊道：走廊鋪設Panasonic壓電地磚，員工步行1公里可產生客房1小時照明電力',
-            style: { 
-              marginBottom: '20px',
-              fontSize: '1.1rem'
-            }
+            style: TEXT_STYLE_BOTTOM_20_1_1
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -911,10 +911,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '3. 親子友好祕境：西翼「橿原套房」內藏奈良縣贈送的等比例縮小東大寺木作模型',
-            style: { 
-              marginBottom: '20px',
-              fontSize: '1.1rem'
-            }
+            style: TEXT_STYLE_BOTTOM_20_1_1
           },
           {
             type: 'text',
@@ -938,29 +935,20 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '追蹤起來',
-            style: { 
-              marginBottom: '20px',
-              fontSize: '1.1rem'
-            }
+            style: TEXT_STYLE_BOTTOM_20_1_1
           },
           {
             type: 'text',
             content: '小編我也把龍匯天下的官方賴連結貼心的幫你放在下方啦~',
-            style: { 
-              marginBottom: '20px',
-              fontSize: '1.1rem'
-            }
+            style: TEXT_STYLE_BOTTOM_20_1_1
           },
           {
             type: 'text',
             content: '我們下一篇文章見囉~',
-            style: { 
-              marginBottom: '20px',
-              fontSize: '1.1rem'
-            }
+            style: TEXT_STYLE_BOTTOM_20_1_1
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       }
     ]
   },
@@ -990,16 +978,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
         { level: 2, text: '大倉酒店', id: 'okura' },
         { level: 2, text: '新濠天地 – 摩珀斯', id: 'morpheus' }
       ],
-      style: {
-        backgroundColor: 'rgba(83, 52, 4, 0.842)',
-        borderRadius: '30px',
-        padding: '20px',
-        marginTop: '20px',
-        marginBottom: '30px',
-        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 165, 0, 0.2)',
-        border: '1px solid #d18411',
-        backdropFilter: 'blur(10px)',
-      }
+      style: TABLE_OF_CONTENTS_STYLE
     },
     // Array of sections
     sections: [
@@ -1213,13 +1192,10 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '小編整理的這幾間澳門框金又包銀的酒店真的會讓人陶醉在其中，建議多方評比選擇適合自己的飯店再訂房！詳細情形及更多的優惠請加官方賴了解更多，這篇【澳門訂房】希望能讓大家下次去澳門輕鬆找到自己喜愛的住宿~',
-            style: { 
-              marginBottom: '20px',
-              fontSize: '1.1rem'
-            }
+            style: TEXT_STYLE_BOTTOM_20_1_1
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       }
     ]
   },
@@ -1265,16 +1241,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
         { level: 1, text: '【澳門訂房】澳門銀河酒店', id: 'galaxy' },
         { level: 1, text: '【澳門訂房】澳門威尼斯人度假村酒店', id: 'venetian' }
       ],
-      style: {
-        backgroundColor: 'rgba(83, 52, 4, 0.842)',
-        borderRadius: '30px',
-        padding: '20px',
-        marginTop: '20px',
-        marginBottom: '30px',
-        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 165, 0, 0.2)',
-        border: '1px solid #d18411',
-        backdropFilter: 'blur(10px)',
-      }
+      style: TABLE_OF_CONTENTS_STYLE
     },
     // Array of sections
     sections: [
@@ -1294,13 +1261,10 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '百老匯酒店是澳門銀河渡假村內的酒店價格算是很便宜CP值很高的酒店，在澳門機場就有免費接駁車可以到達酒店而且還可以使用渡假村內的「天浪淘園」設施，帶小朋友去玩水很適合唷!!旁邊有一條「百老匯美食街」有許多澳門美食都在這條街上像是翠華、添好運、成記粥品等等......',
-            style: { 
-              marginBottom: '20px',
-              fontSize: '1.1rem'
-            }
+            style: TEXT_STYLE_BOTTOM_20_1_1
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -1318,13 +1282,10 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '美獅美高梅是很新的澳門飯店在澳門半島有一間舊的美高梅，而美獅美高梅是最新力作，光是lobby就高檔到不行超好拍照~也有免費的接駁車從機場送到飯店房間內的mini bar約有十瓶左右飲料全數免費喝設施有戶外游泳池、桑拿三溫暖、健身房、賭場等等裡面還有一間Starbucks的旗艦店唷~',
-            style: { 
-              marginBottom: '20px',
-              fontSize: '1.1rem'
-            }
+            style: TEXT_STYLE_BOTTOM_20_1_1
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -1342,13 +1303,10 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '新濠影匯是【澳門訂房】相當熱門的飯店之一也很推一生可以來住一次看看!房間有分成「巨星匯」和「明星匯」是不同的CHECK-IN櫃台，巨星匯的坪數更大更豪華唷飯店內除了摩天輪外還有蝙蝠俠夜間奔馳4D、華納滿FUN童樂園、戶外游泳池、滑水道及漂漂河等，很適合親子遊來玩水唷!',
-            style: { 
-              marginBottom: '20px',
-              fontSize: '1.1rem'
-            }
+            style: TEXT_STYLE_BOTTOM_20_1_1
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -1366,13 +1324,10 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '大部分澳門的高檔飯店都在路氹區，十六浦索菲特飯店位於澳門半島，這邊有許多澳門景點、澳門美食大三巴和議事亭前地都是步行可達的距離也走得到十月初五街吃美食，飯店設施有健身房、蒸氣室、桑拿、室外游泳池、SPA水療，因為歷史悠久所以價格也便宜許多~也有從機場來的免費接駁車。',
-            style: { 
-              marginBottom: '20px',
-              fontSize: '1.1rem'
-            }
+            style: TEXT_STYLE_BOTTOM_20_1_1
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -1390,13 +1345,10 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '金沙城中心度假村四間飯店內較平價飯店，但一樣可以享受金沙城中心的服務唷~有個大賭場，很適合賭客小賭一下，有空橋連接著旁邊的巴黎人、威尼斯人，步行到其他酒店也是相當方便，親子遊方便12歲以下兒童不佔床可以免費入住，設施有Spa、室外游泳池、健身房，泳池畔還設有休憩亭~',
-            style: { 
-              marginBottom: '20px',
-              fontSize: '1.1rem'
-            }
+            style: TEXT_STYLE_BOTTOM_20_1_1
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -1414,13 +1366,10 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '銀河酒店位於銀河渡假村~提供免費的機場接駁車接送，銀河渡假村的水晶大堂表演相當氣派，有賭場、室外恆溫泳池、按摩泳池、健身房等設施12歲以下兒童不佔床可以免費入住房客可以免費到銀河渡假村內的【天浪淘園】玩水！',
-            style: { 
-              marginBottom: '20px',
-              fontSize: '1.1rem'
-            }
+            style: TEXT_STYLE_BOTTOM_20_1_1
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -1438,10 +1387,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '說到澳門訂房，威尼斯人酒店可以說是無人不知，過去大家說【澳門訂房】就是要住威尼斯人才算有來過澳門，雖然現在澳門已經有太多的厲害飯店林立，但說到【澳門訂房】威尼斯人仍舊有它不可抹滅的地位，建議一輩子就花一次錢去住一次吧！除了飯店很有義大利威尼斯風格外，還有廣大的購物商場、美食餐廳以及貢多拉遊船、賭場等設施就算沒住威尼斯人，一定也會來威尼斯人酒店逛逛唷~飯店設施有大運河購物中心、SPA、游泳池、健身房等......',
-            style: { 
-              marginBottom: '20px',
-              fontSize: '1.1rem'
-            }
+            style: TEXT_STYLE_BOTTOM_20_1_1
           },
           {
             type: 'text',
@@ -1465,13 +1411,10 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '想要優惠訂房嗎？價格跌破你的眼睛，趕快點擊官方Line聯絡我們喔～',
-            style: { 
-              marginBottom: '20px',
-              fontSize: '1.1rem'
-            }
+            style: TEXT_STYLE_BOTTOM_20_1_1
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       }
     ]
   }

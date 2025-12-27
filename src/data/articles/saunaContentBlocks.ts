@@ -2,6 +2,59 @@
 // Mapped by article ID for easy reference
 import { ArticleContent } from '@/types/articleContent';
 
+// Common style constants - edit here to update all instances
+const TEXT_STYLE_BOTTOM_20 = { 
+  marginBottom: '20px', 
+  marginTop: '0', 
+  fontSize: '1.125rem'
+};
+
+const TEXT_STYLE_BOTTOM_10 = { 
+  marginBottom: '10px', 
+  marginTop: '0', 
+  fontSize: '1.125rem'
+};
+
+const TEXT_STYLE_BOTTOM_20_NO_TOP = { 
+  marginBottom: '20px',
+  fontSize: '1.125rem'
+};
+
+const TEXT_STYLE_BOTTOM_20_1_1 = { 
+  marginBottom: '20px',
+  fontSize: '1.1rem'
+};
+
+const HEADING_STYLE_H3 = { 
+  marginTop: '20px', 
+  marginBottom: '10px' 
+};
+
+const TABLE_OF_CONTENTS_STYLE = {
+  backgroundColor: 'rgba(83, 52, 4, 0.842)',
+  borderRadius: '30px',
+  padding: '20px',
+  marginTop: '20px',
+  marginBottom: '30px',
+  boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 165, 0, 0.2)',
+  border: '1px solid #d18411',
+  backdropFilter: 'blur(10px)',
+  
+  hoverTextColor: '#FFCD83',
+};
+
+const SECTION_STYLE = {
+  marginTop: '40px',
+  marginBottom: '40px'
+};
+
+const LIST_STYLE = {
+  marginTop: '10px',
+  marginBottom: '20px',
+  fontSize: '1.125rem',
+  lineHeight: '5rem'
+};
+
 export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
   1: {
     // Article description (intro text)
@@ -9,10 +62,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
       {
         type: 'text',
         content: '澳門桑拿最新現況總覽：疫情後全線回歸，甚至更勝以往！如果你近期有計畫前往澳門放鬆一下，那你可能會好奇：澳門的桑拿現在恢復得怎麼樣了？答案是——不僅回來了，而且是全面升級回歸！',
-        style: { 
-          marginBottom: '20px',
-          fontSize: '1.1rem'
-        }
+        style: TEXT_STYLE_BOTTOM_20_1_1
       }
     ],
     // Table of Contents
@@ -39,16 +89,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
         { level: 2, text: '8️⃣ 完事後回大廳放鬆 or 接續服務', id: 'step8' },
         { level: 2, text: '9️⃣ 沒點小姐也能泡 12–24 小時（但會收淨桑費）', id: 'step9' }
       ],
-      style: {
-        backgroundColor: 'rgba(83, 52, 4, 0.842)',
-        borderRadius: '30px',
-        padding: '20px',
-        marginTop: '20px',
-        marginBottom: '30px',
-        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 165, 0, 0.2)',
-        border: '1px solid #d18411',
-        backdropFilter: 'blur(10px)',
-      }
+      style: TABLE_OF_CONTENTS_STYLE
     },
     // Array of sections
     sections: [
@@ -164,7 +205,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -430,7 +471,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       }
     ]
   },
@@ -440,10 +481,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
       {
         type: 'text',
         content: '不論你是老司機，還是初次探訪澳門桑拿的新手，選對一家店真的很關鍵！以下是四間評價極高、網友熱推的澳門桑拿，每間都有不同亮點與玩法，從24小時營業的尊貴水療，到主打劇本殺玩法，總有一間適合你。',
-        style: { 
-          marginBottom: '20px',
-          fontSize: '1.1rem'
-        }
+        style: TEXT_STYLE_BOTTOM_20_1_1
       }
     ],
     // Table of Contents
@@ -457,16 +495,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
         { level: 1, text: '澳門熱門桑拿推薦-【新豪門桑拿殿】', id: 'new-noble' },
         { level: 1, text: '澳門熱門桑拿推薦-【東方皇堡水療會所】', id: 'oriental-royal' }
       ],
-      style: {
-        backgroundColor: 'rgba(83, 52, 4, 0.842)',
-        borderRadius: '30px',
-        padding: '20px',
-        marginTop: '20px',
-        marginBottom: '30px',
-        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 165, 0, 0.2)',
-        border: '1px solid #d18411',
-        backdropFilter: 'blur(10px)',
-      }
+      style: TABLE_OF_CONTENTS_STYLE
     },
     // Array of sections
     sections: [
@@ -528,7 +557,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -587,7 +616,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -646,7 +675,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -766,7 +795,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       }
     ]
   },
@@ -791,16 +820,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
         { level: 1, text: '【澳門水療】更衣準備：儀式感拉滿', id: '更衣準備' },
         { level: 1, text: '【澳門水療】正式體驗：沈浸式放松時刻', id: '正式體驗' }
       ],
-      style: {
-        backgroundColor: 'rgba(83, 52, 4, 0.842)',
-        borderRadius: '30px',
-        padding: '20px',
-        marginTop: '20px',
-        marginBottom: '30px',
-        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 165, 0, 0.2)',
-        border: '1px solid #d18411',
-        backdropFilter: 'blur(10px)',
-      }
+      style: TABLE_OF_CONTENTS_STYLE
     },
     sections: [
       {
@@ -832,7 +852,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -863,7 +883,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -894,7 +914,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -1020,7 +1040,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       }
     ]
   },
@@ -1046,16 +1066,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
         { level: 1, text: '【澳門水療】行家忠告｜避開地雷的3個實用技巧', id: '行家忠告' },
         { level: 1, text: '【澳門水療】深度體驗彩蛋｜在地人才懂的「SPA後療癒路線」', id: '深度體驗彩蛋' }
       ],
-      style: {
-        backgroundColor: 'rgba(83, 52, 4, 0.842)',
-        borderRadius: '30px',
-        padding: '20px',
-        marginTop: '20px',
-        marginBottom: '30px',
-        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 165, 0, 0.2)',
-        border: '1px solid #d18411',
-        backdropFilter: 'blur(10px)',
-      }
+      style: TABLE_OF_CONTENTS_STYLE
     },
     sections: [
       {
@@ -1110,7 +1121,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -1164,7 +1175,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -1218,7 +1229,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -1251,7 +1262,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -1311,7 +1322,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       }
     ]
   },
@@ -1338,16 +1349,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
         { level: 1, text: '小提醒：澳門按摩前你該知道的事', id: '小提醒' },
         { level: 1, text: '結語｜澳門按摩，這 4 間桑拿讓你身心都舒壓', id: '結語' }
       ],
-      style: {
-        backgroundColor: 'rgba(83, 52, 4, 0.842)',
-        borderRadius: '30px',
-        padding: '20px',
-        marginTop: '20px',
-        marginBottom: '30px',
-        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 165, 0, 0.2)',
-        border: '1px solid #d18411',
-        backdropFilter: 'blur(10px)',
-      }
+      style: TABLE_OF_CONTENTS_STYLE
     },
     sections: [
       {
@@ -1413,7 +1415,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -1477,7 +1479,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -1541,7 +1543,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -1605,7 +1607,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -1623,7 +1625,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginBottom: '20px', fontSize: '1.1rem' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -1640,7 +1642,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       }
     ]
   },
@@ -1666,16 +1668,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
         { level: 1, text: '【澳門按摩】夜遊動線｜邊玩邊鬆的聰明行程', id: '夜遊動線' },
         { level: 1, text: '【澳門按摩】獨家福利盡在', id: '獨家福利' }
       ],
-      style: {
-        backgroundColor: 'rgba(83, 52, 4, 0.842)',
-        borderRadius: '30px',
-        padding: '20px',
-        marginTop: '20px',
-        marginBottom: '30px',
-        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 165, 0, 0.2)',
-        border: '1px solid #d18411',
-        backdropFilter: 'blur(10px)',
-      }
+      style: TABLE_OF_CONTENTS_STYLE
     },
     sections: [
       {
@@ -1782,7 +1775,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -1808,7 +1801,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginBottom: '20px', fontSize: '1.1rem' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -1884,7 +1877,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -1923,7 +1916,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -1959,7 +1952,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       }
     ]
   },
@@ -1988,16 +1981,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
         { level: 1, text: '小提醒與注意事項', id: '小提醒' },
         { level: 1, text: '結語：做好功課才能盡興', id: '結語' }
       ],
-      style: {
-        backgroundColor: 'rgba(83, 52, 4, 0.842)',
-        borderRadius: '30px',
-        padding: '20px',
-        marginTop: '20px',
-        marginBottom: '30px',
-        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 165, 0, 0.2)',
-        border: '1px solid #d18411',
-        backdropFilter: 'blur(10px)',
-      }
+      style: TABLE_OF_CONTENTS_STYLE
     },
     sections: [
       {
@@ -2021,7 +2005,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -2061,7 +2045,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -2092,7 +2076,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -2123,7 +2107,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -2164,7 +2148,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginBottom: '20px', fontSize: '1.1rem' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -2201,7 +2185,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -2217,7 +2201,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginBottom: '20px', fontSize: '1.1rem' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -2234,7 +2218,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       }
     ]
   },
@@ -2276,16 +2260,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
         { level: 2, text: '💡 小技巧：如何選對澳門水療會所？', id: '小技巧' },
         { level: 1, text: '澳門水療 結語：', id: '結語' }
       ],
-      style: {
-        backgroundColor: 'rgba(83, 52, 4, 0.842)',
-        borderRadius: '30px',
-        padding: '20px',
-        marginTop: '20px',
-        marginBottom: '30px',
-        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 165, 0, 0.2)',
-        border: '1px solid #d18411',
-        backdropFilter: 'blur(10px)',
-      }
+      style: TABLE_OF_CONTENTS_STYLE
     },
     sections: [
       {
@@ -2322,7 +2297,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginBottom: '20px', fontSize: '1.1rem', fontWeight: 'bold' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -2718,7 +2693,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginBottom: '20px', fontSize: '1.1rem', fontWeight: 'bold' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -2754,7 +2729,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       }
     ]
   },
@@ -2779,16 +2754,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
         { level: 1, text: '✨ 想體驗最刺激的澳門劇本殺，選對場館很關鍵！', id: '選對場館' },
         { level: 1, text: '💡澳門劇本殺玩家小貼士：', id: '玩家小貼士' }
       ],
-      style: {
-        backgroundColor: 'rgba(83, 52, 4, 0.842)',
-        borderRadius: '30px',
-        padding: '20px',
-        marginTop: '20px',
-        marginBottom: '30px',
-        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 165, 0, 0.2)',
-        border: '1px solid #d18411',
-        backdropFilter: 'blur(10px)',
-      }
+      style: TABLE_OF_CONTENTS_STYLE
     },
     sections: [
       {
@@ -2837,7 +2803,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginBottom: '20px', fontSize: '1.1rem' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -2892,7 +2858,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -3155,7 +3121,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -3198,7 +3164,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       }
     ]
   },
@@ -3224,16 +3190,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
         { level: 1, text: '澳門熱門桑拿推薦-【極品桑拿】｜地點最優 × 超模級技師', id: '極品桑拿' },
         { level: 1, text: '✨ 小提醒：', id: '小提醒' }
       ],
-      style: {
-        backgroundColor: 'rgba(83, 52, 4, 0.842)',
-        borderRadius: '30px',
-        padding: '20px',
-        marginTop: '20px',
-        marginBottom: '30px',
-        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 165, 0, 0.2)',
-        border: '1px solid #d18411',
-        backdropFilter: 'blur(10px)',
-      }
+      style: TABLE_OF_CONTENTS_STYLE
     },
     sections: [
       {
@@ -3293,7 +3250,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -3351,7 +3308,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -3409,7 +3366,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -3467,7 +3424,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -3512,7 +3469,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       }
     ]
   },
@@ -3543,16 +3500,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
         { level: 2, text: '十八', id: '十八' },
         { level: 1, text: '總結', id: '總結' }
       ],
-      style: {
-        backgroundColor: 'rgba(83, 52, 4, 0.842)',
-        borderRadius: '30px',
-        padding: '20px',
-        marginTop: '20px',
-        marginBottom: '30px',
-        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 165, 0, 0.2)',
-        border: '1px solid #d18411',
-        backdropFilter: 'blur(10px)',
-      }
+      style: TABLE_OF_CONTENTS_STYLE
     },
     sections: [
       {
@@ -3591,7 +3539,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -3608,7 +3556,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -3633,7 +3581,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -3710,7 +3658,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -3781,7 +3729,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       }
     ]
   }

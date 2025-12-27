@@ -2,16 +2,66 @@
 // Mapped by article ID for easy reference
 import { ArticleContent } from '@/types/articleContent';
 
+// Common style constants - edit here to update all instances
+const TEXT_STYLE_BOTTOM_20 = { 
+  marginBottom: '20px', 
+  marginTop: '0', 
+  fontSize: '1.125rem'
+};
+
+const TEXT_STYLE_BOTTOM_10 = { 
+  marginBottom: '10px', 
+  marginTop: '0', 
+  fontSize: '1.125rem'
+};
+
+const TEXT_STYLE_BOTTOM_20_NO_TOP = { 
+  marginBottom: '20px',
+  fontSize: '1.125rem'
+};
+
+const TEXT_STYLE_BOTTOM_20_1_1 = { 
+  marginBottom: '20px',
+  fontSize: '1.1rem'
+};
+
+const HEADING_STYLE_H3 = { 
+  marginTop: '20px', 
+  marginBottom: '10px' 
+};
+
+const TABLE_OF_CONTENTS_STYLE = {
+  backgroundColor: 'rgba(83, 52, 4, 0.842)',
+  borderRadius: '30px',
+  padding: '20px',
+  marginTop: '20px',
+  marginBottom: '30px',
+  boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 165, 0, 0.2)',
+  border: '1px solid #d18411',
+  backdropFilter: 'blur(10px)',
+  
+  hoverTextColor: '#FFCD83',
+};
+
+const SECTION_STYLE = {
+  marginTop: '40px',
+  marginBottom: '40px'
+};
+
+const LIST_STYLE = {
+  marginTop: '10px',
+  marginBottom: '20px',
+  fontSize: '1.125rem',
+  lineHeight: '5rem'
+};
+
 export const travelArticleContentBlocks: Record<number, ArticleContent> = {
   1: {
     description: [
       {
         type: 'text',
         content: '',
-        style: {
-          marginBottom: '20px',
-          fontSize: '1.1rem',
-        }
+        style: TEXT_STYLE_BOTTOM_20_1_1
       }
     ],
     tableOfContents: {
@@ -33,16 +83,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
         { level: 1, text: '遊玩小建議', id: 'travel-tips' },
         { level: 1, text: '結語', id: 'conclusion' }
       ],
-      style: {
-        backgroundColor: 'rgba(83, 52, 4, 0.842)',
-        borderRadius: '30px',
-        padding: '20px',
-        marginTop: '20px',
-        marginBottom: '30px',
-        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 165, 0, 0.2)',
-        border: '1px solid #d18411',
-        backdropFilter: 'blur(10px)',
-      }
+      style: TABLE_OF_CONTENTS_STYLE
     },
     sections: [
       {
@@ -57,7 +98,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           height: 266
         },
         content: [],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -109,14 +150,10 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
               '東西匯聚：融合歐陸建築與東方元素，街道兩旁餐廳、商店林立，適合漫步。',
               '勵駿碼頭：仿照歐洲碼頭設計，停泊多艘仿古帆船，夜晚景色浪漫。'
             ],
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-              lineHeight: '5rem',
-            }
+            style: LIST_STYLE
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -139,11 +176,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
               '國際美食：義大利披薩、日本料理、東南亞風味應有盡有。',
               '小吃與甜品：街邊小攤販售豬扒包、木糠布丁等在地小食。'
             ],
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-              lineHeight: '5rem',
-            }
+            style: LIST_STYLE
           },
           {
             type: 'heading',
@@ -159,14 +192,10 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
               '文創商品：不少小店販售澳門主題紀念品、設計師商品。',
               '歐美品牌：部分商店引進國際品牌，滿足購物需求。'
             ],
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-              lineHeight: '5rem',
-            }
+            style: LIST_STYLE
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -188,11 +217,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
               '音樂表演與展覽：節日期間常有街頭表演、藝術展。',
               '親子活動：火山建築內的遊戲區適合兒童遊玩。'
             ],
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-              lineHeight: '5rem',
-            }
+            style: LIST_STYLE
           },
           {
             type: 'heading',
@@ -210,7 +235,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -226,14 +251,10 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
               '門票：免費入場（部分娛樂設施另行收費）',
               '交通方式：免費接駁巴士：往返澳門外港碼頭、關閘、澳門國際機場等地；公共巴士：多條路線經過「漁人碼頭」站；的士：從澳門半島市中心前往約10-15分鐘'
             ],
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-              lineHeight: '5rem',
-            }
+            style: LIST_STYLE
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -250,14 +271,10 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
               '節慶活動：農曆新年、聖誕節期間常有特色佈置與活動。',
               '聯遊推薦：可結合附近的金沙娛樂場、澳門科學館規劃一日行程。'
             ],
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-              lineHeight: '5rem',
-            }
+            style: LIST_STYLE
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -274,7 +291,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       }
     ]
   },
@@ -354,16 +371,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
         { level: 3, text: '澳門人酒店', id: 'macau-people-hotel' },
         { level: 3, text: '金光度假公寓', id: 'golden-resort-apartment' }
       ],
-      style: {
-        backgroundColor: 'rgba(83, 52, 4, 0.842)',
-        borderRadius: '30px',
-        padding: '20px',
-        marginTop: '20px',
-        marginBottom: '30px',
-        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 165, 0, 0.2)',
-        border: '1px solid #d18411',
-        backdropFilter: 'blur(10px)',
-      }
+      style: TABLE_OF_CONTENTS_STYLE
     },
     // Array of sections
     sections: [
@@ -443,7 +451,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginTop: '10px', marginBottom: '20px', fontSize: '1.125rem' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -484,7 +492,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginBottom: '20px', fontSize: '1.125rem' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -608,7 +616,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginTop: '0', marginBottom: '20px', fontSize: '1.125rem' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       }
     ]
   },
@@ -638,16 +646,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
         { level: 1, text: '小貼士', id: 'tips' },
         { level: 1, text: '結語', id: 'conclusion' }
       ],
-      style: {
-        backgroundColor: 'rgba(83, 52, 4, 0.842)',
-        borderRadius: '30px',
-        padding: '20px',
-        marginTop: '20px',
-        marginBottom: '30px',
-        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 165, 0, 0.2)',
-        border: '1px solid #d18411',
-        backdropFilter: 'blur(10px)',
-      }
+      style: TABLE_OF_CONTENTS_STYLE
     },
     // Array of sections
     sections: [
@@ -675,7 +674,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginBottom: '20px', fontSize: '1.125rem' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -696,7 +695,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginBottom: '20px', fontSize: '1.125rem' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -723,10 +722,10 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
               '想要親子同樂？那麼 新濠影滙水上樂園 是首選，室內外雙區設計，即使下雨也能暢快玩水。',
               '如果想購物休閒，則可以到 威尼斯人購物中心，仿威尼斯的運河與貢多拉船，讓人恍如置身歐洲。'
             ],
-            style: { marginBottom: '20px', fontSize: '1.125rem', lineHeight: '5rem' }
+            style: LIST_STYLE
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -752,7 +751,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginBottom: '20px', fontSize: '1.125rem' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -773,10 +772,10 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
               '輕軌：氹仔與路氹一帶可搭輕軌接駁。',
               '包車服務：若想在一天內跑遍多個景點，建議可以選擇我們龍匯澳門包車，節省時間更輕鬆。'
             ],
-            style: { marginBottom: '20px', fontSize: '1.125rem', lineHeight: '5rem' }
+            style: LIST_STYLE
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -794,10 +793,10 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
               '帶點現金：部分老字號小吃店可能不接受電子支付，準備些澳門幣更方便。'
             ],
             ordered: true,
-            style: { marginBottom: '20px', fontSize: '1.125rem', lineHeight: '5rem' }
+            style: LIST_STYLE
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -812,7 +811,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginBottom: '20px', fontSize: '1.125rem' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       }
     ]
   },
@@ -847,16 +846,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
         { level: 1, text: '小提醒', id: 'tips' },
         { level: 1, text: '結語', id: 'conclusion' }
       ],
-      style: {
-        backgroundColor: 'rgba(83, 52, 4, 0.842)',
-        borderRadius: '30px',
-        padding: '20px',
-        marginTop: '20px',
-        marginBottom: '30px',
-        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 165, 0, 0.2)',
-        border: '1px solid #d18411',
-        backdropFilter: 'blur(10px)',
-      }
+      style: TABLE_OF_CONTENTS_STYLE
     },
     // Array of sections
     sections: [
@@ -881,7 +871,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
               '中西文化融合：在遊玩同時，孩子可以感受中葡文化交織的氛圍，寓教於樂。'
             ],
             ordered: true,
-            style: { marginBottom: '20px', fontSize: '1.125rem', lineHeight: '5rem' }
+            style: LIST_STYLE
           },
           {
             type: 'text',
@@ -889,7 +879,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginBottom: '20px', fontSize: '1.125rem' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -965,7 +955,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginBottom: '20px', fontSize: '1.125rem' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -981,10 +971,10 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
               '親子娛樂日：入住路氹區度假村，享受水上樂園、遊戲區，晚上逛美食街。',
               '自然放鬆日：到路環或氹仔，走進石排灣郊野公園或海灘，親近自然。'
             ],
-            style: { marginBottom: '20px', fontSize: '1.125rem', lineHeight: '5rem' }
+            style: LIST_STYLE
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -1005,7 +995,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginBottom: '20px', fontSize: '1.125rem' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -1020,7 +1010,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginBottom: '20px', fontSize: '1.125rem' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -1036,10 +1026,10 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
               '提前規劃景點路線，避免孩子過度疲累。',
               '選擇適合孩子年齡的活動，安全與舒適最重要。'
             ],
-            style: { marginBottom: '20px', fontSize: '1.125rem', lineHeight: '5rem' }
+            style: LIST_STYLE
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -1054,7 +1044,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginBottom: '20px', fontSize: '1.125rem' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       }
     ]
   },
@@ -1083,16 +1073,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
         { level: 1, text: '如何選擇適合的澳門旅遊團？', id: 'how-to-choose' },
         { level: 1, text: '結語', id: 'conclusion' }
       ],
-      style: {
-        backgroundColor: 'rgba(83, 52, 4, 0.842)',
-        borderRadius: '30px',
-        padding: '20px',
-        marginTop: '20px',
-        marginBottom: '30px',
-        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 165, 0, 0.2)',
-        border: '1px solid #d18411',
-        backdropFilter: 'blur(10px)',
-      }
+      style: TABLE_OF_CONTENTS_STYLE
     },
     // Array of sections
     sections: [
@@ -1115,7 +1096,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginBottom: '20px', fontSize: '1.125rem' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -1138,10 +1119,10 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
               '娛樂購物體驗遊：澳門的娛樂場聞名世界，同時也有許多大型購物中心。透過 澳門旅遊團，不僅能體驗國際級的娛樂氛圍，也能享受購物優惠與貼心接送服務。'
             ],
             ordered: true,
-            style: { marginBottom: '20px', fontSize: '1.125rem', lineHeight: '5rem' }
+            style: LIST_STYLE
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -1164,10 +1145,10 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
               '彈性行程：可選擇自由行搭配部分 澳門旅遊團，享受兩全其美的旅行方式。',
               '價格透明：不同預算都有適合的 澳門旅遊團，無需擔心隱藏收費。'
             ],
-            style: { marginBottom: '20px', fontSize: '1.125rem', lineHeight: '5rem' }
+            style: LIST_STYLE
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -1184,10 +1165,10 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
               '時間有限的上班族：短時間內體驗澳門精華，效率最高。',
               '美食與文化愛好者：跟著 澳門旅遊團 深入品味在地風情。'
             ],
-            style: { marginBottom: '20px', fontSize: '1.125rem', lineHeight: '5rem' }
+            style: LIST_STYLE
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -1210,10 +1191,10 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
               '評價與口碑：參考其他旅客對該 澳門旅遊團 的評價。'
             ],
             ordered: true,
-            style: { marginBottom: '20px', fontSize: '1.125rem', lineHeight: '5rem' }
+            style: LIST_STYLE
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -1228,7 +1209,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginBottom: '20px', fontSize: '1.125rem' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       }
     ]
   },
@@ -1256,16 +1237,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
         { level: 1, text: '如何安排理想的澳門團體旅遊？', id: 'how-to-plan' },
         { level: 1, text: '結語', id: 'conclusion' }
       ],
-      style: {
-        backgroundColor: 'rgba(83, 52, 4, 0.842)',
-        borderRadius: '30px',
-        padding: '20px',
-        marginTop: '20px',
-        marginBottom: '30px',
-        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 165, 0, 0.2)',
-        border: '1px solid #d18411',
-        backdropFilter: 'blur(10px)',
-      }
+      style: TABLE_OF_CONTENTS_STYLE
     },
     // Array of sections
     sections: [
@@ -1293,7 +1265,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginBottom: '20px', fontSize: '1.125rem' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -1322,7 +1294,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
               '媽閣廟：香火鼎盛的古廟，見證澳門的命名來源。'
             ],
             ordered: true,
-            style: { marginBottom: '20px', fontSize: '1.125rem', lineHeight: '5rem' }
+            style: LIST_STYLE
           },
           {
             type: 'heading',
@@ -1338,10 +1310,10 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
               '官也街：購買伴手禮、享用地道澳門美食如葡式蛋撻、豬扒包。'
             ],
             ordered: true,
-            style: { marginBottom: '20px', fontSize: '1.125rem', lineHeight: '5rem' }
+            style: LIST_STYLE
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -1368,7 +1340,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
               '葡國雞：結合咖哩與椰奶風味，獨特又下飯。',
               '馬介休球：以葡萄牙進口鹹魚製成，外酥內軟。'
             ],
-            style: { marginBottom: '20px', fontSize: '1.125rem', lineHeight: '5rem' }
+            style: LIST_STYLE
           },
           {
             type: 'text',
@@ -1376,7 +1348,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginBottom: '20px', fontSize: '1.125rem' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -1397,7 +1369,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
               '依團體人數安排交通與住宿：可選擇旅遊巴或分組入住，效率高又安全。',
               '選擇有口碑的餐廳與景點：避免踩雷，讓團員都能有好回憶。'
             ],
-            style: { marginBottom: '20px', fontSize: '1.125rem', lineHeight: '5rem' }
+            style: LIST_STYLE
           },
           {
             type: 'text',
@@ -1405,7 +1377,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginBottom: '20px', fontSize: '1.125rem' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -1425,7 +1397,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginBottom: '20px', fontSize: '1.125rem' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       }
     ]
   },
@@ -1453,16 +1425,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
         { level: 1, text: '【大三巴牌坊】交通攻略：節省時間的抵達方式', id: 'transportation' },
         { level: 1, text: '【大三巴牌坊】深度體驗：2025年不可錯過的3大活動', id: 'deep-experience' }
       ],
-      style: {
-        backgroundColor: 'rgba(83, 52, 4, 0.842)',
-        borderRadius: '30px',
-        padding: '20px',
-        marginTop: '20px',
-        marginBottom: '30px',
-        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 165, 0, 0.2)',
-        border: '1px solid #d18411',
-        backdropFilter: 'blur(10px)',
-      }
+      style: TABLE_OF_CONTENTS_STYLE
     },
     // Array of sections
     sections: [
@@ -1495,7 +1458,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginBottom: '20px', fontSize: '1.125rem' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -1536,7 +1499,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginBottom: '20px', fontSize: '1.125rem' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -1577,7 +1540,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginBottom: '20px', fontSize: '1.125rem' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -1618,7 +1581,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginBottom: '20px', fontSize: '1.125rem' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -1628,7 +1591,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
         image: {
           src: '/travel/macao-dasanba/ae5bb6f96d27c25171016f1135659563e5eddb62.jpg',
           alt: '【大三巴牌坊】深度體驗：2025年不可錯過的3大活動',
-          width: 800,
+          width: 300,
           height: 450
         },
         description: '',
@@ -1646,7 +1609,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
               '季節限定活動：12月結合聖誕節的「中葡市集」，可品嘗到現做的木糠布甸與非洲雞。'
             ],
             ordered: true,
-            style: { marginBottom: '20px', fontSize: '1.125rem', lineHeight: '5rem' }
+            style: LIST_STYLE
           },
           {
             type: 'text',
@@ -1670,7 +1633,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginBottom: '20px', fontSize: '1.125rem' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       }
     ]
   },
@@ -1698,16 +1661,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
         { level: 1, text: '【澳門百老匯】永續夜市實驗場｜2024 GSTC全球最高評級', id: 'sustainable-night-market' },
         { level: 1, text: '【澳門百老匯】深度玩家路線圖｜澳門理工學院人因工程研究', id: 'player-route-map' }
       ],
-      style: {
-        backgroundColor: 'rgba(83, 52, 4, 0.842)',
-        borderRadius: '30px',
-        padding: '20px',
-        marginTop: '20px',
-        marginBottom: '30px',
-        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 165, 0, 0.2)',
-        border: '1px solid #d18411',
-        backdropFilter: 'blur(10px)',
-      }
+      style: TABLE_OF_CONTENTS_STYLE
     },
     // Array of sections
     sections: [
@@ -1736,10 +1690,10 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
               '智能攤車系統：200+餐車配備美的集團IoT溫控技術，油溫誤差控制在±1.5℃',
               '聲學分區科技：Bose主動降噪柱劃分12個美食區，各區域噪音值維持55分貝以下'
             ],
-            style: { marginBottom: '20px', fontSize: '1.125rem' , lineHeight: '5rem'      }
+            style: LIST_STYLE
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -1769,7 +1723,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginBottom: '20px', fontSize: '1.125rem' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -1793,7 +1747,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginBottom: '20px', fontSize: '1.125rem' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -1823,7 +1777,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginBottom: '20px', fontSize: '1.125rem' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -1875,7 +1829,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginBottom: '20px', fontSize: '1.125rem' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       }
     ]
   },
@@ -1906,16 +1860,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
         { level: 1, text: '【澳門景點】QA懶人包｜新手秒解3大痛點', id: 'qa' },
         { level: 1, text: '跟著玩就對了！免費領「澳門景點」電子地圖', id: 'conclusion' }
       ],
-      style: {
-        backgroundColor: 'rgba(83, 52, 4, 0.842)',
-        borderRadius: '30px',
-        padding: '20px',
-        marginTop: '20px',
-        marginBottom: '30px',
-        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 165, 0, 0.2)',
-        border: '1px solid #d18411',
-        backdropFilter: 'blur(10px)',
-      }
+      style: TABLE_OF_CONTENTS_STYLE
     },
     // Array of sections
     sections: [
@@ -1948,7 +1893,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginBottom: '20px', fontSize: '1.125rem' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -1979,7 +1924,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginBottom: '20px', fontSize: '1.125rem' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -2010,7 +1955,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginBottom: '20px', fontSize: '1.125rem' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -2041,7 +1986,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginBottom: '20px', fontSize: '1.125rem' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -2072,7 +2017,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginBottom: '20px', fontSize: '1.125rem' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -2134,7 +2079,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginBottom: '20px' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -2174,7 +2119,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginBottom: '20px', fontSize: '1.125rem' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -2205,7 +2150,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginBottom: '20px', fontSize: '1.125rem' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       }
     ]
   },
@@ -2236,16 +2181,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
         { level: 1, text: '【澳門自由行】的夜晚就去海邊看燈光夜景為浪漫旅程畫一個完美的句點', id: 'night-seaside' },
         { level: 1, text: '【澳門自由行】那我只有一天怎麼夠?', id: 'one-day-enough' }
       ],
-      style: {
-        backgroundColor: 'rgba(83, 52, 4, 0.842)',
-        borderRadius: '30px',
-        padding: '20px',
-        marginTop: '20px',
-        marginBottom: '30px',
-        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 165, 0, 0.2)',
-        border: '1px solid #d18411',
-        backdropFilter: 'blur(10px)',
-      }
+      style: TABLE_OF_CONTENTS_STYLE
     },
     // Array of sections
     sections: [
@@ -2268,7 +2204,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginBottom: '20px', fontSize: '1.125rem' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -2289,7 +2225,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginBottom: '20px', fontSize: '1.125rem' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -2310,7 +2246,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginBottom: '20px', fontSize: '1.125rem' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -2331,7 +2267,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginBottom: '20px', fontSize: '1.125rem' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -2352,7 +2288,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginBottom: '20px', fontSize: '1.125rem' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -2373,7 +2309,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginBottom: '20px', fontSize: '1.125rem' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -2394,7 +2330,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginBottom: '20px', fontSize: '1.125rem' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -2463,7 +2399,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginBottom: '20px', fontSize: '1.125rem' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       }
     ]
   },
@@ -2492,16 +2428,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
         { level: 1, text: '【澳門旅遊】吉祥物', id: 'mascot' },
         { level: 1, text: '【澳門旅遊】龍匯天下', id: 'long-huei' }
       ],
-      style: {
-        backgroundColor: 'rgba(83, 52, 4, 0.842)',
-        borderRadius: '30px',
-        padding: '20px',
-        marginTop: '20px',
-        marginBottom: '30px',
-        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 165, 0, 0.2)',
-        border: '1px solid #d18411',
-        backdropFilter: 'blur(10px)',
-      }
+      style: TABLE_OF_CONTENTS_STYLE
     },
     // Array of sections
     sections: [
@@ -2523,7 +2450,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginBottom: '20px', fontSize: '1.125rem' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -2544,7 +2471,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginBottom: '20px', fontSize: '1.125rem' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -2569,7 +2496,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginBottom: '20px', fontSize: '1.125rem' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -2595,7 +2522,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginBottom: '20px', fontSize: '1.125rem' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -2616,7 +2543,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginBottom: '20px', fontSize: '1.125rem' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -2636,7 +2563,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginBottom: '20px', fontSize: '1.125rem' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       }
     ]
   },
@@ -2671,16 +2598,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
         { level: 2, text: '最佳旅遊季節與穿著建議', id: 'best-season' },
         { level: 2, text: '省時交通這樣安排', id: 'transportation-tips' }
       ],
-      style: {
-        backgroundColor: 'rgba(83, 52, 4, 0.842)',
-        borderRadius: '30px',
-        padding: '20px',
-        marginTop: '20px',
-        marginBottom: '30px',
-        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 165, 0, 0.2)',
-        border: '1px solid #d18411',
-        backdropFilter: 'blur(10px)',
-      }
+      style: TABLE_OF_CONTENTS_STYLE
     },
     // Array of sections
     sections: [
@@ -2697,7 +2615,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginBottom: '20px', fontSize: '1.125rem' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -2723,7 +2641,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginBottom: '20px', fontSize: '1.125rem' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -2743,7 +2661,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginBottom: '20px', fontSize: '1.125rem' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -2758,7 +2676,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginBottom: '20px', fontSize: '1.125rem' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -2779,7 +2697,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginBottom: '20px', fontSize: '1.125rem' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -2799,7 +2717,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginBottom: '20px', fontSize: '1.125rem' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -2814,7 +2732,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginBottom: '20px', fontSize: '1.125rem' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -2840,7 +2758,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginBottom: '20px', fontSize: '1.125rem' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -2855,7 +2773,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginBottom: '20px', fontSize: '1.125rem' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -2870,7 +2788,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginBottom: '20px', fontSize: '1.125rem' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -2890,7 +2808,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginBottom: '20px', fontSize: '1.125rem' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -2931,7 +2849,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginBottom: '20px', fontSize: '1.125rem' }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       }
     ]
   }

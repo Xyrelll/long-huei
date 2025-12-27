@@ -2,6 +2,47 @@
 // Mapped by article ID for easy reference
 import { ArticleContent } from '@/types/articleContent';
 
+// Common style constants - edit here to update all instances
+const TEXT_STYLE_BOTTOM_20 = { 
+  marginBottom: '20px', 
+  marginTop: '0', 
+  fontSize: '1.125rem'
+};
+
+const TEXT_STYLE_BOTTOM_10 = { 
+  marginBottom: '10px', 
+  marginTop: '0', 
+  fontSize: '1.125rem'
+};
+
+const TEXT_STYLE_BOTTOM_20_NO_TOP = { 
+  marginBottom: '20px',
+  fontSize: '1.125rem'
+};
+
+const HEADING_STYLE_H3 = { 
+  marginTop: '20px', 
+  marginBottom: '10px' 
+};
+
+const TABLE_OF_CONTENTS_STYLE = {
+  backgroundColor: 'rgba(83, 52, 4, 0.842)',
+  borderRadius: '30px',
+  padding: '20px',
+  marginTop: '20px',
+  marginBottom: '30px',
+  boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 165, 0, 0.2)',
+  border: '1px solid #d18411',
+  backdropFilter: 'blur(10px)',
+  
+  hoverTextColor: '#FFCD83',
+};
+
+const SECTION_STYLE = {
+  marginTop: '40px',
+  marginBottom: '40px'
+};
+
 export const questionArticleContentBlocks: Record<number, ArticleContent> = {
   1: {
     // Article description (intro text)
@@ -9,10 +50,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
       {
         type: 'text',
         content: '在澳門自由行，換匯是影響旅費的關鍵！2025年實測全澳30+個換錢點，結合匯率、安全性與隱藏技巧，整理這份最新攻略。掌握這些情報，比用信用卡多省8%旅費！',
-        style: { 
-          marginBottom: '20px',
-          fontSize: '1.125rem'
-        }
+        style: TEXT_STYLE_BOTTOM_20_NO_TOP
       }
     ],
     // Table of Contents
@@ -28,16 +66,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
         { level: 1, text: '【澳門換錢】結合行程：3天2夜實戰規劃', id: 'itinerary-plan' },
         { level: 1, text: '【澳門換錢】2025年終極建議', id: 'final-advice' }
       ],
-      style: {
-        backgroundColor: 'rgba(83, 52, 4, 0.842)',
-        borderRadius: '30px',
-        padding: '20px',
-        marginTop: '20px',
-        marginBottom: '30px',
-        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 165, 0, 0.2)',
-        border: '1px solid #d18411',
-        backdropFilter: 'blur(10px)',
-      }
+      style: TABLE_OF_CONTENTS_STYLE
     },
     // Array of sections
     sections: [
@@ -49,7 +78,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
         image: {
           src: '/question/id1/money-7881948_1920.jpg',
           alt: '【澳門換錢】3大渠道比拚！2025年最新匯率實測',
-          width: 800,
+          width: 300,
           height: 450
         },
         description: '實測日期：2025/3/15，以兌換1,000港幣（HKD）為例',
@@ -121,7 +150,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -131,7 +160,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
         image: {
           src: '/question/id1/blur-1853262_1920.jpg',
           alt: '【澳門換錢】2025匯率TOP3民間兌換所推薦',
-          width: 800,
+          width: 300,
           height: 450
         },
         description: '經實測與在地人驗證，這3家匯率持續領先',
@@ -150,7 +179,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
             level: 3,
             content: '【新馬路】興業兌換有限公司',
             id: 'xingye-exchange',
-            style: { marginTop: '20px', marginBottom: '10px' }
+            style: HEADING_STYLE_H3
           },
           {
             type: 'text',
@@ -184,7 +213,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
             level: 3,
             content: '【議事亭】大豐兌換',
             id: 'dafeng-exchange',
-            style: { marginTop: '20px', marginBottom: '10px' }
+            style: HEADING_STYLE_H3
           },
           {
             type: 'text',
@@ -218,7 +247,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
             level: 3,
             content: '【氹仔】銀河兌換中心',
             id: 'galaxy-exchange',
-            style: { marginTop: '20px', marginBottom: '10px' }
+            style: HEADING_STYLE_H3
           },
           {
             type: 'text',
@@ -264,7 +293,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -274,7 +303,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
         image: {
           src: '/question/id1/banknote-1396351_1920.jpg',
           alt: '【澳門換錢】聰明換錢5大技巧：省下門票錢',
-          width: 800,
+          width: 300,
           height: 450
         },
         description: '實用的換錢技巧',
@@ -293,7 +322,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
             level: 3,
             content: '避開地雷區',
             id: 'avoid-traps',
-            style: { marginTop: '20px', marginBottom: '10px' }
+            style: HEADING_STYLE_H3
           },
           {
             type: 'text',
@@ -318,7 +347,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
             level: 3,
             content: '免手續費絕招',
             id: 'no-fee-tricks',
-            style: { marginTop: '20px', marginBottom: '10px' }
+            style: HEADING_STYLE_H3
           },
           {
             type: 'text',
@@ -343,7 +372,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
             level: 3,
             content: '電子支付替代方案',
             id: 'electronic-payment',
-            style: { marginTop: '20px', marginBottom: '10px' }
+            style: HEADING_STYLE_H3
           },
           {
             type: 'text',
@@ -368,7 +397,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
             level: 3,
             content: '應急SOP',
             id: 'emergency-sop',
-            style: { marginTop: '20px', marginBottom: '10px' }
+            style: HEADING_STYLE_H3
           },
           {
             type: 'text',
@@ -380,7 +409,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -403,7 +432,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
             level: 3,
             content: '當場確認',
             id: 'on-site-confirmation',
-            style: { marginTop: '20px', marginBottom: '10px' }
+            style: HEADING_STYLE_H3
           },
           {
             type: 'text',
@@ -446,7 +475,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
             level: 3,
             content: '鈔票使用提醒',
             id: 'banknote-reminder',
-            style: { marginTop: '20px', marginBottom: '10px' }
+            style: HEADING_STYLE_H3
           },
           {
             type: 'text',
@@ -467,7 +496,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -507,7 +536,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
             level: 3,
             content: 'DAY2：分散使用策略',
             id: 'day2',
-            style: { marginTop: '20px', marginBottom: '10px' }
+            style: HEADING_STYLE_H3
           },
           {
             type: 'text',
@@ -541,7 +570,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
             level: 3,
             content: 'DAY3：離澳清空技巧',
             id: 'day3',
-            style: { marginTop: '20px', marginBottom: '10px' }
+            style: HEADING_STYLE_H3
           },
           {
             type: 'text',
@@ -562,7 +591,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -617,7 +646,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       }
     ]
   },
@@ -627,10 +656,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
       {
         type: 'text',
         content: '澳門通（Macau Pass）是旅客探索澳門的智慧神卡，2025年全面升級後，整合交通、消費、景點門票等多元功能，成為自由行省錢省時的必備工具。本文從最新功能、使用範圍到隱藏優惠，帶你掌握這張小卡的無限潛力！',
-        style: { 
-          marginBottom: '20px',
-          fontSize: '1.125rem'
-        }
+        style: TEXT_STYLE_BOTTOM_20_NO_TOP
       }
     ],
     // Table of Contents
@@ -646,16 +672,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
         { level: 1, text: '【澳門通】常見QA：2025年最新解答', id: 'faq' },
         { level: 1, text: '【澳門通】結語：為什麼2025年遊澳門必備澳門通？', id: 'conclusion' }
       ],
-      style: {
-        backgroundColor: 'rgba(83, 52, 4, 0.842)',
-        borderRadius: '30px',
-        padding: '20px',
-        marginTop: '20px',
-        marginBottom: '30px',
-        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 165, 0, 0.2)',
-        border: '1px solid #d18411',
-        backdropFilter: 'blur(10px)',
-      }
+      style: TABLE_OF_CONTENTS_STYLE
     },
     // Array of sections
     sections: [
@@ -667,7 +684,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
         image: {
           src: '/question/id2/E6h1kMaa5qcrfuuS3O0c.jpg',
           alt: '【澳門通】是什麼？2025年升級版亮點解析',
-          width: 800,
+          width: 300,
           height: 450
         },
         description: '澳門通是澳門通用的電子支付卡，採用感應式技術，2025年推出「第三代澳門通」強化以下功能',
@@ -718,7 +735,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -728,7 +745,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
         image: {
           src: '/question/id2/澳门通-全国通卡2_202412.jpg',
           alt: '【澳門通】怎麼買？儲值、退費最新規則',
-          width: 800,
+          width: 300,
           height: 450
         },
         description: '取得澳門通極度便利，2025年新增多種購買管道',
@@ -747,7 +764,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
             level: 3,
             content: '購買地點',
             id: 'purchase-locations',
-            style: { marginTop: '20px', marginBottom: '10px' }
+            style: HEADING_STYLE_H3
           },
           {
             type: 'text',
@@ -772,7 +789,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
             level: 3,
             content: '儲值方式',
             id: 'recharge-methods',
-            style: { marginTop: '20px', marginBottom: '10px' }
+            style: HEADING_STYLE_H3
           },
           {
             type: 'text',
@@ -797,7 +814,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
             level: 3,
             content: '退卡規則',
             id: 'refund-rules',
-            style: { marginTop: '20px', marginBottom: '10px' }
+            style: HEADING_STYLE_H3
           },
           {
             type: 'text',
@@ -818,7 +835,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -828,7 +845,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
         image: {
           src: '/question/id2/Macau_Pass_Vending_Machine_201910.jpg',
           alt: '【澳門通】省錢秘技：2025年隱藏優惠全公開',
-          width: 800,
+          width: 300,
           height: 450
         },
         description: '善用這些功能，最多可省下30%旅遊開銷',
@@ -847,7 +864,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
             level: 3,
             content: '交通折扣',
             id: 'transport-discount',
-            style: { marginTop: '20px', marginBottom: '10px' }
+            style: HEADING_STYLE_H3
           },
           {
             type: 'text',
@@ -863,7 +880,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
             level: 3,
             content: '景點套票',
             id: 'attraction-packages',
-            style: { marginTop: '20px', marginBottom: '10px' }
+            style: HEADING_STYLE_H3
           },
           {
             type: 'text',
@@ -888,7 +905,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
             level: 3,
             content: '餐飲回饋',
             id: 'dining-rewards',
-            style: { marginTop: '20px', marginBottom: '10px' }
+            style: HEADING_STYLE_H3
           },
           {
             type: 'text',
@@ -918,7 +935,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -928,7 +945,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
         image: {
           src: '/question/id2/getimage.jpg',
           alt: '【澳門通】實戰應用：3天2夜行程推薦',
-          width: 800,
+          width: 300,
           height: 450
         },
         description: '以下示範如何用澳門通高效玩遍熱門景點',
@@ -947,7 +964,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
             level: 3,
             content: 'DAY1：澳門半島文化之旅',
             id: 'day1',
-            style: { marginTop: '20px', marginBottom: '10px' }
+            style: HEADING_STYLE_H3
           },
           {
             type: 'text',
@@ -990,7 +1007,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
             level: 3,
             content: 'DAY2：路氹城奢華體驗',
             id: 'day2',
-            style: { marginTop: '20px', marginBottom: '10px' }
+            style: HEADING_STYLE_H3
           },
           {
             type: 'text',
@@ -1024,7 +1041,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
             level: 3,
             content: 'DAY3：路環深度漫遊',
             id: 'day3',
-            style: { marginTop: '20px', marginBottom: '10px' }
+            style: HEADING_STYLE_H3
           },
           {
             type: 'text',
@@ -1045,7 +1062,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -1055,7 +1072,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
         image: {
           src: '/question/id2/U2xpz7Au67EPqEFfU2Jo.jpg',
           alt: '【澳門通】常見QA：2025年最新解答',
-          width: 800,
+          width: 300,
           height: 450
         },
         description: '常見問題解答',
@@ -1081,7 +1098,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
             level: 3,
             content: 'Q2：卡片餘額不足怎麼辦？',
             id: 'q2',
-            style: { marginTop: '20px', marginBottom: '10px' }
+            style: HEADING_STYLE_H3
           },
           {
             type: 'text',
@@ -1097,7 +1114,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
             level: 3,
             content: 'Q3：適合多人共用一張卡嗎？',
             id: 'q3',
-            style: { marginTop: '20px', marginBottom: '10px' }
+            style: HEADING_STYLE_H3
           },
           {
             type: 'text',
@@ -1109,7 +1126,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -1182,7 +1199,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       }
     ]
   },
@@ -1192,10 +1209,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
       {
         type: 'text',
         content: '澳門連續7年穩居「亞洲最安全旅遊城市」前三名，根據2024年最新數據顯示，每10萬旅客犯罪率僅1.5件。本文建議收藏，廢話不多說，讓小編帶你快速掌握安全要點。',
-        style: { 
-          marginBottom: '20px',
-          fontSize: '1.125rem'
-        }
+        style: TEXT_STYLE_BOTTOM_20_NO_TOP
       }
     ],
     // Table of Contents
@@ -1216,16 +1230,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
         { level: 1, text: '【澳門旅遊安全嗎？】3大安心保證', id: 'safety-guarantees' },
         { level: 1, text: '【澳門旅遊安全嗎？】總結', id: 'conclusion' }
       ],
-      style: {
-        backgroundColor: 'rgba(83, 52, 4, 0.842)',
-        borderRadius: '30px',
-        padding: '20px',
-        marginTop: '20px',
-        marginBottom: '30px',
-        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 165, 0, 0.2)',
-        border: '1px solid #d18411',
-        backdropFilter: 'blur(10px)',
-      }
+      style: TABLE_OF_CONTENTS_STYLE
     },
     // Array of sections
     sections: [
@@ -1237,7 +1242,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
         image: {
           src: '/question/id3/ai-generated-9011895_1280.jpg',
           alt: '澳門旅遊安全嗎',
-          width: 800,
+          width: 300,
           height: 450
         },
         description: '權威數據分析',
@@ -1270,7 +1275,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -1318,7 +1323,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
             level: 3,
             content: '2.常見詐騙手法',
             id: 'common-scams',
-            style: { marginTop: '20px', marginBottom: '10px' }
+            style: HEADING_STYLE_H3
           },
           {
             type: 'text',
@@ -1352,7 +1357,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
             level: 3,
             content: '3. 現金保管秘訣',
             id: 'cash-safety',
-            style: { marginTop: '20px', marginBottom: '10px' }
+            style: HEADING_STYLE_H3
           },
           {
             type: 'text',
@@ -1382,7 +1387,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -1392,7 +1397,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
         image: {
           src: '/question/id3/overthink-7185863_1280.png',
           alt: '澳門旅遊安全嗎？',
-          width: 800,
+          width: 300,
           height: 450
         },
         description: 'QA重點整理',
@@ -1436,7 +1441,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
             level: 3,
             content: '2.女性適合獨遊？',
             id: 'solo-female',
-            style: { marginTop: '20px', marginBottom: '10px' }
+            style: HEADING_STYLE_H3
           },
           {
             type: 'text',
@@ -1470,7 +1475,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
             level: 3,
             content: '3.緊急應變方式',
             id: 'emergency-response',
-            style: { marginTop: '20px', marginBottom: '10px' }
+            style: HEADING_STYLE_H3
           },
           {
             type: 'text',
@@ -1500,7 +1505,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -1537,7 +1542,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       },
       {
         type: 'section',
@@ -1586,7 +1591,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
             }
           }
         ],
-        style: { marginTop: '40px', marginBottom: '40px' }
+        style: SECTION_STYLE
       }
     ]
   }
