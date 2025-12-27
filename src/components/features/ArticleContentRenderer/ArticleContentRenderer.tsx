@@ -500,6 +500,7 @@ export default function ArticleContentRenderer({ blocks, content }: ArticleConte
 function TableOfContentsComponent({ block }: { block: ArticleContentBlock }) {
   const [isOpen, setIsOpen] = useState(false);
   const [isFixed, setIsFixed] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
 
@@ -544,6 +545,20 @@ function TableOfContentsComponent({ block }: { block: ArticleContentBlock }) {
       window.removeEventListener('scroll', handleScroll);
     };
   }, [block.type]);
+
+  // Detect mobile vs desktop
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkScreenSize(); // Check initial size
+    window.addEventListener('resize', checkScreenSize);
+
+    return () => {
+      window.removeEventListener('resize', checkScreenSize);
+    };
+  }, []);
   
   if (block.type !== 'tableOfContents') return null;
 
@@ -610,8 +625,8 @@ function TableOfContentsComponent({ block }: { block: ArticleContentBlock }) {
         style={{
           position: isFixed ? 'fixed' : 'relative',
           top: isFixed ? '120px' : 'auto',
-          left: isFixed ? '20px' : 'auto',
-          zIndex: isFixed ? 1000 : 'auto',
+          left: isFixed ? (isMobile ? '40px' : '350px') : 'auto',
+          zIndex: isFixed ? 1 : 'auto',
           backgroundColor: '#CD861A',
           padding: '5px 10px',
           cursor: 'pointer',
@@ -641,7 +656,7 @@ function TableOfContentsComponent({ block }: { block: ArticleContentBlock }) {
         style={{
           position: isFixed ? 'fixed' : 'relative',
           top: isFixed && isOpen ? '180px' : isFixed ? '120px' : 'auto',
-          left: isFixed ? '20px' : 'auto',
+          left: isFixed ? (isMobile ? '40px' : '350px') : 'auto',
           zIndex: isFixed ? 999 : 'auto',
           backgroundColor: '#F5F5F5',
           borderRadius: '12px',
