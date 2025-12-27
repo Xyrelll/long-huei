@@ -15,6 +15,7 @@ export interface BookingArticle {
   collapseId: string;
   content?: string; // Legacy plain text content
   contentBlocks?: ArticleContent; // New structured content blocks
+  date?: string; // Article publication date
 }
 
 export const bookingArticles: BookingArticle[] = [
@@ -29,6 +30,7 @@ export const bookingArticles: BookingArticle[] = [
     tags: ['澳門訂房', '龍匯訂房', '龍匯天下澳門訂房', '澳門訂房龍匯天下'],
     collapseId: 'collapse-macao-hotell',
     contentBlocks: bookingArticleContentBlocks[1],
+    date: '2025/07/23',
   },
   {
     id: 2,
@@ -41,6 +43,7 @@ export const bookingArticles: BookingArticle[] = [
     tags: ['澳門訂房', '澳門酒店', '龍匯天下', '澳門推薦'],
     collapseId: 'collapse-macao-hotell1',
     contentBlocks: bookingArticleContentBlocks[2],
+    date: '2025/07/23',
   },
   {
     id: 3,
@@ -53,6 +56,7 @@ export const bookingArticles: BookingArticle[] = [
     tags: ['龍匯澳門大倉', '大倉龍匯天下', '龍匯天下大倉', '龍匯天下澳門大倉酒店'],
     collapseId: 'collapse-macao-dacang',
     contentBlocks: bookingArticleContentBlocks[3],
+    date: '2025/07/23',
   },
   {
     id: 4,
@@ -65,6 +69,7 @@ export const bookingArticles: BookingArticle[] = [
     tags: ['澳門訂房', '澳門龍匯天下', '澳門訂房找龍匯', '龍匯天下訂房', '訂房找龍匯'],
     collapseId: 'collapse-wei2',
     contentBlocks: bookingArticleContentBlocks[4],
+    date: '2025/07/23',
   },
   {
     id: 5,
@@ -77,6 +82,7 @@ export const bookingArticles: BookingArticle[] = [
     tags: ['澳門訂房', '澳門親子', '澳門旅遊', '龍匯天下訂房'],
     collapseId: 'collapse-wei%201',
     contentBlocks: bookingArticleContentBlocks[5],
+    date: '2025/07/23',
   },
 ];
 

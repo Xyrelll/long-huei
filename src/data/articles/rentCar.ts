@@ -15,6 +15,7 @@ export interface RentCarArticle {
   collapseId: string;
   content?: string; // Legacy plain text content
   contentBlocks?: ArticleContent; // New structured content blocks
+  date?: string; // Article publication date
 }
 
 export const rentCarArticles: RentCarArticle[] = [
@@ -29,6 +30,7 @@ export const rentCarArticles: RentCarArticle[] = [
     tags: ['澳門包車景點', '澳門包車'],
     collapseId: 'collapse-macao-rentalcar',
     contentBlocks: rentCarArticleContentBlocks[1],
+    date: '2025/08/31',
   },
   {
     id: 2,
@@ -41,6 +43,7 @@ export const rentCarArticles: RentCarArticle[] = [
     tags: ['澳門找龍匯包車', '澳門包車', '包車接送'],
     collapseId: 'collapse-privatecar',
     contentBlocks: rentCarArticleContentBlocks[2],
+    date: '2025/04/14',
   },
   {
     id: 3,
@@ -53,6 +56,7 @@ export const rentCarArticles: RentCarArticle[] = [
     tags: ['澳門包車', '澳門包車景點', '澳門找龍匯包車'],
     collapseId: 'collapse-airplane-rentcar',
     contentBlocks: rentCarArticleContentBlocks[3],
+    date: '2025/11/22',
   },
   {
     id: 4,
@@ -65,6 +69,7 @@ export const rentCarArticles: RentCarArticle[] = [
     tags: ['澳門找龍匯包車', '澳門包車景點', '澳門包車'],
     collapseId: 'collapse-macao-carpass',
     contentBlocks: rentCarArticleContentBlocks[4],
+    date: '2025/01/08',
   },
   {
     id: 5,
@@ -77,6 +82,7 @@ export const rentCarArticles: RentCarArticle[] = [
     tags: ['澳門機場接送', '澳門包車', '龍匯包車'],
     collapseId: 'collapse-airportrencar1',
     contentBlocks: rentCarArticleContentBlocks[5],
+    date: '2025/05/16',
   },
   {
     id: 6,
@@ -89,6 +95,7 @@ export const rentCarArticles: RentCarArticle[] = [
     tags: ['澳門包車', '包車接送', '澳門機場接送', '澳門接送'],
     collapseId: 'collapse-macao-baocar',
     contentBlocks: rentCarArticleContentBlocks[6],
+    date: '2025/10/29',
   },
   {
     id: 7,
@@ -101,6 +108,7 @@ export const rentCarArticles: RentCarArticle[] = [
     tags: ['澳門包車', '澳門旅遊'],
     collapseId: 'collapse-macao-onedaytrvl',
     contentBlocks: rentCarArticleContentBlocks[7],
+    date: '2025/10/29',
   },
   {
     id: 8,
@@ -113,6 +121,7 @@ export const rentCarArticles: RentCarArticle[] = [
     tags: ['澳門機場接送', '澳門機場', '澳門找龍匯包車', '龍匯包車'],
     collapseId: 'collapse-airportrencar',
     contentBlocks: rentCarArticleContentBlocks[8],
+    date: '2025/10/29',
   },
   {
     id: 9,
@@ -125,6 +134,7 @@ export const rentCarArticles: RentCarArticle[] = [
     tags: ['澳門包車', '澳門旅遊', '龍匯澳門', '包車推薦'],
     collapseId: 'collapse-rentcar1',
     contentBlocks: rentCarArticleContentBlocks[9],
+    date: '2025/10/29',
   },
   {
     id: 10,
@@ -137,6 +147,7 @@ export const rentCarArticles: RentCarArticle[] = [
     tags: ['澳門包車', '包車', '龍匯包車'],
     collapseId: 'collapse-macao-rent-car',
     contentBlocks: rentCarArticleContentBlocks[10],
+    date: '2025/10/29',
   },
   {
     id: 11,
@@ -149,6 +160,7 @@ export const rentCarArticles: RentCarArticle[] = [
     tags: ['龍匯天下包車', '包車澳門龍匯', '龍匯包車', '澳門找龍匯包車'],
     collapseId: 'collapse-rentcal',
     contentBlocks: rentCarArticleContentBlocks[12],
+    date: '2025/10/29',
   },
   {
     id: 12,
@@ -161,6 +173,7 @@ export const rentCarArticles: RentCarArticle[] = [
     tags: ['澳門包車', '澳門找龍匯包車', '龍匯天下旅遊', '澳門旅遊', '澳門景點'],
     collapseId: 'collapse-wei123',
     contentBlocks: rentCarArticleContentBlocks[11],
+    date: '2025/10/29',
   },
 ];
 

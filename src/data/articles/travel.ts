@@ -15,6 +15,7 @@ export interface TravelArticle {
   collapseId: string;
   content?: string; // Legacy plain text content
   contentBlocks?: ArticleContent; // New structured content blocks
+  date?: string; // Article publication date
 }
 
 export const travelArticles: TravelArticle[] = [
@@ -29,6 +30,7 @@ export const travelArticles: TravelArticle[] = [
     tags: ['澳門', '澳門旅遊', '澳門漁人碼頭'],
     collapseId: 'collapse-macaomatou',
     contentBlocks: travelArticleContentBlocks[1],
+    date: '2025/08/14',
   },
   {
     id: 2,
@@ -41,6 +43,7 @@ export const travelArticles: TravelArticle[] = [
     tags: ['澳門通龍匯天下', '龍匯包車', '龍匯天下訂房'],
     collapseId: 'collapse-macau-all',
     contentBlocks: travelArticleContentBlocks[2],
+    date: '2025/03/22',
   },
   {
     id: 3,
@@ -53,6 +56,7 @@ export const travelArticles: TravelArticle[] = [
     tags: ['澳門一日遊', '澳門包車', '澳門龍匯天下'],
     collapseId: 'collapse-macao-onedaypass',
     contentBlocks: travelArticleContentBlocks[3],
+    date: '2025/07/09',
   },
   {
     id: 4,
@@ -65,6 +69,7 @@ export const travelArticles: TravelArticle[] = [
     tags: ['澳門親子自由行', '澳門旅遊', '龍匯天下訂房', '澳門包車'],
     collapseId: 'collapse-macao-parent-child',
     contentBlocks: travelArticleContentBlocks[4],
+    date: '2025/11/03',
   },
   {
     id: 5,
@@ -77,6 +82,7 @@ export const travelArticles: TravelArticle[] = [
     tags: ['澳門訂房', '澳門推薦', '澳門旅遊'],
     collapseId: 'collapse-macao-travelgroup1',
     contentBlocks: travelArticleContentBlocks[5],
+    date: '2025/04/28',
   },
   {
     id: 6,
@@ -89,6 +95,7 @@ export const travelArticles: TravelArticle[] = [
     tags: ['澳門旅遊', '澳門包車', '澳門訂房', '澳門團體旅遊'],
     collapseId: 'collapse-grouptravel',
     contentBlocks: travelArticleContentBlocks[6],
+    date: '2025/06/15',
   },
   {
     id: 7,
@@ -101,6 +108,7 @@ export const travelArticles: TravelArticle[] = [
     tags: ['澳門大三巴', '大三巴澳門龍匯', '龍匯大三巴澳門', '澳門龍匯天下大三巴'],
     collapseId: 'collapse-macao-dasanbaa',
     contentBlocks: travelArticleContentBlocks[7],
+    date: '2025/02/11',
   },
   {
     id: 8,
@@ -113,6 +121,7 @@ export const travelArticles: TravelArticle[] = [
     tags: ['澳門百老匯', '龍匯澳們百老匯', '龍匯百老匯', '百老匯龍匯天下'],
     collapseId: 'collapse-macao-hundred-old',
     contentBlocks: travelArticleContentBlocks[8],
+    date: '2025/10/05',
   },
   {
     id: 9,
@@ -125,6 +134,7 @@ export const travelArticles: TravelArticle[] = [
     tags: ['澳門龍匯', '龍匯天下澳門旅遊', '澳門包車', '澳門包車景點'],
     collapseId: 'collapse-macao-view',
     contentBlocks: travelArticleContentBlocks[9],
+    date: '2025/01/19',
   },
   {
     id: 10,
@@ -137,6 +147,7 @@ export const travelArticles: TravelArticle[] = [
     tags: ['澳門自由行龍匯', '龍匯天下旅遊', '澳門自由行龍匯天下', '龍匯天下自由行'],
     collapseId: 'collapse-macao-free-go',
     contentBlocks: travelArticleContentBlocks[10],
+    date: '2025/05/30',
   },
   {
     id: 11,
@@ -149,6 +160,7 @@ export const travelArticles: TravelArticle[] = [
     tags: ['澳門旅遊找龍匯', '龍匯天下澳門', '龍匯旅遊澳門', '澳門旅遊龍匯天下'],
     collapseId: 'collapse-macao-travel',
     contentBlocks: travelArticleContentBlocks[11],
+    date: '2025/08/26',
   },
   {
     id: 12,
@@ -161,6 +173,7 @@ export const travelArticles: TravelArticle[] = [
     tags: ['澳門旅遊', '澳門安全', '澳門景點', '澳門推薦', '龍匯天下'],
     collapseId: 'collapse-travel1',
     contentBlocks: travelArticleContentBlocks[12],
+    date: '2025/12/26',
   },
 ];
 

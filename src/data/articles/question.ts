@@ -15,6 +15,7 @@ export interface QuestionArticle {
   collapseId: string;
   content?: string; // Legacy plain text content
   contentBlocks?: ArticleContent; // New structured content blocks
+  date?: string; // Article publication date
 }
 
 export const questionArticles: QuestionArticle[] = [
@@ -29,6 +30,7 @@ export const questionArticles: QuestionArticle[] = [
     tags: ['澳門龍匯天下', '澳門換錢', '澳門旅遊找龍匯', '澳門訂房'],
     collapseId: 'collapse-money-exchange',
     contentBlocks: questionArticleContentBlocks[1],
+    date: '2025/07/05',
   },
   {
     id: 2,
@@ -41,6 +43,7 @@ export const questionArticles: QuestionArticle[] = [
     tags: ['澳門通龍匯天下', '龍匯澳門通', '澳門龍匯天下澳門通', '龍匯天下澳門通'],
     collapseId: 'collapse-macao-pass',
     contentBlocks: questionArticleContentBlocks[2],
+    date: '2025/12/01',
   },
   {
     id: 3,
@@ -53,6 +56,7 @@ export const questionArticles: QuestionArticle[] = [
     tags: ['澳門旅遊', '澳門安全', '澳門'],
     collapseId: 'collapse-safe1',
     contentBlocks: questionArticleContentBlocks[3],
+    date: '2025/03/27',
   },
 ];
 

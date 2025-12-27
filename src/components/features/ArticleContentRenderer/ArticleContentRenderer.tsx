@@ -385,6 +385,21 @@ export default function ArticleContentRenderer({ blocks, content }: ArticleConte
                
               </div>
             )}
+              {/* Section Description */}
+              {block.description && (
+              <p
+                style={{
+                  marginTop: '0',
+                  marginBottom: '20px',
+                  fontSize: '1rem',
+                  lineHeight: '1.8',
+                }}
+                className="text-white whitespace-pre-line"
+              >
+                {block.description}
+              </p>
+            )}
+            
             
          
             
