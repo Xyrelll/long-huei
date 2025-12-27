@@ -225,14 +225,24 @@ export default function ArticleContentRenderer({ blocks, content }: ArticleConte
             }}
             className="w-full"
           >
-            <table className="w-full border-collapse text-white">
+            <table className="w-[90%] mx-auto border-collapse text-white">
               {block.headers && block.headers.length > 0 && (
                 <thead>
                   <tr>
                     {block.headers.map((header, headerIndex) => (
                       <th
                         key={headerIndex}
-                        className="border border-white/20 p-2"
+                        style={{
+                          paddingLeft: '10px',
+                          paddingTop: '10px',
+                          paddingBottom: '10px',
+                          paddingRight: '10px',
+                          color: '#FFFFFF',
+                          fontSize: '1rem',
+                          fontWeight: 'bold',
+                          textAlign: 'left',
+                        }}
+                        className="border border-white/20 p-2 "
                       >
                         {header}
                       </th>
@@ -246,6 +256,16 @@ export default function ArticleContentRenderer({ blocks, content }: ArticleConte
                     {row.map((cell, cellIndex) => (
                       <td
                         key={cellIndex}
+                        style={{
+                          paddingLeft: '10px',
+                          paddingTop: '10px',
+                          paddingBottom: '10px',
+                          paddingRight: '10px',
+                          color: '#FFFFFF',
+                          fontSize: '1rem',
+                          fontWeight: 'bold',
+                          textAlign: 'left',
+                        }}
                         className="border border-white/20 p-2"
                       >
                         {cell}

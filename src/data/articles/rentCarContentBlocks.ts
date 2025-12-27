@@ -127,7 +127,7 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
             content: '您的澳門包車旅遊費用為一台車一天的車費，包含所有必要開支，讓您無需擔心額外費用：',
             style: { 
               marginBottom: '10px', 
-              marginTop: '0', 
+              marginTop: '0px', 
               fontSize: '1.125rem'
             }
           },
@@ -201,7 +201,8 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
             style: {
               marginTop: '10px',
               marginBottom: '20px',
-              fontSize: '1.125rem'
+              fontSize: '1.125rem',
+              lineHeight: '5rem'
             }
           }
         ],
@@ -251,7 +252,8 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
             style: {
               marginTop: '10px',
               marginBottom: '20px',
-              fontSize: '1.125rem'
+              fontSize: '1.125rem',
+              lineHeight: '5rem'
             }
           },
           {
@@ -581,7 +583,8 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
             style: {
               marginTop: '10px',
               marginBottom: '20px',
-              fontSize: '1.125rem'
+              fontSize: '1.125rem',
+              lineHeight: '5rem'
             }
           },
           {
@@ -812,7 +815,8 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
             style: {
               marginTop: '10px',
               marginBottom: '20px',
-              fontSize: '1.125rem'
+              fontSize: '1.125rem',
+              lineHeight: '5rem'
             }
           },
           {
@@ -891,7 +895,8 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
             style: {
               marginTop: '10px',
               marginBottom: '20px',
-              fontSize: '1.125rem'
+              fontSize: '1.125rem',
+              lineHeight: '5rem'
             }
           },
           {
@@ -985,7 +990,8 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
             style: {
               marginTop: '10px',
               marginBottom: '20px',
-              fontSize: '1.125rem'
+              fontSize: '1.125rem',
+              lineHeight: '5rem'
             }
           }
         ],
@@ -1191,7 +1197,8 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
             style: {
               marginTop: '10px',
               marginBottom: '20px',
-              fontSize: '1.125rem'
+              fontSize: '1.125rem',
+              lineHeight: '5rem'
             }
           }
         ],
@@ -1241,7 +1248,8 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
             style: {
               marginTop: '10px',
               marginBottom: '20px',
-              fontSize: '1.125rem'
+              fontSize: '1.125rem',
+              lineHeight: '5rem'
             }
           }
         ],
@@ -1396,7 +1404,9 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
             style: {
               marginTop: '10px',
               marginBottom: '20px',
-              fontSize: '1.125rem'
+              fontSize: '1.125rem',
+              lineHeight: '5rem'
+
             }
           }
         ],
@@ -1429,7 +1439,9 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
             style: {
               marginTop: '10px',
               marginBottom: '20px',
-              fontSize: '1.125rem'
+              fontSize: '1.125rem',
+              lineHeight: '5rem'
+
             }
           }
         ],
@@ -1460,7 +1472,8 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
             style: {
               marginTop: '10px',
               marginBottom: '20px',
-              fontSize: '1.125rem'
+              fontSize: '1.125rem',
+              lineHeight: '5rem'
             }
           }
         ],
@@ -1661,7 +1674,8 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
             style: {
               marginTop: '10px',
               marginBottom: '20px',
-              fontSize: '1.125rem'
+              fontSize: '1.125rem',
+              lineHeight: '5rem'
             }
           }
         ],
@@ -1684,7 +1698,8 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
             style: {
               marginTop: '10px',
               marginBottom: '20px',
-              fontSize: '1.125rem'
+              fontSize: '1.125rem',
+              lineHeight: '5rem'
             }
           }
         ],
@@ -1717,7 +1732,8 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
             style: {
               marginTop: '10px',
               marginBottom: '20px',
-              fontSize: '1.125rem'
+              fontSize: '1.125rem',
+              lineHeight: '5rem'
             }
           }
         ],
@@ -1739,7 +1755,8 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
             style: {
               marginTop: '10px',
               marginBottom: '20px',
-              fontSize: '1.125rem'
+              fontSize: '1.125rem',
+              lineHeight: '5rem'
             }
           }
         ],
@@ -1862,7 +1879,9 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
             style: {
               marginTop: '10px',
               marginBottom: '20px',
-              fontSize: '1.125rem'
+              fontSize: '1.125rem',
+              lineHeight: '5rem'
+
             }
           }
         ],
@@ -1893,7 +1912,8 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
             style: {
               marginTop: '10px',
               marginBottom: '20px',
-              fontSize: '1.125rem'
+              fontSize: '1.125rem',
+              lineHeight: '5rem'
             }
           },
           {
@@ -2010,7 +2030,8 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
             style: {
               marginTop: '10px',
               marginBottom: '20px',
-              fontSize: '1.125rem'
+              fontSize: '1.125rem',
+              lineHeight: '5rem'
             }
           }
         ],
@@ -2035,7 +2056,9 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
             style: {
               marginTop: '10px',
               marginBottom: '20px',
-              fontSize: '1.125rem'
+              fontSize: '1.125rem',
+              lineHeight: '5rem'
+
             }
           }
         ],
@@ -2059,7 +2082,9 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
             style: {
               marginTop: '10px',
               marginBottom: '20px',
-              fontSize: '1.125rem'
+              fontSize: '1.125rem',
+              lineHeight: '5rem'
+
             }
           }
         ],
@@ -2082,7 +2107,8 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
             style: {
               marginTop: '10px',
               marginBottom: '20px',
-              fontSize: '1.125rem'
+              fontSize: '1.125rem',
+              lineHeight: '5rem'
             }
           }
         ],
@@ -2179,7 +2205,9 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
             style: {
               marginTop: '10px',
               marginBottom: '20px',
-              fontSize: '1.125rem'
+              fontSize: '1.125rem',
+              lineHeight: '5rem'
+
             }
           }
         ],
@@ -2203,7 +2231,9 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
             style: {
               marginTop: '10px',
               marginBottom: '20px',
-              fontSize: '1.125rem'
+              fontSize: '1.125rem',
+              lineHeight: '5rem'
+
             }
           }
         ],
@@ -2228,7 +2258,8 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
             style: {
               marginTop: '10px',
               marginBottom: '20px',
-              fontSize: '1.125rem'
+              fontSize: '1.125rem',
+              lineHeight: '5rem'
             }
           }
         ],
@@ -2252,7 +2283,8 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
             style: {
               marginTop: '10px',
               marginBottom: '20px',
-              fontSize: '1.125rem'
+              fontSize: '1.125rem',
+              lineHeight: '5rem'
             }
           }
         ],
@@ -2331,8 +2363,8 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
         image: {
           src: '/rentcar/id10/steering-wheel-7417390_1280.jpg',
           alt: '澳門包車推薦-為什麼是我們?',
-          width: 800,
-          height: 450
+          width: 300,
+          height: 200
         },
         content: [
           {
@@ -2362,7 +2394,8 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
               marginTop: '10px',
               marginBottom: '20px',
               fontSize: '1.125rem',
-              fontWeight: 'bold'
+              fontWeight: 'bold',
+              lineHeight: '5rem'
             }
           }
         ],
@@ -2377,8 +2410,8 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
         image: {
           src: '/rentcar/id10/parking-4061323_1280.jpg',
           alt: '尊榮車隊選擇，滿足不同旅遊需求',
-          width: 800,
-          height: 450
+          width: 300,
+          height: 200
         },
         content: [
           {
@@ -2402,7 +2435,8 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
             style: {
               marginTop: '10px',
               marginBottom: '20px',
-              fontSize: '1.125rem'
+              fontSize: '1.125rem',
+              lineHeight: '5rem'
             }
           }
         ],
@@ -2436,7 +2470,8 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
             style: {
               marginTop: '10px',
               marginBottom: '20px',
-              fontSize: '1.125rem'
+              fontSize: '1.125rem',
+              lineHeight: '5rem'
             }
           }
         ],
@@ -2470,7 +2505,8 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
             style: {
               marginTop: '10px',
               marginBottom: '20px',
-              fontSize: '1.125rem'
+              fontSize: '1.125rem',
+              lineHeight: '5rem'
             }
           }
         ],
@@ -2496,7 +2532,8 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
             style: {
               marginTop: '10px',
               marginBottom: '20px',
-              fontSize: '1.125rem'
+              fontSize: '1.125rem',
+              lineHeight: '5rem'
             }
           }
         ],
@@ -2565,8 +2602,8 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
         image: {
           src: '/rentcar/id12/2023_Toyota_Alphard_Z.jpg',
           alt: '【澳門包車】阿爾法',
-          width: 800,
-          height: 450
+          width: 300,
+          height: 169
         },
         content: [
           {
@@ -2589,7 +2626,7 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
         image: {
           src: '/rentcar/id12/maybach-7383933_1280.jpg',
           alt: '【澳門包車】麥巴赫',
-          width: 800,
+          width: 300,
           height: 450
         },
         content: [
@@ -2613,8 +2650,8 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
         image: {
           src: '/rentcar/id12/car-436373_1280.jpg',
           alt: '【澳門包車】勞斯萊斯',
-          width: 800,
-          height: 450
+          width: 300,
+          height: 199
         },
         content: [
           {
@@ -2748,8 +2785,8 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
         image: {
           src: '/rentcar/id11/auto-2179220_1280.jpg',
           alt: '澳門包車',
-          width: 800,
-          height: 450
+          width: 300,
+          height: 200
         },
         content: [
           {
@@ -2789,7 +2826,8 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
             style: {
               marginTop: '10px',
               marginBottom: '20px',
-              fontSize: '1.125rem'
+              fontSize: '1.125rem',
+              lineHeight: '5rem'
             }
           }
         ],
@@ -2821,7 +2859,8 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
             style: {
               marginTop: '10px',
               marginBottom: '20px',
-              fontSize: '1.125rem'
+              fontSize: '1.125rem',
+              lineHeight: '5rem'
             }
           }
         ],
@@ -2844,7 +2883,8 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
             style: {
               marginTop: '10px',
               marginBottom: '20px',
-              fontSize: '1.125rem'
+              fontSize: '1.125rem',
+              lineHeight: '5rem'
             }
           }
         ],
