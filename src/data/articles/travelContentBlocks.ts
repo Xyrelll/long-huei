@@ -1609,7 +1609,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
               '季節限定活動：12月結合聖誕節的「中葡市集」，可品嘗到現做的木糠布甸與非洲雞。'
             ],
             ordered: true,
-            style: LIST_STYLE
+            style: { ...LIST_STYLE, lineHeight: '1rem' }
           },
           {
             type: 'text',
