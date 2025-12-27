@@ -2024,7 +2024,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
         title: '【澳門景點】美食地圖｜玩到哪吃到哪的掃街清單',
         titleLevel: 2,
         id: 'food-map',
-        description: '玩到哪吃到哪的掃街清單',
+        description: '',
         content: [
           {
             type: 'text',
@@ -2086,7 +2086,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
         title: '【澳門景點】QA懶人包｜新手秒解3大痛點',
         titleLevel: 2,
         id: 'qa',
-        description: '新手秒解3大痛點',
+        description: '',
         content: [
           {
             type: 'text',
@@ -2126,7 +2126,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
         title: '跟著玩就對了！免費領「澳門景點」電子地圖',
         titleLevel: 2,
         id: 'conclusion',
-        description: '立即追蹤 龍匯天下官方IG',
+        description: '',
         content: [
           {
             type: 'text',
