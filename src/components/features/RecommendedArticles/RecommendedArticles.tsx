@@ -213,10 +213,12 @@ export default function RecommendedArticles({ articles }: RecommendedArticlesPro
           paddingTop: '40px',
           paddingBottom: '20px',
         }}
-        className="recommended-articles relative w-full bg-black py-12 border-t border-white/20"
+        className="recommended-articles relative w-full bg-black py-12 border-t border-white/20 flex justify-center items-center"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
+<div className="w-full md:w-3/4 h-full mx-auto relative">
+        
       {/* Left Arrow - Nested inside section */}
       {totalPages > 1 && (
         <button
@@ -353,6 +355,10 @@ export default function RecommendedArticles({ articles }: RecommendedArticlesPro
           </div>
         </div>
       </div>
+
+      </div>
+
+
     </section>
     </div>
   );
