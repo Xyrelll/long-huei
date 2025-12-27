@@ -52,7 +52,8 @@ const LIST_STYLE = {
   marginTop: '10px',
   marginBottom: '20px',
   fontSize: '1.125rem',
-  lineHeight: '5rem'
+  lineHeight: '5rem',
+  gap: '4rem'
 };
 
 export const travelArticleContentBlocks: Record<number, ArticleContent> = {
@@ -249,9 +250,11 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
               '地址：澳門新口岸友誼大馬路及孫逸仙大馬路交界',
               '開放時間：24小時開放（各商店與餐廳營業時間不同）',
               '門票：免費入場（部分娛樂設施另行收費）',
-              '交通方式：免費接駁巴士：往返澳門外港碼頭、關閘、澳門國際機場等地；公共巴士：多條路線經過「漁人碼頭」站；的士：從澳門半島市中心前往約10-15分鐘'
+              '免費接駁巴士：往返澳門外港碼頭、關閘、澳門國際機場等地',
+              '公共巴士：多條路線經過「漁人碼頭」',
+              '的士：從澳門半島市中心前往約10-15分鐘'
             ],
-            style: LIST_STYLE
+            style: {...LIST_STYLE, lineHeight: '1rem'}
           }
         ],
         style: SECTION_STYLE
@@ -634,6 +637,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
     ],
     // Table of Contents
     tableOfContents: {
+      enabled: false,
       type: 'tableOfContents',
       buttonText: '文章目錄',
       buttonIcon: '☰',
@@ -647,6 +651,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
         { level: 1, text: '結語', id: 'conclusion' }
       ],
       style: TABLE_OF_CONTENTS_STYLE
+      
     },
     // Array of sections
     sections: [
@@ -758,7 +763,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
         title: '澳門一日遊交通攻略',
         titleLevel: 2,
         id: 'transportation',
-        description: '由於時間有限，交通規劃是關鍵',
+        description: '',
         content: [
           {
             type: 'text',
@@ -782,7 +787,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
         title: '小貼士',
         titleLevel: 2,
         id: 'tips',
-        description: '實用建議讓你的澳門一日遊更順利',
+        description: '',
         content: [
           {
             type: 'list',
@@ -803,7 +808,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
         title: '結語',
         titleLevel: 2,
         id: 'conclusion',
-        description: '短短一天，雖然無法完全探索澳門，但透過精心規劃，澳門一日遊 依然能讓你感受到世界遺產的莊嚴、街頭小吃的魅力，以及度假村的繁華與夜景之美',
+        description: '',
         content: [
           {
             type: 'text',
@@ -962,7 +967,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
         title: '親子自由行玩法建議',
         titleLevel: 2,
         id: 'itinerary-suggestions',
-        description: '不同主題的親子行程安排',
+        description: '',
         content: [
           {
             type: 'list',
@@ -1002,7 +1007,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
         title: '美食體驗',
         titleLevel: 2,
         id: 'food-experience',
-        description: '親子出遊怎能少了美食',
+        description: '',
         content: [
           {
             type: 'text',
@@ -1017,7 +1022,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
         title: '小提醒',
         titleLevel: 2,
         id: 'tips',
-        description: '實用建議讓親子旅行更順利',
+        description: '',
         content: [
           {
             type: 'list',
@@ -1036,7 +1041,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
         title: '結語',
         titleLevel: 2,
         id: 'conclusion',
-        description: '澳門親子自由行能帶給家庭成員不同的驚喜',
+        description: '',
         content: [
           {
             type: 'text',
@@ -1114,12 +1119,12 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'list',
             items: [
-              '文化古蹟深度遊：澳門擁有多達八項世界文化遺產，例如大三巴牌坊、媽閣廟、東望洋炮台等。參加 澳門旅遊團，能由專業導遊講解背後的歷史故事，體會葡式建築與中國文化的結合。',
-              '美食探索之旅：澳門被譽為「美食之都」，從葡撻、馬介休球到水蟹粥，每一道都是饕客必吃。許多 澳門旅遊團 會特別安排特色餐廳，帶領團員品嚐在地料理。',
-              '娛樂購物體驗遊：澳門的娛樂場聞名世界，同時也有許多大型購物中心。透過 澳門旅遊團，不僅能體驗國際級的娛樂氛圍，也能享受購物優惠與貼心接送服務。'
+              '文化古蹟深度遊： \n 澳門擁有多達八項世界文化遺產，例如大三巴牌坊、媽閣廟、東望洋炮台等。參加 澳門旅遊團，能由專業導遊講解背後的歷史故事，體會葡式建築與中國文化的結合。',
+              '美食探索之旅： \n 澳門被譽為「美食之都」，從葡撻、馬介休球到水蟹粥，每一道都是饕客必吃。許多 澳門旅遊團 會特別安排特色餐廳，帶領團員品嚐在地料理。',
+              '娛樂購物體驗遊：\n 澳門的娛樂場聞名世界，同時也有許多大型購物中心。透過 澳門旅遊團，不僅能體驗國際級的娛樂氛圍，也能享受購物優惠與貼心接送服務。'
             ],
             ordered: true,
-            style: LIST_STYLE
+            style: { ...LIST_STYLE, lineHeight: '2rem' }
           }
         ],
         style: SECTION_STYLE
@@ -1145,7 +1150,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
               '彈性行程：可選擇自由行搭配部分 澳門旅遊團，享受兩全其美的旅行方式。',
               '價格透明：不同預算都有適合的 澳門旅遊團，無需擔心隱藏收費。'
             ],
-            style: LIST_STYLE
+            style: { ...LIST_STYLE, lineHeight: '2rem' }
           }
         ],
         style: SECTION_STYLE
@@ -1155,7 +1160,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
         title: '適合哪些人參加澳門旅遊團？',
         titleLevel: 2,
         id: 'who-should-join',
-        description: '了解哪些類型的旅客最適合參加澳門旅遊團',
+        description: '',
         content: [
           {
             type: 'list',
@@ -1165,7 +1170,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
               '時間有限的上班族：短時間內體驗澳門精華，效率最高。',
               '美食與文化愛好者：跟著 澳門旅遊團 深入品味在地風情。'
             ],
-            style: LIST_STYLE
+            style: { ...LIST_STYLE, lineHeight: '2rem' }
           }
         ],
         style: SECTION_STYLE
@@ -1175,7 +1180,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
         title: '如何選擇適合的澳門旅遊團？',
         titleLevel: 2,
         id: 'how-to-choose',
-        description: '挑選澳門旅遊團時需要注意的事項',
+        description: '',
         content: [
           {
             type: 'text',
@@ -1191,7 +1196,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
               '評價與口碑：參考其他旅客對該 澳門旅遊團 的評價。'
             ],
             ordered: true,
-            style: LIST_STYLE
+            style: { ...LIST_STYLE, lineHeight: '2rem' }
           }
         ],
         style: SECTION_STYLE
@@ -1201,7 +1206,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
         title: '結語',
         titleLevel: 2,
         id: 'conclusion',
-        description: '澳門旅遊團能滿足不同需求，讓旅程更輕鬆精彩',
+        description: '',
         content: [
           {
             type: 'text',
@@ -1237,7 +1242,8 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
         { level: 1, text: '如何安排理想的澳門團體旅遊？', id: 'how-to-plan' },
         { level: 1, text: '結語', id: 'conclusion' }
       ],
-      style: TABLE_OF_CONTENTS_STYLE
+      style: TABLE_OF_CONTENTS_STYLE,
+      enabled: false
     },
     // Array of sections
     sections: [
@@ -1355,7 +1361,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
         title: '如何安排理想的澳門團體旅遊？',
         titleLevel: 2,
         id: 'how-to-plan',
-        description: '讓澳門團體旅遊順利且難忘的建議',
+        description: '',
         content: [
           {
             type: 'text',
@@ -1384,7 +1390,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
         title: '結語',
         titleLevel: 2,
         id: 'conclusion',
-        description: '澳門團體旅遊能讓人留下美好回憶',
+        description: '',
         content: [
           {
             type: 'text',
@@ -1609,12 +1615,12 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
               '季節限定活動：12月結合聖誕節的「中葡市集」，可品嘗到現做的木糠布甸與非洲雞。'
             ],
             ordered: true,
-            style: { ...LIST_STYLE, lineHeight: '1rem' }
+            style: { ...LIST_STYLE, lineHeight: '2rem' }
           },
           {
             type: 'text',
             content: '【大三巴牌坊】結語：行了！我們龍匯天下官方賴連結給你放下面啦，記得也去追蹤一下我們官方',
-            style: { marginBottom: '5px', fontSize: '1.125rem' }
+            style: { marginBottom: '5px', fontSize: '1.125rem'  }
           },
           {
             type: 'link',
@@ -2337,7 +2343,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
         title: '【澳門自由行】那我只有一天怎麼夠?',
         titleLevel: 2,
         id: 'one-day-enough',
-        description: '澳門區域小、交通方便，步行就可以覆蓋主要景點',
+        description: '',
         content: [
           {
             type: 'text',
@@ -2437,7 +2443,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
         title: '【澳門旅遊】這些景點必逛',
         titleLevel: 2,
         id: 'must-visit-attractions',
-        description: '先說澳門旅遊的結論，去澳門旅遊沒個三五個月是玩不完的',
+        description: '',
         content: [
           {
             type: 'text',
@@ -2550,7 +2556,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
         title: '【澳門旅遊】龍匯天下',
         titleLevel: 2,
         id: 'long-huei',
-        description: '【澳門旅遊】2025/5月水舞間強勢來襲',
+        description: '',
         content: [
           {
             type: 'text',
@@ -2607,7 +2613,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
         title: '【澳門景點】必訪TOP5｜穿梭400年時光隧道',
         titleLevel: 2,
         id: 'top5-must-visit',
-        description: '必訪TOP5景點',
+        description: '',
         content: [
           {
             type: 'text',
@@ -2648,7 +2654,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
         title: '媽閣廟：求平安還能看海事展覽',
         titleLevel: 3,
         id: 'a-ma-temple',
-        description: '澳門最古老的媽祖廟建於1488年',
+        description: '',
         content: [
           {
             type: 'text',
@@ -2668,7 +2674,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
         title: '【澳門景點】必玩TOP4｜尖叫系設施與網美打卡',
         titleLevel: 2,
         id: 'top4-must-play',
-        description: '必玩TOP4景點',
+        description: '',
         content: [
           {
             type: 'text',
@@ -2704,7 +2710,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
         title: 'teamLab超自然空間：全球最高規格光影展',
         titleLevel: 3,
         id: 'teamlab',
-        description: '威尼斯人酒店的teamLab展區占地5,000平方公尺',
+        description: '',
         content: [
           {
             type: 'text',
@@ -2724,7 +2730,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
         title: '【澳門景點】必吃TOP3｜米其林小吃與葡國菜',
         titleLevel: 2,
         id: 'top3-must-eat',
-        description: '必吃TOP3美食',
+        description: '',
         content: [
           {
             type: 'text',
@@ -2765,7 +2771,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
         title: '永利皇宮纜車晚餐：搭免費纜車吃米其林',
         titleLevel: 3,
         id: 'wynn-palace',
-        description: '永利皇宮的觀光纜車不僅免費搭乘',
+        description: '',
         content: [
           {
             type: 'text',
@@ -2780,7 +2786,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
         title: '【澳門景點】實用攻略｜專屬建議',
         titleLevel: 2,
         id: 'practical-guide',
-        description: '實用攻略與專屬建議',
+        description: '',
         content: [
           {
             type: 'text',
@@ -2795,7 +2801,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
         title: '最佳旅遊季節與穿著建議',
         titleLevel: 3,
         id: 'best-season',
-        description: '澳門夏季（6-9月）高溫達35度且多雨',
+        description: '',
         content: [
           {
             type: 'text',
@@ -2815,7 +2821,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
         title: '省時交通這樣安排',
         titleLevel: 3,
         id: 'transportation-tips',
-        description: '澳門半島景點集中，推薦步行搭配「免費酒店接駁車」',
+        description: '',
         content: [
           {
             type: 'text',

@@ -63,14 +63,11 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
       buttonText: '文章目錄',
       buttonIcon: '☰',
       items: [
-        { level: 1, text: '【澳門訂房】破解3大隱形消費陷阱', id: 'hidden-costs' },
-        { level: 1, text: '【澳門訂房】分區域實測', id: 'area-comparison' },
-        { level: 2, text: '步行10分鐘內抵達景點', id: 'walking-distance' },
-        { level: 1, text: '【澳門訂房】高CP值時段策略', id: 'value-timing' },
-        { level: 2, text: '週二搶房攻略', id: 'tuesday-strategy' },
-        { level: 1, text: '【澳門訂房】房型選擇公式', id: 'room-selection' },
-        { level: 2, text: '分析3,000+旅客評價得出的黃金比例', id: 'golden-ratio' },
-        { level: 1, text: '【澳門訂房】聰明規劃讓旅程價值翻倍', id: 'smart-planning' }
+        { level: 1, text: '【澳門訂房】破解3大隱形消費陷阱', id: '【澳門訂房】破解3大隱形消費陷阱' },
+        { level: 1, text: '【澳門訂房】分區域實測', id: '【澳門訂房】分區域實測' },
+        { level: 1, text: '【澳門訂房】高CP值時段策略', id: '【澳門訂房】高CP值時段策略' },
+        { level: 1, text: '【澳門訂房】房型選擇公式', id: '【澳門訂房】房型選擇公式' },
+        { level: 1, text: '【澳門訂房】聰明規劃讓旅程價值翻倍', id: '【澳門訂房】聰明規劃讓旅程價值翻倍' }
       ],
       style: TABLE_OF_CONTENTS_STYLE
     },
@@ -282,7 +279,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
         title: '【澳門訂房】聰明規劃讓旅程價值翻倍',
         titleLevel: 2,
         id: 'smart-planning',
-        description: '總結與建議',
+        description: '',
         content: [
           {
             type: 'text',
@@ -605,7 +602,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
         title: '【澳門飯店】行家才知道的「隱藏版體驗」',
         titleLevel: 2,
         id: 'hidden-experiences',
-        description: '行家才知道的隱藏版體驗',
+        description: '',
         content: [
           {
             type: 'text',
@@ -987,7 +984,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
         title: '【澳門訂房】接著介紹下面六間飯店啦~讓我們一起看下去吧~',
         titleLevel: 2,
         id: 'six-hotels',
-        description: '精選六間頂級澳門飯店推薦',
+        description: '',
         content: [
           {
             type: 'heading',
@@ -1256,7 +1253,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           width: 300,
           height: 200
         },
-        description: '',
+        description: 'CP值高!適合小朋友的玩水渡假村!(推薦指數5顆星)',
         content: [
           {
             type: 'text',
@@ -1277,7 +1274,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           width: 300,
           height: 200
         },
-        description: '',
+        description: '(推薦指數5顆星)',
         content: [
           {
             type: 'text',
@@ -1298,7 +1295,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           width: 300,
           height: 200
         },
-        description: '',
+        description: '有著8字摩天輪的厲害酒店!(推薦指數4顆星)新濠影匯是【澳門訂房】',
         content: [
           {
             type: 'text',
@@ -1319,7 +1316,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           width: 300,
           height: 200
         },
-        description: '',
+        description: '平價且歷史悠久的老飯店!(推薦指數5顆星)',
         content: [
           {
             type: 'text',
@@ -1340,7 +1337,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           width: 300,
           height: 200
         },
-        description: '',
+        description: '金沙城中心內便宜CP值高飯店!親子遊推薦(推薦指數4.5顆星)',
         content: [
           {
             type: 'text',
@@ -1361,7 +1358,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           width: 300,
           height: 200
         },
-        description: '',
+        description: '金光閃閃的銀河酒店!!奢華極致~(推薦指數5顆星)',
         content: [
           {
             type: 'text',
@@ -1382,7 +1379,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           width: 300,
           height: 200
         },
-        description: '',
+        description: '過去最夯最厲害的高檔酒店!(推薦指數5顆星)',
         content: [
           {
             type: 'text',

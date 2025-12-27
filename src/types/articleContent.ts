@@ -99,6 +99,7 @@ export interface ListBlock extends BaseContentBlock {
     fontWeight?: string;
     lineHeight?: string;
     paddingLeft?: string;
+    gap?: string;
   };
 }
 
@@ -162,6 +163,7 @@ export interface TableOfContentsBlock extends BaseContentBlock {
   }>;
   buttonText?: string;
   buttonIcon?: string;
+  enabled?: boolean; // Control visibility - if false, table of contents won't be rendered
   style?: {
     backgroundColor?: string;
     borderRadius?: string;

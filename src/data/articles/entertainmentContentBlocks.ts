@@ -46,7 +46,8 @@ const LIST_STYLE = {
   marginTop: '10px',
   marginBottom: '20px',
   fontSize: '1.125rem',
-  lineHeight: '5rem'
+  lineHeight: '5rem',
+  gap: '12px'
 };
 
 export const entertainmentArticleContentBlocks: Record<number, ArticleContent> = {
@@ -411,7 +412,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
         title: '澳門旅遊 Q&A（2025 最新版）',
         titleLevel: 2,
         id: 'qa',
-        description: '常見問題解答',
+        description: '',
         content: [
           {
             type: 'heading',
@@ -469,7 +470,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
         title: '結語：打造你的完美澳門之旅',
         titleLevel: 2,
         id: 'conclusion',
-        description: '結語',
+        description: '',
         content: [
           {
             type: 'text',
@@ -560,7 +561,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
         title: '必玩設施推薦',
         titleLevel: 2,
         id: 'must-play-facilities',
-        description: '推薦的必玩設施',
+        description: '',
         content: [
           {
             type: 'list',
@@ -586,7 +587,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
         title: '澳門水上樂園適合誰？',
         titleLevel: 2,
         id: 'who-is-it-for',
-        description: '適合的遊客類型',
+        description: '',
         content: [
           {
             type: 'list',
@@ -607,7 +608,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
         title: '澳門水上樂園玩樂小技巧',
         titleLevel: 2,
         id: 'tips',
-        description: '玩樂小技巧',
+        description: '',
         content: [
           {
             type: 'list',
@@ -667,7 +668,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
         title: '結語',
         titleLevel: 2,
         id: 'conclusion',
-        description: '結語',
+        description: '',
         content: [
           {
             type: 'text',
@@ -715,7 +716,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
           width: 300,
           height: 200
         },
-        description: '澳門百老匯美食街介紹',
+        description: '',
         content: [
           {
             type: 'text',
@@ -741,7 +742,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
           width: 300,
           height: 200
         },
-        description: '澳門百老匯舞台介紹',
+        description: '',
         content: [
           {
             type: 'text',
@@ -767,7 +768,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
           width: 300,
           height: 200
         },
-        description: '澳門百老匯酒店介紹',
+        description: '',
         content: [
           {
             type: 'text',
@@ -787,7 +788,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
         title: '小型娛樂場，輕鬆體驗博彩樂趣',
         titleLevel: 2,
         id: 'casino',
-        description: '小型娛樂場介紹',
+        description: '',
         content: [
           {
             type: 'text',
@@ -802,7 +803,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
         title: '為什麼選擇澳門百老匯？',
         titleLevel: 2,
         id: 'why-choose',
-        description: '總結',
+        description: '',
         content: [
           {
             type: 'text',
@@ -850,7 +851,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
           width: 300,
           height: 200
         },
-        description: '水舞聲光秀觀賞訣竅',
+        description: '',
         content: [
           {
             type: 'text',
@@ -871,7 +872,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
           width: 300,
           height: 200
         },
-        description: '全球頂級藝術收藏',
+        description: '',
         content: [
           {
             type: 'text',
@@ -912,7 +913,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
           width: 300,
           height: 200
         },
-        description: '建築設計的隱藏美學',
+        description: '',
         content: [
           {
             type: 'text',
@@ -1547,7 +1548,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
         title: '【澳門按摩】老司機暗戰指南｜這樣玩才專業',
         titleLevel: 2,
         id: 'expert-guide',
-        description: '老司機暗戰指南',
+        description: '',
         content: [
           {
             type: 'heading',
@@ -1613,7 +1614,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
         title: '【澳門按摩】各式獨家情報想了解更多',
         titleLevel: 2,
         id: 'more-info',
-        description: '更多資訊',
+        description: '',
         content: [
           {
             type: 'text',

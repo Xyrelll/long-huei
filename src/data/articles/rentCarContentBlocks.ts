@@ -47,7 +47,8 @@ const LIST_STYLE = {
   marginTop: '10px',
   marginBottom: '20px',
   fontSize: '1.125rem',
-  lineHeight: '5rem'
+  lineHeight: '5rem',
+  gap: '12px'
 };
 
 export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {

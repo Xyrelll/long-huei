@@ -23,7 +23,7 @@ export default function ArticleContentRenderer({ blocks, content }: ArticleConte
         )}
         
         {/* Table of Contents */}
-        {content.tableOfContents && (
+        {content.tableOfContents && content.tableOfContents.enabled !== false && (
           <div className="article-toc">
             <TableOfContentsComponent
               block={content.tableOfContents}
@@ -190,6 +190,7 @@ export default function ArticleContentRenderer({ blocks, content }: ArticleConte
       case 'list': {
         const listStyle = block.style || {};
         const ListTag = block.ordered ? 'ol' : 'ul';
+        const gap = listStyle.gap || '12px';
         return (
           <ListTag
             key={block.id || index}
@@ -202,11 +203,22 @@ export default function ArticleContentRenderer({ blocks, content }: ArticleConte
               fontFamily: listStyle.fontFamily,
               fontWeight: listStyle.fontWeight,
               lineHeight: listStyle.lineHeight,
-            }}
-            className="text-white"
+              listStyle: block.ordered ? 'none' : undefined,
+              listStyleType: block.ordered ? 'none' : undefined,
+            } as React.CSSProperties}
+            className="text-white article-list-no-numbering"
           >
             {block.items.map((item, itemIndex) => (
-              <li key={itemIndex} style={{ marginBottom: '8px', whiteSpace: 'pre-line' }}>
+              <li 
+                key={itemIndex} 
+                style={{ 
+                  whiteSpace: 'pre-line',
+                  marginBottom: itemIndex < block.items.length - 1 ? gap : '0',
+                  lineHeight: listStyle.lineHeight,
+                  listStyle: 'none',
+                  listStyleType: 'none',
+                }}
+              >
                 {item}
               </li>
             ))}
@@ -774,8 +786,8 @@ function TableOfContentsComponent({ block }: { block: ArticleContentBlock }) {
 
           const renderNestedList = (items: TOCItem[], isRoot: boolean = false, parentNumbers: string[] = []): React.ReactNode => {
             const listStyle = isRoot 
-              ? { listStyle: 'none', padding: '0', margin: '0', color: '#000000' }
-              : { listStyle: 'none', padding: '0', margin: '0', color: '#000000' };
+              ? { listStyle: 'none', listStyleType: 'none', padding: '0', margin: '0', color: '#000000' }
+              : { listStyle: 'none', listStyleType: 'none', padding: '0', margin: '0', color: '#000000' };
             
             return (
               <ol 

@@ -707,6 +707,47 @@ h3.page-title {
   color: #fff;
 }
 
+/* Hide browser numbering for all article ordered lists - content has its own numbers */
+.article-content-structured ol,
+article ol,
+.text-white ol.article-list-no-numbering {
+  list-style: none !important;
+  list-style-type: none !important;
+}
+
+.article-content-structured ol li,
+article ol li,
+.text-white ol.article-list-no-numbering li {
+  list-style: none !important;
+  list-style-type: none !important;
+}
+
+/* Hide browser numbering for table of contents - it uses manual numbering */
+.article-menu-box-list,
+.article-menu-box-list ol {
+  list-style: none !important;
+  list-style-type: none !important;
+}
+
+.article-menu-box-list li,
+.article-menu-box-list ol li {
+  list-style: none !important;
+  list-style-type: none !important;
+}
+
+/* Hide browser numbering for article lists that have numbers in text content */
+.article-list-no-numbering,
+.article-list-no-numbering ol {
+  list-style: none !important;
+  list-style-type: none !important;
+}
+
+.article-list-no-numbering li,
+.article-list-no-numbering ol li {
+  list-style: none !important;
+  list-style-type: none !important;
+}
+
 @media (max-width: 991px) {
   nav.nav-breadcrumb {
     padding-top: 120px;
