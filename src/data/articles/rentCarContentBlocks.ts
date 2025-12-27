@@ -72,8 +72,8 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
         image: {
           src: '/rentcar/id1/S__256245805.jpg',
           alt: '🚗 龍匯天下：澳門包車旅遊的專屬優勢與服務內容',
-          width: 800,
-          height: 450
+          width: 300,
+          height: 200
         },
         content: [
           {

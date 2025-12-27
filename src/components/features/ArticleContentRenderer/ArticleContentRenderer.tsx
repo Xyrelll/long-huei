@@ -232,7 +232,7 @@ export default function ArticleContentRenderer({ blocks, content }: ArticleConte
                     {block.headers.map((header, headerIndex) => (
                       <th
                         key={headerIndex}
-                        className="border border-white/20 p-2 bg-white/10"
+                        className="border border-white/20 p-2"
                       >
                         {header}
                       </th>
