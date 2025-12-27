@@ -488,7 +488,7 @@ function ArticleContent() {
 
             {/* Right Sidebar */}
             <div className="lg:w-80 flex-shrink-0">
-              <div className="sticky top-24">
+              <div>
                 <ArticleSidebar
                   categories={categories}
                   popularTags={popularTags}

@@ -377,8 +377,6 @@ export default function ArticleContentRenderer({ blocks, content }: ArticleConte
                   height={block.image.height || 450}
                   style={{
                     borderRadius: '0px',
-                    maxWidth: '100%',
-                    maxHeight: '450px',
                   }}
                   className="w-auto h-auto md:max-w-[300px] md:max-h-[450px] object-contain"
                 />

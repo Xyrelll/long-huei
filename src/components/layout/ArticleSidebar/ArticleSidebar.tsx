@@ -75,7 +75,7 @@ export default function ArticleSidebar({
                     : 'text-white hover:text-[#FFCD83]'
                 }`}
               >
-                {category.name} ({category.count})
+                {category.name}({category.count})
               </Link>
             </li>
           ))}
