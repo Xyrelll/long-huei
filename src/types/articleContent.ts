@@ -29,6 +29,7 @@ export interface TextBlock extends BaseContentBlock {
     textAlign?: 'left' | 'center' | 'right' | 'justify';
     marginTop?: string;
     marginBottom?: string;
+    lineHeight?: string;
   };
 }
 

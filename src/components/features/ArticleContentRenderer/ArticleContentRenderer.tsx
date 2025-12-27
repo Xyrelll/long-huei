@@ -52,7 +52,8 @@ export default function ArticleContentRenderer({ blocks, content }: ArticleConte
   const renderBlock = (block: ArticleContentBlock, index: number) => {
     switch (block.type) {
       case 'text': {
-        const textStyle = block.style || {};
+        const textBlock = block as TextBlock;
+        const textStyle = textBlock.style || {};
         return (
           <p
             key={block.id || index}
@@ -63,7 +64,7 @@ export default function ArticleContentRenderer({ blocks, content }: ArticleConte
               textAlign: textStyle.textAlign || 'left',
               marginTop: textStyle.marginTop || '0',
               marginBottom: textStyle.marginBottom || '0',
-              lineHeight: '1.8',
+              lineHeight: textStyle.lineHeight || '1.8',
               whiteSpace: 'pre-line',
             }}
             className="text-white"
@@ -378,7 +379,6 @@ export default function ArticleContentRenderer({ blocks, content }: ArticleConte
                   style={{
                     borderRadius: '0px',
                   }}
-                  className="w-auto h-auto md:max-w-[300px] md:max-h-[450px] object-contain"
                 />
                
               </div>
