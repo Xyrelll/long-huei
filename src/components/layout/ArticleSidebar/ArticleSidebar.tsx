@@ -66,7 +66,7 @@ export default function ArticleSidebar({
               }}
               className="flex items-center gap-2"
             >
-              <span className="w-2 h-2 bg-white rounded-sm flex-shrink-0"></span>
+              <span className="w-2 h-2 bg-white rounded-sm shrink-0"></span>
               <Link
                 href={category.href}
                 className={`block py-2 transition-colors ${
@@ -117,9 +117,9 @@ export default function ArticleSidebar({
             paddingRight: '20px',
           }}
         >
-          {popularTags.map((tag) => (
+          {popularTags.map((tag, index) => (
             <li
-              key={tag.name}
+              key={`${tag.name}-${tag.href}-${index}`}
               style={{
                 paddingLeft: '0px',
                 paddingRight: '1px',

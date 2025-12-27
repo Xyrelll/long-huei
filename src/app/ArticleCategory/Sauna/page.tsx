@@ -31,6 +31,7 @@ const popularTags = [
   { name: '桑拿', href: '/Tag/桑拿' },
   { name: '澳門龍匯天下', href: '/Tag/澳門龍匯天下' },
   { name: '澳門推薦', href: '/Tag/澳門推薦' },
+  { name: '澳門龍匯天下', href: '/Tag/澳門龍匯天下' },
   { name: '龍匯天下包車', href: '/Tag/龍匯天下包車' },
 ];
 

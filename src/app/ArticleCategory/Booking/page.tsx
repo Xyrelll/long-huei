@@ -25,15 +25,15 @@ const categories = [
 
 const popularTags = [
   { name: '澳門訂房', href: '/Tag/澳門訂房' },
-  { name: '龍匯天下訂房', href: '/Tag/龍匯天下訂房' },
-  { name: '澳門旅遊', href: '/Tag/澳門旅遊' },
-  { name: '澳門推薦', href: '/Tag/澳門推薦' },
-  { name: '澳門酒店', href: '/Tag/澳門酒店' },
-  { name: '澳門住宿', href: '/Tag/澳門住宿' },
   { name: '澳門龍匯天下', href: '/Tag/澳門龍匯天下' },
-  { name: '龍匯天下', href: '/Tag/龍匯天下' },
-  { name: '澳門包車', href: '/Tag/澳門包車' },
-  { name: '澳門親子', href: '/Tag/澳門親子' },
+  { name: '龍匯天下訂房', href: '/Tag/龍匯天下訂房' },
+  { name: '龍匯天下大倉', href: '/Tag/龍匯天下大倉' },
+  { name: '龍匯訂房', href: '/Tag/龍匯訂房' },
+  { name: '龍匯天下澳門大倉酒店', href: '/Tag/龍匯天下澳門大倉酒店' },
+  { name: '龍匯天下澳門訂房', href: '/Tag/龍匯天下澳門訂房' },
+  { name: '澳門訂房', href: '/Tag/澳門訂房' },
+  { name: '澳門訂房龍匯天下', href: '/Tag/澳門訂房龍匯天下' },
+  { name: '澳門訂房找龍匯', href: '/Tag/澳門訂房找龍匯' },
 ];
 
 function BookingContent() {
