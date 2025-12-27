@@ -382,9 +382,7 @@ export default function ArticleContentRenderer({ blocks, content }: ArticleConte
                   }}
                   className="w-auto h-auto md:max-w-[300px] md:max-h-[450px] object-contain"
                 />
-                {block.image.caption && (
-                  <p className="text-white/70 text-sm mt-2 text-center">{block.image.caption}</p>
-                )}
+               
               </div>
             )}
             
