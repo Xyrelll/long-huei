@@ -19,6 +19,17 @@ interface Article {
 const latestArticles: Article[] = [
   {
     id: 1,
+    title: '澳門漁人碼頭：穿越古今的娛樂文化地標',
+    date: '2025/12/26',
+    image: '/travel/251226-h.jpg',
+    imageMobile: '/travel/251226-h.jpg',
+    link: '/Article/macaomatou',
+    views: 111,
+    tags: ['澳門', '澳門旅遊', '澳門漁人碼頭'],
+    description: '澳門漁人碼頭是澳門半島東海岸一個集娛樂、餐飲、購物、住宿於一體的綜合旅遊景點，自2006年開幕以來，已成為旅客感受澳門多元文化的必訪之地。這裡不僅適合拍照打卡，更融合了古羅馬、中式、葡式等多種建築風格，讓你在短短幾小時內體驗「穿越古今、環遊世界」的樂趣。',
+  },
+  {
+    id: 2,
     title: '💎澳門包車旅遊推薦：龍匯天下專屬私人行程，深度暢遊四大區域！',
     date: '2025/12/19',
     image: '/articles/251219-h.jpg',
@@ -29,7 +40,7 @@ const latestArticles: Article[] = [
     description: '❓ 為什麼澳門旅遊您需要選擇包車服務？ 澳門雖然面積不大，但其豐富的世遺景點分散於各區，且四季陽光熱烈。對於拖家帶口、有老有小的家庭旅客，或是不想在烈日下日均暴走 3 萬步的貴賓來說，傳統的公共交通',
   },
   {
-    id: 2,
+    id: 3,
     title: '龍匯天下澳門專車接送服務推薦與預訂指南',
     date: '2025/12/16',
     image: '/articles/251211_(2)-h.jpg',
@@ -40,7 +51,7 @@ const latestArticles: Article[] = [
     description: '在澳門這座融合了商業與旅遊的城市中，時間就是金錢，舒適度更是決定行程品質的關鍵。',
   },
   {
-    id: 3,
+    id: 4,
     title: '【2026 澳門機場接送推薦】如何預訂最快、最舒適的澳門機場接送服務？',
     date: '2025/12/08',
     image: '/articles/251205-h.jpg',
@@ -51,7 +62,7 @@ const latestArticles: Article[] = [
     description: '為什麼您需要預訂澳門機場接送服務？您剛抵達澳門國際機場（Macau International Airport, MFM），拖著行李',
   },
   {
-    id: 4,
+    id: 5,
     title: '澳門怎麼玩？最新深度玩法大公開！',
     date: '2025/12/01',
     image: '/articles/251125-h.jpg',
@@ -62,7 +73,7 @@ const latestArticles: Article[] = [
     description: '澳門遠不止賭場和歷史遺跡，這座城市正以全新面貌迎接旅客。小編推薦這些與眾不同的體驗方式：',
   },
   {
-    id: 5,
+    id: 6,
     title: '澳門2025最新懶人包：簽證、景點、美食、住宿全攻略',
     date: '2025/11/21',
     image: '/articles/251121-h.jpg',
@@ -73,7 +84,7 @@ const latestArticles: Article[] = [
     description: '澳門作為融合中西文化的特別行政區，2025年持續推出新景點與服務升級。',
   },
   {
-    id: 6,
+    id: 7,
     title: '澳門包車服務全攻略  一次搞懂價格、行程與預約方式',
     date: '2025/11/07',
     image: '/articles/251107-h.jpg',
@@ -84,7 +95,7 @@ const latestArticles: Article[] = [
     description: '澳門雖然不大，但景點分散，加上天氣炎熱、交通複雜，對初次來訪的旅客來說並不容易安排行程。若想輕鬆探索這座「東西交融的城市」，包車服務 就是最聰明的選擇。',
   },
   {
-    id: 7,
+    id: 8,
     title: '澳門一日遊｜24 小時暢遊世界遺產與娛樂之都',
     date: '2025/10/28',
     image: '/articles/251022-h.jpg',
@@ -93,17 +104,6 @@ const latestArticles: Article[] = [
     views: 1121,
     tags: ['澳門一日遊', '澳門包車', '澳門龍匯天下'],
     description: '如果你只有一天時間在澳門停留，該怎麼玩才能值回票價？這就是 澳門一日遊 的魅力所在。這座小城融合了中西文化，既有古老的歷史建築，又有國際級的娛樂度假村，只要行程安排得宜，即使僅有 24 小時，也能從清',
-  },
-  {
-    id: 8,
-    title: '澳門機場接送｜舒適便捷的專屬交通服務',
-    date: '2025/10/26',
-    image: '/articles/251013jpg-h.jpg',
-    imageMobile: '/articles/251013jpg-h.jpg',
-    link: '/Article/airportrencar1',
-    views: 1172,
-    tags: ['澳門機場接送', '澳門包車', '龍匯包車'],
-    description: '來到澳門旅遊或出差，第一件需要解決的事情就是交通。無論是剛下飛機抵達，還是準備返程回家，選擇 澳門機場接送 都能讓你的行程更加輕鬆自在。相比自己搭巴士或計程車，澳門機場接送 提供專屬司機、舒適車輛以及',
   },
 ];
 
