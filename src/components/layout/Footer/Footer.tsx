@@ -28,7 +28,7 @@ export default function Footer() {
   };
 
   return (
-    <footer id="footer" className="w-full bg-black py-8 mb-100 flex flex-col mt-8 border-t border-white/20 md:border-t-0  relative ">
+    <footer id="footer" className="w-full bg-black py-8 mb-100 flex flex-col mt-1 border-t border-white/20 md:border-t-0  relative ">
       {/* Copyright - Desktop: Top position */}
       <p className="copyright text-center text-white text-xs hidden md:block mb-4">Copyright {new Date().getFullYear()} All Rights Reserved.</p>
       
@@ -43,9 +43,7 @@ export default function Footer() {
             >
               {link.label}
             </Link>
-            {index < footerLinks.length - 1 && (
-              <span className="text-white text-sm mx-2">|</span>
-            )}
+         
           </li>
         ))}
       </ul>

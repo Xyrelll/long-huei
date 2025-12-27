@@ -54,7 +54,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           width: 300,
           height: 169
         },
-        description: '了解並避開澳門訂房的隱形消費',
+        description: '',
         content: [
           {
             type: 'heading',
@@ -112,7 +112,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           width: 300,
           height: 155
         },
-        description: '澳門各區域酒店實測比較',
+        description: '',
         content: [
           {
             type: 'heading',
@@ -177,7 +177,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           width: 300,
           height: 199
         },
-        description: '掌握最佳訂房時機',
+        description: '',
         content: [
           {
             type: 'heading',
@@ -208,7 +208,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           width: 300,
           height: 200
         },
-        description: '根據需求選擇最適合的房型',
+        description: '',
         content: [
           {
             type: 'heading',
@@ -350,7 +350,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           width: 300,
           height: 169
         },
-        description: '2025年擴建南翼「未來水晶宮」',
+        description: '',
         content: [
           {
             type: 'text',
@@ -398,7 +398,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           width: 300,
           height: 225
         },
-        description: '斥資12億美元完成第三期擴建',
+        description: '',
         content: [
           {
             type: 'text',
@@ -446,7 +446,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           width: 300,
           height: 400
         },
-        description: '獲2025年《時代》雜誌全球最佳設計酒店',
+        description: '',
         content: [
           {
             type: 'text',
@@ -494,7 +494,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           width: 300,
           height: 200
         },
-        description: '亞太區首獲LEED零碳認證',
+        description: '',
         content: [
           {
             type: 'text',
@@ -542,7 +542,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           width: 300,
           height: 225
         },
-        description: '2025年開幕「超維度展演廳」',
+        description: '',
         content: [
           {
             type: 'text',
@@ -690,7 +690,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           width: 300,
           height: 200
         },
-        description: '耗資9.8億澳門元打造的本館附屬建築，經日本文化廳監修',
+        description: '',
         content: [
           {
             type: 'text',
@@ -738,7 +738,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           width: 300,
           height: 179
         },
-        description: '2025年成為首間通過國際服務品質認證的日系酒店',
+        description: '',
         content: [
           {
             type: 'text',
@@ -786,7 +786,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           width: 300,
           height: 169
         },
-        description: '與日本農林水產省合作推動的飲食文化保育項目',
+        description: '',
         content: [
           {
             type: 'text',
@@ -834,7 +834,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           width: 300,
           height: 200
         },
-        description: '2025年獲全球永續旅遊理事會(GSTC)最高評級',
+        description: '',
         content: [
           {
             type: 'text',
@@ -882,7 +882,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           width: 300,
           height: 200
         },
-        description: '基於2025年新版客房動線的人因工程建議',
+        description: '',
         content: [
           {
             type: 'text',
@@ -1289,7 +1289,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           width: 300,
           height: 300
         },
-        description: 'CP值高!適合小朋友的玩水渡假村!(推薦指數5顆星)',
+        description: '',
         content: [
           {
             type: 'text',
@@ -1313,7 +1313,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           width: 300,
           height: 225
         },
-        description: '超夯超高檔(推薦指數5顆星)',
+        description: '',
         content: [
           {
             type: 'text',
@@ -1337,7 +1337,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           width: 300,
           height: 225
         },
-        description: '有著8字摩天輪的厲害酒店!(推薦指數4顆星)',
+        description: '',
         content: [
           {
             type: 'text',
@@ -1361,7 +1361,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           width: 300,
           height: 200
         },
-        description: '平價且歷史悠久的老飯店!(推薦指數5顆星)',
+        description: '',
         content: [
           {
             type: 'text',
@@ -1385,7 +1385,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           width: 300,
           height: 198
         },
-        description: '金沙城中心內便宜CP值高飯店!親子遊推薦(推薦指數4.5顆星)',
+        description: '',
         content: [
           {
             type: 'text',
@@ -1409,7 +1409,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           width: 300,
           height: 146
         },
-        description: '金光閃閃的銀河酒店!!奢華極致~(推薦指數5顆星)',
+        description: '',
         content: [
           {
             type: 'text',
@@ -1433,7 +1433,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           width: 300,
           height: 200
         },
-        description: '過去最夯最厲害的高檔酒店!(推薦指數5顆星)',
+        description: '',
         content: [
           {
             type: 'text',

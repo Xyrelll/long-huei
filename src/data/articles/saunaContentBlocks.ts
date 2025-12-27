@@ -63,7 +63,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           width: 300,
           height: 450
         },
-        description: '目前大多數主流澳門桑拿店技師的上崗人數，已超過疫情前水準',
+        description: '',
         content: [
           {
             type: 'text',

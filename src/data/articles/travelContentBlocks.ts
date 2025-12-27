@@ -662,7 +662,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           width: 300,
           height: 131
         },
-        description: '澳門的舊城區是 澳門一日遊 的最佳起點',
+        description: '',
         content: [
           {
             type: 'text',
@@ -688,7 +688,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           width: 300,
           height: 300
         },
-        description: '澳門一日遊 的午餐，絕不能錯過道地美食',
+        description: '',
         content: [
           {
             type: 'text',
@@ -709,7 +709,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           width: 300,
           height: 169
         },
-        description: '來到氹仔與路氹金光大道，另一個截然不同的澳門展現在眼前',
+        description: '',
         content: [
           {
             type: 'text',
@@ -739,7 +739,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           width: 300,
           height: 167
         },
-        description: '傍晚時分，建議到 巴黎人艾菲爾鐵塔 欣賞夜景',
+        description: '',
         content: [
           {
             type: 'text',
@@ -1280,7 +1280,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           width: 300,
           height: 200
         },
-        description: '選擇澳門團體旅遊的明顯好處',
+        description: '',
         content: [
           {
             type: 'text',
@@ -1306,7 +1306,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           width: 300,
           height: 200
         },
-        description: '兩天行程安排建議',
+        description: '',
         content: [
           {
             type: 'heading',
@@ -1549,7 +1549,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           width: 300,
           height: 200
         },
-        description: '周邊隱藏多間經營數十年的老字號與2025年新開業的人氣餐廳',
+        description: '',
         content: [
           {
             type: 'text',
@@ -1631,7 +1631,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           width: 800,
           height: 450
         },
-        description: '除了靜態參觀，2025年還推出了更多互動體驗',
+        description: '',
         content: [
           {
             type: 'text',
