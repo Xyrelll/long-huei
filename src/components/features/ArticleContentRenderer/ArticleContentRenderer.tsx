@@ -502,8 +502,13 @@ function TableOfContentsComponent({ block }: { block: ArticleContentBlock }) {
   const [isOpen, setIsOpen] = useState(false);
   const [isFixed, setIsFixed] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [tocWidth, setTocWidth] = useState<number | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
+  const panelRef = useRef<HTMLDivElement>(null);
+  
+  // Check if component is mounted (client-side)
+  const isMounted = typeof window !== 'undefined';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -547,8 +552,29 @@ function TableOfContentsComponent({ block }: { block: ArticleContentBlock }) {
     };
   }, [block.type]);
 
+  // Measure and store the TOC panel width when it's open and not fixed
+  useEffect(() => {
+    if (isOpen && panelRef.current) {
+      if (!isFixed) {
+        // Measure width when not fixed (normal position)
+        const width = panelRef.current.getBoundingClientRect().width;
+        if (width > 0) {
+          setTocWidth(width);
+        }
+      } else if (isFixed && !tocWidth && containerRef.current) {
+        // If opened while already fixed, measure from container
+        const containerWidth = containerRef.current.getBoundingClientRect().width;
+        if (containerWidth > 0) {
+          setTocWidth(containerWidth);
+        }
+      }
+    }
+  }, [isOpen, isFixed, tocWidth]);
+
   // Detect mobile vs desktop
   useEffect(() => {
+    if (!isMounted) return;
+    
     const checkScreenSize = () => {
       setIsMobile(window.innerWidth < 768);
     };
@@ -559,7 +585,7 @@ function TableOfContentsComponent({ block }: { block: ArticleContentBlock }) {
     return () => {
       window.removeEventListener('resize', checkScreenSize);
     };
-  }, []);
+  }, [isMounted]);
   
   if (block.type !== 'tableOfContents') return null;
 
@@ -626,7 +652,7 @@ function TableOfContentsComponent({ block }: { block: ArticleContentBlock }) {
         style={{
           position: isFixed ? 'fixed' : 'relative',
           top: isFixed ? '120px' : 'auto',
-          left: isFixed ? (isMobile ? '40px' : '350px') : 'auto',
+          left: isFixed && isMounted ? (isMobile ? '40px' : '350px') : isFixed ? '350px' : 'auto',
           zIndex: isFixed ? 1 : 'auto',
           backgroundColor: '#CD861A',
           padding: '5px 10px',
@@ -637,7 +663,7 @@ function TableOfContentsComponent({ block }: { block: ArticleContentBlock }) {
           fontSize: '14px',
           fontWeight: '500',
           boxShadow: '0 2px 8px rgba(0, 0, 0, 0.2)',
-          transition: 'all 0.3s ease',
+          transition: 'opacity 0.2s ease',
           marginBottom: isOpen ? '10px' : '0',
           borderRadius: '30px',
           color: '#d18411',
@@ -655,21 +681,22 @@ function TableOfContentsComponent({ block }: { block: ArticleContentBlock }) {
 
       {/* TOC Panel - Positioned relative to button, fixed when button is fixed */}
       <div
+        ref={panelRef}
         style={{
           position: isFixed ? 'fixed' : 'relative',
           top: isFixed && isOpen ? '180px' : isFixed ? '120px' : 'auto',
-          left: isFixed ? (isMobile ? '40px' : '350px') : 'auto',
+          left: isFixed && isMounted ? (isMobile ? '40px' : '350px') : isFixed ? '350px' : 'auto',
           zIndex: isFixed ? 999 : 'auto',
           backgroundColor: '#F5F5F5',
           borderRadius: '12px',
           padding: isOpen ? '20px' : '0',
-          width: isOpen ? (isFixed ? '300px' : '100%') : '0',
-          maxWidth: isFixed ? '90vw' : '100%',
+          width: isOpen ? (isFixed && tocWidth ? `${tocWidth}px` : '100%') : '0',
+          maxWidth: isFixed ? 'none' : '100%',
           boxShadow: isOpen ? '0 4px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 165, 0, 0.3)' : 'none',
           maxHeight: isOpen ? (isFixed ? '70vh' : '1000px') : '0',
           opacity: isOpen ? 1 : 0,
           overflow: isOpen ? 'auto' : 'hidden',
-          transition: 'max-height 0.6s ease-in-out, opacity 0.6s ease-in-out, padding 0.6s ease-in-out, width 0.6s ease-in-out, top 0.6s ease-in-out',
+          transition: 'max-height 0.6s ease-in-out, opacity 0.6s ease-in-out, padding 0.6s ease-in-out, width 0.6s ease-in-out',
           marginTop: !isFixed && isOpen ? '10px' : '0',
         }}
         className="toc-panel"
