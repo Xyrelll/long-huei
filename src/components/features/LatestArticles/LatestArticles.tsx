@@ -229,7 +229,7 @@ function ArticleCarousel({ title, articles }: { title: string; articles: Article
 
   return (
     <div className="w-full">
-      <h2 className="text-center text-white text-2xl mb-8">{title}</h2>
+     {/* <h2 className="text-center text-white text-2xl mb-8">{title}</h2> */}
       
       {/* Desktop Carousel */}
       <div className="hidden md:block relative">
@@ -242,12 +242,42 @@ function ArticleCarousel({ title, articles }: { title: string; articles: Article
           <span className="carousel-control-prev-icon" aria-hidden="true">‹</span>
         </button>
         
-        <div className="container mx-auto">
-          <ul className="four-article-box row grid grid-cols-2 gap-4">
+        <div 
+        style={{ 
+          paddingLeft: '30px',
+          paddingRight: '30px'
+         }} 
+        className="container mx-auto">
+          <ul 
+          style={{  overflow: 'hidden', 
+            padding:'20px',
+       
+
+          }}
+          className="four-article-box row grid grid-cols-2 gap-6">
             {currentArticles.map((article) => (
-              <li key={article.id} className="list-none">
-                <Link href={article.link} target="_blank" className="block">
-                  <div className="article-img relative w-full h-40 mb-2 rounded-lg overflow-hidden">
+              <li key={article.id} className="list-none bg-[#2C261C] hover:shadow-[0_0_20px_rgba(255,205,131,0.6)] hover:border-[#FFCD83] hover:border-2 transition-all duration-300"
+              style={{ borderRadius: '50px', overflow: 'hidden',
+paddingTop:'0px' , 
+paddingBottom:'20px',
+paddingLeft:'0px',
+paddingRight:'0px', 
+gap:'0px',
+width:'90%',
+border: '2px solid transparent',
+transition: 'all 0.3s ease'
+
+
+
+
+
+               }}
+              >
+                <Link href={article.link} target="_blank" className="block rounded-2xl overflow-hidden bg-transparent">
+                  {/* Image Container with Overlay */}
+                  <div
+                  style={{ height: '120px', width: '102' }}
+                   className="article-img relative w-full h-20 rounded-t-2xl overflow-hidden">
                     <Image
                       src={article.image}
                       alt={article.title}
@@ -255,16 +285,26 @@ function ArticleCarousel({ title, articles }: { title: string; articles: Article
                       fill
                       className="object-cover"
                     />
+               
+                    
+                    {/* Title Overlay in lower-left - White text */}
+                    {/* <div className="absolute bottom-0 left-0 p-4 pr-8 pb-4">
+                      <h3 className="text-white text-sm font-bold line-clamp-2 drop-shadow-lg">
+                        {article.title}
+                      </h3>
+                    </div> */}
                   </div>
-                  <div className="article-title">
-                    <h3 className="article-card-title text-[#FFCD83] text-sm mb-2 line-clamp-2">
+                  {/* Content Section with Dark Brown Background */}
+                  <div 
+                  style={{ marginTop: '-10px', height: '100%' , paddingBottom: '20px',
+                    paddingLeft:'20px', paddingRight:'20px', paddingTop:'20px'
+                   }}
+                  className="bg-[#2C261C] rounded-b-2xl p-4"
+                  >
+                    <h3 style={{ fontSize: '15px' }} className="article-card-title text-[#FFCD83] text-xs font-bold mb-2 line-clamp-2">
                       {article.title}
                     </h3>
-                    <div className="row flex justify-between">
-                      <div className="col-6">
-                        <span className="date text-white text-xs">{article.date}</span>
-                      </div>
-                    </div>
+                    <span style={{ fontSize: '12px' }} className="date text-white text-xs">{article.date}</span>
                   </div>
                 </Link>
               </li>
@@ -288,7 +328,7 @@ function ArticleCarousel({ title, articles }: { title: string; articles: Article
           {articles.map((article) => (
               <div key={article.id} className="col-12 pl-0 mb-4">
               <div className="row mb-4 article-card-row flex items-start  pb-4" style={{ position: 'relative', borderRadius: '50px' ,marginTop:'50px' }}>
-                <div className="col-4 col-md-4 px-0 cardpic" style={{ flexShrink: 0 }}>
+                <div className="col-4 col-md-4 px-0 cardpic w-1/3" style={{ flexShrink: 0 }}>
                   <Link href={article.link}>
                     <picture>
                       <source srcSet={article.image} media="(min-width: 768px)" />
@@ -299,6 +339,7 @@ function ArticleCarousel({ title, articles }: { title: string; articles: Article
                         title={article.title}
                         width={150}
                         height={100}
+                        style={{ borderRadius: '50px' }}
                       />
                     </picture>
                   </Link>

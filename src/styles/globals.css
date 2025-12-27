@@ -65,6 +65,13 @@ html {
   overflow: hidden;
   margin-top: 80px;
 }
+
+@media (min-width: 768px) {
+  .marquee {
+    margin-top: 110px;
+    width: 100vw;
+  }
+}
 .marquee-text {
   color: white;
   white-space: nowrap;
@@ -89,7 +96,7 @@ html {
 
 /* Hero section margin */
 .hero-section {
-  margin-top: 99px !important;
+  margin-top: 20px !important;
   margin-bottom: 2.5rem !important;
   width: 100%;
   max-width: 100vw;
@@ -597,7 +604,7 @@ p {
 }
 
 section {
-  max-width: 1200px;
+  max-width: 100vw;
   margin: 0 auto;
 }
 

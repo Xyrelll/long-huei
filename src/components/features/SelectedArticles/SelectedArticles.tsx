@@ -188,7 +188,7 @@ export default function SelectedArticles() {
         {/* Desktop Layout */}
         <div className="hidden lg:block">
           <div className="row featured flex gap-6">
-            <div className="w-1/3 shrink-0">
+            <div className="w-3/10 flex-shrink-0 ">
               <Link href={featuredArticle.link} className="block" target="_blank">
                 <Image
                   src={featuredArticle.image}
@@ -200,18 +200,20 @@ export default function SelectedArticles() {
                 />
               </Link>
               <Link href={featuredArticle.link} className="block" target="_blank">
-                <h3>{featuredArticle.title}</h3>
+                <h3 style={{ fontSize: '1.3rem' }}>{featuredArticle.title}</h3>
               </Link>
               <div className="views">
                 <span>觀看人數：{featuredArticle.views}</span>
               </div>
             </div>
-            <div className="w-2/3 shrink-0">
-              <div className="row featured-sm grid grid-cols-2 gap-4">
+            <div className="w-2/3 flex-shrink-0">
+              <div 
+              style={{ paddingLeft: '20px' , paddingBottom: '0px' }} 
+              className="row featured-sm grid grid-cols-2 gap-4">
                 {articles.map((article) => (
-                  <div key={article.id} className="mb-3">
+                  <div key={article.id} style={{ paddingBottom: '10px' }} className="mb-3">
                     <div className="row flex gap-3">
-                      <div className="shrink-0">
+                      <div className="w-3/6 flex-shrink-0 ">
                         <Link href={article.link} className="block" target="_blank">
                           <Image
                             src={article.image}
@@ -226,7 +228,9 @@ export default function SelectedArticles() {
                       <div className="flex-1 min-w-0">
                         <div>
                           <Link href={article.link} className="block" target="_blank">
-                            <h3>{article.title}</h3>
+                            <h3
+                            style={{ fontSize: '1rem' }}
+                            >{article.title}</h3>
                           </Link>
                         </div>
                         <div className="views">
@@ -246,8 +250,8 @@ export default function SelectedArticles() {
           <div className="row">
             <div className="col-12 pl-0">
               <div className="row mb-4 article-card-row flex items-start  pb-4" style={{ position: 'relative' }}>
-                <div className="col-4 col-md-4 px-0 cardpic" style={{ flexShrink: 0 }}>
-                  <Link href={featuredArticle.link}>
+                <div className="col-4 col-md-4 px-0 cardpic  w-1/3" style={{ flexShrink: 0  }}>
+                  <Link href={featuredArticle.link} >
                     <picture>
                       <source srcSet={featuredArticle.image} media="(min-width: 768px)" />
                       <Image
@@ -257,6 +261,7 @@ export default function SelectedArticles() {
                         title={featuredArticle.title}
                         width={150}
                         height={100}
+                        style={{ borderRadius: '50px' }}
                       />
                     </picture>
                   </Link>
@@ -353,7 +358,7 @@ export default function SelectedArticles() {
             {visibleArticles.map((article) => (
               <div key={article.id} className="col-12 pl-0">
                 <div className="row mb-4 article-card-row flex items-start  pb-4" style={{ position: 'relative' ,marginTop: '50px'}}>
-                  <div className="col-4 col-md-4 px-0 cardpic" style={{ flexShrink: 0 }}>
+                  <div className="col-4 col-md-4 px-0 cardpic w-1/3" style={{ flexShrink: 0  }}>
                     <Link href={article.link}>
                       <picture>
                         <source srcSet={article.image} media="(min-width: 768px)" />
@@ -364,6 +369,7 @@ export default function SelectedArticles() {
                           title={article.title}
                           width={150}
                           height={100}
+                          style={{ borderRadius: '50px' }}
                         />
                       </picture>
                     </Link>

@@ -12,7 +12,7 @@ export default function Marquee() {
       const text = marquee.textContent || '';
       
       // Create duplicate content for seamless loop
-      marquee.innerHTML = `<div class="js-marquee-wrapper" style="display: inline-block; white-space: nowrap; animation: marquee 30s linear infinite;">${text}</div>`;
+      marquee.innerHTML = `<div class="js-marquee-wrapper" style="display: inline-block; white-space: nowrap; animation: marquee 10s linear infinite;">${text}</div>`;
     }
   }, []);
 

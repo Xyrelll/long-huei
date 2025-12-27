@@ -43,7 +43,7 @@ const heroSlides: HeroSlide[] = [
 
 export default function Hero() {
   return (
-    <section className="w-full mt-[10px] md:mt-[99px] hero-section" style={{ marginBottom: '2.5rem' }}>
+    <section className="w-full mt-[10px] md:mt-[110px] hero-section" style={{ marginBottom: '2.5rem' }}>
       <div id="splide" className="splide">
         <Splide
           options={{
