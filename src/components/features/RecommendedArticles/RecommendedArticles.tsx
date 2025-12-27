@@ -205,17 +205,18 @@ export default function RecommendedArticles({ articles }: RecommendedArticlesPro
   }
 
   return (
-    <section 
-      style={{
-        marginTop: '50px',
-        marginBottom: '20px',
-        paddingTop: '40px',
-        paddingBottom: '20px',
-      }}
-      className="recommended-articles relative w-full bg-black py-12 border-t border-white/20"
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
+    <div className="w-screen relative" style={{ marginLeft: 'calc(-50vw + 50%)', marginRight: 'calc(-50vw + 50%)' }}>
+      <section 
+        style={{
+          marginTop: '50px',
+          marginBottom: '20px',
+          paddingTop: '40px',
+          paddingBottom: '20px',
+        }}
+        className="recommended-articles relative w-full bg-black py-12 border-t border-white/20"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
       {/* Left Arrow - Nested inside section */}
       {totalPages > 1 && (
         <button
@@ -353,6 +354,7 @@ export default function RecommendedArticles({ articles }: RecommendedArticlesPro
         </div>
       </div>
     </section>
+    </div>
   );
 }
 
