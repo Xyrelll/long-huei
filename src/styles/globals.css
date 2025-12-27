@@ -829,8 +829,32 @@ footer ul li a:hover {
     flex-direction: column;
     display: flex;
     margin-top: 50px !important;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     padding-top: 10px;
+    padding-bottom: 10px;
+    overflow: hidden;
+  }
+  
+  footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.1) 20%, rgba(255, 255, 255, 0.05) 40%, transparent 70%);
+    border-radius: 50%;
+    clip-path: inset(0 0 50% 0);
+    pointer-events: none;
+    z-index: 0;
+    filter: blur(60px);
+    will-change: transform;
+  }
+  
+  footer > * {
+    position: relative;
+    z-index: 1;
   }
   
   footer ul.footer-links-mobile {
@@ -840,5 +864,12 @@ footer ul li a:hover {
   footer ul li {
     border: none;
     padding: 10px;
+  }
+}
+
+/* Hide footer gradient glow on desktop */
+@media (min-width: 768px) {
+  footer::before {
+    display: none !important;
   }
 }

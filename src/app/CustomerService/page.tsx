@@ -169,7 +169,10 @@ export default function CustomerServicePage() {
                   </div>
 
                   {/* WeChat Section */}
-                  <div className="col-md-6">
+                  <div
+                  style={{marginTop: isMobile ? "-60px" : "10px"}}
+                   className="col-md-6 
+                   ">
                     <div className="col-12">
                       <div
                         className="page-section"

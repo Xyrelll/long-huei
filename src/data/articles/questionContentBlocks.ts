@@ -49,7 +49,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
     description: [
       {
         type: 'text',
-        content: '在澳門自由行，換匯是影響旅費的關鍵！2025年實測全澳30+個換錢點，結合匯率、安全性與隱藏技巧，整理這份最新攻略。掌握這些情報，比用信用卡多省8%旅費！',
+        content: '',
         style: TEXT_STYLE_BOTTOM_20_NO_TOP
       }
     ],
@@ -81,7 +81,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           width: 300,
           height: 200
         },
-        description: '實測日期：2025/3/15，以兌換1,000港幣（HKD）為例',
+        description: '',
         content: [
           {
             type: 'text',
@@ -163,7 +163,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           width: 300,
           height: 200
         },
-        description: '經實測與在地人驗證，這3家匯率持續領先',
+        description: '',
         content: [
           {
             type: 'text',
@@ -306,7 +306,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           width: 300,
           height: 200
         },
-        description: '實用的換錢技巧',
+        description: '',
         content: [
           {
             type: 'text',
@@ -416,7 +416,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
         title: '【澳門換錢】安全守則：最新防騙重點',
         titleLevel: 2,
         id: 'safety-rules',
-        description: '換錢時的安全注意事項',
+        description: '',
         content: [
           {
             type: 'text',
@@ -504,7 +504,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
         titleLevel: 2,
         id: 'itinerary-plan',
         
-        description: '3天2夜實戰規劃',
+        description: '',
         content: [
           {
             type: 'heading',
@@ -598,7 +598,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
         title: '【澳門換錢】2025年終極建議',
         titleLevel: 2,
         id: 'final-advice',
-        description: '2025年終極建議',
+        description: '',
         content: [
           {
             type: 'text',
@@ -687,7 +687,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           width: 300,
           height: 200
         },
-        description: '澳門通是澳門通用的電子支付卡，採用感應式技術，2025年推出「第三代澳門通」強化以下功能',
+        description: '',
         content: [
           {
             type: 'text',
@@ -748,7 +748,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           width: 300,
           height: 200
         },
-        description: '取得澳門通極度便利，2025年新增多種購買管道',
+        description: '',
         content: [
           {
             type: 'text',
@@ -848,7 +848,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           width: 300,
           height: 200
         },
-        description: '善用這些功能，最多可省下30%旅遊開銷',
+        description: '',
         content: [
           {
             type: 'text',
@@ -948,7 +948,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           width: 300,
           height: 200
         },
-        description: '以下示範如何用澳門通高效玩遍熱門景點',
+        description: '',
         content: [
           {
             type: 'text',
@@ -1075,7 +1075,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           width: 300,
           height: 200
         },
-        description: '常見問題解答',
+        description: '',
         content: [
           {
             type: 'heading',
@@ -1133,7 +1133,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
         title: '【澳門通】結語：為什麼2025年遊澳門必備澳門通？',
         titleLevel: 2,
         id: 'conclusion',
-        description: '澳門通已從交通卡進化成「智慧旅遊神器」',
+        description: '',
         content: [
           {
             type: 'text',
@@ -1245,7 +1245,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           width: 300,
           height: 200
         },
-        description: '權威數據分析',
+        description: '',
         content: [
           {
             type: 'text',
@@ -1282,7 +1282,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
         title: '【澳門旅遊安全嗎？】三大風險破解指南',
         titleLevel: 2,
         id: 'risk-guide',
-        description: '三大風險破解指南',
+        description: '',
         content: [
           {
             type: 'heading',
@@ -1400,7 +1400,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           width: 300,
           height: 200
         },
-        description: 'QA重點整理',
+        description: '',
         content: [
           {
             type: 'heading',
@@ -1512,7 +1512,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
         title: '【澳門旅遊安全嗎？】3大安心保證',
         titleLevel: 2,
         id: 'safety-guarantees',
-        description: '3大安心保證',
+        description: '',
         content: [
           {
             type: 'text',
@@ -1549,7 +1549,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
         title: '【澳門旅遊安全嗎？】總結',
         titleLevel: 2,
         id: 'conclusion',
-        description: '總結',
+        description: '',
         content: [
           {
             type: 'text',

@@ -13,7 +13,7 @@ const faqData = [
           <li><p>夜間安全感：高達94%</p></li>
         </ul>
         <hr />
-        <h3><strong>常見Q&A</strong></h3>
+        <h3><strong style={{color: "#f5ca69"}}>常見Q&A</strong></h3>
         <p><strong>Q1：治安比台灣好嗎？</strong><br />
         A 竊盜率低、詐騙破獲率高，反應快</p>
         <p><strong>Q2：女生可以一人旅遊嗎？</strong><br />

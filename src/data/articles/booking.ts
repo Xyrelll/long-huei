@@ -79,7 +79,7 @@ export const bookingArticles: BookingArticle[] = [
     imageMobile: '/articles/【澳門訂房】最頂攻略它來了！-m.jpg',
     link: '/Article/wei%20i',
     views: 1745,
-    tags: ['澳門訂房', '澳門親子', '澳門旅遊', '龍匯天下訂房'],
+   
     collapseId: 'collapse-wei%201',
     contentBlocks: bookingArticleContentBlocks[5],
     date: '2025/07/23',

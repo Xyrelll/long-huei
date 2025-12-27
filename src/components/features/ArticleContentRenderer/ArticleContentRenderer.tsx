@@ -103,6 +103,7 @@ export default function ArticleContentRenderer({ blocks, content }: ArticleConte
               padding: headingStyle.padding,
               display: headingStyle.display,
               scrollMarginTop: '120px', // Add scroll margin for better navigation
+              ...(block.borderTop === 'on' && { borderTop: '1px solid #808080' }),
             }}
             className="text-white"
           >

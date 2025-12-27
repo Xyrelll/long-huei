@@ -1206,22 +1206,6 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           marginBottom: '20px',
           fontSize: '1.1rem'
         }
-      },
-      {
-        type: 'text',
-        content: '這篇文章彙整了澳門路氹住宿和澳門本島住宿，每間澳門飯店都有自己的特色，因為做了無敵多功課~比較了網路上的各種評價，對於【澳門訂房】沒有頭緒的人完全可以看這篇下訂！',
-        style: { 
-          marginBottom: '20px',
-          fontSize: '1.1rem'
-        }
-      },
-      {
-        type: 'text',
-        content: '廢話不多說，先把這13間飯店旅館給大家筆記，接下來開始介紹摟~~',
-        style: { 
-          marginBottom: '20px',
-          fontSize: '1.1rem'
-        }
       }
     ],
     // Table of Contents
@@ -1242,6 +1226,32 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
     },
     // Array of sections
     sections: [
+      {
+        type: 'section',
+        title: '',
+        titleLevel: 2,
+        id: '',
+        description: '',
+        content: [
+          {
+            type: 'text',
+            content: '這篇文章彙整了澳門路氹住宿和澳門本島住宿，每間澳門飯店都有自己的特色，因為做了無敵多功課~比較了網路上的各種評價，對於【澳門訂房】沒有頭緒的人完全可以看這篇下訂！',
+            style: { 
+              marginBottom: '20px',
+              fontSize: '1.1rem'
+            }
+          },
+          {
+            type: 'text',
+            content: '廢話不多說，先把這13間飯店旅館給大家筆記，接下來開始介紹摟~~',
+            style: { 
+              marginBottom: '20px',
+              fontSize: '1.1rem'
+            }
+          }
+        ],
+        style: SECTION_STYLE
+      },
       {
         type: 'section',
         title: '【澳門訂房】澳門百老匯酒店',

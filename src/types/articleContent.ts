@@ -39,6 +39,7 @@ export interface HeadingBlock extends BaseContentBlock {
   level: 1 | 2 | 3 | 4 | 5 | 6;
   content: string;
   id?: string; // For anchor links
+  borderTop?: 'on' | 'off'; // Add border-top when value is 'on'
   style?: {
     color?: string;
     marginTop?: string;

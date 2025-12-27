@@ -1052,7 +1052,8 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
         content: '我先說，這篇文章必須收藏好吧！小編透過專業評測後整理出3間行家才懂私藏的SPA館，多說無益，讓我們接著看吧~',
         style: {
           marginBottom: '20px',
-          fontSize: '1.1rem',
+          fontSize: '2rem',
+          lineHeight: '2.5rem',
         }
       }
     ],
@@ -1061,9 +1062,10 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
       buttonText: '文章目錄',
       buttonIcon: '☰',
       items: [
+        { level: 1, text: '我先說，這篇文章必須收藏好吧！小編透過專業評測後整理出3間行家才懂私藏的SPA館，多說無益，讓我們接著看吧~', id: '我先說，這篇文章必須收藏好吧！小編透過專業評測後整理出3間行家才懂私藏的SPA館，多說無益，讓我們接著看吧~' },
         { level: 1, text: '【澳門水療】東方傳統美學｜永利SPA「經絡熱石＋中藥蒸薰」雙重排毒', id: '永利SPA' },
         { level: 1, text: '【澳門水療】葡式海洋療法｜悅榕莊「大西洋海藻裹體」深層淨化', id: '悅榕莊' },
-        { level: 1, text: '【澳門水療】禪意科技融合｜麗思卡爾頓「AI脈診＋定制精油」精準療癒', id: '麗思卡爾頓' },
+        { level: 1, text: '【澳門水療】 禪意科技融合｜麗思卡爾頓「AI脈診＋定制精油」精準療癒', id: '麗思卡爾頓' },
         { level: 1, text: '【澳門水療】行家忠告｜避開地雷的3個實用技巧', id: '行家忠告' },
         { level: 1, text: '【澳門水療】深度體驗彩蛋｜在地人才懂的「SPA後療癒路線」', id: '深度體驗彩蛋' }
       ],
@@ -2865,6 +2867,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
         type: 'section',
         title: '✨ 想體驗最刺激的澳門劇本殺，選對場館很關鍵！',
         titleLevel: 2,
+        borderTop: 'on',
         id: '選對場館',
         image: {
           src: '/sauna/sauna4/mItUkmxQoGJjml9K.jpg',
@@ -2886,6 +2889,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             level: 4,
             content: '🏆東方皇堡水療會所（劇本殺首選）',
             id: '東方皇堡',
+            borderTop: 'on',
             style: { marginTop: '0', marginBottom: '15px', fontSize: '1.1rem' }
           },
           {
@@ -2950,6 +2954,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             level: 4,
             content: '🌙尊貴水療（24H深夜劇本殺選擇）',
             id: '尊貴水療',
+            borderTop: 'on',
             style: { marginTop: '0', marginBottom: '15px', fontSize: '1.1rem' }
           },
           {
@@ -3014,6 +3019,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             level: 4,
             content: '✨壹號桑拿（新派風格＋大師級角色）',
             id: '壹號桑拿',
+            borderTop: 'on',
             style: { marginTop: '0', marginBottom: '15px', fontSize: '1.1rem' }
           },
           {
@@ -3070,6 +3076,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             level: 4,
             content: '🔥新豪門桑拿殿（老字號＋海量選角）',
             id: '新豪門',
+            borderTop: 'on',
             style: { marginTop: '0', marginBottom: '15px', fontSize: '1.1rem' }
           },
           {
@@ -3128,6 +3135,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
         type: 'section',
         title: '💡澳門劇本殺玩家小貼士：',
         titleLevel: 2,
+        borderTop: 'on',
         id: '玩家小貼士',
         content: [
           {
