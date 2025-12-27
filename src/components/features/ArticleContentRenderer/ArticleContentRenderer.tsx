@@ -222,6 +222,8 @@ export default function ArticleContentRenderer({ blocks, content }: ArticleConte
               marginTop: tableStyle.marginTop || '0',
               marginBottom: tableStyle.marginBottom || '0',
               overflowX: 'auto',
+              display: 'flex',
+              justifyContent: 'center',
             }}
             className="w-full"
           >

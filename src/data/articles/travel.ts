@@ -30,7 +30,7 @@ export const travelArticles: TravelArticle[] = [
     tags: ['澳門', '澳門旅遊', '澳門漁人碼頭'],
     collapseId: 'collapse-macaomatou',
     contentBlocks: travelArticleContentBlocks[1],
-    date: '2025/08/14',
+    date: '2025/12/26',
   },
   {
     id: 2,
@@ -43,7 +43,7 @@ export const travelArticles: TravelArticle[] = [
     tags: ['澳門通龍匯天下', '龍匯包車', '龍匯天下訂房'],
     collapseId: 'collapse-macau-all',
     contentBlocks: travelArticleContentBlocks[2],
-    date: '2025/03/22',
+    date: '2025/11/21',
   },
   {
     id: 3,
@@ -56,7 +56,7 @@ export const travelArticles: TravelArticle[] = [
     tags: ['澳門一日遊', '澳門包車', '澳門龍匯天下'],
     collapseId: 'collapse-macao-onedaypass',
     contentBlocks: travelArticleContentBlocks[3],
-    date: '2025/07/09',
+    date: '2025/10/28',
   },
   {
     id: 4,

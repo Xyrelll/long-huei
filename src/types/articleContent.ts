@@ -109,6 +109,7 @@ export interface TableBlock extends BaseContentBlock {
   style?: {
     marginTop?: string;
     marginBottom?: string;
+    paddingTop?: string;
   };
 }
 

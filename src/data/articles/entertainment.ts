@@ -30,7 +30,7 @@ export const entertainmentArticles: EntertainmentArticle[] = [
     tags: ['澳門訂房', '澳門龍匯', '龍匯天下包車'],
     collapseId: 'collapse-macao-play',
     contentBlocks: entertainmentArticleContentBlocks[1],
-    date: '2025/06/12',
+    date: '2025/12/01',
   },
   {
     id: 2,
