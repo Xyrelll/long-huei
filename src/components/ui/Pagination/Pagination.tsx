@@ -80,11 +80,11 @@ export default function Pagination({
                 } transition-colors`}
               >
                 {pageNum === currentPage ? (
-                  <span className="page-link px-6 py-2 text-white block">{pageNum}</span>
+                  <span className="page-link px-6 py-2 text-white block text-[16px]">{pageNum}</span>
                 ) : (
                   <Link
                     href={`${basePath}?${buildQueryString(pageNum)}`}
-                    className="page-link px-6 py-2 text-white block"
+                    className="page-link px-6 py-2 text-white block text-[14px]"
                   >
                     {pageNum}
                   </Link>

@@ -376,7 +376,7 @@ export default function ArticleContentRenderer({ blocks, content }: ArticleConte
                   width={block.image.width || 800}
                   height={block.image.height || 450}
                   style={{
-                    borderRadius: '12px',
+                    borderRadius: '0px',
                     maxWidth: '100%',
                     maxHeight: '450px',
                   }}
@@ -386,20 +386,7 @@ export default function ArticleContentRenderer({ blocks, content }: ArticleConte
               </div>
             )}
             
-            {/* Section Description */}
-            {block.description && (
-              <p
-                style={{
-                  marginTop: '0',
-                  marginBottom: '20px',
-                  fontSize: '1rem',
-                  lineHeight: '1.8',
-                }}
-                className="text-white whitespace-pre-line"
-              >
-                {block.description}
-              </p>
-            )}
+         
             
             {/* Section Content (nested blocks) */}
             {block.content && block.content.length > 0 && (

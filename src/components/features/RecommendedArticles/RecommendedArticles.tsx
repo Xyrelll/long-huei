@@ -250,7 +250,7 @@ export default function RecommendedArticles({ articles }: RecommendedArticlesPro
           推薦文章
         </h2>
 
-        <div className="relative flex items-center  w-[90%] mx-auto">
+        <div className="relative flex items-center  w-[85%] max-w-5xl mx-auto">
           {/* Articles Grid with overflow hidden for smooth transitions */}
           <div className="w-full overflow-hidden px-8 md:px-12">
             <div 
@@ -267,7 +267,7 @@ export default function RecommendedArticles({ articles }: RecommendedArticlesPro
                 return (
                   <div
                     key={pageIndex}
-                    className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 flex-shrink-0 w-full px-2"
+                    className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5 flex-shrink-0 w-full px-2"
                   >
                     {displayArticles.map((article, idx) => {
                       if (!article) return <div key={`empty-${idx}`} className="hidden md:block" />;
@@ -275,7 +275,7 @@ export default function RecommendedArticles({ articles }: RecommendedArticlesPro
                         <Link
                           key={`${article.id}-${pageIndex}`}
                           href={article.link}
-                          className="bg-[#2C261C] rounded-[50px] overflow-hidden relative"
+                          className="bg-[#2C261C] rounded-[50px] overflow-hidden relative max-w-[360px] mx-auto"
                         >
                           {/* Article Image */}
                           <div className="relative w-full h-48">
@@ -334,9 +334,12 @@ export default function RecommendedArticles({ articles }: RecommendedArticlesPro
                           {/* Date - Fixed on bottom right */}
                       
                             <p 
-                              className="absolute bottom-6 right-4 text-white/70 text-xs"
+                            style={{
+                              fontSize: '11px',
+                            }}
+                              className="absolute bottom-6 right-10 text-white/70"
                             >
-                              { article.date||'2025-12-26'}
+                              { article.date||'2025/12/26'}
                             </p>
                          
                         </Link>
