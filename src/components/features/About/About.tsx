@@ -88,8 +88,9 @@ export default function About() {
         </div>
       </div>
 
-      <div className="container mx-auto">
-        <div className="row mt-1 mt-md-3 max-w-6xl mx-auto">
+      <div className="features-section-wrapper">
+        <div className="container mx-auto">
+          <div className="row mt-1 mt-md-3 max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full" style={{ display: 'grid' }}>
             {features.map((feature, index) => (
               <div key={index} className="mb-4">
@@ -105,6 +106,7 @@ export default function About() {
               </div>
             ))}
           </div>
+        </div>
         </div>
       </div>
     </section>

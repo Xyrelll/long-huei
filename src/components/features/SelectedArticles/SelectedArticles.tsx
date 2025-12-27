@@ -183,7 +183,7 @@ export default function SelectedArticles() {
         padding: '10px 0',
         paddingBottom: '30px',
       }}
-       className="text-center text-white text-2xl ">精選文章</h2>
+       className="text-center text-white text-2xl font-bold">精選文章</h2>
       <div className="container mx-auto px-4 max-w-6xl">
         {/* Desktop Layout */}
         <div className="hidden lg:block">

@@ -71,7 +71,7 @@ export default function FAQ() {
   return (
     <section className="question-answer w-full bg-black py-12 mb-24">
       <div className="container mx-auto px-4">
-        <h2 className="text-center text-white text-2xl mb-8">常見問題</h2>
+        <h2 className="text-center text-white text-2xl mb-8 font-bold">常見問題</h2>
         <div className="flex flex-col items-center gap-6">
           {faqData.map((faq, index) => (
             <div key={index} className="w-full max-w-6xl">
@@ -80,7 +80,7 @@ export default function FAQ() {
                   <i className="fas fa-question-circle text-[#CD861A] mr-2" aria-hidden="true"></i>
                   {faq.number} - {faq.title}
                 </h3>
-                <div className="text-white text-xl font-bold leading-relaxed">
+                <div className="text-white text-xl leading-relaxed">
                   {faq.content}
                 </div>
                 <Link 
