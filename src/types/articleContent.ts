@@ -98,6 +98,7 @@ export interface ListBlock extends BaseContentBlock {
     fontFamily?: string;
     fontWeight?: string;
     lineHeight?: string;
+    paddingLeft?: string;
   };
 }
 

@@ -1800,12 +1800,12 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'list',
             items: [
-              '快閃吃播路線：17:30在「梓記牛雜」領取智能腕帶，完成5家指定攤位挑戰可解鎖廚房後台參觀',
-              '懷舊影迷專屬：預訂「澳門風雲主題房」可獲贈邵氏電影數位修復版24小時點播權',
-              '親子科學任務：在「禮記雪糕」購買實驗室套餐附贈DNA提取工具組，可自製果味基因圖譜'
+              '1.快閃吃播路線：17:30在「梓記牛雜」領取智能腕帶，完成5家指定攤位挑戰可解鎖廚房後台參觀',
+              '2.懷舊影迷專屬：預訂「澳門風雲主題房」可獲贈邵氏電影數位修復版24小時點播權',
+              '3.親子科學任務：在「禮記雪糕」購買實驗室套餐附贈DNA提取工具組，可自製果味基因圖譜'
             ],
             ordered: true,
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+            style: { marginBottom: '20px', fontSize: '1.125rem', paddingLeft: '0' }
           },
           {
             type: 'text',

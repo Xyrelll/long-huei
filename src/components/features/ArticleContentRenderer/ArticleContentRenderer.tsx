@@ -196,7 +196,7 @@ export default function ArticleContentRenderer({ blocks, content }: ArticleConte
             style={{
               marginTop: listStyle.marginTop || '0',
               marginBottom: listStyle.marginBottom || '0',
-              paddingLeft: '20px',
+              paddingLeft: listStyle.paddingLeft || '20px',
               color: '#FFFFFF',
               fontSize: listStyle.fontSize || '1rem',
               fontFamily: listStyle.fontFamily,
