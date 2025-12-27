@@ -55,15 +55,15 @@ export default function PrivacyPage() {
         <div className="relative w-full md:w-[80%] min-h-screen bg-black flex justify-center items-center">
           <Navbar />
           
-          <main className="inner-page w-[90%] mx-auto">
+          <main className="inner-page w-[85%] md:w-[75%] mx-auto">
             <section className="article-wrap">
               <div className="container mx-auto">
                 {/* Breadcrumbs */}
                 <nav 
                   className="nav-breadcrumb py-4"
                   style={{ 
-                    paddingTop: isMobile ? '100px' : '100px', 
-                    paddingLeft: isMobile ? '0px' : '100px' 
+                    paddingTop: isMobile ? '92px' : '142px', 
+                    paddingLeft: isMobile ? '0px' : '0px' 
                   }}
                   aria-label="breadcrumb"
                 >
@@ -82,7 +82,7 @@ export default function PrivacyPage() {
                 </nav>
 
                 {/* Privacy Policy Content */}
-                <div className="card-body page" style={{ color: 'white', fontSize: '13pt' ,marginTop:'30px'}}>
+                <div className="card-body page" style={{ color: 'white', fontSize: '13pt' ,marginTop:'30px', lineHeight:'1.8em'}}>
                   <p>非常歡迎您光臨「龍匯天下」（以下簡稱本網站），為了讓您能夠安心的使用本網站的各項服務與資訊，特此向您說明本網站的隱私權保護政策，以保障您的權益，請您詳閱下列內容：</p>
                   
                   <h3 className="page-title">一、隱私權保護政策的適用範圍</h3>

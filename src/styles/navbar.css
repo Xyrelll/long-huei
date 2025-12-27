@@ -247,6 +247,10 @@
   .navbar-nav {
     flex-direction: row;
     align-items: center;
+    padding-left: 63px;
+    padding-right: 45px;
+    padding-top: 10px;
+    padding-bottom: 20px;
     gap: 16px;
   }
   
