@@ -131,7 +131,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
           src: '/entertainment/id1/macau-5705841.jpg',
           alt: '主題式玩法：找到你的專屬澳門',
           width: 300,
-          height: 401
+          height: 200
         },
         description: '',
         content: [
@@ -208,7 +208,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
           src: '/entertainment/id1/istockphoto-1469498103-1024x1024.jpg',
           alt: '季節限定活動',
           width: 300,
-          height: 265
+          height: 200
         },
         description: '',
         content: [
@@ -543,7 +543,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
           src: '/entertainment/id2/water-park-6799006_1920.jpg',
           alt: '澳門水上樂園有什麼特別？',
           width: 300,
-          height: 219
+          height: 200
         },
         description: '',
         content: [
@@ -632,7 +632,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
           src: '/entertainment/id2/open-4033043_1920.jpg',
           alt: '新濠影滙澳門水上樂園門票與開放時間',
           width: 300,
-          height: 193
+          height: 200
         },
         description: '',
         content: [
@@ -713,7 +713,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
           src: '/entertainment/id3/pancakes-2291908_1280.jpg',
           alt: '美食天堂：澳門百老匯美食街',
           width: 300,
-          height: 450
+          height: 200
         },
         description: '澳門百老匯美食街介紹',
         content: [
@@ -739,7 +739,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
           src: '/entertainment/id3/new-years-eve-1953253_1280.jpg',
           alt: '澳門百老匯：娛樂焦點',
           width: 300,
-          height: 450
+          height: 200
         },
         description: '澳門百老匯舞台介紹',
         content: [
@@ -765,7 +765,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
           src: '/entertainment/id3/couch-447484_1280.jpg',
           alt: '澳門百老匯酒店：舒適住宿',
           width: 300,
-          height: 450
+          height: 200
         },
         description: '澳門百老匯酒店介紹',
         content: [
@@ -848,7 +848,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
           src: '/entertainment/id4/Wynn_Macau_Night.jpg',
           alt: '【澳門永利】夜間亮點｜水舞聲光秀的沉浸式觀賞訣竅',
           width: 300,
-          height: 450
+          height: 200
         },
         description: '水舞聲光秀觀賞訣竅',
         content: [
@@ -869,7 +869,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
           src: '/entertainment/id4/travel-macau-palace-02-e1531104975436.jpg',
           alt: '【澳門永利】藝術底蘊｜全球頂級收藏的免費導覽路線',
           width: 300,
-          height: 450
+          height: 200
         },
         description: '全球頂級藝術收藏',
         content: [
@@ -910,7 +910,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
           src: '/entertainment/id4/33437351888_816874ce19_c.jpg',
           alt: '【澳門永利】空間設計｜建築迷必訪的隱藏幾何美學',
           width: 300,
-          height: 450
+          height: 200
         },
         description: '建築設計的隱藏美學',
         content: [
@@ -931,7 +931,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
           src: '/entertainment/id4/wm-winglei-video-cover-image.jpg',
           alt: '【澳門永利】在地融合｜米其林餐廳裡的澳門老味道',
           width: 300,
-          height: 450
+          height: 200
         },
         description: '米其林餐廳的澳門老味道',
         content: [
@@ -952,7 +952,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
           src: '/entertainment/id4/92381538_2547630908899579_5770666828535693312_n.jpg',
           alt: '【澳門永利】靜謐時光｜避開人潮的私房休憩點',
           width: 300,
-          height: 450
+          height: 200
         },
         description: '私房休憩點',
         content: [
@@ -1009,7 +1009,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
           src: '/entertainment/id5/jSvoqYEn5cl3Kixj.jpg',
           alt: '【澳門永利】避開人潮的黃金入住時段',
           width: 300,
-          height: 450
+          height: 200
         },
         description: '黃金入住時段',
         content: [
@@ -1030,7 +1030,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
           src: '/entertainment/id5/jpg.jpg',
           alt: '【澳門永利】免費沉浸式光影展',
           width: 300,
-          height: 450
+          height: 200
         },
         description: '免費沉浸式光影展',
         content: [
@@ -1066,7 +1066,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
           src: '/entertainment/id5/iridium-spa.jpg',
           alt: '【澳門永利】免費兒童水療體驗',
           width: 300,
-          height: 450
+          height: 200
         },
         description: '免費兒童水療體驗',
         content: [
@@ -1087,7 +1087,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
           src: '/entertainment/id5/original_20250620170058_269.jpg',
           alt: '【澳門永利】用細節打造頂級回憶',
           width: 300,
-          height: 450
+          height: 200
         },
         description: '用細節打造頂級回憶',
         content: [
@@ -1144,7 +1144,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
           src: '/entertainment/id6/20191018005842_62.jpg',
           alt: '【澳門水舞間】世界最大水上舞台｜解構3項破紀錄硬實力',
           width: 300,
-          height: 450
+          height: 200
         },
         description: '世界最大水上舞台',
         content: [
@@ -1180,7 +1180,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
           src: '/entertainment/id6/353947c95955fd030aa469fcb6304093.jpg',
           alt: '【澳門水舞間】人類極限巔峰｜8大無法複製的「水上特技標籤」',
           width: 300,
-          height: 450
+          height: 200
         },
         description: '（獲吉尼斯世界紀錄認證）',
         content: [
@@ -1226,7 +1226,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
           src: '/entertainment/id6/24_100047378032.jpg',
           alt: '【澳門水舞間】沉浸式水科技｜顛覆認知的「水體操控術」',
           width: 300,
-          height: 450
+          height: 200
         },
         description: '澳門獨家研發的劇場黑科技',
         content: [
@@ -1267,7 +1267,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
           src: '/entertainment/id6/32057375.jpg',
           alt: '【澳門水舞間】真實「零距離暴擊」體驗｜行家認證的3個腎上腺素開關',
           width: 300,
-          height: 450
+          height: 200
         },
         description: '澳門旅遊局認證的極致玩法',
         content: [
@@ -1303,7 +1303,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
           src: '/entertainment/id6/header_mobile.jpg',
           alt: '【澳門水舞間】永續型娛樂革命｜澳門首創「零碳表演」3大實證',
           width: 300,
-          height: 450
+          height: 200
         },
         description: '（2025年獲BSI碳中和認證）',
         content: [
@@ -1384,7 +1384,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
           src: '/entertainment/id7/j1vnDH3rlkAl6fgv.jpg',
           alt: '【澳門按摩】行家首選｜安全與慾望的平衡藝術',
           width: 300,
-          height: 450
+          height: 200
         },
         description: '行家首選的按摩服務',
         content: [
@@ -1422,7 +1422,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             src: '/entertainment/id7/huNfydHrZHjk6RSl.jpg',
             alt: '「黑金地庫」雙人密室調教',
             width: 300,
-            height: 450,
+            height: 200,
             style: {
               marginTop: '10px',
               marginBottom: '20px'
@@ -1479,7 +1479,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
           src: '/entertainment/id7/yNOww9drTyNm2ETM.jpg',
           alt: '【澳門按摩】安全潛規則｜行家絕不透露的3大鐵律',
           width: 300,
-          height: 450
+          height: 200
         },
         description: '安全潛規則',
         content: [
@@ -1658,7 +1658,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
           src: '/entertainment/id8/spectacle-image-resize-web-banner-748x307.jpg',
           alt: '視博廣場海底奇境',
           width: 300,
-          height: 450
+          height: 200
         },
         content: [
           {
@@ -1690,7 +1690,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             src: '/entertainment/id8/MGM-MACAU-Grande.jpg',
             alt: '天幕廣場光影魔法',
             width: 300,
-            height: 450,
+            height: 200,
             style: {
               marginTop: '10px',
               marginBottom: '20px'
@@ -1711,7 +1711,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             src: '/entertainment/id8/1bb623ec4985a744ce45fd34517fa185.jpg',
             alt: '二樓甜點廊露台',
             width: 300,
-            height: 450,
+            height: 200,
             style: {
               marginTop: '10px',
               marginBottom: '20px'
@@ -1946,7 +1946,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
           src: '/entertainment/id9/bbc44a3b295e4636b9ae65a5394e9308_20250522202411_4729.jpg',
           alt: '【澳門賭場】新葡京必看！價值連城的"何鴻燊收藏館"免費開放',
           width: 300,
-          height: 450
+          height: 200
         },
         content: [
           {
@@ -1991,7 +1991,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
           src: '/entertainment/id9/9_compressed-1200x900_20250522202411_4729.jpg',
           alt: '【澳門賭場】永利皇宮免費纜車+音樂噴泉終極觀賞指南',
           width: 300,
-          height: 450
+          height: 200
         },
         content: [
           {
@@ -2043,7 +2043,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             src: '/entertainment/id9/IMG_1256_20250522202548_8026.jpg',
             alt: '【澳門賭場】裡的米其林美食地圖',
             width: 300,
-            height: 450,
+            height: 200,
             style: {
               marginTop: '10px',
               marginBottom: '20px'
@@ -2059,7 +2059,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             src: '/entertainment/id9/04_20250522202548_8026.jpg',
             alt: '【澳門賭場】安德魯蛋塔',
             width: 300,
-            height: 450,
+            height: 200,
             style: {
               marginTop: '10px',
               marginBottom: '20px'
@@ -2075,7 +2075,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             src: '/entertainment/id9/d14d16d4174e8fbbdb46215.jpg_1280_1280_3_8956.jpg',
             alt: '【澳門賭場】免費奶茶吧台',
             width: 300,
-            height: 450,
+            height: 200,
             style: {
               marginTop: '10px',
               marginBottom: '20px'
@@ -2235,7 +2235,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
           src: '/entertainment/id10/AnyConv.com__aa3063a06005f8031bb8d7a84edf0a74.jpg',
           alt: '【澳門永利】必看！吉祥樹與富貴龍交替上演的視覺盛宴',
           width: 300,
-          height: 450
+          height: 200
         },
         content: [
           {
@@ -2248,7 +2248,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             src: '/entertainment/id10/AnyConv.com__882137f311c5728f8e257e56820af92c.jpg',
             alt: '【澳門永利】富貴龍',
             width: 300,
-            height: 450,
+            height: 200,
             style: {
               marginTop: '10px',
               marginBottom: '20px'
@@ -2266,7 +2266,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
           src: '/entertainment/id10/462589073_2808418332654768_2737103656528930736_n.jpg',
           alt: '【澳門永利】價值30億的收藏品能免費看，沒想到吧？',
           width: 300,
-          height: 450
+          height: 200
         },
         content: [
           {
@@ -2293,7 +2293,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             src: '/entertainment/id10/1478609902-1547224834_l.jpg',
             alt: '【澳門永利】京花軒',
             width: 300,
-            height: 450,
+            height: 200,
             style: {
               marginTop: '10px',
               marginBottom: '20px'
@@ -2309,7 +2309,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             src: '/entertainment/id10/sw-steakhouse-will-linger.jpg',
             alt: '【澳門永利】永利扒房',
             width: 300,
-            height: 450,
+            height: 200,
             style: {
               marginTop: '10px',
               marginBottom: '20px'
@@ -2325,7 +2325,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             src: '/entertainment/id10/_Desktop_WP_Dining_Detail_Sweets__Hero_Banner.jpg',
             alt: '【澳門永利】皇宮甜藝廊',
             width: 300,
-            height: 450,
+            height: 200,
             style: {
               marginTop: '10px',
               marginBottom: '20px'
@@ -2362,7 +2362,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
           src: '/entertainment/id10/AnyConv.com__6a8cd3d1058c0355a8cedf3445074f42.jpg',
           alt: '【澳門永利】水療中心秘密，亞洲首家CHANEL SPA體驗！',
           width: 300,
-          height: 450
+          height: 200
         },
         content: [
           {

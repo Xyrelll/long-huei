@@ -79,7 +79,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/question/id1/money-7881948_1920.jpg',
           alt: '【澳門換錢】3大渠道比拚！2025年最新匯率實測',
           width: 300,
-          height: 450
+          height: 200
         },
         description: '實測日期：2025/3/15，以兌換1,000港幣（HKD）為例',
         content: [
@@ -161,7 +161,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/question/id1/blur-1853262_1920.jpg',
           alt: '【澳門換錢】2025匯率TOP3民間兌換所推薦',
           width: 300,
-          height: 450
+          height: 200
         },
         description: '經實測與在地人驗證，這3家匯率持續領先',
         content: [
@@ -304,7 +304,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/question/id1/banknote-1396351_1920.jpg',
           alt: '【澳門換錢】聰明換錢5大技巧：省下門票錢',
           width: 300,
-          height: 450
+          height: 200
         },
         description: '實用的換錢技巧',
         content: [
@@ -685,7 +685,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/question/id2/E6h1kMaa5qcrfuuS3O0c.jpg',
           alt: '【澳門通】是什麼？2025年升級版亮點解析',
           width: 300,
-          height: 450
+          height: 200
         },
         description: '澳門通是澳門通用的電子支付卡，採用感應式技術，2025年推出「第三代澳門通」強化以下功能',
         content: [
@@ -746,7 +746,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/question/id2/澳门通-全国通卡2_202412.jpg',
           alt: '【澳門通】怎麼買？儲值、退費最新規則',
           width: 300,
-          height: 450
+          height: 200
         },
         description: '取得澳門通極度便利，2025年新增多種購買管道',
         content: [
@@ -846,7 +846,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/question/id2/Macau_Pass_Vending_Machine_201910.jpg',
           alt: '【澳門通】省錢秘技：2025年隱藏優惠全公開',
           width: 300,
-          height: 450
+          height: 200
         },
         description: '善用這些功能，最多可省下30%旅遊開銷',
         content: [
@@ -946,7 +946,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/question/id2/getimage.jpg',
           alt: '【澳門通】實戰應用：3天2夜行程推薦',
           width: 300,
-          height: 450
+          height: 200
         },
         description: '以下示範如何用澳門通高效玩遍熱門景點',
         content: [
@@ -1073,7 +1073,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/question/id2/U2xpz7Au67EPqEFfU2Jo.jpg',
           alt: '【澳門通】常見QA：2025年最新解答',
           width: 300,
-          height: 450
+          height: 200
         },
         description: '常見問題解答',
         content: [
@@ -1243,7 +1243,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/question/id3/ai-generated-9011895_1280.jpg',
           alt: '澳門旅遊安全嗎',
           width: 300,
-          height: 450
+          height: 200
         },
         description: '權威數據分析',
         content: [
@@ -1398,7 +1398,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/question/id3/overthink-7185863_1280.png',
           alt: '澳門旅遊安全嗎？',
           width: 300,
-          height: 450
+          height: 200
         },
         description: 'QA重點整理',
         content: [

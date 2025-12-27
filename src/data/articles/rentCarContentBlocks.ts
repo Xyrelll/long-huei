@@ -2059,7 +2059,7 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/rentcar/id12/2023_Toyota_Alphard_Z.jpg',
           alt: '【澳門包車】阿爾法',
           width: 300,
-          height: 169
+          height: 200
         },
         content: [
           {
@@ -2079,7 +2079,7 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/rentcar/id12/maybach-7383933_1280.jpg',
           alt: '【澳門包車】麥巴赫',
           width: 300,
-          height: 450
+          height: 200
         },
         content: [
           {
@@ -2099,7 +2099,7 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/rentcar/id12/car-436373_1280.jpg',
           alt: '【澳門包車】勞斯萊斯',
           width: 300,
-          height: 199
+          height: 200
         },
         content: [
           {

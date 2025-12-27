@@ -85,7 +85,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/booking/macao-hotel/mousetrap-6807571_1280.jpg',
           alt: '【澳門訂房】破解3大隱形消費陷阱',
           width: 300,
-          height: 169
+          height: 200
         },
         description: '',
         content: [
@@ -143,7 +143,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/booking/macao-hotel/architecture-1854220_1280.jpg',
           alt: '【澳門訂房】分區域實測',
           width: 300,
-          height: 155
+          height: 200
         },
         description: '',
         content: [
@@ -208,7 +208,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/booking/macao-hotel/coffee-7833769_1280.jpg',
           alt: '【澳門訂房】高CP值時段策略',
           width: 300,
-          height: 199
+          height: 200
         },
         description: '',
         content: [
@@ -369,7 +369,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/booking/macao-hotel1/3G-WYNN-OUTLK-SOT-190711-1630.jpg',
           alt: '【澳門飯店】永利皇宮｜AI全控飯店革命',
           width: 300,
-          height: 169
+          height: 200
         },
         description: '',
         content: [
@@ -417,7 +417,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/booking/macao-hotel1/Londoner-Macao-38.jpg',
           alt: '【澳門飯店】澳門倫敦人｜全沉浸式時空穿越',
           width: 300,
-          height: 225
+          height: 200
         },
         description: '',
         content: [
@@ -465,7 +465,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/booking/macao-hotel1/d2303f566200b0b1af19e24e119be0e4d39bfbab.jpg',
           alt: '【澳門飯店】摩珀斯｜未來建築奇蹟進化版',
           width: 300,
-          height: 400
+          height: 200
         },
         description: '',
         content: [
@@ -561,7 +561,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/booking/macao-hotel1/70444821.jpg',
           alt: '【澳門飯店】美高梅｜藝術科技狂想曲',
           width: 300,
-          height: 225
+          height: 200
         },
         description: '',
         content: [
@@ -745,7 +745,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/booking/macao-dacang/18_85_large-990x590.jpg',
           alt: '【澳門大倉酒店】全球唯一「款待認證」｜ISO 23511服務標準實踐',
           width: 300,
-          height: 179
+          height: 200
         },
         description: '',
         content: [
@@ -790,7 +790,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/booking/macao-dacang/5_20250612152849_3250.jpg',
           alt: '【澳門大倉酒店】米其林預告星級戰場｜2025年「味覺遺產」計劃',
           width: 300,
-          height: 169
+          height: 200
         },
         description: '',
         content: [
@@ -1001,7 +1001,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             src: '/booking/wei2/wp-skycab-hero-mb-v2.jpg',
             alt: '永利皇宮飯店',
             width: 300,
-            height: 300,
+            height: 200,
             style: { marginBottom: '20px' }
           },
           {
@@ -1033,7 +1033,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             src: '/booking/wei2/st-regis_top-banner_new_1920x950_tc.jpg',
             alt: '澳門瑞吉金沙城中心酒店',
             width: 300,
-            height: 148,
+            height: 200,
             style: { marginBottom: '20px' }
           },
           {
@@ -1105,7 +1105,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             src: '/booking/wei2/32137401.jpg',
             alt: '澳門四季酒店',
             width: 300,
-            height: 227,
+            height: 200,
             style: { marginBottom: '20px' }
           },
           {
@@ -1169,7 +1169,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             src: '/booking/wei2/146250602.jpg',
             alt: '新濠天地 – 摩珀斯',
             width: 300,
-            height: 168,
+            height: 200,
             style: { marginBottom: '20px' }
           },
           {
@@ -1254,7 +1254,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/booking/wei20i/3-broadway_macau-e1437364443302.jpg',
           alt: '【澳門訂房】澳門百老匯酒店',
           width: 300,
-          height: 300
+          height: 200
         },
         description: '',
         content: [
@@ -1275,7 +1275,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/booking/wei20i/20231108214925_61.jpg',
           alt: '【澳門訂房】美獅美高梅',
           width: 300,
-          height: 225
+          height: 200
         },
         description: '',
         content: [
@@ -1296,7 +1296,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/booking/wei20i/20190513184829_37.jpg',
           alt: '【澳門訂房】新濠影匯',
           width: 300,
-          height: 225
+          height: 200
         },
         description: '',
         content: [
@@ -1338,7 +1338,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/booking/wei20i/sheraton_02_b.jpg',
           alt: '【澳門訂房】澳門喜來登金沙城中心大酒店',
           width: 300,
-          height: 198
+          height: 200
         },
         description: '',
         content: [
@@ -1359,7 +1359,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/booking/wei20i/gh_hotel_main_hero.jpg',
           alt: '【澳門訂房】澳門銀河酒店',
           width: 300,
-          height: 146
+          height: 200
         },
         description: '',
         content: [

@@ -94,8 +94,8 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
         image: {
           src: '/travel/macaomatou/macau-1654180_1280.jpg',
           alt: '澳門漁人碼頭',
-          width: 400,
-          height: 266
+          width: 300,
+          height: 200
         },
         content: [],
         style: SECTION_STYLE
@@ -384,7 +384,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/travel/macau-all/macau-2538613.jpg',
           alt: '澳門新景點',
           width: 300,
-          height: 450
+          height: 200
         },
         description: '',
         content: [
@@ -659,7 +659,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/travel/macao-onedaypass/long-huei.jpg',
           alt: '上午：世界遺產巡禮',
           width: 300,
-          height: 131
+          height: 200
         },
         description: '',
         content: [
@@ -685,7 +685,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/travel/macao-onedaypass/new-york-3659946.jpg',
           alt: '中午：街頭美食體驗',
           width: 300,
-          height: 300
+          height: 200
         },
         description: '',
         content: [
@@ -706,7 +706,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/travel/macao-onedaypass/f27d1fcbc2071d4cfdf3f71b0437f852adb44564.jpg',
           alt: '下午：娛樂與親子樂園',
           width: 300,
-          height: 169
+          height: 200
         },
         description: '',
         content: [
@@ -736,7 +736,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/travel/macao-onedaypass/澳門巴黎人酒店巴黎鐵塔門票.jpg',
           alt: '晚上：夜色下的澳門',
           width: 300,
-          height: 167
+          height: 200
         },
         description: '',
         content: [
@@ -859,7 +859,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/travel/macao-parent-child/frogs-897981_1920.jpg',
           alt: '為什麼選擇澳門親子自由行？',
           width: 300,
-          height: 168
+          height: 200
         },
         description: '',
         content: [
@@ -1133,7 +1133,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/travel/macao-travelgroup1/china-5131521_1920.jpg',
           alt: '澳門旅遊團的特色',
           width: 300,
-          height: 177
+          height: 200
         },
         description: '',
         content: [
@@ -1592,7 +1592,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/travel/macao-dasanba/ae5bb6f96d27c25171016f1135659563e5eddb62.jpg',
           alt: '【大三巴牌坊】深度體驗：2025年不可錯過的3大活動',
           width: 300,
-          height: 450
+          height: 200
         },
         description: '',
         content: [
@@ -1674,7 +1674,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/travel/macao-hundred-old/1mi4j224x8ualaicy8FC9_W_640_0_R5_Q80.jpg',
           alt: '【澳門百老匯】建築硬體革命｜12億澳門元「夜市生態穹頂」',
           width: 300,
-          height: 300
+          height: 200
         },
         description: '',
         content: [
@@ -1704,7 +1704,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/travel/macao-hundred-old/1mi6t224x8ualif7s5002_W_640_0_R5_Q80.jpg',
           alt: '【澳門百老匯】米其林街頭戰場｜2025年「摘星平民化」計劃',
           width: 300,
-          height: 300
+          height: 200
         },
         description: '',
         content: [
@@ -1758,7 +1758,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/travel/macao-hundred-old/1mi3r224x8ualgz8r3779_W_640_0_R5_Q80.jpg',
           alt: '【澳門百老匯】永續夜市實驗場｜2024 GSTC全球最高評級',
           width: 300,
-          height: 300
+          height: 200
         },
         description: '',
         content: [
@@ -1788,7 +1788,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/travel/macao-hundred-old/1mi4p224x8ualh1iz6087_W_640_0_R5_Q80.jpg',
           alt: '【澳門百老匯】深度玩家路線圖｜澳門理工學院人因工程研究',
           width: 300,
-          height: 300
+          height: 200
         },
         description: '',
         content: [
@@ -1873,7 +1873,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/travel/macao-view/www.long-huei.com.har.jpg',
           alt: '【澳門景點】大三巴牌坊｜歷史與網美照的完美結合',
           width: 300,
-          height: 194
+          height: 200
         },
         description: '',
         content: [
@@ -1904,7 +1904,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/travel/macao-view/2_20250602202612_9953.jpg',
           alt: '【澳門景點】龍環葡韻｜薄荷綠別墅群的浪漫暴擊',
           width: 300,
-          height: 163
+          height: 200
         },
         description: '',
         content: [
@@ -1935,7 +1935,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/travel/macao-view/ULvjiuB.jpeg',
           alt: '【澳門景點】路環漁村｜彩色小屋與安德魯餅店原爆點',
           width: 300,
-          height: 169
+          height: 200
         },
         description: '',
         content: [
@@ -2036,7 +2036,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             src: '/travel/macao-view/20240107182703_0.jpg',
             alt: '瑪嘉烈蛋塔',
             width: 300,
-            height: 400,
+            height: 200,
             style: { marginBottom: '20px' }
           },
           {
@@ -2049,7 +2049,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             src: '/travel/macao-view/b153dc94-c542-11ed-b77f-22f5c40d9082.jpg',
             alt: '榮記豆腐',
             width: 300,
-            height: 415,
+            height: 200,
             style: { marginBottom: '20px' }
           },
           {
@@ -2062,7 +2062,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             src: '/travel/macao-view/d43561df-695a-4ff1-ac2a-91d7219cf9ca_i_image.jpg',
             alt: '大利來記豬扒包',
             width: 300,
-            height: 300,
+            height: 200,
             style: { marginBottom: '20px' }
           },
           {
@@ -2194,7 +2194,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/travel/macao-free-go/MO_1298188909.jpg',
           alt: '【澳門自由行】怎麼能不去大三巴牌坊打卡呢',
           width: 300,
-          height: 194
+          height: 200
         },
         description: '',
         content: [
@@ -2215,7 +2215,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/travel/macao-free-go/0825-00480-007b2.jpg',
           alt: '【澳門自由行】那就不得不提到大炮台與澳門博物館',
           width: 300,
-          height: 225
+          height: 200
         },
         description: '',
         content: [
@@ -2236,7 +2236,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/travel/macao-free-go/AnyConv.com__images__3___1_.jpg',
           alt: '【澳門自由行】下一站推薦您前往議事亭前地還有玫瑰堂體驗葡式風情的街頭漫步',
           width: 300,
-          height: 225
+          height: 200
         },
         description: '',
         content: [
@@ -2257,7 +2257,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/travel/macao-free-go/20190518141432_13.jpg',
           alt: '【澳門自由行】午餐時段肯定就是要來老城區品嘗本地小吃',
           width: 300,
-          height: 225
+          height: 200
         },
         description: '',
         content: [
@@ -2299,7 +2299,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/travel/macao-free-go/m1370086.jpg',
           alt: '【澳門自由行】的傍晚帶您到氹仔舊城區感受小鎮步調',
           width: 300,
-          height: 300
+          height: 200
         },
         description: '',
         content: [
@@ -2687,7 +2687,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/travel/travel1/Skywalk-Express-1-1680x900px__ScaleMaxWidthWzE5MjBd.jpg',
           alt: '旅遊塔233米高空漫步：比台北101更刺激',
           width: 300,
-          height: 161
+          height: 200
         },
         description: '',
         content: [
@@ -2743,7 +2743,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/travel/travel1/igreja-de-sao-francisco.jpg',
           alt: '安德魯餅店：比肯德基更好吃的葡式蛋撻',
           width: 300,
-          height: 225
+          height: 200
         },
         description: '',
         content: [

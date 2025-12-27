@@ -102,7 +102,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/sauna/sauna1/dwF2w1XsR12ryUCq.jpg',
           alt: '澳門桑拿',
           width: 300,
-          height: 450
+          height: 200
         },
         description: '',
         content: [
@@ -216,7 +216,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/sauna/sauna1/123.jpg.jpg',
           alt: '澳門桑拿',
           width: 300,
-          height: 450
+          height: 200
         },
         description: '想體驗澳門桑拿，但又怕流程太複雜？別擔心，下面一步步教你，從進門到離場，整套SOP一次看懂！',
         content: [
@@ -508,7 +508,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/sauna/sauna2/305935249_571052034813701_1912826311833841034_n.jpg',
           alt: '澳門熱門桑拿推薦-【尊貴水療 】',
           width: 300,
-          height: 300
+          height: 200
         },
         description: '📍 位置：金沙酒店對面（勵庭海景酒店內）\n🕒 營業時間：全澳唯一 24 小時營業桑拿',
         content: [
@@ -568,7 +568,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/sauna/sauna2/361927897_181267644946819_3820024252810639844_n.jpg',
           alt: '澳門熱門桑拿推薦-【壹號桑拿】',
           width: 300,
-          height: 300
+          height: 200
         },
         description: '📍 位置：澳門置地廣場\n🕒 營業時間：下午 4 點起',
         content: [
@@ -627,7 +627,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/sauna/sauna2/481706117_122145267230520857_5302375548871445702_n.jpg',
           alt: '澳門熱門桑拿推薦-【新豪門桑拿殿】',
           width: 300,
-          height: 399
+          height: 200
         },
         description: '📍 位置：中土大廈 1 樓\n🕒 營業時間：下午 4 點起',
         content: [
@@ -686,7 +686,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/sauna/sauna2/326353443_853189382435201_5264425499870967819_n.jpg',
           alt: '澳門熱門桑拿推薦-【東方皇堡水療會所】',
           width: 300,
-          height: 300
+          height: 200
         },
         description: '📍 位置：東方皇堡酒店 3 樓（18桑拿對面）\n🕒 營業時間：下午 4 點起',
         content: [
@@ -832,7 +832,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/sauna/macao-water/675021.jpg',
           alt: '【澳門水療】選店預約：挑到心儀的"躺平基地"',
           width: 300,
-          height: 169
+          height: 200
         },
         content: [
           {
@@ -863,7 +863,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/sauna/macao-water/spa_750x510-1.jpg',
           alt: '【澳門水療】到店接待：開啟"躺平"第一步',
           width: 300,
-          height: 204
+          height: 200
         },
         content: [
           {
@@ -925,7 +925,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/sauna/macao-water/bodhi-spa.jpg',
           alt: '【澳門水療】正式體驗：沈浸式放松時刻',
           width: 300,
-          height: 173
+          height: 200
         },
         content: [
           {
@@ -1078,7 +1078,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/sauna/macao20water/_Desktop_WM_Amenities-The_Spa_At_Encore.jpg',
           alt: '【澳門水療】東方傳統美學｜永利SPA「經絡熱石＋中藥蒸薰」雙重排毒',
           width: 300,
-          height: 180
+          height: 200
         },
         content: [
           {
@@ -1132,7 +1132,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/sauna/macao20water/9089c2f426917d3d073505ae9187f265.jpg',
           alt: '【澳門水療】葡式海洋療法｜悅榕莊「大西洋海藻裹體」深層淨化',
           width: 300,
-          height: 225
+          height: 200
         },
         content: [
           {
@@ -1361,7 +1361,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/sauna/macao-massage/dciYva6kVhVFVqOs.jpg',
           alt: '1. 澳門按摩｜【帝湖水療】｜氹仔唯一高顏值場館',
           width: 300,
-          height: 450
+          height: 200
         },
         description: '📍 位置：盛世酒店 地面層 / M 層\n🕒 營業時間：全天營運（建議下午／晚上時段）',
         content: [
@@ -1554,7 +1554,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/sauna/macao-massage/O7Bkec3ZzhS5wwtE.jpg',
           alt: '4. 澳門按摩｜【極品桑拿】｜超模技師 × 地點超方便',
           width: 300,
-          height: 450
+          height: 200
         },
         description: '📍 位置：英皇酒店 10 樓（近新葡京）\n🕒 營業時間：中午 12 點起',
         content: [
@@ -1680,7 +1680,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/sauna/macao20massage/wellness-5132408.jpg',
           alt: '【澳門按摩】必試推薦｜從賭場免費到葡式秘技',
           width: 300,
-          height: 300
+          height: 200
         },
         content: [
           {
@@ -1888,7 +1888,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/sauna/macao20massage/woman-3701712.jpg',
           alt: '【澳門按摩】夜遊動線｜邊玩邊鬆的聰明行程',
           width: 300,
-          height: 185
+          height: 200
         },
         content: [
           {
@@ -2056,7 +2056,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/sauna/macao-sauna-how/WQkEFT4MhRwYjHeG.jpg',
           alt: '澳門桑拿玩法-入場流程與設備說明',
           width: 300,
-          height: 450
+          height: 200
         },
         content: [
           {
@@ -2118,7 +2118,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/sauna/macao-sauna-how/Tn0cOPsDq9Dden5S.jpg',
           alt: '澳門桑拿玩法：選妃與沙發區介紹',
           width: 300,
-          height: 450
+          height: 200
         },
         content: [
           {
@@ -2813,8 +2813,8 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
         image: {
           src: '/sauna/sauna4/b8iZ1CLbugHODT1U.jpg',
           alt: '澳門劇本殺',
-          width: 167,
-          height: 250
+          width: 300,
+          height: 200
         },
         content: [
           {
@@ -2868,8 +2868,8 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
         image: {
           src: '/sauna/sauna4/mItUkmxQoGJjml9K.jpg',
           alt: '澳門劇本殺',
-          width: 167,
-          height: 250
+          width: 300,
+          height: 200
         },
         content: [
           {
@@ -3202,7 +3202,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/sauna/sauna3/473621250_122129154446526717_6176551599597399165_n.jpg',
           alt: '澳門熱門桑拿推薦-【帝湖水療 】',
           width: 300,
-          height: 225
+          height: 200
         },
         description: '📍 位置：氹仔「盛世酒店」地面層與 M 層\n🕒 營業時間：全天營運（建議下午/晚上時段前往）',
         content: [
@@ -3261,7 +3261,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/sauna/sauna3/maxresdefault.jpg',
           alt: '澳門熱門桑拿推薦-【帝道水療 】',
           width: 300,
-          height: 169
+          height: 200
         },
         description: '📍 位置：金龍酒店地鋪（18桑拿一樓處）\n🕒 營業時間：下午 2 點開始',
         content: [
@@ -3377,7 +3377,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/sauna/sauna3/42230628_2007194862678528_584087587723935744_n.jpg',
           alt: '澳門熱門桑拿推薦-【極品桑拿】',
           width: 300,
-          height: 179
+          height: 200
         },
         description: '📍 位置：英皇酒店 10 樓（新葡京旁）\n🕒 營業時間：中午 12 點起',
         content: [
@@ -3512,7 +3512,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           src: '/sauna/sauna/woman-9331018_0.png',
           alt: '澳門桑拿',
           width: 300,
-          height: 438
+          height: 200
         },
         content: [
           {
