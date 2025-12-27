@@ -40,7 +40,7 @@ const hotTags = [
   { name: "澳門", href: "/Tag/澳門" },
   { name: "澳門劇本殺", href: "/Tag/澳門劇本殺" },
   { name: "龍匯天下", href: "/Tag/龍匯天下" },
-  { name: "澳門龍匯天下", href: "/Tag/澳門龍匯天下" },
+  { name: "澳門包車景點", href: "/Tag/澳門包車景點" },
 ];
 
 function SearchContent() {
@@ -122,9 +122,24 @@ function SearchContent() {
     setHasSearched(true);
   }, [allArticles]);
 
+  // Reset function to clear all search state
+  const resetSearch = useCallback(() => {
+    setSearchKeyword("");
+    setSearchResults([]);
+    setHasSearched(false);
+    setShowError(false);
+  }, []);
+
   // Initialize from URL on mount and when URL changes
   useEffect(() => {
     const keyword = searchParams.get("Keyword") || "";
+    
+    // If no keyword in URL, reset to initial state
+    if (!keyword) {
+      resetSearch();
+      return;
+    }
+    
     if (keyword && allArticles.length > 0) {
       // Use requestAnimationFrame to defer state update
       requestAnimationFrame(() => {
@@ -137,7 +152,7 @@ function SearchContent() {
         setSearchKeyword(keyword);
       });
     }
-  }, [searchParams, allArticles, performSearch]);
+  }, [searchParams, allArticles, performSearch, resetSearch]);
 
   // Handle window width for responsive design
   useEffect(() => {
@@ -367,7 +382,7 @@ function SearchContent() {
             >
               熱門標籤
             </h2>
-            <div className="flex flex-wrap justify-center w-[70%] items-center gap-3">
+            <div className="flex flex-wrap justify-center w-[55%] items-center gap-3">
               {hotTags.map((tag) => (
                 <Link
                   key={tag.name}
@@ -425,13 +440,26 @@ function SearchContent() {
                         display: "flex",
                         alignItems: "center",
                         overflow: "hidden",
-                        
                         border: isSelected ? "none" : "1px solid #CD861A",
                         background: isSelected
                           ? "linear-gradient(to left, #FFCD83, #CD861A)"
                           : "#CD861A",
+                        transition: "all 0.3s ease",
+                        boxShadow: isSelected ? "0 0 15px rgba(205, 134, 26, 0.8)" : "none",
                       }}
-                      className="text-sm font-medium transition-colors"
+                      className="text-sm font-medium"
+                      onMouseEnter={(e) => {
+                        if (!isSelected) {
+                          e.currentTarget.style.borderColor = "#FFA500";
+                          e.currentTarget.style.boxShadow = "0 0 15px rgba(205, 134, 26, 0.8)";
+                        }
+                      }}
+                      onMouseLeave={(e) => {
+                        if (!isSelected) {
+                          e.currentTarget.style.borderColor = "#CD861A";
+                          e.currentTarget.style.boxShadow = "none";
+                        }
+                      }}
                     >
                       <span
                         style={{
@@ -445,6 +473,20 @@ function SearchContent() {
                           background: isSelected
                             ? "linear-gradient(to left, #CD861A 50%,#FFCD83 100%)"
                             : "black",
+                          transition: "all 0.3s ease",
+                          borderRight: isSelected ? "none" : "1px solid #CD861A",
+                        }}
+                        onMouseEnter={(e) => {
+                          if (!isSelected) {
+                            e.currentTarget.style.background = "linear-gradient(to left, #8B4513, #CD861A)";
+                            e.currentTarget.style.borderRightColor = "#FFA500";
+                          }
+                        }}
+                        onMouseLeave={(e) => {
+                          if (!isSelected) {
+                            e.currentTarget.style.background = "#000000";
+                            e.currentTarget.style.borderRightColor = "#CD861A";
+                          }
                         }}
                       >
                         {cat.name}
@@ -461,7 +503,18 @@ function SearchContent() {
                           backgroundColor: isSelected ? "transparent" : "#CD861A",
                           boxShadow: isSelected ? "0 0 10px 0 #ffaa2b" : "none",
                           color: "white",
-                          borderLeft: "1px solid rgba(255, 255, 255, 0.3)",
+                          borderLeft: isSelected ? "1px solid rgba(255, 255, 255, 0.3)" : "none",
+                          transition: "all 0.3s ease",
+                        }}
+                        onMouseEnter={(e) => {
+                          if (!isSelected) {
+                            e.currentTarget.style.background = "linear-gradient(to right, #CD861A, #FF8C00)";
+                          }
+                        }}
+                        onMouseLeave={(e) => {
+                          if (!isSelected) {
+                            e.currentTarget.style.background = "#CD861A";
+                          }
                         }}
                       >
                         {categoryCounts[cat.value] || 0}
@@ -491,7 +544,7 @@ function SearchContent() {
                 totalPages={totalPages}
                 itemsPerPage={itemsPerPage}
                 ArticleListComponent={BookingArticleList}
-                width={windowWidth < 1024 ? "90%" : "70%"}
+                width={windowWidth < 1024 ? "90%" : "55%"}
               />
             </div>
           </div>
