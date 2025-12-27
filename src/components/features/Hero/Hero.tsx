@@ -83,11 +83,10 @@ export default function Hero() {
                     src={isMobile ? slide.imageMobile : slide.image}
                     alt={slide.alt}
                     title={slide.title}
-                    width={isMobile ? 390 : 1550}
-                    height={isMobile ? 79 : 400}
+                    width={1550}
+                    height={400}
                     className="w-100 splide-image"
                     priority={slide.id === 2}
-                    sizes="(max-width: 768px) 90vw, 90vw"
                   />
                 </Link>
               </div>
