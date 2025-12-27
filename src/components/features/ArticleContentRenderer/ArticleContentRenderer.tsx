@@ -689,7 +689,7 @@ function TableOfContentsComponent({ block }: { block: ArticleContentBlock }) {
           boxShadow: '0 2px 8px rgba(0, 0, 0, 0.2)',
           transition: 'opacity 0.2s ease',
           marginBottom: isOpen ? '10px' : '0',
-          borderRadius: '30px',
+          borderRadius: baseStyle.borderRadius || '30px',
           color: '#d18411',
           border: '1px solid #d18411',
           backdropFilter: 'blur(10px)',
@@ -712,7 +712,7 @@ function TableOfContentsComponent({ block }: { block: ArticleContentBlock }) {
           left: isFixed && isMounted ? (isMobile ? '40px' : '350px') : isFixed ? '350px' : 'auto',
           zIndex: isFixed ? 1 : 'auto',
           backgroundColor: '#F5F5F5',
-          borderRadius: '12px',
+          borderRadius: baseStyle.borderRadius || '12px',
           padding: isOpen ? '20px' : '0',
           width: isOpen ? (isFixed && tocWidth ? `${tocWidth}px` : '100%') : '0',
           maxWidth: isFixed ? 'none' : '100%',
@@ -837,16 +837,18 @@ function TableOfContentsComponent({ block }: { block: ArticleContentBlock }) {
                               textDecoration: 'none',
                               display: 'block',
                               cursor: 'pointer',
-                              transition: 'color 0.2s ease',
+                              transition: 'color 0.2s ease, text-decoration 0.2s ease',
                               flex: 1,
                               fontSize: fontSize,
                               fontWeight: fontWeight,
                             }}
                             onMouseEnter={(e) => {
                               e.currentTarget.style.color = hoverTextColor;
+                              e.currentTarget.style.textDecoration = 'underline';
                             }}
                             onMouseLeave={(e) => {
                               e.currentTarget.style.color = '#000000';
+                              e.currentTarget.style.textDecoration = 'none';
                             }}
                           >
                             {item.text}

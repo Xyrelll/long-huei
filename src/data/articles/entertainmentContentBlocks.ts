@@ -27,7 +27,7 @@ const HEADING_STYLE_H3 = {
 
 const TABLE_OF_CONTENTS_STYLE = {
   backgroundColor: 'rgba(83, 52, 4, 0.842)',
-  borderRadius: '30px',
+  borderRadius: '50px',
   padding: '20px',
   marginTop: '20px',
   marginBottom: '30px',

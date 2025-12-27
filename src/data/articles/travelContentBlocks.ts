@@ -32,7 +32,7 @@ const HEADING_STYLE_H3 = {
 
 const TABLE_OF_CONTENTS_STYLE = {
   backgroundColor: 'rgba(83, 52, 4, 0.842)',
-  borderRadius: '30px',
+  borderRadius: '50px',
   padding: '20px',
   marginTop: '20px',
   marginBottom: '30px',
@@ -1730,7 +1730,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
         title: '【澳門百老匯】娛樂科技共生體｜阿里巴巴雲端技術實裝',
         titleLevel: 2,
         id: 'entertainment-tech',
-        description: '2025年導入阿里雲「街市元宇宙」',
+        description: '',
         content: [
           {
             type: 'text',

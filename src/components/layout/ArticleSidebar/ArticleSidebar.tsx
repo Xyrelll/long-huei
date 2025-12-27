@@ -105,7 +105,7 @@ export default function ArticleSidebar({
           className="text-white text-lg mb-4 flex items-center gap-2 border-b border-white/70"
         >
           <i className="bi bi-tags-fill text-white"></i>
-          熱門 TAGs
+          熱門 TAG
         </h4>
         <div className="w-full h-3" />
         <ul
