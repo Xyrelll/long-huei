@@ -2348,16 +2348,21 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
             type: 'list',
             items: [
               '✅ 專業司機，熟悉路線',
+              ' \n',
               '✅ 多款車型可選，滿足不同需求',
+              ' \n',
               '✅ 預約彈性，行程客製化',
+              ' \n',
               '✅ 透明價格，無隱藏費用',
+              ' \n',
               '✅ 24 小時客服支援，旅程無憂'
             ],
             ordered: false,
             style: {
               marginTop: '10px',
               marginBottom: '20px',
-              fontSize: '1.125rem'
+              fontSize: '1.125rem',
+              fontWeight: 'bold'
             }
           }
         ],
