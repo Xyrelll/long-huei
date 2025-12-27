@@ -447,8 +447,8 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
         image: {
           src: '/travel/macau-all/hamburger-494706.jpg',
           alt: '澳門美食',
-          width: 800,
-          height: 450
+          width: 300,
+          height: 200
         },
         description: '澳門2025年最新美食推薦',
         content: [
@@ -488,8 +488,8 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
         image: {
           src: '/travel/macau-all/macau-1901264_1920.jpg',
           alt: '澳門酒店',
-          width: 800,
-          height: 450
+          width: 300,
+          height: 200
         },
         description: '澳門2025年最新住宿推薦',
         content: [

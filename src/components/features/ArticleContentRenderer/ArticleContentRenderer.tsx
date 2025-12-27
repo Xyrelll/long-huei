@@ -364,8 +364,11 @@ export default function ArticleContentRenderer({ blocks, content }: ArticleConte
                 style={{
                   marginTop: '0',
                   marginBottom: '30px',
+                  display: 'flex',
+                  justifyContent: 'start',
+                  alignItems: 'start',
                 }}
-                className="w-full flex justify-center"
+                className="w-auto flex justify-start"
               >
                 <Image
                   src={block.image.src}
@@ -377,7 +380,7 @@ export default function ArticleContentRenderer({ blocks, content }: ArticleConte
                     maxWidth: '100%',
                     maxHeight: '450px',
                   }}
-                  className="w-full h-auto md:max-w-[300px] md:max-h-[450px] object-contain"
+                  className="w-auto h-auto md:max-w-[300px] md:max-h-[450px] object-contain"
                 />
                 {block.image.caption && (
                   <p className="text-white/70 text-sm mt-2 text-center">{block.image.caption}</p>
