@@ -708,7 +708,7 @@ function TableOfContentsComponent({ block }: { block: ArticleContentBlock }) {
           position: isFixed ? 'fixed' : 'relative',
           top: isFixed && isOpen ? '180px' : isFixed ? '120px' : 'auto',
           left: isFixed && isMounted ? (isMobile ? '40px' : '350px') : isFixed ? '350px' : 'auto',
-          zIndex: isFixed ? 999 : 'auto',
+          zIndex: isFixed ? 1 : 'auto',
           backgroundColor: '#F5F5F5',
           borderRadius: '12px',
           padding: isOpen ? '20px' : '0',
