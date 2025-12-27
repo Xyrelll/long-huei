@@ -7,7 +7,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
     description: [
       {
         type: 'text',
-        content: '澳門漁人碼頭是澳門半島東海岸一個集娛樂、餐飲、購物、住宿於一體的綜合旅遊景點，自2006年開幕以來，已成為旅客感受澳門多元文化的必訪之地。這裡不僅適合拍照打卡，更融合了古羅馬、中式、葡式等多種建築風格，讓你在短短幾小時內體驗「穿越古今、環遊世界」的樂趣。',
+        content: '',
         style: {
           marginBottom: '20px',
           fontSize: '1.1rem',
@@ -277,7 +277,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
     description: [
       {
         type: 'text',
-        content: '澳門作為融合中西文化的特別行政區,2025年持續推出新景點與服務升級。台灣旅客最關心的重點更新:',
+        content: '澳門作為融合中西文化的特別行政區，2025年持續推出新景點與服務升級。台灣旅客最關心的重點更新：',
         style: { 
           marginBottom: '20px',
           fontSize: '1.125rem'
@@ -285,7 +285,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
       },
       {
         type: 'text',
-        content: '簽證新制:台灣旅客持有效期6個月以上護照可免簽停留30天,入境改採「電子通關+人臉辨識」,通關更快速。',
+        content: '簽證新制：台灣旅客持有效期6個月以上護照可免簽停留30天，入境改採「電子通關+人臉辨識」，通關更快速',
         style: { 
           marginTop: '30px',
           marginBottom: '20px',
@@ -294,7 +294,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
       },
       {
         type: 'text',
-        content: '交通升級:',
+        content: '交通升級：',
         style: { 
           marginTop: '30px',
           marginBottom: '20px',
@@ -304,23 +304,26 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
       {
         type: 'list',
         items: [
-          '輕軌氹仔線延伸至媽閣站,串聯澳門半島與離島',
+          '輕軌氹仔線延伸至媽閣站，串聯澳門半島與離島',
           '新增「澳門出行」APP整合叫車、公車與輕軌資訊'
         ],
         style: { marginBottom: '20px', fontSize: '1.125rem' }
       },
       {
-        type: 'heading',
-        level: 2,
-        content: '支付便利',
-        style: { marginTop: '30px', marginBottom: '15px' , fontSize: '1.125rem' }
+        type: 'text',
+        content: '支付便利：',
+        style: { 
+          marginTop: '30px',
+          marginBottom: '20px',
+          fontSize: '1.125rem'
+        }
       },
       {
         type: 'list',
         items: [
-          '全澳電子支付要蓋率達95%,連路邊攤都可用台灣行動支付'
+          '全澳電子支付覆蓋率達95%，連路邊攤都可用台灣行動支付'
         ],
-        style: { marginBottom: '20px' }
+        style: { marginBottom: '20px', fontSize: '1.125rem' }
       }
     ],
     // Table of Contents
@@ -379,17 +382,15 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginTop: '0', marginBottom: '15px' }
           },
           {
-            type: 'heading',
-            level: 4,
-            content: '澳門太空館',
-            id: 'space-museum',
-            style: { marginTop: '20px', marginBottom: '10px', fontSize: '1.1rem' }
+            type: 'text',
+            content: '澳門太空館（路環）：',
+            style: { marginTop: '20px', marginBottom: '10px', fontSize: '1.125rem' }
           },
           {
             type: 'list',
             items: [
               '亞洲首個以航天科技為主題的沉浸式體驗館',
-              '特色設施: 4D太空漫遊、月球表面模擬區'
+              '特色設施：4D太空漫遊、月球表面模擬區'
             ],
             style: { 
               marginBottom: '20px', 
@@ -400,11 +401,9 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             }
           },
           {
-            type: 'heading',
-            level: 4,
-            content: '銀河綜合度假城三期',
-            id: 'galaxy-phase3',
-            style: { marginTop: '20px', marginBottom: '10px', fontSize: '1.1rem' }
+            type: 'text',
+            content: '銀河綜合度假城三期：',
+            style: { marginTop: '20px', marginBottom: '10px', fontSize: '1.125rem' }
           },
           {
             type: 'list',
@@ -428,34 +427,14 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginTop: '30px', marginBottom: '15px' }
           },
           {
-            type: 'heading',
-            level: 4,
-            content: '大三巴牌坊',
-            id: 'ruins-of-st-paul',
-            style: { marginTop: '20px', marginBottom: '10px', fontSize: '1.1rem' }
+            type: 'text',
+            content: '大三巴牌坊新增「AR導覽眼鏡」租借服務',
+            style: { marginTop: '20px', marginBottom: '10px', fontSize: '1.125rem' }
           },
           {
-            type: 'list',
-            items: [
-              '新增「AR導覽眼鏡」租借服務',
-              '提供多語言導覽,包含繁體中文'
-            ],
-            style: { marginBottom: '20px' }
-          },
-          {
-            type: 'heading',
-            level: 4,
-            content: '威尼斯人購物中心',
-            id: 'venetian-shopping',
-            style: { marginTop: '20px', marginBottom: '10px', fontSize: '1.1rem' }
-          },
-          {
-            type: 'list',
-            items: [
-              '引進50+新品牌,包括台灣人愛的日本藥妝店',
-              '新增美食廣場與休憩區'
-            ],
-            style: { marginBottom: '20px' }
+            type: 'text',
+            content: '威尼斯人購物中心引進50+新品牌，包括台灣人愛的日本藥妝店',
+            style: { marginTop: '10px', marginBottom: '20px', fontSize: '1.125rem' }
           }
         ],
         style: { marginTop: '40px', marginBottom: '40px' }
@@ -474,12 +453,29 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
         description: '澳門2025年最新美食推薦',
         content: [
           {
+            type: 'text',
+            content: '葡國菜創新版：',
+            style: { marginTop: '0', marginBottom: '10px', fontSize: '1.125rem' }
+          },
+          {
             type: 'list',
             items: [
-              'Macau-Portuguese fusion新料理: 推薦葡式蠔餅、澳門塔下午茶',
-              '新夜市選擇: 「澳門之夜」美食市集 (每晚6-12點)\n  必吃: 龍蝦包、榴槤葡式蛋塔、AI調酒'
+              '「澳葡 fusion」新派料理（推薦：葡式蚵仔煎、澳門塔下午茶）'
             ],
-            style: { marginBottom: '20px' }
+            style: { marginBottom: '20px', fontSize: '1.125rem' }
+          },
+          {
+            type: 'text',
+            content: '🍴夜市新選擇：',
+            style: { marginTop: '20px', marginBottom: '10px', fontSize: '1.125rem' }
+          },
+          {
+            type: 'list',
+            items: [
+              '「澳門之夜」美食市集（每晚6-12點）',
+              '必吃：龍蝦包、榴槤葡撻、AI調酒'
+            ],
+            style: { marginBottom: '20px', fontSize: '1.125rem' }
           }
         ],
         style: { marginTop: '40px', marginBottom: '40px' }
@@ -505,34 +501,30 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginTop: '0', marginBottom: '15px' }
           },
           {
-            type: 'heading',
-            level: 4,
-            content: '澳門四季名薈',
-            id: 'four-seasons',
-            style: { marginTop: '20px', marginBottom: '10px', fontSize: '1.1rem' }
+            type: 'text',
+            content: '澳門四季名薈（2025/3開幕）：',
+            style: { marginTop: '20px', marginBottom: '10px', fontSize: '1.125rem' }
           },
           {
             type: 'list',
             items: [
-              '2025年3月開幕',
-              '全套房設計,特色服務包含私人管家服務與24小時米其林客房服務'
+              '全套房設計，',
+              '特色：私人管家服務、24小時米其林客房送餐'
             ],
-            style: { marginBottom: '20px' }
+            style: { marginBottom: '20px', fontSize: '1.125rem' }
           },
           {
-            type: 'heading',
-            level: 4,
-            content: 'W澳門',
-            id: 'w-macau',
-            style: { marginTop: '20px', marginBottom: '10px', fontSize: '1.1rem' }
+            type: 'text',
+            content: 'W澳門（2025下半年）：',
+            style: { marginTop: '20px', marginBottom: '10px', fontSize: '1.125rem' }
           },
           {
             type: 'list',
             items: [
-              '2025年下半年開幕',
-              '時尚品牌酒店首次進駐澳門,擁有可直視港珠澳大橋的無邊際泳池'
+              '潮牌酒店首度進駐澳門',
+              '無邊際泳池直望港珠澳大橋'
             ],
-            style: { marginBottom: '20px' }
+            style: { marginBottom: '20px', fontSize: '1.125rem' }
           },
           {
             type: 'heading',
@@ -542,34 +534,72 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             style: { marginTop: '30px', marginBottom: '15px' }
           },
           {
-            type: 'heading',
-            level: 4,
-            content: '澳門人酒店',
-            id: 'macau-people-hotel',
-            style: { marginTop: '20px', marginBottom: '10px', fontSize: '1.1rem' }
+            type: 'text',
+            content: '「澳門人酒店」（近大三巴）',
+            style: { marginTop: '20px', marginBottom: '10px', fontSize: '1.125rem' }
+          },
+          {
+            type: 'text',
+            content: '「金光度假公寓」(家庭房超值）',
+            style: { marginTop: '10px', marginBottom: '20px', fontSize: '1.125rem' }
+          },
+          {
+            type: 'text',
+            content: '最佳旅遊季：',
+            style: { marginTop: '30px', marginBottom: '10px', fontSize: '1.125rem' }
           },
           {
             type: 'list',
             items: [
-              '位於大三巴牌坊附近',
-              '交通便利,步行即可到達主要景點'
+              '推薦10-12月（避開暑期人潮，天氣涼爽）',
+              '春節期間房價漲3倍，建議避開'
             ],
-            style: { marginBottom: '20px' }
+            style: { marginBottom: '20px', fontSize: '1.125rem' }
           },
           {
-            type: 'heading',
-            level: 4,
-            content: '金光度假公寓',
-            id: 'golden-resort-apartment',
-            style: { marginTop: '20px', marginBottom: '10px', fontSize: '1.1rem' }
+            type: 'text',
+            content: '省錢秘訣：',
+            style: { marginTop: '20px', marginBottom: '10px', fontSize: '1.125rem' }
           },
           {
             type: 'list',
             items: [
-              '家庭房性價比極高',
-              '提供廚房設施,適合長期住宿'
+              '週二～週四住房最便宜',
+              '善用酒店「住客專屬優惠券」'
             ],
-            style: { marginBottom: '20px' }
+            style: { marginBottom: '20px', fontSize: '1.125rem' }
+          },
+          {
+            type: 'text',
+            content: '網路建議：',
+            style: { marginTop: '20px', marginBottom: '10px', fontSize: '1.125rem' }
+          },
+          {
+            type: 'list',
+            items: [
+              '機場可租「5G隨身WiFi」NT$150/天',
+              '全澳免費WiFi熱點增加至500+處'
+            ],
+            style: { marginBottom: '20px', fontSize: '1.125rem' }
+          },
+          {
+            type: 'text',
+            content: '澳門2025年持續進化，既有文化底蘊又不斷創新，無論第幾次造訪都能發現新驚喜！立即追蹤',
+            style: { marginTop: '30px', marginBottom: '0', fontSize: '1.125rem' }
+          },
+          {
+            type: 'link',
+            href: 'https://www.instagram.com/lhts.8899/',
+            text: '龍匯天下官方IG',
+            style: {
+              color: '#3b82f6',
+              textDecoration: 'underline'
+            }
+          },
+          {
+            type: 'text',
+            content: '或點擊下方連結加入官方賴安排你的澳門之旅吧～ ',
+            style: { marginTop: '0', marginBottom: '20px', fontSize: '1.125rem' }
           }
         ],
         style: { marginTop: '40px', marginBottom: '40px' }

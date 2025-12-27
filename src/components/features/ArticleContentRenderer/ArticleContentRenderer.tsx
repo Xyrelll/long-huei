@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArticleContentBlock, ArticleContent, LinkBlock, TextBlock } from '@/types/articleContent';
@@ -499,6 +499,51 @@ export default function ArticleContentRenderer({ blocks, content }: ArticleConte
 // Table of Contents Component
 function TableOfContentsComponent({ block }: { block: ArticleContentBlock }) {
   const [isOpen, setIsOpen] = useState(false);
+  const [isFixed, setIsFixed] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!containerRef.current || !buttonRef.current) return;
+
+      // Find the article content container (parent element with article content)
+      const articleContentContainer = containerRef.current.closest('.article-content-structured') || 
+                                      containerRef.current.closest('.article-content') ||
+                                      containerRef.current.closest('.prose');
+      
+      // If no article container found, use the TOC container itself
+      const contentContainer = articleContentContainer || containerRef.current;
+      const contentRect = contentContainer.getBoundingClientRect();
+      const containerRect = containerRef.current.getBoundingClientRect();
+      const fixedButtonTop = 120; // Position where fixed button appears
+      
+      // Check if the article content's bottom has scrolled past the fixed button position
+      // If so, return to normal positioning (content has ended)
+      if (contentRect.bottom <= fixedButtonTop + 100) {
+        setIsFixed(false);
+        return;
+      }
+      
+      // When the TOC container's top has scrolled past the top threshold
+      // Switch to fixed positioning
+      if (containerRect.top <= fixedButtonTop) {
+        setIsFixed(true);
+      } else {
+        // Scrolling back up - return to normal position
+        setIsFixed(false);
+      }
+    };
+
+    if (block.type === 'tableOfContents') {
+      window.addEventListener('scroll', handleScroll, { passive: true });
+      handleScroll(); // Check initial position
+    }
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [block.type]);
   
   if (block.type !== 'tableOfContents') return null;
 
@@ -551,6 +596,7 @@ function TableOfContentsComponent({ block }: { block: ArticleContentBlock }) {
 
   return (
     <div
+      ref={containerRef}
       style={{
         marginTop: baseStyle.marginTop || '0',
         marginBottom: baseStyle.marginBottom || '0',
@@ -559,8 +605,13 @@ function TableOfContentsComponent({ block }: { block: ArticleContentBlock }) {
     >
       {/* TOC Button */}
       <button
+        ref={buttonRef}
         onClick={() => setIsOpen(!isOpen)}
         style={{
+          position: isFixed ? 'fixed' : 'relative',
+          top: isFixed ? '120px' : 'auto',
+          left: isFixed ? '20px' : 'auto',
+          zIndex: isFixed ? 1000 : 'auto',
           backgroundColor: '#CD861A',
           padding: '5px 10px',
           cursor: 'pointer',
@@ -577,6 +628,7 @@ function TableOfContentsComponent({ block }: { block: ArticleContentBlock }) {
           border: '1px solid #d18411',
           backdropFilter: 'blur(10px)',
           background: 'rgba(83, 52, 4, 0.842)',
+          opacity: isFixed ? 1 : 1,
         }}
         className="hover:opacity-90"
       >
@@ -584,20 +636,24 @@ function TableOfContentsComponent({ block }: { block: ArticleContentBlock }) {
         <span>{buttonText}</span>
       </button>
 
-      {/* TOC Panel - Inline, expands/collapses in document flow */}
+      {/* TOC Panel - Positioned relative to button, fixed when button is fixed */}
       <div
         style={{
+          position: isFixed ? 'fixed' : 'relative',
+          top: isFixed && isOpen ? '180px' : isFixed ? '120px' : 'auto',
+          left: isFixed ? '20px' : 'auto',
+          zIndex: isFixed ? 999 : 'auto',
           backgroundColor: '#F5F5F5',
           borderRadius: '12px',
           padding: isOpen ? '20px' : '0',
-          width: '100%',
+          width: isOpen ? (isFixed ? '300px' : '100%') : '0',
+          maxWidth: isFixed ? '90vw' : '100%',
           boxShadow: isOpen ? '0 4px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 165, 0, 0.3)' : 'none',
-          marginTop: '10px',
-          marginBottom: isOpen ? '20px' : '0',
-          maxHeight: isOpen ? '1000px' : '0',
+          maxHeight: isOpen ? (isFixed ? '70vh' : '1000px') : '0',
           opacity: isOpen ? 1 : 0,
-          overflow: 'hidden',
-          transition: 'max-height 0.6s ease-in-out, opacity 0.6s ease-in-out, padding 0.6s ease-in-out, margin-bottom 0.6s ease-in-out',
+          overflow: isOpen ? 'auto' : 'hidden',
+          transition: 'max-height 0.6s ease-in-out, opacity 0.6s ease-in-out, padding 0.6s ease-in-out, width 0.6s ease-in-out, top 0.6s ease-in-out',
+          marginTop: !isFixed && isOpen ? '10px' : '0',
         }}
         className="toc-panel"
       >
