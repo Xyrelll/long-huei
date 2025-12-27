@@ -328,7 +328,7 @@ function ArticleCarousel({
             className="relative"
           >
             {/* Sliding Container */}
-            <ul
+            <div
               style={{
                 display: "flex",
                 transform: `translateX(${slideOffset}%)`,
@@ -339,7 +339,7 @@ function ArticleCarousel({
             >
               {/* Create pages of 4 articles each */}
               {Array.from({ length: totalPages }).map((_, pageIndex) => (
-                <div
+                <ul
                   key={pageIndex}
                   style={{
                     display: "grid",
@@ -347,6 +347,9 @@ function ArticleCarousel({
                     gap: "24px",
                     flex: `0 0 ${100 / totalPages}%`,
                     width: `${100 / totalPages}%`,
+                    listStyle: "none",
+                    padding: 0,
+                    margin: 0,
                   }}
                 >
                   {articles
@@ -357,7 +360,7 @@ function ArticleCarousel({
                     .map((article) => (
                       <li
                         key={article.id}
-                        className="list-none bg-[#2C261C] hover:shadow-[0_0_20px_rgba(255,205,131,0.6)] hover:border-[#FFCD83] hover:border-2 transition-all duration-300"
+                        className="bg-[#2C261C] hover:shadow-[0_0_20px_rgba(255,205,131,0.6)] hover:border-[#FFCD83] hover:border-2 transition-all duration-300"
                         style={{
                           borderRadius: "50px",
                           overflow: "hidden",
@@ -419,9 +422,9 @@ function ArticleCarousel({
                         </Link>
                       </li>
                     ))}
-                </div>
+                </ul>
               ))}
-            </ul>
+            </div>
           </div>
         </div>
 
