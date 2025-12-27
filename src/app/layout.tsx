@@ -1,16 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "@/styles/globals.css";
 import "@/styles/navbar.css";
 import "@/styles/bottomnav.css";
 import { generateMetadata as genMeta } from "@/config/metadata";
 import '@fortawesome/fontawesome-free/css/all.min.css';
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
-});
 
 export const metadata: Metadata = genMeta({
   title: "龍匯天下 - 澳門旅遊專家",
@@ -63,7 +56,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${inter.variable} antialiased m-0`}>
+      <body className="antialiased m-0">
         {children}
       </body>
     </html>

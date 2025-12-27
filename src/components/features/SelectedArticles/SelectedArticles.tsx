@@ -139,7 +139,7 @@ export default function SelectedArticles() {
     setExpandedCards(newExpanded);
   };
 
-  const visibleArticles = showMore ? articles : articles.slice(0, 3);
+  const visibleArticles = showMore ? articles : articles.slice(0, 2);
 
   return (
     <section className="selected js-feature w-full bg-black py-12">
@@ -188,7 +188,7 @@ export default function SelectedArticles() {
         {/* Desktop Layout */}
         <div className="hidden lg:block">
           <div className="row featured flex gap-6">
-            <div className="w-3/10 flex-shrink-0 ">
+            <div className="w-3/10 shrink-0 ">
               <Link href={featuredArticle.link} className="block" target="_blank">
                 <Image
                   src={featuredArticle.image}
@@ -206,14 +206,14 @@ export default function SelectedArticles() {
                 <span>觀看人數：{featuredArticle.views}</span>
               </div>
             </div>
-            <div className="w-2/3 flex-shrink-0">
+            <div className="w-2/3 shrink-0">
               <div 
               style={{ paddingLeft: '20px' , paddingBottom: '0px' }} 
               className="row featured-sm grid grid-cols-2 gap-4">
                 {articles.map((article) => (
                   <div key={article.id} style={{ paddingBottom: '10px' }} className="mb-3">
                     <div className="row flex gap-3">
-                      <div className="w-3/6 flex-shrink-0 ">
+                      <div className="w-3/6 shrink-0 ">
                         <Link href={article.link} className="block" target="_blank">
                           <Image
                             src={article.image}
