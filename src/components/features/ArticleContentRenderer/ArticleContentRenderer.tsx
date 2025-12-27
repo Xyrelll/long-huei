@@ -650,6 +650,7 @@ function TableOfContentsComponent({ block }: { block: ArticleContentBlock }) {
       >
         <span style={{ fontSize: '16px' }}>{buttonIcon}</span>
         <span>{buttonText}</span>
+        <i className="bi bi-chevron-expand" style={{ fontSize: '7px' }}></i>
       </button>
 
       {/* TOC Panel - Positioned relative to button, fixed when button is fixed */}
