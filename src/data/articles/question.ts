@@ -43,7 +43,7 @@ export const questionArticles: QuestionArticle[] = [
     tags: ['澳門通龍匯天下', '龍匯澳門通', '澳門龍匯天下澳門通', '龍匯天下澳門通'],
     collapseId: 'collapse-macao-pass',
     contentBlocks: questionArticleContentBlocks[2],
-    date: '2025/12/01',
+    date: '2025/07/18',
   },
   {
     id: 3,
