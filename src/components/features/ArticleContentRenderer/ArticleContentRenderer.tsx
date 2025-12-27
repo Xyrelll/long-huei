@@ -119,8 +119,9 @@ export default function ArticleContentRenderer({ blocks, content }: ArticleConte
             style={{
               marginTop: imageStyle.marginTop || '0',
               marginBottom: imageStyle.marginBottom || '0',
+              display: 'block',
+              width: 'auto',
             }}
-            className="w-full"
           >
             <Image
               src={block.src}
@@ -131,7 +132,7 @@ export default function ArticleContentRenderer({ blocks, content }: ArticleConte
                 borderRadius: imageStyle.borderRadius || '0',
                 maxWidth: imageStyle.maxWidth || '100%',
               }}
-              className="w-full h-auto"
+              className="w-auto h-auto"
             />
             {block.caption && (
               <p className="text-white/70 text-sm mt-2 text-center">{block.caption}</p>
