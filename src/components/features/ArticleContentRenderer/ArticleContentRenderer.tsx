@@ -222,17 +222,19 @@ export default function ArticleContentRenderer({ blocks, content }: ArticleConte
               marginTop: tableStyle.marginTop || '0',
               marginBottom: tableStyle.marginBottom || '0',
               overflowX: 'auto',
+              display: 'flex',
+              justifyContent: 'center',
             }}
             className="w-full"
           >
-            <table className="w-full border-collapse text-white">
+            <table className="border-collapse text-white" style={{ margin: '0 auto' }}>
               {block.headers && block.headers.length > 0 && (
                 <thead>
                   <tr>
                     {block.headers.map((header, headerIndex) => (
                       <th
                         key={headerIndex}
-                        className="border border-white/20 p-2"
+                        className="border border-white/20 p-2 text-center"
                       >
                         {header}
                       </th>
@@ -246,7 +248,12 @@ export default function ArticleContentRenderer({ blocks, content }: ArticleConte
                     {row.map((cell, cellIndex) => (
                       <td
                         key={cellIndex}
-                        className="border border-white/20 p-2"
+                        className="border border-white/20 text-left"
+                        style={{
+                          padding: tableStyle.paddingTop 
+                            ? `${tableStyle.paddingTop} 0.5rem 0.5rem 0.5rem`
+                            : '0.5rem',
+                        }}
                       >
                         {cell}
                       </td>

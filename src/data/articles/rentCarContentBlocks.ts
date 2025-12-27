@@ -112,7 +112,8 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
             ],
             style: {
               marginTop: '20px',
-              marginBottom: '20px'
+              marginBottom: '20px',
+              paddingTop: '10px'
             }
           },
           {
