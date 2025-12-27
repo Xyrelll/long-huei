@@ -86,10 +86,7 @@ export default function Hero() {
                     width={1550}
                     height={400}
                     className="w-100 splide-image"
-                    priority={slide.id === 1}
-                    fetchPriority={slide.id === 1 ? "high" : "auto"}
-                    quality={85}
-                    sizes="100vw"
+                    priority={slide.id === 2}
                   />
                 </Link>
               </div>
