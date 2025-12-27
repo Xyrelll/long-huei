@@ -19,7 +19,7 @@ const heroSlides: HeroSlide[] = [
     id: 1, 
     image: '/homepage/250512_龍匯天下_包車_banner_1550px.jpg', 
     imageMobile: '/homepage/250512_龍匯天下_包車_banner_1550px.jpg',
-    link: '/Article/wei123',
+    link: '/Article/rentcal',
     alt: '澳門訂車、澳門包車、澳門旅遊',
     title: '澳門包車'
   },

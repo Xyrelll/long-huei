@@ -13,7 +13,7 @@ import { rentCarArticles, type RentCarArticle } from '@/data/articles/rentCar';
 export { rentCarArticles, type RentCarArticle };
 
 const categories = [
-  { name: '旅遊', href: '/ArticleCategory/Travel', count: 11 },
+  { name: '旅遊', href: '/ArticleCategory/Travel', count: 12 },
   { name: '桑拿', href: '/ArticleCategory/Sauna', count: 11 },
   { name: '包車', href: '/ArticleCategory/RentCar', count: 12, active: true },
   { name: '訂房', href: '/ArticleCategory/Booking', count: 5 },

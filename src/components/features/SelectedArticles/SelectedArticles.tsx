@@ -20,7 +20,7 @@ const featuredArticle: Article = {
   title: '澳門桑拿－老司機超詳細攻略',
   image: '/articles/澳門桑拿－老司機超詳細攻略-h.jpg',
   imageMobile: '/articles/澳門桑拿－老司機超詳細攻略-h.jpg',
-  views: 5186,
+  views: 5386,
   link: '/Article/sauna1',
   tags: ['澳門桑拿', '桑拿', '龍匯天下', '澳門旅遊'],
   description: '澳門桑拿最新現況總覽：疫情後全線回歸，甚至更勝以往！如果你近期有計畫前往澳門放鬆一下，那你可能會好奇：澳門的桑拿現在恢復得怎麼樣了？答案是——不僅回來了，而且是全面升級回歸！',
@@ -32,7 +32,7 @@ const articles: Article[] = [
     title: '澳門包車推薦｜自由暢遊澳門的最佳選擇！', 
     image: '/articles/99-h.png',
     imageMobile: '/articles/99-h.png',
-    views: 1480, 
+    views: 1501, 
     link: '/Article/macao-rent-car',
     tags: ['澳門包車', '包車', '龍匯包車'],
     description: '想在澳門輕鬆暢遊，無須擔心交通問題？無論是商務出差、家庭旅遊、婚禮接送還是私人觀光，【澳門包車推薦】的最佳選擇就在這裡！我們提供高品質、彈性十足的包車服務，為您量身打造最舒適、便捷的出行體驗。',
@@ -42,7 +42,7 @@ const articles: Article[] = [
     title: '澳門劇本殺，推理遊戲還是慾望遊戲?', 
     image: '/articles/文案-h.png',
     imageMobile: '/articles/文案-h.png',
-    views: 2098, 
+    views: 2198, 
     link: '/Article/sauna4',
     tags: ['澳門桑拿', '澳門劇本殺', '澳門', '龍匯天下', '桑拿'],
     description: '想在澳門玩點不一樣的劇本殺？別以為這只是燒腦推理，澳門劇本殺已進化成結合角色、情境與慾望的現場劇演。走進這場「遊戲」，你將成為慾望推理的主角，每個場景、每句台詞、每次互動，都是一場情緒與快感的試探。',
@@ -52,7 +52,7 @@ const articles: Article[] = [
     title: '【澳門訂房】最頂攻略它來了！(上)', 
     image: '/articles/【澳門訂房】最頂攻略它來了！-h.jpg',
     imageMobile: '/articles/【澳門訂房】最頂攻略它來了！-h.jpg',
-    views: 1735, 
+    views: 1745, 
     link: '/Article/wei%20i',
     description: '迫不及待要來分享【澳門訂房】懶人包啦！來到澳門的遊客怎麼能不找一間高級澳門住宿呢~每回去澳門旅行都開始找澳門住宿清單，先把小編這些口袋名單優質飯店收藏起來吧！',
   },
@@ -61,7 +61,7 @@ const articles: Article[] = [
     title: '【澳門水舞間】超絕視覺震撼！給你不得不去的理由！', 
     image: '/articles/【澳門水舞間】超絕視覺震撼！給你不得不去的理由！-h.jpg',
     imageMobile: '/articles/【澳門水舞間】超絕視覺震撼！給你不得不去的理由！-h.jpg',
-    views: 1455, 
+    views: 1475, 
     link: '/Article/macao%20water',
     tags: ['澳門水舞間', '龍匯澳門水舞間', '水舞間龍匯天下', '龍匯水舞間'],
     description: '來到澳門旅遊最不能錯過的就是《水舞間》，耗資超過二十億港元，是全球最壯觀最大型的水上匯演舞台劇，還曾榮獲2011年度「HKMA/TVB 傑出市場策劃獎」金獎；表演橋段結合高難度特技、絢爛炫目燈光、特殊',
@@ -71,7 +71,7 @@ const articles: Article[] = [
     title: '★澳門熱門桑拿推薦 TOP 8 (上)', 
     image: '/articles/250519_龍匯天下_部落格圖_上-h.jpg',
     imageMobile: '/articles/250519_龍匯天下_部落格圖_上-h.jpg',
-    views: 4068, 
+    views: 4168, 
     link: '/Article/sauna2',
     tags: ['澳門', '澳門桑拿', '澳門劇本殺', '桑拿'],
     description: '不論你是老司機，還是初次探訪澳門桑拿的新手，選對一家店真的很關鍵！以下是四間評價極高、網友熱推的澳門桑拿，每間都有不同亮點與玩法，從24小時營業的尊貴水療，到主打劇本殺玩法，總有一間適合你。',
@@ -81,7 +81,7 @@ const articles: Article[] = [
     title: '【澳門賭場】攻略來了！不賭錢也能嗨玩三天三夜的隱藏玩法大公開！', 
     image: '/articles/【澳門賭場】攻略來了！不賭錢也能嗨玩三天三夜的隱藏玩法大公開！-h.jpg',
     imageMobile: '/articles/【澳門賭場】攻略來了！不賭錢也能嗨玩三天三夜的隱藏玩法大公開！-h.jpg',
-    views: 2104, 
+    views: 2144, 
     link: '/Article/macao%20casino',
     description: '澳門賭場不只是賭博！這座不夜城藏著無數免費娛樂、美食、表演與奢華體驗。從免費接駁車、米其林餐廳到世界級水舞秀，教你用最聰明的方式嗨玩三天三夜，完全不花一毛賭金！',
   },
@@ -90,7 +90,7 @@ const articles: Article[] = [
     title: '【澳門旅遊安全嗎？】2025重點解析', 
     image: '/articles/250513_龍匯天下_部落格圖-h.jpg',
     imageMobile: '/articles/250513_龍匯天下_部落格圖-h.jpg',
-    views: 2493, 
+    views: 2511, 
     link: '/Article/safe1',
     tags: ['澳門旅遊', '澳門旅遊安全', '澳門安全', '龍匯天下澳門'],
     description: '澳門是亞洲最安全的旅遊城市之一，連續7年名列亞洲前三安全城市。犯罪率低、夜間安全感高達94%，無論是獨自旅行還是家庭出遊，都能安心享受這座融合中西文化的魅力之城。',
@@ -100,7 +100,7 @@ const articles: Article[] = [
     title: '★澳門熱門桑拿推薦 TOP 8 (下)', 
     image: '/articles/250519_龍匯天下_部落格圖_下-h.jpg',
     imageMobile: '/articles/250519_龍匯天下_部落格圖_下-h.jpg',
-    views: 2349, 
+    views: 2391, 
     link: '/Article/sauna3',
     tags: ['澳門桑拿', '桑拿推薦', '龍匯天下桑拿', '澳門劇本殺'],
     description: '🌐 氹仔＆澳門本島｜頂尖高顏值澳門桑拿會所續篇（進階玩家必看）接續上文介紹的【尊貴水療】、【壹號桑拿】等四家熱店，這次我們聚焦在氹仔區的高顏值澳門桑拿、以及價格與體驗感拉滿的高端店家。若你已經厭倦常',
@@ -110,7 +110,7 @@ const articles: Article[] = [
     title: '澳門按摩推薦｜舒壓放鬆一篇看懂', 
     image: '/articles/pg-h.png',
     imageMobile: '/articles/pg-h.png',
-    views: 1885, 
+    views: 1911, 
     link: '/Article/macao%20massage%201',
     description: '澳門不只賭場與豬扒包！這座不夜城藏著頂級水療會館、24小時平價足療，甚至賭場免費按摩區。教你用最聰明姿勢消除暴走疲勞！',
   },
@@ -119,7 +119,7 @@ const articles: Article[] = [
     title: '【澳門景點】自由行必收的12個玩樂秘笈！', 
     image: '/articles/【澳門景點】自由行必收的12個玩樂秘笈！-h.jpg',
     imageMobile: '/articles/【澳門景點】自由行必收的12個玩樂秘笈！-h.jpg',
-    views: 1515, 
+    views: 1523, 
     link: '/Article/travel1',
     tags: ['澳門旅遊', '澳門景點', '澳門', '澳門安全嗎', '龍匯天下', '澳門桑拿'],
   },
@@ -188,7 +188,7 @@ export default function SelectedArticles() {
         {/* Desktop Layout */}
         <div className="hidden lg:block">
           <div className="row featured flex gap-6">
-            <div className="w-1/3 flex-shrink-0">
+            <div className="w-1/3 shrink-0">
               <Link href={featuredArticle.link} className="block" target="_blank">
                 <Image
                   src={featuredArticle.image}
@@ -206,12 +206,12 @@ export default function SelectedArticles() {
                 <span>觀看人數：{featuredArticle.views}</span>
               </div>
             </div>
-            <div className="w-2/3 flex-shrink-0">
+            <div className="w-2/3 shrink-0">
               <div className="row featured-sm grid grid-cols-2 gap-4">
                 {articles.map((article) => (
                   <div key={article.id} className="mb-3">
                     <div className="row flex gap-3">
-                      <div className="flex-shrink-0">
+                      <div className="shrink-0">
                         <Link href={article.link} className="block" target="_blank">
                           <Image
                             src={article.image}

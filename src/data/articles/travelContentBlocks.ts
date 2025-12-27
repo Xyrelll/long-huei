@@ -4,6 +4,275 @@ import { ArticleContent } from '@/types/articleContent';
 
 export const travelArticleContentBlocks: Record<number, ArticleContent> = {
   1: {
+    description: [
+      {
+        type: 'text',
+        content: '澳門漁人碼頭是澳門半島東海岸一個集娛樂、餐飲、購物、住宿於一體的綜合旅遊景點，自2006年開幕以來，已成為旅客感受澳門多元文化的必訪之地。這裡不僅適合拍照打卡，更融合了古羅馬、中式、葡式等多種建築風格，讓你在短短幾小時內體驗「穿越古今、環遊世界」的樂趣。',
+        style: {
+          marginBottom: '20px',
+          fontSize: '1.1rem',
+        }
+      }
+    ],
+    tableOfContents: {
+      type: 'tableOfContents',
+      buttonText: '文章目錄',
+      buttonIcon: '☰',
+      items: [
+        { level: 1, text: '特色景點與建築風格', id: 'attractions-architecture' },
+        { level: 2, text: '1. 古羅馬表演場', id: 'roman-colosseum' },
+        { level: 2, text: '2. 火山建築群與阿拉丁堡壘', id: 'volcano-aladdin' },
+        { level: 2, text: '3. 唐城、東西匯聚與勵駿碼頭', id: 'tang-city-wharf' },
+        { level: 1, text: '美食與購物推薦', id: 'food-shopping' },
+        { level: 2, text: '美食選擇多元', id: 'food-options' },
+        { level: 2, text: '購物體驗', id: 'shopping-experience' },
+        { level: 1, text: '娛樂活動與住宿', id: 'entertainment-accommodation' },
+        { level: 2, text: '娛樂設施', id: 'entertainment-facilities' },
+        { level: 2, text: '住宿推薦', id: 'accommodation-recommendations' },
+        { level: 1, text: '實用資訊', id: 'practical-info' },
+        { level: 1, text: '遊玩小建議', id: 'travel-tips' },
+        { level: 1, text: '結語', id: 'conclusion' }
+      ],
+      style: {
+        backgroundColor: 'rgba(83, 52, 4, 0.842)',
+        borderRadius: '30px',
+        padding: '20px',
+        marginTop: '20px',
+        marginBottom: '30px',
+        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 165, 0, 0.2)',
+        border: '1px solid #d18411',
+        backdropFilter: 'blur(10px)',
+      }
+    },
+    sections: [
+      {
+        type: 'section',
+        title: '',
+        titleLevel: 2,
+        id: 'intro-image',
+        image: {
+          src: '/travel/macaomatou/macau-1654180_1280.jpg',
+          alt: '澳門漁人碼頭',
+          width: 400,
+          height: 266
+        },
+        content: [],
+        style: { marginTop: '40px', marginBottom: '40px' }
+      },
+      {
+        type: 'section',
+        title: '特色景點與建築風格',
+        titleLevel: 2,
+        id: 'attractions-architecture',
+        content: [
+          {
+            type: 'heading',
+            level: 3,
+            content: '1. 古羅馬表演場',
+            id: 'roman-colosseum',
+            style: { marginTop: '20px', marginBottom: '15px', fontSize: '1.1rem' }
+          },
+          {
+            type: 'text',
+            content: '漁人碼頭最吸睛的標誌性建築，仿照古羅馬鬥獸場設計，充滿歷史氛圍。這裡不定期舉辦演唱會、文化活動，夜晚燈光亮起時更顯宏偉，是攝影愛好者的絕佳取景地。',
+            style: {
+              marginBottom: '20px',
+              fontSize: '1.1rem',
+            }
+          },
+          {
+            type: 'heading',
+            level: 3,
+            content: '2. 火山建築群與阿拉丁堡壘',
+            id: 'volcano-aladdin',
+            style: { marginTop: '20px', marginBottom: '15px', fontSize: '1.1rem' }
+          },
+          {
+            type: 'text',
+            content: '高達40米的火山造型建築，內部設有兒童遊樂設施，適合親子同遊。旁邊的阿拉丁堡壘充滿中東特色，細節雕刻精緻，展現異國風情。',
+            style: {
+              marginBottom: '20px',
+              fontSize: '1.1rem',
+            }
+          },
+          {
+            type: 'heading',
+            level: 3,
+            content: '3. 唐城、東西匯聚與勵駿碼頭',
+            id: 'tang-city-wharf',
+            style: { marginTop: '20px', marginBottom: '15px', fontSize: '1.1rem' }
+          },
+          {
+            type: 'list',
+            items: [
+              '唐城：以唐代建築為藍本，灰瓦紅牆、亭台樓閣，展現中國古典美學。',
+              '東西匯聚：融合歐陸建築與東方元素，街道兩旁餐廳、商店林立，適合漫步。',
+              '勵駿碼頭：仿照歐洲碼頭設計，停泊多艘仿古帆船，夜晚景色浪漫。'
+            ],
+            style: {
+              marginBottom: '20px',
+              fontSize: '1.1rem',
+            }
+          }
+        ],
+        style: { marginTop: '40px', marginBottom: '40px' }
+      },
+      {
+        type: 'section',
+        title: '美食與購物推薦',
+        titleLevel: 2,
+        id: 'food-shopping',
+        content: [
+          {
+            type: 'heading',
+            level: 3,
+            content: '美食選擇多元：',
+            id: 'food-options',
+            style: { marginTop: '20px', marginBottom: '15px', fontSize: '1.1rem' }
+          },
+          {
+            type: 'list',
+            items: [
+              '中式餐廳：提供經典粵菜、點心。',
+              '葡國菜餐廳：可品嚐澳門特色的葡式焗雞、馬介休。',
+              '國際美食：義大利披薩、日本料理、東南亞風味應有盡有。',
+              '小吃與甜品：街邊小攤販售豬扒包、木糠布丁等在地小食。'
+            ],
+            style: {
+              marginBottom: '20px',
+              fontSize: '1.1rem',
+            }
+          },
+          {
+            type: 'heading',
+            level: 3,
+            content: '購物體驗：',
+            id: 'shopping-experience',
+            style: { marginTop: '20px', marginBottom: '15px', fontSize: '1.1rem' }
+          },
+          {
+            type: 'list',
+            items: [
+              '特色手信店：可購買杏仁餅、花生糖等澳門伴手禮。',
+              '文創商品：不少小店販售澳門主題紀念品、設計師商品。',
+              '歐美品牌：部分商店引進國際品牌，滿足購物需求。'
+            ],
+            style: {
+              marginBottom: '20px',
+              fontSize: '1.1rem',
+            }
+          }
+        ],
+        style: { marginTop: '40px', marginBottom: '40px' }
+      },
+      {
+        type: 'section',
+        title: '娛樂活動與住宿',
+        titleLevel: 2,
+        id: 'entertainment-accommodation',
+        content: [
+          {
+            type: 'heading',
+            level: 3,
+            content: '娛樂設施：',
+            id: 'entertainment-facilities',
+            style: { marginTop: '20px', marginBottom: '15px', fontSize: '1.1rem' }
+          },
+          {
+            type: 'list',
+            items: [
+              '巴比倫娛樂場：提供博彩娛樂（僅限成年旅客）。',
+              '音樂表演與展覽：節日期間常有街頭表演、藝術展。',
+              '親子活動：火山建築內的遊戲區適合兒童遊玩。'
+            ],
+            style: {
+              marginBottom: '20px',
+              fontSize: '1.1rem',
+            }
+          },
+          {
+            type: 'heading',
+            level: 3,
+            content: '住宿推薦：',
+            id: 'accommodation-recommendations',
+            style: { marginTop: '20px', marginBottom: '15px', fontSize: '1.1rem' }
+          },
+          {
+            type: 'text',
+            content: '漁人碼頭內設有萊斯酒店與勵宮酒店，兩者均以歐式風格設計，海景房可眺望珠江口岸，適合追求浪漫與舒適的旅客。',
+            style: {
+              marginBottom: '20px',
+              fontSize: '1.1rem',
+            }
+          }
+        ],
+        style: { marginTop: '40px', marginBottom: '40px' }
+      },
+      {
+        type: 'section',
+        title: '實用資訊',
+        titleLevel: 2,
+        id: 'practical-info',
+        content: [
+          {
+            type: 'list',
+            items: [
+              '地址：澳門新口岸友誼大馬路及孫逸仙大馬路交界',
+              '開放時間：24小時開放（各商店與餐廳營業時間不同）',
+              '門票：免費入場（部分娛樂設施另行收費）',
+              '交通方式：免費接駁巴士：往返澳門外港碼頭、關閘、澳門國際機場等地；公共巴士：多條路線經過「漁人碼頭」站；的士：從澳門半島市中心前往約10-15分鐘'
+            ],
+            style: {
+              marginBottom: '20px',
+              fontSize: '1.1rem',
+            }
+          }
+        ],
+        style: { marginTop: '40px', marginBottom: '40px' }
+      },
+      {
+        type: 'section',
+        title: '遊玩小建議',
+        titleLevel: 2,
+        id: 'travel-tips',
+        content: [
+          {
+            type: 'list',
+            ordered: true,
+            items: [
+              '最佳時間：建議下午至傍晚到訪，可同時欣賞日景與夜景。',
+              '拍照建議：古羅馬表演場、勵駿碼頭燈光夜景最出片。',
+              '節慶活動：農曆新年、聖誕節期間常有特色佈置與活動。',
+              '聯遊推薦：可結合附近的金沙娛樂場、澳門科學館規劃一日行程。'
+            ],
+            style: {
+              marginBottom: '20px',
+              fontSize: '1.1rem',
+            }
+          }
+        ],
+        style: { marginTop: '40px', marginBottom: '40px' }
+      },
+      {
+        type: 'section',
+        title: '結語',
+        titleLevel: 2,
+        id: 'conclusion',
+        content: [
+          {
+            type: 'text',
+            content: '澳門漁人碼頭不僅是娛樂勝地，更是見證澳門中西文化交融的縮影。無論你是想感受歷史建築的震撼、品嚐多元美食，還是單純想找一個輕鬆散步的景點，這裡都能滿足你的期待。下次來澳門，不妨將漁人碼頭列入行程，親身探索這個充滿魅力的海濱地標，當然，也能讓我們龍匯天下替您安排，讓您不僅能開心出遊平安回家，更能從澳門帶走一段回味無窮的旅遊經驗！',
+            style: {
+              marginBottom: '20px',
+              fontSize: '1.1rem',
+            }
+          }
+        ],
+        style: { marginTop: '40px', marginBottom: '40px' }
+      }
+    ]
+  },
+  2: {
     // Article description (intro text)
     description: [
       {
@@ -307,7 +576,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
       }
     ]
   },
-  2: {
+  3: {
     // Article description (intro text)
     description: [
       {
@@ -511,7 +780,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
       }
     ]
   },
-  3: {
+  4: {
     // Article description (intro text)
     description: [
       {
@@ -753,7 +1022,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
       }
     ]
   },
-  4: {
+  5: {
     // Article description (intro text)
     description: [
       {
@@ -927,7 +1196,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
       }
     ]
   },
-  5: {
+  6: {
     // Article description (intro text)
     description: [
       {
@@ -1124,7 +1393,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
       }
     ]
   },
-  6: {
+  7: {
     // Article description (intro text)
     description: [
       {
@@ -1369,7 +1638,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
       }
     ]
   },
-  7: {
+  8: {
     // Article description (intro text)
     description: [
       {
@@ -1574,7 +1843,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
       }
     ]
   },
-  8: {
+  9: {
     // Article description (intro text)
     description: [
       {
@@ -1896,7 +2165,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           },
           {
             type: 'text',
-            content: ' 另外也可點擊下方連結加入龍匯天下官方賴喔~',
+            content: '另外也可點擊下方連結加入龍匯天下官方賴喔~',
             style: { marginBottom: '20px', fontSize: '1.125rem' }
           }
         ],
@@ -1904,7 +2173,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
       }
     ]
   },
-  9: {
+  10: {
     // Article description (intro text)
     description: [
       {
@@ -2162,7 +2431,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
       }
     ]
   },
-  10: {
+  11: {
     // Article description (intro text)
     description: [
       {
@@ -2335,7 +2604,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
       }
     ]
   },
-  11: {
+  12: {
     // Article description (intro text)
     description: [
       {
