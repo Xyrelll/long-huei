@@ -369,6 +369,8 @@ export default function SelectedArticles() {
                           title={article.title}
                           width={150}
                           height={100}
+                          sizes="(max-width: 768px) 124px, 150px"
+                          quality={80}
                           style={{ borderRadius: '50px' }}
                         />
                       </picture>

@@ -389,6 +389,8 @@ function ArticleCarousel({
                               alt={article.title}
                               title={article.title}
                               fill
+                              sizes="(max-width: 768px) 102px, 120px"
+                              quality={80}
                               className="object-cover"
                             />
 

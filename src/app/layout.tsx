@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import "@/styles/globals.css";
 import "@/styles/navbar.css";
 import "@/styles/bottomnav.css";
+import "@/styles/fontawesome.css";
 import { generateMetadata as genMeta } from "@/config/metadata";
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import AsyncCSSLoader from "@/components/layout/AsyncCSSLoader";
 
 export const metadata: Metadata = genMeta({
   title: "龍匯天下 - 澳門旅遊專家",
@@ -25,38 +27,14 @@ export default function RootLayout({
         <link rel="preconnect" href="https://cdn.jsdelivr.net" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
         
-        {/* Load Bootstrap Icons CSS asynchronously to prevent render blocking */}
+        {/* Preload Bootstrap Icons CSS for faster discovery */}
         <link
           rel="preload"
           href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
           as="style"
         />
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
-          media="print"
-          id="bootstrap-icons-css"
-        />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                var link = document.getElementById('bootstrap-icons-css');
-                if (link) {
-                  link.onload = function() {
-                    this.media = 'all';
-                  };
-                  // Fallback for browsers that don't fire onload
-                  setTimeout(function() {
-                    if (link.media === 'print') {
-                      link.media = 'all';
-                    }
-                  }, 100);
-                }
-              })();
-            `,
-          }}
-        />
+        
+        {/* Fallback for users without JavaScript */}
         <noscript>
           <link
             rel="stylesheet"
@@ -96,6 +74,7 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased m-0">
+        <AsyncCSSLoader />
         {children}
       </body>
     </html>

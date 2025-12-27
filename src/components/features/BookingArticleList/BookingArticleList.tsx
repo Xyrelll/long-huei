@@ -68,6 +68,8 @@ export default function BookingArticleList({ articles }: BookingArticleListProps
                       title={article.title}
                       width={150}
                       height={100}
+                      sizes="(max-width: 768px) 36vw, 40vw"
+                      quality={80}
                     />
                   </picture>
                 </Link>
