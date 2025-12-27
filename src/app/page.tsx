@@ -58,6 +58,12 @@ export default function Home() {
 
   return (
     <>
+      <link
+        rel="preload"
+        href="/homepage/250512_龍匯天下_包車_banner_1550px.jpg"
+        as="image"
+        fetchPriority="high"
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}

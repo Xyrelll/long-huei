@@ -197,6 +197,9 @@ export default function SelectedArticles() {
                   width={358}
                   height={200}
                   className="w-full rounded-lg mb-2"
+                  priority={true}
+                  fetchPriority="high"
+                  sizes="(max-width: 768px) 100vw, 35vw"
                 />
               </Link>
               <Link href={featuredArticle.link} className="block" target="_blank">
@@ -210,7 +213,7 @@ export default function SelectedArticles() {
               <div 
               style={{ paddingLeft: '20px' , paddingBottom: '0px' }} 
               className="row featured-sm grid grid-cols-2 gap-4">
-                {articles.map((article) => (
+                {articles.map((article, index) => (
                   <div key={article.id} style={{ paddingBottom: '10px' }} className="mb-3">
                     <div className="row flex gap-3">
                       <div className="w-3/6 shrink-0 ">
@@ -222,6 +225,9 @@ export default function SelectedArticles() {
                             width={188}
                             height={105}
                             className="w-full rounded-lg"
+                            priority={index < 2}
+                            loading={index < 2 ? undefined : "lazy"}
+                            sizes="(max-width: 768px) 50vw, 30vw"
                           />
                         </Link>
                       </div>
@@ -262,6 +268,9 @@ export default function SelectedArticles() {
                         width={150}
                         height={100}
                         style={{ borderRadius: '50px' }}
+                        priority={true}
+                        fetchPriority="high"
+                        sizes="(max-width: 768px) 33vw, 150px"
                       />
                     </picture>
                   </Link>
@@ -355,7 +364,7 @@ export default function SelectedArticles() {
               )}
             </div>
 
-            {visibleArticles.map((article) => (
+            {visibleArticles.map((article, index) => (
               <div key={article.id} className="col-12 pl-0">
                 <div className="row mb-4 article-card-row flex items-start  pb-4" style={{ position: 'relative' ,marginTop: '50px'}}>
                   <div className="col-4 col-md-4 px-0 cardpic w-1/3" style={{ flexShrink: 0  }}>
@@ -370,6 +379,9 @@ export default function SelectedArticles() {
                           width={150}
                           height={100}
                           style={{ borderRadius: '50px' }}
+                          priority={index < 2}
+                          loading={index < 2 ? undefined : "lazy"}
+                          sizes="(max-width: 768px) 33vw, 150px"
                         />
                       </picture>
                     </Link>

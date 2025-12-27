@@ -357,7 +357,10 @@ function ArticleCarousel({
                       pageIndex * itemsPerPage,
                       (pageIndex + 1) * itemsPerPage
                     )
-                    .map((article) => (
+                    .map((article, articleIndex) => {
+                      const globalIndex = pageIndex * itemsPerPage + articleIndex;
+                      const isPriority = globalIndex < 3;
+                      return (
                       <li
                         key={article.id}
                         className="bg-[#2C261C] hover:shadow-[0_0_20px_rgba(255,205,131,0.6)] hover:border-[#FFCD83] hover:border-2 transition-all duration-300"
@@ -390,6 +393,9 @@ function ArticleCarousel({
                               title={article.title}
                               fill
                               className="object-cover"
+                              priority={isPriority}
+                              loading={isPriority ? undefined : "lazy"}
+                              sizes="(max-width: 768px) 50vw, 45vw"
                             />
 
                       
@@ -421,7 +427,8 @@ function ArticleCarousel({
                           </div>
                         </Link>
                       </li>
-                    ))}
+                    );
+                    })}
                 </ul>
               ))}
             </div>
@@ -443,7 +450,7 @@ function ArticleCarousel({
       {/* Mobile List */}
       <div className="block md:hidden">
         <div className="row">
-          {articles.map((article) => (
+          {articles.map((article, index) => (
             <div key={article.id} className="col-12 pl-0 mb-4">
               <div
                 className="row mb-4 article-card-row flex items-start  pb-4"
@@ -471,6 +478,9 @@ function ArticleCarousel({
                         width={150}
                         height={100}
                         style={{ borderRadius: "50px" }}
+                        priority={index < 3}
+                        loading={index < 3 ? undefined : "lazy"}
+                        sizes="(max-width: 768px) 33vw, 150px"
                       />
                     </picture>
                   </Link>
