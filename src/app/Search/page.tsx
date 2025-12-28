@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, Suspense, useCallback } from "react";
+import { useEffect, useState, Suspense, useCallback, useRef } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import { generateBreadcrumbSchema } from "@/config/seo";
 import PageLayout from "@/components/layout/PageLayout/PageLayout";
@@ -134,27 +134,43 @@ function SearchContent() {
     setShowError(false);
   }, []);
 
-  // Initialize from URL on mount and when URL changes
+  // Track previous URL keyword to detect actual changes
+  const previousKeywordRef = useRef<string>("");
+  const isInitialMountRef = useRef<boolean>(true);
+
+  // Initialize from URL on mount and when URL Keyword param changes (not when user types)
   useEffect(() => {
     const keyword = searchParams.get("Keyword") || "";
+    
+    // Only update from URL if:
+    // 1. It's the initial mount, OR
+    // 2. The URL keyword actually changed (not just other params or re-renders)
+    const urlKeywordChanged = previousKeywordRef.current !== keyword;
+    
+    if (isInitialMountRef.current || urlKeywordChanged) {
+      previousKeywordRef.current = keyword;
 
-    // If no keyword in URL, reset to initial state
-    if (!keyword) {
-      resetSearch();
-      return;
-    }
+      // If no keyword in URL, reset to initial state
+      if (!keyword) {
+        resetSearch();
+        isInitialMountRef.current = false;
+        return;
+      }
 
-    if (keyword && allArticles.length > 0) {
-      // Use requestAnimationFrame to defer state update
-      requestAnimationFrame(() => {
-        setSearchKeyword(keyword);
-        performSearch(keyword);
-      });
-    } else if (keyword) {
-      // Use requestAnimationFrame to defer state update
-      requestAnimationFrame(() => {
-        setSearchKeyword(keyword);
-      });
+      if (keyword && allArticles.length > 0) {
+        // Use requestAnimationFrame to defer state update
+        requestAnimationFrame(() => {
+          setSearchKeyword(keyword);
+          performSearch(keyword);
+        });
+      } else if (keyword) {
+        // Use requestAnimationFrame to defer state update
+        requestAnimationFrame(() => {
+          setSearchKeyword(keyword);
+        });
+      }
+      
+      isInitialMountRef.current = false;
     }
   }, [searchParams, allArticles, performSearch, resetSearch]);
 
@@ -259,14 +275,17 @@ function SearchContent() {
               搜尋
             </Link>
           </li>
-          {searchKeyword && searchKeyword.trim() && (
-            <>
-              <li className="breadcrumb-separator text-white/70">&gt;</li>
-              <li className="breadcrumb-item active" aria-current="page">
-                <span className="text-white/70">{searchKeyword.trim()}</span>
-              </li>
-            </>
-          )}
+          {(() => {
+            const urlKeyword = searchParams.get("Keyword") || "";
+            return urlKeyword && urlKeyword.trim() ? (
+              <>
+                <li className="breadcrumb-separator text-white/70">&gt;</li>
+                <li className="breadcrumb-item active" aria-current="page">
+                  <span className="text-white/70">{urlKeyword.trim()}</span>
+                </li>
+              </>
+            ) : null;
+          })()}
         </ol>
       </nav>
 
@@ -420,7 +439,7 @@ function SearchContent() {
               style={{ fontSize: "45px", paddingBottom: "2px" }}
               className="text-white text-center font-bold mb-2 "
             >
-              {searchKeyword.trim()}
+              {(searchParams.get("Keyword") || "").trim()}
             </h2>
             <p
               style={{ fontSize: "20px", paddingBottom: "12px" }}
@@ -553,7 +572,9 @@ function SearchContent() {
               <TagCategoryLayout
                 pageTitle=""
                 breadcrumbName="搜尋結果"
-                baseUrl={`/Search?Keyword=${encodeURIComponent(searchKeyword)}${
+                baseUrl={`/Search?Keyword=${encodeURIComponent(
+                  searchParams.get("Keyword") || ""
+                )}${
                   selectedCategory
                     ? `&category=${encodeURIComponent(selectedCategory)}`
                     : ""
