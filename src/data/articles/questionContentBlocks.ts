@@ -1130,7 +1130,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '手機直撥緊急熱線（中文服務）',
-           style: HEADING_STYLE_LIST
+           style: {...HEADING_STYLE_LIST, marginTop: '0px'}
           },
           {
             type: 'text',

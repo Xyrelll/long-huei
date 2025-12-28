@@ -3,6 +3,19 @@
 import { ArticleContent } from '@/types/articleContent';
 
 // Common style constants - edit here to update all instances
+const HEADING_STYLE_LIST = { 
+  marginBottom: '55px', 
+  marginTop: '55px', 
+  fontSize: '1.125rem'
+};
+
+const TEXT_STYLE_BOTTOM_IMG = { 
+marginTop: '50px', 
+marginBottom: '20px', 
+fontSize: '1.125rem'
+};
+
+
 const TEXT_STYLE_BOTTOM_20 = { 
   marginBottom: '20px', 
   marginTop: '0', 
@@ -46,8 +59,7 @@ const LIST_STYLE = {
   marginTop: '10px',
   marginBottom: '20px',
   fontSize: '1.125rem',
-  lineHeight: '5rem',
-  gap: '12px'
+  lineHeight: '5rem'
 };
 
 export const entertainmentArticleContentBlocks: Record<number, ArticleContent> = {
@@ -64,34 +76,34 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
         level: 3,
         content: '1. 高空視角：換個角度看澳門',
         id: 'aerial-view',
-        style: HEADING_STYLE_H3
+        style: HEADING_STYLE_LIST
       },
       {
         type: 'text',
         content: '• 直升機觀光：新推出的10分鐘航程（約MOP1,200/人），從空中俯瞰港珠澳大橋和澳門半島全景',
-        style: TEXT_STYLE_BOTTOM_10
+        style: HEADING_STYLE_LIST
       },
       {
         type: 'text',
         content: '• 澳門塔空中漫步 X 版：新增極限體驗，在233米高空邊緣行走並完成指定動作可獲證書',
-        style: TEXT_STYLE_BOTTOM_20
+        style: HEADING_STYLE_LIST
       },
       {
         type: 'heading',
         level: 3,
         content: '2. 夜間澳門：越夜越美麗',
         id: 'night-macau',
-        style: HEADING_STYLE_H3
+        style: HEADING_STYLE_LIST
       },
       {
         type: 'text',
         content: '• 光影節特別路線：每年12月舉辦，「海上光影秀」位於內港碼頭區',
-        style: TEXT_STYLE_BOTTOM_10
+        style: HEADING_STYLE_LIST
       },
       {
         type: 'text',
         content: '• 深夜美食地圖：凌晨 3 點仍營業的祐漢街市熟食中心',
-        style: TEXT_STYLE_BOTTOM_20
+        style: HEADING_STYLE_LIST
       }
     ],
     // Table of Contents
@@ -141,22 +153,22 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             level: 3,
             content: '【文青必走】藝術澳門路線',
             id: 'art-route',
-            style: { marginTop: '0', marginBottom: '10px' }
+            style: TEXT_STYLE_BOTTOM_IMG
           },
           {
             type: 'text',
             content: '• 塔石藝文館：每月更換的當代藝術展',
-            style: TEXT_STYLE_BOTTOM_10
+            style: HEADING_STYLE_LIST
           },
           {
             type: 'text',
             content: '• 瘋堂十號創意園：週末文創市集（週六14:00–20:00）',
-            style: TEXT_STYLE_BOTTOM_10
+            style: HEADING_STYLE_LIST
           },
           {
             type: 'text',
             content: '• 澳門藝術博物館：數位藝術互動展區',
-            style: TEXT_STYLE_BOTTOM_20
+            style: HEADING_STYLE_LIST
           },
           {
             type: 'heading',
@@ -173,29 +185,29 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
           {
             type: 'text',
             content: '• 街頭摘星：榮記荳腐薑汁撞奶',
-            style: TEXT_STYLE_BOTTOM_20
+            style: HEADING_STYLE_LIST
           },
           {
             type: 'heading',
             level: 3,
             content: '【親子同樂】家庭友善行程',
             id: 'family-route',
-            style: HEADING_STYLE_H3
+          style: HEADING_STYLE_LIST
           },
           {
             type: 'text',
             content: '• 新濠天地童夢天地：VR 互動遊戲區',
-            style: TEXT_STYLE_BOTTOM_10
+            style: {...HEADING_STYLE_LIST, marginTop: '-50px'}
           },
           {
             type: 'text',
             content: '• 澳門科學館：全新「太空探索」主題展',
-            style: TEXT_STYLE_BOTTOM_10
+            style: HEADING_STYLE_LIST
           },
           {
             type: 'text',
             content: '• 大熊貓館：上午 10 點餵食時段最精彩',
-            style: TEXT_STYLE_BOTTOM_20
+            style: HEADING_STYLE_LIST
           }
         ],
         style: SECTION_STYLE
@@ -218,68 +230,68 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             level: 3,
             content: '春季（3–5 月）',
             id: 'spring',
-            style: { marginTop: '0', marginBottom: '10px' }
+            style: TEXT_STYLE_BOTTOM_IMG
           },
           {
             type: 'text',
             content: '• 澳門藝術節（4/26–5/31）：戶外表演藝術活動',
-            style: TEXT_STYLE_BOTTOM_10
+            style: {...HEADING_STYLE_LIST, marginTop: '-20px'}
           },
           {
             type: 'text',
             content: '• 櫻花美食節：3 月龍環葡韻日式市集',
-            style: TEXT_STYLE_BOTTOM_20
+            style: HEADING_STYLE_LIST
           },
           {
             type: 'heading',
             level: 3,
             content: '夏季（6–8 月）',
             id: 'summer',
-            style: HEADING_STYLE_H3
+            style: HEADING_STYLE_LIST
           },
           {
             type: 'text',
             content: '• 水上樂園夜場：新濠影匯每週五、六延長至 22:00',
-            style: TEXT_STYLE_BOTTOM_10
+            style: {...HEADING_STYLE_LIST, marginTop: '-50px'}
           },
           {
             type: 'text',
             content: '• 澳門國際啤酒節：7 月漁人碼頭',
-            style: TEXT_STYLE_BOTTOM_20
+            style: HEADING_STYLE_LIST
           },
           {
             type: 'heading',
             level: 3,
             content: '秋季（9–11 月）',
             id: 'autumn',
-            style: HEADING_STYLE_H3
+            style: HEADING_STYLE_LIST
           },
           {
             type: 'text',
             content: '• 澳門國際煙花比賽：新增最佳觀賞點「科學館海堤」',
-            style: TEXT_STYLE_BOTTOM_10
+            style: {...HEADING_STYLE_LIST, marginTop: '-50px'}
           },
           {
             type: 'text',
             content: '• 葡韻嘉年華：10 月土生葡人文化盛宴',
-            style: TEXT_STYLE_BOTTOM_20
+            style: HEADING_STYLE_LIST
           },
           {
             type: 'heading',
             level: 3,
             content: '冬季（12–2 月）',
             id: 'winter',
-            style: HEADING_STYLE_H3
+            style: HEADING_STYLE_LIST
           },
           {
             type: 'text',
             content: '• 聖誕市集：於大三巴牌坊前舉行',
-            style: TEXT_STYLE_BOTTOM_10
+            style: {...HEADING_STYLE_LIST, marginTop: '-50px'}
           },
           {
             type: 'text',
             content: '• 冬日澳門光影秀：1 月於議事亭前地上映',
-            style: TEXT_STYLE_BOTTOM_20
+            style: HEADING_STYLE_LIST
           }
         ],
         style: SECTION_STYLE
@@ -302,107 +314,107 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
             level: 3,
             content: '1. 望德堂區後巷藝術',
             id: 'sao-lazaro',
-            style: { marginTop: '0', marginBottom: '10px' }
+            style: TEXT_STYLE_BOTTOM_IMG
           },
           {
             type: 'text',
             content: '• 隱藏於住宅區的小型壁畫與裝置藝術',
-            style: TEXT_STYLE_BOTTOM_10
+            style: {...HEADING_STYLE_LIST, marginTop: '-20px'}
           },
           {
             type: 'text',
             content: '• 推薦路線：瘋堂斜巷 → 聖祿杞街',
-            style: TEXT_STYLE_BOTTOM_20
+            style: HEADING_STYLE_LIST
           },
           {
             type: 'heading',
             level: 3,
             content: '2. 路環漁村深度遊',
             id: 'coloane-village',
-            style: HEADING_STYLE_H3
+            style: HEADING_STYLE_LIST
           },
           {
             type: 'text',
             content: '• 荔枝碗船廠遺址：廢棄船廠改造成文創空間',
-            style: TEXT_STYLE_BOTTOM_10
+            style: {...HEADING_STYLE_LIST, marginTop: '-50px'}
           },
           {
             type: 'text',
             content: '• 路環圖書館：全澳門最安靜的閱讀角落',
-            style: TEXT_STYLE_BOTTOM_20
+            style: HEADING_STYLE_LIST
           },
           {
             type: 'heading',
             level: 3,
             content: '3. 澳門半島秘境',
             id: 'peninsula-secrets',
-            style: HEADING_STYLE_H3
+            style: HEADING_STYLE_LIST
           },
           {
             type: 'text',
             content: '• 聖奧斯定教堂廣場：少人知道的葡式庭院',
-            style: TEXT_STYLE_BOTTOM_10
+            style: {...HEADING_STYLE_LIST, marginTop: '-50px'}
           },
           {
             type: 'text',
             content: '• 崗頂劇院後巷：保留完整 19 世紀住宅區',
-            style: TEXT_STYLE_BOTTOM_20
+            style: HEADING_STYLE_LIST
           },
           {
             type: 'heading',
             level: 3,
             content: '交通新選擇',
             id: 'transport-options',
-            style: HEADING_STYLE_H3
+            style: HEADING_STYLE_LIST
           },
           {
             type: 'text',
             content: '• 電動滑板車租借：「澳門微出行」新服務',
-            style: TEXT_STYLE_BOTTOM_10
+            style: {...HEADING_STYLE_LIST, marginTop: '-50px'}
           },
           {
             type: 'text',
             content: '• 水上巴士：往返澳門半島與路環之間',
-            style: TEXT_STYLE_BOTTOM_10
+            style: HEADING_STYLE_LIST
           },
           {
             type: 'text',
             content: '• 包車服務：也可找龍匯天下預約',
-            style: TEXT_STYLE_BOTTOM_20
+            style: HEADING_STYLE_LIST
           },
           {
             type: 'heading',
             level: 3,
             content: '省錢妙招',
             id: 'money-saving',
-            style: HEADING_STYLE_H3
+            style: HEADING_STYLE_LIST
           },
           {
             type: 'text',
             content: '• 澳門通特別版：含交通與景點折扣',
-            style: TEXT_STYLE_BOTTOM_10
+            style: {...HEADING_STYLE_LIST, marginTop: '-50px'}
           },
           {
             type: 'text',
             content: '• 博物館通行證：MOP85 可參觀 6 大博物館（3 天有效）',
-            style: TEXT_STYLE_BOTTOM_20
+            style: HEADING_STYLE_LIST
           },
           {
             type: 'heading',
             level: 3,
             content: '科技應用',
             id: 'tech-apps',
-            style: HEADING_STYLE_H3
+            style: HEADING_STYLE_LIST
           },
           {
             type: 'text',
             content: '• 「澳門文旅」APP：新增 AR 導覽功能',
-            style: TEXT_STYLE_BOTTOM_10
+            style: {...HEADING_STYLE_LIST, marginTop: '-50px'}
           },
           {
             type: 'text',
             content: '• 各大酒店推出手機房卡服務',
-            style: TEXT_STYLE_BOTTOM_20
+            style: HEADING_STYLE_LIST
           }
         ],
         style: SECTION_STYLE
@@ -424,43 +436,43 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
           {
             type: 'text',
             content: 'A：2024 年起除醫療機構外已不強制。',
-            style: TEXT_STYLE_BOTTOM_20
+            style: {...HEADING_STYLE_LIST, marginTop: '0px'}
           },
           {
             type: 'heading',
             level: 3,
             content: 'Q：如何避開賭場人潮？',
             id: 'q2',
-            style: HEADING_STYLE_H3
+            style: HEADING_STYLE_LIST
           },
           {
             type: 'text',
             content: 'A：上午 11 點前或晚上 10 點後前往。',
-            style: TEXT_STYLE_BOTTOM_20
+            style: {...HEADING_STYLE_LIST, marginTop: '-50px'}
           },
           {
             type: 'heading',
             level: 3,
             content: 'Q：帶長輩旅遊最推薦方式？',
             id: 'q3',
-            style: HEADING_STYLE_H3
+            style: HEADING_STYLE_LIST
           },
           {
             type: 'text',
             content: 'A：建議包車半日遊（可向龍匯天下預約）。',
-            style: TEXT_STYLE_BOTTOM_20
+            style: {...HEADING_STYLE_LIST, marginTop: '-50px'}
           },
           {
             type: 'heading',
             level: 3,
             content: 'Q：最適合拍照的時段？',
             id: 'q4',
-            style: HEADING_STYLE_H3
+            style: HEADING_STYLE_LIST
           },
           {
             type: 'text',
             content: 'A：日出前 1 小時的「藍調時刻」。',
-            style: TEXT_STYLE_BOTTOM_20
+            style: {...HEADING_STYLE_LIST, marginTop: '-50px'}
           }
         ],
         style: SECTION_STYLE
