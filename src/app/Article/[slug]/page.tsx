@@ -352,10 +352,10 @@ function ArticleContent() {
           >
             {/* Main Content */}
             <div className="flex-1 lg:w-full ">
-              <div className="flex flex-col lg:flex-row  items-start justify-center">
+              <div className="flex flex-col lg:flex-row  items-start justify-start ">
                  {/* Left Sidebar - Social Media */}
                  <div
-                   className="w-full lg:w-20 flex mb-4 lg:mb-0"
+                   className="w-full lg:w-18 flex mb-4 lg:mb-0 bg-blue-500"
                    style={{
                      paddingLeft: isMobile ? "10px" : "0",
                      paddingRight: isMobile ? "10px" : "0",
@@ -406,7 +406,7 @@ function ArticleContent() {
                     paddingBottom: "10px",
                     borderRadius: "50px",
                   }}
-                  className="flex flex-col items-center justify-center"
+                  className="flex flex-col items-center justify-center  w-full"
                 >
                 
 
@@ -428,7 +428,7 @@ function ArticleContent() {
                   </div>
 
                   {/* Article Content */}
-                  <div className="prose prose-invert max-w-none">
+                  <div className="prose prose-invert max-w-none w-full ">
                     {article.contentBlocks ? (
                       // Check if new structured format (with description, tableOfContents, sections)
                       article.contentBlocks.description || article.contentBlocks.tableOfContents || article.contentBlocks.sections ? (

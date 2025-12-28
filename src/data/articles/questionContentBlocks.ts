@@ -3,6 +3,18 @@
 import { ArticleContent } from '@/types/articleContent';
 
 // Common style constants - edit here to update all instances
+const HEADING_STYLE_LIST = { 
+    marginBottom: '65px', 
+    marginTop: '65px', 
+    fontSize: '1.125rem'
+  };
+
+const TEXT_STYLE_BOTTOM_IMG = { 
+  marginTop: '60px', 
+  marginBottom: '20px', 
+  fontSize: '1.125rem'
+};
+
 const TEXT_STYLE_BOTTOM_20 = { 
   marginBottom: '20px', 
   marginTop: '0', 
@@ -21,7 +33,7 @@ const TEXT_STYLE_BOTTOM_20_NO_TOP = {
 };
 
 const HEADING_STYLE_H3 = { 
-  marginTop: '20px', 
+  marginTop: '65px', 
   marginBottom: '10px' 
 };
 
@@ -86,33 +98,21 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '實測日期：2025/3/15，以兌換1,000港幣（HKD）為例',
-            style: { 
-              marginBottom: '20px', 
-              marginTop: '0', 
-              fontSize: '1.125rem'
-            }
+            style: TEXT_STYLE_BOTTOM_IMG
           },
-          {
-            type: 'heading',
-            level: 3,
-            content: '渠道可得澳門元（MOP）手續費優缺點分析',
-            style: { 
-              marginBottom: '20px', 
-              marginTop: '20px', 
-              fontSize: '1.125rem'
-            }
-          },
+         
           {
             type: 'table',
-            headers: ['渠道', '匯率', '手續費', '優缺點'],
+            headers: ['渠道', '可得澳門元（MOP）', '手續費', '優缺點分析'],
             rows: [
               ['民間兌換所（推薦）', '1,028-1,032', '無', '匯率最佳，但需比價'],
               ['銀行（中國銀行）', '1,020-1,025', 'MOP 20', '安全但耗時，排隊>30分鐘'],
               ['酒店/機場櫃台', '1,010-1,015', 'MOP 50起', '緊急備用，匯率最差']
             ],
+            showBorders: false, // Set to false to remove borders
             style: { 
               marginBottom: '20px', 
-              marginTop: '10px'
+              marginTop: '60px'
             }
           },
           {
@@ -120,34 +120,22 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
             level: 3,
             content: '匯率浮動重點',
             id: 'exchange-rate-points',
-            style: { marginTop: '30px', marginBottom: '15px' }
+            style: { marginTop: '155px', marginBottom: '15px' }
           },
           {
             type: 'text',
             content: '港幣（HKD）→ 澳門元（MOP）：民間兌換所約 1:1.028~1.032（銀行僅1:1.02）',
-            style: { 
-              marginBottom: '10px', 
-              marginTop: '0', 
-              fontSize: '1.125rem'
-            }
+            style: HEADING_STYLE_LIST
           },
           {
             type: 'text',
             content: '人民幣（CNY）→ 澳門元（MOP）：約 1:1.12~1.15（受人民幣匯率波動影響大）',
-            style: { 
-              marginBottom: '10px', 
-              marginTop: '10px', 
-              fontSize: '1.125rem'
-            }
+            style:  HEADING_STYLE_LIST
           },
           {
             type: 'text',
             content: '黃金法則：兌換金額越大，民間兌換所議價空間越高（實測換HKD 5,000可多拿MOP 50）',
-            style: { 
-              marginBottom: '20px', 
-              marginTop: '10px', 
-              fontSize: '1.125rem'
-            }
+            style: HEADING_STYLE_LIST
           }
         ],
         style: SECTION_STYLE
@@ -168,11 +156,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '經實測與在地人驗證，這3家匯率持續領先：',
-            style: { 
-              marginBottom: '20px', 
-              marginTop: '0', 
-              fontSize: '1.125rem'
-            }
+            style: TEXT_STYLE_BOTTOM_IMG
           },
           {
             type: 'heading',
@@ -184,63 +168,39 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '地址：新馬路噴水池旁義隆巷內（黃色招牌）',
-            style: { 
-              marginBottom: '10px', 
-              marginTop: '0', 
-              fontSize: '1.125rem'
-            }
+            style: HEADING_STYLE_LIST
           },
           {
             type: 'text',
             content: '優勢：全澳匯率冠軍，HKD→MOP達1:1.032（2025/3數據）',
-            style: { 
-              marginBottom: '10px', 
-              marginTop: '0', 
-              fontSize: '1.125rem'
-            }
+            style: HEADING_STYLE_LIST
           },
           {
             type: 'text',
             content: '營業時間：09:30-20:00（週六日照常）',
-            style: { 
-              marginBottom: '20px', 
-              marginTop: '0', 
-              fontSize: '1.125rem'
-            }
+            style: HEADING_STYLE_LIST
           },
           {
             type: 'heading',
             level: 3,
             content: '【議事亭】大豐兌換',
             id: 'dafeng-exchange',
-            style: HEADING_STYLE_H3
+            style:  {...HEADING_STYLE_H3, marginTop: '160px'}
           },
           {
             type: 'text',
             content: '地址：議事亭前地中國國貨公司側巷',
-            style: { 
-              marginBottom: '10px', 
-              marginTop: '0', 
-              fontSize: '1.125rem'
-            }
+            style: HEADING_STYLE_LIST
           },
           {
             type: 'text',
             content: '優勢：可用人民幣現金兌換，CNY匯率1:1.15',
-            style: { 
-              marginBottom: '10px', 
-              marginTop: '0', 
-              fontSize: '1.125rem'
-            }
+            style: HEADING_STYLE_LIST
           },
           {
             type: 'text',
             content: '祕技：出示本篇攻略截圖，兌HKD 3,000以上送礦泉水',
-            style: { 
-              marginBottom: '20px', 
-              marginTop: '0', 
-              fontSize: '1.125rem'
-            }
+            style: HEADING_STYLE_LIST
           },
           {
             type: 'heading',
@@ -252,45 +212,29 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '地址：銀河度假城鑽石大堂旁（近百老匯美食街）',
-            style: { 
-              marginBottom: '10px', 
-              marginTop: '0', 
-              fontSize: '1.125rem'
-            }
+            style: HEADING_STYLE_LIST
           },
           {
             type: 'text',
             content: '優勢：深夜營業至23:00，演唱會散場可即時換匯',
-            style: { 
-              marginBottom: '20px', 
-              marginTop: '0', 
-              fontSize: '1.125rem'
-            }
+            style: HEADING_STYLE_LIST
           },
           {
             type: 'heading',
             level: 3,
             content: '注意陷阱',
             id: 'traps',
-            style: { marginTop: '30px', marginBottom: '10px' }
+            style: HEADING_STYLE_H3
           },
           {
             type: 'text',
             content: '避開「匯率1:1」的標示（一定收手續費）',
-            style: { 
-              marginBottom: '10px', 
-              marginTop: '0', 
-              fontSize: '1.125rem'
-            }
+            style: HEADING_STYLE_LIST
           },
           {
             type: 'text',
             content: '拒收皺摺破損外幣是正常規定',
-            style: { 
-              marginBottom: '20px', 
-              marginTop: '0', 
-              fontSize: '1.125rem'
-            }
+            style: HEADING_STYLE_LIST
           }
         ],
         style: SECTION_STYLE
@@ -311,11 +255,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '比價暗號：進店先問「今天電匯價多少？」（業界術語表大額兌換）',
-            style: { 
-              marginBottom: '20px', 
-              marginTop: '0', 
-              fontSize: '1.125rem'
-            }
+            style: TEXT_STYLE_BOTTOM_IMG
           },
           {
             type: 'heading',
@@ -327,20 +267,12 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '機場/碼頭匯率比市區低3%',
-            style: { 
-              marginBottom: '10px', 
-              marginTop: '0', 
-              fontSize: '1.125rem'
-            }
+            style: HEADING_STYLE_LIST
           },
           {
             type: 'text',
             content: '大三巴沿街兌換所匯率較差（遊客陷阱）',
-            style: { 
-              marginBottom: '20px', 
-              marginTop: '0', 
-              fontSize: '1.125rem'
-            }
+            style: HEADING_STYLE_LIST
           },
           {
             type: 'heading',
@@ -352,20 +284,12 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '兌換所標「0佣金」才無隱藏費用',
-            style: { 
-              marginBottom: '10px', 
-              marginTop: '0', 
-              fontSize: '1.125rem'
-            }
+            style: HEADING_STYLE_LIST
           },
           {
             type: 'text',
             content: '銀行換需帶護照，單次收MOP 20',
-            style: { 
-              marginBottom: '20px', 
-              marginTop: '0', 
-              fontSize: '1.125rem'
-            }
+            style: HEADING_STYLE_LIST
           },
           {
             type: 'heading',
@@ -377,20 +301,12 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '支付寶「匯率升級」：鑽石會員享CNY→MOP 1:1.14（優於現金）',
-            style: { 
-              marginBottom: '10px', 
-              marginTop: '0', 
-              fontSize: '1.125rem'
-            }
+            style: HEADING_STYLE_LIST
           },
           {
             type: 'text',
             content: '澳門通儲值：便利店可用港幣1:1儲值（等同匯率1:1）',
-            style: { 
-              marginBottom: '20px', 
-              marginTop: '0', 
-              fontSize: '1.125rem'
-            }
+            style: HEADING_STYLE_LIST
           },
           {
             type: 'heading',
@@ -402,11 +318,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '用澳門ATM「銀聯卡」取現 → 步驟②：再到民間兌換所換匯 → 比直接刷卡省5%貨幣轉換費',
-            style: { 
-              marginBottom: '20px', 
-              marginTop: '0', 
-              fontSize: '1.125rem'
-            }
+            style: {...HEADING_STYLE_LIST, marginTop: '-10px'}
           }
         ],
         style: SECTION_STYLE
@@ -421,11 +333,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '鑑別真偽：認明「兌換許可證」（澳門金融管理局發，編號MCEXXX）',
-            style: { 
-              marginBottom: '20px', 
-              marginTop: '0', 
-              fontSize: '1.125rem'
-            }
+            style: HEADING_STYLE_LIST
           },
           {
             type: 'heading',
@@ -437,38 +345,22 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '要求櫃員在計算機按出兌換金額',
-            style: { 
-              marginBottom: '10px', 
-              marginTop: '0', 
-              fontSize: '1.125rem'
-            }
+            style: {...HEADING_STYLE_LIST, marginTop: '-10px'}
           },
           {
             type: 'text',
             content: '拿到鈔票後立即清點（尤其MOP 1,000大鈔）',
-            style: { 
-              marginBottom: '20px', 
-              marginTop: '0', 
-              fontSize: '1.125rem'
-            }
+            style: {...HEADING_STYLE_LIST, marginTop: '-60px'}
           },
           {
             type: 'text',
             content: '大額兌換：超過MOP 50,000需登記身份證（防洗錢規定）',
-            style: { 
-              marginBottom: '20px', 
-              marginTop: '20px', 
-              fontSize: '1.125rem'
-            }
+            style: HEADING_STYLE_LIST
           },
           {
             type: 'text',
             content: '舉報管道：遇匯率詐騙撥打 治安警察局熱線 +853 2857 3333',
-            style: { 
-              marginBottom: '20px', 
-              marginTop: '0', 
-              fontSize: '1.125rem'
-            }
+            style: HEADING_STYLE_LIST
           },
           {
             type: 'heading',
@@ -587,7 +479,8 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
             style: { 
               marginBottom: '20px', 
               marginTop: '0', 
-              fontSize: '1.125rem'
+              fontSize: '1.125rem',
+              lineHeight: '2rem'
             }
           }
         ],
@@ -603,47 +496,27 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '最佳組合：大額用民間兌換所（新馬路/議事亭）+ 小額用澳門通/支付寶',
-            style: { 
-              marginBottom: '20px', 
-              marginTop: '0', 
-              fontSize: '1.125rem'
-            }
+            style: {...HEADING_STYLE_LIST, marginTop:'0px' }
           },
           {
             type: 'text',
             content: '隨身現金：3天行程建議換MOP 1,500/人（不含住宿購物）',
-            style: { 
-              marginBottom: '20px', 
-              marginTop: '0', 
-              fontSize: '1.125rem'
-            }
+            style: HEADING_STYLE_LIST
           },
           {
             type: 'text',
             content: '省錢關鍵：避開機場/賭場換匯，價差足夠吃米其林一星！',
-            style: { 
-              marginBottom: '20px', 
-              marginTop: '0', 
-              fontSize: '1.125rem'
-            }
+            style: HEADING_STYLE_LIST
           },
           {
             type: 'text',
             content: '立即追蹤龍匯天下官方IG或點擊下方連結加入官方賴，也可以找我們換錢喔~',
-            style: { 
-              marginBottom: '20px', 
-              marginTop: '20px', 
-              fontSize: '1.125rem'
-            }
+            style: HEADING_STYLE_LIST
           },
           {
             type: 'text',
             content: '開啟你的澳門之旅吧！',
-            style: { 
-              marginBottom: '20px', 
-              marginTop: '0', 
-              fontSize: '1.125rem'
-            }
+            style: HEADING_STYLE_LIST
           }
         ],
         style: SECTION_STYLE

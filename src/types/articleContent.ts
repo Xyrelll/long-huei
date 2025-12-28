@@ -109,6 +109,7 @@ export interface TableBlock extends BaseContentBlock {
   type: 'table';
   headers?: string[];
   rows: string[][];
+  showBorders?: boolean; // Enable/disable table borders
   style?: {
     marginTop?: string;
     marginBottom?: string;

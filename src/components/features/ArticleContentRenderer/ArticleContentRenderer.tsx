@@ -237,7 +237,7 @@ export default function ArticleContentRenderer({ blocks, content }: ArticleConte
               marginBottom: tableStyle.marginBottom || '0',
               overflowX: 'auto',
               display: 'flex',
-              justifyContent: 'center',
+              justifyContent: 'start',
             }}
             className="w-full"
           >
@@ -258,7 +258,7 @@ export default function ArticleContentRenderer({ blocks, content }: ArticleConte
                           fontWeight: 'bold',
                           textAlign: 'left',
                         }}
-                        className="border border-white/20 p-2 "
+                        className={block.showBorders !== false ? "border border-white/20 p-2" : "p-2"}
                       >
                         {header}
                       </th>
@@ -282,7 +282,7 @@ export default function ArticleContentRenderer({ blocks, content }: ArticleConte
                           fontWeight: 'bold',
                           textAlign: 'left',
                         }}
-                        className="border border-white/20 p-2"
+                        className={block.showBorders !== false ? "border border-white/20 p-2" : "p-2"}
                       >
                         {cell}
                       </td>
@@ -383,8 +383,8 @@ export default function ArticleContentRenderer({ blocks, content }: ArticleConte
                 <HeadingTag
                   id={block.id}
                   style={{
-                    marginTop: '0',
-                    marginBottom: '20px',
+                    marginTop: sectionStyle.marginTop || '60px',
+                    marginBottom: '8px',
                     color: '#FFFFFF',
                     fontWeight: 'bold',
                   }}
@@ -423,7 +423,7 @@ export default function ArticleContentRenderer({ blocks, content }: ArticleConte
               {block.description && (
               <p
                 style={{
-                  marginTop: '0',
+                  marginTop: '0px',
                   marginBottom: '20px',
                   fontSize: '1rem',
                   lineHeight: '1.8',
