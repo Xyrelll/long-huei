@@ -76,7 +76,7 @@ export default function PrivacyPage() {
                     </li>
                     <li className="breadcrumb-separator text-white/70">&gt;</li>
                     <li className="breadcrumb-item active" aria-current="page">
-                      <span className="text-white/70">隱私權條款</span>
+                      <span className="text-white" style={{ fontWeight: 900 }}>隱私權條款</span>
                     </li>
                   </ol>
                 </nav>

@@ -668,6 +668,7 @@ nav.nav-breadcrumb li,
 .breadcrumb-item + .breadcrumb-item::before {
   color: #fff !important;
   font-size: 0.8rem;
+  font-weight: 900;
 }
 
 nav.nav-breadcrumb a i.bi {
