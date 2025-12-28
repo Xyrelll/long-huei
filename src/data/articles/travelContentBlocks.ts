@@ -25,6 +25,12 @@ const TEXT_STYLE_BOTTOM_20_1_1 = {
   fontSize: '1.1rem'
 };
 
+const TEXT_STYLE_BOTTOM_15_TOP_50_1_125 = { 
+  marginBottom: '15px',
+  fontSize: '1.125rem',
+  marginTop: '50px'
+};
+
 // const HEADING_STYLE_H3 = { 
 //   marginTop: '20px', 
 //   marginBottom: '10px' 
@@ -34,7 +40,7 @@ const TABLE_OF_CONTENTS_STYLE = {
   backgroundColor: 'rgba(83, 52, 4, 0.842)',
   borderRadius: '50px',
   padding: '20px',
-  marginTop: '20px',
+  marginTop: '50px',
   marginBottom: '30px',
   boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 165, 0, 0.2)',
   border: '1px solid #d18411',
@@ -49,10 +55,10 @@ const SECTION_STYLE = {
 };
 
 const LIST_STYLE = {
-  marginTop: '10px',
+  marginTop: '50px',
   marginBottom: '20px',
   fontSize: '1.125rem',
-  lineHeight: '5rem',
+  lineHeight: '1.5rem',
   gap: '4rem'
 };
 
@@ -112,7 +118,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             level: 3,
             content: '1. 古羅馬表演場',
             id: 'roman-colosseum',
-            style: { marginTop: '20px', marginBottom: '15px', fontSize: '1.1rem' }
+            style: { marginTop: '0px', marginBottom: '15px', fontSize: '1.1rem' }
           },
           {
             type: 'text',
@@ -127,7 +133,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             level: 3,
             content: '2. 火山建築群與阿拉丁堡壘',
             id: 'volcano-aladdin',
-            style: { marginTop: '20px', marginBottom: '15px', fontSize: '1.1rem' }
+            style: { marginTop: '50px', marginBottom: '15px', fontSize: '1.1rem' }
           },
           {
             type: 'text',
@@ -142,7 +148,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             level: 3,
             content: '3. 唐城、東西匯聚與勵駿碼頭',
             id: 'tang-city-wharf',
-            style: { marginTop: '20px', marginBottom: '15px', fontSize: '1.1rem' }
+            style: { marginTop: '50px', marginBottom: '15px', fontSize: '1.1rem' }
           },
           {
             type: 'list',
@@ -167,7 +173,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             level: 3,
             content: '美食選擇多元：',
             id: 'food-options',
-            style: { marginTop: '20px', marginBottom: '15px', fontSize: '1.1rem' }
+            style: { marginTop: '50px', marginBottom: '15px', fontSize: '1.1rem' }
           },
           {
             type: 'list',
@@ -184,7 +190,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             level: 3,
             content: '購物體驗：',
             id: 'shopping-experience',
-            style: { marginTop: '20px', marginBottom: '15px', fontSize: '1.1rem' }
+            style: { marginTop: '50px', marginBottom: '15px', fontSize: '1.1rem' }
           },
           {
             type: 'list',
@@ -209,7 +215,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             level: 3,
             content: '娛樂設施：',
             id: 'entertainment-facilities',
-            style: { marginTop: '20px', marginBottom: '15px', fontSize: '1.1rem' }
+            style: { marginTop: '50px', marginBottom: '15px', fontSize: '1.1rem' }
           },
           {
             type: 'list',
@@ -225,7 +231,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             level: 3,
             content: '住宿推薦：',
             id: 'accommodation-recommendations',
-            style: { marginTop: '20px', marginBottom: '15px', fontSize: '1.1rem' }
+            style: { marginTop: '50px', marginBottom: '15px', fontSize: '1.1rem' }
           },
           {
             type: 'text',
@@ -313,7 +319,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
         type: 'text',
         content: '簽證新制：台灣旅客持有效期6個月以上護照可免簽停留30天，入境改採「電子通關+人臉辨識」，通關更快速',
         style: { 
-          marginTop: '30px',
+          marginTop: '50px',
           marginBottom: '20px',
           fontSize: '1.125rem'
         }
@@ -333,7 +339,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           '輕軌氹仔線延伸至媽閣站，串聯澳門半島與離島',
           '新增「澳門出行」APP整合叫車、公車與輕軌資訊'
         ],
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'50px' }
           },
           {
             type: 'text',
@@ -349,7 +355,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
         items: [
           '全澳電子支付覆蓋率達95%，連路邊攤都可用台灣行動支付'
         ],
-        style: { marginBottom: '20px', fontSize: '1.125rem' }
+        style: { marginBottom: '50px', fontSize: '1.125rem', marginTop:'50px' }
       }
     ],
     // Table of Contents
@@ -401,7 +407,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '澳門太空館（路環）：',
-            style: { marginTop: '20px', marginBottom: '10px', fontSize: '1.125rem' }
+            style: { marginTop: '0px', marginBottom: '10px', fontSize: '1.125rem' }
           },
           {
             type: 'list',
@@ -410,11 +416,11 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
               '特色設施：4D太空漫遊、月球表面模擬區'
             ],
             style: { 
-              marginBottom: '20px', 
-              marginTop: '0', 
+              marginBottom: '30px', 
+              marginTop: '50px', 
               fontSize: '1.125rem',
               fontFamily: 'inherit',
-              lineHeight: '1.6'
+              lineHeight: '1.6rem'
             }
           },
           {
@@ -429,7 +435,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
               '奢華酒店「安達仕」澳門首店進駐'
             ],
             style: { 
-              marginBottom: '20px', 
+              marginBottom: '50px', 
               marginTop: '0', 
               fontSize: '1.125rem',
               fontFamily: 'inherit',
@@ -472,14 +478,14 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '葡國菜創新版：',
-            style: { marginTop: '0', marginBottom: '10px', fontSize: '1.125rem' }
+            style: { marginTop: '50px', marginBottom: '10px', fontSize: '1.125rem' }
           },
           {
             type: 'list',
             items: [
               '「澳葡 fusion」新派料理（推薦：葡式蚵仔煎、澳門塔下午茶）'
             ],
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+            style: { marginBottom: '50px', fontSize: '1.125rem', marginTop:'50px' }
           },
           {
             type: 'text',
@@ -492,7 +498,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
               '「澳門之夜」美食市集（每晚6-12點）',
               '必吃：龍蝦包、榴槤葡撻、AI調酒'
             ],
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+            style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'50px' }
           }
         ],
         style: SECTION_STYLE
@@ -515,7 +521,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             level: 3,
             content: '新開幕酒店',
             id: 'new-hotels',
-            style: { marginTop: '0', marginBottom: '15px' }
+            style: { marginTop: '50px', marginBottom: '0px' }
           },
           {
             type: 'text',
@@ -528,7 +534,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
               '全套房設計，',
               '特色：私人管家服務、24小時米其林客房送餐'
             ],
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'50px' }
           },
           {
             type: 'text',
@@ -541,7 +547,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
               '潮牌酒店首度進駐澳門',
               '無邊際泳池直望港珠澳大橋'
             ],
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+            style: { marginBottom: '50px', fontSize: '1.125rem', marginTop:'50px' }
           },
           {
             type: 'heading',
@@ -563,7 +569,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '最佳旅遊季：',
-            style: { marginTop: '30px', marginBottom: '10px', fontSize: '1.125rem' }
+            style: { marginTop: '50px', marginBottom: '10px', fontSize: '1.125rem' }
           },
           {
             type: 'list',
@@ -571,12 +577,12 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
               '推薦10-12月（避開暑期人潮，天氣涼爽）',
               '春節期間房價漲3倍，建議避開'
             ],
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+            style: { marginBottom: '50px', fontSize: '1.125rem', marginTop:'50px' }
           },
           {
             type: 'text',
             content: '省錢秘訣：',
-            style: { marginTop: '20px', marginBottom: '10px', fontSize: '1.125rem' }
+            style: { marginTop: '50px', marginBottom: '10px', fontSize: '1.125rem' }
           },
           {
             type: 'list',
@@ -584,12 +590,12 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
               '週二～週四住房最便宜',
               '善用酒店「住客專屬優惠券」'
             ],
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+            style: { marginBottom: '30px', fontSize: '1.125rem', marginTop:'50px' }
           },
           {
             type: 'text',
             content: '網路建議：',
-            style: { marginTop: '20px', marginBottom: '10px', fontSize: '1.125rem' }
+            style: { marginTop: '0px', marginBottom: '10px', fontSize: '1.125rem' }
           },
           {
             type: 'list',
@@ -597,12 +603,12 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
               '機場可租「5G隨身WiFi」NT$150/天',
               '全澳免費WiFi熱點增加至500+處'
             ],
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+            style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'50px' }
           },
           {
             type: 'text',
             content: '澳門2025年持續進化，既有文化底蘊又不斷創新，無論第幾次造訪都能發現新驚喜！立即追蹤',
-            style: { marginTop: '30px', marginBottom: '0', fontSize: '1.125rem' }
+            style: { marginTop: '50px', marginBottom: '0', fontSize: '1.125rem' }
           },
           {
             type: 'link',
@@ -671,12 +677,12 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '澳門的舊城區是 澳門一日遊 的最佳起點。早餐後，可以先到 議事亭前地，感受葡式石板路與周邊建築的古典氛圍。接著前往澳門的象徵——大三巴牌坊，這裡曾是聖保祿教堂的一部分，現在是世界文化遺產，也是遊客必拍的打卡地點。',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+            style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'50px' }
           },
           {
             type: 'text',
             content: '沿著大三巴往上走，就能到達 大炮台與澳門博物館，了解澳門的海上貿易歷史與中葡文化交流。如果時間充裕，不妨散步到 媽閣廟，這座建於明代的古廟，是「澳門」名字的由來，充滿歷史韻味。',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+            style: { marginBottom: '50px', fontSize: '1.125rem', marginTop:'50px' }
           }
         ],
         style: SECTION_STYLE
@@ -697,7 +703,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '澳門一日遊 的午餐，絕不能錯過道地美食。前往氹仔的 官也街，你會發現這裡是美食天堂：葡式蛋撻、豬扒包、水蟹粥、葡國雞，甚至是牛雜、杏仁餅等小吃都能一次收集。帶著孩子的家庭，也能在這裡輕鬆找到適合的餐廳，讓大人小孩都能享受美食。',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'50px' }
           }
         ],
         style: SECTION_STYLE
@@ -718,7 +724,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '來到氹仔與路氹金光大道，另一個截然不同的澳門展現在眼前。這裡雲集世界知名度假村和娛樂設施，是 澳門一日遊 中最繽紛的一環。',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'50px' }
           },
           {
             type: 'list',
@@ -748,12 +754,12 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '傍晚時分，建議到 巴黎人艾菲爾鐵塔 欣賞夜景。塔頂的觀景台能夠將澳門的繁華盡收眼底，晚上還有燈光秀，非常浪漫。',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'50px' }
           },
           {
             type: 'text',
             content: '結束後可以前往 銀河酒店的鑽石大堂，觀賞音樂水舞表演，免費又精彩。若還有精力，不妨在度假區內找間餐廳，享用葡式晚餐，為這趟 澳門一日遊 劃下完美句點。',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'50px' }
           }
         ],
         style: SECTION_STYLE
@@ -813,7 +819,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '短短一天，雖然無法完全探索澳門，但透過精心規劃，澳門一日遊 依然能讓你感受到世界遺產的莊嚴、街頭小吃的魅力，以及度假村的繁華與夜景之美。這就是澳門的獨特之處——小而精緻，濃縮了歷史、人文與現代娛樂的精華。',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'20px' }
           }
         ],
         style: SECTION_STYLE
@@ -881,7 +887,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '因此，澳門親子自由行能兼顧玩樂與學習，適合週末或短假期安排。',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'50px' }
           }
         ],
         style: SECTION_STYLE
@@ -909,7 +915,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '夏季必玩！這裡擁有室內與戶外雙區域，孩子能玩滑水道、漂流河，大人也能享受衝浪模擬器。全年恆溫設計，即便冬天也能開心玩水。',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'50px' }
           },
           {
             type: 'heading',
@@ -921,7 +927,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '外型像太空飛碟，館內有互動實驗、天文館與親子展區，非常適合啟發孩子的好奇心與探索精神。',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'50px' }
           },
           {
             type: 'heading',
@@ -933,7 +939,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '不少酒店如銀河、新濠影滙、威尼斯人都設有兒童遊戲區、泳池與家庭套房，爸媽能安心休息，小朋友也不無聊。',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'50px' }
           },
           {
             type: 'heading',
@@ -945,7 +951,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '觀看大熊貓、紅頰黑猴等珍稀動物，是孩子最期待的親子行程之一。',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'50px' }
           },
           {
             type: 'heading',
@@ -957,7 +963,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '除了欣賞 360 度城市美景，勇敢的家庭還能挑戰高空觀景平台，孩子則能參加較安全的親子活動。',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'50px' }
           }
         ],
         style: SECTION_STYLE
@@ -997,7 +1003,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '選擇住宿是親子旅行的關鍵。若預算充足，可選擇 新濠影滙酒店、銀河酒店，設施豐富且有專屬兒童天地。若偏向經濟型旅遊，可考慮氹仔或澳門本島的親子友善民宿，如果想知道有什麼優惠又不錯的飯店，可以在龍匯天下Line了解更多喔！',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'50px' }
           }
         ],
         style: SECTION_STYLE
@@ -1012,7 +1018,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '親子出遊怎能少了美食？澳門擁有葡式蛋撻、豬扒包、水蟹粥等經典美食，許多餐廳也設有兒童餐點。家庭旅遊時，可以安排在氹仔官也街或路環享用在地小吃。',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'50px' }
           }
         ],
         style: SECTION_STYLE
@@ -1046,7 +1052,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '無論是體驗水上樂園的刺激，還是探索博物館的知識，澳門親子自由行 都能帶給家庭成員不同的驚喜。這是一座小而美的城市，既能滿足孩子的好奇心，也能讓爸媽享受悠閒氛圍。如果你正在規劃家庭旅遊，不妨把澳門列入清單，親子同遊的美好回憶，將會在這裡誕生。',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'20px' }
           }
         ],
         style: SECTION_STYLE
@@ -1098,7 +1104,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '選擇 澳門旅遊團 的最大好處，就是可以省去自行安排行程的麻煩。無論是兩天一夜還是三天兩夜，澳門旅遊團 都能根據需求規劃完整路線，涵蓋景點、餐食、交通，甚至住宿。許多首次到訪的旅客往往不知道該如何取捨景點，而專業的 澳門旅遊團 則會幫你安排最精華的行程，避免浪費寶貴時間。',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'50px' }
           }
         ],
         style: SECTION_STYLE
@@ -1211,7 +1217,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '無論你是想體驗世界遺產的文化深度、美食的無窮魅力，還是娛樂購物的奢華享受，澳門旅遊團 都能滿足不同需求。與其自己花時間研究路線，不如交給專業的 龍匯天下，讓旅程更輕鬆、更精彩。下次規劃假期時，不妨選擇一個口碑良好的 澳門旅遊團，帶你探索這座中西交融、充滿驚喜的城市，點擊下方LINE連結了解更多喔。',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'20px' }
           }
         ],
         style: SECTION_STYLE
@@ -1263,12 +1269,12 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '選擇澳門團體旅遊，有幾個明顯的好處。首先，澳門地小景點集中，不需耗費太多交通時間，適合一天或兩天的快閃行程。其次，澳門旅遊資源豐富，無論是歷史文化、現代娛樂、美食體驗或購物血拼，都能滿足不同年齡層的需求。',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'50px' }
           },
           {
             type: 'text',
             content: '團體旅遊可以安排專車接送，免除交通煩惱，也能統一住宿與用餐安排，大幅提升效率與舒適度。更重要的是，參與澳門團體旅遊通常能享有團體優惠價，CP值超高！',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'50px' }
           }
         ],
         style: SECTION_STYLE
@@ -1300,13 +1306,13 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
               '媽閣廟：香火鼎盛的古廟，見證澳門的命名來源。'
             ],
             ordered: true,
-            style: LIST_STYLE
+            style: {...LIST_STYLE, marginTop:'-10px',gap:'2rem'}
           },
           {
             type: 'heading',
             level: 3,
             content: '第二天：娛樂與購物享樂',
-            style: { marginTop: '20px', marginBottom: '15px' }
+            style: { marginTop: '30px', marginBottom: '15px' }
           },
           {
             type: 'list',
@@ -1316,7 +1322,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
               '官也街：購買伴手禮、享用地道澳門美食如葡式蛋撻、豬扒包。'
             ],
             ordered: true,
-            style: LIST_STYLE
+            style: {...LIST_STYLE, marginTop:'-10px',gap:'2rem'}
           }
         ],
         style: SECTION_STYLE
@@ -1346,12 +1352,12 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
               '葡國雞：結合咖哩與椰奶風味，獨特又下飯。',
               '馬介休球：以葡萄牙進口鹹魚製成，外酥內軟。'
             ],
-            style: LIST_STYLE
+            style: {...LIST_STYLE, marginTop:'50px',gap:'2rem'}
           },
           {
             type: 'text',
             content: '團體旅遊更可以安排在地餐廳體驗桌菜或特色套餐，節省等待時間，也更方便統一用餐。',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'50px' }
           }
         ],
         style: SECTION_STYLE
@@ -1375,12 +1381,12 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
               '依團體人數安排交通與住宿：可選擇旅遊巴或分組入住，效率高又安全。',
               '選擇有口碑的餐廳與景點：避免踩雷，讓團員都能有好回憶。'
             ],
-            style: LIST_STYLE
+            style: {...LIST_STYLE, marginTop:'50px',gap:'2rem'}
           },
           {
             type: 'text',
             content: '此外，也可依團體需求客製化行程，例如企業員工旅遊可安排團建活動，學生旅遊則可加入文化教育元素，靈活彈性。',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'50px' }
           }
         ],
         style: SECTION_STYLE
@@ -1395,12 +1401,12 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '澳門是一個能同時滿足觀光、美食、文化與娛樂需求的城市，不論是朋友聚會、公司旅遊還是學校出遊，選擇澳門團體旅遊都能讓人留下美好回憶。掌握以上行程安排與注意事項，搭配專業旅行團隊，您的澳門之旅將充滿驚喜與感動。',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'20px' }
           },
           {
             type: 'text',
             content: '若您還在猶豫該去哪裡，不妨現在就開始規劃一趟專屬的澳門團體旅遊行程吧，可以點擊下面LIine連結聯絡我們，可以幫您搞定交通與住宿喔~',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'50px' }
           }
         ],
         style: SECTION_STYLE
@@ -1451,17 +1457,17 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '大三巴牌坊原名「聖保祿大教堂遺址」，建於17世紀初，曾是遠東最大的天主教教堂，歷經火災後僅存壯觀的前壁石雕。2025年，遺址旁增設的「沉浸式歷史展廳」將透過AR技術重現教堂原貌，讓遊客直觀感受其輝煌歷史。',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'50px' }
           },
           {
             type: 'text',
             content: '建築特色：牌坊融合歐洲文藝復興與東方雕刻藝術，頂端的十字架、聖母雕像與象徵中國的牡丹浮雕，見證了中西文化交融。',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'50px' }
           },
           {
             type: 'text',
             content: '參觀須知：全年免費開放，建議避開中午烈日，清晨或傍晚的光線最適合拍照。',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'50px' }
           }
         ],
         style: SECTION_STYLE
@@ -1482,27 +1488,27 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '從大三巴牌坊出發，步行10分鐘內可抵達多個文化景點與打卡熱點：',
-            style: { marginBottom: '15px', fontSize: '1.125rem' }
+            style: TEXT_STYLE_BOTTOM_15_TOP_50_1_125
           },
           {
             type: 'text',
             content: '1.澳門博物館（位於大炮台山頂）：2025年新增「海上絲路貿易文物特展」，展示葡萄牙航海時代的珍貴文物。',
-            style: { marginBottom: '15px', fontSize: '1.125rem' }
+            style: TEXT_STYLE_BOTTOM_15_TOP_50_1_125
           },
           {
             type: 'text',
             content: '2.戀愛巷：粉彩色建築與文創小店林立，巷尾新開的「光影藝術牆」結合互動投影，夜間更顯浪漫。',
-            style: { marginBottom: '15px', fontSize: '1.125rem' }
+            style: TEXT_STYLE_BOTTOM_15_TOP_50_1_125
           },
           {
             type: 'text',
             content: '3.哪吒廟：隱身於牌坊右側的中式廟宇，2025年推出中葡文化對照導覽，深入解讀澳門宗教融合。',
-            style: { marginBottom: '15px', fontSize: '1.125rem' }
+            style: TEXT_STYLE_BOTTOM_15_TOP_50_1_125
           },
           {
             type: 'text',
             content: '建議路線：大三巴→哪吒廟→澳門博物館→戀愛巷，全程約2小時可輕鬆走完。',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'50px' }
           }
         ],
         style: SECTION_STYLE
@@ -1528,22 +1534,22 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '葡國菜首選：福隆新街的「番茄屋」主打改良版葡式料理，馬介休球和葡式燴雞必點。',
-            style: { marginBottom: '15px', fontSize: '1.125rem' }
+            style: TEXT_STYLE_BOTTOM_15_TOP_50_1_125
           },
           {
             type: 'text',
             content: '街頭小吃：議事亭前地的「檸檬王」老攤販，2025年推出限定款陳皮冰淇淋，酸甜消暑。',
-            style: { marginBottom: '15px', fontSize: '1.125rem' }
+            style: TEXT_STYLE_BOTTOM_15_TOP_50_1_125
           },
           {
             type: 'text',
             content: '新開業推薦：大三巴腳下的「匠．茶記」以澳門奶茶搭配現烤豬扒包，開放式廚房可觀看製作過程。',
-            style: { marginBottom: '15px', fontSize: '1.125rem' }
+            style: TEXT_STYLE_BOTTOM_15_TOP_50_1_125
           },
           {
             type: 'text',
             content: '貼心提醒：避開週末用餐高峰，多數店家支持電子支付，部分老店仍只收現金。',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+            style: TEXT_STYLE_BOTTOM_15_TOP_50_1_125
           }
         ],
         style: SECTION_STYLE
@@ -1564,27 +1570,27 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '澳門輕軌東線預計今年全線通車，新增的「聖保祿站」步行至大三巴僅需8分鐘，比過去節省一半時間。',
-            style: { marginBottom: '15px', fontSize: '1.125rem' }
+            style: TEXT_STYLE_BOTTOM_15_TOP_50_1_125
           },
           {
             type: 'text',
             content: '其他方式包括：',
-            style: { marginBottom: '15px', fontSize: '1.125rem' }
+            style: TEXT_STYLE_BOTTOM_15_TOP_50_1_125
           },
           {
             type: 'text',
             content: '免費接駁車：各大酒店提供往返大三巴的接駁專車，最新班次可於酒店官網查詢。',
-            style: { marginBottom: '15px', fontSize: '1.125rem' }
+            style: TEXT_STYLE_BOTTOM_15_TOP_50_1_125
           },
           {
             type: 'text',
             content: '步行建議：從議事亭前地沿著碎石路漫步而上，沿途經過特色小店，適合喜歡慢遊的旅客。',
-            style: { marginBottom: '15px', fontSize: '1.125rem' }
+            style: TEXT_STYLE_BOTTOM_15_TOP_50_1_125
           },
           {
             type: 'text',
             content: '避人潮秘訣：週一至週五上午9點前人潮較少，週末可選擇晚間參觀（牌坊夜間打燈至22:00）。',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'50px' }
           }
         ],
         style: SECTION_STYLE
@@ -1615,12 +1621,12 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
               '季節限定活動：12月結合聖誕節的「中葡市集」，可品嘗到現做的木糠布甸與非洲雞。'
             ],
             ordered: true,
-            style: { ...LIST_STYLE, lineHeight: '2rem' }
+            style: { ...LIST_STYLE, lineHeight: '1rem' ,gap:'0.5rem' }
           },
           {
             type: 'text',
             content: '【大三巴牌坊】結語：行了！我們龍匯天下官方賴連結給你放下面啦，記得也去追蹤一下我們官方',
-            style: { marginBottom: '5px', fontSize: '1.125rem'  }
+            style: { marginBottom: '5px', fontSize: '1.125rem' , marginTop:'-15px' }
           },
           {
             type: 'link',
@@ -1636,7 +1642,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '才不會錯過最新有關澳門旅遊的消息喔~',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'50px' }
           }
         ],
         style: SECTION_STYLE
@@ -1687,7 +1693,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '2025年完成第二期擴建工程，經Aedas建築事務所重新規劃：',
-            style: { marginBottom: '15px', fontSize: '1.125rem' }
+            style: TEXT_STYLE_BOTTOM_15_TOP_50_1_125
           },
           {
             type: 'list',
@@ -1696,7 +1702,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
               '智能攤車系統：200+餐車配備美的集團IoT溫控技術，油溫誤差控制在±1.5℃',
               '聲學分區科技：Bose主動降噪柱劃分12個美食區，各區域噪音值維持55分貝以下'
             ],
-            style: LIST_STYLE
+            style: {...LIST_STYLE, gap:'0.5rem', marginTop:'-10px'}
           }
         ],
         style: SECTION_STYLE
@@ -1717,7 +1723,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '與《米其林指南》合作推出全球首個街市評鑑系統：',
-            style: { marginBottom: '15px', fontSize: '1.125rem' }
+            style: TEXT_STYLE_BOTTOM_15_TOP_50_1_125
           },
           {
             type: 'list',
@@ -1726,7 +1732,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
               '分子甜品推車：香港佳記甜品聯手法國Christophe Michalak打造低糖版雞蛋仔',
               '拉麵計量認證：日本丸龜製麵開發0.1mm精度的麵條直徑檢測器，誤差超標自動回饋10%餐費'
             ],
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: {...LIST_STYLE, gap:'0.5rem', marginTop:'-10px'}
           }
         ],
         style: SECTION_STYLE
@@ -1750,7 +1756,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
               'AR尋寶遊戲：掃描指定攤位QR Code觸發限量版NFT菜譜碎片收集任務',
               '氣味直播間：美食博主可透過酒店特製直播箱，遠端傳送牛雜鍋的蒸氣分子至粉絲端'
             ],
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: {...LIST_STYLE, gap:'0.5rem', marginTop:'-10px'}
           }
         ],
         style: SECTION_STYLE
@@ -1771,7 +1777,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '經SGS認證的環保數據指標：',
-            style: { marginBottom: '15px', fontSize: '1.125rem' }
+            style: TEXT_STYLE_BOTTOM_15_TOP_50_1_125
           },
           {
             type: 'list',
@@ -1780,7 +1786,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
               '廚餘發電擂台：每日19:00開放觀眾投餵殘食，每公斤可轉化0.7度電力供攤車使用',
               '循環餐具押金：租借環保餐盒需支付50MOP，歸還時自動計算碳足跡返還對應代幣'
             ],
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: {...LIST_STYLE, gap:'0.5rem', marginTop:'-10px'}
           }
         ],
         style: SECTION_STYLE
@@ -1801,7 +1807,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '2025年人氣公式：',
-            style: { marginBottom: '15px', fontSize: '1.125rem' }
+            style: TEXT_STYLE_BOTTOM_15_TOP_50_1_125
           },
           {
             type: 'list',
@@ -1811,12 +1817,12 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
               '3.親子科學任務：在「禮記雪糕」購買實驗室套餐附贈DNA提取工具組，可自製果味基因圖譜'
             ],
             ordered: true,
-            style: { marginBottom: '20px', fontSize: '1.125rem', paddingLeft: '0' }
+            style: { ...LIST_STYLE, gap:'0.5rem', marginTop:'-10px'}
           },
           {
             type: 'text',
             content: '不錯吧~是不是很值得去走上一遭呢?想知道更多關於【澳門百老匯】可以點擊下方龍匯天下官方賴連結詢問，也記得追蹤一下我們龍匯天下官方',
-            style: { marginBottom: '5px', fontSize: '1.125rem' }
+            style: { marginBottom: '5px', fontSize: '1.125rem' , marginTop:'50px'}
           },
           {
             type: 'link',
@@ -1832,7 +1838,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '才不會錯過澳門旅遊最新活動及消息喔！',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'50px' }
           }
         ],
         style: SECTION_STYLE
@@ -1886,17 +1892,17 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '澳門地標「大三巴牌坊」必訪！推薦早上8點抵達避開人潮，側面「戀愛巷」的粉橘牆面＋葡式建築，輕鬆拍出歐風大片。牌坊後方的天主教藝術博物館免費開放，深入感受400年中西交匯史。',
-            style: { marginBottom: '15px', fontSize: '1.125rem' }
+            style: TEXT_STYLE_BOTTOM_15_TOP_50_1_125
           },
           {
             type: 'text',
             content: '路線：關閘搭「3號公車」直達，或從議事亭前地步行10分鐘。',
-            style: { marginBottom: '15px', fontSize: '1.125rem' }
+            style: {...TEXT_STYLE_BOTTOM_15_TOP_50_1_125, marginTop:'-10px'}
           },
           {
             type: 'text',
             content: '小秘密：週三下午有免費粵語導覽，聽完才知道牌坊藏著「火災倖存密碼」！',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+            style: {...TEXT_STYLE_BOTTOM_15_TOP_50_1_125, marginTop:'-10px'}
           }
         ],
         style: SECTION_STYLE
@@ -1917,17 +1923,17 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '氹仔「龍環葡韻」五棟薄荷綠葡式建築，被譽為澳門最美婚紗照聖地！週末市集能淘手作飾品，對面濕地黃昏時常有白鷺飛掠，拍動態景超夢幻。',
-            style: { marginBottom: '15px', fontSize: '1.125rem' }
+            style: TEXT_STYLE_BOTTOM_15_TOP_50_1_125
           },
           {
             type: 'text',
             content: '路線：搭乘「11、15、22號公車」至「氹仔官也街站」，步行5分鐘即達。',
-            style: { marginBottom: '15px', fontSize: '1.125rem' }
+            style: {...TEXT_STYLE_BOTTOM_15_TOP_50_1_125, marginTop:'-10px'}
           },
           {
             type: 'text',
             content: '私房點：住宅博物館後方小徑的「嘉模聖母堂眺望台」，能一次收錄教堂＋濕地＋夕陽！',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: {...TEXT_STYLE_BOTTOM_15_TOP_50_1_125, marginTop:'-10px'}
           }
         ],
         style: SECTION_STYLE
@@ -1948,17 +1954,17 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '路環的靜謐漁村氛圍，與本島喧囂成反差！必拍「十月初五馬路」的濱海長廊、明黃色聖方濟各教堂，再衝「安德魯餅店總店」吃熱騰葡撻（不用排隊！）。',
-            style: { marginBottom: '15px', fontSize: '1.125rem' }
+            style: TEXT_STYLE_BOTTOM_15_TOP_50_1_125
           },
           {
             type: 'text',
             content: '路線：從澳門半島搭「21A、25號公車」約40分鐘，建議搭配黑沙海灘行程。',
-            style: { marginBottom: '15px', fontSize: '1.125rem' }
+            style: {...TEXT_STYLE_BOTTOM_15_TOP_50_1_125, marginTop:'-10px'}
           },
           {
             type: 'text',
             content: '吃貨技：安德魯對面「橋記咖啡」的辣魚通粉，是澳門學生的共同回憶！',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: {...TEXT_STYLE_BOTTOM_15_TOP_50_1_125, marginTop:'-10px'}
           }
         ],
         style: SECTION_STYLE
@@ -1979,17 +1985,17 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '「東望洋燈塔」，360度俯瞰新舊城區與港珠澳大橋！沿山徑探索17世紀砲台遺跡，幸運的話能遇到駐守人員講古。',
-            style: { marginBottom: '15px', fontSize: '1.125rem' }
+            style: TEXT_STYLE_BOTTOM_15_TOP_50_1_125
           },
           {
             type: 'text',
             content: '路線：搭「2、6、12、28C號公車」至「得勝斜巷」，步行15分鐘上山。',
-            style: { marginBottom: '15px', fontSize: '1.125rem' }
+            style: {...TEXT_STYLE_BOTTOM_15_TOP_50_1_125, marginTop:'-10px'}
           },
           {
             type: 'text',
             content: '省力法：搭的士到「東望洋酒店」後方入口，省掉一半爬坡路！',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: {...TEXT_STYLE_BOTTOM_15_TOP_50_1_125, marginTop:'-10px'}
           }
         ],
         style: SECTION_STYLE
@@ -2010,17 +2016,17 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '黑白波浪紋地面、嫩黃色聖奧斯定教堂、墨綠窗櫺的何東圖書館……崗頂前地根本是澳門版「小里斯本」！推薦下午4點後造訪，斜陽灑在葡式建築上光影絕美。',
-            style: { marginBottom: '15px', fontSize: '1.125rem' }
+            style: TEXT_STYLE_BOTTOM_15_TOP_50_1_125
           },
           {
             type: 'text',
             content: '路線：從議事亭前地步行8分鐘，順路探「聖老楞佐教堂」的巴洛克風彩繪玻璃。',
-            style: { marginBottom: '15px', fontSize: '1.125rem' }
+            style: {...TEXT_STYLE_BOTTOM_15_TOP_50_1_125, marginTop:'-10px'}
           },
           {
             type: 'text',
             content: '冷知識：廣場上的三盞煤氣路燈，是澳門最後的明火街燈！',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: {...TEXT_STYLE_BOTTOM_15_TOP_50_1_125, marginTop:'-10px'}
           }
         ],
         style: SECTION_STYLE
@@ -2043,12 +2049,12 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             alt: '瑪嘉烈蛋塔',
             width: 300,
             height: 200,
-            style: { marginBottom: '20px' }
+            style: { marginBottom: '20px',marginTop:'50px'}
           },
           {
             type: 'text',
             content: '榮記豆腐：冷熱皆有的豆花，搭配辣醬油「混搭吃法」在地人激推',
-            style: { marginBottom: '15px', fontSize: '1.125rem' }
+            style: { marginBottom: '15px', fontSize: '1.125rem',marginTop:'-10px'}
           },
           {
             type: 'image',
@@ -2056,7 +2062,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             alt: '榮記豆腐',
             width: 300,
             height: 200,
-            style: { marginBottom: '20px' }
+            style: { marginBottom: '20px',marginTop:'50px'}
           },
           {
             type: 'text',
@@ -2069,7 +2075,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             alt: '大利來記豬扒包',
             width: 300,
             height: 200,
-            style: { marginBottom: '20px' }
+            style: { marginBottom: '20px',marginTop:'50px'}
           },
           {
             type: 'text',
@@ -2082,7 +2088,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
             alt: '莫義記榴槤雪糕',
             width: 300,
             height: 200,
-            style: { marginBottom: '20px' }
+            style: { marginBottom: '20px',marginTop:'50px'}
           }
         ],
         style: SECTION_STYLE
@@ -2102,7 +2108,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: 'A：絕對可以！澳門面積僅32.9平方公里，搭公車＋步行就能輕鬆串聯，參考本文路線早上8點出發，晚上10點收工剛好。',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: {...TEXT_STYLE_BOTTOM_15_TOP_50_1_125, marginTop:'-10px'}
           },
           {
             type: 'text',
@@ -2112,7 +2118,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: 'A：交通（公車＋計程車）約$150MOP/天，門票多數免費，飲食$300MOP能吃遍地道小吃！',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: {...TEXT_STYLE_BOTTOM_15_TOP_50_1_125, marginTop:'-10px'}
           },
           {
             type: 'text',
@@ -2122,7 +2128,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: 'A：景點標示、公車到站皆有中文，店家大多能聽懂普通話，安心啦～',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: {...TEXT_STYLE_BOTTOM_15_TOP_50_1_125, marginTop:'-10px'}
           }
         ],
         style: SECTION_STYLE
@@ -2153,7 +2159,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '另外也可點擊下方連結加入龍匯天下官方賴喔~',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'50px' }
           }
         ],
         style: SECTION_STYLE
@@ -2207,7 +2213,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '大三巴牌坊是澳門最有代表性的歷史遺跡，【澳門自由行】打卡必去~大三巴不僅是一堵城墻，更是葡式建築與中國文化的融合象征，站在台階前拍一張照片，是幾乎所有遊客來澳門的必修課。路線的話，早上從關閘或口岸入境後，步行或搭乘公交前往。這裡的亮點除了感受「東方小歐洲」的建築之美，也能在旁邊的天主教藝術博物館和遺址慢慢逛，沿路小吃也豐富，可別顧著逛忘了嘗幾口，那可就得不「嘗」失了！',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'50px' }
           }
         ],
         style: SECTION_STYLE
@@ -2228,7 +2234,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '它可是澳門歷史與風景的完美結合，在這你可以俯瞰老城區全景，了解澳門的前世今生，相當值得一去！而這緊鄰大三巴的大炮台，是早期防禦體系的重要組成部分。站在高處，整個澳門城區盡收眼底，而博物館則完整講述了澳門從漁村到中西交匯之城的變遷。路線的話就是從大三巴步行5分鐘即可抵達。很快吧~替大家總結一下這一站的重點，看古炮與城墻，感受時代更替。然後去澳門博物館，它的內部布展精致，絕對值得慢慢看。同時這裡也是許多攝影愛好者拍攝城市天際線眾所周知的絕佳位置呢~',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'50px' }
           }
         ],
         style: SECTION_STYLE
@@ -2249,7 +2255,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '會推薦它的理由，首先鵝卵石地面加上彩色建築，既浪漫又有異國氣氛，而議事亭前地是澳門的心臟地帶，這裡的街道、建築和廣場，處處透著歐洲味道。走在其中，就像置身國外電影場景。路線的話也很簡單，從大炮台步行10分鐘就到了，光是這裡很好拍照這點，你的【澳門自由行】就沒有理由不來了對吧~這裡可是澳門最有氛圍的街區之一，可以逛街可以喝下午茶，玩累了就去玫瑰堂沉澱一下心情，小編私心相當推薦！',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'50px' }
           }
         ],
         style: SECTION_STYLE
@@ -2270,7 +2276,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '澳門是鼎鼎大名的「吃貨天堂」，融合了葡式、中式、東南亞風味。從葡式蛋塔到豬扒包，再到地道米粉和糖水，老城區沒走幾步就一家店，密度堪稱台灣的便利商店，琳瑯滿目的本地小吃隨便你挑。不過這邊建議還是要避開中午飯點的高峰，早點吃或稍晚些更舒適。然後街邊攤多，挑人多乾凈的店即可。不用擔心吃不慣 這裡總有你的愛~',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'50px' }
           }
         ],
         style: SECTION_STYLE
@@ -2291,7 +2297,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '除了是城市制高點可以看全景、拍夕陽還能體驗相當刺激的項目，澳門塔可不僅僅是觀景勝地，更有世界級的高空彈跳挑戰。如果你熱愛刺激，這裡切不能錯過。這裡路線就建議從老城區叫車，約15分鐘直達。不免俗地整理一下【澳門自由行】來到這裡的重點，360度無死角看澳門與珠海，還能體驗在玻璃地板行走，挑戰心理極限。另外啊，不跳也能上塔的，哪怕只拍照也很值得的。',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'50px' }
           }
         ],
         style: SECTION_STYLE
@@ -2312,7 +2318,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '這裡相較老城區，更寧靜，有歐洲村落的感覺。氹仔老街、龍環葡韻住宅式博物館等景點都集中於此，適合黃昏時分慢慢散步，感受不一樣的澳門。建議直接乘坐輕軌前往氹仔站，步行抵達。這裡亮點也不少，看落日映照老街，拍照極美。也能感受葡式民居風格，很像穿越時空，當然，可以邊走邊吃，感受地道生活氣息。',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'50px' }
           }
         ],
         style: SECTION_STYLE
@@ -2333,7 +2339,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '夜幕下的澳門更加迷人，海風、燈火、心情剛剛好。可選擇前往澳門旅遊塔下或外港碼頭附近的海濱散步區，吹風拍夜景，【澳門自由行】一天的疲憊隨著風一掃而空。路線就建議從氹仔出發輕軌或叫車回市區即可。最後一站的亮點，除了拍攝對岸珠海燈火與澳門塔交相輝映，感受港口城市夜晚的獨特氛圍外，也給自己留一段安靜的回憶時光。',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'50px' }
           }
         ],
         style: SECTION_STYLE
@@ -2348,7 +2354,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '澳門區域小、交通方便，步行就可以覆蓋主要景點，配合地圖App是可以輕鬆規劃路線的。哪怕就一天，也是能玩得相當盡興的！千萬別有那種才一天絕對玩不到什麼，玩不過癮這種想法，真的，信我一把，有得你玩的！',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'50px' }
           },
           {
             type: 'heading',
@@ -2359,7 +2365,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '澳門居民多數會普通話，即使不會，也有圖示標牌可輔助，溝通基本無壓力。',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'50px' }
           },
           {
             type: 'heading',
@@ -2370,7 +2376,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '盡量避開節假日高峰時段，選擇工作日出行，會輕鬆許多，熱門景點建議早點去打卡。',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'50px' }
           },
           {
             type: 'heading',
@@ -2381,7 +2387,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '市區酒店選擇多，正規酒店基本都有嚴格管理，提前查看用戶評價能規避大多數問題。',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'50px' }
           },
           {
             type: 'text',
@@ -2402,7 +2408,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '上追蹤也可以',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'50px' }
           }
         ],
         style: SECTION_STYLE
@@ -2448,12 +2454,12 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '先說澳門旅遊的結論，去澳門旅遊沒個三五個月是玩不完的，值得去的地方太多太多了！簡單舉幾個澳門旅遊的例子就好，你想去看看最經典的澳門賭場，光是賭場就有澳門威尼斯人娛樂場、永利娛樂場、星際娛樂場、英皇宮殿娛樂場...你想去澳門的歷史景點；大三巴牌坊、議事亭前地、媽閣廟、大炮台...',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'50px' }
           },
           {
             type: 'text',
             content: '奇怪?那我澳門旅遊只有三五天的安排是不是不該去澳門?我知道各位很急，但各位先別急，小編早就整理好了澳門旅遊cp值最高、最多景點給帥哥美女們拍照打卡的地方了，說了這麼多到底在哪?跟著小編看下去吧~',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'50px' }
           }
         ],
         style: SECTION_STYLE
@@ -2474,7 +2480,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '小編要推薦的澳門旅遊去處就是澳門的美高梅，作為澳門地平線上最引人矚目的時尚地標，澳門美高梅連續十年奪得《福布斯旅遊指南》五星殊榮，是尊尚格調的典範。除豪華客房及套房外，賓客能在這裏發現眾多與別不同的奢華享受，包括充滿歐陸設計特色的天幕廣場、五星殊榮的水療中心、多間頂級餐廳，致力為客人提供世界級佳餚，以及功能齊全的會議及場地設施等...',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'50px' }
           }
         ],
         style: SECTION_STYLE
@@ -2489,17 +2495,17 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '澳門美高梅（2010年4月23日前稱澳門美高梅金殿；MGM Macau）位於澳門新口岸新填海區，樓高154米，高35層，為一所五星級娛樂場酒店，總建築面積達200萬平方呎，原為澳門商業貿易城南區部分；南向氹仔，西靠壹號湖畔，北靠永利澳門。',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'50px' }
           },
           {
             type: 'text',
             content: '澳門美高梅是美高梅公司於澳門首個娛樂場酒店項目，是澳門六個賭牌（三個主牌及三個副牌）之中最後一個賭牌公司正式落成的旗艦賭場酒店，也標誌著澳門博彩業正式進入六分天下的局面。澳門美高梅所領之賭牌，屬於澳門博彩公司賭牌之副牌。',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'50px' }
           },
           {
             type: 'text',
             content: '澳門美高梅整個項目投資逾12.5億美元，香港王董國際有限公司設計，香港協興建築承建，於2005年年中進行填海、填土及興建的工程；於2007年12月18日開幕。',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'50px' }
           }
         ],
         style: SECTION_STYLE
@@ -2520,12 +2526,12 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '澳門旅遊必去保利美高梅博物館，它由保利文化與美高梅中國聯合打造，於2024年11月15日開幕為大中華區首座建造於酒店內合國際規模的博物館。博物館位於澳門美高梅二樓，空間面積近2000平方米，按照國家一級文物展陳標準建造，以創新科技融合傳統非遺工藝及革新的策展手法作展覽。博物館首展以「海上絲綢之路」為主題的「藍色飄帶——探索神秘海域　邂逅絲路遺珍」，共展出84組共228件文物及藝術品，重點展品包括在「交織」區展出的國寶級珍品「圓明園四獸首」銅像文物原件及「唐三彩文官俑」藝術品，展期只到2025年9月。',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'50px' }
           },
           {
             type: 'text',
             content: '天幕廣場是澳門旅遊大家選擇美高梅的其中一個主要的賣點，位於金殿中心處的天幕廣場面積約2,320平方米，天幕最高處達25米，廣場的設計參照了葡萄牙首都里斯本的里斯本車站作為建築風格以及融合鐵達尼號的貴賓區的設計，充份地表現出葡萄牙對於澳門帶來的影響及高級酒店的形象。',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'50px' }
           }
         ],
         style: SECTION_STYLE
@@ -2546,7 +2552,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '澳門旅遊絕對不能錯過澳門美高梅正門側矗立的一座金獅青銅雕像，該雕像高10米、重63噸，形態參照拉斯維加斯美高梅大酒店的金獅銅像，由鑄造香港天壇大佛的南京著名雕塑藝術坊製造。金獅青銅雕像於2007年10月15日揭幕。另外，澳門美高梅的商標上也有這頭金獅，喻意其公司品牌理念（堅毅力量、領導群雄、信心勇氣、尊貴顯赫及忠誠一致）。',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'50px' }
           }
         ],
         style: SECTION_STYLE
@@ -2560,13 +2566,23 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
         content: [
           {
             type: 'text',
-            content: '【澳門旅遊】2025/5月水舞間強勢來襲，詳情及相關影音盡在instergram：龍匯天下',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+            content: '【澳門旅遊】2025/5月水舞間強勢來襲，詳情及相關影音盡在instergram：',
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'20px' }
+          },
+          {
+            type: 'link',
+            text: '龍匯天下',
+            href: 'https://www.instagram.com/lhts.8899/',
+            target: '_blank',
+            style: {
+              color: '#3b82f6',
+              textDecoration: 'underline'
+            }
           },
           {
             type: 'text',
-            content: '美高梅的位置距澳門國際機場車程約15分鐘而距澳門客運碼頭車程約5分鐘，但若你是台灣人，小編很推薦您在instergram搜尋「龍匯天下」也可直接點擊官方line添加做進一步的詢問與了解~放心，入住才付款，你安心，我們才放心！',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+            content: '\n\n 美高梅的位置距澳門國際機場車程約15分鐘而距澳門客運碼頭車程約5分鐘，但若你是台灣人，小編很推薦您在instergram搜尋「龍匯天下」也可直接點擊官方line添加做進一步的詢問與了解~放心，入住才付款，你安心，我們才放心！',
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'50px' }
           }
         ],
         style: SECTION_STYLE
@@ -2618,7 +2634,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '以下介紹澳門必訪的TOP5歷史景點，帶你穿梭400年時光隧道。',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'50px' }
           }
         ],
         style: SECTION_STYLE
@@ -2644,7 +2660,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '重點注意：每週三、六晚間8點有光雕投影秀，最佳觀賞位置在牌坊正前方階梯。',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'50px' }
           }
         ],
         style: SECTION_STYLE
@@ -2664,7 +2680,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '交通攻略：搭乘公車1、2、5路線至「媽閣廟站」，周邊有免費接駁車往旅遊塔。',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'50px' }
           }
         ],
         style: SECTION_STYLE
@@ -2679,7 +2695,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '以下介紹澳門必玩的TOP4尖叫系設施與網美打卡景點。',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'50px' }
           }
         ],
         style: SECTION_STYLE
@@ -2700,7 +2716,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '澳門旅遊塔的「空中漫步X版」是亞洲最高戶外挑戰，在233米高空無扶手行走，台灣旅客可選普通版（綁安全帶）或極限版（自由行走）。塔內還有透明地板觀景台與旋轉餐廳，推薦預約下午茶時段（每人1,200台幣）同時享受美食與全景。每年11月會舉辦國際跳傘大賽，可現場報名雙人跳傘體驗。',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'50px' }
           }
         ],
         style: SECTION_STYLE
@@ -2720,7 +2736,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '隱藏玩法：向工作人員索取AR眼鏡，能解鎖隱藏版動態特效。',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'50px' }
           }
         ],
         style: SECTION_STYLE
@@ -2735,7 +2751,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '以下介紹澳門必吃的TOP3米其林小吃與葡國菜。',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'50px' }
           }
         ],
         style: SECTION_STYLE
@@ -2761,7 +2777,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '交通提醒：從澳門半島搭26A公車約40分鐘，或搭計程車跳表約300台幣。',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'50px' }
           }
         ],
         style: SECTION_STYLE
@@ -2776,7 +2792,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '永利皇宮的觀光纜車不僅免費搭乘，還推出「纜車晚餐套票」（每人3,800台幣）能在車廂內享用米其林星級料理。推薦預約晚間7點的「水舞秀時段」，搭配音樂噴泉的燈光秀超浪漫。纜車運營到午夜12點，最後一班車廂適合拍攝無人空景。',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'50px' }
           }
         ],
         style: SECTION_STYLE
@@ -2791,7 +2807,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '以下提供澳門景點的實用攻略與專屬建議。',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'50px' }
           }
         ],
         style: SECTION_STYLE
@@ -2811,7 +2827,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '必備物品：轉接插頭（英規三腳）、輕便雨衣。',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'50px' }
           }
         ],
         style: SECTION_STYLE
@@ -2852,7 +2868,7 @@ export const travelArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '或下方官方賴連結了解更多獨家優惠吧！',
-            style: { marginBottom: '20px', fontSize: '1.125rem' }
+           style: { marginBottom: '20px', fontSize: '1.125rem', marginTop:'50px' }
           }
         ],
         style: SECTION_STYLE
