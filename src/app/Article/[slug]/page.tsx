@@ -290,7 +290,7 @@ function ArticleContent() {
                       {article.category}
                     </Link>
                   </li>
-                  <li className="breadcrumb-separator text-white/70">
+                  <li className="breadcrumb-separator text-white" style={{ fontWeight: 900 }}>
                     &gt;
                   </li>
                 </>
@@ -299,7 +299,7 @@ function ArticleContent() {
                 className="breadcrumb-item active"
                 aria-current="page"
               >
-                <span className="text-white/70">
+                <span className="text-white" style={{ fontWeight: 900 }}>
                   {article.title}
                 </span>
               </li>
