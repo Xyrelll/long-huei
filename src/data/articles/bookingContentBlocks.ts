@@ -1284,7 +1284,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           width: 300,
           height: 200
         },
-        description: '(推薦指數5顆星)',
+        description: '超夯超高檔(推薦指數5顆星)',
         content: [
           {
             type: 'text',
