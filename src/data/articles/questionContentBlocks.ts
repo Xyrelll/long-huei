@@ -1182,7 +1182,26 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           },
           {
             type: 'text',
-            content: '想知道更多有關澳門的獨家消息嗎?快追蹤龍匯天下官方IG吧~',
+            content: '想知道更多有關澳門的獨家消息嗎?快追蹤龍匯天下官方',
+            style: { 
+              marginBottom: '0', 
+              marginTop: '0', 
+              fontSize: '1.125rem'
+            }
+          },
+          {
+            type: 'link',
+            href: 'https://www.instagram.com/lhts.8899/',
+            text: 'IG',
+            style: {
+              color: '#3b82f6',
+              textDecoration: 'underline',
+              marginBottom: '0'
+            }
+          },
+          {
+            type: 'text',
+            content: '吧~',
             style: { 
               marginBottom: '10px', 
               marginTop: '0', 
