@@ -909,7 +909,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
           {
             type: 'text',
             content: '導覽員會解密藝術品運輸來澳的幕後故事，全程約50分鐘，無需預約。',
-           style: HEADING_STYLE_LIST
+           style: {...HEADING_STYLE_LIST, marginTop: '-50px'}
           }
         ],
         style: SECTION_STYLE
@@ -946,7 +946,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
           width: 300,
           height: 200
         },
-        description: '米其林餐廳的澳門老味道',
+        description: '',
         content: [
           {
             type: 'text',
@@ -967,7 +967,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
           width: 300,
           height: 200
         },
-        description: '私房休憩點',
+        description: '',
         content: [
           {
             type: 'text',
@@ -976,10 +976,31 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
           },
           {
             type: 'text',
-            content: '結語：怎麼樣?澳門永利很值得一去吧，快點擊下方龍匯天下官方賴連結或是追蹤官方IG了結更多吧~',
+            content: '結語：怎麼樣?澳門永利很值得一去吧，快點擊下方龍匯天下官方賴連結或是追蹤官方',
             style: { 
               marginBottom: '20px', 
               marginTop: '20px', 
+              fontSize: '1.125rem'
+            }
+          },
+          {
+            type: 'link',
+            text: 'IG',
+            href: 'https://www.instagram.com/lhts.8899/',
+            target: '_blank',
+            style: {
+              color: '#3b82f6',
+              textDecoration: 'underline',
+              marginTop: '0',
+              marginBottom: '0'
+            }
+          },
+          {
+            type: 'text',
+            content: '了結更多吧~',
+            style: { 
+              marginBottom: '20px', 
+              marginTop: '0', 
               fontSize: '1.125rem'
             }
           }
@@ -1024,7 +1045,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
           width: 300,
           height: 200
         },
-        description: '黃金入住時段',
+        description: '',
         content: [
           {
             type: 'text',
@@ -1045,7 +1066,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
           width: 300,
           height: 200
         },
-        description: '免費沉浸式光影展',
+        description: '',
         content: [
           {
             type: 'text',
@@ -1060,7 +1081,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
         title: '【澳門永利】24小時接駁車路線',
         titleLevel: 2,
         id: 'shuttle-service',
-        description: '24小時接駁車服務',
+        description: '',
         content: [
           {
             type: 'text',
@@ -1081,7 +1102,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
           width: 300,
           height: 200
         },
-        description: '免費兒童水療體驗',
+        description: '',
         content: [
           {
             type: 'text',
@@ -1102,7 +1123,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
           width: 300,
           height: 200
         },
-        description: '用細節打造頂級回憶',
+        description: '',
         content: [
           {
             type: 'text',
@@ -1111,10 +1132,31 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
           },
           {
             type: 'text',
-            content: '還在等什麼?快點擊下方連結加入「龍匯天下」官方賴預訂，也別忘了追蹤龍匯天下官方IG解鎖你的VIP級澳門之旅吧！',
+            content: '還在等什麼?快點擊下方連結加入「龍匯天下」官方賴預訂，也別忘了追蹤龍匯天下官方',
             style: { 
               marginBottom: '20px', 
               marginTop: '20px', 
+              fontSize: '1.125rem'
+            }
+          },
+          {
+            type: 'link',
+            text: 'IG',
+            href: 'https://www.instagram.com/lhts.8899/',
+            target: '_blank',
+            style: {
+              color: '#3b82f6',
+              textDecoration: 'underline',
+              marginTop: '0',
+              marginBottom: '0'
+            }
+          },
+          {
+            type: 'text',
+            content: '解鎖你的VIP級澳門之旅吧！',
+            style: { 
+              marginBottom: '20px', 
+              marginTop: '0', 
               fontSize: '1.125rem'
             }
           }
@@ -1159,7 +1201,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
           width: 300,
           height: 200
         },
-        description: '世界最大水上舞台',
+        description: '',
         content: [
           {
             type: 'text',
@@ -1236,7 +1278,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
           width: 300,
           height: 200
         },
-        description: '澳門獨家研發的劇場黑科技',
+        description: '',
         content: [
           {
             type: 'text',
@@ -1277,7 +1319,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
           width: 300,
           height: 200
         },
-        description: '澳門旅遊局認證的極致玩法',
+        description: '',
         content: [
           {
             type: 'text',
@@ -1313,7 +1355,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
           width: 300,
           height: 200
         },
-        description: '（2025年獲BSI碳中和認證）',
+        description: '',
         content: [
           {
             type: 'text',
@@ -1406,7 +1448,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
           width: 300,
           height: 200
         },
-        description: '行家首選的按摩服務',
+        description: '',
         content: [
           {
             type: 'heading',
@@ -1498,7 +1540,7 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
           width: 300,
           height: 200
         },
-        description: '安全潛規則',
+        description: '',
         content: [
           {
             type: 'heading',
@@ -1634,8 +1676,20 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
         content: [
           {
             type: 'text',
-            content: '立即點擊 龍匯天下 官方賴入口，別忘了追蹤龍匯天下官方IG',
-           style: HEADING_STYLE_LIST
+            content: '立即點擊 龍匯天下 官方賴入口，別忘了追蹤龍匯天下官方',
+            style: HEADING_STYLE_LIST
+          },
+          {
+            type: 'link',
+            text: 'IG',
+            href: 'https://www.instagram.com/lhts.8899/',
+            target: '_blank',
+            style: {
+              color: '#3b82f6',
+              textDecoration: 'underline',
+              marginTop: '0',
+              marginBottom: '0'
+            }
           }
         ],
         style: SECTION_STYLE
@@ -2205,7 +2259,24 @@ export const entertainmentArticleContentBlocks: Record<number, ArticleContent> =
           },
           {
             type: 'text',
-            content: '快追蹤我們的官方IG；',
+            content: '快追蹤我們的官方',
+            style: HEADING_STYLE_LIST
+          },
+          {
+            type: 'link',
+            text: 'IG',
+            href: 'https://www.instagram.com/lhts.8899/',
+            target: '_blank',
+            style: {
+              color: '#3b82f6',
+              textDecoration: 'underline',
+              marginTop: '0',
+              marginBottom: '0'
+            }
+          },
+          {
+            type: 'text',
+            content: '；',
             style: HEADING_STYLE_LIST
           },
           {
