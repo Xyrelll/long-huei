@@ -26,7 +26,7 @@ export default function PageLayout({
     'w-full';
 
   return (
-    <div className={`relative w-full min-h-screen bg-black flex justify-center items-center ${outerContainerClassName}`}>
+    <div className={`relative w-full min-h-screen bg-black flex justify-center items-start ${outerContainerClassName}`}>
       <Navbar />
 
       <main className={`inner-page w-full mx-auto flex flex-col justify-center items-center ${mainClassName}`}>

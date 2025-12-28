@@ -1829,7 +1829,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
               '熱食區（部分店家水準甚至高於飯店美食街）',
               '休息／睡眠區（可停留12小時）'
             ],
-            style: { marginBottom: '20px', fontSize: '1.1rem' }
+            style: { marginBottom: '20px', fontSize: '1.1rem' ,lineHeight:'5rem',marginTop:'50px'}
           },
           {
             type: 'text',
@@ -1915,6 +1915,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             style: {
               marginBottom: '15px',
               fontSize: '1.1rem',
+              marginTop:'50px'
             }
           },
           {
@@ -1925,7 +1926,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
               '現場小遊戲（可贏得免費服務）',
               '走秀式選妃（如知名的18桑拿「百人長蛇陣」）'
             ],
-            style: { marginBottom: '20px', fontSize: '1.1rem' }
+            style: { marginBottom: '20px', fontSize: '1.1rem' , lineHeight:'5rem',  marginTop:'50px'   }
           }
         ],
         style: SECTION_STYLE
@@ -1942,6 +1943,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             style: {
               marginBottom: '15px',
               fontSize: '1.1rem',
+               marginTop:'50px'
             }
           },
           {
@@ -1954,7 +1956,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
               '東堡桑拿：特色是角色扮演與情境服務。'
             ],
             ordered: true,
-            style: { marginBottom: '20px', fontSize: '1.1rem' }
+            style: { marginBottom: '20px', fontSize: '1.1rem' , lineHeight:'5rem',  marginTop:'50px'  }
           },
           {
             type: 'text',
@@ -2990,7 +2992,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           width: 300,
           height: 200
         },
-        description: '📍 位置：氹仔「盛世酒店」地面層與 M 層\n🕒 營業時間：全天營運（建議下午/晚上時段前往）',
+        description: '\n📍 位置：氹仔「盛世酒店」地面層與 M 層\n🕒 營業時間：全天營運（建議下午/晚上時段前往）',
         content: [
           {
             type: 'text',
@@ -2998,6 +3000,8 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             style: {
               marginBottom: '15px',
               fontSize: '1.1rem',
+               marginTop:'50px'
+              
             }
           },
           {
@@ -3009,7 +3013,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
               '現場真人海選，氛圍不輸選妃盛典',
               '提供 60 分鐘全套服務'
             ],
-            style: { marginBottom: '15px', fontSize: '1.1rem' }
+            style: { marginBottom: '15px', fontSize: '1.1rem' , lineHeight:'5rem',  marginTop:'50px'  }
           },
           {
             type: 'text',
@@ -3030,7 +3034,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '🎁 活動：買一送一（陪訓員需另加費用，有折扣）',
-                  style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
+                  style: {...TEXT_STYLE_BOTTOM_20_TOP_50_1_1, marginTop:'0px'}
           }
         ],
         style: SECTION_STYLE
@@ -3054,6 +3058,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             style: {
               marginBottom: '15px',
               fontSize: '1.1rem',
+               marginTop:'50px'
             }
           },
           {
@@ -3064,7 +3069,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
               '現場提供海選制度，選擇自由度高',
               '有指定價位的買一送一活動（建議先詢問經理細節）'
             ],
-            style: { marginBottom: '15px', fontSize: '1.1rem' }
+            style: { marginBottom: '15px', fontSize: '1.1rem', lineHeight:'5rem',  marginTop:'50px'  }
           },
           {
             type: 'text',
@@ -3085,7 +3090,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '🎯 推薦對象：雙飛控、剛性需求者、嚐鮮派玩家',
-                  style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
+                  style: {...TEXT_STYLE_BOTTOM_20_TOP_50_1_1, marginTop:'0px'}
           }
         ],
         style: SECTION_STYLE
@@ -3120,7 +3125,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
               '多國籍技師陣容豪華，顏值與氣質兼備',
               '小遊戲、活動不定期舉辦，娛樂性高'
             ],
-            style: { marginBottom: '15px', fontSize: '1.1rem' }
+            style: { marginBottom: '15px', fontSize: '1.1rem', lineHeight:'5rem',  marginTop:'50px'  }
           },
           {
             type: 'text',
@@ -3141,7 +3146,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '🏆 獨家特色：溫泉＋清酒共浴，全澳獨一無二',
-                  style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
+                  style: {...TEXT_STYLE_BOTTOM_20_TOP_50_1_1, marginTop:'0px'}
           }
         ],
         style: SECTION_STYLE
@@ -3196,7 +3201,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '🎯 推薦對象：顏控、交通便利需求者、高端玩家',
-                  style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
+                  style: {...TEXT_STYLE_BOTTOM_20_TOP_50_1_1, marginTop:'0px'}
           }
         ],
         style: SECTION_STYLE
@@ -3214,7 +3219,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
               '進場後別急，先熟悉場地環境，慢慢挑技師，才能挑到「最對味」的那一位！',
               '想要了解更多澳門桑拿的朋友，點及下方Line官方，了解更多喔！'
             ],
-            style: { marginBottom: '20px', fontSize: '1.1rem' }
+            style: { marginBottom: '20px', fontSize: '1.1rem', lineHeight:'5rem',  marginTop:'50px'  }
           },
           {
             type: 'text',
@@ -3222,6 +3227,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             style: {
               marginBottom: '5px',
               fontSize: '1.1rem',
+              marginTop:'50px'
             }
           },
           {
@@ -3300,12 +3306,12 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             level: 3,
             content: '澳門桑拿能否用支付寶，微信支付？',
             id: '支付方式',
-            style: { marginTop: '0', marginBottom: '15px', fontSize: '1.1rem' }
+            style: { marginTop: '50px', marginBottom: '15px', fontSize: '1.1rem' }
           },
           {
             type: 'text',
             content: '有些時候是可以，大部分時候是需要刷卡或者現金，因為澳門比較特殊，所以很多移動支付除了商場，這類店家的支付方法都不是很穩定，建議刷卡或現金，支持銀聯都，換現金的話基本所有酒店都有。',
-                  style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
+                  style: {...TEXT_STYLE_BOTTOM_20_TOP_50_1_1, marginTop:'0px'}
           }
         ],
         style: SECTION_STYLE
@@ -3365,7 +3371,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             level: 3,
             content: '豪門',
             id: '豪門',
-            style: { marginTop: '0', marginBottom: '15px', fontSize: '1.1rem' }
+            style: { marginTop: '50px', marginBottom: '15px', fontSize: '1.1rem' }
           },
           {
             type: 'text',
@@ -3380,7 +3386,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             level: 3,
             content: '壹號',
             id: '壹號',
-            style: { marginTop: '0', marginBottom: '15px', fontSize: '1.1rem' }
+            style: { marginTop: '50px', marginBottom: '15px', fontSize: '1.1rem' }
           },
           {
             type: 'text',
@@ -3395,7 +3401,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             level: 3,
             content: '富豪皇宮',
             id: '富豪皇宮',
-            style: { marginTop: '0', marginBottom: '15px', fontSize: '1.1rem' }
+            style: { marginTop: '50px', marginBottom: '15px', fontSize: '1.1rem' }
           },
           {
             type: 'text',
@@ -3410,12 +3416,12 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             level: 3,
             content: '十八',
             id: '十八',
-            style: { marginTop: '0', marginBottom: '15px', fontSize: '1.1rem' }
+            style: { marginTop: '50px', marginBottom: '15px', fontSize: '1.1rem' }
           },
           {
             type: 'text',
             content: '現在恢復的也很不錯，也有長龍陣，選秀表演可看，除了裝修老了點，其他基本恢覆到疫情前的水準，也推薦新舊玩家，感受下這家有歷史的店。',
-                  style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
+                  style: {...TEXT_STYLE_BOTTOM_20_TOP_50_1_1, marginTop:'0px'}
           }
         ],
         style: SECTION_STYLE
@@ -3432,6 +3438,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             style: {
               marginBottom: '15px',
               fontSize: '1.1rem',
+              marginTop:'50px'
             }
           },
           {
@@ -3440,6 +3447,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             style: {
               marginBottom: '10px',
               fontSize: '1.1rem',
+              marginTop:'50px'
             }
           },
           {
@@ -3448,6 +3456,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             style: {
               marginBottom: '5px',
               fontSize: '1.1rem',
+              marginTop:'50px'
             }
           },
           {
