@@ -87,21 +87,31 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 4px;
-  width: 24px;
-  height: 24px;
+  width: var(--icon-size-mobile, 32px);
+  height: var(--icon-size-mobile, 32px);
 }
 
 .bottom-nav-icon svg {
-  width: 24px;
-  height: 24px;
+  width: var(--icon-size-mobile, 32px);
+  height: var(--icon-size-mobile, 32px);
   color: #FFFFFF;
   transition: all 0.3s ease;
 }
 
-.bottom-nav-item.active .bottom-nav-icon svg {
-  color: #FFCD83;
-  transform: scale(1.1);
+/* Desktop icon size */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .bottom-nav-icon {
+    width: var(--icon-size-desktop, 40px);
+    height: var(--icon-size-desktop, 40px);
+  }
+
+  .bottom-nav-icon svg {
+    width: var(--icon-size-desktop, 40px);
+    height: var(--icon-size-desktop, 40px);
+  }
 }
+
+
 
 .bottom-nav-label {
   font-size: 12px;
@@ -112,10 +122,6 @@
   white-space: nowrap;
 }
 
-.bottom-nav-item.active .bottom-nav-label {
-  color: #FFCD83;
-  font-weight: 600;
-}
 
 /* Footer normal flow - not fixed */
 @media (max-width: 1023px) {

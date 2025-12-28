@@ -45,13 +45,9 @@ interface MobileNavItemProps {
 
 function MobileNavItem({ item, onClick }: MobileNavItemProps) {
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    if (item.id === 'search') {
-      e.preventDefault();
-      onClick();
-      window.location.href = '/Search';
-    } else {
-      onClick();
-    }
+    e.preventDefault();
+    onClick();
+    window.location.href = item.href;
   };
 
   return (
@@ -76,10 +72,8 @@ interface DesktopNavItemProps {
 
 function DesktopNavItem({ item }: DesktopNavItemProps) {
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    if (item.id === 'search') {
-      e.preventDefault();
-      window.location.href = '/Search';
-    }
+    e.preventDefault();
+    window.location.href = item.href;
   };
 
   return (
@@ -107,7 +101,6 @@ interface MobileDropdownProps {
 }
 
 function MobileDropdown({ isOpen, onToggle, onItemClick, items }: MobileDropdownProps) {
-  const router = useRouter();
   const touchHandledRef = useRef(false);
 
   const handleNavigation = (href: string, e: React.MouseEvent<HTMLAnchorElement> | React.TouchEvent<HTMLAnchorElement>) => {
@@ -118,8 +111,8 @@ function MobileDropdown({ isOpen, onToggle, onItemClick, items }: MobileDropdown
     // Close menu
     onItemClick();
     
-    // Navigate programmatically
-    router.push(href);
+    // Navigate and reload page
+    window.location.href = href;
   };
 
   const handleItemClick = (href: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -452,6 +445,10 @@ export default function Navbar() {
             itemProp="url"
             href="/ArticleCategory/RentCar"
             className="dropdown-item"
+            onClick={(e) => {
+              e.preventDefault();
+              window.location.href = '/ArticleCategory/RentCar';
+            }}
           >
             包車
           </Link>
@@ -461,6 +458,10 @@ export default function Navbar() {
             itemProp="url"
             href="/ArticleCategory/Entertainment"
             className="dropdown-item"
+            onClick={(e) => {
+              e.preventDefault();
+              window.location.href = '/ArticleCategory/Entertainment';
+            }}
           >
             其他娛樂
           </Link>
