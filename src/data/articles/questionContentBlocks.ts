@@ -119,7 +119,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'heading',
             level: 3,
-            content: '匯率浮動重點',
+            content: '匯率浮動重點 :',
             id: 'exchange-rate-points',
             style: { marginTop: '155px', marginBottom: '15px' }
           },
@@ -223,7 +223,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'heading',
             level: 3,
-            content: '注意陷阱',
+            content: '注意陷阱 :',
             id: 'traps',
             style: HEADING_STYLE_H3
           },
@@ -261,7 +261,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'heading',
             level: 3,
-            content: '避開地雷區',
+            content: '避開地雷區 :',
             id: 'avoid-traps',
             style: HEADING_STYLE_H3
           },
@@ -278,7 +278,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'heading',
             level: 3,
-            content: '免手續費絕招',
+            content: '免手續費絕招 :',
             id: 'no-fee-tricks',
             style: HEADING_STYLE_H3
           },
@@ -295,7 +295,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'heading',
             level: 3,
-            content: '電子支付替代方案',
+            content: '電子支付替代方案 :',
             id: 'electronic-payment',
             style: HEADING_STYLE_H3
           },
@@ -312,7 +312,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'heading',
             level: 3,
-            content: '應急SOP',
+            content: '應急SOP :',
             id: 'emergency-sop',
             style: HEADING_STYLE_H3
           },
@@ -339,7 +339,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'heading',
             level: 3,
-            content: '當場確認',
+            content: '當場確認 :',
             id: 'on-site-confirmation',
             style: HEADING_STYLE_H3
           },
@@ -366,7 +366,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'heading',
             level: 3,
-            content: '鈔票使用提醒',
+            content: '鈔票使用提醒 :',
             id: 'banknote-reminder',
             style: HEADING_STYLE_H3
           },
@@ -515,7 +515,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
       {
         type: 'text',
         content: '澳門通（Macau Pass）是旅客探索澳門的智慧神卡，2025年全面升級後，整合交通、消費、景點門票等多元功能，成為自由行省錢省時的必備工具。本文從最新功能、使用範圍到隱藏優惠，帶你掌握這張小卡的無限潛力！',
-        style: TEXT_STYLE_BOTTOM_20_NO_TOP
+        style: {...TEXT_STYLE_BOTTOM_20_NO_TOP, fontWeight: '900'}
       }
     ],
     // Table of Contents
@@ -551,27 +551,27 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '澳門通是澳門通用的電子支付卡，採用感應式技術，2025年推出「第三代澳門通」強化以下功能：',
-            style: HEADING_STYLE_LIST
+            style: {...HEADING_STYLE_LIST, fontWeight: '900'}
           },
           {
             type: 'text',
             content: '一卡雙用：實體卡同步綁定「澳門通APP」，手機感應支付免掏卡（支援Android與iOS）。',
-            style: HEADING_STYLE_LIST
+            style: {...HEADING_STYLE_LIST, fontWeight: '900'}
           },
           {
             type: 'text',
             content: '交通整合：適用全澳巴士、輕軌、渡輪，並新增「跨境適用」：2025年可於珠海部分公交路線使用。',
-            style: HEADING_STYLE_LIST
+            style: {...HEADING_STYLE_LIST, fontWeight: '900'}
           },
           {
             type: 'text',
             content: '智慧旅遊：內建景點快速通行功能，持卡至大三巴牌坊、澳門塔等合作景點，掃碼即可獲取語音導覽。',
-            style: HEADING_STYLE_LIST
+            style: {...HEADING_STYLE_LIST, fontWeight: '900'}
           },
           {
             type: 'text',
             content: '適用族群：適合3天以上行程、需頻繁搭乘公共交通、想省去現金找零麻煩的旅客。',
-            style: HEADING_STYLE_LIST
+            style: {...HEADING_STYLE_LIST, fontWeight: '900'}
           }
         ],
         style: SECTION_STYLE
@@ -592,58 +592,58 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '取得澳門通極度便利，2025年新增多種購買管道：',
-            style: HEADING_STYLE_LIST
+            style: {...HEADING_STYLE_LIST, fontWeight: '900'}
           },
           {
             type: 'heading',
             level: 3,
-            content: '購買地點',
+            content: '購買地點 :',
             id: 'purchase-locations',
             style: HEADING_STYLE_H3
           },
           {
             type: 'text',
             content: '機場/碼頭自助販賣機（支援微信、支付寶付款）',
-            style: HEADING_STYLE_LIST
+            style: {...HEADING_STYLE_LIST, fontWeight: '900'}
           },
           {
             type: 'text',
             content: '7-11、OK便利店（售價MOP 130，含MOP 100可用餘額與MOP 30押金）',
-            style: HEADING_STYLE_LIST
+            style: {...HEADING_STYLE_LIST, fontWeight: '900'}
           },
           {
             type: 'heading',
             level: 3,
-            content: '儲值方式',
+            content: '儲值方式 :',
             id: 'recharge-methods',
             style: HEADING_STYLE_H3
           },
           {
             type: 'text',
             content: '全澳超過200台「加值易」自助機（可選繁體中文介面）',
-            style: HEADING_STYLE_LIST
+            style: {...HEADING_STYLE_LIST, fontWeight: '900'}
           },
           {
             type: 'text',
             content: '澳門通APP線上信用卡儲值（單次最低MOP 50）',
-            style: HEADING_STYLE_LIST
+            style: {...HEADING_STYLE_LIST, fontWeight: '900'}
           },
           {
             type: 'heading',
             level: 3,
-            content: '退卡規則',
+            content: '退卡規則 :',
             id: 'refund-rules',
             style: HEADING_STYLE_H3
           },
           {
             type: 'text',
             content: '押金MOP 30與卡內餘額可於任一客服中心退還',
-            style: HEADING_STYLE_LIST
+            style: {...HEADING_STYLE_LIST, fontWeight: '900'}
           },
           {
             type: 'text',
             content: '2025年起，未使用滿3天退卡需扣手續費MOP 5',
-            style: HEADING_STYLE_LIST
+            style: {...HEADING_STYLE_LIST, fontWeight: '900'}
           }
         ],
         style: SECTION_STYLE
@@ -664,58 +664,58 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '善用這些功能，最多可省下30%旅遊開銷：',
-           style: HEADING_STYLE_LIST
+           style: {...HEADING_STYLE_LIST, fontWeight: '900'}
           },
           {
             type: 'heading',
             level: 3,
-            content: '交通折扣',
+            content: '交通折扣 :',
             id: 'transport-discount',
             style: HEADING_STYLE_H3
           },
           {
             type: 'text',
             content: '巴士票價從MOP 6降至MOP 3，輕軌享8折（比現金支付便宜MOP 2-5/趟）',
-            style: HEADING_STYLE_LIST
+            style: {...HEADING_STYLE_LIST, fontWeight: '900'}
           },
           {
             type: 'heading',
             level: 3,
-            content: '景點套票',
+            content: '景點套票 :',
             id: 'attraction-packages',
             style: HEADING_STYLE_H3
           },
           {
             type: 'text',
             content: '「世遺路線套票」：MOP 150含大三巴牌坊、玫瑰堂、崗頂劇院門票+交通費',
-            style: HEADING_STYLE_LIST
+            style: {...HEADING_STYLE_LIST, fontWeight: '900'}
           },
           {
             type: 'text',
             content: '「極限體驗套票」：澳門塔空中漫步門票+來回接駁車，卡友價MOP 388（原價MOP 480）',
-            style: HEADING_STYLE_LIST
+            style: {...HEADING_STYLE_LIST, fontWeight: '900'}
           },
           {
             type: 'heading',
             level: 3,
-            content: '餐飲回饋',
+            content: '餐飲回饋 :',
             id: 'dining-rewards',
             style: HEADING_STYLE_H3
           },
           {
             type: 'text',
             content: '大利來記豬扒包：持卡消費送凍檸茶',
-            style: HEADING_STYLE_LIST
+            style: {...HEADING_STYLE_LIST, fontWeight: '900'}
           },
           {
             type: 'text',
             content: '瑪嘉烈蛋撻：每日17:00後買3送1（需掃卡累計點數）',
-            style: HEADING_STYLE_LIST
+            style: {...HEADING_STYLE_LIST, fontWeight: '900'}
           },
           {
             type: 'text',
             content: '獨家情報：2025年新增「演唱會聯名卡」，購買G-DRAGON等指定演出門票，可憑卡享周邊商品9折與免費接駁車。',
-            style: HEADING_STYLE_LIST
+            style: {...HEADING_STYLE_LIST, fontWeight: '900'}
           }
         ],
         style: SECTION_STYLE
@@ -736,7 +736,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '以下示範如何用澳門通高效玩遍熱門景點：',
-            style: HEADING_STYLE_LIST
+            style: {...HEADING_STYLE_LIST, fontWeight: '900'}
           },
           {
             type: 'heading',
@@ -748,22 +748,22 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '上午：乘3號巴士至大三巴牌坊（掃卡啟動語音導覽）',
-            style: HEADING_STYLE_LIST
+            style: {...HEADING_STYLE_LIST, fontWeight: '900'}
           },
           {
             type: 'text',
             content: '午餐：議事亭前地「黃枝記」雲吞麵（刷卡享9折）',
-            style: HEADING_STYLE_LIST
+            style: {...HEADING_STYLE_LIST, fontWeight: '900'}
           },
           {
             type: 'text',
             content: '下午：澳門博物館→乘輕軌至媽閣廟站（轉乘免費接駁船）',
-            style: HEADING_STYLE_LIST
+            style: {...HEADING_STYLE_LIST, fontWeight: '900'}
           },
           {
             type: 'text',
             content: '晚餐：福隆新街「佛笑樓」葡國菜（用卡積分兌換馬介休沙拉）',
-            style: HEADING_STYLE_LIST
+            style: {...HEADING_STYLE_LIST, fontWeight: '900'}
           },
           {
             type: 'heading',
@@ -775,17 +775,17 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '上午：乘輕軌至路氹西站，步行至teamLab超自然空間（持卡快速入場）',
-           style: HEADING_STYLE_LIST
+           style: {...HEADING_STYLE_LIST, fontWeight: '900'}
           },
           {
             type: 'text',
             content: '午餐：銀河「豚王拉麵」（消費滿MOP 100送叉燒券）',
-           style: HEADING_STYLE_LIST
+           style: {...HEADING_STYLE_LIST, fontWeight: '900'}
           },
           {
             type: 'text',
             content: '晚上：威尼斯人購物＋金光綜藝館演唱會（憑卡租借應援手燈）',
-           style: HEADING_STYLE_LIST
+           style: {...HEADING_STYLE_LIST, fontWeight: '900'}
           },
           {
             type: 'heading',
@@ -797,12 +797,12 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '上午：乘26A巴士至路環市區，安德魯餅店掃卡買一送一',
-           style: HEADING_STYLE_LIST
+           style: {...HEADING_STYLE_LIST, fontWeight: '900'}
           },
           {
             type: 'text',
             content: '下午：黑沙海灘散步＋漢記手打咖啡（刷卡免排隊）',
-           style: HEADING_STYLE_LIST
+           style: {...HEADING_STYLE_LIST, fontWeight: '900'}
           }
         ],
         style: SECTION_STYLE
@@ -830,7 +830,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '2025年新增「澳門叫車」合作，可掃碼支付車資，但需提前於APP綁定信用卡。',
-           style: HEADING_STYLE_LIST
+           style: {...HEADING_STYLE_LIST, fontWeight: '900'}
           },
           {
             type: 'heading',
@@ -842,7 +842,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '全澳便利店與景點服務台提供「即時補票」功能，先乘車後扣款（需於48小時內補儲值）。',
-           style: HEADING_STYLE_LIST
+           style: {...HEADING_STYLE_LIST, fontWeight: '900'}
           },
           {
             type: 'heading',
@@ -854,7 +854,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '不建議！澳門通為「一人一卡」制，搭乘巴士輕軌時，同行者需各自刷卡。',
-           style: HEADING_STYLE_LIST
+            style: {...HEADING_STYLE_LIST, fontWeight: '900'}
           }
         ],
         style: SECTION_STYLE
@@ -869,27 +869,27 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '澳門通已從交通卡進化成「智慧旅遊神器」，2025年升級後更提供：',
-           style: HEADING_STYLE_LIST
+           style: {...HEADING_STYLE_LIST, fontWeight: '900'}
           },
           {
             type: 'text',
             content: '省時：掃碼快速通行景點與演唱會接駁',
-           style: HEADING_STYLE_LIST
+           style: {...HEADING_STYLE_LIST, fontWeight: '900'}
           },
           {
             type: 'text',
             content: '省錢：交通+門票優惠最高省MOP 500/人',
-           style: HEADING_STYLE_LIST
+           style: {...HEADING_STYLE_LIST, fontWeight: '900'}
           },
           {
             type: 'text',
             content: '便利：免現金支付超過2,000間合作商家',
-            style: HEADING_STYLE_LIST
+            style: {...HEADING_STYLE_LIST, fontWeight: '900'}
           },
           {
             type: 'text',
             content: '建議抵澳後優先購買此卡，搭配「澳門通APP」即時查詢餘額與優惠，讓旅程更聰明流暢！',
-            style: HEADING_STYLE_LIST
+            style: {...HEADING_STYLE_LIST, fontWeight: '900'}
           },
           {
             type: 'text',
@@ -897,7 +897,8 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
             style: { 
               marginBottom: '0', 
               marginTop: '0', 
-              fontSize: '1.125rem'
+              fontSize: '1.125rem',
+              fontWeight: '900'
             }
           },
           {
@@ -913,12 +914,12 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '吧~',
-           style: HEADING_STYLE_LIST
+           style: {...HEADING_STYLE_LIST, fontWeight: '900'}
           },
           {
             type: 'text',
             content: '有澳門相關疑問可以點擊下方官方賴連結詢問~我在澳門等你喔~',
-            style: HEADING_STYLE_LIST
+            style: {...HEADING_STYLE_LIST, fontWeight: '900'}
           }
         ],
         style: SECTION_STYLE
@@ -931,7 +932,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
       {
         type: 'text',
         content: '澳門連續7年穩居「亞洲最安全旅遊城市」前三名，根據2024年最新數據顯示，每10萬旅客犯罪率僅1.5件。本文建議收藏，廢話不多說，讓小編帶你快速掌握安全要點。',
-        style: TEXT_STYLE_BOTTOM_20_NO_TOP
+        style: {...TEXT_STYLE_BOTTOM_20_NO_TOP, fontWeight: '900'}
       }
     ],
     // Table of Contents
@@ -972,17 +973,17 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '全球資料庫安全指數：92.3/100（超越東京、首爾）',
-           style: HEADING_STYLE_LIST
+           style: {...HEADING_STYLE_LIST, fontWeight: '900'}
           },
           {
             type: 'text',
             content: '監控密度全球第一：每平方公里852支鏡頭',
-           style: HEADING_STYLE_LIST
+           style: {...HEADING_STYLE_LIST, fontWeight: '900'}
           },
           {
             type: 'text',
             content: '夜間安全感達94%，勝過多數亞洲城市',
-           style: HEADING_STYLE_LIST
+           style: {...HEADING_STYLE_LIST, fontWeight: '900'}
           }
         ],
         style: SECTION_STYLE
@@ -1004,17 +1005,17 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '計程車全裝行車紀錄器',
-           style: {...HEADING_STYLE_LIST, marginTop: '0px'}
+           style: {...HEADING_STYLE_LIST, marginTop: '0px', fontWeight: '900'}
           },
           {
             type: 'text',
             content: '免費接駁車強制繫安全帶',
-           style: HEADING_STYLE_LIST
+           style: {...HEADING_STYLE_LIST, fontWeight: '900'}
           },
           {
             type: 'text',
             content: '歷史區石板路建議穿防滑鞋',
-           style: HEADING_STYLE_LIST
+           style: {...HEADING_STYLE_LIST, fontWeight: '900'}
           },
           {
             type: 'heading',
@@ -1026,17 +1027,17 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '賭場周邊「高匯率換錢」陷阱',
-           style: {...HEADING_STYLE_LIST, marginTop: '0px'}
+           style: {...HEADING_STYLE_LIST, marginTop: '0px', fontWeight: '900'}
           },
           {
             type: 'text',
             content: '假冒酒店人員推銷行程',
-           style: HEADING_STYLE_LIST
+           style: {...HEADING_STYLE_LIST, fontWeight: '900'}
           },
           {
             type: 'text',
             content: '景點「免費拍照」收費爭議',
-           style: HEADING_STYLE_LIST
+           style: {...HEADING_STYLE_LIST, fontWeight: '900'}
           },
           {
             type: 'heading',
@@ -1048,17 +1049,17 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '分3處存放（貼身包/保險箱/電子支付）',
-           style: {...HEADING_STYLE_LIST, marginTop: '0px'}
+           style: {...HEADING_STYLE_LIST, marginTop: '0px', fontWeight: '900'}
           },
           {
             type: 'text',
             content: '優先使用行動支付（支援台灣信用卡）',
-           style: HEADING_STYLE_LIST
+           style: {...HEADING_STYLE_LIST, fontWeight: '900'}
           },
           {
             type: 'text',
             content: '深夜消費選擇酒店內商家',
-           style: HEADING_STYLE_LIST
+           style: {...HEADING_STYLE_LIST, fontWeight: '900'}
           }
         ],
         style: SECTION_STYLE
@@ -1086,17 +1087,17 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '竊盜率僅台灣1/2（每萬人0.8 vs 1.5件）',
-           style: {...HEADING_STYLE_LIST, marginTop: '0px'}
+           style: {...HEADING_STYLE_LIST, marginTop: '0px', fontWeight: '900'}
           },
           {
             type: 'text',
             content: '詐騙破獲率高達89%',
-           style: HEADING_STYLE_LIST
+           style: {...HEADING_STYLE_LIST, fontWeight: '900'}
           },
           {
             type: 'text',
             content: '緊急反應快1.7分鐘',
-           style: HEADING_STYLE_LIST
+           style: {...HEADING_STYLE_LIST, fontWeight: '900'}
           },
           {
             type: 'heading',
@@ -1108,17 +1109,17 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '92%女性旅客認同安全感足夠',
-           style: {...HEADING_STYLE_LIST, marginTop: '0px'}
+           style: {...HEADING_STYLE_LIST, marginTop: '0px', fontWeight: '900'}
           },
           {
             type: 'text',
             content: '酒店提供「單人女性專屬樓層」',
-           style: HEADING_STYLE_LIST
+           style: {...HEADING_STYLE_LIST, fontWeight: '900'}
           },
           {
             type: 'text',
             content: '深夜建議搭乘正規計程車',
-           style: HEADING_STYLE_LIST
+           style: {...HEADING_STYLE_LIST, fontWeight: '900'}
           },
           {
             type: 'heading',
@@ -1130,17 +1131,17 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '手機直撥緊急熱線（中文服務）',
-           style: {...HEADING_STYLE_LIST, marginTop: '0px'}
+           style: {...HEADING_STYLE_LIST, marginTop: '0px', fontWeight: '900'}
           },
           {
             type: 'text',
             content: 'Google地圖搜尋「最近警局」',
-           style: HEADING_STYLE_LIST
+           style: {...HEADING_STYLE_LIST, fontWeight: '900'}
           },
           {
             type: 'text',
             content: '聯繫酒店24小時保全中心',
-           style: HEADING_STYLE_LIST
+           style: {...HEADING_STYLE_LIST, fontWeight: '900'}
           }
         ],
         style: SECTION_STYLE
@@ -1155,17 +1156,17 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '全中文環境：78%標示為繁體字',
-           style: {...HEADING_STYLE_LIST, marginTop: '0px'}
+           style: {...HEADING_STYLE_LIST, marginTop: '0px', fontWeight: '900'}
           },
           {
             type: 'text',
             content: '智能監控：5G即時通報系統',
-           style: HEADING_STYLE_LIST
+           style: {...HEADING_STYLE_LIST, fontWeight: '900'}
           },
           {
             type: 'text',
             content: '法規保障：消費糾紛24小時處理機制',
-           style: HEADING_STYLE_LIST
+           style: {...HEADING_STYLE_LIST, fontWeight: '900'}
           }
         ],
         style: SECTION_STYLE
@@ -1180,7 +1181,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '澳門憑藉「智能安防+中文友善」優勢，成為短程旅遊首選。',
-           style: {...HEADING_STYLE_LIST, marginTop: '0px'}
+           style: {...HEADING_STYLE_LIST, marginTop: '0px', fontWeight: '900'}
           },
           {
             type: 'text',
@@ -1188,7 +1189,8 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
             style: { 
               marginBottom: '0', 
               marginTop: '0', 
-              fontSize: '1.125rem'
+              fontSize: '1.125rem',
+              fontWeight: '900'
             }
           },
           {
@@ -1206,7 +1208,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '以及點擊下方官方賴獲取更多資訊。',
-           style: HEADING_STYLE_LIST
+           style: {...HEADING_STYLE_LIST, fontWeight: '900'}
           }
         ],
         style: SECTION_STYLE
