@@ -25,16 +25,32 @@ const TEXT_STYLE_BOTTOM_20_1_1 = {
   fontSize: '1.1rem'
 };
 
+const TEXT_STYLE_BOTTOM_20_TOP_50_1_1 = { 
+  marginBottom: '20px',
+  fontSize: '1.1rem',
+  marginTop: '50px'
+};
+
+const TEXT_STYLE_BOTTOM_30_1_1 = { 
+  marginBottom: '50px',
+  fontSize: '1.1rem'
+};
+
 const HEADING_STYLE_H3 = { 
   marginTop: '20px', 
   marginBottom: '10px' 
+};
+
+const HEADING_STYLE_H3_ALT = { 
+  marginTop: '50px', 
+  marginBottom: '15px' 
 };
 
 const TABLE_OF_CONTENTS_STYLE = {
   backgroundColor: 'rgba(83, 52, 4, 0.842)',
   borderRadius: '50px',
   padding: '20px',
-  marginTop: '20px',
+  marginTop: '50px',
   marginBottom: '30px',
   boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 165, 0, 0.2)',
   border: '1px solid #d18411',
@@ -110,92 +126,74 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '目前大多數主流澳門桑拿店技師的上崗人數，已超過疫情前水準。從熱鬧程度來看，根本就像從未停過一樣。不論是平日或假日，你幾乎都能找到心儀的選擇。',
-            style: { 
-              marginBottom: '30px',
-              fontSize: '1.1rem'
-            }
+            style: TEXT_STYLE_BOTTOM_30_1_1
           },
           {
             type: 'heading',
             level: 3,
             content: '🌍 技師國籍多元，看店家定位而定',
             id: 'technician-nationality',
-            style: { marginTop: '20px', marginBottom: '15px' }
+            style: HEADING_STYLE_H3_ALT
           },
           {
             type: 'text',
             content: '技師國籍以中國與越南為主力，這兩國的技師在數量與表現上都有穩定水準。另外，一些中高端甚至高端場子，也會配備來自泰國、蒙古、日本、韓國、甚至東歐的技師。不過並非每家都有這麼豐富的陣容，具體還是要看每間店的風格與定位（文末會推薦幾間值得一探的桑拿）。',
-            style: { 
-              marginBottom: '30px',
-              fontSize: '1.1rem'
-            }
+            style: TEXT_STYLE_BOTTOM_30_1_1
           },
           {
             type: 'heading',
             level: 3,
             content: '💯 顏值 vs 價格：怎麼選最划算？',
             id: 'appearance-vs-price',
-            style: { marginTop: '20px', marginBottom: '15px' }
+            style: HEADING_STYLE_H3_ALT
           },
           {
             type: 'text',
             content: '如果你是顏控，中國籍技師通常不會讓你失望，多數都有模特兒級別的外型，甚至有人在網路上小有名氣。而追求性價比的朋友，建議多看看越南或泰國技師，價格相對親民，服務也非常不錯。',
-            style: { 
-              marginBottom: '30px',
-              fontSize: '1.1rem'
-            }
+            style: TEXT_STYLE_BOTTOM_30_1_1
           },
           {
             type: 'heading',
             level: 3,
             content: '💰 價格恢復、但預約有驚喜',
             id: 'price-recovery',
-            style: { marginTop: '20px', marginBottom: '15px' }
+            style: HEADING_STYLE_H3_ALT
           },
           {
             type: 'text',
             content: '整體價位已回升至疫情前的水準，也就是說，現在桑拿還是有點小貴。不過好消息是：提前預約通常會有不少福利，像是折扣、升等房型或其他加值服務，真的蠻划算的！',
-            style: { 
-              marginBottom: '30px',
-              fontSize: '1.1rem'
-            }
+            style: TEXT_STYLE_BOTTOM_30_1_1
           },
           {
             type: 'heading',
             level: 3,
             content: '🛎️ 服務水準仍是天花板級',
             id: 'service-level',
-            style: { marginTop: '20px', marginBottom: '15px' }
+            style: HEADING_STYLE_H3_ALT
           },
           {
             type: 'text',
             content: '不誇張地說，澳門的桑拿在服務品質上依舊是世界級的存在。從接待、設施使用，到技師服務的流程，都極為專業且細緻，讓人真正感受到"放鬆"這兩個字的重量。',
-            style: { 
-              marginBottom: '30px',
-              fontSize: '1.1rem'
-            }
+            style: TEXT_STYLE_BOTTOM_30_1_1
           },
           {
             type: 'heading',
             level: 3,
             content: '🛁 硬體升級，一腳踏進就感覺不一樣',
             id: 'hardware-upgrade',
-            style: { marginTop: '20px', marginBottom: '15px' }
+            style: HEADING_STYLE_H3_ALT
           },
           {
             type: 'text',
             content: '許多澳門桑拿老牌或中高端店家趁疫情期間進行了翻新與升級，現在進去會發現環境更高檔、更有格調。不過也有少數老店則維持原貌，反而調高了價格，這類店的性價比就略顯不足了。',
-            style: { 
-              marginBottom: '30px',
-              fontSize: '1.1rem'
-            }
+            style: TEXT_STYLE_BOTTOM_30_1_1
           },
           {
             type: 'heading',
             level: 3,
             content: '🕒 時間與費用安排建議',
             id: 'time-fee-suggestions',
-            style: { marginTop: '20px', marginBottom: '15px' }
+            style: HEADING_STYLE_H3_ALT
           },
           {
             type: 'text',
@@ -226,7 +224,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             level: 3,
             content: '1️⃣ 確定要去哪一家桑拿（建議預約）',
             id: 'step1',
-            style: { marginTop: '0', marginBottom: '15px' }
+            style: HEADING_STYLE_H3_ALT
           },
           {
             type: 'text',
@@ -250,32 +248,26 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '暸解詳情喔！',
-            style: { 
-              marginBottom: '30px',
-              fontSize: '1.1rem'
-            }
+            style: TEXT_STYLE_BOTTOM_30_1_1
           },
           {
             type: 'heading',
             level: 3,
             content: '2️⃣ 入場 → 領手牌 → 更衣',
             id: 'step2',
-            style: { marginTop: '20px', marginBottom: '15px' }
+            style: HEADING_STYLE_H3_ALT
           },
           {
             type: 'text',
             content: '到了現場後，會有接待人員協助你辦理入場流程，給你手牌與儲物櫃鑰匙。接著換掉衣服（可帶手機），換上桑拿服，準備進入放鬆模式！',
-            style: { 
-              marginBottom: '30px',
-              fontSize: '1.1rem'
-            }
+            style: TEXT_STYLE_BOTTOM_30_1_1
           },
           {
             type: 'heading',
             level: 3,
             content: '3️⃣ 先洗澡 & 體驗基礎設施',
             id: 'step3',
-            style: { marginTop: '20px', marginBottom: '15px' }
+            style: HEADING_STYLE_H3_ALT
           },
           {
             type: 'text',
@@ -294,23 +286,21 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             ],
             style: { 
               marginBottom: '15px',
-              fontSize: '1.1rem'
+              fontSize: '1.1rem',
+              lineHeight:'2.5rem'
             }
           },
           {
             type: 'text',
             content: '想要額外服務（例如全裸搓澡、打手槍等），需私下與技師溝通，通常會另外收「小費」',
-            style: { 
-              marginBottom: '30px',
-              fontSize: '1.1rem'
-            }
+            style: TEXT_STYLE_BOTTOM_30_1_1
           },
           {
             type: 'heading',
             level: 3,
             content: '4️⃣ 換新衣，進入休息大廳',
             id: 'step4',
-            style: { marginTop: '20px', marginBottom: '15px' }
+            style: HEADING_STYLE_H3_ALT
           },
           {
             type: 'text',
@@ -327,17 +317,14 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
               '看電視、打瞌睡、滑手機',
               '選擇加購按摩服務（腳底按摩、肩頸按摩、掏耳等）'
             ],
-            style: { 
-              marginBottom: '30px',
-              fontSize: '1.1rem'
-            }
+            style: {...LIST_STYLE , lineHeight:'2.5rem'}
           },
           {
             type: 'heading',
             level: 3,
             content: '5️⃣ 參加活動 & 玩遊戲（視店家而定）',
             id: 'step5',
-            style: { marginTop: '20px', marginBottom: '15px' }
+            style: HEADING_STYLE_H3_ALT
           },
           {
             type: 'text',
@@ -357,23 +344,22 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             ],
             style: { 
               marginBottom: '15px',
-              fontSize: '1.1rem'
+              fontSize: '1.1rem',
+              lineHeight:'2.5rem' 
             }
           },
           {
             type: 'text',
             content: '這些都是額外的樂趣，記得問一下現場經理有什麼特別活動。',
-            style: { 
-              marginBottom: '30px',
-              fontSize: '1.1rem'
-            }
+            style: {...TEXT_STYLE_BOTTOM_30_1_1 , marginTop:'50px'}
+
           },
           {
             type: 'heading',
             level: 3,
             content: '6️⃣ 想選小姐？找經理幫你安排！',
             id: 'step6',
-            style: { marginTop: '20px', marginBottom: '15px' }
+            style: HEADING_STYLE_H3_ALT
           },
           {
             type: 'text',
@@ -386,47 +372,38 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '經理會介紹技師的國籍、顏值、價格、服務內容與時長，也可以安排雙飛、三飛或特殊房型（水床、情境房等）。',
-            style: { 
-              marginBottom: '30px',
-              fontSize: '1.1rem'
-            }
+            style: {...TEXT_STYLE_BOTTOM_30_1_1 , marginTop:'50px'}
           },
           {
             type: 'heading',
             level: 3,
             content: '7️⃣ 進房服務 → 再次清潔 → 進入正題',
             id: 'step7',
-            style: { marginTop: '20px', marginBottom: '15px' }
+            style: HEADING_STYLE_H3_ALT
           },
           {
             type: 'text',
             content: '選定技師後會進房間，通常技師會再次幫你洗澡（算是開場服務），然後進入床上服務流程。全套約 50–60 分鐘，通常是一發結束（可事先詢問是否能加時間或加發）。',
-            style: { 
-              marginBottom: '30px',
-              fontSize: '1.1rem'
-            }
+            style: TEXT_STYLE_BOTTOM_30_1_1
           },
           {
             type: 'heading',
             level: 3,
             content: '8️⃣ 完事後回大廳放鬆 or 接續服務',
             id: 'step8',
-            style: { marginTop: '20px', marginBottom: '15px' }
+            style: HEADING_STYLE_H3_ALT
           },
           {
             type: 'text',
             content: '結束後可以回大廳繼續免費吃東西、休息放鬆。如果你有預約、且有點小姐服務，經理通常會加送兩工或三工按摩（像是頭部、肩頸、足底、掏耳等），非常划算。',
-            style: { 
-              marginBottom: '30px',
-              fontSize: '1.1rem'
-            }
+            style: TEXT_STYLE_BOTTOM_30_1_1
           },
           {
             type: 'heading',
             level: 3,
             content: '9️⃣ 沒點小姐也能泡 12–24 小時（但會收淨桑費）',
             id: 'step9',
-            style: { marginTop: '20px', marginBottom: '15px' }
+            style: HEADING_STYLE_H3_ALT
           },
           {
             type: 'text',
@@ -439,25 +416,20 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '若你有點全套服務，這筆費用通常會被折抵，所以很多熟客會直接點小姐更划算。',
-            style: { 
-              marginBottom: '20px',
-              fontSize: '1.1rem'
-            }
+            style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           },
           {
             type: 'text',
             content: '這樣一來，你就能輕鬆自在地享受一次完整的澳門桑拿體驗啦！不熟悉的朋友也不會手忙腳亂，照著流程來就對了！',
-            style: { 
-              marginBottom: '20px',
-              fontSize: '1.1rem'
-            }
+            style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           },
           {
             type: 'text',
             content: '深入閱讀：',
             style: { 
               marginBottom: '5px',
-              fontSize: '1.1rem'
+              fontSize: '1.1rem',
+              marginTop:'50px'
             }
           },
           {
@@ -517,7 +489,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             type: 'heading',
             level: 3,
             content: '🔑 特色亮點：',
-            style: { marginTop: '20px', marginBottom: '15px' }
+            style: HEADING_STYLE_H3_ALT
           },
           {
             type: 'list',
@@ -528,10 +500,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
               '房型多樣，情境房、水床、大床任選',
               '每週五、六晚間有泳池秀，氣氛超嗨！'
             ],
-            style: { 
-              marginBottom: '20px',
-              fontSize: '1.1rem'
-            }
+            style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           },
           {
             type: 'text',
@@ -577,7 +546,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             type: 'heading',
             level: 3,
             content: '🔑 特色亮點：',
-            style: { marginTop: '20px', marginBottom: '15px' }
+            style: HEADING_STYLE_H3_ALT
           },
           {
             type: 'list',
@@ -587,10 +556,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
               '每週五、六晚間有遊戲環節與浴池海選',
               '技師超過 100 名，顏值極高、選擇性多'
             ],
-            style: { 
-              marginBottom: '20px',
-              fontSize: '1.1rem'
-            }
+            style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           },
           {
             type: 'text',
@@ -636,7 +602,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             type: 'heading',
             level: 3,
             content: '🔑 特色亮點：',
-            style: { marginTop: '20px', marginBottom: '15px' }
+            style: HEADING_STYLE_H3_ALT
           },
           {
             type: 'list',
@@ -646,10 +612,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
               '國籍選擇超級豐富，適合喜歡多元體驗的玩家',
               '雙飛服務另有優惠'
             ],
-            style: { 
-              marginBottom: '20px',
-              fontSize: '1.1rem'
-            }
+            style: HEADING_STYLE_H3_ALT
           },
           {
             type: 'text',
@@ -695,7 +658,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             type: 'heading',
             level: 3,
             content: '🔑 特色亮點：',
-            style: { marginTop: '20px', marginBottom: '15px' }
+            style: HEADING_STYLE_H3_ALT
           },
           {
             type: 'list',
@@ -705,10 +668,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
               '情境房設計細緻，氣氛營造極佳',
               '劇本殺互動不需額外加價'
             ],
-            style: { 
-              marginBottom: '20px',
-              fontSize: '1.1rem'
-            }
+            style: HEADING_STYLE_H3_ALT
           },
           {
             type: 'text',
@@ -737,16 +697,13 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '🏆 特色認證：劇本殺玩家必訪，沉浸式體驗一流！',
-            style: { 
-              marginBottom: '30px',
-              fontSize: '1.1rem'
-            }
+            style: TEXT_STYLE_BOTTOM_30_1_1
           },
           {
             type: 'heading',
             level: 3,
             content: '✨ 小提醒：',
-            style: { marginTop: '20px', marginBottom: '15px' }
+            style: HEADING_STYLE_H3_ALT
           },
           {
             type: 'list',
@@ -755,10 +712,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
               '若選擇全套服務，可免收淨桑費',
               '進場後別急，先熟悉場地環境，慢慢挑技師，才能挑到「最對味」的那一位！'
             ],
-            style: { 
-              marginBottom: '20px',
-              fontSize: '1.1rem'
-            }
+            style: HEADING_STYLE_H3_ALT
           },
           {
             type: 'text',
@@ -792,7 +746,8 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             content: '如果想要預約的朋友可以點擊下方官Line加入好友預約喔～',
             style: { 
               marginBottom: '20px',
-              fontSize: '1.1rem'
+              fontSize: '1.1rem',
+              marginTop:'50px'
             }
           }
         ],
@@ -839,18 +794,12 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '澳門水療店真的超多，風格和價位也五花八門。像氹仔那邊有不少主打高端奢華的國際連鎖水療，環境超有氛圍感，護理產品都是大牌；老城區也藏著很多性價比高的本土老店，主打一個接地氣的專業手法。',
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-            }
+                  style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           },
           {
             type: 'text',
             content: '大家可以提前在旅遊APP、社交媒體上看看評價，重點關注技師手法、衛生情況和服務態度。要是想體驗熱門店家，最好提前1 - 2天打電話預約，尤其是周末和節假日，不然很容易撲空！約的時候記得說清楚人數、想做的項目，還有沒有特殊需求，比如力度輕重、是否需要同性技師等等。',
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-            }
+            style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           }
         ],
         style: SECTION_STYLE
@@ -870,18 +819,12 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '到店後，前台小姐姐會超熱情地迎上來，先給你遞上熱毛巾擦手，再端來一杯超好喝的養生茶，可能是菊花枸杞茶、玫瑰茶。',
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-            }
+                  style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           },
           {
             type: 'text',
             content: '接著就開始填資料啦，主要是登記一些基本信息，還有詢問身體狀況，比如有沒有高血壓、心臟病，皮膚有沒有過敏之類的。這一步一定要如實填寫，畢竟安全第一嘛！填完資料，小姐姐會根據你的需求，推薦適合的水療項目，從基礎的按摩放松，到全身護理、美容美體，種類多到眼睛花花。要是拿不定主意，直接讓她推薦店裏的招牌項目準沒錯！',
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-            }
+                  style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           }
         ],
         style: SECTION_STYLE
@@ -901,18 +844,12 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '選好項目後，就會有專人帶你去更衣室。更衣室裏超貼心，拖鞋、浴袍、毛巾、洗漱用品一應俱全，而且都是消過毒的，衛生方面完全不用擔心！先換上寬松的浴袍和拖鞋，把隨身物品放進儲物櫃，記得拿好鑰匙。',
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-            }
+                  style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           },
           {
             type: 'text',
             content: '如果做的項目涉及身體護理，小姐姐會提醒你把身上的首飾、手錶都摘下來，然後去淋浴間簡單沖洗一下。淋浴間的沐浴露、洗髮精也都是品質超好的，味道香香的。洗完澡，整個人都清爽了，這時候就可以美美地開啟水療之旅啦！',
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-            }
+                  style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           }
         ],
         style: SECTION_STYLE
@@ -929,89 +866,50 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           height: 200
         },
         content: [
-          {
-            type: 'heading',
-            level: 4,
-            content: '按摩放松階段：',
-            id: '按摩放松階段',
-            style: { marginTop: '0', marginBottom: '15px', fontSize: '1.1rem' }
-          },
+       
           {
             type: 'text',
-            content: '洗完澡出來，技師會把你帶到專屬的水療房間。房間裏燈光調得暗暗的，播放著輕柔的音樂，香薰的味道若有若無，一進去就感覺困意上來了。',
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-            }
+            content: '按摩放松階段：洗完澡出來，技師會把你帶到專屬的水療房間。房間裏燈光調得暗暗的，播放著輕柔的音樂，香薰的味道若有若無，一進去就感覺困意上來了。',
+                  style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           },
           {
             type: 'text',
             content: '躺在按摩床上，技師會先從頭部按摩開始，用指腹輕輕揉捏頭皮，那感覺，就像有人在溫柔地給腦袋做"馬殺雞"，瞬間趕走疲憊。接著是肩頸按摩，上班族和低頭族的"重災區"！技師的手法超專業，力度恰到好處，把僵硬的肌肉一點點揉開，酸脹感過後是說不出的輕松。',
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-            }
+                  style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           },
           {
             type: 'text',
             content: '按摩完肩頸，就是背部、腰部、腿部，從上到下全方位照顧到。要是覺得力度不合適，隨時跟技師說，她們都會調整。有的店還會用熱石、艾草等輔助工具，熱乎乎的敷在背上，舒服到會直接睡著！',
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-            }
+                  style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           },
-          {
-            type: 'heading',
-            level: 4,
-            content: '【澳門水療】特色護理環節：',
-            id: '特色護理環節',
-            style: { marginTop: '0', marginBottom: '15px', fontSize: '1.1rem' }
-          },
+         
           {
             type: 'text',
-            content: '按摩完之後，如果選的是有特色護理的項目，就進入到更享受的環節啦！比如牛奶浴，一大缸溫熱的牛奶，泡進去感覺皮膚都在"喝營養"，出來後皮膚滑溜溜的；還有花瓣浴，滿滿一浴缸的玫瑰花瓣，拍照超好看，泡著澡聞著花香，簡直太治癒了。',
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-            }
+            content: '【澳門水療】特色護理環節：按摩完之後，如果選的是有特色護理的項目，就進入到更享受的環節啦！比如牛奶浴，一大缸溫熱的牛奶，泡進去感覺皮膚都在"喝營養"，出來後皮膚滑溜溜的；還有花瓣浴，滿滿一浴缸的玫瑰花瓣，拍照超好看，泡著澡聞著花香，簡直太治癒了。',
+                  style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           },
           {
             type: 'text',
             content: '要是做臉部護理，技師會先給你清潔皮膚，然後去角質、敷面膜，再搭配按摩手法，一套下來，感覺臉都亮了好幾個度，第二天上妝都更服帖！',
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-            }
+                  style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           },
-          {
-            type: 'heading',
-            level: 4,
-            content: '【澳門水療】收尾放松：',
-            id: '收尾放松',
-            style: { marginTop: '0', marginBottom: '15px', fontSize: '1.1rem' }
-          },
+        
           {
             type: 'text',
-            content: '所有護理項目做完，技師會給你蓋上薄毯子，讓你在房間裏安靜休息一會兒，緩一緩神。這時候還會端來一碗甜甜的糖水或者水果拼盤，補充能量，像紅豆沙、芒果西米露這些，味道超讚！',
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-            }
+            content: '【澳門水療】收尾放松：所有護理項目做完，技師會給你蓋上薄毯子，讓你在房間裏安靜休息一會兒，緩一緩神。這時候還會端來一碗甜甜的糖水或者水果拼盤，補充能量，像紅豆沙、芒果西米露這些，味道超讚！',
+                  style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           },
           {
             type: 'heading',
             level: 4,
             content: '【澳門水療】結束離場：滿血復活',
             id: '結束離場',
-            style: { marginTop: '0', marginBottom: '15px', fontSize: '1.1rem' }
+            style: { marginTop: '50px', marginBottom: '15px', fontSize: '1.1rem' }
           },
           {
             type: 'text',
             content: '休息得差不多了，就可以回更衣室沖個澡，換上自己的衣服。臨走前，前台小姐姐還會問你體驗感受，給你遞上優惠券或者小禮品，超貼心！',
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-            }
+                  style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           },
           {
             type: 'text',
@@ -1019,6 +917,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             style: {
               marginBottom: '5px',
               fontSize: '1.1rem',
+              marginTop:'50px'
             }
           },
           {
@@ -1035,10 +934,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '，交給我們保證讓你從裏到外都放松個夠！',
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-            }
+                  style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           }
         ],
         style: SECTION_STYLE
@@ -1087,41 +983,29 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '永利水療中心的「五行能量療程」由中醫師團隊研發，將澳門漁民傳統的「海鹽艾灸」結合德國紅外線熱石，實測對久坐上班族的肩頸痠痛緩解率達82%',
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-            }
+                  style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           },
           {
             type: 'heading',
             level: 4,
             content: '獨家亮點：',
             id: '獨家亮點',
-            style: { marginTop: '0', marginBottom: '15px', fontSize: '1.1rem' }
+            style: { marginTop: '50px', marginBottom: '15px', fontSize: '1.1rem' }
           },
           {
             type: 'text',
             content: '藥草蒸薰艙 ：使用路環山採集的野生雞血藤、五指毛桃，蒸氣滲透力比市面常見草本強3倍',
-            style: {
-              marginBottom: '10px',
-              fontSize: '1.1rem',
-            }
+           style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           },
           {
             type: 'text',
             content: '療程後茶點 ：搭配澳門中藥行「同善堂」特調的陳皮桂花茶，舒緩能量代謝後的燥氣',
-            style: {
-              marginBottom: '10px',
-              fontSize: '1.1rem',
-            }
+            style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           },
           {
             type: 'text',
             content: '隱藏服務 ：可預約獨立「中藥足浴亭」，俯瞰表演湖夜景',
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-            }
+                  style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           }
         ],
         style: SECTION_STYLE
@@ -1141,10 +1025,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '澳門唯一引進葡萄牙阿爾加維海岸技術的「海洋再生療程」',
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-            }
+                  style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           },
           {
             type: 'heading',
@@ -1156,26 +1037,17 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '即日空運海藻 ：混合大西洋深層水域的墨角藻與珊瑚草，高濃度礦物質能1小時內提升皮膚保水度41%',
-            style: {
-              marginBottom: '10px',
-              fontSize: '1.1rem',
-            }
+            style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           },
           {
             type: 'text',
             content: '仿潮汐按摩床 ：床墊隨程式模擬海浪波動頻率，同步疏通淋巴與放鬆肌肉',
-            style: {
-              marginBottom: '10px',
-              fontSize: '1.1rem',
-            }
+            style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           },
           {
             type: 'text',
             content: '秘密空間 ：要求安排「水穹頂房」，玻璃圓頂引入自然光，恍如置身海底',
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-            }
+                  style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           }
         ],
         style: SECTION_STYLE
@@ -1195,41 +1067,29 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '結合澳門大學中醫藥實驗室技術的「智能養生系統」',
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-            }
+                  style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           },
           {
             type: 'heading',
             level: 4,
             content: '獨家亮點：',
             id: '獨家亮點3',
-            style: { marginTop: '0', marginBottom: '15px', fontSize: '1.1rem' }
+            style: { marginTop: '50px', marginBottom: '15px', fontSize: '1.1rem' }
           },
           {
             type: 'text',
             content: 'AI脈象儀 ：手腕貼片5分鐘分析氣血狀態，生成專屬精油配方（誤差率僅3.8%）',
-            style: {
-              marginBottom: '10px',
-              fontSize: '1.1rem',
-            }
+            style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           },
           {
             type: 'text',
             content: '音頻共振按摩 ：技師配合腦波舒眠音樂的頻率，調整穴位按壓節奏',
-            style: {
-              marginBottom: '10px',
-              fontSize: '1.1rem',
-            }
+            style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           },
           {
             type: 'text',
             content: '冷療放鬆區 ：-110°C低溫艙（全澳僅2台）可快速消除水腫，建議療程後使用',
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-            }
+                  style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           }
         ],
         style: SECTION_STYLE
@@ -1243,26 +1103,17 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '1.預約時段 ：週三下午普遍客量較少，技師服務時間更從容（業界內部數據）',
-            style: {
-              marginBottom: '10px',
-              fontSize: '1.1rem',
-            }
+            style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           },
           {
             type: 'text',
             content: '2.效果加乘 ：提前1小時抵達，先體驗「葡萄牙礦物泥桑拿房」打開毛孔',
-            style: {
-              marginBottom: '10px',
-              fontSize: '1.1rem',
-            }
+            style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           },
           {
             type: 'text',
             content: '3.隱藏禮遇 ：主動詢問「療程後休憩包」，通常含滋潤湯品與熱敷眼罩（非公開提供）',
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-            }
+                  style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           }
         ],
         style: SECTION_STYLE
@@ -1276,26 +1127,17 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '結束水療後，步行至永利皇宮南翼的「香氛竹林小徑」，夜間7點後啟動的霧化系統會釋放薰衣草精油微粒；或前往澳門半島「鳳凰山徑」，15分鐘路程即可抵達能眺望港珠澳大橋的觀景台，將身心療癒延伸至自然場域。',
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-            }
+                  style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           },
           {
             type: 'text',
             content: '結語：怎麼樣是不是很想去呢?',
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-            }
+                  style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           },
           {
             type: 'text',
             content: '想了解更多澳門水療可以追蹤我們龍匯天下',
-            style: {
-              marginBottom: '5px',
-              fontSize: '1.1rem',
-            }
+            style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           },
           {
             type: 'link',
@@ -1319,10 +1161,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '需要暗黑版水療介紹請點我',
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-            }
+                  style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           }
         ],
         style: SECTION_STYLE
@@ -1371,17 +1210,14 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '說到氹仔區的澳門按摩推薦，「帝湖水療」絕對是顏值控的天堂。這裡不只環境講究，還是電影《飛虎出精》的拍攝場景，整體設計呈現濃濃的東南亞奢華風，走進來就像進入一場視覺饗宴。',
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-            }
+                  style: {...TEXT_STYLE_BOTTOM_20_TOP_50_1_1,marginTop:'50px'}
           },
           {
             type: 'heading',
             level: 4,
             content: '🔹 亮點特色：',
             id: '亮點特色1',
-            style: { marginTop: '0', marginBottom: '15px', fontSize: '1.1rem' }
+            style: { marginTop: '50px', marginBottom: '15px', fontSize: '1.1rem' }
           },
           {
             type: 'list',
@@ -1391,7 +1227,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
               '提供 60 分鐘完整服務，專業又細緻',
               '定期優惠活動，像是買一送一'
             ],
-            style: { marginBottom: '20px', fontSize: '1.1rem' }
+            style: { marginBottom: '20px', fontSize: '1.1rem' ,lineHeight:'1rem',marginTop:'50px' }
           },
           {
             type: 'text',
@@ -1412,10 +1248,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '⭐ 推薦對象：顏值控、新手入門者、想拍美照的旅人',
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-            }
+                  style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           }
         ],
         style: SECTION_STYLE
@@ -1436,17 +1269,14 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '「帝道水療」是近期新開幕的熱門選擇，主打雙飛＋雙次服務，特別適合體力旺盛、喜歡玩得盡興的玩家。現場技師多數年輕、親切，而且能海選、自由搭配，滿足不同需求。',
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-            }
+                  style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           },
           {
             type: 'heading',
             level: 4,
             content: '🔹 亮點特色：',
             id: '亮點特色2',
-            style: { marginTop: '0', marginBottom: '15px', fontSize: '1.1rem' }
+            style: { marginTop: '50px', marginBottom: '15px', fontSize: '1.1rem' }
           },
           {
             type: 'list',
@@ -1454,8 +1284,8 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
               '新裝潢、環境乾淨有質感',
               '提供雙飛服務與兩次射精機會',
               '買一送一活動靈活，CP 值高'
-            ],
-            style: { marginBottom: '20px', fontSize: '1.1rem' }
+              ],
+              style: { marginBottom: '20px', fontSize: '1.1rem' ,lineHeight:'1rem',marginTop:'50px' }
           },
           {
             type: 'text',
@@ -1476,10 +1306,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '⭐ 推薦對象：雙飛控、嚐鮮玩家、需求強烈者',
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-            }
+                  style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           }
         ],
         style: SECTION_STYLE
@@ -1501,8 +1328,9 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             type: 'text',
             content: '追求極致享受的你，千萬不能錯過「M Club 東方水療會」。這間被譽為全澳門最頂級桑拿館之一，提供溫泉池共浴、清酒體驗，加價享受像電影般的感官奢華。',
             style: {
-              marginBottom: '20px',
+              marginBottom: '15px',
               fontSize: '1.1rem',
+              marginTop:'50px'
             }
           },
           {
@@ -1510,7 +1338,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             level: 4,
             content: '🔹 亮點特色：',
             id: '亮點特色3',
-            style: { marginTop: '0', marginBottom: '15px', fontSize: '1.1rem' }
+            style: { marginTop: '50px', marginBottom: '15px', fontSize: '1.1rem' }
           },
           {
             type: 'list',
@@ -1519,7 +1347,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
               '技師素質高，顏值與氣質並重',
               '不定期舉辦小遊戲與互動活動，玩樂性強'
             ],
-            style: { marginBottom: '20px', fontSize: '1.1rem' }
+            style: { marginBottom: '20px', fontSize: '1.1rem' ,lineHeight:'1rem',marginTop:'50px' }
           },
           {
             type: 'text',
@@ -1540,10 +1368,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '⭐ 推薦對象：高端玩家、情侶同行者、重視體驗感人士',
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-            }
+                  style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           }
         ],
         style: SECTION_STYLE
@@ -1564,17 +1389,14 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '想快速安排澳門按摩又不想跑太遠？那就選「極品桑拿」吧！坐落在英皇酒店，地理位置極佳。技師主打中國超模等級，外貌與手藝雙贏，還有簡約設計的高質感房型，很適合商務與觀光客休息片刻。',
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-            }
+                  style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           },
           {
             type: 'heading',
             level: 4,
             content: '🔹 亮點特色：',
             id: '亮點特色4',
-            style: { marginTop: '0', marginBottom: '15px', fontSize: '1.1rem' }
+            style: { marginTop: '50px', marginBottom: '15px', fontSize: '1.1rem' }
           },
           {
             type: 'list',
@@ -1583,7 +1405,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
               '技師顏值高，自由挑選快速高效',
               '提供 50 分鐘全套服務，流程順暢'
             ],
-            style: { marginBottom: '20px', fontSize: '1.1rem' }
+            style: { marginBottom: '20px', fontSize: '1.1rem' ,lineHeight:'1rem',marginTop:'50px' }
           },
           {
             type: 'text',
@@ -1604,10 +1426,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '⭐ 推薦對象：顏控玩家、時間有限者、喜歡快速安排行程的人',
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-            }
+                  style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           }
         ],
         style: SECTION_STYLE
@@ -1625,7 +1444,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
               '🎯 現場挑選技師時，建議先觀察幾輪，選到合拍的才不會踩雷。',
               '💬 想了解更多資訊，還可點選店家官方 Line 或微信，詢問最新優惠與活動。'
             ],
-            style: { marginBottom: '20px', fontSize: '1.1rem' }
+            style: { marginBottom: '20px', fontSize: '1.1rem' ,lineHeight:'1rem'}
           }
         ],
         style: SECTION_STYLE
@@ -1639,10 +1458,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '來澳門不只玩樂，更要好好放鬆。無論你重視顏值、想試新玩法，或只想快速釋放壓力，以上四間人氣澳門按摩桑拿店都能滿足你不同層次的期待。旅途中別忘了給自己一點獎勵，選一間合適的桑拿，好好享受屬於你的悠閒時光！想要預約按摩的朋友，可以點擊加入官方Line，我們幫您安排。',
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-            }
+                  style: {...TEXT_STYLE_BOTTOM_20_TOP_50_1_1,marginTop:'10px'}
           }
         ],
         style: SECTION_STYLE
@@ -1714,10 +1530,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '30分鐘免費體驗券：賭場累積500積分兌換',
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-            }
+                  style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           },
           {
             type: 'text',
@@ -1739,10 +1552,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '黃金時段：凌晨1:00-5:00入場送90分鐘頭肩頸按摩',
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-            }
+                  style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           },
           {
             type: 'text',
@@ -1772,10 +1582,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '路線：議事亭前地「鉅記」旁巷子直走30米，綠色霓虹燈牌',
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-            }
+                  style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           }
         ],
         style: SECTION_STYLE
@@ -1830,10 +1637,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: 'A：【澳門按摩】 無需強制小費 ！若技師主動索要，可致電店家投訴（正規店會嚴懲）',
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-            }
+                  style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           },
           {
             type: 'text',
@@ -1874,10 +1678,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: 'A：認準這句廣東話：「唔該，我要 正常按摩 」（m̀h gōi, ngóh yiu jing cheung on mó ）',
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-            }
+                  style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           }
         ],
         style: SECTION_STYLE
@@ -1913,10 +1714,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '夜景約會後：情侶首選「悅榕莊雙人花瓣浴」，贈送葡塔香檳塔',
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-            }
+                  style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           }
         ],
         style: SECTION_STYLE
@@ -1949,10 +1747,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '，龍匯天下官方LINE連結也在下方啦，還不手刀加起來！',
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-            }
+                  style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           }
         ],
         style: SECTION_STYLE
@@ -2002,10 +1797,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '首先，非常重要的一點：千萬不要直接告訴計程車司機你要去桑拿店。許多司機會藉機與店家抽成，導致進場費用硬生生被加價10~15%。建議做法是搭到附近路口再自己步行前往或是由我們安排給您，這樣才能避開被當肥羊宰的風險。',
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-            }
+                  style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           }
         ],
         style: SECTION_STYLE
@@ -2042,10 +1834,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '這種模式對於想省錢、不打算住飯店的人來說，是相當高CP值的選擇。',
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-            }
+                  style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           }
         ],
         style: SECTION_STYLE
@@ -2065,18 +1854,12 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '進門後會由經理帶你更換桑拿服，並給予一個感應手環，用來記錄所有館內消費（類似刷卡）。行李、手機等個人物品都會鎖入置物櫃，若有需要可向經理申請攜帶手機進場，部分高級店家還提供行動電源與傳輸線，讓客人不用反覆開櫃取物。',
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-            }
+                  style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           },
           {
             type: 'text',
             content: '此外，偷拍設備為嚴格禁止，若被查獲會有法律責任，請務必遵守規定。',
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-            }
+                  style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           }
         ],
         style: SECTION_STYLE
@@ -2096,18 +1879,12 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '澳門桑拿玩法第一站是洗澡區，有些店家提供比基尼擦背服務，主要是越南籍員工，費用另計。接著就是泡澡，通常會有熱池與冷池，還可進入蒸氣室流汗排毒。',
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-            }
+                  style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           },
           {
             type: 'text',
             content: '泡完澡換上桑拿服，就可以準備進入重頭戲──沙發區與選妃時間！',
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-            }
+                  style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           }
         ],
         style: SECTION_STYLE
@@ -2182,10 +1959,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '每家特色不同，建議根據個人需求選擇合適場館，事前也可以透過論壇與網友交流資訊。',
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-            }
+                  style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           }
         ],
         style: SECTION_STYLE
@@ -2215,10 +1989,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '澳門桑拿玩法千變萬化，每家店都有不同的風格與設計。如果你準備好展開一場放鬆之旅。只要掌握訣竅，澳門桑拿不僅是一種休閒，更是一種文化體驗，可以點擊下方官Line聯絡我們，我們將幫您安排遊澳門桑拿店。',
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-            }
+                  style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           }
         ],
         style: SECTION_STYLE
@@ -2287,7 +2058,8 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             style: {
               marginBottom: '15px',
               fontSize: '1.1rem',
-              fontWeight: 'bold'
+              fontWeight: 'bold',
+              marginTop:'50px'
             }
           },
           {
@@ -2297,7 +2069,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
               '水床房型、泡池共浴、情境按摩房',
               '晚間表演、小遊戲、K 房互動等娛樂設施'
             ],
-            style: { marginBottom: '20px', fontSize: '1.1rem', fontWeight: 'bold' }
+            style: { marginBottom: '20px', fontSize: '1.1rem', fontWeight: 'bold',lineHeight:'5rem',marginTop:'50px' }
           }
         ],
         style: SECTION_STYLE
@@ -2313,7 +2085,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             level: 3,
             content: '1️⃣ 【尊貴水療 Grand Noble Spa】',
             id: '尊貴水療',
-            style: { marginTop: '0', marginBottom: '15px', fontSize: '1.1rem' }
+            style: { marginTop: '50px', marginBottom: '15px', fontSize: '1.1rem' }
           },
           {
             type: 'text',
@@ -2339,7 +2111,8 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             style: {
               marginBottom: '10px',
               fontSize: '1.1rem',
-              fontWeight: 'bold'
+              fontWeight: 'bold',
+              marginTop:'50px'
             }
           },
           {
@@ -2350,7 +2123,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
               '設有情境房、水床、卡啦 OK，小酌後氣氛更撩人',
               '每週五六晚間有「水池誘惑秀」，視覺與感官雙享受'
             ],
-            style: { marginBottom: '15px', fontSize: '1.1rem', fontWeight: 'bold' }
+            style: { marginBottom: '15px', fontSize: '1.1rem', fontWeight: 'bold',lineHeight:'5rem',marginTop:'50px' }
           },
           {
             type: 'text',
@@ -2358,7 +2131,8 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             style: {
               marginBottom: '30px',
               fontSize: '1.1rem',
-              fontWeight: 'bold'
+              fontWeight: 'bold'    ,
+              marginTop:'50px'
             }
           },
           {
@@ -2366,7 +2140,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             level: 3,
             content: '2️⃣ 【壹號桑拿 The One Sauna】',
             id: '壹號桑拿',
-            style: { marginTop: '0', marginBottom: '15px', fontSize: '1.1rem' }
+            style: { marginTop: '50px', marginBottom: '15px', fontSize: '1.1rem' }
           },
           {
             type: 'text',
@@ -2392,7 +2166,8 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             style: {
               marginBottom: '10px',
               fontSize: '1.1rem',
-              fontWeight: 'bold'
+              fontWeight: 'bold',
+              marginTop:'50px'
             }
           },
           {
@@ -2402,7 +2177,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
               '技師人數超過 100 名，顏值保證，現場海選超刺激',
               '可搭配正規按摩、共浴互動與全套服務'
             ],
-            style: { marginBottom: '15px', fontSize: '1.1rem', fontWeight: 'bold' }
+            style: { marginBottom: '15px', fontSize: '1.1rem', fontWeight: 'bold',lineHeight:'5rem',marginTop:'50px' }
           },
           {
             type: 'text',
@@ -2410,7 +2185,8 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             style: {
               marginBottom: '30px',
               fontSize: '1.1rem',
-              fontWeight: 'bold'
+              fontWeight: 'bold', 
+              marginTop:'50px'
             }
           },
           {
@@ -2418,7 +2194,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             level: 3,
             content: '3️⃣ 【東方皇堡水療 East Castle Spa】',
             id: '東方皇堡',
-            style: { marginTop: '0', marginBottom: '15px', fontSize: '1.1rem' }
+            style: { marginTop: '50px', marginBottom: '15px', fontSize: '1.1rem' }
           },
           {
             type: 'text',
@@ -2444,7 +2220,8 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             style: {
               marginBottom: '10px',
               fontSize: '1.1rem',
-              fontWeight: 'bold'
+              fontWeight: 'bold',
+              marginTop:'50px'
             }
           },
           {
@@ -2454,7 +2231,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
               '技師顏值高、態度親切，劇本殺玩法不需額外付費',
               '適合想來點「情節感」的身心釋放'
             ],
-            style: { marginBottom: '15px', fontSize: '1.1rem', fontWeight: 'bold' }
+            style: { marginBottom: '15px', fontSize: '1.1rem', fontWeight: 'bold',lineHeight:'5rem',marginTop:'50px' }
           },
           {
             type: 'text',
@@ -2462,7 +2239,8 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             style: {
               marginBottom: '30px',
               fontSize: '1.1rem',
-              fontWeight: 'bold'
+              fontWeight: 'bold',
+              marginTop:'50px'
             }
           },
           {
@@ -2470,7 +2248,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             level: 3,
             content: '4️⃣【帝道水療】｜新店 × 雙飛優惠 × 雙次服務',
             id: '帝道水療',
-            style: { marginTop: '0', marginBottom: '15px', fontSize: '1.1rem' }
+            style: { marginTop: '50px', marginBottom: '15px', fontSize: '1.1rem' }
           },
           {
             type: 'text',
@@ -2496,7 +2274,8 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             style: {
               marginBottom: '10px',
               fontSize: '1.1rem',
-              fontWeight: 'bold'
+              fontWeight: 'bold',
+              marginTop:'50px'
             }
           },
           {
@@ -2507,7 +2286,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
               '設有現場海選制度，自由選擇不怕踩雷',
               '指定價位有「買一送一」活動'
             ],
-            style: { marginBottom: '15px', fontSize: '1.1rem', fontWeight: 'bold' }
+            style: { marginBottom: '15px', fontSize: '1.1rem', fontWeight: 'bold',lineHeight:'5rem',marginTop:'50px' }
           },
           {
             type: 'text',
@@ -2515,7 +2294,8 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             style: {
               marginBottom: '30px',
               fontSize: '1.1rem',
-              fontWeight: 'bold'
+              fontWeight: 'bold',
+              marginTop:'50px'
             }
           },
           {
@@ -2523,7 +2303,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             level: 3,
             content: '5️⃣【M Club 晉會／東方水療會】｜奢華級別 × 共浴體驗',
             id: 'M-Club',
-            style: { marginTop: '0', marginBottom: '15px', fontSize: '1.1rem' }
+            style: { marginTop: '50px', marginBottom: '15px', fontSize: '1.1rem' }
           },
           {
             type: 'text',
@@ -2549,7 +2329,8 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             style: {
               marginBottom: '10px',
               fontSize: '1.1rem',
-              fontWeight: 'bold'
+              fontWeight: 'bold',
+              marginTop:'50px'
             }
           },
           {
@@ -2560,7 +2341,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
               '技師陣容多樣，氣質、服務與顏值三高',
               '不定期舉辦互動小遊戲，娛樂性十足'
             ],
-            style: { marginBottom: '15px', fontSize: '1.1rem', fontWeight: 'bold' }
+            style: { marginBottom: '15px', fontSize: '1.1rem', fontWeight: 'bold',lineHeight:'5rem',marginTop:'50px' }
           },
           {
             type: 'text',
@@ -2568,7 +2349,8 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             style: {
               marginBottom: '30px',
               fontSize: '1.1rem',
-              fontWeight: 'bold'
+              fontWeight: 'bold',
+              marginTop:'50px'
             }
           },
           {
@@ -2576,7 +2358,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             level: 3,
             content: '6️⃣【極品桑拿】｜地點最優 × 超模級技師',
             id: '極品桑拿',
-            style: { marginTop: '0', marginBottom: '15px', fontSize: '1.1rem' }
+            style: { marginTop: '50px', marginBottom: '15px', fontSize: '1.1rem' }
           },
           {
             type: 'text',
@@ -2602,7 +2384,8 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             style: {
               marginBottom: '10px',
               fontSize: '1.1rem',
-              fontWeight: 'bold'
+              fontWeight: 'bold',
+              marginTop:'50px'
             }
           },
           {
@@ -2613,7 +2396,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
               '50 分鐘全套服務，時間安排彈性',
               '現場海選效率高，想快狠準選到「菜」沒問題'
             ],
-            style: { marginBottom: '15px', fontSize: '1.1rem', fontWeight: 'bold' }
+            style: { marginBottom: '15px', fontSize: '1.1rem', fontWeight: 'bold',lineHeight:'5rem',marginTop:'50px' }
           },
           {
             type: 'text',
@@ -2621,7 +2404,8 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             style: {
               marginBottom: '30px',
               fontSize: '1.1rem',
-              fontWeight: 'bold'
+              fontWeight: 'bold',
+              marginTop:'50px'
             }
           },
           {
@@ -2629,7 +2413,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             level: 3,
             content: '7️⃣【氹仔盛世酒店水療會所】｜影視取景 × 高顏值技師',
             id: '盛世酒店',
-            style: { marginTop: '0', marginBottom: '15px', fontSize: '1.1rem' }
+            style: { marginTop: '50px', marginBottom: '15px', fontSize: '1.1rem' }
           },
           {
             type: 'text',
@@ -2655,7 +2439,8 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             style: {
               marginBottom: '10px',
               fontSize: '1.1rem',
-              fontWeight: 'bold'
+              fontWeight: 'bold',
+              marginTop:'50px'
             }
           },
           {
@@ -2667,7 +2452,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
               '現場「真人海選」氣氛火熱，挑選如選妃般儀式感滿滿',
               '提供 60 分鐘全套服務，服務細節到位'
             ],
-            style: { marginBottom: '15px', fontSize: '1.1rem', fontWeight: 'bold' }
+            style: { marginBottom: '15px', fontSize: '1.1rem', fontWeight: 'bold' ,lineHeight:'1rem',marginTop:'50px' }
           },
           {
             type: 'text',
@@ -2675,7 +2460,8 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             style: {
               marginBottom: '30px',
               fontSize: '1.1rem',
-              fontWeight: 'bold'
+              fontWeight: 'bold'  ,
+              marginTop:'50px'
             }
           },
           {
@@ -2683,7 +2469,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             level: 3,
             content: '💡 小技巧：如何選對澳門水療會所？',
             id: '小技巧',
-            style: { marginTop: '0', marginBottom: '15px', fontSize: '1.1rem' }
+            style: { marginTop: '50px', marginBottom: '15px', fontSize: '1.1rem' }
           },
           {
             type: 'list',
@@ -2693,7 +2479,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
               '營業時間＆位置：是否方便？可否過夜？',
               '是否有活動或折扣：預約是否可升等或加送按摩？'
             ],
-            style: { marginBottom: '20px', fontSize: '1.1rem', fontWeight: 'bold' }
+            style: { marginBottom: '20px', fontSize: '1.1rem' , lineHeight:'5rem',marginTop:'50px' }
           }
         ],
         style: SECTION_STYLE
@@ -2775,10 +2561,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '簡單說，「澳門劇本殺」是將角色扮演＋情慾互動＋劇情推進融合在一起的沉浸式體驗。不同於一般的劇本殺只是推理與演戲，澳門劇本殺讓玩家在特定情境中探索內心慾望，每一段對話、每一個角色、每一場反轉，都可能引爆情緒與身體的化學反應。',
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-            }
+                  style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           },
           {
             type: 'text',
@@ -2786,6 +2569,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             style: {
               marginBottom: '10px',
               fontSize: '1.1rem',
+              marginTop:'50px'
             }
           },
           {
@@ -2855,10 +2639,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '🛋 情境套房的審訊與剝奪，誰先崩潰？',
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-            }
+                  style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           }
         ],
         style: SECTION_STYLE
@@ -2890,7 +2671,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             content: '🏆東方皇堡水療會所（劇本殺首選）',
             id: '東方皇堡',
             borderTop: 'on',
-            style: { marginTop: '0', marginBottom: '15px', fontSize: '1.1rem' }
+            style: { marginTop: '50px', marginBottom: '15px', fontSize: '1.1rem' }
           },
           {
             type: 'text',
@@ -2898,6 +2679,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             style: {
               marginBottom: '5px',
               fontSize: '1.1rem',
+              marginTop:'50px'
             }
           },
           {
@@ -2914,6 +2696,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             style: {
               marginBottom: '10px',
               fontSize: '1.1rem',
+              marginTop:'50px'
             }
           },
           {
@@ -2923,7 +2706,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
               '情境房設計極致逼真，戲劇張力超強',
               '特定劇情不需加價，開口就能安排驚喜角色'
             ],
-            style: { marginBottom: '10px', fontSize: '1.1rem' }
+            style: { marginBottom: '10px', fontSize: '1.1rem' ,lineHeight:'5rem',marginTop:'50px'}
           },
           {
             type: 'text',
@@ -2955,7 +2738,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             content: '🌙尊貴水療（24H深夜劇本殺選擇）',
             id: '尊貴水療',
             borderTop: 'on',
-            style: { marginTop: '0', marginBottom: '15px', fontSize: '1.1rem' }
+            style: { marginTop: '50px', marginBottom: '15px', fontSize: '1.1rem' }
           },
           {
             type: 'text',
@@ -2963,6 +2746,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             style: {
               marginBottom: '5px',
               fontSize: '1.1rem',
+              marginTop:'50px'
             }
           },
           {
@@ -2979,6 +2763,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             style: {
               marginBottom: '10px',
               fontSize: '1.1rem',
+              marginTop:'50px'
             }
           },
           {
@@ -2988,7 +2773,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
               'KTV互動房可發展延伸情節',
               '每週末泳池秀，劇情前奏氣氛拉滿'
             ],
-            style: { marginBottom: '10px', fontSize: '1.1rem' }
+            style: { marginBottom: '10px', fontSize: '1.1rem' ,lineHeight:'5rem',marginTop:'50px'}
           },
           {
             type: 'text',
@@ -3020,7 +2805,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             content: '✨壹號桑拿（新派風格＋大師級角色）',
             id: '壹號桑拿',
             borderTop: 'on',
-            style: { marginTop: '0', marginBottom: '15px', fontSize: '1.1rem' }
+            style: { marginTop: '50px', marginBottom: '15px', fontSize: '1.1rem' }
           },
           {
             type: 'text',
@@ -3028,6 +2813,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             style: {
               marginBottom: '5px',
               fontSize: '1.1rem',
+              marginTop:'50px'
             }
           },
           {
@@ -3044,6 +2830,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             style: {
               marginBottom: '10px',
               fontSize: '1.1rem',
+              marginTop:'50px'
             }
           },
           {
@@ -3053,7 +2840,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
               '每週五六有互動活動，情節進展自然',
               '技師超過百名，自由選角如挑演員'
             ],
-            style: { marginBottom: '10px', fontSize: '1.1rem' }
+            style: { marginBottom: '10px', fontSize: '1.1rem' ,lineHeight:'5rem',marginTop:'50px'}
           },
           {
             type: 'text',
@@ -3077,7 +2864,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             content: '🔥新豪門桑拿殿（老字號＋海量選角）',
             id: '新豪門',
             borderTop: 'on',
-            style: { marginTop: '0', marginBottom: '15px', fontSize: '1.1rem' }
+            style: { marginTop: '50px', marginBottom: '15px', fontSize: '1.1rem' }
           },
           {
             type: 'text',
@@ -3085,6 +2872,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             style: {
               marginBottom: '5px',
               fontSize: '1.1rem',
+              marginTop:'50px'
             }
           },
           {
@@ -3101,6 +2889,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             style: {
               marginBottom: '10px',
               fontSize: '1.1rem',
+              marginTop:'50px'
             }
           },
           {
@@ -3110,7 +2899,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
               '高峰時段超過 200 位技師，選角自由',
               '每位技師都具備角色扮演訓練背景'
             ],
-            style: { marginBottom: '10px', fontSize: '1.1rem' }
+            style: { marginBottom: '10px', fontSize: '1.1rem' ,lineHeight:'5rem',marginTop:'50px'}
           },
           {
             type: 'text',
@@ -3123,10 +2912,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '🎯 推薦族群：喜歡多線劇本與穩定服務的你',
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-            }
+                  style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           }
         ],
         style: SECTION_STYLE
@@ -3146,31 +2932,22 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
               '有些地方設有「暗語互動」，熟門熟路更好玩',
               '若選擇全套服務，淨桑費可免除'
             ],
-            style: { marginBottom: '30px', fontSize: '1.1rem' }
+            style: TEXT_STYLE_BOTTOM_30_1_1
           },
           {
             type: 'text',
             content: '❤️ 澳門劇本殺不是遊戲，是你慾望的放映機',
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-            }
+                  style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           },
           {
             type: 'text',
             content: '這場遊戲，你能控制劇情，但能控制慾望嗎？來澳門，不只是放鬆，更是探險。讓劇本成為你現實的延伸，讓角色成為你幻想的出口。',
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-            }
+                  style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           },
           {
             type: 'text',
             content: '📲 想預約、體驗或了解更多，歡迎點擊下方官方Line 👉 【立即解鎖你的專屬劇情】',
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-            }
+                  style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           }
         ],
         style: SECTION_STYLE
@@ -3253,10 +3030,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '🎁 活動：買一送一（陪訓員需另加費用，有折扣）',
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-            }
+                  style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           }
         ],
         style: SECTION_STYLE
@@ -3311,10 +3085,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '🎯 推薦對象：雙飛控、剛性需求者、嚐鮮派玩家',
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-            }
+                  style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           }
         ],
         style: SECTION_STYLE
@@ -3338,6 +3109,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
             style: {
               marginBottom: '15px',
               fontSize: '1.1rem',
+              marginTop:'50px'
             }
           },
           {
@@ -3369,10 +3141,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '🏆 獨家特色：溫泉＋清酒共浴，全澳獨一無二',
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-            }
+                  style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           }
         ],
         style: SECTION_STYLE
@@ -3427,10 +3196,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '🎯 推薦對象：顏控、交通便利需求者、高端玩家',
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-            }
+                  style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           }
         ],
         style: SECTION_STYLE
@@ -3472,10 +3238,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: ' 手把手教你',
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-            }
+                  style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           }
         ],
         style: SECTION_STYLE
@@ -3542,10 +3305,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '有些時候是可以，大部分時候是需要刷卡或者現金，因為澳門比較特殊，所以很多移動支付除了商場，這類店家的支付方法都不是很穩定，建議刷卡或現金，支持銀聯都，換現金的話基本所有酒店都有。',
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-            }
+                  style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           }
         ],
         style: SECTION_STYLE
@@ -3559,10 +3319,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '澳門比較便宜的浴場選擇不多，基本就2到3家，達令比較出名，無腦選擇達令就好，缺點就是泰國越南妹子，類似泰浴，東南亞玩過就知道性價比略低，有些還是芭達雅哈尼2過來的，除非預算實在吃緊，否則不推薦，沒什麼特別的。特別是東南亞去比較多的朋友這個價位只推薦兩家：達令和金池，勝在性價比，整體和泰浴感覺差不多。金池環境不行，不如加點預算。',
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-            }
+                  style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           }
         ],
         style: SECTION_STYLE
@@ -3584,10 +3341,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '要點妹子的話，還是推薦大家去花心，如果是想玩耍看看表演，迷洞算是比較有趣的場子，這種有表演的吧就是比較慢熱，比較猴急的朋友不是很推薦大家去，花心目前還是主打洋妞，有這個偏好的朋友可以去看看表演，但是能點的妹子不是表演的哦，只有媽媽帶過來的可以走，建議大家問清楚。',
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-            }
+                  style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           }
         ],
         style: SECTION_STYLE
@@ -3661,10 +3415,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '現在恢復的也很不錯，也有長龍陣，選秀表演可看，除了裝修老了點，其他基本恢覆到疫情前的水準，也推薦新舊玩家，感受下這家有歷史的店。',
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-            }
+                  style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           }
         ],
         style: SECTION_STYLE
@@ -3713,10 +3464,7 @@ export const saunaArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '',
-            style: {
-              marginBottom: '20px',
-              fontSize: '1.1rem',
-            }
+                  style: TEXT_STYLE_BOTTOM_20_TOP_50_1_1
           },
           {
             type: 'text',
