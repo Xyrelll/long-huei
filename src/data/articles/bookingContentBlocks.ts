@@ -1263,7 +1263,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           width: 300,
           height: 200
         },
-        description: 'CP值高!適合小朋友的玩水渡假村!(推薦指數5顆星)',
+        description: '【澳門訂房】CP值高!適合小朋友的玩水渡假村!(推薦指數5顆星)',
         content: [
           {
             type: 'text',
