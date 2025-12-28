@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from "next/link";
 
 interface PaginationProps {
   currentPage: number;
@@ -13,17 +13,19 @@ export default function Pagination({
   totalPages,
   baseUrl,
   queryParams = {},
-  className = '',
+  className = "",
 }: PaginationProps) {
   // Extract existing query params from baseUrl
-  const baseUrlParts = baseUrl.split('?');
+  const baseUrlParts = baseUrl.split("?");
   const basePath = baseUrlParts[0];
-  const existingParams = baseUrlParts[1] ? new URLSearchParams(baseUrlParts[1]) : new URLSearchParams();
-  
+  const existingParams = baseUrlParts[1]
+    ? new URLSearchParams(baseUrlParts[1])
+    : new URLSearchParams();
+
   // Build query string from queryParams, preserving existing params
   const buildQueryString = (pageNo: number) => {
     const params = new URLSearchParams(existingParams);
-    params.set('PageNo', pageNo.toString());
+    params.set("PageNo", pageNo.toString());
     // Add or update any additional queryParams
     Object.entries(queryParams).forEach(([key, value]) => {
       params.set(key, value);
@@ -36,11 +38,14 @@ export default function Pagination({
   }
 
   return (
-    <nav className={`pagination mt-8 ${className}`} aria-label="Page navigation">
+    <nav
+      className={`pagination mt-8 ${className}`}
+      aria-label="Page navigation"
+    >
       <div
         style={{
-          paddingTop: '50px',
-          paddingBottom: '20px',
+          paddingTop: "50px",
+          paddingBottom: "20px",
         }}
         className="pagination-container flex justify-center"
       >
@@ -50,7 +55,7 @@ export default function Pagination({
             <li
               className="page-item border-r border-white bg-black hover:bg-[#2C261C] transition-colors"
               style={{
-                padding: '5px 10px',
+                padding: "5px 10px",
               }}
             >
               <Link
@@ -64,41 +69,49 @@ export default function Pagination({
           )}
 
           {/* Page numbers */}
-          {Array.from({ length: totalPages }, (_, i) => i + 1).map((pageNum, index) => {
-            const hasNextButton = currentPage < totalPages;
-            const isLastPage = index === totalPages - 1;
-            const shouldHaveBorder = !isLastPage || hasNextButton;
+          {Array.from({ length: totalPages }, (_, i) => i + 1).map(
+            (pageNum, index) => {
+              const hasNextButton = currentPage < totalPages;
+              const isLastPage = index === totalPages - 1;
+              const shouldHaveBorder = !isLastPage || hasNextButton;
 
-            return (
-              <li
-                key={pageNum}
-                style={{
-                  padding: '5px 10px',
-                }}
-                className={`page-item ${shouldHaveBorder ? 'border-r border-white' : ''} ${
-                  pageNum === currentPage ? 'bg-[#CD861A]' : 'bg-black hover:bg-[#2C261C]'
-                } transition-colors`}
-              >
-                {pageNum === currentPage ? (
-                  <span className="page-link px-6 py-2 text-white block text-[16px]">{pageNum}</span>
-                ) : (
-                  <Link
-                    href={`${basePath}?${buildQueryString(pageNum)}`}
-                    className="page-link px-6 py-2 text-white block text-[14px]"
-                  >
-                    {pageNum}
-                  </Link>
-                )}
-              </li>
-            );
-          })}
+              return (
+                <li
+                  key={pageNum}
+                  style={{
+                    padding: "5px 10px",
+                  }}
+                  className={`page-item ${
+                    shouldHaveBorder ? "border-r border-white" : ""
+                  } ${
+                    pageNum === currentPage
+                      ? "bg-[#CD861A]"
+                      : "bg-black hover:bg-[#2C261C]"
+                  } transition-colors`}
+                >
+                  {pageNum === currentPage ? (
+                    <span className="page-link px-6 py-2 text-white block text-[16px]">
+                      {pageNum}
+                    </span>
+                  ) : (
+                    <Link
+                      href={`${basePath}?${buildQueryString(pageNum)}`}
+                      className="page-link px-6 py-2 text-white block text-[14px]"
+                    >
+                      {pageNum}
+                    </Link>
+                  )}
+                </li>
+              );
+            }
+          )}
 
           {/* Next button */}
           {currentPage < totalPages && (
             <li
               className="page-item bg-black hover:bg-[#2C261C] transition-colors"
               style={{
-                padding: '5px 10px',
+                padding: "5px 10px",
               }}
             >
               <Link
@@ -115,4 +128,3 @@ export default function Pagination({
     </nav>
   );
 }
-

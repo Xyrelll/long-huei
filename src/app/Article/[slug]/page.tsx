@@ -386,7 +386,7 @@ function ArticleContent() {
                     >
                       <a
                         href="https://lin.ee/rQgNQ6D"
-                        className="w-[30px] h-[30px] rounded-md bg-green-500 flex items-center justify-center hover:opacity-80 transition-opacity flex-shrink-0"
+                        className="w-[30px] h-[30px] rounded-md bg-green-500 flex items-center justify-center hover:opacity-80 transition-opacity shrink-0"
                       >
                         <Image
                           src="/line-icon.svg"
@@ -398,7 +398,7 @@ function ArticleContent() {
                       </a>
                       <a
                         href="https://www.instagram.com/lhts.8899/"
-                        className="w-[30px] h-[30px] rounded-md bg-gradient-to-br from-purple-600 to-pink-500 flex items-center justify-center hover:opacity-80 transition-opacity flex-shrink-0"
+                        className="w-[30px] h-[30px] rounded-md bg-linear-to-br from-purple-600 to-pink-500 flex items-center justify-center hover:opacity-80 transition-opacity shrink-0"
                       >
                         <Image
                           src="/instagram-icon.png"
@@ -503,7 +503,7 @@ function ArticleContent() {
             </div>
 
             {/* Right Sidebar */}
-            <div className="lg:w-80 flex-shrink-0">
+            <div className="lg:w-80 shrink-0">
               <div>
                 <ArticleSidebar
                   categories={categories}

@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from "next/link";
 
 interface QA {
   question: string;
@@ -16,17 +16,14 @@ export default function QuestionAnswerCard({
   number,
   title,
   qas,
-  link = '#',
+  link = "#",
 }: QuestionAnswerCardProps) {
   return (
     <div className="w-full max-w-[1176px] bg-[#2C261C] rounded-[40px] p-[30px] flex flex-col gap-4">
       {/* Header */}
       <div className="flex items-center gap-2 mb-4">
         <svg width="21.41" height="21" viewBox="0 0 22 21" fill="none">
-          <path
-            d="M10.5 0L0 10.5V21H21V10.5L10.5 0Z"
-            fill="#CD861A"
-          />
+          <path d="M10.5 0L0 10.5V21H21V10.5L10.5 0Z" fill="#CD861A" />
         </svg>
         <h3 className="text-[13.8px] leading-[25px] tracking-[0.597px] font-bold text-[#F5CA69]">
           {number} - {title}
@@ -57,4 +54,3 @@ export default function QuestionAnswerCard({
     </div>
   );
 }
-

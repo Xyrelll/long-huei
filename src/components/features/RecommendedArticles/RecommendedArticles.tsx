@@ -286,7 +286,7 @@ export default function RecommendedArticles({
                     return (
                       <div
                         key={pageIndex}
-                        className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5 flex-shrink-0 w-full px-2"
+                        className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5 shrink-0 w-full px-2"
                       >
                         {displayArticles.map((article, idx) => {
                           if (!article)

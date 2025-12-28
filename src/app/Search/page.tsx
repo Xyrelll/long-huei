@@ -141,12 +141,12 @@ function SearchContent() {
   // Initialize from URL on mount and when URL Keyword param changes (not when user types)
   useEffect(() => {
     const keyword = searchParams.get("Keyword") || "";
-    
+
     // Only update from URL if:
     // 1. It's the initial mount, OR
     // 2. The URL keyword actually changed (not just other params or re-renders)
     const urlKeywordChanged = previousKeywordRef.current !== keyword;
-    
+
     if (isInitialMountRef.current || urlKeywordChanged) {
       previousKeywordRef.current = keyword;
 
@@ -169,7 +169,7 @@ function SearchContent() {
           setSearchKeyword(keyword);
         });
       }
-      
+
       isInitialMountRef.current = false;
     }
   }, [searchParams, allArticles, performSearch, resetSearch]);

@@ -321,9 +321,8 @@ function ArticleCarousel({
             style={{
               overflow: "hidden",
               padding: "20px",
-              paddingLeft:'0px',
-              paddingRight:'0px',
-             
+              paddingLeft: "0px",
+              paddingRight: "0px",
             }}
             className="relative"
           >
@@ -391,8 +390,6 @@ function ArticleCarousel({
                               fill
                               className="object-cover"
                             />
-
-                      
                           </div>
                           {/* Content Section with Dark Brown Background */}
                           <div

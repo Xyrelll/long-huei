@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { useScrollToTop } from '@/hooks';
+import { useScrollToTop } from "@/hooks";
 
 export default function GoToTop() {
   const { isVisible, scrollToTop } = useScrollToTop();

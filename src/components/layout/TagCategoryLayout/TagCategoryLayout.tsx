@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { Suspense, useState, useEffect } from 'react';
-import Pagination from '@/components/ui/Pagination/Pagination';
+import { Suspense, useState, useEffect } from "react";
+import Pagination from "@/components/ui/Pagination/Pagination";
 
 // Base article interface for tag category layouts
 interface BaseArticle {
@@ -22,17 +22,17 @@ interface TagCategoryLayoutProps {
   pageTitle: string;
   breadcrumbName: string;
   baseUrl: string;
-  
+
   // Articles
   articles: BaseArticle[];
   currentArticles: BaseArticle[];
   currentPage: number;
   totalPages: number;
   itemsPerPage?: number;
-  
+
   // Article list component
   ArticleListComponent: React.ComponentType<{ articles: BaseArticle[] }>;
-  
+
   // Optional styling
   width?: string | number;
   style?: React.CSSProperties;
@@ -57,14 +57,13 @@ function TagCategoryLayoutContent({
       setIsMobile(window.innerWidth < 1024);
     };
     checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
   // Determine width: use prop if provided, otherwise use default behavior
-  const containerWidth = width !== undefined 
-    ? width 
-    : (isMobile ? '100%' : '50%');
+  const containerWidth =
+    width !== undefined ? width : isMobile ? "100%" : "50%";
 
   // Merge styles: prop style takes precedence, but width is applied separately
   const containerStyle: React.CSSProperties = {
@@ -84,8 +83,8 @@ function TagCategoryLayoutContent({
           totalPages={totalPages}
           baseUrl={baseUrl}
           queryParams={{
-            SortBy: 'DisplaySeq',
-            SortDirection: 'ASC',
+            SortBy: "DisplaySeq",
+            SortDirection: "ASC",
           }}
         />
       </div>
@@ -95,9 +94,14 @@ function TagCategoryLayoutContent({
 
 export default function TagCategoryLayout(props: TagCategoryLayoutProps) {
   return (
-    <Suspense fallback={<div className="min-h-screen bg-black flex items-center justify-center text-white">Loading...</div>}>
+    <Suspense
+      fallback={
+        <div className="min-h-screen bg-black flex items-center justify-center text-white">
+          Loading...
+        </div>
+      }
+    >
       <TagCategoryLayoutContent {...props} />
     </Suspense>
   );
 }
-

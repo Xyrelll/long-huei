@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
+import { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
 
 interface Article {
   id: number;
@@ -17,7 +17,10 @@ interface ArticleCarouselProps {
   articles: Article[];
 }
 
-export default function ArticleCarousel({ title, articles }: ArticleCarouselProps) {
+export default function ArticleCarousel({
+  title,
+  articles,
+}: ArticleCarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const itemsPerPage = 4;
 
@@ -94,4 +97,3 @@ export default function ArticleCarousel({ title, articles }: ArticleCarouselProp
     </div>
   );
 }
-
