@@ -424,6 +424,7 @@ export default function ArticleContentRenderer({ blocks, content }: ArticleConte
               marginTop: sectionStyle.marginTop || '40px',
               marginBottom: sectionStyle.marginBottom || '40px',
               padding: sectionStyle.padding || '0',
+              paddingTop:'0px',
               backgroundColor: sectionStyle.backgroundColor,
               borderRadius: sectionStyle.borderRadius,
               ...(block.borderTop === 'on' && { borderTop: '1px solid #808080' }),
@@ -437,7 +438,7 @@ export default function ArticleContentRenderer({ blocks, content }: ArticleConte
                 <HeadingTag
                   id={block.id}
                   style={{
-                    marginTop: sectionStyle.marginTop || '60px',
+                    marginTop: block.borderTop === 'on' ? '10px' : (sectionStyle.marginTop || '60px'),
                     marginBottom: '8px',
                     color: '#FFFFFF',
                     fontWeight: 'bold',

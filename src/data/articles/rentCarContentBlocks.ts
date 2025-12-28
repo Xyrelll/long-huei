@@ -4,7 +4,7 @@ import { ArticleContent } from '@/types/articleContent';
 
 // Common style constants - edit here to update all instances
 const TEXT_STYLE_BOTTOM_20 = { 
-  marginBottom: '20px', 
+  marginBottom: '50px', 
   marginTop: '0', 
   fontSize: '1.125rem'
 };
@@ -16,12 +16,12 @@ const TEXT_STYLE_BOTTOM_10 = {
 };
 
 const TEXT_STYLE_BOTTOM_20_NO_TOP = { 
-  marginBottom: '20px',
+  marginBottom: '50px',
   fontSize: '1.125rem'
 };
 
 const HEADING_STYLE_H3 = { 
-  marginTop: '20px', 
+  marginTop: '50px', 
   marginBottom: '10px' 
 };
 
@@ -322,6 +322,7 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
       {
         type: 'section',
         title: '總結：開啟您的極致舒適澳門之旅！',
+        borderTop: 'on',
         titleLevel: 2,
         id: 'conclusion',
         content: [
@@ -1882,13 +1883,12 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
             type: 'list',
             items: [
               '✅ 專業司機，熟悉路線',
-              ' \n',
-              '✅ 多款車型可選，滿足不同需求',
-              ' \n',
+   
+      
               '✅ 預約彈性，行程客製化',
-              ' \n',
+         
               '✅ 透明價格，無隱藏費用',
-              ' \n',
+          
               '✅ 24 小時客服支援，旅程無憂'
             ],
             ordered: false,
@@ -2231,7 +2231,7 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
               '小型巴士（Mini Bus）：寬敞安全，性價比高。'
             ],
             ordered: false,
-            style: LIST_STYLE
+            style: {...LIST_STYLE , lineHeight:'3rem'}
           }
         ],
         style: SECTION_STYLE
@@ -2255,7 +2255,7 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
               '珠海口岸來回接駁'
             ],
             ordered: false,
-            style: LIST_STYLE
+            style: {...LIST_STYLE , lineHeight:'2.5rem'}
           }
         ],
         style: SECTION_STYLE
@@ -2274,7 +2274,7 @@ export const rentCarArticleContentBlocks: Record<number, ArticleContent> = {
               '預約簡單，即時客服支援'
             ],
             ordered: false,
-            style: LIST_STYLE
+            style: {...LIST_STYLE , lineHeight:'2.5rem'}
           }
         ],
         style: SECTION_STYLE
