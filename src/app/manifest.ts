@@ -10,16 +10,17 @@ export default function manifest(): MetadataRoute.Manifest {
     background_color: '#000000',
     theme_color: '#F5CA69',
     icons: [
-      {
-        src: '/favicon-192x192.png',
-        sizes: '192x192',
-        type: 'image/png',
-      },
-      {
-        src: '/favicon-512x512.png',
-        sizes: '512x512',
-        type: 'image/png',
-      },
+      // Icons are optional - add when favicon files are available
+      // {
+      //   src: '/favicon-192x192.png',
+      //   sizes: '192x192',
+      //   type: 'image/png',
+      // },
+      // {
+      //   src: '/favicon-512x512.png',
+      //   sizes: '512x512',
+      //   type: 'image/png',
+      // },
     ],
   };
 }
