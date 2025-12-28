@@ -3,32 +3,32 @@
 import { ArticleContent } from '@/types/articleContent';
 
 // Common style constants - edit here to update all instances
-const TEXT_STYLE_BOTTOM_20 = { 
-  marginBottom: '20px', 
-  marginTop: '0', 
-  fontSize: '1.125rem'
-};
+// const TEXT_STYLE_BOTTOM_20 = { 
+//   marginBottom: '20px', 
+//   marginTop: '0', 
+//   fontSize: '1.125rem'
+// };
 
-const TEXT_STYLE_BOTTOM_10 = { 
-  marginBottom: '10px', 
-  marginTop: '0', 
-  fontSize: '1.125rem'
-};
+// const TEXT_STYLE_BOTTOM_10 = { 
+//   marginBottom: '10px', 
+//   marginTop: '0', 
+//   fontSize: '1.125rem'
+// };
 
-const TEXT_STYLE_BOTTOM_20_NO_TOP = { 
-  marginBottom: '20px',
-  fontSize: '1.125rem'
-};
+// const TEXT_STYLE_BOTTOM_20_NO_TOP = { 
+//   marginBottom: '20px',
+//   fontSize: '1.125rem'
+// };
 
 const TEXT_STYLE_BOTTOM_20_1_1 = { 
   marginBottom: '20px',
   fontSize: '1.1rem'
 };
 
-const HEADING_STYLE_H3 = { 
-  marginTop: '20px', 
-  marginBottom: '10px' 
-};
+// const HEADING_STYLE_H3 = { 
+//   marginTop: '20px', 
+//   marginBottom: '10px' 
+// };
 
 const TABLE_OF_CONTENTS_STYLE = {
   backgroundColor: 'rgba(83, 52, 4, 0.842)',

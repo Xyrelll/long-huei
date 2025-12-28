@@ -843,7 +843,7 @@ footer ul li a:hover {
     transform: translateX(-50%);
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.1) 20%, rgba(255, 255, 255, 0.05) 40%, transparent 70%);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.15) 20%, rgba(255, 255, 255, 0.08) 40%, transparent 70%);
     border-radius: 50%;
     clip-path: inset(0 0 50% 0);
     pointer-events: none;
@@ -867,9 +867,28 @@ footer ul li a:hover {
   }
 }
 
-/* Hide footer gradient glow on desktop */
+/* White light effect for footer on desktop */
 @media (min-width: 768px) {
   footer::before {
-    display: none !important;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.12) 20%, rgba(255, 255, 255, 0.06) 40%, transparent 70%);
+    border-radius: 50%;
+    clip-path: inset(0 0 50% 0);
+    pointer-events: none;
+    z-index: 0;
+    filter: blur(60px);
+    will-change: transform;
+    display: block !important;
+  }
+  
+  footer > * {
+    position: relative;
+    z-index: 1;
   }
 }
