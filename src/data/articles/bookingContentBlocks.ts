@@ -34,7 +34,7 @@ const TABLE_OF_CONTENTS_STYLE = {
   backgroundColor: 'rgba(83, 52, 4, 0.842)',
   borderRadius: '50px',
   padding: '20px',
-  marginTop: '20px',
+  marginTop: '50px',
   marginBottom: '30px',
   boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 165, 0, 0.2)',
   border: '1px solid #d18411',
@@ -90,7 +90,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             type: 'heading',
             level: 3,
             content: '渡假村設施費爭議',
-            style: { marginTop: '20px', marginBottom: '15px', fontSize: '1.2rem' }
+            style: { marginTop: '50px', marginBottom: '15px', fontSize: '1.2rem' }
           },
           {
             type: 'text',
@@ -98,13 +98,14 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             style: { 
               marginBottom: '20px',
               fontSize: '1.1rem',
+              marginTop:'-10px'
             }
           },
           {
             type: 'heading',
             level: 3,
             content: '分級Wi-Fi收費機制',
-            style: { marginTop: '30px', marginBottom: '15px', fontSize: '1.2rem' }
+            style: { marginTop: '50px', marginBottom: '15px', fontSize: '1.2rem' }
           },
           {
             type: 'text',
@@ -118,7 +119,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             type: 'heading',
             level: 3,
             content: '夜間接駁車停駛',
-            style: { marginTop: '30px', marginBottom: '15px', fontSize: '1.2rem' }
+            style: { marginTop: '50px', marginBottom: '15px', fontSize: '1.2rem' }
           },
           {
             type: 'text',
@@ -149,13 +150,13 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             level: 3,
             content: '步行10分鐘內抵達景點',
             id: 'walking-distance',
-            style: { marginTop: '20px', marginBottom: '15px', fontSize: '1.2rem' }
+            style: { marginTop: '50px', marginBottom: '15px', fontSize: '1.2rem' }
           },
           {
             type: 'heading',
             level: 4,
             content: '澳門半島CP值之王：新新酒店',
-            style: { marginTop: '20px', marginBottom: '10px', fontSize: '1.1rem' }
+            style: { marginTop: '50px', marginBottom: '10px', fontSize: '1.1rem' }
           },
           {
             type: 'text',
@@ -169,7 +170,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             type: 'heading',
             level: 4,
             content: '氹仔新地標：上葡京度假村',
-            style: { marginTop: '20px', marginBottom: '10px', fontSize: '1.1rem' }
+           style: { marginTop: '50px', marginBottom: '10px', fontSize: '1.1rem' }
           },
           {
             type: 'text',
@@ -183,7 +184,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             type: 'heading',
             level: 4,
             content: '路環秘境首選：鷺環海天渡假酒店',
-            style: { marginTop: '20px', marginBottom: '10px', fontSize: '1.1rem' }
+           style: { marginTop: '50px', marginBottom: '10px', fontSize: '1.1rem' }
           },
           {
             type: 'text',
@@ -214,7 +215,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             level: 3,
             content: '週二搶房攻略',
             id: 'tuesday-strategy',
-            style: { marginTop: '20px', marginBottom: '15px', fontSize: '1.2rem' }
+            style: { marginTop: '60px', marginBottom: '15px', fontSize: '1.2rem' }
           },
           {
             type: 'text',
@@ -222,6 +223,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             style: { 
               marginBottom: '20px',
               fontSize: '1.1rem',
+              marginTop:'50px'
             }
           }
         ],
@@ -245,7 +247,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             level: 3,
             content: '分析3,000+旅客評價得出的黃金比例',
             id: 'golden-ratio',
-            style: { marginTop: '20px', marginBottom: '15px', fontSize: '1.2rem' }
+            style: { marginTop: '60px', marginBottom: '15px', fontSize: '1.2rem' }
           },
           {
             type: 'text',
@@ -253,6 +255,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             style: { 
               marginBottom: '15px',
               fontSize: '1.1rem',
+            marginTop:'50px'
             }
           },
           {
@@ -261,6 +264,8 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             style: { 
               marginBottom: '15px',
               fontSize: '1.1rem',
+              marginTop:'-20px'
+
             }
           },
           {
@@ -269,6 +274,8 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             style: { 
               marginBottom: '20px',
               fontSize: '1.1rem',
+              marginTop:'-20px'
+
             }
           }
         ],
@@ -293,9 +300,10 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             type: 'text',
             content: '立即追蹤龍匯天下官方',
             style: { 
-              marginTop: '20px',
+              marginTop: '50px',
               marginBottom: '5px',
               fontSize: '1.1rem',
+
             }
           },
           {
@@ -321,7 +329,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             type: 'text',
             content: '開啟你的高性價比澳門之旅吧！',
             style: { 
-              marginTop: '10px',
+              marginTop: '50px',
               marginBottom: '20px',
               fontSize: '1.1rem',
             }
@@ -384,6 +392,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             style: { 
               marginBottom: '15px',
               fontSize: '1.1rem',
+              marginTop:'-20px'
             }
           },
           {
@@ -392,6 +401,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             style: { 
               marginBottom: '15px',
               fontSize: '1.1rem',
+                  marginTop:'-15px'
             }
           },
           {
@@ -400,6 +410,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             style: { 
               marginBottom: '20px',
               fontSize: '1.1rem',
+               marginTop:'-15px'
             }
           }
         ],
@@ -424,6 +435,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             style: { 
               marginBottom: '15px',
               fontSize: '1.1rem',
+              marginTop:'50px'
             }
           },
           {
@@ -432,6 +444,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             style: { 
               marginBottom: '15px',
               fontSize: '1.1rem',
+              marginTop:'-15px'
             }
           },
           {
@@ -440,6 +453,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             style: { 
               marginBottom: '15px',
               fontSize: '1.1rem',
+              marginTop:'-15px'
             }
           },
           {
@@ -448,6 +462,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             style: { 
               marginBottom: '20px',
               fontSize: '1.1rem',
+              marginTop:'-15px'
             }
           }
         ],
@@ -472,6 +487,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             style: { 
               marginBottom: '15px',
               fontSize: '1.1rem',
+              marginTop:'50px'
             }
           },
           {
@@ -480,6 +496,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             style: { 
               marginBottom: '15px',
               fontSize: '1.1rem',
+              marginTop:'50px'
             }
           },
           {
@@ -488,6 +505,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             style: { 
               marginBottom: '15px',
               fontSize: '1.1rem',
+              marginTop:'-15px'
             }
           },
           {
@@ -496,6 +514,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             style: { 
               marginBottom: '20px',
               fontSize: '1.1rem',
+              marginTop:'-15px'
             }
           }
         ],
@@ -520,6 +539,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             style: { 
               marginBottom: '15px',
               fontSize: '1.1rem',
+              marginTop:'50px'
             }
           },
           {
@@ -528,6 +548,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             style: { 
               marginBottom: '15px',
               fontSize: '1.1rem',
+              marginTop:'-15px'
             }
           },
           {
@@ -536,6 +557,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             style: { 
               marginBottom: '15px',
               fontSize: '1.1rem',
+              marginTop:'-15px'
             }
           },
           {
@@ -544,6 +566,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             style: { 
               marginBottom: '20px',
               fontSize: '1.1rem',
+              marginTop:'-15px'
             }
           }
         ],
@@ -568,6 +591,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             style: { 
               marginBottom: '15px',
               fontSize: '1.1rem',
+              marginTop:'50px'
             }
           },
           {
@@ -576,6 +600,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             style: { 
               marginBottom: '15px',
               fontSize: '1.1rem',
+              marginTop:'-15px'
             }
           },
           {
@@ -584,6 +609,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             style: { 
               marginBottom: '15px',
               fontSize: '1.1rem',
+              marginTop:'-15px'
             }
           },
           {
@@ -592,6 +618,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             style: { 
               marginBottom: '20px',
               fontSize: '1.1rem',
+              marginTop:'-15px'
             }
           }
         ],
@@ -618,6 +645,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             style: { 
               marginBottom: '15px',
               fontSize: '1.1rem',
+              marginTop:'-15px'
             }
           },
           {
@@ -626,6 +654,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             style: { 
               marginBottom: '20px',
               fontSize: '1.1rem',
+              marginTop:'-15px'   
             }
           },
           {
@@ -634,6 +663,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             style: { 
               marginBottom: '5px',
               fontSize: '1.1rem',
+              marginTop:'50px'
             }
           },
           {
@@ -706,29 +736,36 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             content: '耗資9.8億澳門元打造的本館附屬建築，經日本文化廳監修：',
             style: { 
               marginBottom: '15px',
-              fontSize: '1.1rem'
+              fontSize: '1.1rem',
+              marginTop:'50px'
             }
           },
           {
             type: 'text',
             content: '京都老鋪直營工坊：與300年歷史的西陣織「細尾家」合作開發客房專用御簾，每片竹簾需匠人手工打磨48小時',
-            style: { 
+             style: { 
               marginBottom: '15px',
-              fontSize: '1.1rem'
+              fontSize: '1.1rem',
+              marginTop:'-15px'
             }
           },
           {
             type: 'text',
             content: '備前燒溫控系統：岡山縣備前市陶土燒製的地暖磚，配合紅外線感應自動調節室溫波動±0.5℃',
-            style: { 
+             style: { 
               marginBottom: '15px',
-              fontSize: '1.1rem'
+              fontSize: '1.1rem',
+              marginTop:'-15px'
             }
           },
           {
             type: 'text',
             content: '枯山水聲景庭園：東京藝術大學音響研究所設計的7.1聲道竹筒水琴系統，重現龍安寺方丈庭園音效',
-            style: TEXT_STYLE_BOTTOM_20_1_1
+            style: { 
+              marginBottom: '20px',
+              fontSize: '1.1rem',
+              marginTop:'-15px'
+            }
           }
         ],
         style: SECTION_STYLE
@@ -749,31 +786,38 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '2025年成為首間通過國際服務品質認證的日系酒店：',
-            style: { 
+             style: { 
               marginBottom: '15px',
-              fontSize: '1.1rem'
+              fontSize: '1.1rem',
+              marginTop:'50px'
             }
           },
           {
             type: 'text',
             content: '茶道級房務流程：每間客房清潔需執行87道標準動作，耗時較2024年增加35%',
-            style: { 
+             style: { 
               marginBottom: '15px',
-              fontSize: '1.1rem'
+              fontSize: '1.1rem',
+              marginTop:'-15px'
             }
           },
           {
             type: 'text',
             content: '摺形師常駐服務：日本皇室御用摺紙專家高橋伊三雄每月駐店，提供客製化禮品包裝教學',
-            style: { 
+             style: { 
               marginBottom: '15px',
-              fontSize: '1.1rem'
+              fontSize: '1.1rem',
+              marginTop:'-15px'
             }
           },
           {
             type: 'text',
             content: '空氣觸覺管理：大堂安裝三菱重工定製香氛系統，依時段切換「晨露/午磬/夜檀」三種分子濃度',
-            style: TEXT_STYLE_BOTTOM_20_1_1
+            style: { 
+              marginBottom: '20px',
+              fontSize: '1.1rem',
+              marginTop:'-15px'
+            }
           }
         ],
         style: SECTION_STYLE
@@ -794,31 +838,38 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '與日本農林水產省合作推動的飲食文化保育項目：',
-            style: { 
+             style: { 
               marginBottom: '15px',
-              fontSize: '1.1rem'
+              fontSize: '1.1rem',
+              marginTop:'50px'
             }
           },
           {
             type: 'text',
             content: '江戶前壽司博物館：設有18座低溫熟成櫃展示野生黑鮪魚熟成過程，每日提供築地市場競標直播',
-            style: { 
+             style: { 
               marginBottom: '15px',
-              fontSize: '1.1rem'
+              fontSize: '1.1rem',
+              marginTop:'-15px'
             }
           },
           {
             type: 'text',
             content: '失傳醬油復刻版：聯合廣島縣「牡蠣醬油」非遺傳承人，重現明治時期軍艦料理專用配方',
-            style: { 
+             style: { 
               marginBottom: '15px',
-              fontSize: '1.1rem'
+              fontSize: '1.1rem',
+              marginTop:'-15px'
             }
           },
           {
             type: 'text',
             content: '茶杓AI鑑定系統：運用東大研發的3D掃描技術，可解析客房內樂燒茶碗的300年窯變歷程',
-            style: TEXT_STYLE_BOTTOM_20_1_1
+            style: { 
+              marginBottom: '20px',
+              fontSize: '1.1rem',
+              marginTop:'-15px'
+            }
           }
         ],
         style: SECTION_STYLE
@@ -839,31 +890,38 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '2025年獲全球永續旅遊理事會(GSTC)最高評級：',
-            style: { 
+             style: { 
               marginBottom: '15px',
-              fontSize: '1.1rem'
+              fontSize: '1.1rem',
+              marginTop:'50px'
             }
           },
           {
             type: 'text',
             content: '和紙循環系統：客房備品改用越前和紙，使用後回收製成燈罩由藝術家重新創作',
-            style: { 
+             style: { 
               marginBottom: '15px',
-              fontSize: '1.1rem'
+              fontSize: '1.1rem',
+              marginTop:'-15px'
             }
           },
           {
             type: 'text',
             content: '地酒碳足跡標籤：迷你吧清酒標示生產各階段碳排放，包含稻米生長期的甲烷轉換值',
-            style: { 
+             style: { 
               marginBottom: '15px',
-              fontSize: '1.1rem'
+              fontSize: '1.1rem',
+              marginTop:'-15px'
             }
           },
           {
             type: 'text',
             content: '人力發電廊道：走廊鋪設Panasonic壓電地磚，員工步行1公里可產生客房1小時照明電力',
-            style: TEXT_STYLE_BOTTOM_20_1_1
+            style: { 
+              marginBottom: '20px',
+              fontSize: '1.1rem',
+              marginTop:'-15px'
+            }
           }
         ],
         style: SECTION_STYLE
@@ -884,38 +942,46 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '基於2025年新版客房動線的人因工程建議：',
-            style: { 
+             style: { 
               marginBottom: '15px',
-              fontSize: '1.1rem'
+              fontSize: '1.1rem',
+              marginTop:'50px'
             }
           },
           {
             type: 'text',
             content: '1. 文化沉浸首選：選擇「御簾別館」501-503房，可同步觀賞晨間庭園掃除儀式',
-            style: { 
+             style: { 
               marginBottom: '15px',
-              fontSize: '1.1rem'
+              fontSize: '1.1rem',
+              marginTop:'-15px'
             }
           },
           {
             type: 'text',
             content: '2. 商務效率極致：本館「霞之間」行政房配備NEC腦波辦公桌，監測疲勞值自動調節桌高',
-            style: { 
+             style: { 
               marginBottom: '15px',
-              fontSize: '1.1rem'
+              fontSize: '1.1rem',
+              marginTop:'-15px'
             }
           },
           {
             type: 'text',
             content: '3. 親子友好祕境：西翼「橿原套房」內藏奈良縣贈送的等比例縮小東大寺木作模型',
-            style: TEXT_STYLE_BOTTOM_20_1_1
+            style: { 
+              marginBottom: '20px',
+              fontSize: '1.1rem',
+              marginTop:'-15px'
+            }
           },
           {
             type: 'text',
             content: '怎麼樣?是不是很有意思呢?想知道更多快去把龍匯天下的官方',
             style: { 
               marginBottom: '5px',
-              fontSize: '1.1rem'
+              fontSize: '1.1rem',
+              marginTop:'50px'
             }
           },
           {
@@ -937,12 +1003,20 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '小編我也把龍匯天下的官方賴連結貼心的幫你放在下方啦~',
-            style: TEXT_STYLE_BOTTOM_20_1_1
+            style: { 
+              marginBottom: '15px',
+              fontSize: '1.1rem',
+              marginTop:'50px'
+            }
           },
           {
             type: 'text',
             content: '我們下一篇文章見囉~',
-            style: TEXT_STYLE_BOTTOM_20_1_1
+            style: { 
+              marginBottom: '15px',
+              fontSize: '1.1rem',
+              marginTop:'50px'
+            }
           }
         ],
         style: SECTION_STYLE
@@ -1004,10 +1078,11 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '超土豪奢華擁有纜車的皇宮!推薦指數5顆星',
-            style: { 
+           style: { 
               marginBottom: '15px',
               fontSize: '1.1rem',
-              fontWeight: '600'
+              fontWeight: '600',
+              marginTop:'50px'
             }
           },
           {
@@ -1023,7 +1098,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             level: 3,
             content: '澳門瑞吉金沙城中心酒店',
             id: 'st-regis',
-            style: { marginTop: '20px', marginBottom: '15px' }
+            style: { marginTop: '50px', marginBottom: '15px' }
           },
           {
             type: 'image',
@@ -1031,23 +1106,25 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             alt: '澳門瑞吉金沙城中心酒店',
             width: 300,
             height: 200,
-            style: { marginBottom: '20px' }
+            style: { marginBottom: '50px' }
           },
           {
             type: 'text',
             content: '金沙城中心最高檔的酒店!!推薦指數5顆星',
-            style: { 
+           style: { 
               marginBottom: '15px',
               fontSize: '1.1rem',
-              fontWeight: '600'
+              fontWeight: '600',
+              marginTop:'50px'
             }
           },
           {
             type: 'text',
             content: '人稱貴婦酒店的超高檔酒店位於金沙城中心的酒店中最高級的一個',
-            style: { 
+             style: { 
               marginBottom: '15px',
-              fontSize: '1.1rem'
+              fontSize: '1.1rem',
+              marginTop:'50px'
             }
           },
           {
@@ -1055,7 +1132,8 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             content: '非常的尊貴而且寧靜，跟外頭賭場的喧鬧形成對比~設施有泳池、SPA、三溫暖、健身房等，大家最推的莫過於頂樓的高空按摩SPA，非常的熱門！旺日若沒有先預約基本上很難有位子唷~來這邊當個一日貴婦吧~',
             style: { 
               marginBottom: '30px',
-              fontSize: '1.1rem'
+              fontSize: '1.1rem',
+              marginTop:'50px'
             }
           },
           {
@@ -1063,7 +1141,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             level: 3,
             content: '巴黎人酒店',
             id: 'parisian',
-            style: { marginTop: '20px', marginBottom: '15px' }
+            style: { marginTop: '50px', marginBottom: '15px' }
           },
           {
             type: 'image',
@@ -1076,10 +1154,11 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '完全仿巴黎風格建造的酒店，還有巴黎鐵塔!，推薦指數5顆星',
-            style: { 
+           style: { 
               marginBottom: '15px',
               fontSize: '1.1rem',
-              fontWeight: '600'
+              fontWeight: '600',
+              marginTop:'50px'
             }
           },
           {
@@ -1087,7 +1166,8 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             content: '澳門巴黎人酒店也算是澳門很新的飯店最大的噱頭就是門口就有一個超擬真的巴黎鐵塔，入住飯店還可以免費前往巴黎鐵塔7樓觀賞~從LOBBY開始就是很浮誇凡爾賽宮鏡廳為設計概念四處都掛著歐洲的壁畫酒店內也有許多厲害的雕像，夜間還可以看巴黎人燈塔的燈光秀尤其推薦巴黎人的Le Buffet 自助餐很好吃！',
             style: { 
               marginBottom: '30px',
-              fontSize: '1.1rem'
+              fontSize: '1.1rem',
+              marginTop:'50px'
             }
           },
           {
@@ -1095,7 +1175,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             level: 3,
             content: '澳門四季酒店',
             id: 'four-seasons',
-            style: { marginTop: '20px', marginBottom: '15px' }
+            style: { marginTop: '50px', marginBottom: '15px' }
           },
           {
             type: 'image',
@@ -1105,21 +1185,15 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             height: 200,
             style: { marginBottom: '20px' }
           },
+        
           {
             type: 'text',
-            content: '沒有賭場的安靜高檔酒店!!親子友善~泳池超讚，推薦指數5顆星',
-            style: { 
-              marginBottom: '15px',
-              fontSize: '1.1rem',
-              fontWeight: '600'
-            }
-          },
-          {
-            type: 'text',
-            content: '四季酒店以葡萄牙建築風格為藍圖打造外觀，葡萄牙式的噴水池、許願池、拱廊、梁柱…等，飯店內部超好拍!!!有提供機場免費接駁，飯店使用歐舒丹備品，酒店設施有SPA、戶外泳池、遊戲室、健身房等等而且飯店屬於親子友善飯店，這點很加分！',
+            content: '沒有賭場的安靜高檔酒店!!親子友善~泳池超讚，推薦指數5顆星四季酒店以葡萄牙建築風格為藍圖打造外觀，葡萄牙式的噴水池、許願池、拱廊、梁柱…等，飯店內部超好拍!!!有提供機場免費接駁，飯店使用歐舒丹備品，酒店設施有SPA、戶外泳池、遊戲室、健身房等等而且飯店屬於親子友善飯店，這點很加分！',
             style: { 
               marginBottom: '30px',
-              fontSize: '1.1rem'
+              fontSize: '1.1rem',
+              marginTop:'50px'
+
             }
           },
           {
@@ -1127,7 +1201,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             level: 3,
             content: '大倉酒店',
             id: 'okura',
-            style: { marginTop: '20px', marginBottom: '15px' }
+            style: { marginTop: '50px', marginBottom: '15px' }
           },
           {
             type: 'image',
@@ -1140,10 +1214,11 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '【澳門訂房】中難得的日式酒店，位於銀河渡假村，推薦指數5顆星',
-            style: { 
+           style: { 
               marginBottom: '15px',
               fontSize: '1.1rem',
-              fontWeight: '600'
+              fontWeight: '600',
+              marginTop:'50px'
             }
           },
           {
@@ -1151,7 +1226,8 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             content: '一直以來很喜歡日式風格的飯店，而位於銀河渡假村內的「大倉酒店」就是日式風格簡約的飯店銀河渡假村是閃亮亮的皇宮，其中的【天浪淘園】更是每到暑假都是小朋友玩水好去處入住銀河渡假村酒店的人都可以免費去玩水~一樣可以到鑽石大堂觀賞氣派的表演酒店的房間和大堂是簡約的日式和風~房間也都是多用木材的日系風，少了澳門酒店的霸氣，但卻多了一份清雅。',
             style: { 
               marginBottom: '30px',
-              fontSize: '1.1rem'
+              fontSize: '1.1rem',
+              marginTop:'50px'
             }
           },
           {
@@ -1159,7 +1235,7 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             level: 3,
             content: '新濠天地 – 摩珀斯',
             id: 'morpheus',
-            style: { marginTop: '20px', marginBottom: '15px' }
+            style: { marginTop: '50px', marginBottom: '15px' }
           },
           {
             type: 'image',
@@ -1172,10 +1248,11 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '【澳門訂房】最豪最頂酒店!!好酒沉甕底啦!推薦指數5顆星',
-            style: { 
+           style: { 
               marginBottom: '15px',
               fontSize: '1.1rem',
-              fontWeight: '600'
+              fontWeight: '600',
+              marginTop:'50px'
             }
           },
           {
@@ -1183,13 +1260,18 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             content: '如果要找一間現今【澳門訂房】最奢華的酒店非這間莫屬了！外觀有如鳥巢體育館那樣的驚人！來到澳門的旅客很難去錯過它，全球首座採用自由型態外骨骼結構的摩天大樓，大廳更有科幻般的未來感時空，酒店40樓更有130米高的天際游泳池，若是想要奢華一下就住這一間!!',
             style: { 
               marginBottom: '30px',
-              fontSize: '1.1rem'
+              fontSize: '1.1rem',
+              marginTop:'50px'
             }
           },
           {
             type: 'text',
             content: '小編整理的這幾間澳門框金又包銀的酒店真的會讓人陶醉在其中，建議多方評比選擇適合自己的飯店再訂房！詳細情形及更多的優惠請加官方賴了解更多，這篇【澳門訂房】希望能讓大家下次去澳門輕鬆找到自己喜愛的住宿~',
-            style: TEXT_STYLE_BOTTOM_20_1_1
+            style: { 
+              marginBottom: '30px',
+              fontSize: '1.1rem',
+              marginTop:'70px'
+            }
           }
         ],
         style: SECTION_STYLE
@@ -1246,7 +1328,8 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
             content: '廢話不多說，先把這13間飯店旅館給大家筆記，接下來開始介紹摟~~',
             style: { 
               marginBottom: '20px',
-              fontSize: '1.1rem'
+              fontSize: '1.1rem',
+              marginTop:'50px'
             }
           }
         ],
@@ -1268,7 +1351,11 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '百老匯酒店是澳門銀河渡假村內的酒店價格算是很便宜CP值很高的酒店，在澳門機場就有免費接駁車可以到達酒店而且還可以使用渡假村內的「天浪淘園」設施，帶小朋友去玩水很適合唷!!旁邊有一條「百老匯美食街」有許多澳門美食都在這條街上像是翠華、添好運、成記粥品等等......',
-            style: TEXT_STYLE_BOTTOM_20_1_1
+            style: { 
+              marginBottom: '20px',
+              fontSize: '1.1rem',
+              marginTop:'50px'
+            }
           }
         ],
         style: SECTION_STYLE
@@ -1289,7 +1376,11 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '美獅美高梅是很新的澳門飯店在澳門半島有一間舊的美高梅，而美獅美高梅是最新力作，光是lobby就高檔到不行超好拍照~也有免費的接駁車從機場送到飯店房間內的mini bar約有十瓶左右飲料全數免費喝設施有戶外游泳池、桑拿三溫暖、健身房、賭場等等裡面還有一間Starbucks的旗艦店唷~',
-            style: TEXT_STYLE_BOTTOM_20_1_1
+            style: { 
+              marginBottom: '20px',
+              fontSize: '1.1rem',
+              marginTop:'50px'
+            }
           }
         ],
         style: SECTION_STYLE
@@ -1305,12 +1396,16 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           width: 300,
           height: 200
         },
-        description: '有著8字摩天輪的厲害酒店!(推薦指數4顆星)新濠影匯是【澳門訂房】',
+        description: '',
         content: [
           {
             type: 'text',
             content: '新濠影匯是【澳門訂房】相當熱門的飯店之一也很推一生可以來住一次看看!房間有分成「巨星匯」和「明星匯」是不同的CHECK-IN櫃台，巨星匯的坪數更大更豪華唷飯店內除了摩天輪外還有蝙蝠俠夜間奔馳4D、華納滿FUN童樂園、戶外游泳池、滑水道及漂漂河等，很適合親子遊來玩水唷!',
-            style: TEXT_STYLE_BOTTOM_20_1_1
+            style: { 
+              marginBottom: '20px',
+              fontSize: '1.1rem',
+              marginTop:'50px'
+            }
           }
         ],
         style: SECTION_STYLE
@@ -1331,7 +1426,11 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '大部分澳門的高檔飯店都在路氹區，十六浦索菲特飯店位於澳門半島，這邊有許多澳門景點、澳門美食大三巴和議事亭前地都是步行可達的距離也走得到十月初五街吃美食，飯店設施有健身房、蒸氣室、桑拿、室外游泳池、SPA水療，因為歷史悠久所以價格也便宜許多~也有從機場來的免費接駁車。',
-            style: TEXT_STYLE_BOTTOM_20_1_1
+            style: { 
+              marginBottom: '20px',
+              fontSize: '1.1rem',
+              marginTop:'50px'
+            }
           }
         ],
         style: SECTION_STYLE
@@ -1352,7 +1451,11 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '金沙城中心度假村四間飯店內較平價飯店，但一樣可以享受金沙城中心的服務唷~有個大賭場，很適合賭客小賭一下，有空橋連接著旁邊的巴黎人、威尼斯人，步行到其他酒店也是相當方便，親子遊方便12歲以下兒童不佔床可以免費入住，設施有Spa、室外游泳池、健身房，泳池畔還設有休憩亭~',
-            style: TEXT_STYLE_BOTTOM_20_1_1
+            style: { 
+              marginBottom: '20px',
+              fontSize: '1.1rem',
+              marginTop:'50px'
+            }
           }
         ],
         style: SECTION_STYLE
@@ -1373,7 +1476,11 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '銀河酒店位於銀河渡假村~提供免費的機場接駁車接送，銀河渡假村的水晶大堂表演相當氣派，有賭場、室外恆溫泳池、按摩泳池、健身房等設施12歲以下兒童不佔床可以免費入住房客可以免費到銀河渡假村內的【天浪淘園】玩水！',
-            style: TEXT_STYLE_BOTTOM_20_1_1
+            style: { 
+              marginBottom: '20px',
+              fontSize: '1.1rem',
+              marginTop:'50px'
+            }
           }
         ],
         style: SECTION_STYLE
@@ -1394,14 +1501,19 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           {
             type: 'text',
             content: '說到澳門訂房，威尼斯人酒店可以說是無人不知，過去大家說【澳門訂房】就是要住威尼斯人才算有來過澳門，雖然現在澳門已經有太多的厲害飯店林立，但說到【澳門訂房】威尼斯人仍舊有它不可抹滅的地位，建議一輩子就花一次錢去住一次吧！除了飯店很有義大利威尼斯風格外，還有廣大的購物商場、美食餐廳以及貢多拉遊船、賭場等設施就算沒住威尼斯人，一定也會來威尼斯人酒店逛逛唷~飯店設施有大運河購物中心、SPA、游泳池、健身房等......',
-            style: TEXT_STYLE_BOTTOM_20_1_1
+            style: { 
+              marginBottom: '20px',
+              fontSize: '1.1rem',
+              marginTop:'50px'
+            }
           },
           {
             type: 'text',
             content: '還沒介紹完呢！想看更多請點我~',
             style: { 
               marginBottom: '5px',
-              fontSize: '1.1rem'
+              fontSize: '1.1rem',
+              marginTop:'50px'
             }
           },
           {
@@ -1417,8 +1529,12 @@ export const bookingArticleContentBlocks: Record<number, ArticleContent> = {
           },
           {
             type: 'text',
-            content: '想要優惠訂房嗎？價格跌破你的眼睛，趕快點擊官方Line聯絡我們喔～',
-            style: TEXT_STYLE_BOTTOM_20_1_1
+            content: '\n\n想要優惠訂房嗎？價格跌破你的眼睛，趕快點擊官方Line聯絡我們喔～',
+            style: { 
+              marginBottom: '20px',
+              fontSize: '1.1rem',
+              marginTop:'50px'
+            }
           }
         ],
         style: SECTION_STYLE
