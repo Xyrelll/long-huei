@@ -864,3 +864,8 @@ footer ul li a:hover {
   }
 }
 
+/* Article Description Styles */
+.article-description {
+  font-weight: 900;
+}
+

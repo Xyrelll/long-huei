@@ -57,7 +57,7 @@ export default function BookingArticleList({ articles }: BookingArticleListProps
             {/* Top row: Image and Title */}
             <div className="flex flex-row gap-3 md:gap-4" style={{ width: '100%' }}>
               {/* Thumbnail - Left side */}
-              <div className="flex-shrink-0" style={{ width: isMobile ? '36%' : '40%' }}>
+              <div className="shrink-0" style={{ width: isMobile ? '36%' : '40%' }}>
                 <Link href={article.link} className="block">
                   <picture>
                     <source srcSet={article.image} media="(min-width: 768px)" />
@@ -145,7 +145,7 @@ export default function BookingArticleList({ articles }: BookingArticleListProps
               }}
             >
               <div className="pt-3">
-                <p className="text-white text-sm mb-3 leading-relaxed">{article.description}</p>
+                <p className="text-white text-sm mb-3 leading-relaxed" style={{ fontWeight: 900 }}>{article.description}</p>
                 {article.tags && article.tags.length > 0 && (
                   <div className="flex flex-wrap gap-2"
                   style={{
