@@ -372,7 +372,7 @@ function ArticleContent() {
                      }}
                      className="w-full lg:w-auto bg-white flex flex-row lg:flex-col items-center lg:items-start justify-start lg:justify-start gap-4 lg:gap-0 sticky top-24"
                    >
-                     <div className="text-gray-500 text-sm lg:mb-4" style={{ paddingLeft: isMobile ? "25px" : "0" }}>
+                     <div className="text-gray-500  flex flex-col items-center justify-center text-sm lg:mb-4" style={{ paddingLeft: isMobile ? "25px" : "0" }}>
                        加入
                        <br className="hidden lg:block" />
                        <span className="lg:hidden"> </span>
@@ -382,19 +382,31 @@ function ArticleContent() {
                      style={{
                       marginTop: isMobile ? "0px" : "10px",
                      }}
-                     className="flex flex-row lg:flex-col gap-4 lg:mt-5">
-                       <a
-                         href="https://lin.ee/rQgNQ6D"
-                         className="w-8 h-8 rounded-md bg-green-500 flex items-center justify-center hover:opacity-80 transition-opacity flex-shrink-0"
-                       >
-                         <i className="bi bi-line text-white text-xl"></i>
-                       </a>
-                       <a
-                         href="https://www.instagram.com/lhts.8899/"
-                         className="w-8 h-8 rounded-md bg-gradient-to-br from-purple-600 to-pink-500 flex items-center justify-center hover:opacity-80 transition-opacity flex-shrink-0"
-                       >
-                         <i className="bi bi-instagram text-white text-xl"></i>
-                       </a>
+                     className="flex flex-row lg:flex-col gap-4 lg:mt-5 ">
+                      <a
+                        href="https://lin.ee/rQgNQ6D"
+                        className="w-[30px] h-[30px] rounded-md bg-green-500 flex items-center justify-center hover:opacity-80 transition-opacity flex-shrink-0"
+                      >
+                        <Image
+                          src="/line-icon.svg"
+                          alt="Line"
+                          width={30}
+                          height={30}
+                          className="object-contain"
+                        />
+                      </a>
+                      <a
+                        href="https://www.instagram.com/lhts.8899/"
+                        className="w-[30px] h-[30px] rounded-md bg-gradient-to-br from-purple-600 to-pink-500 flex items-center justify-center hover:opacity-80 transition-opacity flex-shrink-0"
+                      >
+                        <Image
+                          src="/instagram-icon.png"
+                          alt="Instagram"
+                          width={30}
+                          height={30}
+                          className="object-contain"
+                        />
+                      </a>
                      </div>
                    </div>
                  </div>
