@@ -59,8 +59,8 @@ function ArticleContent() {
       setIsMobile(window.innerWidth < 1024);
     };
     checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
   }, []);
   const slug = params?.slug as string;
   const [article, setArticle] = useState<Article | null>(null);
@@ -149,13 +149,14 @@ function ArticleContent() {
   // Compute recommended articles from the same category
   const recommendedArticles = useMemo(() => {
     if (!article || !allArticles.length) return [];
-    
+
     // Filter articles from the same category, excluding the current article
     const sameCategoryArticles = allArticles
-      .filter((a) => 
-        a.category === article.category && 
-        a.id !== article.id &&
-        a.link !== article.link
+      .filter(
+        (a) =>
+          a.category === article.category &&
+          a.id !== article.id &&
+          a.link !== article.link
       )
       .slice(0, 9) // Limit to 9 articles
       .map((a) => ({
@@ -167,7 +168,7 @@ function ArticleContent() {
         tags: a.tags,
         date: a.date, // Include date if available
       }));
-    
+
     return sameCategoryArticles;
   }, [article, allArticles]);
 
@@ -246,23 +247,21 @@ function ArticleContent() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <PageLayout 
+      <PageLayout
         containerWidth="90%"
         contentClassName="md:w-[90%] lg:w-[70%] items-center justify-center"
         mainClassName="items-center"
       >
         <div
           style={{
-            paddingLeft: isMobile ? '15px' : '0',
-            paddingRight: isMobile ? '15px' : '0',
+            paddingLeft: isMobile ? "15px" : "0",
+            paddingRight: isMobile ? "15px" : "0",
           }}
         >
-        
-
           {/* Breadcrumb */}
           <nav
             style={{
-              marginTop: isMobile ? '10px' : '30px',
+              marginTop: isMobile ? "10px" : "30px",
             }}
             className="nav-breadcrumb py-4 "
             aria-label="breadcrumb"
@@ -277,9 +276,7 @@ function ArticleContent() {
                   <span className="hidden sm:inline">首頁</span>
                 </Link>
               </li>
-              <li className="breadcrumb-separator text-white/70">
-                &gt;
-              </li>
+              <li className="breadcrumb-separator text-white/70">&gt;</li>
               {article.category && (
                 <>
                   <li className="breadcrumb-item">
@@ -290,15 +287,15 @@ function ArticleContent() {
                       {article.category}
                     </Link>
                   </li>
-                  <li className="breadcrumb-separator text-white" style={{ fontWeight: 900 }}>
+                  <li
+                    className="breadcrumb-separator text-white"
+                    style={{ fontWeight: 900 }}
+                  >
                     &gt;
                   </li>
                 </>
               )}
-              <li
-                className="breadcrumb-item active"
-                aria-current="page"
-              >
+              <li className="breadcrumb-item active" aria-current="page">
                 <span className="text-white" style={{ fontWeight: 900 }}>
                   {article.title}
                 </span>
@@ -348,41 +345,45 @@ function ArticleContent() {
             style={{
               paddingTop: "10px",
             }}
-            className="flex flex-col lg:flex-row gap-6 py-8 " 
+            className="flex flex-col lg:flex-row gap-6 py-8 "
           >
             {/* Main Content */}
             <div className="flex-1 lg:w-full ">
               <div className="flex flex-col lg:flex-row  items-start justify-start ">
-                 {/* Left Sidebar - Social Media */}
-                 <div
-                   className="w-full lg:w-18 flex mb-4 lg:mb-0 "
-                   style={{
-                     paddingLeft: isMobile ? "10px" : "0",
-                     paddingRight: isMobile ? "10px" : "0",
-                   }}
-                 >
-                   <div
-                     style={{
+                {/* Left Sidebar - Social Media */}
+                <div
+                  className="w-full lg:w-18 flex mb-4 lg:mb-0 "
+                  style={{
+                    paddingLeft: isMobile ? "10px" : "0",
+                    paddingRight: isMobile ? "10px" : "0",
+                  }}
+                >
+                  <div
+                    style={{
                       marginTop: isMobile ? "0px" : "10px",
-                       paddingTop:  isMobile ? "10px" : "20px",
-                       paddingLeft: isMobile ? "0px" : "10px",
-                       paddingRight: isMobile ? "0px" : "10px",
-                       paddingBottom: isMobile ? "10px" : "30px",
-                       borderRadius: isMobile ? "50px" : "50px",
-                     }}
-                     className="w-full lg:w-auto bg-white flex flex-row lg:flex-col items-center lg:items-start justify-start lg:justify-start gap-4 lg:gap-0 sticky top-24"
-                   >
-                     <div className="text-gray-500  flex flex-col items-center justify-center text-sm lg:mb-4" style={{ paddingLeft: isMobile ? "25px" : "0" }}>
-                       加入
-                       <br className="hidden lg:block" />
-                       <span className="lg:hidden"> </span>
-                       好友
-                     </div>
-                     <div 
-                     style={{
-                      marginTop: isMobile ? "0px" : "10px",
-                     }}
-                     className="flex flex-row lg:flex-col gap-4 lg:mt-5 ">
+                      paddingTop: isMobile ? "10px" : "20px",
+                      paddingLeft: isMobile ? "0px" : "10px",
+                      paddingRight: isMobile ? "0px" : "10px",
+                      paddingBottom: isMobile ? "10px" : "30px",
+                      borderRadius: isMobile ? "50px" : "50px",
+                    }}
+                    className="w-full lg:w-auto bg-white flex flex-row lg:flex-col items-center lg:items-start justify-start lg:justify-start gap-4 lg:gap-0 sticky top-24"
+                  >
+                    <div
+                      className="text-gray-500  flex flex-col items-center justify-center text-sm lg:mb-4"
+                      style={{ paddingLeft: isMobile ? "25px" : "0" }}
+                    >
+                      加入
+                      <br className="hidden lg:block" />
+                      <span className="lg:hidden"> </span>
+                      好友
+                    </div>
+                    <div
+                      style={{
+                        marginTop: isMobile ? "0px" : "10px",
+                      }}
+                      className="flex flex-row lg:flex-col gap-4 lg:mt-5 "
+                    >
                       <a
                         href="https://lin.ee/rQgNQ6D"
                         className="w-[30px] h-[30px] rounded-md bg-green-500 flex items-center justify-center hover:opacity-80 transition-opacity flex-shrink-0"
@@ -407,9 +408,9 @@ function ArticleContent() {
                           className="object-contain"
                         />
                       </a>
-                     </div>
-                   </div>
-                 </div>
+                    </div>
+                  </div>
+                </div>
                 <div
                   style={{
                     paddingTop: "10px",
@@ -420,15 +421,14 @@ function ArticleContent() {
                   }}
                   className="flex flex-col items-center justify-center  w-full"
                 >
-                
-
                   {/* Featured Image */}
                   <div
-                  style={{
-                    borderRadius: '50px',
-                    marginBottom: '30px',
-                  }}
-                  className="mb-8 w-full ">
+                    style={{
+                      borderRadius: "50px",
+                      marginBottom: "30px",
+                    }}
+                    className="mb-8 w-full "
+                  >
                     <Image
                       src={article.image}
                       alt={article.title}
@@ -443,17 +443,21 @@ function ArticleContent() {
                   <div className="prose prose-invert max-w-none w-full ">
                     {article.contentBlocks ? (
                       // Check if new structured format (with description, tableOfContents, sections)
-                      article.contentBlocks.description || article.contentBlocks.tableOfContents || article.contentBlocks.sections ? (
-                        <ArticleContentRenderer content={article.contentBlocks} />
+                      article.contentBlocks.description ||
+                      article.contentBlocks.tableOfContents ||
+                      article.contentBlocks.sections ? (
+                        <ArticleContentRenderer
+                          content={article.contentBlocks}
+                        />
+                      ) : // Fallback to legacy blocks format
+                      article.contentBlocks.blocks ? (
+                        <ArticleContentRenderer
+                          blocks={article.contentBlocks.blocks}
+                        />
                       ) : (
-                        // Fallback to legacy blocks format
-                        article.contentBlocks.blocks ? (
-                          <ArticleContentRenderer blocks={article.contentBlocks.blocks} />
-                        ) : (
-                          <div className="text-white text-lg leading-relaxed whitespace-pre-line">
-                            {article.content || article.description}
-                          </div>
-                        )
+                        <div className="text-white text-lg leading-relaxed whitespace-pre-line">
+                          {article.content || article.description}
+                        </div>
                       )
                     ) : (
                       <div className="text-white text-lg leading-relaxed whitespace-pre-line">
@@ -462,13 +466,13 @@ function ArticleContent() {
                     )}
                   </div>
                   {/* LINE Add Friend Button - Below Content (Mobile & Desktop) */}
-                  <div 
-                  
-                  style={{
-                    width: '100px',
-                  }}
-                  className="mt-8 mb-8">
-                    <a 
+                  <div
+                    style={{
+                      width: "100px",
+                    }}
+                    className="mt-8 mb-8"
+                  >
+                    <a
                       href="https://lin.ee/rQgNQ6D"
                       // target="_blank"
                       rel="noopener noreferrer"
@@ -512,9 +516,7 @@ function ArticleContent() {
 
           {/* Recommended Articles Section */}
           {article && recommendedArticles.length > 0 && (
-            <RecommendedArticles
-              articles={recommendedArticles}
-            />
+            <RecommendedArticles articles={recommendedArticles} />
           )}
         </div>
       </PageLayout>

@@ -47,9 +47,8 @@ function SearchContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const [searchKeyword, setSearchKeyword] = useState("");
-  const [showError, 
-    setShowError] = useState(false);
-  
+  const [showError, setShowError] = useState(false);
+
   // Initialize articles with lazy initialization to avoid setState in effect
   const [allArticles, setAllArticles] = useState<Article[]>(() => {
     // Combine all articles with category info
@@ -70,20 +69,21 @@ function SearchContent() {
         ...a,
         category: "桑拿",
       })),
-      ...(entertainmentArticles || []).map(
-        (a: Omit<Article, "category">) => ({ ...a, category: "其他娛樂" })
-      ),
+      ...(entertainmentArticles || []).map((a: Omit<Article, "category">) => ({
+        ...a,
+        category: "其他娛樂",
+      })),
       ...(questionArticles || []).map((a: Omit<Article, "category">) => ({
         ...a,
         category: "常見問答",
       })),
     ];
   });
-  
+
   const [searchResults, setSearchResults] = useState<Article[]>([]);
   const [loading, setLoading] = useState(false);
   const [hasSearched, setHasSearched] = useState(false);
-  
+
   // Initialize window width safely
   const [windowWidth, setWindowWidth] = useState<number>(() => {
     if (typeof window !== "undefined") {
@@ -93,34 +93,38 @@ function SearchContent() {
   });
 
   // Perform search function
-  const performSearch = useCallback((keyword: string) => {
-    if (!keyword.trim() || allArticles.length === 0) {
-      setSearchResults([]);
-      setHasSearched(false);
-      return;
-    }
+  const performSearch = useCallback(
+    (keyword: string) => {
+      if (!keyword.trim() || allArticles.length === 0) {
+        setSearchResults([]);
+        setHasSearched(false);
+        return;
+      }
 
-    const lowerKeyword = keyword.toLowerCase().trim();
-    const results = allArticles.filter((article) => {
-      // Search in title
-      const titleMatch = article.title.toLowerCase().includes(lowerKeyword);
+      const lowerKeyword = keyword.toLowerCase().trim();
+      const results = allArticles.filter((article) => {
+        // Search in title
+        const titleMatch = article.title.toLowerCase().includes(lowerKeyword);
 
-      // Search in description
-      const descMatch = article.description
-        .toLowerCase()
-        .includes(lowerKeyword);
+        // Search in description
+        const descMatch = article.description
+          .toLowerCase()
+          .includes(lowerKeyword);
 
-      // Search in tags
-      const tagMatch =
-        article.tags?.some((tag) => tag.toLowerCase().includes(lowerKeyword)) ||
-        false;
+        // Search in tags
+        const tagMatch =
+          article.tags?.some((tag) =>
+            tag.toLowerCase().includes(lowerKeyword)
+          ) || false;
 
-      return titleMatch || descMatch || tagMatch;
-    });
+        return titleMatch || descMatch || tagMatch;
+      });
 
-    setSearchResults(results);
-    setHasSearched(true);
-  }, [allArticles]);
+      setSearchResults(results);
+      setHasSearched(true);
+    },
+    [allArticles]
+  );
 
   // Reset function to clear all search state
   const resetSearch = useCallback(() => {
@@ -133,13 +137,13 @@ function SearchContent() {
   // Initialize from URL on mount and when URL changes
   useEffect(() => {
     const keyword = searchParams.get("Keyword") || "";
-    
+
     // If no keyword in URL, reset to initial state
     if (!keyword) {
       resetSearch();
       return;
     }
-    
+
     if (keyword && allArticles.length > 0) {
       // Use requestAnimationFrame to defer state update
       requestAnimationFrame(() => {
@@ -180,7 +184,9 @@ function SearchContent() {
     }
     setShowError(false);
     // Navigate to search results with keyword and reload page
-    const searchUrl = `/Search?Keyword=${encodeURIComponent(searchKeyword.trim())}`;
+    const searchUrl = `/Search?Keyword=${encodeURIComponent(
+      searchKeyword.trim()
+    )}`;
     window.location.href = searchUrl;
   };
 
@@ -448,13 +454,16 @@ function SearchContent() {
                           ? "linear-gradient(to left, #FFCD83, #CD861A)"
                           : "#CD861A",
                         transition: "all 0.3s ease",
-                        boxShadow: isSelected ? "0 0 15px rgba(205, 134, 26, 0.8)" : "none",
+                        boxShadow: isSelected
+                          ? "0 0 15px rgba(205, 134, 26, 0.8)"
+                          : "none",
                       }}
                       className="text-sm font-medium"
                       onMouseEnter={(e) => {
                         if (!isSelected) {
                           e.currentTarget.style.borderColor = "#FFA500";
-                          e.currentTarget.style.boxShadow = "0 0 15px rgba(205, 134, 26, 0.8)";
+                          e.currentTarget.style.boxShadow =
+                            "0 0 15px rgba(205, 134, 26, 0.8)";
                         }
                       }}
                       onMouseLeave={(e) => {
@@ -477,11 +486,14 @@ function SearchContent() {
                             ? "linear-gradient(to left, #CD861A 50%,#FFCD83 100%)"
                             : "black",
                           transition: "all 0.3s ease",
-                          borderRight: isSelected ? "none" : "1px solid #CD861A",
+                          borderRight: isSelected
+                            ? "none"
+                            : "1px solid #CD861A",
                         }}
                         onMouseEnter={(e) => {
                           if (!isSelected) {
-                            e.currentTarget.style.background = "linear-gradient(to left, #8B4513, #CD861A)";
+                            e.currentTarget.style.background =
+                              "linear-gradient(to left, #8B4513, #CD861A)";
                             e.currentTarget.style.borderRightColor = "#FFA500";
                           }
                         }}
@@ -503,15 +515,20 @@ function SearchContent() {
                           backgroundImage: isSelected
                             ? "linear-gradient(120deg, #ffcb7e 10%, #9c5f04 100%)"
                             : "none",
-                          backgroundColor: isSelected ? "transparent" : "#CD861A",
+                          backgroundColor: isSelected
+                            ? "transparent"
+                            : "#CD861A",
                           boxShadow: isSelected ? "0 0 10px 0 #ffaa2b" : "none",
                           color: "white",
-                          borderLeft: isSelected ? "1px solid rgba(255, 255, 255, 0.3)" : "none",
+                          borderLeft: isSelected
+                            ? "1px solid rgba(255, 255, 255, 0.3)"
+                            : "none",
                           transition: "all 0.3s ease",
                         }}
                         onMouseEnter={(e) => {
                           if (!isSelected) {
-                            e.currentTarget.style.background = "linear-gradient(to right, #CD861A, #FF8C00)";
+                            e.currentTarget.style.background =
+                              "linear-gradient(to right, #CD861A, #FF8C00)";
                           }
                         }}
                         onMouseLeave={(e) => {
@@ -575,16 +592,14 @@ export default function SearchPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <PageLayout 
-        containerWidth="70%" 
+      <PageLayout
+        containerWidth="70%"
         outerContainerClassName="flex justify-center items-center"
         mainClassName="items-center justify-center"
       >
         <div className="w-full h-0 md:h-12 "></div>
 
-        <Suspense
-          fallback={<div className="text-white p-8">Loading...</div>}
-        >
+        <Suspense fallback={<div className="text-white p-8">Loading...</div>}>
           <SearchContent />
         </Suspense>
       </PageLayout>

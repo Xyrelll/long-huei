@@ -72,6 +72,7 @@ html {
     width: 100vw;
   }
 }
+
 .marquee-text {
   color: white;
   white-space: nowrap;
@@ -140,11 +141,11 @@ html {
   .splide__track {
     overflow: visible !important;
   }
-  
+
   .splide__list {
     display: flex !important;
   }
-  
+
   .splide__slide {
     min-width: 0;
   }
@@ -269,8 +270,8 @@ html {
   flex-wrap: wrap;
   gap: 8px;
   padding-top: 10px;
-margin-bottom: 10px;
-border-radius: 50px;
+  margin-bottom: 10px;
+  border-radius: 50px;
 }
 
 .tags li {
@@ -390,7 +391,7 @@ border-radius: 50px;
   font-weight: bold;
   margin-bottom: 8px;
   padding-left: 1.5rem !important;
-    padding-right: 1.5rem !important;
+  padding-right: 1.5rem !important;
 }
 
 .about-content {
@@ -441,7 +442,7 @@ border-radius: 50px;
   .about-card {
     margin-bottom: 32px;
   }
-  
+
   .about-top .grid.grid-cols-1.md\:grid-cols-2 {
     grid-template-columns: repeat(2, 1fr) !important;
     display: grid !important;
@@ -532,7 +533,7 @@ border-radius: 50px;
   .d-md-block {
     display: block !important;
   }
-  
+
   .d-md-none {
     display: none !important;
   }
@@ -542,7 +543,7 @@ border-radius: 50px;
   .d-lg-block {
     display: block !important;
   }
-  
+
   .d-lg-none {
     display: none !important;
   }
@@ -654,18 +655,18 @@ nav.nav-breadcrumb ol {
   padding: 0;
 }
 
-nav.nav-breadcrumb ol > li {
+nav.nav-breadcrumb ol>li {
   display: table;
   counter-increment: item;
 }
 
-nav.nav-breadcrumb ol > li:before {
+nav.nav-breadcrumb ol>li:before {
   content: none;
 }
 
 nav.nav-breadcrumb a,
 nav.nav-breadcrumb li,
-.breadcrumb-item + .breadcrumb-item::before {
+.breadcrumb-item+.breadcrumb-item::before {
   color: #fff !important;
   font-size: 0.8rem;
   font-weight: 900;
@@ -788,7 +789,7 @@ article ol li,
   nav.nav-breadcrumb {
     padding-top: 120px;
   }
-  
+
   section {
     padding-left: 5%;
     padding-right: 5%;
@@ -870,16 +871,16 @@ footer ul li a:hover {
     padding-bottom: 10px;
     overflow: hidden;
   }
-  
-  footer > * {
+
+  footer>* {
     position: relative;
     z-index: 1;
   }
-  
+
   footer ul.footer-links-mobile {
     flex-direction: column;
   }
-  
+
   footer ul li {
     border: none;
     padding: 10px;
@@ -890,4 +891,3 @@ footer ul li a:hover {
 .article-description {
   font-weight: 900;
 }
-

@@ -1,38 +1,38 @@
-'use client';
+"use client";
 
-import { Suspense } from 'react';
-import { useSearchParams } from 'next/navigation';
-import { generateBreadcrumbSchema } from '@/config/seo';
-import PageLayout from '@/components/layout/PageLayout/PageLayout';
-import BookingArticleList from '@/components/features/BookingArticleList/BookingArticleList';
-import ArticleCategoryLayout from '@/components/layout/ArticleCategoryLayout/ArticleCategoryLayout';
-import PageMetadata from '@/components/SEO/PageMetadata';
-import { saunaArticles, type SaunaArticle } from '@/data/articles/sauna';
+import { Suspense } from "react";
+import { useSearchParams } from "next/navigation";
+import { generateBreadcrumbSchema } from "@/config/seo";
+import PageLayout from "@/components/layout/PageLayout/PageLayout";
+import BookingArticleList from "@/components/features/BookingArticleList/BookingArticleList";
+import ArticleCategoryLayout from "@/components/layout/ArticleCategoryLayout/ArticleCategoryLayout";
+import PageMetadata from "@/components/SEO/PageMetadata";
+import { saunaArticles, type SaunaArticle } from "@/data/articles/sauna";
 
 // Re-export for backward compatibility
 export { saunaArticles, type SaunaArticle };
 
 const categories = [
-  { name: '旅遊', href: '/ArticleCategory/Travel', count: 12 },
-  { name: '桑拿', href: '/ArticleCategory/Sauna', count: 11, active: true },
-  { name: '包車', href: '/ArticleCategory/RentCar', count: 12 },
-  { name: '訂房', href: '/ArticleCategory/Booking', count: 5 },
-  { name: '其他娛樂', href: '/ArticleCategory/Entertainment', count: 10 },
-  { name: '常見問答', href: '/ArticleCategory/Question', count: 3 },
-  { name: '專人客服', href: '/CustomerService', count: 0 },
+  { name: "旅遊", href: "/ArticleCategory/Travel", count: 12 },
+  { name: "桑拿", href: "/ArticleCategory/Sauna", count: 11, active: true },
+  { name: "包車", href: "/ArticleCategory/RentCar", count: 12 },
+  { name: "訂房", href: "/ArticleCategory/Booking", count: 5 },
+  { name: "其他娛樂", href: "/ArticleCategory/Entertainment", count: 10 },
+  { name: "常見問答", href: "/ArticleCategory/Question", count: 3 },
+  { name: "專人客服", href: "/CustomerService", count: 0 },
 ];
 
 const popularTags = [
-  { name: '澳門旅遊', href: '/Tag/澳門旅遊' },
-  { name: '澳門桑拿', href: '/Tag/澳門桑拿' },
-  { name: '澳門', href: '/Tag/澳門' },
-  { name: '澳門劇本殺', href: '/Tag/澳門劇本殺' },
-  { name: '龍匯天下', href: '/Tag/龍匯天下' },
-  { name: '桑拿', href: '/Tag/桑拿' },
-  { name: '澳門龍匯天下', href: '/Tag/澳門龍匯天下' },
-  { name: '澳門推薦', href: '/Tag/澳門推薦' },
-  { name: '澳門龍匯天下', href: '/Tag/澳門龍匯天下' },
-  { name: '龍匯天下包車', href: '/Tag/龍匯天下包車' },
+  { name: "澳門旅遊", href: "/Tag/澳門旅遊" },
+  { name: "澳門桑拿", href: "/Tag/澳門桑拿" },
+  { name: "澳門", href: "/Tag/澳門" },
+  { name: "澳門劇本殺", href: "/Tag/澳門劇本殺" },
+  { name: "龍匯天下", href: "/Tag/龍匯天下" },
+  { name: "桑拿", href: "/Tag/桑拿" },
+  { name: "澳門龍匯天下", href: "/Tag/澳門龍匯天下" },
+  { name: "澳門推薦", href: "/Tag/澳門推薦" },
+  { name: "澳門龍匯天下", href: "/Tag/澳門龍匯天下" },
+  { name: "龍匯天下包車", href: "/Tag/龍匯天下包車" },
 ];
 
 function SaunaContent() {
@@ -41,8 +41,11 @@ function SaunaContent() {
   const totalPages = Math.ceil(saunaArticles.length / itemsPerPage);
 
   // Get current page from URL params
-  const pageParam = searchParams.get('PageNo');
-  const currentPage = Math.max(1, Math.min(parseInt(pageParam || '1', 10), totalPages));
+  const pageParam = searchParams.get("PageNo");
+  const currentPage = Math.max(
+    1,
+    Math.min(parseInt(pageParam || "1", 10), totalPages)
+  );
 
   // Get articles for current page
   const startIndex = (currentPage - 1) * itemsPerPage;
@@ -67,10 +70,9 @@ function SaunaContent() {
 }
 
 export default function SaunaPage() {
-
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: '首頁', url: 'https://long-huei.vercel.app/' },
-    { name: '桑拿', url: 'https://long-huei.vercel.app/ArticleCategory/Sauna' },
+    { name: "首頁", url: "https://long-huei.vercel.app/" },
+    { name: "桑拿", url: "https://long-huei.vercel.app/ArticleCategory/Sauna" },
   ]);
 
   const structuredData = {
@@ -121,4 +123,3 @@ export default function SaunaPage() {
     </>
   );
 }
-

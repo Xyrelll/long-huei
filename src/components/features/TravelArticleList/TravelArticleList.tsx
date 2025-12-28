@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
+import { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
 
 interface TravelArticle {
   id: number;
@@ -20,7 +20,9 @@ interface TravelArticleListProps {
   articles: TravelArticle[];
 }
 
-export default function TravelArticleList({ articles }: TravelArticleListProps) {
+export default function TravelArticleList({
+  articles,
+}: TravelArticleListProps) {
   const [expandedCards, setExpandedCards] = useState<Set<number>>(new Set());
 
   const toggleCard = (id: number) => {
@@ -59,17 +61,23 @@ export default function TravelArticleList({ articles }: TravelArticleListProps) 
               </Link>
               <div className="card-text row flex items-center justify-between">
                 <div className="col-8">
-                  <small className="text-read text-white text-xs">觀看人數：{article.views}</small>
+                  <small className="text-read text-white text-xs">
+                    觀看人數：{article.views}
+                  </small>
                 </div>
                 <div className="col-4 text-end d-block d-md-none">
                   <button
                     className="btn btn-link p-0 js-btn-angle"
-                    data-angle={expandedCards.has(article.id) ? 'up' : 'down'}
+                    data-angle={expandedCards.has(article.id) ? "up" : "down"}
                     type="button"
                     onClick={() => toggleCard(article.id)}
                     aria-label="向下展開"
                   >
-                    <i className="fas fa-angle-down text-white text-2xl" style={{ fontSize: '30px' }} aria-hidden="true"></i>
+                    <i
+                      className="fas fa-angle-down text-white text-2xl"
+                      style={{ fontSize: "30px" }}
+                      aria-hidden="true"
+                    ></i>
                   </button>
                 </div>
               </div>
@@ -78,7 +86,12 @@ export default function TravelArticleList({ articles }: TravelArticleListProps) 
                   <ul className="tags flex flex-wrap gap-1">
                     {article.tags.map((tag, idx) => (
                       <li key={idx}>
-                        <Link href={`/Tag/${tag}`} className="text-xs text-gray-400 hover:text-[#FFCD83]">{tag}</Link>
+                        <Link
+                          href={`/Tag/${tag}`}
+                          className="text-xs text-gray-400 hover:text-[#FFCD83]"
+                        >
+                          {tag}
+                        </Link>
                       </li>
                     ))}
                   </ul>
@@ -87,12 +100,19 @@ export default function TravelArticleList({ articles }: TravelArticleListProps) 
             </div>
             {expandedCards.has(article.id) && (
               <div className="col-12 d-block d-md-none mt-3">
-                <p style={{ color: '#fff' }} className="text-sm mb-2">{article.description}</p>
+                <p style={{ color: "#fff" }} className="text-sm mb-2">
+                  {article.description}
+                </p>
                 {article.tags && (
                   <ul className="tags flex flex-wrap gap-1">
                     {article.tags.map((tag, idx) => (
                       <li key={idx}>
-                        <Link href={`/Tag/${tag}`} className="text-xs text-gray-400 hover:text-[#FFCD83]">{tag}</Link>
+                        <Link
+                          href={`/Tag/${tag}`}
+                          className="text-xs text-gray-400 hover:text-[#FFCD83]"
+                        >
+                          {tag}
+                        </Link>
                       </li>
                     ))}
                   </ul>
@@ -105,4 +125,3 @@ export default function TravelArticleList({ articles }: TravelArticleListProps) 
     </div>
   );
 }
-

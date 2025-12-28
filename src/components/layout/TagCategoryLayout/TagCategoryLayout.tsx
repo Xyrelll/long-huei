@@ -3,6 +3,20 @@
 import { Suspense, useState, useEffect } from 'react';
 import Pagination from '@/components/ui/Pagination/Pagination';
 
+// Base article interface for tag category layouts
+interface BaseArticle {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  imageMobile: string;
+  link: string;
+  views: number;
+  tags?: string[];
+  collapseId: string;
+  date?: string;
+}
+
 interface TagCategoryLayoutProps {
   // Page info
   pageTitle: string;
@@ -10,14 +24,14 @@ interface TagCategoryLayoutProps {
   baseUrl: string;
   
   // Articles
-  articles: any[];
-  currentArticles: any[];
+  articles: BaseArticle[];
+  currentArticles: BaseArticle[];
   currentPage: number;
   totalPages: number;
   itemsPerPage?: number;
   
   // Article list component
-  ArticleListComponent: React.ComponentType<{ articles: any[] }>;
+  ArticleListComponent: React.ComponentType<{ articles: BaseArticle[] }>;
   
   // Optional styling
   width?: string | number;

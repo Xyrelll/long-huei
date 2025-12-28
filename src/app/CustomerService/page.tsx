@@ -87,7 +87,9 @@ export default function CustomerServicePage() {
                     </li>
                     <li className="breadcrumb-separator text-white/70">&gt;</li>
                     <li className="breadcrumb-item active" aria-current="page">
-                      <span className="text-white" style={{ fontWeight: 900 }}>專人客服</span>
+                      <span className="text-white" style={{ fontWeight: 900 }}>
+                        專人客服
+                      </span>
                     </li>
                   </ol>
                 </nav>
@@ -170,9 +172,10 @@ export default function CustomerServicePage() {
 
                   {/* WeChat Section */}
                   <div
-                  style={{marginTop: isMobile ? "-60px" : "10px"}}
-                   className="col-md-6 
-                   ">
+                    style={{ marginTop: isMobile ? "-60px" : "10px" }}
+                    className="col-md-6 
+                   "
+                  >
                     <div className="col-12">
                       <div
                         className="page-section"
