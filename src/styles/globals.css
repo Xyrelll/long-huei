@@ -680,6 +680,21 @@ nav.nav-breadcrumb a i.bi {
   color: #fff;
 }
 
+.card-body.page {
+  letter-spacing: 0.287em !important;
+}
+
+/* Ensure letter-spacing applies to all child elements with higher specificity */
+.card-body.page,
+.card-body.page *,
+.card-body.page p,
+.card-body.page h3,
+.card-body.page h3.page-title {
+  letter-spacing: 0.0287em !important;
+  font-size: 1.25rem !important;
+  font-weight: 900 !important;
+}
+
 .page-section {
   margin-bottom: 40px;
 }
@@ -689,13 +704,19 @@ nav.nav-breadcrumb a i.bi {
   color: #f5ca69 !important;
 }
 
+h3.page-title {
+  font-weight: 900 !important;
+}
+
 .page-title.h2 {
   font-size: 2rem;
   padding-bottom: 15px !important;
+  font-weight: 900 !important;
 }
 
 .page-title.h3 {
   padding-bottom: 10px !important;
+  font-weight: 900 !important;
 }
 
 h3.page-title {

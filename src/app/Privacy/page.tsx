@@ -69,7 +69,7 @@ export default function PrivacyPage() {
                 >
                   <ol className="breadcrumb flex items-center gap-2 text-white text-sm">
                     <li className="breadcrumb-item">
-                      <Link href="/" className="flex items-center gap-1 hover:text-[#FFCD83]">
+                      <Link href="/" className="flex items-center gap-1 hover:text-[#FFCD83] font-bold">
                         <i className="bi bi-house-door-fill"></i>
                         首頁
                       </Link>
@@ -82,7 +82,7 @@ export default function PrivacyPage() {
                 </nav>
 
                 {/* Privacy Policy Content */}
-                <div className="card-body page" style={{ color: 'white', fontSize: '13pt' ,marginTop:'30px', lineHeight:'1.8em'}}>
+                <div className="card-body page" style={{ color: 'white', fontSize: '1.25rem' ,marginTop:'30px', lineHeight:'1.8em', fontWeight: 900, letterSpacing: '0.287em' }}>
                   <p>非常歡迎您光臨「龍匯天下」（以下簡稱本網站），為了讓您能夠安心的使用本網站的各項服務與資訊，特此向您說明本網站的隱私權保護政策，以保障您的權益，請您詳閱下列內容：</p>
                   
                   <h3 className="page-title">一、隱私權保護政策的適用範圍</h3>
