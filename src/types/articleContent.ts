@@ -110,6 +110,7 @@ export interface TableBlock extends BaseContentBlock {
   headers?: string[];
   rows: string[][];
   showBorders?: boolean; // Enable/disable table borders
+  mobileAsText?: boolean; // Convert table to text on mobile (default: true)
   style?: {
     marginTop?: string;
     marginBottom?: string;

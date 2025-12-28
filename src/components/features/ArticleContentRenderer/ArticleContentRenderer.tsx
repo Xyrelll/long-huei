@@ -242,8 +242,11 @@ export default function ArticleContentRenderer({ blocks, content }: ArticleConte
       case 'table': {
         const tableStyle = block.style || {};
         
-        // On mobile, render as text blocks
-        if (isMobile) {
+        // Default mobileAsText to true (convert to text on mobile)
+        const shouldConvertToText = block.mobileAsText ?? false;
+        
+        // On mobile, render as text blocks (default: true)
+        if (isMobile && shouldConvertToText) {
           return (
             <div
               key={block.id || index}

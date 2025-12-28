@@ -179,16 +179,15 @@ function SearchContent() {
       return;
     }
     setShowError(false);
-    // Navigate to search results with keyword
-    router.push(`/Search?Keyword=${encodeURIComponent(searchKeyword.trim())}`);
-    performSearch(searchKeyword.trim());
+    // Navigate to search results with keyword and reload page
+    const searchUrl = `/Search?Keyword=${encodeURIComponent(searchKeyword.trim())}`;
+    window.location.href = searchUrl;
   };
 
   const handleKeywordClick = (keyword: string) => {
-    setSearchKeyword(keyword);
-    setShowError(false);
-    router.push(`/Search?Keyword=${encodeURIComponent(keyword)}`);
-    performSearch(keyword);
+    // Navigate and reload page
+    const searchUrl = `/Search?Keyword=${encodeURIComponent(keyword)}`;
+    window.location.href = searchUrl;
   };
 
   // Category filter
@@ -387,6 +386,10 @@ function SearchContent() {
                 <Link
                   key={tag.name}
                   href={tag.href}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    window.location.href = tag.href;
+                  }}
                   style={{
                     paddingLeft: "15px",
                     paddingRight: "15px",

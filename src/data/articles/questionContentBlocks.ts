@@ -110,6 +110,7 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
               ['酒店/機場櫃台', '1,010-1,015', 'MOP 50起', '緊急備用，匯率最差']
             ],
             showBorders: false, // Set to false to remove borders
+            mobileAsText: true, // Keep table format on mobile (don't convert to text)
             style: { 
               marginBottom: '20px', 
               marginTop: '60px'

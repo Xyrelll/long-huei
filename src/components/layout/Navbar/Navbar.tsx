@@ -44,13 +44,23 @@ interface MobileNavItemProps {
 }
 
 function MobileNavItem({ item, onClick }: MobileNavItemProps) {
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (item.id === 'search') {
+      e.preventDefault();
+      onClick();
+      window.location.href = '/Search';
+    } else {
+      onClick();
+    }
+  };
+
   return (
     <li itemProp="name" className="mobile-nav-item">
       <Link
         itemProp="url"
         href={item.href}
         className="mobile-nav-link"
-        onClick={onClick}
+        onClick={handleClick}
       >
         <TravelIcon icon={item.icon} />
         <span>{item.label}</span>
@@ -65,6 +75,13 @@ interface DesktopNavItemProps {
 }
 
 function DesktopNavItem({ item }: DesktopNavItemProps) {
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (item.id === 'search') {
+      e.preventDefault();
+      window.location.href = '/Search';
+    }
+  };
+
   return (
     <li itemProp="name" className="nav-item">
       <Link
@@ -72,6 +89,7 @@ function DesktopNavItem({ item }: DesktopNavItemProps) {
         href={item.href}
         className={`nav-link ${item.isActive ? 'active' : ''}`}
         aria-current={item.isActive ? 'page' : undefined}
+        onClick={handleClick}
       >
         <TravelIcon icon={item.icon} />
         <span>{item.label}</span>
@@ -320,6 +338,10 @@ export default function Navbar() {
             href="/Search"
             className="navbar-search-icon lg:hidden"
             title="Search Articles"
+            onClick={(e) => {
+              e.preventDefault();
+              window.location.href = '/Search';
+            }}
           >
             <TravelIcon icon="search" />
           </Link>
