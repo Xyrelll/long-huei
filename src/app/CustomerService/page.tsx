@@ -87,7 +87,7 @@ export default function CustomerServicePage() {
                     </li>
                     <li className="breadcrumb-separator text-white/70">&gt;</li>
                     <li className="breadcrumb-item active" aria-current="page">
-                      <span className="text-white/70">專人客服</span>
+                      <span className="text-white" style={{ fontWeight: 900 }}>專人客服</span>
                     </li>
                   </ol>
                 </nav>

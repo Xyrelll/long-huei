@@ -1,6 +1,6 @@
 'use client';
 
-import { Suspense, ReactNode } from 'react';
+import { Suspense } from 'react';
 import Link from 'next/link';
 import Pagination from '@/components/ui/Pagination/Pagination';
 import ArticleSidebar from '@/components/layout/ArticleSidebar/ArticleSidebar';
@@ -17,6 +17,20 @@ interface PopularTag {
   href: string;
 }
 
+// Base article interface for category layouts
+interface BaseArticle {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  imageMobile: string;
+  link: string;
+  views: number;
+  tags?: string[];
+  collapseId: string;
+  date?: string;
+}
+
 interface ArticleCategoryLayoutProps {
   // Page info
   pageTitle: string;
@@ -24,14 +38,14 @@ interface ArticleCategoryLayoutProps {
   baseUrl: string;
   
   // Articles
-  articles: any[];
-  currentArticles: any[];
+  articles: BaseArticle[];
+  currentArticles: BaseArticle[];
   currentPage: number;
   totalPages: number;
   itemsPerPage?: number;
   
   // Article list component
-  ArticleListComponent: React.ComponentType<{ articles: any[] }>;
+  ArticleListComponent: React.ComponentType<{ articles: BaseArticle[] }>;
   
   // Sidebar
   categories: Category[];
@@ -42,7 +56,6 @@ function ArticleCategoryLayoutContent({
   pageTitle,
   breadcrumbName,
   baseUrl,
-  articles,
   currentArticles,
   currentPage,
   totalPages,
@@ -70,7 +83,7 @@ function ArticleCategoryLayoutContent({
               </li>
               <li className="breadcrumb-separator text-white/70">&gt;</li>
               <li className="breadcrumb-item active" aria-current="page">
-                <span className="text-white/70">{breadcrumbName}</span>
+                <span className="text-white" style={{ fontWeight: 900 }}>{breadcrumbName}</span>
               </li>
             </ol>
           </nav>
