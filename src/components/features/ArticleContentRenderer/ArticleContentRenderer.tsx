@@ -11,6 +11,18 @@ interface ArticleContentRendererProps {
 }
 
 export default function ArticleContentRenderer({ blocks, content }: ArticleContentRendererProps) {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   // If new structured format is provided, use it
   if (content) {
     return (
@@ -229,6 +241,45 @@ export default function ArticleContentRenderer({ blocks, content }: ArticleConte
 
       case 'table': {
         const tableStyle = block.style || {};
+        
+        // On mobile, render as text blocks
+        if (isMobile) {
+          return (
+            <div
+              key={block.id || index}
+              style={{
+                marginTop: tableStyle.marginTop || '0',
+                marginBottom: tableStyle.marginBottom || '0',
+                
+              }}
+
+              className="w-full"
+            >
+              {block.rows.map((row, rowIndex) => {
+                // Combine row data into a single text string (without headers)
+                // Add spacing around commas and use HTML space entities
+                const rowText = row.map(cell => cell.replace(/,/g, ', ')).join('&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ');
+                
+                return (
+                  <p
+                    key={rowIndex}
+                    style={{
+                      color: '#FFFFFF',
+                      fontSize: '1rem',
+                      fontWeight: 'bold',
+                      marginBottom: rowIndex < block.rows.length - 1 ? '10px' : '0',
+                      marginTop: '60px',
+                      marginRight: '10px',
+                    }}
+                    dangerouslySetInnerHTML={{ __html: rowText }}
+                  />
+                );
+              })}
+            </div>
+          );
+        }
+        
+        // On desktop, render as table
         return (
           <div
             key={block.id || index}

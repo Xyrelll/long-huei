@@ -510,7 +510,24 @@ export const questionArticleContentBlocks: Record<number, ArticleContent> = {
           },
           {
             type: 'text',
-            content: '立即追蹤龍匯天下官方IG或點擊下方連結加入官方賴，也可以找我們換錢喔~',
+            content: '立即追蹤龍匯天下官方',
+            style: HEADING_STYLE_LIST
+          },
+          {
+            type: 'link',
+            href: 'https://www.instagram.com/lhts.8899/',
+            text: 'IG',
+            target: '_blank',
+            style: {
+              color: '#3b82f6',
+              textDecoration: 'underline',
+              marginTop: '0',
+              marginBottom: '0'
+            }
+          },
+          {
+            type: 'text',
+            content: '或點擊下方連結加入官方賴，也可以找我們換錢喔~',
             style: HEADING_STYLE_LIST
           },
           {

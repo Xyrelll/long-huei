@@ -355,7 +355,7 @@ function ArticleContent() {
               <div className="flex flex-col lg:flex-row  items-start justify-start ">
                  {/* Left Sidebar - Social Media */}
                  <div
-                   className="w-full lg:w-18 flex mb-4 lg:mb-0 bg-blue-500"
+                   className="w-full lg:w-18 flex mb-4 lg:mb-0 "
                    style={{
                      paddingLeft: isMobile ? "10px" : "0",
                      paddingRight: isMobile ? "10px" : "0",
