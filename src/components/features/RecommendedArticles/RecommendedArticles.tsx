@@ -65,7 +65,8 @@ export default function RecommendedArticles({
       : totalPages;
 
   // Start in the middle of the duplicated pages for infinite scroll in both directions
-  const startIndex = totalPages > 1 ? totalPages : 0;
+  // Middle set starts at index 1 (first page of first duplicate set)
+  const startIndex = totalPages > 1 ? 1 : 0;
   const [currentIndex, setCurrentIndex] = useState(startIndex);
 
   // Create pages array with duplicates for seamless infinite scrolling
@@ -107,15 +108,21 @@ export default function RecommendedArticles({
     setIsSliding(true);
     setCurrentIndex((prev) => {
       const newIndex = prev - 1;
-      // If we're at the first duplicate (index 0), instantly jump to middle position
-      if (newIndex === 0 && totalPages > 1) {
+      const middleStart = 1; // First page of first duplicate set
+      const middleEnd = totalPages * duplicateCount; // Last page of third duplicate set
+      
+      // If we're going below the middle set (index < 1), jump to end of middle set
+      if (newIndex < middleStart && totalPages > 1) {
+        // Disable transition, jump instantly, then re-enable
+        setIsTransitioning(false);
         setTimeout(() => {
-          setIsTransitioning(false);
-          // Jump to the last page of the middle duplicate set
-          setCurrentIndex(totalPages * duplicateCount);
-          setTimeout(() => setIsTransitioning(true), 10);
-        }, 700);
-        return newIndex;
+          setCurrentIndex(middleEnd);
+          setTimeout(() => {
+            setIsTransitioning(true);
+            setIsSliding(false);
+          }, 50);
+        }, 50);
+        return middleEnd;
       }
       return newIndex;
     });
@@ -127,20 +134,21 @@ export default function RecommendedArticles({
     setIsSliding(true);
     setCurrentIndex((prev) => {
       const newIndex = prev + 1;
-      const middleStart = totalPages;
-      // If we're at the last duplicate (which is same as first page), jump to middle seamlessly
-      if (newIndex === extendedPages - 1 && totalPages > 1) {
-        // After animation completes, instantly jump to middle (same content, invisible to user)
+      const middleStart = 1; // First page of first duplicate set
+      const middleEnd = totalPages * duplicateCount; // Last page of third duplicate set
+      
+      // If we're going beyond the middle set, jump to start of middle set instantly
+      if (newIndex > middleEnd && totalPages > 1) {
+        // Disable transition, jump instantly, then re-enable
+        setIsTransitioning(false);
         setTimeout(() => {
-          setIsTransitioning(false);
-          // Jump to first page of middle set (same as the duplicate we just saw)
           setCurrentIndex(middleStart);
-          // Re-enable transition after a tiny delay
           setTimeout(() => {
             setIsTransitioning(true);
-          }, 20);
-        }, 700);
-        return newIndex;
+            setIsSliding(false);
+          }, 50);
+        }, 50);
+        return middleStart;
       }
       return newIndex;
     });
@@ -153,16 +161,19 @@ export default function RecommendedArticles({
       autoSlideIntervalRef.current = setInterval(() => {
         setCurrentIndex((prev) => {
           const newIndex = prev + 1;
-          const middleStart = totalPages;
-          // If we're at the last duplicate, instantly jump to start of middle position
-          if (newIndex === extendedPages - 1) {
+          const middleStart = 1; // First page of first duplicate set
+          const middleEnd = totalPages * duplicateCount; // Last page of third duplicate set
+          
+          // If we're at the end of middle set, jump to start of middle set instantly
+          if (newIndex > middleEnd) {
+            setIsTransitioning(false);
             setTimeout(() => {
-              setIsTransitioning(false);
-              // Jump to the first page of the middle duplicate set (same content as first page)
               setCurrentIndex(middleStart);
-              setTimeout(() => setIsTransitioning(true), 10);
-            }, 700);
-            return newIndex;
+              setTimeout(() => {
+                setIsTransitioning(true);
+              }, 50);
+            }, 50);
+            return middleStart;
           }
           return newIndex;
         });
@@ -174,7 +185,7 @@ export default function RecommendedArticles({
         }
       };
     }
-  }, [totalPages, extendedPages]);
+  }, [totalPages, duplicateCount]);
 
   // Pause auto-slide on hover
   const handleMouseEnter = () => {
@@ -188,16 +199,19 @@ export default function RecommendedArticles({
       autoSlideIntervalRef.current = setInterval(() => {
         setCurrentIndex((prev) => {
           const newIndex = prev + 1;
-          const middleStart = totalPages;
-          // If we're at the last duplicate, instantly jump to start of middle position
-          if (newIndex === extendedPages - 1) {
+          const middleStart = 1; // First page of first duplicate set
+          const middleEnd = totalPages * duplicateCount; // Last page of third duplicate set
+          
+          // If we're at the end of middle set, jump to start of middle set instantly
+          if (newIndex > middleEnd) {
+            setIsTransitioning(false);
             setTimeout(() => {
-              setIsTransitioning(false);
-              // Jump to the first page of the middle duplicate set (same content as first page)
               setCurrentIndex(middleStart);
-              setTimeout(() => setIsTransitioning(true), 10);
-            }, 700);
-            return newIndex;
+              setTimeout(() => {
+                setIsTransitioning(true);
+              }, 50);
+            }, 50);
+            return middleStart;
           }
           return newIndex;
         });
@@ -231,31 +245,7 @@ export default function RecommendedArticles({
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        <div className="w-full md:w-3/4 h-full mx-auto relative">
-          {/* Left Arrow - Nested inside section */}
-          {totalPages > 1 && (
-            <button
-              onClick={goToPrevious}
-              className="absolute left-0  top-1/2 -translate-y-1/2 z-20 bg-transparent  p-3 md:p-4 rounded-full transition-all shadow-lg"
-              type="button"
-              aria-label="Previous"
-            >
-              <i className="bi bi-chevron-left text-white text-2xl md:text-3xl font-bold"></i>
-            </button>
-          )}
-
-          {/* Right Arrow - Nested inside section */}
-          {totalPages > 1 && (
-            <button
-              onClick={goToNext}
-              className="absolute right-0 md:right-0 lg:right-0 top-1/2 -translate-y-1/2 z-20 bg-transparent  p-3 md:p-4 rounded-full transition-all  shadow-lg"
-              type="button"
-              aria-label="Next"
-            >
-              <i className="bi bi-chevron-right text-white text-2xl md:text-3xl font-bold"></i>
-            </button>
-          )}
-
+        <div className="w-full md:w-3/4 h-full mx-auto relative ">
           <div className="container mx-auto px-4  flex flex-col items-center justify-center   ">
             <h2
               style={{
@@ -268,6 +258,31 @@ export default function RecommendedArticles({
             </h2>
 
             <div className="relative flex items-center  w-[85%] max-w-5xl mx-auto">
+              {/* Left Arrow - Positioned next to slide content */}
+              {totalPages > 1 && (
+                <button
+                  onClick={goToPrevious}
+                  className="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-transparent p-3 md:p-4 rounded-full transition-all shadow-lg"
+                  type="button"
+                  aria-label="Previous"
+                  style={{ transform: "translate(calc(-100% - 16px), -50%)" }}
+                >
+                  <i className="bi bi-chevron-left text-white text-2xl md:text-3xl font-bold"></i>
+                </button>
+              )}
+
+              {/* Right Arrow - Positioned next to slide content */}
+              {totalPages > 1 && (
+                <button
+                  onClick={goToNext}
+                  className="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-transparent p-3 md:p-4 rounded-full transition-all shadow-lg"
+                  type="button"
+                  aria-label="Next"
+                  style={{ transform: "translate(calc(100% + 16px), -50%)" }}
+                >
+                  <i className="bi bi-chevron-right text-white text-2xl md:text-3xl font-bold"></i>
+                </button>
+              )}
               {/* Articles Grid with overflow hidden for smooth transitions */}
               <div className="w-full overflow-hidden px-8 md:px-12">
                 <div
@@ -300,7 +315,7 @@ export default function RecommendedArticles({
                             <Link
                               key={`${article.id}-${pageIndex}`}
                               href={article.link}
-                              className="bg-[#2C261C] rounded-[50px] overflow-hidden relative max-w-[360px] mx-auto"
+                              className="bg-[#2C261C] rounded-[50px] overflow-hidden relative max-w-[365px] max-h-[580px] mx-auto w-full"
                             >
                               {/* Article Image */}
                               <div className="relative w-full h-48">
@@ -308,15 +323,18 @@ export default function RecommendedArticles({
                                   src={article.image}
                                   alt={article.title}
                                   fill
-                                  className="object-cover"
+                                  className="object-contain"
+                                  style={{ width: "100%", height: "100%" ,marginTop: "-5px"}}
                                 />
                               </div>
 
                               {/* Article Content */}
                               <div
                                 style={{
-                                  padding: "30px",
-                                  paddingBottom: "50px",
+                                  paddingTop: "20px",
+                                  paddingLeft: "20px",
+                                  paddingRight: "20px",
+                                  paddingBottom: "60px",
                                 }}
                                 className="p-4 space-y-3 "
                               >

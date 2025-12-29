@@ -82,16 +82,20 @@ export default function About() {
         </div>
       </div>
 
-      <h2 className="page-title text-center text-[#f5ca69] text-3xl mb-8">
+      <h2
+       style={{paddingTop: "40px" }}
+       className="page-title text-center text-[#f5ca69] text-3xl mb-8">
         為什麼選擇我們？
       </h2>
 
-      <div className="container mx-auto max-w-5xl">
+      <div
+       style={{marginTop: "-40px" }}
+       className="container mx-auto max-w-5xl">
         <div className="row mb-4">
           {whyChooseUs.map((item, index) => (
             <div key={index} className="flex flex-col md:flex-row mb-3">
               <div className="col-md-4 col-12 mb-2 mb-md-0 md:w-2/5">
-                <h3 className="about-title text-[#FFCD83] text-xl font-bold text-center md:text-left">
+                <h3 className="about-title text-[#FFCD83] text-xl text-center md:text-center">
                   {item.title}
                 </h3>
               </div>
@@ -113,21 +117,30 @@ export default function About() {
               style={{ display: "grid" }}
             >
               {features.map((feature, index) => (
-                <div key={index} className="mb-4">
-                  <div className="about-card flex items-start gap-4">
+                <div key={index} className="mb-4  flex flex-col items-start justify-center">
+                  <div 
+                  style={{ display: "flex", flexDirection: "row",
+                    padding: "0 12px", height: "100%", width: "100%",
+                     alignItems: "start", justifyContent: "start", gap: "0px" }}
+                  className="about-card flex w-full flex-row items-start justify-start gap-4 ">
                     <i
-                      className={`${feature.icon} about-icon text-2xl text-[#FFCD83] shrink-0`}
+                    style={{ width: "65px", height: "auto" , paddingLeft: "0px" }}
+                      className={`${feature.icon}  about-icon text-2xl text-[#FFCD83] shrink-0 `}
                       aria-hidden="true"
                     ></i>
-                    <div className="flex-1">
-                      <h3 className="about-title text-[#FFCD83] text-lg font-bold mb-2">
+                     <h3 
+                     style={{ textAlign: "left",height: "100%", display: "flex", alignItems: "center", justifyContent: "start" }}
+                     className="text-[#FFCD83] text-lg  mb-2  w-full">
                         {feature.title}
                       </h3>
+                      </div>
+                    <div className="flex-1 " >
+                     
                       <div className="about-content text-white text-sm leading-relaxed">
                         {feature.description}
                       </div>
                     </div>
-                  </div>
+                 
                 </div>
               ))}
             </div>

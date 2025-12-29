@@ -47,7 +47,7 @@ const popularTags = [
   { name: "澳門包車景點", href: "/Tag/澳門包車景點" },
   { name: "龍匯天下訂房", href: "/Tag/龍匯天下訂房" },
   { name: "澳門推薦", href: "/Tag/澳門推薦" },
-  { name: "澳門旅遊找龍匯", href: "/Tag/澳門旅遊找龍匯" },
+  { name: "澳門通龍匯天下", href: "/Tag/澳門通龍匯天下" },
 ];
 
 function ArticleContent() {

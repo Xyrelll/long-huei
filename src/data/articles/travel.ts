@@ -157,7 +157,7 @@ export const travelArticles: TravelArticle[] = [
     imageMobile: '/travel/【澳門旅遊】性價比最高的玩法，它來了-m.jpg',
     link: '/Article/macao%20travel',
     views: 1281,
-    tags: ['澳門旅遊找龍匯', '龍匯天下澳門', '龍匯旅遊澳門', '澳門旅遊龍匯天下'],
+    tags: ['澳門通龍匯天下', '龍匯天下澳門', '龍匯旅遊澳門', '澳門旅遊龍匯天下'],
     collapseId: 'collapse-macao-travel',
     contentBlocks: travelArticleContentBlocks[11],
     date: '2025/08/26',
