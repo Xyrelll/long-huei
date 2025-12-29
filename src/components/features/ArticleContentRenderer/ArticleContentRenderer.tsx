@@ -819,7 +819,7 @@ function TableOfContentsComponent({ block }: { block: ArticleContentBlock }) {
         ref={panelRef}
         style={{
           position: isFixed ? "fixed" : "relative",
-          top: isFixed && isOpen ? "180px" : isFixed ? "120px" : "auto",
+          top: isFixed ? "180px" : "auto",
           left:
             isFixed && isMounted
               ? isMobile
@@ -832,11 +832,9 @@ function TableOfContentsComponent({ block }: { block: ArticleContentBlock }) {
           backgroundColor: "#F5F5F5",
           borderRadius: baseStyle.borderRadius || "12px",
           padding: isOpen ? "20px" : "0",
-          width: isOpen
-            ? isFixed && tocWidth
-              ? `${tocWidth}px`
-              : "100%"
-            : "0",
+          width: isFixed && tocWidth
+            ? `${tocWidth}px`
+            : "100%",
           maxWidth: isFixed ? "none" : "100%",
           boxShadow: isOpen
             ? "0 4px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 165, 0, 0.3)"
@@ -845,7 +843,7 @@ function TableOfContentsComponent({ block }: { block: ArticleContentBlock }) {
           opacity: isOpen ? 1 : 0,
           overflow: isOpen ? "auto" : "hidden",
           transition:
-            "max-height 0.6s ease-in-out, opacity 0.6s ease-in-out, padding 0.6s ease-in-out, width 0.6s ease-in-out",
+            "max-height 0.6s ease-in-out, opacity 0.6s ease-in-out, padding 0.6s ease-in-out",
           marginTop: !isFixed && isOpen ? "10px" : "0",
         }}
         className="toc-panel"
